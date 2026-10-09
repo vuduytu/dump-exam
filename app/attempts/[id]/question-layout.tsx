@@ -133,12 +133,12 @@ export function QuestionLayout(props: {
       <main className="mx-auto max-w-6xl p-4 pb-24 lg:grid lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)] lg:gap-8 lg:pb-8">
         <div>
           <header className="mb-6 border-b pb-4">
-            <div className="hidden items-baseline justify-between gap-3 text-sm text-muted-foreground lg:flex">
-              <p className="min-w-0 truncate font-medium tabular-nums">{heading}</p>
-              {props.meta && <p className="shrink-0">{props.meta}</p>}
+            <div className="hidden items-baseline justify-between gap-3 lg:flex">
+              <h1 className="min-w-0 truncate text-2xl font-semibold tabular-nums">{heading}</h1>
+              {props.meta && <p className="shrink-0 text-sm text-muted-foreground">{props.meta}</p>}
             </div>
             <div className="flex items-baseline justify-between gap-3 lg:mt-1">
-              <p className="whitespace-nowrap text-xl font-semibold tabular-nums lg:text-2xl">{props.figure}</p>
+              <p className="whitespace-nowrap text-lg font-medium tabular-nums">{props.figure}</p>
               {props.meta && <p className="shrink-0 text-sm text-muted-foreground lg:hidden">{props.meta}</p>}
             </div>
             <p className="mt-1 flex flex-wrap gap-x-3 gap-y-1 text-xs text-muted-foreground tabular-nums">{props.stats}</p>
