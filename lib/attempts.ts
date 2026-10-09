@@ -270,7 +270,7 @@ export async function listAttempts(userId: number, now = new Date()) {
     .innerJoin(exams, eq(exams.id, attempts.examId))
     .leftJoin(examQuestions, eq(examQuestions.examId, attempts.examId))
     .where(and(eq(attempts.userId, userId), isNotNull(attempts.submittedAt)))
-    .groupBy(attempts.id)
+    .groupBy(attempts.id, exams.name) // TiDB's only_full_group_by does not infer exams.name from the join
     .orderBy(desc(attempts.submittedAt), desc(attempts.id));
   return rows.map((r) => ({
     ...r,
