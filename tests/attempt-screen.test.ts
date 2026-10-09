@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { attemptCell, inTab, keyCommand, resultCell, toggleChoice } from "@/app/attempts/[id]/logic";
+import { attemptCell, formatDuration, inTab, keyCommand, resultCell, toggleChoice } from "@/app/attempts/[id]/logic";
 
 const key = (k: string, extra: Partial<Parameters<typeof keyCommand>[0]> = {}) => keyCommand({ key: k, mod: false, typing: false, dialog: false, repeat: false, composing: false, ...extra });
 
@@ -60,4 +60,16 @@ test("result tabs: all, wrong only, marked only", () => {
   assert.equal(inTab("wrong", { ...q, isCorrect: false }), true);
   assert.equal(inTab("marked", q), false);
   assert.equal(inTab("marked", { ...q, marked: true }), true);
+});
+
+test("duration: under a minute, minutes, hours and minutes, exact hours", () => {
+  const f = (min: number, sec = 0) => formatDuration(min * 60 + sec);
+  assert.equal(f(0), "< 1 phút");
+  assert.equal(f(0, 59), "< 1 phút");
+  assert.equal(f(1), "1 phút");
+  assert.equal(f(12), "12 phút");
+  assert.equal(f(60), "1 giờ");
+  assert.equal(f(83), "1 giờ 23 phút");
+  assert.equal(f(120), "2 giờ");
+  assert.equal(f(230), "3 giờ 50 phút");
 });

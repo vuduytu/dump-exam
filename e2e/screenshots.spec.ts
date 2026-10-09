@@ -33,7 +33,7 @@ test.describe("screenshots", () => {
         await shot("attempt");
         await page.getByRole("button", { name: "Nộp bài" }).click();
         await page.getByRole("dialog").getByRole("button", { name: "Nộp bài" }).click();
-        await page.getByText(/^\d+\/180/).filter({ visible: true }).first().waitFor();
+        await page.getByText(/^Điểm: \d+\/180/).filter({ visible: true }).first().waitFor();
         await page.goto("/");
         await shot("home-after");
         await page.getByRole("link", { name: /câu/ }).first().click();
@@ -75,7 +75,7 @@ test.describe("screenshots 03", () => {
       }
       await page.getByRole("button", { name: "Nộp bài" }).filter({ visible: true }).first().click();
       await page.getByRole("dialog").getByRole("button", { name: "Nộp bài" }).click();
-      await page.getByText(/^\d+\/180/).filter({ visible: true }).first().waitFor();
+      await page.getByText(/^Điểm: \d+\/180/).filter({ visible: true }).first().waitFor();
       await page.context().close();
     });
   }
@@ -104,7 +104,7 @@ test.describe("screenshots 04", () => {
       if (run.name === "mobile") await page.getByRole("button", { name: "Lưới câu" }).click();
       await page.getByRole("button", { name: "Nộp bài" }).filter({ visible: true }).first().click();
       await page.getByRole("dialog").getByRole("button", { name: "Nộp bài" }).click();
-      await page.getByText(/^\d+\/180/).filter({ visible: true }).first().waitFor();
+      await page.getByText(/^Điểm: \d+\/180/).filter({ visible: true }).first().waitFor();
       await page.waitForLoadState("networkidle");
       await shot();
       if (run.name === "mobile") {
@@ -114,7 +114,7 @@ test.describe("screenshots 04", () => {
         await shot("-drawer");
         await page.keyboard.press("Escape");
       }
-      await page.getByRole("tab", { name: "Sai" }).click();
+      await page.getByRole("tab", { name: /^Sai \d+$/ }).click();
       await page.waitForTimeout(200);
       await shot("-sai");
       await page.context().close();

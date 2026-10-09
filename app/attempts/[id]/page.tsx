@@ -27,7 +27,7 @@ export default async function AttemptPage({ params, searchParams }: { params: Pr
         examName={result.examName}
         score={score ?? 0}
         timed={result.timed}
-        minutes={Math.round(((result.submittedAt?.getTime() ?? 0) - result.startedAt.getTime()) / 60000)}
+        durationSec={Math.round(((result.submittedAt?.getTime() ?? 0) - result.startedAt.getTime()) / 1000)}
         questions={result.questions}
         initialPos={pos}
         initialTab={filter}

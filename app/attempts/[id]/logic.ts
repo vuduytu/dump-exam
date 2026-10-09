@@ -37,3 +37,11 @@ export const resultCell = (q: { isCorrect: boolean; marked: boolean }) => ({ cor
 
 /** Whether a Question belongs to the Result tab. */
 export const inTab = (tab: ResultTab, q: { isCorrect: boolean; marked: boolean }) => (tab === "wrong" ? !q.isCorrect : tab === "marked" ? q.marked : true);
+
+/** Time spent: "< 1 phút", "12 phút", "1 giờ 23 phút", "2 giờ". */
+export function formatDuration(sec: number): string {
+  const min = Math.floor(sec / 60);
+  if (min < 1) return "< 1 phút";
+  const [h, m] = [Math.floor(min / 60), min % 60];
+  return [h && `${h} giờ`, (m || !h) && `${m} phút`].filter(Boolean).join(" ");
+}

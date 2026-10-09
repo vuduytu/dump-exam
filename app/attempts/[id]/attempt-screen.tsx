@@ -8,7 +8,7 @@ import type { Choice } from "@/db/schema";
 import { Choices } from "./choices";
 import { Countdown, MarkButton, SubmitForm } from "./controls";
 import { attemptCell, toggleChoice, type AttemptCell, type Command } from "./logic";
-import { QuestionLayout, usePosition } from "./question-layout";
+import { QuestionLayout, Stats, usePosition } from "./question-layout";
 
 type Question = { id: number; text: string; choices: Choice[]; need: number; selected: string[]; marked: boolean };
 type Saved = Pick<Question, "selected" | "marked">;
@@ -117,6 +117,18 @@ export function AttemptScreen(props: { attemptId: number; examName: string; ques
 
   return (
     <QuestionLayout
+      examName={props.examName}
+      meta={props.msLeft !== null ? "Thi thử · 230 phút" : "Luyện tập"}
+      figure={`Đã làm: ${answered}/${total} (${Math.round((answered / total) * 100)}%)`}
+      stats={
+        <Stats
+          items={[
+            { glyph: "●", label: "Đã làm", n: answered, tone: "text-primary" },
+            { glyph: "○", label: "Chưa làm", n: total - answered },
+            { glyph: "⚑", label: "Đánh dấu", n: marked, tone: "text-marked" },
+          ]}
+        />
+      }
       pos={pos}
       total={total}
       cells={cells}
@@ -132,11 +144,7 @@ export function AttemptScreen(props: { attemptId: number; examName: string; ques
         )
       }
       side={
-        <Progress value={(answered / total) * 100}>
-          <span className="text-sm font-medium">
-            Đã làm {answered}/{total}
-          </span>
-        </Progress>
+        <Progress value={(answered / total) * 100} aria-label="Tiến độ" />
       }
       footer={
         <>
@@ -150,8 +158,7 @@ export function AttemptScreen(props: { attemptId: number; examName: string; ques
       }
       actions={<MarkButton marked={q.marked} onToggle={toggleMark} />}
     >
-      <p className="text-sm text-muted-foreground">{props.examName}</p>
-      <article className="mt-3">
+      <article>
         <div className="question-text" dangerouslySetInnerHTML={{ __html: q.text }} /> {/* sanitized at import */}
         <Choices key={q.id} questionId={q.id} choices={q.choices} need={q.need} selected={q.selected} onPick={pick} />
       </article>

@@ -17,13 +17,15 @@ test("desktop: keyboard switches, answers and marks; the answer survives a reloa
   await page.setViewportSize({ width: 1280, height: 800 });
   await startPractice(page);
   await expect(page.getByRole("link", { name: "Lịch sử" })).toBeVisible(); // shared header
-  await expect(visible(page, "Câu 1/180")).toBeVisible();
+  await expect(visible(page, "Đề 1 · Câu 1/180")).toBeVisible();
 
   await page.keyboard.press("ArrowRight");
   await expect(page).toHaveURL(/\?q=2$/);
-  await expect(visible(page, "Câu 2/180")).toBeVisible();
+  await expect(visible(page, "Đề 1 · Câu 2/180")).toBeVisible();
+  await expect(visible(page, "Đã làm: 0/180 (0%)")).toBeVisible();
   await page.keyboard.press("a");
   await expect(page.getByRole("button", { name: "Câu 2, đã trả lời" })).toBeVisible();
+  await expect(visible(page, "Đã làm: 1/180 (1%)")).toBeVisible();
   await expect(page.getByRole("status")).toHaveText("Đã lưu");
   await page.keyboard.press("m");
   await expect(page.getByRole("button", { name: "Câu 2, đánh dấu" })).toBeVisible();
@@ -35,11 +37,11 @@ test("desktop: keyboard switches, answers and marks; the answer survives a reloa
   await page.waitForURL(/\/history/);
   await page.goBack(); // the Router Cache holds the page as first loaded, with nothing answered: it must refresh
   await expect(page.getByRole("button", { name: "Câu 2, đánh dấu" })).toBeVisible();
-  await expect(visible(page, "Câu 2/180")).toBeVisible();
+  await expect(visible(page, "Đề 1 · Câu 2/180")).toBeVisible();
   await expect(page.locator("fieldset input").first()).toBeChecked();
 
   await page.reload(); // saved on the server, and ?q=2 opens the same Question
-  await expect(visible(page, "Câu 2/180")).toBeVisible();
+  await expect(visible(page, "Đề 1 · Câu 2/180")).toBeVisible();
   await expect(page.locator("fieldset input").first()).toBeChecked();
   await expect(page.getByRole("button", { name: "Câu 2, đánh dấu" })).toBeVisible();
 
@@ -57,16 +59,17 @@ test("desktop: keyboard switches, answers and marks; the answer survives a reloa
   await page.keyboard.press("ArrowRight"); // ignored while a Dialog is open
   await expect(page).not.toHaveURL(/\?q=2/);
   await page.getByRole("dialog").getByRole("button", { name: "Nộp bài" }).click();
-  await expect(page.getByText(/^\d+\/180/).filter({ visible: true }).first()).toBeVisible();
-  await expect(page.getByText(/^\d+\/180/).first()).toBeVisible(); // Score
+  await expect(page.getByText(/^Điểm: \d+\/180/).filter({ visible: true })).toBeVisible(); // Score
+  await expect(visible(page, "Đề 1 · Câu 1/180")).toBeVisible();
+  await expect(page.getByRole("tab", { name: /^Tất cả 180$/ })).toBeVisible();
   await page.waitForLoadState("networkidle");
 
   // Result: tab Sai keeps only wrong Questions in the grid, ←/→ walk inside it, the URL follows
   const grid = page.locator("aside ol button");
   await expect(grid).toHaveCount(180);
-  await page.getByRole("tab", { name: "Sai" }).click();
+  await page.getByRole("tab", { name: /^Sai \d+$/ }).click();
   await expect(page).toHaveURL(/f=wrong/);
-  await expect(page.getByRole("tab", { name: "Sai" })).toHaveAttribute("aria-selected", "true");
+  await expect(page.getByRole("tab", { name: /^Sai \d+$/ })).toHaveAttribute("aria-selected", "true");
   const n = await grid.count();
   expect(n).toBeGreaterThanOrEqual(179); // only Câu 2 could be right
   await expect(page.locator('aside ol button[aria-label*=", đúng"]')).toHaveCount(0);
@@ -83,9 +86,9 @@ test("desktop: keyboard switches, answers and marks; the answer survives a reloa
 test("mobile: bottom bar moves, the grid drawer jumps to a Question, submit from the drawer", async ({ page }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await startPractice(page);
-  await expect(visible(page, "Câu 1/180")).toBeVisible();
+  await expect(visible(page, "Đề 1 · Câu 1/180")).toBeVisible();
   await button(page, "Sau").click();
-  await expect(visible(page, "Câu 2/180")).toBeVisible();
+  await expect(visible(page, "Đề 1 · Câu 2/180")).toBeVisible();
   await button(page, "Đánh dấu").click();
 
   await button(page, "Lưới câu").click();
@@ -93,7 +96,7 @@ test("mobile: bottom bar moves, the grid drawer jumps to a Question, submit from
   await expect(drawer.getByRole("button", { name: "Câu 2, đánh dấu" })).toBeVisible();
   await drawer.getByRole("button", { name: "Câu 10, chưa trả lời" }).click();
   await expect(drawer).toBeHidden();
-  await expect(visible(page, "Câu 10/180")).toBeVisible();
+  await expect(visible(page, "Đề 1 · Câu 10/180")).toBeVisible();
   await expect(page).toHaveURL(/\?q=10$/);
 
   await button(page, "Lưới câu").click();
@@ -101,5 +104,5 @@ test("mobile: bottom bar moves, the grid drawer jumps to a Question, submit from
   const confirm = page.getByRole("dialog").filter({ hasText: "Nộp bài?" });
   await expect(confirm).toContainText("Còn 180 câu chưa trả lời, 1 câu đánh dấu");
   await confirm.getByRole("button", { name: "Nộp bài" }).click();
-  await expect(page.getByText(/^\d+\/180/).filter({ visible: true }).first()).toBeVisible();
+  await expect(page.getByText(/^Điểm: \d+\/180/).filter({ visible: true })).toBeVisible();
 });

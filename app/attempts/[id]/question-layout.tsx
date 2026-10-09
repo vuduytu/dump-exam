@@ -33,6 +33,11 @@ const isTyping = (t: EventTarget | null) =>
  * bars and a grid drawer on mobile, ←/→ between `cells`. Other shortcuts go to `onCommand`, which returns whether it used them.
  */
 export function QuestionLayout(props: {
+  examName: string; // line 1: "Đề 2 · Câu 72/180"
+  meta?: React.ReactNode; // line 1, right-aligned
+  figure: React.ReactNode; // line 2
+  stats: React.ReactNode; // line 3, see Stats
+  tabs?: React.ReactNode; // Result: above the grid on desktop, below line 3 on mobile
   pos: number;
   total: number;
   cells: GridCell[]; // the Questions you can move between, in order (Result may pass a filtered list)
@@ -49,6 +54,7 @@ export function QuestionLayout(props: {
   const i = cells.findIndex((c) => c.pos === pos);
   const prev = cells[i - 1]?.pos;
   const next = cells[i + 1]?.pos;
+  const heading = `${props.examName} · Câu ${pos}/${total}`;
 
   useEffect(() => {
     function onKey(e: KeyboardEvent) {
@@ -107,9 +113,7 @@ export function QuestionLayout(props: {
   return (
     <>
       <div className="sticky top-0 z-10 flex items-center gap-3 border-b bg-background px-4 py-2 lg:hidden">
-        <span className="font-medium tabular-nums">
-          Câu {pos}/{total}
-        </span>
+        <span className="min-w-0 truncate font-medium tabular-nums">{heading}</span>
         {props.timer}
         <Sheet open={gridOpen} onOpenChange={setGridOpen}>
           <SheetTrigger render={<Button variant="outline" className="ml-auto" />}>
@@ -128,9 +132,18 @@ export function QuestionLayout(props: {
 
       <main className="mx-auto max-w-6xl p-4 pb-24 lg:grid lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)] lg:gap-8 lg:pb-8">
         <div>
-          <p className="hidden text-sm font-medium text-muted-foreground tabular-nums lg:block">
-            Câu {pos}/{total}
-          </p>
+          <header className="mb-6 border-b pb-4">
+            <div className="hidden items-baseline justify-between gap-3 text-sm text-muted-foreground lg:flex">
+              <p className="min-w-0 truncate font-medium tabular-nums">{heading}</p>
+              {props.meta && <p className="shrink-0">{props.meta}</p>}
+            </div>
+            <div className="flex items-baseline justify-between gap-3 lg:mt-1">
+              <p className="whitespace-nowrap text-xl font-semibold tabular-nums lg:text-2xl">{props.figure}</p>
+              {props.meta && <p className="shrink-0 text-sm text-muted-foreground lg:hidden">{props.meta}</p>}
+            </div>
+            <p className="mt-1 flex flex-wrap gap-x-3 gap-y-1 text-xs text-muted-foreground tabular-nums">{props.stats}</p>
+            {props.tabs && <div className="mt-4 lg:hidden">{props.tabs}</div>}
+          </header>
           {props.children}
           <nav className="mt-6 hidden items-center gap-3 lg:flex">
             {prevButton}
@@ -145,6 +158,7 @@ export function QuestionLayout(props: {
           <div className="sticky top-4 flex max-h-[calc(100dvh-5.5rem)] flex-col gap-4 rounded-xl border bg-card p-4">
             {props.timer}
             {props.side}
+            {props.tabs}
             {grid}
             {props.footer}
           </div>
@@ -158,4 +172,14 @@ export function QuestionLayout(props: {
       </nav>
     </>
   );
+}
+
+/** Line 3: muted glyph + label + count per item; `tone` is a theme-token text class. */
+export function Stats({ items }: { items: { glyph: string; label: string; n: number; tone?: string }[] }) {
+  return items.map((x, i) => (
+    <span key={x.label}>
+      {i > 0 && <span aria-hidden className="mr-3">·</span>}
+      <span aria-hidden className={x.tone}>{x.glyph}</span> {x.label} {x.n}
+    </span>
+  ));
 }

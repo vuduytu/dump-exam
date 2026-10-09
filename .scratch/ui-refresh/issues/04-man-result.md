@@ -21,3 +21,4 @@
 - Mỗi Choice: badge "Bạn chọn", "Correct Answer", "Suggested Answer" (chỉ khi khác Correct Answer) và thanh % vote (`role="meter"`).
 - Chữ "đã nộp" không còn ở header; e2e chờ Score `N/180`. Dữ liệu seed e2e không có Vote nên ảnh chụp luôn 0% và toàn ô đỏ.
 - Ảnh: `SHOTS=04 npm run e2e -- screenshots` → `04-desktop`, `04-desktop-dark`, `04-mobile`, `04-mobile-drawer`, và `-sai` cho mỗi bản.
+- Header chung với màn làm bài: `Điểm: X/180 (Y%)`, thống kê Đúng/Sai/Bỏ trống/Đánh dấu (Sai không gồm bỏ trống), meta `Thi thử · thời gian / 230 phút` hoặc `Luyện tập · thời gian` (`formatDuration` trong `logic.ts`, có test). Tab có số đếm (tab Sai gồm câu bỏ trống, theo luật Score); desktop tab nằm trên lưới ở cột phải, mobile dưới dòng 3.

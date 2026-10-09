@@ -6,10 +6,12 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import type { Choice } from "@/db/schema";
 import { cn } from "@/lib/utils";
-import { inTab, resultCell, type ResultTab } from "./logic";
-import { QuestionLayout, usePosition } from "./question-layout";
+import { formatDuration, inTab, resultCell, type ResultTab } from "./logic";
+import { QuestionLayout, Stats, usePosition } from "./question-layout";
 
 type Question = { id: number; text: string; choices: (Choice & { percent: number })[]; correct: string; suggested: string; selected: string[]; isCorrect: boolean; marked: boolean };
+
+const TIME_LIMIT_MIN = 230; // keep in step with TIME_LIMIT_MS in lib/attempts.ts (not importable into a client file)
 
 const tabs: { value: ResultTab; label: string }[] = [
   { value: undefined, label: "Tất cả" },
@@ -18,7 +20,7 @@ const tabs: { value: ResultTab; label: string }[] = [
 ];
 
 /** Read-only Result: all Questions arrive once, the tab and position switch on the client (`?f=`, `?q=` follow via replaceState). */
-export function ResultScreen(props: { examName: string; score: number; timed: boolean; minutes: number; questions: Question[]; initialPos: number; initialTab: ResultTab }) {
+export function ResultScreen(props: { examName: string; score: number; timed: boolean; durationSec: number; questions: Question[]; initialPos: number; initialTab: ResultTab }) {
   const { questions: qs } = props;
   const total = qs.length;
   const [pos, go] = usePosition(props.initialPos);
@@ -49,36 +51,40 @@ export function ResultScreen(props: { examName: string; score: number; timed: bo
   });
   const pct = Math.round((props.score / total) * 100);
 
-  const header = (
-    <header className="mb-6 border-b pb-4">
-      <p className="text-sm text-muted-foreground">{props.examName}</p>
-      <p className="mt-1 text-3xl font-semibold tabular-nums">
-        {props.score}/{total} <span className="text-xl text-muted-foreground">({pct}%)</span>
-      </p>
-      <p className="mt-1 text-sm text-muted-foreground">
-        {props.timed ? "Thi thử có bấm giờ" : "Luyện tập không bấm giờ"} · {props.minutes} phút
-      </p>
-      <div role="tablist" aria-label="Lọc câu" className="mt-4 flex flex-wrap gap-2">
-        {tabs.map((t) => (
-          <Button key={t.label} role="tab" aria-selected={tab === t.value} variant={tab === t.value ? "default" : "outline"} size="sm" onClick={() => pickTab(t.value)}>
-            {t.label}
-          </Button>
-        ))}
-      </div>
-    </header>
+  const blank = qs.filter((x) => !x.selected.length).length;
+  const wrongTab = qs.filter((x) => !x.isCorrect).length; // blanks are wrong (Score rule)
+  const markedN = qs.filter((x) => x.marked).length;
+  const counts = { all: total, wrong: wrongTab, marked: markedN };
+  const tabBar = (
+    <div role="tablist" aria-label="Lọc câu" className="flex flex-wrap gap-2">
+      {tabs.map((t) => (
+        <Button key={t.label} role="tab" aria-selected={tab === t.value} variant={tab === t.value ? "default" : "outline"} size="sm" onClick={() => pickTab(t.value)}>
+          {t.label} {counts[t.value ?? "all"]}
+        </Button>
+      ))}
+    </div>
   );
 
   return (
     <QuestionLayout
+      examName={props.examName}
+      meta={props.timed ? `Thi thử · ${formatDuration(props.durationSec)} / ${TIME_LIMIT_MIN} phút` : `Luyện tập · ${formatDuration(props.durationSec)}`}
+      figure={`Điểm: ${props.score}/${total} (${pct}%)`}
+      stats={
+        <Stats
+          items={[
+            { glyph: "✓", label: "Đúng", n: total - wrongTab, tone: "text-correct" },
+            { glyph: "✗", label: "Sai", n: wrongTab - blank, tone: "text-wrong" },
+            { glyph: "○", label: "Bỏ trống", n: blank },
+            { glyph: "⚑", label: "Đánh dấu", n: markedN, tone: "text-marked" },
+          ]}
+        />
+      }
+      tabs={tabBar}
       pos={pos}
       total={total}
       cells={cells}
       onGo={go}
-      side={
-        <p className="text-sm font-medium tabular-nums">
-          {props.score}/{total} ({pct}%) · {shown.length} câu
-        </p>
-      }
       footer={
         <>
           <p className="flex flex-wrap gap-x-3 gap-y-1 text-xs text-muted-foreground">
@@ -89,7 +95,6 @@ export function ResultScreen(props: { examName: string; score: number; timed: bo
         </>
       }
     >
-      {header}
       {!shown.length || !q ? (
         <p className="rounded-xl border bg-card p-6 text-center text-muted-foreground">
           {tab === "wrong" ? "Không có câu sai nào. Làm tốt lắm!" : tab === "marked" ? "Bạn chưa đánh dấu câu nào." : "Không có câu nào."}
