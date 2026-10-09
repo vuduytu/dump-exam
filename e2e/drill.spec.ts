@@ -33,5 +33,6 @@ test("Drill: start Ôn 10 on a Task, answer, submit, see the Score and the Drill
   await expect(page.getByRole("button", { name: "Ôn 10" }).first()).toBeVisible();
 
   await page.getByRole("link", { name: "Lịch sử" }).click();
-  await expect(page.getByRole("link", { name: /Ôn: People · Manage conflicts.*\/10/ })).toBeVisible();
+  const drills = page.locator("section").filter({ has: page.getByRole("heading", { name: "Ôn theo chủ đề" }) });
+  await expect(drills.getByRole("link", { name: /Ôn: People · Manage conflicts.*\/10.*Xem kết quả/ })).toBeVisible();
 });
