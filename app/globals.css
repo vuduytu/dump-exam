@@ -1,26 +1,129 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (@media (prefers-color-scheme: dark));
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-be-vietnam), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-sans);
+  --color-correct: var(--correct);
+  --color-correct-soft: var(--correct-soft);
+  --color-wrong: var(--wrong);
+  --color-wrong-soft: var(--wrong-soft);
+  --color-marked: var(--marked);
+  --color-marked-soft: var(--marked-soft);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+/* Calm Focus: slate neutrals, one accent (blue-600), green/red/amber for correct/wrong/marked. */
+:root {
+  --background: oklch(0.984 0.003 248);
+  --foreground: oklch(0.208 0.04 265);
+  --card: oklch(1 0 0);
+  --card-foreground: var(--foreground);
+  --popover: oklch(1 0 0);
+  --popover-foreground: var(--foreground);
+  --primary: oklch(0.546 0.245 262.9); /* blue-600 */
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.968 0.007 248);
+  --secondary-foreground: oklch(0.279 0.037 260);
+  --muted: oklch(0.968 0.007 248);
+  --muted-foreground: oklch(0.446 0.04 257); /* slate-600 */
+  --accent: oklch(0.968 0.007 248);
+  --accent-foreground: oklch(0.279 0.037 260);
+  --destructive: oklch(0.505 0.213 27.5); /* red-700 */
+  --border: oklch(0.929 0.013 256);
+  --input: oklch(0.869 0.02 253);
+  --ring: oklch(0.546 0.245 262.9);
+  --radius: 0.625rem;
+  --correct: oklch(0.527 0.154 150); /* green-700 */
+  --correct-soft: oklch(0.982 0.018 155);
+  --wrong: oklch(0.505 0.213 27.5); /* red-700 */
+  --wrong-soft: oklch(0.971 0.013 17);
+  --marked: oklch(0.555 0.163 48.4); /* amber-700 */
+  --marked-soft: oklch(0.987 0.022 95);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: oklch(0.129 0.042 265);
+    --foreground: oklch(0.968 0.007 248);
+    --card: oklch(0.208 0.04 265);
+    --popover: oklch(0.208 0.04 265);
+    --primary: oklch(0.623 0.214 259); /* blue-500 */
+    --primary-foreground: oklch(0.985 0 0);
+    --secondary: oklch(0.279 0.037 260);
+    --secondary-foreground: oklch(0.968 0.007 248);
+    --muted: oklch(0.279 0.037 260);
+    --muted-foreground: oklch(0.704 0.04 256);
+    --accent: oklch(0.279 0.037 260);
+    --accent-foreground: oklch(0.968 0.007 248);
+    --destructive: oklch(0.704 0.191 22);
+    --border: oklch(1 0 0 / 10%);
+    --input: oklch(1 0 0 / 15%);
+    --ring: oklch(0.623 0.214 259);
+    --correct: oklch(0.792 0.209 152); /* green-400 */
+    --correct-soft: oklch(0.266 0.065 153 / 60%);
+    --wrong: oklch(0.704 0.191 22);
+    --wrong-soft: oklch(0.258 0.092 26 / 60%);
+    --marked: oklch(0.828 0.189 84.4); /* amber-400 */
+    --marked-soft: oklch(0.279 0.077 46 / 60%);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+  html {
+    @apply font-sans;
+  }
+}
+
+/* Question and Choice text from the import: comfortable reading size and measure. */
+.question-text {
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  max-width: 70ch;
+}
+.question-text p + p {
+  margin-top: 0.75rem;
+}
+@media (min-width: 640px) {
+  .question-text {
+    font-size: 1.125rem;
+  }
+}
+
+/* Text inputs (no shadcn Input in the approved set). */
+@utility field {
+  @apply rounded-lg border border-input bg-background px-3 py-2 text-base outline-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50;
 }

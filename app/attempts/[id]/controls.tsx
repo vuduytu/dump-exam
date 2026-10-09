@@ -1,19 +1,24 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { Flag } from "lucide-react";
+import { ConfirmDialog } from "@/components/confirm-dialog";
+import { Button } from "@/components/ui/button";
 import { submitAttemptAction, toggleMarkAction } from "@/app/actions";
 
 export function MarkButton({ attemptId, questionId, initial }: { attemptId: number; questionId: number; initial: boolean }) {
   const [marked, setMarked] = useState(initial);
   return (
-    <button
+    <Button
       type="button"
+      variant="outline"
       aria-pressed={marked}
       onClick={() => toggleMarkAction(attemptId, questionId).then(setMarked)}
-      className={`rounded border px-3 py-1 ${marked ? "border-amber-500 bg-amber-200 text-amber-950" : ""}`}
+      className={marked ? "border-marked bg-marked-soft text-marked" : ""}
     >
+      <Flag className={marked ? "fill-current" : ""} />
       {marked ? "Bỏ đánh dấu" : "Đánh dấu xem lại"}
-    </button>
+    </Button>
   );
 }
 
@@ -36,7 +41,7 @@ export function Countdown({ attemptId, msLeft }: { attemptId: number; msLeft: nu
   const s = Math.max(0, Math.ceil(left / 1000));
   const pad = (n: number) => String(n).padStart(2, "0");
   return (
-    <span role="timer" suppressHydrationWarning className={`font-mono text-sm ${s < 600 ? "text-red-600" : ""}`}>
+    <span role="timer" suppressHydrationWarning className={`font-mono text-sm ${s < 600 ? "text-destructive" : ""}`}>
       {Math.floor(s / 3600)}:{pad(Math.floor(s / 60) % 60)}:{pad(s % 60)}
     </span>
   );
@@ -44,14 +49,15 @@ export function Countdown({ attemptId, msLeft }: { attemptId: number; msLeft: nu
 
 export function SubmitForm({ attemptId, unanswered, marked }: { attemptId: number; unanswered: number; marked: number }) {
   return (
-    <form
-      action={submitAttemptAction.bind(null, attemptId)}
-      onSubmit={(e) => {
-        if (!confirm(`Còn ${unanswered} câu chưa trả lời, ${marked} câu đánh dấu. Nộp?`)) e.preventDefault();
-      }}
-      className="ml-auto"
-    >
-      <button className="rounded bg-foreground px-3 py-1 text-background">Nộp bài</button>
-    </form>
+    <div className="ml-auto">
+      <ConfirmDialog
+        trigger="Nộp bài"
+        triggerProps={{ variant: "default" }}
+        title="Nộp bài?"
+        description={`Còn ${unanswered} câu chưa trả lời, ${marked} câu đánh dấu.`}
+        confirm="Nộp bài"
+        action={submitAttemptAction.bind(null, attemptId)}
+      />
+    </div>
   );
 }

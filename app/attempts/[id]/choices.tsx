@@ -28,7 +28,7 @@ export function Choices(props: { attemptId: number; questionId: number; choices:
       {choices.map((c) => {
         const checked = selected.includes(c.letter);
         return (
-          <label key={c.letter} className="flex gap-2 rounded border p-2">
+          <label key={c.letter} className="flex gap-2 rounded-lg border bg-card p-2 has-checked:border-primary has-checked:bg-primary/5">
             <input
               type={multi ? "checkbox" : "radio"}
               name={`q${questionId}`}
@@ -36,13 +36,13 @@ export function Choices(props: { attemptId: number; questionId: number; choices:
               disabled={multi && !checked && selected.length >= need}
               onChange={(e) => change(c.letter, e.target.checked)}
             />
-            <span>
+            <span className="question-text">
               {c.letter}. <span dangerouslySetInnerHTML={{ __html: c.text }} /> {/* sanitized at import */}
             </span>
           </label>
         );
       })}
-      {error && <p role="alert" className="text-red-600">Không lưu được, hãy chọn lại.</p>}
+      {error && <p role="alert" className="text-destructive">Không lưu được, hãy chọn lại.</p>}
     </fieldset>
   );
 }

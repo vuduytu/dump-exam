@@ -2,11 +2,15 @@ import { count, eq } from "drizzle-orm";
 import { cookies } from "next/headers";
 import { db } from "@/db";
 import { examQuestions, exams } from "@/db/schema";
-import { abandonAttemptAction, logoutAction, startAttemptAction } from "@/app/actions";
+import { abandonAttemptAction, startAttemptAction } from "@/app/actions";
 import Link from "next/link";
 import { findOpenAttempt, listAttempts } from "@/lib/attempts";
 import { SESSION_COOKIE, userFromSession } from "@/lib/auth";
-import { AbandonForm } from "./abandon-form";
+import { Badge } from "@/components/ui/badge";
+import { Card } from "@/components/ui/card";
+import { buttonVariants } from "@/components/ui/button";
+import { ConfirmDialog } from "@/components/confirm-dialog";
+import { SubmitButton } from "@/components/submit-button";
 
 export const dynamic = "force-dynamic"; // read Exams per request, not at build
 
@@ -28,40 +32,36 @@ export default async function Home() {
   }
   return (
     <main className="mx-auto max-w-2xl p-4">
-      <header className="flex items-center justify-between">
-        <h1 className="text-2xl font-semibold">PMP Practice</h1>
-        <form action={logoutAction} className="flex items-center gap-3">
-          <span className="text-sm">{user?.email}</span>
-          <button className="rounded border px-3 py-1 text-sm">Đăng xuất</button>
-        </form>
-      </header>
-      <nav className="mt-4 flex gap-4">
-        <Link href="/history" className="underline">Lịch sử</Link>
-        <Link href="/account" className="underline">Tài khoản</Link>
-        {user?.isAdmin && <Link href="/admin" className="underline">Quản lý User</Link>}
-      </nav>
-      <ul className="mt-6 divide-y rounded border">
+      <h1 className="text-2xl font-semibold">Đề thi</h1>
+      <Card className="mt-6 gap-0 py-0"><ul className="divide-y">
         {list.map((e) => (
-          <li key={e.id} className="flex items-center justify-between gap-3 p-3">
+          <li key={e.id} className="flex flex-wrap items-center justify-between gap-3 p-3">
             <span>{e.name}</span>
-            <span className="ml-auto text-sm">
+            <span className="ml-auto text-sm text-muted-foreground">
               {e.total} câu{best.has(e.id) && ` · cao nhất ${best.get(e.id)}/${e.total}`}
             </span>
             {open.has(e.id) ? (
               <>
-                <span className="rounded bg-amber-200 px-2 py-0.5 text-xs text-amber-950">đang làm dở</span>
-                <Link href={`/attempts/${open.get(e.id)}`} className="rounded border px-3 py-1 text-sm">Làm tiếp</Link>
-                <AbandonForm action={abandonAttemptAction.bind(null, open.get(e.id)!)} />
+                <Badge className="bg-marked-soft text-marked">đang làm dở</Badge>
+                <Link href={`/attempts/${open.get(e.id)}`} className={buttonVariants({ variant: "outline", size: "sm" })}>Làm tiếp</Link>
+                <ConfirmDialog
+                  trigger="Bỏ, làm lại từ đầu"
+                  triggerProps={{ size: "sm" }}
+                  title="Bỏ bài đang làm dở?"
+                  description="Các đáp án đã chọn sẽ bị xoá và bạn làm lại từ đầu."
+                  confirm="Bỏ và làm lại"
+                  action={abandonAttemptAction.bind(null, open.get(e.id)!)}
+                />
               </>
             ) : (
               <form action={startAttemptAction.bind(null, e.id)} className="flex gap-2">
-                <button name="timed" value="1" className="rounded border px-3 py-1 text-sm">Bấm giờ 230 phút</button>
-                <button name="timed" value="0" className="rounded border px-3 py-1 text-sm">Không bấm giờ</button>
+                <SubmitButton variant="outline" size="sm" name="timed" value="1">Bấm giờ 230 phút</SubmitButton>
+                <SubmitButton variant="outline" size="sm" name="timed" value="0">Không bấm giờ</SubmitButton>
               </form>
             )}
           </li>
         ))}
-      </ul>
+      </ul></Card>
     </main>
   );
 }
