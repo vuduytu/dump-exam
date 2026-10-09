@@ -8,15 +8,15 @@ import type { Choice } from "@/db/schema";
 import { taskLabel, taskOf } from "@/lib/question-tags";
 import { cn, TIME_LIMIT_MIN } from "@/lib/utils";
 import { formatDuration, inTab, resultCell, type ResultTab } from "./logic";
-import { QuestionLayout, Stats, usePosition } from "./question-layout";
+import { QuestionLayout, usePosition } from "./question-layout";
 
 type Question = { id: number; task: string | null; text: string; choices: (Choice & { percent: number })[]; correct: string; suggested: string; selected: string[]; isCorrect: boolean; marked: boolean };
 
-/** Tag colors per Domain (full class names so Tailwind sees them). */
-const domainTone: Record<string, string> = {
-  People: "border-people/40 bg-people-soft text-people",
-  Process: "border-process/40 bg-process-soft text-process",
-  "Business Environment": "border-business/40 bg-business-soft text-business",
+/** Colors per Domain: the Task tag and the score bar (full class names so Tailwind sees them). */
+const domainTone: Record<string, { tag: string; bar: string }> = {
+  People: { tag: "border-people/40 bg-people-soft text-people", bar: "bg-people" },
+  Process: { tag: "border-process/40 bg-process-soft text-process", bar: "bg-process" },
+  "Business Environment": { tag: "border-business/40 bg-business-soft text-business", bar: "bg-business" },
 };
 
 const tabs: { value: ResultTab; label: string }[] = [
@@ -75,18 +75,47 @@ export function ResultScreen(props: { title: string; drill: boolean; domains: { 
     <QuestionLayout
       title={props.title}
       meta={props.timed ? `Thi thử · ${formatDuration(props.durationSec)} / ${TIME_LIMIT_MIN} phút` : `${props.drill ? "Ôn" : "Luyện tập"} · ${formatDuration(props.durationSec)}`}
-      figure={`Điểm: ${props.score}/${total} (${pct}%)`}
-      stats={
-        <Stats
-          items={[
-            { glyph: "✓", label: "Đúng", n: total - wrongTab, tone: "text-correct" },
-            { glyph: "✗", label: "Sai", n: wrongTab - blank, tone: "text-wrong" },
-            { glyph: "○", label: "Bỏ trống", n: blank },
-            { glyph: "⚑", label: "Đánh dấu", n: markedN, tone: "text-marked" },
-          ]}
-        />
+      summary={
+        <section aria-label="Tóm tắt" className="rounded-xl border bg-card p-4">
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-3">
+            <div>
+              <p className="text-3xl font-semibold tabular-nums">{pct}%</p>
+              <p className="text-sm text-muted-foreground tabular-nums">Điểm: {props.score}/{total}</p>
+            </div>
+            <dl className="grid min-w-0 flex-1 grid-cols-2 gap-2 sm:grid-cols-4">
+              {[
+                { glyph: "✓", label: "Đúng", n: total - wrongTab, tone: "text-correct" },
+                { glyph: "✗", label: "Sai", n: wrongTab - blank, tone: "text-wrong" },
+                { glyph: "○", label: "Bỏ trống", n: blank, tone: "" },
+                { glyph: "⚑", label: "Đánh dấu", n: markedN, tone: "text-marked" },
+              ].map((x) => (
+                <div key={x.label} className="rounded-lg bg-muted/60 px-3 py-2">
+                  <dt className="text-xs text-muted-foreground"><span aria-hidden className={x.tone}>{x.glyph}</span> {x.label}</dt>
+                  <dd className={cn("text-lg font-semibold tabular-nums", x.tone)}>{x.n}</dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+          {props.domains.length > 0 && (
+            <ul className="mt-4 flex flex-col gap-3 border-t pt-4">
+              {props.domains.map((d) => {
+                const p = Math.round((d.correct / d.total) * 100);
+                return (
+                  <li key={d.domain} className="text-sm">
+                    <div className="flex items-baseline justify-between gap-3">
+                      <span>{d.domain}</span>
+                      <span className="text-muted-foreground tabular-nums">{p}% · {d.correct}/{d.total}</span>
+                    </div>
+                    <div role="meter" aria-label={`${d.domain} ${p}%`} aria-valuenow={p} aria-valuemin={0} aria-valuemax={100} className="mt-1 h-2 overflow-hidden rounded-full bg-muted">
+                      <div className={cn("h-full", domainTone[d.domain]?.bar)} style={{ width: `${p}%` }} />
+                    </div>
+                  </li>
+                );
+              })}
+            </ul>
+          )}
+        </section>
       }
-      domains={props.domains.map((d) => `${d.domain} ${Math.round((d.correct / d.total) * 100)}% (${d.correct}/${d.total})`).join(" · ")}
       tabs={tabBar}
       pos={pos}
       total={total}
@@ -111,12 +140,13 @@ export function ResultScreen(props: { title: string; drill: boolean; domains: { 
           <p className={cn("flex flex-wrap items-center gap-1.5 text-sm font-semibold", q.isCorrect ? "text-correct" : "text-wrong")}>
             {q.isCorrect ? <Check className="size-4" /> : <X className="size-4" />}
             {q.isCorrect ? "Đúng" : q.selected.length ? "Sai" : "Sai (bỏ trống)"}
+            <span className="font-normal text-muted-foreground tabular-nums">· Câu {pos}/{total}</span>
             {q.marked && (
               <span className="ml-2 flex items-center gap-1 text-marked">
                 <Flag className="size-4" /> Đã đánh dấu
               </span>
             )}
-            {taskLabel(q.task) && <Badge variant="outline" className={cn("ml-auto h-auto max-w-full whitespace-normal font-normal", domainTone[taskOf(q.task)!.domain])}>{taskLabel(q.task)}</Badge>}
+            {taskLabel(q.task) && <Badge variant="outline" className={cn("ml-auto h-auto max-w-full whitespace-normal font-normal", domainTone[taskOf(q.task)!.domain].tag)}>{taskLabel(q.task)}</Badge>}
           </p>
           <div className="question-text mt-3" dangerouslySetInnerHTML={{ __html: q.text }} /> {/* sanitized at import */}
           <ul className="mt-6 flex flex-col gap-2">

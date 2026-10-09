@@ -60,7 +60,7 @@ test("desktop: keyboard switches, answers and marks; the answer survives a reloa
   await expect(page).not.toHaveURL(/\?q=2/);
   await page.getByRole("dialog").getByRole("button", { name: "Nộp bài" }).click();
   await expect(page.getByText(/^Điểm: \d+\/180/).filter({ visible: true })).toBeVisible(); // Score
-  await expect(visible(page, "Đề 1 · Câu 1/180")).toBeVisible();
+  await expect(visible(page, "· Câu 1/180")).toBeVisible(); // Result: the position sits on the Question line
   await expect(page.getByRole("tab", { name: /^Tất cả 180$/ })).toBeVisible();
   await page.waitForLoadState("networkidle");
 
@@ -119,5 +119,5 @@ test("Timed Attempt: 240-minute label on the Exam page, attempt screen and Resul
   await button(page, "Nộp bài").click();
   await page.getByRole("dialog").getByRole("button", { name: "Nộp bài" }).click();
   await expect(visible(page, /^Thi thử · .* \/ 240 phút$/)).toBeVisible();
-  await expect(page.getByText(/People \d+% \(\d+\/\d+\) · Process \d+% \(\d+\/\d+\) · Business Environment \d+% \(\d+\/\d+\)/).filter({ visible: true })).toBeVisible();
+  for (const d of ["People", "Process", "Business Environment"]) await expect(page.getByRole("meter", { name: new RegExp(`^${d} \\d+%$`) })).toBeVisible();
 });

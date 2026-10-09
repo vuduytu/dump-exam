@@ -35,9 +35,9 @@ const isTyping = (t: EventTarget | null) =>
 export function QuestionLayout(props: {
   title: string; // line 1: "Đề 2 · Câu 72/180"
   meta?: React.ReactNode; // line 1, right-aligned
-  figure: React.ReactNode; // line 2
-  stats: React.ReactNode; // line 3, see Stats
-  domains?: string; // line 4, Result of an Exam only
+  figure?: React.ReactNode; // line 2
+  stats?: React.ReactNode; // line 3, see Stats
+  summary?: React.ReactNode; // Result: replaces lines 2-3, and line 1 drops "Câu N/M" (the Question shows it)
   tabs?: React.ReactNode; // Result: above the grid on desktop, below line 3 on mobile
   pos: number;
   total: number;
@@ -135,15 +135,23 @@ export function QuestionLayout(props: {
         <div>
           <header className="mb-6 border-b pb-4">
             <div className="hidden items-baseline justify-between gap-3 lg:flex">
-              <h1 className="min-w-0 truncate text-2xl font-semibold tabular-nums">{heading}</h1>
+              <h1 className="min-w-0 truncate text-2xl font-semibold tabular-nums">{props.summary ? props.title : heading}</h1>
               {props.meta && <p className="shrink-0 text-sm text-muted-foreground">{props.meta}</p>}
             </div>
-            <div className="flex items-baseline justify-between gap-3 lg:mt-1">
-              <p className="whitespace-nowrap text-lg font-medium tabular-nums">{props.figure}</p>
-              {props.meta && <p className="shrink-0 text-sm text-muted-foreground lg:hidden">{props.meta}</p>}
-            </div>
-            <p className="mt-1 flex flex-wrap gap-x-3 gap-y-1 text-xs text-muted-foreground tabular-nums">{props.stats}</p>
-            {props.domains && <p className="mt-1 text-xs text-muted-foreground tabular-nums">{props.domains}</p>}
+            {props.summary ? (
+              <>
+                {props.meta && <p className="text-sm text-muted-foreground lg:hidden">{props.meta}</p>}
+                <div className="mt-3">{props.summary}</div>
+              </>
+            ) : (
+              <>
+                <div className="flex items-baseline justify-between gap-3 lg:mt-1">
+                  <p className="whitespace-nowrap text-lg font-medium tabular-nums">{props.figure}</p>
+                  {props.meta && <p className="shrink-0 text-sm text-muted-foreground lg:hidden">{props.meta}</p>}
+                </div>
+                <p className="mt-1 flex flex-wrap gap-x-3 gap-y-1 text-xs text-muted-foreground tabular-nums">{props.stats}</p>
+              </>
+            )}
             {props.tabs && <div className="mt-4 lg:hidden">{props.tabs}</div>}
           </header>
           {props.children}

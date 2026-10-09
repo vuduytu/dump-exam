@@ -178,7 +178,7 @@ test.describe("screenshots dp04", () => {
       if (name === "mobile") await page.getByRole("button", { name: "Lưới câu" }).click(); // Submit lives in the drawer
       await page.getByRole("button", { name: "Nộp bài" }).filter({ visible: true }).click();
       await page.getByRole("dialog").getByRole("button", { name: "Nộp bài" }).last().click();
-      await page.getByText(/People \d+%/).filter({ visible: true }).waitFor();
+      await page.getByRole("meter", { name: /^People \d+%$/ }).waitFor();
       await page.screenshot({ path: `.scratch/domain-practice/screenshots/04-${name}.png` });
       await page.context().close();
     });
