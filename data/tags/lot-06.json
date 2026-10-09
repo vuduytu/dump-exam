@@ -1,0 +1,584 @@
+[
+ {
+  "id": 486,
+  "task": "people-4",
+  "approach": "predictive",
+  "confidence": "medium"
+ },
+ {
+  "id": 487,
+  "task": "people-4",
+  "approach": "hybrid",
+  "confidence": "medium"
+ },
+ {
+  "id": 488,
+  "task": "process-4",
+  "approach": "predictive",
+  "confidence": "medium"
+ },
+ {
+  "id": 489,
+  "task": "process-6",
+  "approach": "agile",
+  "confidence": "medium"
+ },
+ {
+  "id": 490,
+  "task": "process-10",
+  "approach": "predictive",
+  "confidence": "medium"
+ },
+ {
+  "id": 491,
+  "task": "process-1",
+  "approach": "predictive",
+  "confidence": "low"
+ },
+ {
+  "id": 492,
+  "task": "business-3",
+  "approach": "predictive",
+  "confidence": "high"
+ },
+ {
+  "id": 493,
+  "task": "people-6",
+  "approach": "agile",
+  "confidence": "medium"
+ },
+ {
+  "id": 494,
+  "task": "people-3",
+  "approach": "predictive",
+  "confidence": "low"
+ },
+ {
+  "id": 495,
+  "task": "business-4",
+  "approach": "agile",
+  "confidence": "high"
+ },
+ {
+  "id": 496,
+  "task": "business-7",
+  "approach": "agile",
+  "confidence": "high"
+ },
+ {
+  "id": 497,
+  "task": "process-3",
+  "approach": "hybrid",
+  "confidence": "medium"
+ },
+ {
+  "id": 498,
+  "task": "process-4",
+  "approach": "predictive",
+  "confidence": "high"
+ },
+ {
+  "id": 499,
+  "task": "people-5",
+  "approach": "predictive",
+  "confidence": "medium"
+ },
+ {
+  "id": 500,
+  "task": "people-1",
+  "approach": "agile",
+  "confidence": "medium"
+ },
+ {
+  "id": 501,
+  "task": "people-3",
+  "approach": "predictive",
+  "confidence": "medium"
+ },
+ {
+  "id": 502,
+  "task": "process-1",
+  "approach": "predictive",
+  "confidence": "low"
+ },
+ {
+  "id": 503,
+  "task": "people-3",
+  "approach": "predictive",
+  "confidence": "medium"
+ },
+ {
+  "id": 504,
+  "task": "people-4",
+  "approach": "predictive",
+  "confidence": "medium"
+ },
+ {
+  "id": 505,
+  "task": "business-5",
+  "approach": "predictive",
+  "confidence": "medium"
+ },
+ {
+  "id": 506,
+  "task": "business-8",
+  "approach": "hybrid",
+  "confidence": "medium"
+ },
+ {
+  "id": 507,
+  "task": "process-3",
+  "approach": "agile",
+  "confidence": "medium"
+ },
+ {
+  "id": 508,
+  "task": "people-3",
+  "approach": "agile",
+  "confidence": "medium"
+ },
+ {
+  "id": 509,
+  "task": "process-3",
+  "approach": "agile",
+  "confidence": "high"
+ },
+ {
+  "id": 510,
+  "task": "people-3",
+  "approach": "agile",
+  "confidence": "medium"
+ },
+ {
+  "id": 511,
+  "task": "business-7",
+  "approach": "agile",
+  "confidence": "medium"
+ },
+ {
+  "id": 512,
+  "task": "process-5",
+  "approach": "predictive",
+  "confidence": "high"
+ },
+ {
+  "id": 513,
+  "task": "process-8",
+  "approach": "predictive",
+  "confidence": "medium"
+ },
+ {
+  "id": 514,
+  "task": "people-7",
+  "approach": "agile",
+  "confidence": "medium"
+ },
+ {
+  "id": 515,
+  "task": "people-3",
+  "approach": "agile",
+  "confidence": "medium"
+ },
+ {
+  "id": 516,
+  "task": "business-5",
+  "approach": "predictive",
+  "confidence": "high"
+ },
+ {
+  "id": 517,
+  "task": "business-5",
+  "approach": "predictive",
+  "confidence": "high"
+ },
+ {
+  "id": 518,
+  "task": "business-7",
+  "approach": "agile",
+  "confidence": "high"
+ },
+ {
+  "id": 519,
+  "task": "people-4",
+  "approach": "predictive",
+  "confidence": "medium"
+ },
+ {
+  "id": 520,
+  "task": "people-4",
+  "approach": "predictive",
+  "confidence": "low"
+ },
+ {
+  "id": 521,
+  "task": "process-9",
+  "approach": "predictive",
+  "confidence": "high"
+ },
+ {
+  "id": 522,
+  "task": "people-3",
+  "approach": "predictive",
+  "confidence": "low"
+ },
+ {
+  "id": 523,
+  "task": "process-6",
+  "approach": "agile",
+  "confidence": "medium"
+ },
+ {
+  "id": 524,
+  "task": "process-3",
+  "approach": "predictive",
+  "confidence": "medium"
+ },
+ {
+  "id": 525,
+  "task": "people-4",
+  "approach": "predictive",
+  "confidence": "medium"
+ },
+ {
+  "id": 526,
+  "task": "people-3",
+  "approach": "agile",
+  "confidence": "medium"
+ },
+ {
+  "id": 527,
+  "task": "people-8",
+  "approach": "predictive",
+  "confidence": "medium"
+ },
+ {
+  "id": 528,
+  "task": "business-2",
+  "approach": "predictive",
+  "confidence": "medium"
+ },
+ {
+  "id": 529,
+  "task": "people-4",
+  "approach": "agile",
+  "confidence": "medium"
+ },
+ {
+  "id": 530,
+  "task": "process-9",
+  "approach": "predictive",
+  "confidence": "high"
+ },
+ {
+  "id": 531,
+  "task": "people-4",
+  "approach": "predictive",
+  "confidence": "medium"
+ },
+ {
+  "id": 532,
+  "task": "process-1",
+  "approach": "hybrid",
+  "confidence": "medium"
+ },
+ {
+  "id": 533,
+  "task": "process-2",
+  "approach": "agile",
+  "confidence": "low"
+ },
+ {
+  "id": 534,
+  "task": "people-8",
+  "approach": "predictive",
+  "confidence": "high"
+ },
+ {
+  "id": 535,
+  "task": "people-3",
+  "approach": "predictive",
+  "confidence": "medium"
+ },
+ {
+  "id": 536,
+  "task": "process-3",
+  "approach": "predictive",
+  "confidence": "medium"
+ },
+ {
+  "id": 537,
+  "task": "process-4",
+  "approach": "predictive",
+  "confidence": "medium"
+ },
+ {
+  "id": 538,
+  "task": "business-2",
+  "approach": "predictive",
+  "confidence": "high"
+ },
+ {
+  "id": 539,
+  "task": "business-1",
+  "approach": "predictive",
+  "confidence": "high"
+ },
+ {
+  "id": 540,
+  "task": "people-3",
+  "approach": "agile",
+  "confidence": "medium"
+ },
+ {
+  "id": 541,
+  "task": "process-3",
+  "approach": "agile",
+  "confidence": "medium"
+ },
+ {
+  "id": 542,
+  "task": "business-4",
+  "approach": "agile",
+  "confidence": "medium"
+ },
+ {
+  "id": 543,
+  "task": "people-3",
+  "approach": "agile",
+  "confidence": "low"
+ },
+ {
+  "id": 544,
+  "task": "process-2",
+  "approach": "agile",
+  "confidence": "medium"
+ },
+ {
+  "id": 545,
+  "task": "process-1",
+  "approach": "agile",
+  "confidence": "medium"
+ },
+ {
+  "id": 546,
+  "task": "business-4",
+  "approach": "agile",
+  "confidence": "medium"
+ },
+ {
+  "id": 547,
+  "task": "process-3",
+  "approach": "agile",
+  "confidence": "medium"
+ },
+ {
+  "id": 548,
+  "task": "business-3",
+  "approach": "predictive",
+  "confidence": "medium"
+ },
+ {
+  "id": 549,
+  "task": "people-8",
+  "approach": "predictive",
+  "confidence": "medium"
+ },
+ {
+  "id": 550,
+  "task": "process-3",
+  "approach": "hybrid",
+  "confidence": "high"
+ },
+ {
+  "id": 551,
+  "task": "business-8",
+  "approach": "predictive",
+  "confidence": "medium"
+ },
+ {
+  "id": 552,
+  "task": "business-4",
+  "approach": "agile",
+  "confidence": "low"
+ },
+ {
+  "id": 553,
+  "task": "people-2",
+  "approach": "agile",
+  "confidence": "high"
+ },
+ {
+  "id": 554,
+  "task": "people-3",
+  "approach": "predictive",
+  "confidence": "medium"
+ },
+ {
+  "id": 555,
+  "task": "business-4",
+  "approach": "agile",
+  "confidence": "high"
+ },
+ {
+  "id": 556,
+  "task": "process-2",
+  "approach": "predictive",
+  "confidence": "low"
+ },
+ {
+  "id": 557,
+  "task": "process-2",
+  "approach": "agile",
+  "confidence": "medium"
+ },
+ {
+  "id": 558,
+  "task": "business-3",
+  "approach": "predictive",
+  "confidence": "high"
+ },
+ {
+  "id": 559,
+  "task": "people-3",
+  "approach": "agile",
+  "confidence": "high"
+ },
+ {
+  "id": 560,
+  "task": "people-2",
+  "approach": "predictive",
+  "confidence": "medium"
+ },
+ {
+  "id": 561,
+  "task": "people-7",
+  "approach": "agile",
+  "confidence": "low"
+ },
+ {
+  "id": 562,
+  "task": "people-8",
+  "approach": "predictive",
+  "confidence": "medium"
+ },
+ {
+  "id": 563,
+  "task": "business-4",
+  "approach": "predictive",
+  "confidence": "medium"
+ },
+ {
+  "id": 564,
+  "task": "process-8",
+  "approach": "hybrid",
+  "confidence": "low"
+ },
+ {
+  "id": 565,
+  "task": "process-10",
+  "approach": "predictive",
+  "confidence": "medium"
+ },
+ {
+  "id": 566,
+  "task": "process-3",
+  "approach": "predictive",
+  "confidence": "medium"
+ },
+ {
+  "id": 567,
+  "task": "process-4",
+  "approach": "predictive",
+  "confidence": "medium"
+ },
+ {
+  "id": 568,
+  "task": "people-4",
+  "approach": "predictive",
+  "confidence": "high"
+ },
+ {
+  "id": 569,
+  "task": "process-8",
+  "approach": "predictive",
+  "confidence": "low"
+ },
+ {
+  "id": 570,
+  "task": "people-7",
+  "approach": "agile",
+  "confidence": "high"
+ },
+ {
+  "id": 571,
+  "task": "process-2",
+  "approach": "agile",
+  "confidence": "medium"
+ },
+ {
+  "id": 572,
+  "task": "process-4",
+  "approach": "predictive",
+  "confidence": "high"
+ },
+ {
+  "id": 573,
+  "task": "process-7",
+  "approach": "hybrid",
+  "confidence": "high"
+ },
+ {
+  "id": 574,
+  "task": "people-4",
+  "approach": "agile",
+  "confidence": "medium"
+ },
+ {
+  "id": 575,
+  "task": "process-1",
+  "approach": "hybrid",
+  "confidence": "medium"
+ },
+ {
+  "id": 576,
+  "task": "people-3",
+  "approach": "predictive",
+  "confidence": "low"
+ },
+ {
+  "id": 577,
+  "task": "process-7",
+  "approach": "predictive",
+  "confidence": "medium"
+ },
+ {
+  "id": 578,
+  "task": "business-6",
+  "approach": "predictive",
+  "confidence": "low"
+ },
+ {
+  "id": 579,
+  "task": "process-10",
+  "approach": "predictive",
+  "confidence": "high"
+ },
+ {
+  "id": 580,
+  "task": "process-4",
+  "approach": "predictive",
+  "confidence": "high"
+ },
+ {
+  "id": 581,
+  "task": "business-2",
+  "approach": "predictive",
+  "confidence": "medium"
+ },
+ {
+  "id": 582,
+  "task": "people-3",
+  "approach": "predictive",
+  "confidence": "low"
+ }
+]
