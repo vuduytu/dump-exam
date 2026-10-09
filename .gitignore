@@ -45,3 +45,6 @@ next-env.d.ts
 # playwright
 /test-results/
 /playwright-report/
+
+# classifier lot inputs (regenerate with npm run tags:split)
+/data/tags/input/

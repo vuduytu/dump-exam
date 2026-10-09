@@ -9,6 +9,8 @@
     "lint": "eslint",
     "e2e": "node --env-file=.env.test node_modules/@playwright/test/cli.js test",
     "test": "tsx --env-file=.env.test --test --test-concurrency=1 'tests/**/*.test.ts'",
+    "tags:split": "tsx scripts/tags.ts split",
+    "tags:merge": "tsx scripts/tags.ts merge",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
     "db:seed": "tsx --env-file=.env.local scripts/seed.ts",

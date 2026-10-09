@@ -1,0 +1,144 @@
+{
+ "tasks": [
+  {
+   "code": "people-1",
+   "name": "Develop a common vision",
+   "domain": "People"
+  },
+  {
+   "code": "people-2",
+   "name": "Manage conflicts",
+   "domain": "People"
+  },
+  {
+   "code": "people-3",
+   "name": "Lead the project team",
+   "domain": "People"
+  },
+  {
+   "code": "people-4",
+   "name": "Engage stakeholders",
+   "domain": "People"
+  },
+  {
+   "code": "people-5",
+   "name": "Align stakeholder expectations",
+   "domain": "People"
+  },
+  {
+   "code": "people-6",
+   "name": "Manage stakeholder expectations",
+   "domain": "People"
+  },
+  {
+   "code": "people-7",
+   "name": "Help ensure knowledge transfer",
+   "domain": "People"
+  },
+  {
+   "code": "people-8",
+   "name": "Plan and manage communication",
+   "domain": "People"
+  },
+  {
+   "code": "process-1",
+   "name": "Develop an integrated project management plan and plan delivery",
+   "domain": "Process"
+  },
+  {
+   "code": "process-2",
+   "name": "Develop and manage project scope",
+   "domain": "Process"
+  },
+  {
+   "code": "process-3",
+   "name": "Help ensure value-based delivery",
+   "domain": "Process"
+  },
+  {
+   "code": "process-4",
+   "name": "Plan and manage resources",
+   "domain": "Process"
+  },
+  {
+   "code": "process-5",
+   "name": "Plan and manage procurement",
+   "domain": "Process"
+  },
+  {
+   "code": "process-6",
+   "name": "Plan and manage finance",
+   "domain": "Process"
+  },
+  {
+   "code": "process-7",
+   "name": "Plan and optimize quality of products/deliverables",
+   "domain": "Process"
+  },
+  {
+   "code": "process-8",
+   "name": "Plan and manage schedule",
+   "domain": "Process"
+  },
+  {
+   "code": "process-9",
+   "name": "Evaluate project status",
+   "domain": "Process"
+  },
+  {
+   "code": "process-10",
+   "name": "Manage project closure",
+   "domain": "Process"
+  },
+  {
+   "code": "business-1",
+   "name": "Define and establish project governance",
+   "domain": "Business Environment"
+  },
+  {
+   "code": "business-2",
+   "name": "Plan and manage project compliance",
+   "domain": "Business Environment"
+  },
+  {
+   "code": "business-3",
+   "name": "Manage and control changes",
+   "domain": "Business Environment"
+  },
+  {
+   "code": "business-4",
+   "name": "Remove impediments and manage issues",
+   "domain": "Business Environment"
+  },
+  {
+   "code": "business-5",
+   "name": "Plan and manage risk",
+   "domain": "Business Environment"
+  },
+  {
+   "code": "business-6",
+   "name": "Continuous improvement",
+   "domain": "Business Environment"
+  },
+  {
+   "code": "business-7",
+   "name": "Support organizational change",
+   "domain": "Business Environment"
+  },
+  {
+   "code": "business-8",
+   "name": "Evaluate external business environment changes",
+   "domain": "Business Environment"
+  }
+ ],
+ "approaches": [
+  "predictive",
+  "agile",
+  "hybrid"
+ ],
+ "confidences": [
+  "high",
+  "medium",
+  "low"
+ ]
+}
