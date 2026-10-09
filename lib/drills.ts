@@ -82,13 +82,13 @@ export async function openDrills(userId: number) {
 }
 
 /**
- * Starts an untimed Drill of `size` usable Questions from a Domain (by name) or a Task (by code), picked in this order:
+ * Starts an untimed Drill of `size` (or all) usable Questions from a Domain (by name) or a Task (by code), picked in this order:
  * never answered in a submitted Attempt, then wrong on the latest answer, then the rest; random within each group.
  * A short source gives all it has. One open Drill per source, like one open Attempt per Exam.
  */
-export async function startDrill(userId: number, source: string, size: number, now = new Date()) {
+export async function startDrill(userId: number, source: string, size: number | "all", now = new Date()) {
   const tasks = tasksOfSource(source);
-  if (!tasks.length || (size !== 10 && size !== 20)) throw new InvalidDrill();
+  if (!tasks.length || (size !== 10 && size !== 20 && size !== "all")) throw new InvalidDrill();
   const pool = await db
     .select({ id: questions.id, correct: questions.correctAnswer })
     .from(questions)
@@ -98,7 +98,7 @@ export async function startDrill(userId: number, source: string, size: number, n
   const latest = await latestAnswers(userId, pool.map((q) => q.id));
   // 0 never answered, 1 wrong on the latest answer, 2 right on it
   const group = (q: (typeof pool)[number]) => (!latest.has(q.id) ? 0 : sameLetters(latest.get(q.id)!, q.correct) ? 2 : 1);
-  const picked = [0, 1, 2].flatMap((g) => shuffle(pool.filter((q) => group(q) === g))).slice(0, size);
+  const picked = [0, 1, 2].flatMap((g) => shuffle(pool.filter((q) => group(q) === g))).slice(0, size === "all" ? undefined : size);
 
   return db.transaction(async (tx) => {
     await tx.select({ id: users.id }).from(users).where(eq(users.id, userId)).for("update"); // as in startAttempt

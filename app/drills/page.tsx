@@ -40,12 +40,17 @@ export default async function Drills() {
           </span>
         ) : (
           s.total > 0 && (
-            <span className="ml-auto flex gap-2">
+            <span className="ml-auto flex flex-wrap gap-2">
               {[10, 20].map((size) => (
                 <form key={size} action={startDrillAction.bind(null, s.source, size)}>
                   <SubmitButton size="sm" variant="outline">Ôn {size}</SubmitButton>
                 </form>
               ))}
+              {!strong && (
+                <form action={startDrillAction.bind(null, s.source, "all")}>
+                  <SubmitButton size="sm" variant="outline">Ôn hết ({s.total})</SubmitButton>
+                </form>
+              )}
             </span>
           )
         )}

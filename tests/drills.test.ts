@@ -86,6 +86,8 @@ test("a Drill never holds an Unusable Question, takes all when the source is sho
   const domain = await getAttempt(alice, await startDrill(alice, "Business Environment", 20));
   const unusable = await db.select({ id: questions.id }).from(questions).where(eq(questions.usable, false));
   assert.ok(domain.questions.every((q) => !unusable.some((u) => u.id === q.id)));
+  const all = await getAttempt(alice, await startDrill(alice, "people-3", "all"));
+  assert.equal(all.questions.length, (await usableOf("people-3")).length);
   await assert.rejects(startDrill(alice, "people-1", 15), InvalidDrill);
   await assert.rejects(startDrill(alice, "nope", 10), InvalidDrill);
 });

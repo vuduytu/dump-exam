@@ -51,10 +51,10 @@ export async function startAttemptAction(examId: number, form: FormData) {
   redirect(`/attempts/${id}`);
 }
 
-export async function startDrillAction(source: string, size: number) {
+export async function startDrillAction(source: string, size: number | "all") {
   let id: number;
   try {
-    id = await startDrill(await currentUserId(), String(source), Number(size));
+    id = await startDrill(await currentUserId(), String(source), size === "all" ? size : Number(size));
   } catch (err) {
     if (err instanceof InvalidDrill || err instanceof DrillEmpty) notFound(); // the page offers only real, non-empty sources
     if (!(err instanceof AttemptInProgress)) throw err;
