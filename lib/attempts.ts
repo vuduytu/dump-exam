@@ -34,8 +34,10 @@ async function lockOpenAttempt(tx: Tx, userId: number, attemptId: number) {
   return attempt;
 }
 
-export async function startAttempt(userId: number, examId: number) {
-  const [{ insertId }] = await db.insert(attempts).values({ userId, examId });
+// startedAt comes from JS, not the column's CURRENT_TIMESTAMP default: on MAMP that default is in the
+// session time zone (+07) while Drizzle reads it as UTC, which would shift durations and deadlines.
+export async function startAttempt(userId: number, examId: number, now = new Date()) {
+  const [{ insertId }] = await db.insert(attempts).values({ userId, examId, startedAt: now });
   return insertId;
 }
 

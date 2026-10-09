@@ -4,7 +4,7 @@
 // Every action except loginAction must check userFromSession itself.
 
 import { cookies } from "next/headers";
-import { redirect } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import { AttemptSubmitted, saveAnswer, startAttempt, submitAttempt } from "@/lib/attempts";
 import { createSessionToken, InvalidCredentials, login, SESSION_COOKIE, SESSION_DAYS, UserLocked, userFromSession } from "@/lib/auth";
 
@@ -37,6 +37,7 @@ export async function logoutAction() {
 }
 
 export async function startAttemptAction(examId: number) {
+  if (!Number.isInteger(Number(examId))) notFound();
   const id = await startAttempt(await currentUserId(), Number(examId));
   redirect(`/attempts/${id}`);
 }
@@ -52,5 +53,5 @@ export async function submitAttemptAction(attemptId: number) {
   } catch (err) {
     if (!(err instanceof AttemptSubmitted)) throw err; // double click: already submitted, just show the Score
   }
-  redirect(`/attempts/${attemptId}`);
+  redirect(`/attempts/${Number(attemptId)}`);
 }

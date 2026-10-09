@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import { asc, eq } from "drizzle-orm";
 import { db } from "@/db";
-import { examQuestions, questions, users } from "@/db/schema";
+import { attempts, examQuestions, questions, users } from "@/db/schema";
 import { generateExams, seedQuestions } from "@/db/seed";
 import { AttemptNotFound, AttemptSubmitted, getAttempt, InvalidAnswer, saveAnswer, startAttempt, submitAttempt } from "@/lib/attempts";
 import { closeDb, resetDb } from "./db";
@@ -12,7 +12,7 @@ const EXAM = 1;
 let alice: number;
 let bob: number;
 // Exam 1's Questions in position order, with Correct Answers: fixture knowledge for building answers
-let key: { id: number; correct: string }[];
+let correctAnswers: { id: number; correct: string }[];
 
 before(async () => {
   await resetDb();
@@ -20,7 +20,7 @@ before(async () => {
   await generateExams();
   [{ insertId: alice }] = await db.insert(users).values({ email: "alice@x.test", passwordHash: "-" });
   [{ insertId: bob }] = await db.insert(users).values({ email: "bob@x.test", passwordHash: "-" });
-  key = await db
+  correctAnswers = await db
     .select({ id: questions.id, correct: questions.correctAnswer })
     .from(examQuestions)
     .innerJoin(questions, eq(questions.id, examQuestions.questionId))
@@ -34,17 +34,17 @@ test("a new Attempt shows the Exam's 180 Questions in order, Choices in original
   const attempt = await getAttempt(alice, id);
   assert.equal(attempt.submittedAt, null);
   assert.equal(attempt.score, null);
-  assert.deepEqual(attempt.questions.map((q) => q.id), key.map((k) => k.id));
+  assert.deepEqual(attempt.questions.map((q) => q.id), correctAnswers.map((k) => k.id));
   for (const q of attempt.questions) {
     assert.deepEqual(q.selected, []);
     assert.deepEqual(q.choices.map((c) => c.letter), ["A", "B", "C", "D", "E"].slice(0, q.choices.length));
-    assert.equal(q.need, key.find((k) => k.id === q.id)!.correct.length);
+    assert.equal(q.need, correctAnswers.find((k) => k.id === q.id)!.correct.length);
     assert.equal("correctAnswer" in q, false); // never sent to the page before submit
   }
 });
 
-const multi = () => key.find((k) => k.correct.length === 2)!; // every multi-answer Question has 5 Choices
-const single = () => key.find((k) => k.correct.length === 1)!;
+const multi = () => correctAnswers.find((k) => k.correct.length === 2)!; // every multi-answer Question has 5 Choices
+const single = () => correctAnswers.find((k) => k.correct.length === 1)!;
 const selectedOf = async (attemptId: number, questionId: number) =>
   (await getAttempt(alice, attemptId)).questions.find((q) => q.id === questionId)!.selected;
 
@@ -76,8 +76,8 @@ const wrongLetter = (correct: string) => ["A", "B", "C", "D"].find((l) => !corre
 
 test("Score counts a Question right only when the selected letters equal the Correct Answer; blank is wrong", async () => {
   const id = await startAttempt(alice, EXAM);
-  const singles = key.filter((k) => k.correct.length === 1);
-  const multis = key.filter((k) => k.correct.length > 1);
+  const singles = correctAnswers.filter((k) => k.correct.length === 1);
+  const multis = correctAnswers.filter((k) => k.correct.length > 1);
   assert.ok(multis.length >= 3, "fixture: Exam 1 needs 3 multi-answer Questions");
   await saveAnswer(alice, id, singles[0].id, [singles[0].correct]); // right
   await saveAnswer(alice, id, singles[1].id, [wrongLetter(singles[1].correct)]); // wrong
@@ -112,4 +112,11 @@ test("another User cannot read, answer or submit the Attempt", async () => {
   const attempt = await getAttempt(alice, id);
   assert.equal(attempt.submittedAt, null);
   assert.deepEqual(attempt.questions.find((x) => x.id === q.id)!.selected, []);
+});
+
+test("startedAt round-trips as the exact instant passed in, whatever the DB time zone", async () => {
+  const now = new Date("2026-01-02T03:04:05Z");
+  const id = await startAttempt(alice, EXAM, now);
+  const [row] = await db.select({ startedAt: attempts.startedAt }).from(attempts).where(eq(attempts.id, id));
+  assert.equal(row.startedAt.toISOString(), now.toISOString());
 });
