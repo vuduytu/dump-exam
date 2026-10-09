@@ -8,6 +8,13 @@
       "when": 1791509587864,
       "tag": "0000_bored_wolfpack",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1791509908140,
+      "tag": "0001_redundant_black_knight",
+      "breakpoints": true
     }
   ]
 }

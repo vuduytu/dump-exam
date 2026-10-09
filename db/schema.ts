@@ -1,4 +1,5 @@
-import { boolean, int, json, mysqlTable, text, varchar } from "drizzle-orm/mysql-core";
+import { sql } from "drizzle-orm";
+import { boolean, int, json, mysqlTable, text, timestamp, varchar } from "drizzle-orm/mysql-core";
 
 export type Choice = { letter: string; text: string };
 // One ExamTopics vote row: the voted combination of Choice letters (e.g. "AC"), not a single Choice.
@@ -14,3 +15,14 @@ export const questions = mysqlTable("questions", {
   votes: json("votes").$type<Vote[]>().notNull(),
   usable: boolean("usable").notNull(),
 });
+
+export const users = mysqlTable("users", {
+  id: int("id").autoincrement().primaryKey(),
+  email: varchar("email", { length: 255 }).notNull().unique(),
+  passwordHash: varchar("password_hash", { length: 255 }).notNull(), // see hashPassword in lib/auth.ts
+  isAdmin: boolean("is_admin").notNull().default(false),
+  locked: boolean("locked").notNull().default(false),
+  createdAt: timestamp("created_at").notNull().default(sql`CURRENT_TIMESTAMP`), // not defaultNow(): `(now())` needs MySQL 8.0.13+
+});
+
+export type User = typeof users.$inferSelect;
