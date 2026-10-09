@@ -113,7 +113,7 @@ export function QuestionLayout(props: {
 
   return (
     <>
-      <div className="sticky top-0 z-10 -mt-12 flex items-center gap-3 border-b bg-background py-2 pr-4 pl-14 lg:hidden">
+      <div className="sticky top-0 z-10 -mt-12 flex items-center gap-3 border-b bg-background py-2 pr-14 pl-14 lg:hidden">
         <span className="min-w-0 truncate font-medium tabular-nums">{heading}</span>
         {props.timer}
         <Sheet open={gridOpen} onOpenChange={setGridOpen}>
