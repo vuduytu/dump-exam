@@ -118,8 +118,8 @@ export function ResultScreen(props: { examName: string; score: number; timed: bo
                   </span>
                   <div className="mt-2 flex flex-wrap items-center gap-1.5">
                     {picked && <Badge variant="outline">Bạn chọn</Badge>}
-                    {isCorrect && <Badge variant="outline" className="border-correct text-correct">Correct Answer</Badge>}
-                    {suggested && <Badge variant="outline">Suggested Answer</Badge>}
+                    {isCorrect && <Badge variant="outline" className="border-correct text-correct">Đáp án đúng</Badge>}
+                    {suggested && <Badge variant="outline">ExamTopics gợi ý</Badge>}
                   </div>
                   <div className="mt-2 flex items-center gap-2 text-xs text-muted-foreground tabular-nums">
                     <div role="meter" aria-label={`${c.percent}% vote`} aria-valuenow={c.percent} aria-valuemin={0} aria-valuemax={100} className="h-2 flex-1 overflow-hidden rounded-full bg-muted">
@@ -132,7 +132,7 @@ export function ResultScreen(props: { examName: string; score: number; timed: bo
             })}
           </ul>
           <p className="mt-4 text-sm text-muted-foreground">
-            Bạn chọn: {q.selected.join("") || "(bỏ trống)"} · Correct Answer: {q.correct} · Suggested Answer: {q.suggested}
+            Bạn chọn: {q.selected.join("") || "(bỏ trống)"} · Đáp án đúng: {q.correct} · ExamTopics gợi ý: {q.suggested}
           </p>
         </article>
       )}
