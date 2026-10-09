@@ -50,6 +50,10 @@ User có quyền quản lý các User khác trên trang quản trị.
 **Timed Attempt**:
 Attempt mà User chọn bấm giờ. Đồng hồ chạy 230 phút theo giờ thật tính từ lúc bắt đầu, đóng tab thì đồng hồ vẫn chạy. Hết giờ thì Attempt tự nộp.
 
+**Untimed Attempt**:
+Attempt mà User chọn không bấm giờ (giao diện gọi là "Luyện tập không bấm giờ"). Không bao giờ hết hạn, chỉ kết thúc khi User nộp hoặc bỏ.
+_Avoid_: practice mode, chế độ luyện tập (như một tính năng riêng)
+
 **Abandoned Attempt**:
 Attempt đang làm dở mà User chọn bỏ để làm lại. Attempt này bị xoá và không tính vào lịch sử. Với mỗi Exam, một User có tối đa một Attempt đang làm dở.
 
@@ -58,3 +62,7 @@ Question mà User đánh dấu để xem lại trong một Attempt. Việc đán
 
 **Score** (Điểm):
 Số Question trong Attempt được trả lời đúng. Câu chọn nhiều đáp án phải chọn đúng toàn bộ Correct Answer mới tính đúng. Câu bỏ trống tính là sai.
+
+**Result** (Kết quả):
+Phần xem lại một Attempt đã nộp: Score và từng Question kèm lựa chọn của User, Correct Answer, Suggested Answer và tỉ lệ Vote.
+_Avoid_: review (dễ lẫn với Marked Question)
