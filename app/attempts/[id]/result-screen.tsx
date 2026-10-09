@@ -75,14 +75,15 @@ export function ResultScreen(props: { title: string; drill: boolean; domains: { 
     <QuestionLayout
       title={props.title}
       meta={props.timed ? `Thi thử · ${formatDuration(props.durationSec)} / ${TIME_LIMIT_MIN} phút` : `${props.drill ? "Ôn" : "Luyện tập"} · ${formatDuration(props.durationSec)}`}
+      figure={`Điểm: ${props.score}/${total} (${pct}%)`}
       summary={
-        <section aria-label="Tóm tắt" className="rounded-xl border bg-card p-4">
-          <div className="flex flex-wrap items-center gap-x-6 gap-y-3">
+        <section aria-label="Tóm tắt">
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-3">
             <div>
               <p className="text-3xl font-semibold tabular-nums">{pct}%</p>
               <p className="text-sm text-muted-foreground tabular-nums">Điểm: {props.score}/{total}</p>
             </div>
-            <dl className="grid min-w-0 flex-1 grid-cols-2 gap-2 sm:grid-cols-4">
+            <dl className="grid min-w-0 flex-1 grid-cols-2 gap-2">
               {[
                 { glyph: "✓", label: "Đúng", n: total - wrongTab, tone: "text-correct" },
                 { glyph: "✗", label: "Sai", n: wrongTab - blank, tone: "text-wrong" },
@@ -97,7 +98,7 @@ export function ResultScreen(props: { title: string; drill: boolean; domains: { 
             </dl>
           </div>
           {props.domains.length > 0 && (
-            <ul className="mt-4 flex flex-col gap-3 border-t pt-4">
+            <ul className="mt-4 flex flex-col gap-2">
               {props.domains.map((d) => {
                 const p = Math.round((d.correct / d.total) * 100);
                 return (

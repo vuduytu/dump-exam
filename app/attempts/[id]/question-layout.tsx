@@ -37,7 +37,7 @@ export function QuestionLayout(props: {
   meta?: React.ReactNode; // line 1, right-aligned
   figure?: React.ReactNode; // line 2
   stats?: React.ReactNode; // line 3, see Stats
-  summary?: React.ReactNode; // Result: replaces lines 2-3, and line 1 drops "Câu N/M" (the Question shows it)
+  summary?: React.ReactNode; // Result: top of the side column / grid drawer; the header keeps line 1 (no "Câu N/M") and, on mobile, `figure`
   tabs?: React.ReactNode; // Result: above the grid on desktop, below line 3 on mobile
   pos: number;
   total: number;
@@ -124,6 +124,7 @@ export function QuestionLayout(props: {
             <SheetHeader className="px-0 pb-0">
               <SheetTitle>Lưới câu</SheetTitle>
             </SheetHeader>
+            {props.summary && <div className="border-b pb-3">{props.summary}</div>}
             {props.side}
             {grid}
             {props.footer}
@@ -139,10 +140,10 @@ export function QuestionLayout(props: {
               {props.meta && <p className="shrink-0 text-sm text-muted-foreground">{props.meta}</p>}
             </div>
             {props.summary ? (
-              <>
-                {props.meta && <p className="text-sm text-muted-foreground lg:hidden">{props.meta}</p>}
-                <div className="mt-3">{props.summary}</div>
-              </>
+              <div className="flex items-baseline justify-between gap-3 lg:hidden">
+                <p className="whitespace-nowrap font-medium tabular-nums">{props.figure}</p>
+                {props.meta && <p className="shrink-0 text-sm text-muted-foreground">{props.meta}</p>}
+              </div>
             ) : (
               <>
                 <div className="flex items-baseline justify-between gap-3 lg:mt-1">
@@ -167,6 +168,7 @@ export function QuestionLayout(props: {
         <aside className="hidden lg:block">
           <div className="sticky top-4 flex max-h-[calc(100dvh-5.5rem)] flex-col gap-4 rounded-xl border bg-card p-4">
             {props.timer}
+            {props.summary && <div className="border-b pb-4">{props.summary}</div>}
             {props.side}
             {props.tabs}
             {grid}

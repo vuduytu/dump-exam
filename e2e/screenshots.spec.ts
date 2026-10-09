@@ -178,8 +178,12 @@ test.describe("screenshots dp04", () => {
       if (name === "mobile") await page.getByRole("button", { name: "Lưới câu" }).click(); // Submit lives in the drawer
       await page.getByRole("button", { name: "Nộp bài" }).filter({ visible: true }).click();
       await page.getByRole("dialog").getByRole("button", { name: "Nộp bài" }).last().click();
-      await page.getByRole("meter", { name: /^People \d+%$/ }).waitFor();
+      await page.getByText(/^Điểm: /).filter({ visible: true }).first().waitFor();
       await page.screenshot({ path: `.scratch/domain-practice/screenshots/04-${name}.png` });
+      if (name === "mobile") await page.getByRole("button", { name: "Lưới câu" }).click(); // the summary lives in the drawer
+      await page.getByRole("meter", { name: /^People \d+%$/ }).filter({ visible: true }).waitFor();
+      if (name === "mobile") await page.waitForTimeout(500); // let the drawer finish sliding in
+      if (name === "mobile") await page.screenshot({ path: `.scratch/domain-practice/screenshots/04-mobile-drawer.png` });
       await page.context().close();
     });
   }
