@@ -57,8 +57,27 @@ test("desktop: keyboard switches, answers and marks; the answer survives a reloa
   await page.keyboard.press("ArrowRight"); // ignored while a Dialog is open
   await expect(page).not.toHaveURL(/\?q=2/);
   await page.getByRole("dialog").getByRole("button", { name: "Nộp bài" }).click();
-  await expect(page.getByText(/đã nộp/)).toBeVisible();
-  await expect(page.getByText(/^\d+\/\d+/).first()).toBeVisible(); // Score
+  await expect(page.getByText(/^\d+\/180/).filter({ visible: true }).first()).toBeVisible();
+  await expect(page.getByText(/^\d+\/180/).first()).toBeVisible(); // Score
+  await page.waitForLoadState("networkidle");
+
+  // Result: tab Sai keeps only wrong Questions in the grid, ←/→ walk inside it, the URL follows
+  const grid = page.locator("aside ol button");
+  await expect(grid).toHaveCount(180);
+  await page.getByRole("tab", { name: "Sai" }).click();
+  await expect(page).toHaveURL(/f=wrong/);
+  await expect(page.getByRole("tab", { name: "Sai" })).toHaveAttribute("aria-selected", "true");
+  const n = await grid.count();
+  expect(n).toBeGreaterThanOrEqual(179); // only Câu 2 could be right
+  await expect(page.locator('aside ol button[aria-label*=", đúng"]')).toHaveCount(0);
+  const first = Number((await grid.nth(0).textContent())!);
+  const second = Number((await grid.nth(1).textContent())!);
+  await page.keyboard.press("ArrowRight");
+  await expect(page).toHaveURL(new RegExp(`q=${second}(&|$)`));
+  await page.keyboard.press("ArrowLeft");
+  await expect(page).toHaveURL(new RegExp(`q=${first}(&|$)`));
+  await page.getByRole("tab", { name: "Đánh dấu" }).click();
+  await expect(grid).toHaveCount(1); // the one marked Question
 });
 
 test("mobile: bottom bar moves, the grid drawer jumps to a Question, submit from the drawer", async ({ page }) => {
@@ -82,5 +101,5 @@ test("mobile: bottom bar moves, the grid drawer jumps to a Question, submit from
   const confirm = page.getByRole("dialog").filter({ hasText: "Nộp bài?" });
   await expect(confirm).toContainText("Còn 180 câu chưa trả lời, 1 câu đánh dấu");
   await confirm.getByRole("button", { name: "Nộp bài" }).click();
-  await expect(page.getByText(/đã nộp/)).toBeVisible();
+  await expect(page.getByText(/^\d+\/180/).filter({ visible: true }).first()).toBeVisible();
 });

@@ -6,7 +6,7 @@ const prefix = process.env.SHOTS;
 const sizes = { mobile: { width: 390, height: 844 }, desktop: { width: 1280, height: 800 } };
 
 test.describe("screenshots", () => {
-  test.skip(!prefix || prefix === "03", "set SHOTS=<ticket number>");
+  test.skip(!prefix || prefix === "03" || prefix === "04", "set SHOTS=<ticket number>");
   test.describe.configure({ mode: "serial" });
   for (const [name, viewport] of Object.entries(sizes)) {
     test(name, async ({ browser }) => {
@@ -33,7 +33,7 @@ test.describe("screenshots", () => {
         await shot("attempt");
         await page.getByRole("button", { name: "Nộp bài" }).click();
         await page.getByRole("dialog").getByRole("button", { name: "Nộp bài" }).click();
-        await page.getByText(/đã nộp/).waitFor();
+        await page.getByText(/^\d+\/180/).filter({ visible: true }).first().waitFor();
         await page.goto("/");
         await shot("home-after");
         await page.getByRole("link", { name: /câu/ }).first().click();
@@ -75,7 +75,48 @@ test.describe("screenshots 03", () => {
       }
       await page.getByRole("button", { name: "Nộp bài" }).filter({ visible: true }).first().click();
       await page.getByRole("dialog").getByRole("button", { name: "Nộp bài" }).click();
-      await page.getByText(/đã nộp/).waitFor();
+      await page.getByText(/^\d+\/180/).filter({ visible: true }).first().waitFor();
+      await page.context().close();
+    });
+  }
+});
+
+// SHOTS=04: the Result. Desktop light + dark, tab Sai, mobile and its grid drawer.
+test.describe("screenshots 04", () => {
+  test.skip(prefix !== "04", "set SHOTS=04");
+  test.describe.configure({ mode: "serial" });
+  const runs = [
+    { name: "desktop", viewport: sizes.desktop, scheme: "light" },
+    { name: "desktop-dark", viewport: sizes.desktop, scheme: "dark" },
+    { name: "mobile", viewport: sizes.mobile, scheme: "light" },
+  ] as const;
+  for (const run of runs) {
+    test(run.name, async ({ browser }) => {
+      const page = await (await browser.newContext({ viewport: run.viewport, colorScheme: run.scheme })).newPage();
+      const shot = (what = "") => page.screenshot({ path: `.scratch/ui-refresh/screenshots/04-${run.name}${what}.png` });
+      await login(page);
+      await page.getByRole("link", { name: /câu/ }).first().click();
+      await page.getByRole("button", { name: "Bắt đầu luyện tập" }).click();
+      await page.waitForURL(/\/attempts\/\d+/);
+      await page.waitForLoadState("networkidle");
+      for (const key of ["a", "ArrowRight", "b", "m", "ArrowRight", "ArrowRight", "c"]) await page.keyboard.press(key);
+      await page.getByRole("status").filter({ hasText: "Đã lưu" }).waitFor();
+      if (run.name === "mobile") await page.getByRole("button", { name: "Lưới câu" }).click();
+      await page.getByRole("button", { name: "Nộp bài" }).filter({ visible: true }).first().click();
+      await page.getByRole("dialog").getByRole("button", { name: "Nộp bài" }).click();
+      await page.getByText(/^\d+\/180/).filter({ visible: true }).first().waitFor();
+      await page.waitForLoadState("networkidle");
+      await shot();
+      if (run.name === "mobile") {
+        await page.getByRole("button", { name: "Lưới câu" }).click();
+        await page.getByRole("dialog").waitFor();
+        await page.waitForTimeout(300);
+        await shot("-drawer");
+        await page.keyboard.press("Escape");
+      }
+      await page.getByRole("tab", { name: "Sai" }).click();
+      await page.waitForTimeout(200);
+      await shot("-sai");
       await page.context().close();
     });
   }

@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { attemptCell, keyCommand, toggleChoice } from "@/app/attempts/[id]/logic";
+import { attemptCell, inTab, keyCommand, resultCell, toggleChoice } from "@/app/attempts/[id]/logic";
 
 const key = (k: string, extra: Partial<Parameters<typeof keyCommand>[0]> = {}) => keyCommand({ key: k, mod: false, typing: false, dialog: false, repeat: false, composing: false, ...extra });
 
@@ -46,4 +46,18 @@ test("grid cell: marked wins over answered, a mark alone is not an answer", () =
   assert.equal(attemptCell({ selected: ["A"], marked: false }), "answered");
   assert.equal(attemptCell({ selected: ["A"], marked: true }), "marked");
   assert.equal(attemptCell({ selected: [], marked: true }), "marked");
+});
+
+test("result cell: green/red by correctness (blank is wrong), the mark is a border on top", () => {
+  assert.deepEqual(resultCell({ isCorrect: true, marked: false }), { correct: true, marked: false });
+  assert.deepEqual(resultCell({ isCorrect: false, marked: true }), { correct: false, marked: true });
+});
+
+test("result tabs: all, wrong only, marked only", () => {
+  const q = { isCorrect: true, marked: false };
+  assert.equal(inTab(undefined, q), true);
+  assert.equal(inTab("wrong", q), false);
+  assert.equal(inTab("wrong", { ...q, isCorrect: false }), true);
+  assert.equal(inTab("marked", q), false);
+  assert.equal(inTab("marked", { ...q, marked: true }), true);
 });

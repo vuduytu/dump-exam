@@ -29,3 +29,11 @@ export type AttemptCell = "unanswered" | "answered" | "marked";
 /** Grid state of one Question in an open Attempt: a mark shows over an answer. */
 export const attemptCell = (q: { selected: string[]; marked: boolean }): AttemptCell =>
   q.marked ? "marked" : q.selected.length ? "answered" : "unanswered";
+
+export type ResultTab = "wrong" | "marked" | undefined; // undefined: all
+
+/** Grid state of one Question on the Result: green/red by correctness (blank = wrong), the mark is a border on top. */
+export const resultCell = (q: { isCorrect: boolean; marked: boolean }) => ({ correct: q.isCorrect, marked: q.marked });
+
+/** Whether a Question belongs to the Result tab. */
+export const inTab = (tab: ResultTab, q: { isCorrect: boolean; marked: boolean }) => (tab === "wrong" ? !q.isCorrect : tab === "marked" ? q.marked : true);
