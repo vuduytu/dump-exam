@@ -25,6 +25,15 @@ _Avoid_: key, answer (đứng một mình)
 **Vote**:
 Một dòng vote của cộng đồng ExamTopics cho một tổ hợp Choice (ví dụ "AC"), không phải cho từng Choice riêng lẻ. Tỉ lệ vote từng Choice phải tính ra từ các Vote.
 
+**Domain**:
+Một trong ba nhóm nội dung của đề thi PMP theo PMP Examination Content Outline (ECO) July 2026: People, Process, Business Environment.
+
+**Task**:
+Một nhiệm vụ cụ thể trong một Domain theo ECO (ví dụ "Manage conflict"). Mỗi Question được gắn đúng một Task, và qua đó thuộc một Domain.
+
+**Approach** (Cách tiếp cận):
+Cách tiếp cận dự án mà một Question giả định: Predictive, Agile hoặc Hybrid.
+
 **Unusable Question**:
 Question thiếu Choice hoặc thiếu Correct Answer. Vẫn lưu nhưng không bao giờ được đưa vào Exam.
 
@@ -33,6 +42,10 @@ Question thiếu Choice hoặc thiếu Correct Answer. Vẫn lưu nhưng không 
 **Exam** (Đề):
 Một bộ cố định 180 Question, tạo một lần và không đổi. Các Exam không trùng câu với nhau, trừ Exam cuối được lấy câu từ Exam khác để đủ 180 câu.
 _Avoid_: test, quiz, bộ đề (khi chỉ một đề)
+
+**Drill** (Ôn theo chủ đề):
+Một bộ 10 hoặc 20 Question rút ra lúc bắt đầu từ một Domain hoặc một Task, ưu tiên câu User chưa làm rồi câu làm sai gần nhất. Không cố định như Exam. Được làm như một Attempt không bấm giờ, có Score và Result.
+_Avoid_: bài tập, luyện tập, Exam (cho bộ này)
 
 ## Làm bài
 
@@ -48,7 +61,7 @@ _Avoid_: submission, session, lần thi
 User có quyền quản lý các User khác trên trang quản trị.
 
 **Timed Attempt**:
-Attempt mà User chọn bấm giờ. Đồng hồ chạy 230 phút theo giờ thật tính từ lúc bắt đầu, đóng tab thì đồng hồ vẫn chạy. Hết giờ thì Attempt tự nộp.
+Attempt mà User chọn bấm giờ. Đồng hồ chạy 240 phút (bằng thời gian đề thi PMP từ tháng 7/2026) theo giờ thật tính từ lúc bắt đầu, đóng tab thì đồng hồ vẫn chạy. Hết giờ thì Attempt tự nộp.
 
 **Untimed Attempt**:
 Attempt mà User chọn không bấm giờ (giao diện gọi là "Luyện tập không bấm giờ"). Không bao giờ hết hạn, chỉ kết thúc khi User nộp hoặc bỏ.
