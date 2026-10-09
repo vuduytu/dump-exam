@@ -5,7 +5,7 @@ import { asc, eq } from "drizzle-orm";
 import { db } from "@/db";
 import { examQuestions, questions, users } from "@/db/schema";
 import { generateExams, seedQuestions } from "@/db/seed";
-import { AttemptNotFound, AttemptNotSubmitted, getResult, listAttempts, saveAnswer, startAttempt, submitAttempt } from "@/lib/attempts";
+import { AttemptNotFound, AttemptNotSubmitted, getResult, listAttempts, saveAnswer, startAttempt, submitAttempt, toggleMark } from "@/lib/attempts";
 import { closeDb, resetDb } from "./db";
 
 let alice: number;
@@ -60,14 +60,18 @@ test("getResult shows per Question: selected, Correct/Suggested Answer, per-Choi
   assert.equal(blank.isCorrect, false);
 });
 
-test("getResult filters: 'wrong' keeps only wrong/blank Questions; 'marked' is empty until marks exist", async () => {
+test("getResult filters: 'wrong' keeps only wrong/blank Questions; 'marked' keeps only Marked Questions", async () => {
   const id = await startAttempt(alice, 1);
   await saveAnswer(alice, id, ks[0].id, ks[0].correct.split(""));
+  await toggleMark(alice, id, ks[5].id);
+  await toggleMark(alice, id, ks[0].id);
   await submitAttempt(alice, id);
   const wrongOnly = await getResult(alice, id, "wrong");
   assert.equal(wrongOnly.questions.length, 179);
   assert.ok(wrongOnly.questions.every((q) => !q.isCorrect && q.id !== ks[0].id));
-  assert.deepEqual((await getResult(alice, id, "marked")).questions, []);
+  const marked = await getResult(alice, id, "marked");
+  assert.deepEqual(marked.questions.map((q) => q.id), [ks[0].id, ks[5].id]);
+  assert.equal(marked.questions[0].marked, true);
 });
 
 test("getResult rejects an in-progress Attempt and another User's Attempt", async () => {

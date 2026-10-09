@@ -3,9 +3,10 @@
 // Next routes Server Actions by header, not path, so a POST to /login (skipped by middleware) can reach any action.
 // Every action except loginAction must check userFromSession itself.
 
+import { revalidatePath } from "next/cache";
 import { cookies } from "next/headers";
 import { notFound, redirect } from "next/navigation";
-import { AttemptSubmitted, saveAnswer, startAttempt, submitAttempt } from "@/lib/attempts";
+import { AttemptSubmitted, saveAnswer, startAttempt, submitAttempt, toggleMark } from "@/lib/attempts";
 import { createSessionToken, InvalidCredentials, login, SESSION_COOKIE, SESSION_DAYS, UserLocked, userFromSession } from "@/lib/auth";
 
 async function currentUserId() {
@@ -45,6 +46,13 @@ export async function startAttemptAction(examId: number) {
 export async function saveAnswerAction(attemptId: number, questionId: number, letters: string[]) {
   if (!Array.isArray(letters) || !letters.every((l) => typeof l === "string")) throw new Error("letters must be a string array");
   await saveAnswer(await currentUserId(), Number(attemptId), Number(questionId), letters);
+  revalidatePath(`/attempts/${Number(attemptId)}`); // refreshes the question grid
+}
+
+export async function toggleMarkAction(attemptId: number, questionId: number) {
+  const marked = await toggleMark(await currentUserId(), Number(attemptId), Number(questionId));
+  revalidatePath(`/attempts/${Number(attemptId)}`);
+  return marked;
 }
 
 export async function submitAttemptAction(attemptId: number) {

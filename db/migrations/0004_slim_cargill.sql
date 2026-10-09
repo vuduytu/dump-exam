@@ -1,0 +1,1 @@
+ALTER TABLE `attempt_answers` ADD `marked` boolean DEFAULT false NOT NULL;

@@ -29,6 +29,13 @@
       "when": 1791510363035,
       "tag": "0003_shiny_scalphunter",
       "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "5",
+      "when": 1791510956687,
+      "tag": "0004_slim_cargill",
+      "breakpoints": true
     }
   ]
 }

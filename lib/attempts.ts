@@ -1,4 +1,4 @@
-import { and, asc, count, desc, eq, isNotNull } from "drizzle-orm";
+import { and, asc, count, desc, eq, isNotNull, sql } from "drizzle-orm";
 import { db } from "@/db";
 import { attemptAnswers, attempts, examQuestions, exams, questions } from "@/db/schema";
 
@@ -64,6 +64,7 @@ async function loadAttempt(userId: number, attemptId: number) {
       suggested: questions.suggestedAnswer,
       votes: questions.votes,
       selected: attemptAnswers.selected,
+      marked: attemptAnswers.marked,
     })
     .from(examQuestions)
     .innerJoin(questions, eq(questions.id, examQuestions.questionId))
@@ -76,7 +77,7 @@ async function loadAttempt(userId: number, attemptId: number) {
 /** The User's Attempt with its Questions in Exam order. Never includes the Correct Answer, only how many letters it has. */
 export async function getAttempt(userId: number, attemptId: number) {
   const { attempt, rows } = await loadAttempt(userId, attemptId);
-  const qs = rows.map((r) => ({ id: r.id, text: r.text, choices: r.choices, need: r.correct.length, selected: r.selected ? r.selected.split("") : [] }));
+  const qs = rows.map((r) => ({ id: r.id, text: r.text, choices: r.choices, need: r.correct.length, selected: r.selected ? r.selected.split("") : [], marked: !!r.marked }));
   return { ...attempt, questions: qs };
 }
 
@@ -94,6 +95,27 @@ export async function saveAnswer(userId: number, attemptId: number, questionId: 
       throw new InvalidAnswer();
     const selected = [...letters].sort().join("");
     await tx.insert(attemptAnswers).values({ attemptId, questionId, selected }).onDuplicateKeyUpdate({ set: { selected } });
+  });
+}
+
+/** Flips the review mark of one Question of an open Attempt and returns the new state. Never touches the answer. */
+export async function toggleMark(userId: number, attemptId: number, questionId: number) {
+  return db.transaction(async (tx) => {
+    const attempt = await lockOpenAttempt(tx, userId, attemptId);
+    const [inExam] = await tx
+      .select({ id: examQuestions.questionId })
+      .from(examQuestions)
+      .where(and(eq(examQuestions.examId, attempt.examId), eq(examQuestions.questionId, questionId)));
+    if (!inExam) throw new InvalidAnswer();
+    await tx
+      .insert(attemptAnswers)
+      .values({ attemptId, questionId, selected: "", marked: true })
+      .onDuplicateKeyUpdate({ set: { marked: sql`NOT ${attemptAnswers.marked}` } });
+    const [row] = await tx
+      .select({ marked: attemptAnswers.marked })
+      .from(attemptAnswers)
+      .where(and(eq(attemptAnswers.attemptId, attemptId), eq(attemptAnswers.questionId, questionId)));
+    return row.marked;
   });
 }
 
@@ -117,22 +139,23 @@ export async function submitAttempt(userId: number, attemptId: number) {
 
 /**
  * Review of a submitted Attempt. A Vote is per combination of letters, so a Choice's percent is the share of all
- * votes whose combination includes it. "marked" returns [] until Marked Questions are stored (ticket 07).
+ * votes whose combination includes it.
  */
 export async function getResult(userId: number, attemptId: number, filter?: "wrong" | "marked") {
   const { attempt, rows } = await loadAttempt(userId, attemptId);
   if (!attempt.submittedAt) throw new AttemptNotSubmitted();
-  const qs = rows.map(({ votes, selected, ...q }) => {
+  const qs = rows.map(({ votes, selected, marked, ...q }) => {
     const all = votes.reduce((n, v) => n + v.count, 0);
     const percent = (letter: string) => (all ? Math.round((votes.filter((v) => v.letters.includes(letter)).reduce((n, v) => n + v.count, 0) / all) * 100) : 0);
     return {
       ...q,
       choices: q.choices.map((c) => ({ ...c, percent: percent(c.letter) })),
       selected: selected ? selected.split("") : [],
+      marked: !!marked,
       isCorrect: !!selected && sameLetters(selected, q.correct),
     };
   });
-  const questionsShown = filter === "wrong" ? qs.filter((q) => !q.isCorrect) : filter === "marked" ? [] : qs;
+  const questionsShown = filter === "wrong" ? qs.filter((q) => !q.isCorrect) : filter === "marked" ? qs.filter((q) => q.marked) : qs;
   return { ...attempt, total: rows.length, questions: questionsShown };
 }
 

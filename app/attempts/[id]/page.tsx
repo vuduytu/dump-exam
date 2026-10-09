@@ -1,10 +1,10 @@
 import Link from "next/link";
 import { cookies } from "next/headers";
 import { notFound, redirect } from "next/navigation";
-import { submitAttemptAction } from "@/app/actions";
 import { AttemptNotFound, AttemptNotSubmitted, getAttempt, getResult } from "@/lib/attempts";
 import { SESSION_COOKIE, userFromSession } from "@/lib/auth";
 import { Choices } from "./choices";
+import { MarkButton, SubmitForm } from "./controls";
 
 export default async function AttemptPage({ params, searchParams }: { params: Promise<{ id: string }>; searchParams: Promise<{ q?: string; f?: string }> }) {
   const user = await userFromSession((await cookies()).get(SESSION_COOKIE)?.value);
@@ -72,6 +72,8 @@ export default async function AttemptPage({ params, searchParams }: { params: Pr
 
   const pos = Math.min(Math.max(Number(qParam) || 1, 1), total); // 1-based
   const q = attempt.questions[pos - 1];
+  const unanswered = attempt.questions.filter((x) => x.selected.length === 0).length;
+  const markedCount = attempt.questions.filter((x) => x.marked).length;
   return (
     <main className="mx-auto max-w-2xl p-4">
       <header className="flex items-center justify-between">
@@ -82,13 +84,30 @@ export default async function AttemptPage({ params, searchParams }: { params: Pr
         <div dangerouslySetInnerHTML={{ __html: q.text }} /> {/* sanitized at import */}
         <Choices key={q.id} attemptId={attempt.id} questionId={q.id} choices={q.choices} need={q.need} initial={q.selected} />
       </article>
+      <div className="mt-4">
+        <MarkButton key={q.id} attemptId={attempt.id} questionId={q.id} initial={q.marked} />
+      </div>
       <nav className="mt-6 flex items-center gap-3">
         {pos > 1 && <Link href={`?q=${pos - 1}`} className="rounded border px-3 py-1">Trước</Link>}
         {pos < total && <Link href={`?q=${pos + 1}`} className="rounded border px-3 py-1">Sau</Link>}
-        <form action={submitAttemptAction.bind(null, attempt.id)} className="ml-auto">
-          <button className="rounded bg-foreground px-3 py-1 text-background">Nộp bài</button>
-        </form>
+        <SubmitForm attemptId={attempt.id} unanswered={unanswered} marked={markedCount} />
       </nav>
+      <ol className="mt-6 grid grid-cols-10 gap-1 text-center text-sm">
+        {attempt.questions.map((x, i) => (
+          <li key={x.id}>
+            <Link
+              href={`?q=${i + 1}`}
+              title={x.marked ? "Đã đánh dấu" : x.selected.length ? "Đã trả lời" : "Chưa trả lời"}
+              className={`block rounded border py-1 ${
+                x.marked ? "border-amber-500 bg-amber-200 text-amber-950" : x.selected.length ? "border-blue-600 bg-blue-600 text-white" : ""
+              } ${i + 1 === pos ? "ring-2 ring-foreground" : ""}`}
+            >
+              {i + 1}
+            </Link>
+          </li>
+        ))}
+      </ol>
+      <p className="mt-2 text-xs">Trắng: chưa trả lời · Xanh: đã trả lời · Vàng: đánh dấu</p>
     </main>
   );
 }

@@ -56,7 +56,8 @@ export const attemptAnswers = mysqlTable(
   {
     attemptId: int("attempt_id").notNull().references(() => attempts.id),
     questionId: int("question_id").notNull().references(() => questions.id),
-    selected: varchar("selected", { length: 8 }).notNull(), // sorted Choice letters, "" = cleared
+    selected: varchar("selected", { length: 8 }).notNull(), // sorted Choice letters, "" = cleared or never answered
+    marked: boolean("marked").notNull().default(false), // Marked Question, for review only: never counts in the Score
   },
   (t) => [primaryKey({ columns: [t.attemptId, t.questionId] })],
 );

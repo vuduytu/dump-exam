@@ -5,7 +5,7 @@ import { asc, eq } from "drizzle-orm";
 import { db } from "@/db";
 import { attempts, examQuestions, questions, users } from "@/db/schema";
 import { generateExams, seedQuestions } from "@/db/seed";
-import { AttemptNotFound, AttemptSubmitted, getAttempt, InvalidAnswer, saveAnswer, startAttempt, submitAttempt } from "@/lib/attempts";
+import { AttemptNotFound, AttemptSubmitted, getAttempt, InvalidAnswer, saveAnswer, startAttempt, submitAttempt, toggleMark } from "@/lib/attempts";
 import { closeDb, resetDb } from "./db";
 
 const EXAM = 1;
@@ -119,4 +119,38 @@ test("startedAt round-trips as the exact instant passed in, whatever the DB time
   const id = await startAttempt(alice, EXAM, now);
   const [row] = await db.select({ startedAt: attempts.startedAt }).from(attempts).where(eq(attempts.id, id));
   assert.equal(row.startedAt.toISOString(), now.toISOString());
+});
+
+const markedOf = async (attemptId: number) => (await getAttempt(alice, attemptId)).questions.filter((q) => q.marked).map((q) => q.id);
+
+test("toggleMark marks then unmarks a Question, kept across reloads and independent of the answer", async () => {
+  const id = await startAttempt(alice, EXAM);
+  const q = single();
+  assert.equal(await toggleMark(alice, id, q.id), true);
+  assert.deepEqual(await markedOf(id), [q.id]);
+  assert.deepEqual(await selectedOf(id, q.id), []); // marked but unanswered
+  await saveAnswer(alice, id, q.id, ["A"]);
+  assert.deepEqual(await markedOf(id), [q.id]); // answering keeps the mark
+  await saveAnswer(alice, id, q.id, []);
+  assert.deepEqual(await markedOf(id), [q.id]); // clearing keeps the mark
+  assert.equal(await toggleMark(alice, id, q.id), false);
+  assert.deepEqual(await markedOf(id), []);
+  assert.deepEqual(await selectedOf(id, q.id), []);
+});
+
+test("toggleMark is rejected after submit, for another User, and for a Question outside the Exam", async () => {
+  const id = await startAttempt(alice, EXAM);
+  await assert.rejects(toggleMark(bob, id, single().id), AttemptNotFound);
+  await assert.rejects(toggleMark(alice, id, 999999), InvalidAnswer);
+  await submitAttempt(alice, id);
+  await assert.rejects(toggleMark(alice, id, single().id), AttemptSubmitted);
+});
+
+test("marking does not change the Score", async () => {
+  const id = await startAttempt(alice, EXAM);
+  const [a, b] = correctAnswers;
+  await saveAnswer(alice, id, a.id, a.correct.split(""));
+  await toggleMark(alice, id, a.id);
+  await toggleMark(alice, id, b.id); // marked, never answered
+  assert.equal(await submitAttempt(alice, id), 1);
 });
