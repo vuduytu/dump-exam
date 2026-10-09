@@ -1,0 +1,728 @@
+[
+ {
+  "id": 39901001,
+  "task": "benefits-4",
+  "confidence": "medium",
+  "reason": "KPI dưới ngưỡng chấp nhận cần phản hồi: theo dõi metric benefits và hành động khắc phục"
+ },
+ {
+  "id": 39901002,
+  "task": "lifecycle-1",
+  "confidence": "high",
+  "reason": "Sau khi business case được duyệt, bước kế là xây dựng program charter"
+ },
+ {
+  "id": 39901003,
+  "task": "strategy-11",
+  "confidence": "medium",
+  "reason": "Khai thác (exploit) cơ hội để tối đa hoá hiện thực hoá benefits"
+ },
+ {
+  "id": 39901004,
+  "task": "lifecycle-7",
+  "confidence": "low",
+  "reason": "Scope statement tạo hiểu biết chung về lý do và phạm vi program"
+ },
+ {
+  "id": 39901005,
+  "task": "governance-2",
+  "confidence": "low",
+  "reason": "Câu kiến thức về vai trò sponsor là champion của program"
+ },
+ {
+  "id": 39901006,
+  "task": "governance-2",
+  "confidence": "low",
+  "reason": "Câu kiến thức về vai trò program manager là champion of change"
+ },
+ {
+  "id": 39901007,
+  "task": "strategy-1",
+  "confidence": "low",
+  "reason": "Câu định nghĩa phân biệt portfolio và program"
+ },
+ {
+  "id": 39901008,
+  "task": "strategy-10",
+  "confidence": "medium",
+  "reason": "Đánh giá giải pháp sẵn có của R&D để tích hợp tài sản, hệ thống"
+ },
+ {
+  "id": 39901009,
+  "task": "stakeholder-5",
+  "confidence": "medium",
+  "reason": "Khách hàng nhận thông tin benefits không chính xác: xem lại communication management plan"
+ },
+ {
+  "id": 39901010,
+  "task": "lifecycle-30",
+  "confidence": "medium",
+  "reason": "Sau khi lập phản hồi rủi ro, ước tính contingency reserve theo kế hoạch rủi ro"
+ },
+ {
+  "id": 39901011,
+  "task": "lifecycle-25",
+  "confidence": "high",
+  "reason": "Tính EVM để phân tích variance chi phí, tiến độ báo sponsor"
+ },
+ {
+  "id": 39901012,
+  "task": "strategy-1",
+  "confidence": "high",
+  "reason": "Initial program assessment cần định nghĩa mục tiêu và rủi ro program"
+ },
+ {
+  "id": 39901013,
+  "task": "lifecycle-10",
+  "confidence": "medium",
+  "reason": "Xác định tài nguyên hiện có và nhu cầu bổ sung khi phân bổ tài nguyên"
+ },
+ {
+  "id": 39901014,
+  "task": "strategy-5",
+  "confidence": "high",
+  "reason": "Business case đánh giá cân bằng chi phí và benefits"
+ },
+ {
+  "id": 39901015,
+  "task": "lifecycle-1",
+  "confidence": "high",
+  "reason": "Hỏi các thành phần của program charter"
+ },
+ {
+  "id": 39901016,
+  "task": "lifecycle-7",
+  "confidence": "medium",
+  "reason": "Ranh giới program là đầu vào của program scope statement"
+ },
+ {
+  "id": 39901017,
+  "task": "lifecycle-24",
+  "confidence": "medium",
+  "reason": "Sau khi duyệt chuyển giao component, cập nhật roadmap"
+ },
+ {
+  "id": 39901018,
+  "task": "stakeholder-5",
+  "confidence": "medium",
+  "reason": "Communications management strategy là đầu vào lập kế hoạch truyền thông"
+ },
+ {
+  "id": 39901019,
+  "task": "stakeholder-2",
+  "confidence": "high",
+  "reason": "Công cụ phân tích stakeholder để xây engagement strategy"
+ },
+ {
+  "id": 39901020,
+  "task": "strategy-4",
+  "confidence": "medium",
+  "reason": "Hoạt động đầu tiên là định nghĩa vision tạo định hướng program"
+ },
+ {
+  "id": 39901021,
+  "task": "strategy-5",
+  "confidence": "medium",
+  "reason": "Chọn program theo thời gian hoàn vốn, đánh giá khả thi tài chính"
+ },
+ {
+  "id": 39901022,
+  "task": "stakeholder-5",
+  "confidence": "medium",
+  "reason": "Kênh truyền thông của program trong communication management plan"
+ },
+ {
+  "id": 39901023,
+  "task": "lifecycle-9",
+  "confidence": "high",
+  "reason": "Thành phần của program master schedule"
+ },
+ {
+  "id": 39901024,
+  "task": "strategy-1",
+  "confidence": "medium",
+  "reason": "Ngưỡng rủi ro program gắn với chiến lược tổ chức khi đánh giá ban đầu"
+ },
+ {
+  "id": 39901025,
+  "task": "strategy-8",
+  "confidence": "low",
+  "reason": "Từ chối vị trí không đủ năng lực: câu đạo đức nghề nghiệp"
+ },
+ {
+  "id": 39901026,
+  "task": "stakeholder-5",
+  "confidence": "high",
+  "reason": "Stakeholder không nhận báo cáo đúng hạn: xem lại communication management plan"
+ },
+ {
+  "id": 39901027,
+  "task": "lifecycle-16",
+  "confidence": "high",
+  "reason": "Chọn project manager theo kỹ năng và nhu cầu project"
+ },
+ {
+  "id": 39901028,
+  "task": "lifecycle-16",
+  "confidence": "medium",
+  "reason": "Khách hàng từ chối PM: kiểm tra kỹ năng yêu cầu để phân công lại"
+ },
+ {
+  "id": 39901029,
+  "task": "lifecycle-10",
+  "confidence": "high",
+  "reason": "Giữ mức dùng tài nguyên ổn định bằng resource leveling"
+ },
+ {
+  "id": 39901030,
+  "task": "benefits-1",
+  "confidence": "high",
+  "reason": "Metric và thủ tục đo benefits nằm trong benefits management plan"
+ },
+ {
+  "id": 39901031,
+  "task": "lifecycle-29",
+  "confidence": "medium",
+  "reason": "Ghi nhận thay đổi bắt buộc và đánh giá tác động lên program"
+ },
+ {
+  "id": 39901032,
+  "task": "benefits-1",
+  "confidence": "high",
+  "reason": "Lập baseline và truyền đạt metric thuộc giai đoạn benefits analysis and planning"
+ },
+ {
+  "id": 39901033,
+  "task": "lifecycle-12",
+  "confidence": "medium",
+  "reason": "Component manager leo thang change request bị bác lên steering committee"
+ },
+ {
+  "id": 39901034,
+  "task": "stakeholder-1",
+  "confidence": "medium",
+  "reason": "Nhận diện các nhóm stakeholder cần giao tiếp"
+ },
+ {
+  "id": 39901035,
+  "task": "lifecycle-30",
+  "confidence": "medium",
+  "reason": "Rủi ro chưa biết xảy ra dùng management reserve"
+ },
+ {
+  "id": 39901036,
+  "task": "lifecycle-25",
+  "confidence": "low",
+  "reason": "Tính EAC theo EVM nhưng thiếu bảng dữ liệu"
+ },
+ {
+  "id": 39901037,
+  "task": "lifecycle-21",
+  "confidence": "low",
+  "reason": "Thực thi mua sắm: sau danh sách nhà thầu đủ điều kiện gửi RFP"
+ },
+ {
+  "id": 39901038,
+  "task": "lifecycle-16",
+  "confidence": "low",
+  "reason": "Bổ nhiệm PM có xung đột lợi ích, leo thang governance board"
+ },
+ {
+  "id": 39901039,
+  "task": "lifecycle-21",
+  "confidence": "low",
+  "reason": "Bước đầu mua sắm phần mềm là gửi RFI"
+ },
+ {
+  "id": 39901040,
+  "task": "lifecycle-1",
+  "confidence": "medium",
+  "reason": "Charter xác định mục tiêu chiến lược và benefits của program"
+ },
+ {
+  "id": 39901041,
+  "task": "benefits-2",
+  "confidence": "low",
+  "reason": "Thêm component tăng benefits, tập trung yếu tố thành công then chốt"
+ },
+ {
+  "id": 39901042,
+  "task": "benefits-1",
+  "confidence": "low",
+  "reason": "Phân loại benefit hữu hình, không quy ra tiền"
+ },
+ {
+  "id": 39901043,
+  "task": "lifecycle-3",
+  "confidence": "high",
+  "reason": "Roadmap liên kết benefits mong đợi với hoạt động program"
+ },
+ {
+  "id": 39901044,
+  "task": "lifecycle-1",
+  "confidence": "high",
+  "reason": "Charter chứa vision, mission, metric và tiêu chí thành công"
+ },
+ {
+  "id": 39901045,
+  "task": "governance-2",
+  "confidence": "medium",
+  "reason": "Thiết lập chính sách, thủ tục phù hợp governance tổ chức qua PMO"
+ },
+ {
+  "id": 39901046,
+  "task": "lifecycle-3",
+  "confidence": "medium",
+  "reason": "Roadmap truyền đạt kế hoạch tổng thể và benefits cho stakeholder"
+ },
+ {
+  "id": 39901047,
+  "task": "lifecycle-17",
+  "confidence": "medium",
+  "reason": "PMO chuẩn hoá công cụ để đảm bảo nhất quán"
+ },
+ {
+  "id": 39901048,
+  "task": "strategy-7",
+  "confidence": "high",
+  "reason": "Ước tính benefits tài chính, phi tài chính để xin cấp vốn"
+ },
+ {
+  "id": 39901049,
+  "task": "lifecycle-34",
+  "confidence": "high",
+  "reason": "Sau chuyển giao, họp post-review lấy phản hồi và lessons learned"
+ },
+ {
+  "id": 39901050,
+  "task": "lifecycle-35",
+  "confidence": "high",
+  "reason": "Sau post-review, báo cáo và lưu trữ lessons learned"
+ },
+ {
+  "id": 39901051,
+  "task": "lifecycle-32",
+  "confidence": "medium",
+  "reason": "Sau báo cáo performance cuối, xin phê duyệt đóng program"
+ },
+ {
+  "id": 39901052,
+  "task": "strategy-5",
+  "confidence": "medium",
+  "reason": "Dùng ROI để chọn program, đánh giá business case"
+ },
+ {
+  "id": 39901053,
+  "task": "lifecycle-25",
+  "confidence": "medium",
+  "reason": "Phân tích CPI, SPI để chọn project cần tập trung"
+ },
+ {
+  "id": 39901054,
+  "task": "benefits-1",
+  "confidence": "medium",
+  "reason": "Thống nhất KPI với stakeholder trong giai đoạn benefits analysis and planning"
+ },
+ {
+  "id": 39901055,
+  "task": "lifecycle-8",
+  "confidence": "high",
+  "reason": "Thành phần của program WBS"
+ },
+ {
+  "id": 39901056,
+  "task": "lifecycle-21",
+  "confidence": "low",
+  "reason": "Dùng risk register khi chọn nhà cung cấp trong thực thi mua sắm"
+ },
+ {
+  "id": 39901057,
+  "task": "lifecycle-9",
+  "confidence": "low",
+  "reason": "SWOT hỗ trợ xây charter và program management plan"
+ },
+ {
+  "id": 39901058,
+  "task": "lifecycle-30",
+  "confidence": "medium",
+  "reason": "Contingency reserve cấp program không thay thế reserve cấp component"
+ },
+ {
+  "id": 39901059,
+  "task": "benefits-1",
+  "confidence": "high",
+  "reason": "Benefits management plan là tham chiếu suốt quá trình program"
+ },
+ {
+  "id": 39901060,
+  "task": "stakeholder-7",
+  "confidence": "high",
+  "reason": "Stakeholder thờ ơ: phát triển và vun đắp quan hệ"
+ },
+ {
+  "id": 39901061,
+  "task": "strategy-5",
+  "confidence": "high",
+  "reason": "Tài liệu chứa phân tích chi phí lợi ích là business case"
+ },
+ {
+  "id": 39901062,
+  "task": "strategy-2",
+  "confidence": "low",
+  "reason": "Ước tính thời gian hoàn thành sơ bộ bằng PERT"
+ },
+ {
+  "id": 39901063,
+  "task": "stakeholder-3",
+  "confidence": "high",
+  "reason": "Dùng đàm phán để đặt kỳ vọng rõ ràng về benefits"
+ },
+ {
+  "id": 39901064,
+  "task": "benefits-6",
+  "confidence": "medium",
+  "reason": "Benefits register chứa KPI và ngưỡng đánh giá"
+ },
+ {
+  "id": 39901065,
+  "task": "strategy-6",
+  "confidence": "medium",
+  "reason": "KPI cho từng benefit được xác định ở giai đoạn benefits identification"
+ },
+ {
+  "id": 39901066,
+  "task": "strategy-8",
+  "confidence": "medium",
+  "reason": "Hiểu văn hoá tổ chức và mức chấp nhận thay đổi trước tiên"
+ },
+ {
+  "id": 39901067,
+  "task": "stakeholder-2",
+  "confidence": "high",
+  "reason": "Câu hỏi mở thu thông tin khi phân tích stakeholder"
+ },
+ {
+  "id": 39901068,
+  "task": "strategy-1",
+  "confidence": "medium",
+  "reason": "Nghiên cứu, ước tính và đánh giá rủi ro ban đầu ở formulation"
+ },
+ {
+  "id": 39901069,
+  "task": "strategy-11",
+  "confidence": "low",
+  "reason": "Kỹ năng quản lý thay đổi cho thay đổi tổ chức then chốt"
+ },
+ {
+  "id": 39901070,
+  "task": "benefits-1",
+  "confidence": "low",
+  "reason": "Câu định nghĩa: giảm lỗi sản phẩm là một benefit"
+ },
+ {
+  "id": 39901071,
+  "task": "lifecycle-16",
+  "confidence": "medium",
+  "reason": "Lập skills inventory để chọn project manager"
+ },
+ {
+  "id": 39901072,
+  "task": "lifecycle-21",
+  "confidence": "medium",
+  "reason": "Thực thi quality management trong giai đoạn delivery"
+ },
+ {
+  "id": 39901073,
+  "task": "benefits-4",
+  "confidence": "medium",
+  "reason": "Benefits không đạt tiêu chí: phân tích nguyên nhân gốc để khắc phục"
+ },
+ {
+  "id": 39901074,
+  "task": "strategy-3",
+  "confidence": "low",
+  "reason": "Lịch thanh toán thuộc financial framework, cost budgeting"
+ },
+ {
+  "id": 39901075,
+  "task": "governance-10",
+  "confidence": "low",
+  "reason": "Governance đánh giá alignment chiến lược và value delivery"
+ },
+ {
+  "id": 39901076,
+  "task": "benefits-5",
+  "confidence": "high",
+  "reason": "Xác minh tích hợp, chuyển giao, đóng đạt tiêu chí benefits"
+ },
+ {
+  "id": 39901077,
+  "task": "benefits-3",
+  "confidence": "high",
+  "reason": "Sustainment plan xác định quy trình, metric để duy trì benefits"
+ },
+ {
+  "id": 39901078,
+  "task": "benefits-3",
+  "confidence": "medium",
+  "reason": "Duy trì khả năng tương tác giao diện thuộc hoạt động sustainment"
+ },
+ {
+  "id": 39901079,
+  "task": "strategy-5",
+  "confidence": "high",
+  "reason": "Giải pháp thay thế nằm trong business case"
+ },
+ {
+  "id": 39901080,
+  "task": "governance-4",
+  "confidence": "high",
+  "reason": "Đánh giá KPI tài chính, tuân thủ, chất lượng để theo dõi benefits"
+ },
+ {
+  "id": 39901081,
+  "task": "lifecycle-28",
+  "confidence": "medium",
+  "reason": "Thay đổi chỉ ảnh hưởng project xử lý qua project change control board"
+ },
+ {
+  "id": 39901082,
+  "task": "lifecycle-4",
+  "confidence": "low",
+  "reason": "Thời điểm phân công cố định nhân sự cho program core team"
+ },
+ {
+  "id": 39901083,
+  "task": "lifecycle-27",
+  "confidence": "medium",
+  "reason": "Xung đột giữa sponsors ảnh hưởng tiến độ là issue cấp program"
+ },
+ {
+  "id": 39901084,
+  "task": "lifecycle-9",
+  "confidence": "low",
+  "reason": "Ước tính chi phí component để lập ngân sách program"
+ },
+ {
+  "id": 39901085,
+  "task": "governance-5",
+  "confidence": "medium",
+  "reason": "Dùng PMIS quản lý thông tin và báo cáo cho stakeholder"
+ },
+ {
+  "id": 39901086,
+  "task": "lifecycle-11",
+  "confidence": "medium",
+  "reason": "PMIS cung cấp quản lý cấu hình và hệ thống thay đổi"
+ },
+ {
+  "id": 39901087,
+  "task": "lifecycle-5",
+  "confidence": "high",
+  "reason": "Định nghĩa tiêu chí đo lường thành công để monitor và control"
+ },
+ {
+  "id": 39901088,
+  "task": "governance-3",
+  "confidence": "high",
+  "reason": "Mục đích phase gate review"
+ },
+ {
+  "id": 39901089,
+  "task": "lifecycle-12",
+  "confidence": "high",
+  "reason": "Issue project ảnh hưởng project khác cần program xử lý"
+ },
+ {
+  "id": 39901090,
+  "task": "strategy-9",
+  "confidence": "medium",
+  "reason": "Charter cho phép program sử dụng tài nguyên tổ chức"
+ },
+ {
+  "id": 39901091,
+  "task": "lifecycle-17",
+  "confidence": "medium",
+  "reason": "PMO cung cấp kế hoạch truyền thông chuẩn cho các project"
+ },
+ {
+  "id": 39901092,
+  "task": "benefits-3",
+  "confidence": "high",
+  "reason": "Sponsor giao program manager xây benefits sustainment plan"
+ },
+ {
+  "id": 39901093,
+  "task": "lifecycle-10",
+  "confidence": "medium",
+  "reason": "Quản lý mức tài nguyên trong resource management planning"
+ },
+ {
+  "id": 39901094,
+  "task": "lifecycle-7",
+  "confidence": "high",
+  "reason": "Detailed program scope statement hỗ trợ lập kế hoạch tổng thể"
+ },
+ {
+  "id": 39901095,
+  "task": "lifecycle-21",
+  "confidence": "medium",
+  "reason": "Sponsor quan tâm chất lượng: thực hiện audit, kiểm tra"
+ },
+ {
+  "id": 39901096,
+  "task": "stakeholder-5",
+  "confidence": "low",
+  "reason": "Câu kiến thức: program manager chịu trách nhiệm truyền thông stakeholder"
+ },
+ {
+  "id": 39901097,
+  "task": "lifecycle-26",
+  "confidence": "low",
+  "reason": "Project đóng: cập nhật program roadmap ngay"
+ },
+ {
+  "id": 39901098,
+  "task": "lifecycle-23",
+  "confidence": "medium",
+  "reason": "Dùng roadmap đánh giá tiến độ program hướng tới benefits"
+ },
+ {
+  "id": 39901099,
+  "task": "strategy-7",
+  "confidence": "medium",
+  "reason": "Cần thêm vốn thì cập nhật business case"
+ },
+ {
+  "id": 39901100,
+  "task": "lifecycle-30",
+  "confidence": "medium",
+  "reason": "Rủi ro leo thang từ project ghi vào program risk register"
+ },
+ {
+  "id": 40039001,
+  "task": "lifecycle-32",
+  "confidence": "medium",
+  "reason": "Đóng program: trình báo cáo cuối cho governance board"
+ },
+ {
+  "id": 40039002,
+  "task": "lifecycle-29",
+  "confidence": "medium",
+  "reason": "Project lệch chiến lược: phân tích tác động trước khi đề xuất"
+ },
+ {
+  "id": 40039003,
+  "task": "lifecycle-3",
+  "confidence": "low",
+  "reason": "Định hướng program nằm trong management plan và roadmap"
+ },
+ {
+  "id": 40039004,
+  "task": "benefits-3",
+  "confidence": "medium",
+  "reason": "Xây business case mới cho vấn đề vận hành thuộc sustainment"
+ },
+ {
+  "id": 40039005,
+  "task": "lifecycle-24",
+  "confidence": "high",
+  "reason": "Chứng minh component hoàn thành bằng điều kiện đóng đạt"
+ },
+ {
+  "id": 40039006,
+  "task": "lifecycle-33",
+  "confidence": "medium",
+  "reason": "Nội dung của program transition"
+ },
+ {
+  "id": 40039007,
+  "task": "lifecycle-25",
+  "confidence": "medium",
+  "reason": "Xác định tác động vượt hoặc hụt chi phí trong delivery"
+ },
+ {
+  "id": 40039008,
+  "task": "governance-2",
+  "confidence": "low",
+  "reason": "Câu kiến thức: OPM tích hợp portfolio, program, project"
+ },
+ {
+  "id": 40039009,
+  "task": "strategy-1",
+  "confidence": "low",
+  "reason": "Câu kiến thức: program tăng cường benefits nhờ thích ứng"
+ },
+ {
+  "id": 40039010,
+  "task": "lifecycle-3",
+  "confidence": "medium",
+  "reason": "Roadmap thể hiện thời điểm ROI tài trợ benefits tương lai"
+ },
+ {
+  "id": 40039011,
+  "task": "strategy-1",
+  "confidence": "low",
+  "reason": "Câu kiến thức: các project liên quan quản lý như program"
+ },
+ {
+  "id": 40039012,
+  "task": "strategy-6",
+  "confidence": "medium",
+  "reason": "Phân tích môi trường, đối thủ khi formulation bằng what-if"
+ },
+ {
+  "id": 40039013,
+  "task": "governance-2",
+  "confidence": "low",
+  "reason": "Câu kiến thức: ai thay vai trò sponsor"
+ },
+ {
+  "id": 40039014,
+  "task": "lifecycle-27",
+  "confidence": "medium",
+  "reason": "Chậm phân bổ tài nguyên là issue cấp program, leo thang sponsor"
+ },
+ {
+  "id": 40039015,
+  "task": "lifecycle-10",
+  "confidence": "medium",
+  "reason": "Tối ưu tài nguyên khan hiếm dùng chung với program khác"
+ },
+ {
+  "id": 40039016,
+  "task": "lifecycle-21",
+  "confidence": "medium",
+  "reason": "Kiểm thử lặp lại tốn chi phí: xem lại quality management plan"
+ },
+ {
+  "id": 40039017,
+  "task": "lifecycle-30",
+  "confidence": "low",
+  "reason": "Tính contingency reserve còn lại nhưng thiếu bảng dữ liệu"
+ },
+ {
+  "id": 40039018,
+  "task": "strategy-2",
+  "confidence": "low",
+  "reason": "Độ tin cậy ước tính thời lượng ở formulation"
+ },
+ {
+  "id": 40039019,
+  "task": "lifecycle-30",
+  "confidence": "medium",
+  "reason": "Cơ hội tăng tốc tiến độ ghi vào risk register"
+ },
+ {
+  "id": 40039020,
+  "task": "governance-4",
+  "confidence": "medium",
+  "reason": "Governance board dùng health check để theo dõi hiệu quả và benefits"
+ },
+ {
+  "id": 40039021,
+  "task": "governance-2",
+  "confidence": "low",
+  "reason": "Câu kiến thức: sponsor thúc đẩy thay đổi tổ chức"
+ }
+]

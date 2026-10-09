@@ -2,9 +2,8 @@ import { and, asc, count, eq, inArray, isNull, isNotNull, ne, sql } from "drizzl
 import { db } from "@/db";
 import { attemptAnswers, attempts, drillQuestions, questions, users, type Certification } from "@/db/schema";
 import { AttemptInProgress, finalizeExpired, sameLetters } from "@/lib/attempts";
-import { tasksOfSource } from "@/lib/question-tags";
+import { tasksOf, tasksOfSource } from "@/lib/question-tags";
 import { assertAccess } from "@/lib/users";
-import taxonomy from "@/data/tasks.json";
 
 export class InvalidDrill extends Error {
   constructor() {
@@ -63,9 +62,10 @@ export async function topicStats(userId: number, certification: Certification, n
   }
   const rank = (c: Count) => (!c.total ? 3 : c.done ? pct(c)! : 2); // % is in [0,1]
   const sorted = <T extends Count>(xs: T[]) => xs.sort((a, b) => rank(a) - rank(b));
-  return [...new Set(taxonomy.tasks.map((t) => t.domain))].map((domain) => {
+  const all = tasksOf(certification);
+  return [...new Set(all.map((t) => t.domain))].map((domain) => {
     const tasks = sorted(
-      taxonomy.tasks.filter((t) => t.domain === domain).map((t) => ({ source: t.code, name: t.name, ...(byTask.get(t.code) ?? { total: 0, done: 0, correct: 0 }) })),
+      all.filter((t) => t.domain === domain).map((t) => ({ source: t.code, name: t.name, ...(byTask.get(t.code) ?? { total: 0, done: 0, correct: 0 }) })),
     );
     const sum = (k: keyof Count) => tasks.reduce((n, t) => n + t[k], 0);
     return { domain, total: sum("total"), done: sum("done"), correct: sum("correct"), tasks };
@@ -91,7 +91,7 @@ export async function openDrills(userId: number, certification: Certification) {
  */
 export async function startDrill(userId: number, certification: Certification, source: string, size: number | "all", now = new Date()) {
   await assertAccess(userId, certification);
-  const tasks = tasksOfSource(source);
+  const tasks = tasksOfSource(certification, source);
   if (!tasks.length || (size !== 10 && size !== 20 && size !== "all")) throw new InvalidDrill();
   const pool = await db
     .select({ id: questions.id, correct: questions.correctAnswer })

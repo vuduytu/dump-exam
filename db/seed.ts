@@ -1,6 +1,6 @@
 import { and, eq, inArray, sql } from "drizzle-orm";
 import { db } from "@/db";
-import { examQuestions, exams, questions, users } from "@/db/schema";
+import { examQuestions, exams, questions, users, type Certification } from "@/db/schema";
 import { hashPassword } from "@/lib/auth";
 import { validateTags, type Tag } from "@/lib/question-tags";
 
@@ -68,18 +68,19 @@ export async function seedPgmp(parsed: PgmpQuestion[]) {
 }
 
 /**
- * Sets each PMP Question's Task and Approach from data/question-tags.json. Refuses invalid or incomplete tags.
+ * Sets each Question's Task (and Approach, PMP only) of the Certification from data/question-tags.json (PMP) or
+ * data/pgmp-question-tags.json (PgMP). Refuses invalid or incomplete tags.
  * Overwrites, so re-running after the owner corrects labels applies the corrections and never duplicates.
  */
-export async function seedTags(tags: Tag[]) {
-  const ids = (await db.select({ id: questions.id }).from(questions).where(eq(questions.certification, "PMP"))).map((q) => q.id);
-  const errors = validateTags(ids, tags);
+export async function seedTags(tags: Tag[], certification: Certification) {
+  const ids = (await db.select({ id: questions.id }).from(questions).where(eq(questions.certification, certification))).map((q) => q.id);
+  const errors = validateTags(ids, tags, certification);
   if (errors.length) throw new Error(`invalid tags:\n${errors.slice(0, 20).join("\n")}`);
-  const groups = Map.groupBy(tags, (t) => `${t.task}|${t.approach}`); // one UPDATE per pair, not per Question
+  const groups = Map.groupBy(tags, (t) => `${t.task}|${t.approach ?? ""}`); // one UPDATE per pair, not per Question
   await db.transaction(async (tx) => {
     for (const [key, group] of groups) {
       const [task, approach] = key.split("|");
-      await tx.update(questions).set({ task, approach }).where(inArray(questions.id, group.map((t) => t.id)));
+      await tx.update(questions).set({ task, approach: approach || null }).where(inArray(questions.id, group.map((t) => t.id)));
     }
   });
 }

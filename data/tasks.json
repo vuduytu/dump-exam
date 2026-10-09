@@ -3,132 +3,590 @@
   {
    "code": "people-1",
    "name": "Develop a common vision",
-   "domain": "People"
+   "domain": "People",
+   "certification": "PMP"
   },
   {
    "code": "people-2",
    "name": "Manage conflicts",
-   "domain": "People"
+   "domain": "People",
+   "certification": "PMP"
   },
   {
    "code": "people-3",
    "name": "Lead the project team",
-   "domain": "People"
+   "domain": "People",
+   "certification": "PMP"
   },
   {
    "code": "people-4",
    "name": "Engage stakeholders",
-   "domain": "People"
+   "domain": "People",
+   "certification": "PMP"
   },
   {
    "code": "people-5",
    "name": "Align stakeholder expectations",
-   "domain": "People"
+   "domain": "People",
+   "certification": "PMP"
   },
   {
    "code": "people-6",
    "name": "Manage stakeholder expectations",
-   "domain": "People"
+   "domain": "People",
+   "certification": "PMP"
   },
   {
    "code": "people-7",
    "name": "Help ensure knowledge transfer",
-   "domain": "People"
+   "domain": "People",
+   "certification": "PMP"
   },
   {
    "code": "people-8",
    "name": "Plan and manage communication",
-   "domain": "People"
+   "domain": "People",
+   "certification": "PMP"
   },
   {
    "code": "process-1",
    "name": "Develop an integrated project management plan and plan delivery",
-   "domain": "Process"
+   "domain": "Process",
+   "certification": "PMP"
   },
   {
    "code": "process-2",
    "name": "Develop and manage project scope",
-   "domain": "Process"
+   "domain": "Process",
+   "certification": "PMP"
   },
   {
    "code": "process-3",
    "name": "Help ensure value-based delivery",
-   "domain": "Process"
+   "domain": "Process",
+   "certification": "PMP"
   },
   {
    "code": "process-4",
    "name": "Plan and manage resources",
-   "domain": "Process"
+   "domain": "Process",
+   "certification": "PMP"
   },
   {
    "code": "process-5",
    "name": "Plan and manage procurement",
-   "domain": "Process"
+   "domain": "Process",
+   "certification": "PMP"
   },
   {
    "code": "process-6",
    "name": "Plan and manage finance",
-   "domain": "Process"
+   "domain": "Process",
+   "certification": "PMP"
   },
   {
    "code": "process-7",
    "name": "Plan and optimize quality of products/deliverables",
-   "domain": "Process"
+   "domain": "Process",
+   "certification": "PMP"
   },
   {
    "code": "process-8",
    "name": "Plan and manage schedule",
-   "domain": "Process"
+   "domain": "Process",
+   "certification": "PMP"
   },
   {
    "code": "process-9",
    "name": "Evaluate project status",
-   "domain": "Process"
+   "domain": "Process",
+   "certification": "PMP"
   },
   {
    "code": "process-10",
    "name": "Manage project closure",
-   "domain": "Process"
+   "domain": "Process",
+   "certification": "PMP"
   },
   {
    "code": "business-1",
    "name": "Define and establish project governance",
-   "domain": "Business Environment"
+   "domain": "Business Environment",
+   "certification": "PMP"
   },
   {
    "code": "business-2",
    "name": "Plan and manage project compliance",
-   "domain": "Business Environment"
+   "domain": "Business Environment",
+   "certification": "PMP"
   },
   {
    "code": "business-3",
    "name": "Manage and control changes",
-   "domain": "Business Environment"
+   "domain": "Business Environment",
+   "certification": "PMP"
   },
   {
    "code": "business-4",
    "name": "Remove impediments and manage issues",
-   "domain": "Business Environment"
+   "domain": "Business Environment",
+   "certification": "PMP"
   },
   {
    "code": "business-5",
    "name": "Plan and manage risk",
-   "domain": "Business Environment"
+   "domain": "Business Environment",
+   "certification": "PMP"
   },
   {
    "code": "business-6",
    "name": "Continuous improvement",
-   "domain": "Business Environment"
+   "domain": "Business Environment",
+   "certification": "PMP"
   },
   {
    "code": "business-7",
    "name": "Support organizational change",
-   "domain": "Business Environment"
+   "domain": "Business Environment",
+   "certification": "PMP"
   },
   {
    "code": "business-8",
    "name": "Evaluate external business environment changes",
-   "domain": "Business Environment"
+   "domain": "Business Environment",
+   "certification": "PMP"
+  },
+  {
+   "code": "strategy-1",
+   "name": "Perform an initial program assessment",
+   "domain": "Strategic Program Alignment",
+   "certification": "PgMP"
+  },
+  {
+   "code": "strategy-2",
+   "name": "Establish a high-level roadmap for sponsor approval",
+   "domain": "Strategic Program Alignment",
+   "certification": "PgMP"
+  },
+  {
+   "code": "strategy-3",
+   "name": "Define the high-level roadmap and financial framework",
+   "domain": "Strategic Program Alignment",
+   "certification": "PgMP"
+  },
+  {
+   "code": "strategy-4",
+   "name": "Define the program mission statement",
+   "domain": "Strategic Program Alignment",
+   "certification": "PgMP"
+  },
+  {
+   "code": "strategy-5",
+   "name": "Evaluate the program business case",
+   "domain": "Strategic Program Alignment",
+   "certification": "PgMP"
+  },
+  {
+   "code": "strategy-6",
+   "name": "Identify and quantify expected benefits",
+   "domain": "Strategic Program Alignment",
+   "certification": "PgMP"
+  },
+  {
+   "code": "strategy-7",
+   "name": "Estimate financial framework and nonfinancial benefits",
+   "domain": "Strategic Program Alignment",
+   "certification": "PgMP"
+  },
+  {
+   "code": "strategy-8",
+   "name": "Evaluate regulatory, legal, social and ethical constraints",
+   "domain": "Strategic Program Alignment",
+   "certification": "PgMP"
+  },
+  {
+   "code": "strategy-9",
+   "name": "Obtain program approval with the program charter",
+   "domain": "Strategic Program Alignment",
+   "certification": "PgMP"
+  },
+  {
+   "code": "strategy-10",
+   "name": "Identify integration opportunities with operations",
+   "domain": "Strategic Program Alignment",
+   "certification": "PgMP"
+  },
+  {
+   "code": "strategy-11",
+   "name": "Exploit strategic opportunities for change",
+   "domain": "Strategic Program Alignment",
+   "certification": "PgMP"
+  },
+  {
+   "code": "lifecycle-1",
+   "name": "Develop the program charter",
+   "domain": "Program Life Cycle Management",
+   "certification": "PgMP"
+  },
+  {
+   "code": "lifecycle-2",
+   "name": "Translate strategic objectives into program scope",
+   "domain": "Program Life Cycle Management",
+   "certification": "PgMP"
+  },
+  {
+   "code": "lifecycle-3",
+   "name": "Develop the program roadmap",
+   "domain": "Program Life Cycle Management",
+   "certification": "PgMP"
+  },
+  {
+   "code": "lifecycle-4",
+   "name": "Develop a responsibility assignment matrix",
+   "domain": "Program Life Cycle Management",
+   "certification": "PgMP"
+  },
+  {
+   "code": "lifecycle-5",
+   "name": "Define success measurement criteria and KPIs",
+   "domain": "Program Life Cycle Management",
+   "certification": "PgMP"
+  },
+  {
+   "code": "lifecycle-6",
+   "name": "Conduct the program kick-off",
+   "domain": "Program Life Cycle Management",
+   "certification": "PgMP"
+  },
+  {
+   "code": "lifecycle-7",
+   "name": "Develop a detailed program scope statement",
+   "domain": "Program Life Cycle Management",
+   "certification": "PgMP"
+  },
+  {
+   "code": "lifecycle-8",
+   "name": "Develop the program WBS",
+   "domain": "Program Life Cycle Management",
+   "certification": "PgMP"
+  },
+  {
+   "code": "lifecycle-9",
+   "name": "Establish the program management plan and schedule",
+   "domain": "Program Life Cycle Management",
+   "certification": "PgMP"
+  },
+  {
+   "code": "lifecycle-10",
+   "name": "Optimize the plan by leveling resources",
+   "domain": "Program Life Cycle Management",
+   "certification": "PgMP"
+  },
+  {
+   "code": "lifecycle-11",
+   "name": "Define the program management information system",
+   "domain": "Program Life Cycle Management",
+   "certification": "PgMP"
+  },
+  {
+   "code": "lifecycle-12",
+   "name": "Manage unresolved project-level issues",
+   "domain": "Program Life Cycle Management",
+   "certification": "PgMP"
+  },
+  {
+   "code": "lifecycle-13",
+   "name": "Develop the benefits management plan with exit criteria",
+   "domain": "Program Life Cycle Management",
+   "certification": "PgMP"
+  },
+  {
+   "code": "lifecycle-14",
+   "name": "Develop KPIs for scope and quality management",
+   "domain": "Program Life Cycle Management",
+   "certification": "PgMP"
+  },
+  {
+   "code": "lifecycle-15",
+   "name": "Monitor human resources and team motivation",
+   "domain": "Program Life Cycle Management",
+   "certification": "PgMP"
+  },
+  {
+   "code": "lifecycle-16",
+   "name": "Charter and initiate constituent components",
+   "domain": "Program Life Cycle Management",
+   "certification": "PgMP"
+  },
+  {
+   "code": "lifecycle-17",
+   "name": "Deploy governance framework and uniform standards",
+   "domain": "Program Life Cycle Management",
+   "certification": "PgMP"
+  },
+  {
+   "code": "lifecycle-18",
+   "name": "Establish communication feedback and reporting",
+   "domain": "Program Life Cycle Management",
+   "certification": "PgMP"
+  },
+  {
+   "code": "lifecycle-19",
+   "name": "Lead, train, coach and recognize the team",
+   "domain": "Program Life Cycle Management",
+   "certification": "PgMP"
+  },
+  {
+   "code": "lifecycle-20",
+   "name": "Review project managers' performance",
+   "domain": "Program Life Cycle Management",
+   "certification": "PgMP"
+  },
+  {
+   "code": "lifecycle-21",
+   "name": "Execute program management plans",
+   "domain": "Program Life Cycle Management",
+   "certification": "PgMP"
+  },
+  {
+   "code": "lifecycle-22",
+   "name": "Consolidate project and program data",
+   "domain": "Program Life Cycle Management",
+   "certification": "PgMP"
+  },
+  {
+   "code": "lifecycle-23",
+   "name": "Evaluate program status",
+   "domain": "Program Life Cycle Management",
+   "certification": "PgMP"
+  },
+  {
+   "code": "lifecycle-24",
+   "name": "Approve closure of constituent components",
+   "domain": "Program Life Cycle Management",
+   "certification": "PgMP"
+  },
+  {
+   "code": "lifecycle-25",
+   "name": "Analyze variances and trends",
+   "domain": "Program Life Cycle Management",
+   "certification": "PgMP"
+  },
+  {
+   "code": "lifecycle-26",
+   "name": "Update plans with corrective actions",
+   "domain": "Program Life Cycle Management",
+   "certification": "PgMP"
+  },
+  {
+   "code": "lifecycle-27",
+   "name": "Manage program-level issues",
+   "domain": "Program Life Cycle Management",
+   "certification": "PgMP"
+  },
+  {
+   "code": "lifecycle-28",
+   "name": "Manage changes per the change management plan",
+   "domain": "Program Life Cycle Management",
+   "certification": "PgMP"
+  },
+  {
+   "code": "lifecycle-29",
+   "name": "Assess impact of program changes",
+   "domain": "Program Life Cycle Management",
+   "certification": "PgMP"
+  },
+  {
+   "code": "lifecycle-30",
+   "name": "Manage risk per the risk management plan",
+   "domain": "Program Life Cycle Management",
+   "certification": "PgMP"
+  },
+  {
+   "code": "lifecycle-31",
+   "name": "Complete the program performance analysis report",
+   "domain": "Program Life Cycle Management",
+   "certification": "PgMP"
+  },
+  {
+   "code": "lifecycle-32",
+   "name": "Conduct program closure under governance",
+   "domain": "Program Life Cycle Management",
+   "certification": "PgMP"
+  },
+  {
+   "code": "lifecycle-33",
+   "name": "Execute program transition and close-out",
+   "domain": "Program Life Cycle Management",
+   "certification": "PgMP"
+  },
+  {
+   "code": "lifecycle-34",
+   "name": "Conduct post-review meetings",
+   "domain": "Program Life Cycle Management",
+   "certification": "PgMP"
+  },
+  {
+   "code": "lifecycle-35",
+   "name": "Report and archive lessons learned",
+   "domain": "Program Life Cycle Management",
+   "certification": "PgMP"
+  },
+  {
+   "code": "benefits-1",
+   "name": "Develop the benefits realization plan",
+   "domain": "Benefits Management",
+   "certification": "PgMP"
+  },
+  {
+   "code": "benefits-2",
+   "name": "Capture synergies and update the benefits plan",
+   "domain": "Benefits Management",
+   "certification": "PgMP"
+  },
+  {
+   "code": "benefits-3",
+   "name": "Develop the benefits sustainment plan",
+   "domain": "Benefits Management",
+   "certification": "PgMP"
+  },
+  {
+   "code": "benefits-4",
+   "name": "Monitor benefit metrics and take corrective action",
+   "domain": "Benefits Management",
+   "certification": "PgMP"
+  },
+  {
+   "code": "benefits-5",
+   "name": "Verify transition meets benefit criteria",
+   "domain": "Benefits Management",
+   "certification": "PgMP"
+  },
+  {
+   "code": "benefits-6",
+   "name": "Maintain the benefits register",
+   "domain": "Benefits Management",
+   "certification": "PgMP"
+  },
+  {
+   "code": "benefits-7",
+   "name": "Analyze benefits plans for risk and uncertainty",
+   "domain": "Benefits Management",
+   "certification": "PgMP"
+  },
+  {
+   "code": "benefits-8",
+   "name": "Develop the transition plan to operations",
+   "domain": "Benefits Management",
+   "certification": "PgMP"
+  },
+  {
+   "code": "stakeholder-1",
+   "name": "Identify stakeholders and create the stakeholder matrix",
+   "domain": "Stakeholder Engagement",
+   "certification": "PgMP"
+  },
+  {
+   "code": "stakeholder-2",
+   "name": "Analyze stakeholders and plan engagement",
+   "domain": "Stakeholder Engagement",
+   "certification": "PgMP"
+  },
+  {
+   "code": "stakeholder-3",
+   "name": "Negotiate stakeholder support and expectations",
+   "domain": "Stakeholder Engagement",
+   "certification": "PgMP"
+  },
+  {
+   "code": "stakeholder-4",
+   "name": "Maintain program visibility and support",
+   "domain": "Stakeholder Engagement",
+   "certification": "PgMP"
+  },
+  {
+   "code": "stakeholder-5",
+   "name": "Define and maintain stakeholder communications",
+   "domain": "Stakeholder Engagement",
+   "certification": "PgMP"
+  },
+  {
+   "code": "stakeholder-6",
+   "name": "Evaluate risks identified by stakeholders",
+   "domain": "Stakeholder Engagement",
+   "certification": "PgMP"
+  },
+  {
+   "code": "stakeholder-7",
+   "name": "Develop relationships with stakeholders",
+   "domain": "Stakeholder Engagement",
+   "certification": "PgMP"
+  },
+  {
+   "code": "governance-1",
+   "name": "Develop program management standards and structure",
+   "domain": "Governance",
+   "certification": "PgMP"
+  },
+  {
+   "code": "governance-2",
+   "name": "Select a governance framework",
+   "domain": "Governance",
+   "certification": "PgMP"
+  },
+  {
+   "code": "governance-3",
+   "name": "Obtain approval through stage gate reviews",
+   "domain": "Governance",
+   "certification": "PgMP"
+  },
+  {
+   "code": "governance-4",
+   "name": "Evaluate KPIs to monitor benefits",
+   "domain": "Governance",
+   "certification": "PgMP"
+  },
+  {
+   "code": "governance-5",
+   "name": "Use the program management information system",
+   "domain": "Governance",
+   "certification": "PgMP"
+  },
+  {
+   "code": "governance-6",
+   "name": "Evaluate risks and update the risk plan for approval",
+   "domain": "Governance",
+   "certification": "PgMP"
+  },
+  {
+   "code": "governance-7",
+   "name": "Establish escalation policies and procedures",
+   "domain": "Governance",
+   "certification": "PgMP"
+  },
+  {
+   "code": "governance-8",
+   "name": "Contribute to the lessons learned repository",
+   "domain": "Governance",
+   "certification": "PgMP"
+  },
+  {
+   "code": "governance-9",
+   "name": "Apply lessons learned to programs and organization",
+   "domain": "Governance",
+   "certification": "PgMP"
+  },
+  {
+   "code": "governance-10",
+   "name": "Monitor the business environment for alignment",
+   "domain": "Governance",
+   "certification": "PgMP"
+  },
+  {
+   "code": "governance-11",
+   "name": "Support the program integration management plan",
+   "domain": "Governance",
+   "certification": "PgMP"
   }
  ],
  "approaches": [

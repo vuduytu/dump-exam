@@ -1,0 +1,1335 @@
+[
+ {
+  "id": 42001084,
+  "text": "Which of the following documents sets the project objectives?",
+  "choices": [
+   "A. Project charter",
+   "B. Project schedule",
+   "C. Project scope statement",
+   "D. Project organization chart"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 42001085,
+  "text": "Who prepares the statement of work (SOW) for external projects?",
+  "choices": [
+   "A. Customer",
+   "B. Project management team",
+   "C. Project Manager",
+   "D. Chief Financial Officer (CFO)"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 42001086,
+  "text": "You are the program manager for your organization. Your current program, which has just been initiated, needs to launch several projects in order to create all of the benefits of the program. What document do you need to create in order to initiate the projects within your program?",
+  "choices": [
+   "A. Project charter",
+   "B. Program charter",
+   "C. Program scope statement",
+   "D. Project preliminary scope statement"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 42001087,
+  "text": "You are the program manager for your organization. You're currently creating an accountability matrix starting with yourself, the program manager and the program sponsor. What program management process identifies the program sponsor?",
+  "choices": [
+   "A. Pre-program setup phase",
+   "B. Authorization of program processes and projects",
+   "C. Initiate program process",
+   "D. Initiation of the program management team"
+  ],
+  "answer": ""
+ },
+ {
+  "id": 42001088,
+  "text": "You are the program manager for your organization. Management has asked you to create a method to track the program stakeholders' concerns, threats, and demands for communication. They would like you to map out each stakeholder or stakeholder group and identify trends within the chart to help your program communicate better. What type of a chart should you create for management?",
+  "choices": [
+   "A. RACI chart",
+   "B. Stakeholder analysis chart",
+   "C. Roles and responsibilities chart",
+   "D. Communication matrix"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 42001089,
+  "text": "You are the program manager for your organization. Your program is about to being initiated and management is asking you for a document that will define all of the required resources, skills, and competencies you'll need in your program. What document defines the skills and competencies for a program?",
+  "choices": [
+   "A. Staffing management plan",
+   "B. Staffing pool description",
+   "C. Program resources requirements plan",
+   "D. Human resources management plan"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 42001090,
+  "text": "What analysis type could you use in a program to compare the positive stakeholders and their position, power, and influence over your program to the same variable components of the negative stakeholders in your program?",
+  "choices": [
+   "A. Sensitivity analysis",
+   "B. Stakeholder analysis",
+   "C. Monte Carlo simulation",
+   "D. Force field analysis"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 42001091,
+  "text": "You are the project manager for your organization. Your project team has finished the second phase of a seven-phase project. At the end of each phase, management must review the work your project team has completed and determine if the project should be allowed to continue. What name describes this type of end-of-phase review management is completing on your project?",
+  "choices": [
+   "A. Quality control",
+   "B. Kill point",
+   "C. Phase review",
+   "D. Audit"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 42001092,
+  "text": "Your program creates a byproduct that you could sell to a client. The cost of the byproduct would offset the cost of the program by nearly $7,500 per month. This is an example of which positive risk response?",
+  "choices": [
+   "A. Sharing",
+   "B. Enhance",
+   "C. Exploiting",
+   "D. Accepting"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 42001093,
+  "text": "You are the program manager for your company and management wants you to identify how you'll make decisions in the program planning processes. What program management document should serve as the baseline for all future program decisions?",
+  "choices": [
+   "A. Program budget",
+   "B. Program management plan",
+   "C. Program scope statement",
+   "D. Program requirements"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 42001094,
+  "text": "What percentage of communication is nonverbal?",
+  "choices": [
+   "A. 55 percent",
+   "B. 50 percent",
+   "C. 90 percent",
+   "D. 45 percent"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 42001095,
+  "text": "You are the program manager of the JNH Program. Tom, a project manager in your program, has just completed his project and is ready to officially close his project. You agree that Tom's project is completed. What role do you play in Tom's project closure?",
+  "choices": [
+   "A. You must ensure that the project sponsor closes the project.",
+   "B. You must ensure that that the projects within the program have been closed at the project level.",
+   "C. You must close the project before operations closes the project.",
+   "D. You must ensure that the program management team closes the project for the project manager."
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 42001096,
+  "text": "Which one of the following is NOT a component of the risk monitoring and controlling process?",
+  "choices": [
+   "A. Executing risk response plans",
+   "B. Completing quantitative risk analysis",
+   "C. Tracking identified risks",
+   "D. Determining if new risks have developed"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 42001097,
+  "text": "You are the program manager for your organization. Your program has recently completed its program scope and you've transferred the benefits to the operations of your organization. Before your program is considered closed you must complete some forms and procedures as required by your organization. The requirements to complete the forms and paperwork are also known as what?",
+  "choices": [
+   "A. Program administrative closure",
+   "B. Enterprise environmental factors",
+   "C. Closing processes",
+   "D. Organizational process assets"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 42001098,
+  "text": "A knowledge area defines a subset of program management and its processes within that domain. For example, the knowledge area of quality management includes the processes related directly to quality management only. Which knowledge area ensures that all knowledge areas interact correctly with one another?",
+  "choices": [
+   "A. Program benefits management",
+   "B. Program management planning",
+   "C. Integration management",
+   "D. Communications management"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 42001099,
+  "text": "You are the program manager of HYH Program for your organization. Your program is to create a new sports arena for your city within 12 months. Your program has seven projects and you've worked with all of the project managers before. Even though you've worked with the project managers before you still need to define the authority of the project managers and their projects. What document names the project manager for the project?",
+  "choices": [
+   "A. Project charter for each project",
+   "B. Program human resource management plan",
+   "C. Project scope statement",
+   "D. Program management charter"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 42001100,
+  "text": "You are the program manager for your company and evaluating the sellers to determine the seller to buy from. In your analysis you've created a histogram to display the pros and cons for each seller. You've created five categories of interest and assigned values to each category for each vendor. Your five categories are: Cost, Schedule, Experience, Certification, Warranty. Each category has a different point value and the vendor that receives the maximum points in total will win the contract. What type of seller evaluation are you performing?",
+  "choices": [
+   "A. Monte Carlo simulation",
+   "B. Expert judgment",
+   "C. Weighted scoring model",
+   "D. Benchmarking"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 42077001,
+  "text": "A risk response in a project in your program has actually caused new risks. What term is assigned to the new risks that a risk response has created?",
+  "choices": [
+   "A. Reactionary risks",
+   "B. Chain risks",
+   "C. Secondary risks",
+   "D. In dux risks"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 42077002,
+  "text": "Part of your job as the program manager is to coach the project managers on their duties and goals. One of the project managers, Holly, is having trouble discerning the difference between quality assurance and quality control. She understands that she needs both to help you reach the program goals. Which statement best describes quality control for a project within your program?",
+  "choices": [
+   "A. Quality control is a management-driven effort to plan the work properly so the work is done according to plan.",
+   "B. Quality control is an inspection-driven process to keep mistakes out of the customers' hands.",
+   "C. Quality control is a management-driven policy to do the work correctly the first time.",
+   "D. Quality control is an inspection-driven process to prove the existence of the requirements."
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 42077003,
+  "text": "Which project management meeting allows stakeholders to meet one another and to learn about the project?",
+  "choices": [
+   "A. Project scope review",
+   "B. Project authorization meeting",
+   "C. Project status meeting",
+   "D. Project kick-off meeting"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 42077004,
+  "text": "You are the program manager of the NHQ Program. The program has reached its final deliverable and the certificate of completion has been created for the program. What else should you, the program manager, create at this time?",
+  "choices": [
+   "A. Life cycle costing estimates",
+   "B. Lessons learned documentation",
+   "C. Operational transfer plan",
+   "D. Program closure reports"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 42077005,
+  "text": "Ned is the program manager for his organization and he's considering some new materials for his program. He and his team have never worked with these materials before and he wants to ask the vendor for some additional information, a demon, and even some samples. What type of a document should Ned send to the vendor?",
+  "choices": [
+   "A. RFI",
+   "B. RFP",
+   "C. RFQ",
+   "D. IFB"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 42077006,
+  "text": "If a program has a budget of completion of $550,000, is 25 percent complete, and has spent $135,000 what is the cost variance (CV)?",
+  "choices": [
+   "A. 0.99",
+   "B. -$2,500",
+   "C. $2,500",
+   "D. 1.02"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 42077007,
+  "text": "Which benefit measurement method considers the value of each time period's return for a project that will create deliverables over multiple time periods?",
+  "choices": [
+   "A. Net present value",
+   "B. Future value",
+   "C. Present value",
+   "D. Cost-Benefit ratio"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 42077008,
+  "text": "Which of the following types of floats are available? Each correct answer represents a complete solution. Choose two.",
+  "choices": [
+   "A. Half float",
+   "B. Full float",
+   "C. Total float",
+   "D. Free float"
+  ],
+  "answer": "CD"
+ },
+ {
+  "id": 42077009,
+  "text": "You are the program manager of the YHT Program. You have been working with a vendor in the program but have decided that the contract between your program and the vendor needs to be terminated. What two things must be documented if you wish to terminate a vendor's contract?",
+  "choices": [
+   "A. Contract and the quality measurements for the vendor's work",
+   "B. The scope verification document and the termination notice",
+   "C. Contract and scope verification process documents",
+   "D. Work that has been completed and uncompleted work"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 42077010,
+  "text": "In your program you must adhere to Six Sigma as part of your organization's enterprise environmental factors. There is terminology, reports, and measurements that you are expected to use as part of your program. Six Sigma is an example of what program management process?",
+  "choices": [
+   "A. Quality control",
+   "B. Process improvement",
+   "C. Scope verification",
+   "D. Quality assurance"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 42077011,
+  "text": "You are the program manager of the NHQ Program. You will need to initiate six projects for your program. When should project initiating happen within a program?",
+  "choices": [
+   "A. Whenever the program needs to initiate projects, it may, as long as the program has not entered the closing processes of the program.",
+   "B. With program execution",
+   "C. With program initiation",
+   "D. With program planning"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 42077012,
+  "text": "You are the program manager for your organization. You have proposed a program that will cost $750,000 and will last for four years. Management is concerned with the cost of the program in relation to the return your program will bring. If the rate of return is six percent what is the minimum value your project should return in four years based on the investment of the program?",
+  "choices": [
+   "A. $750,000",
+   "B. $795,000",
+   "C. $750,001",
+   "D. $946,857"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 42077013,
+  "text": "Joan is the program manager for her organization. Throughout the program life cycle there will be several elements, resources, and benefits that can be transitioned from her program to the organization. What document defines how these things can be transferred from the program to the organization?",
+  "choices": [
+   "A. Operational transfer alliance plan",
+   "B. Program milestone list",
+   "C. Program transition agreement",
+   "D. Program scope statement"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 42077014,
+  "text": "You are the program manager for a construction program. In this program you are requiring that all workers adhere to the identified safety requirements. Some of the work in the program you've decided is too risky for the program team members so you've hired specialists to manage the dangerous work. The outsourcing of the dangerous work to a specialist is what type of risk response?",
+  "choices": [
+   "A. Avoidance",
+   "B. Mitigation",
+   "C. Transference",
+   "D. Enhancing"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 42077015,
+  "text": "You are the program manager for your organization and management has asked you to be certain to finalize the lessons learned documentation for your program. When will the lessons learned documentation be created?",
+  "choices": [
+   "A. Lessons learned are in program execution.",
+   "B. Lessons learned are created at each program deliverable.",
+   "C. Lessons learned are created during the program closure.",
+   "D. Lessons learned are created during the program archive."
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 42077016,
+  "text": "You are the program manager for the HQM Program. Your program has sixteen constituent projects around the world. You are requiring that each project manager and project management team use the same forms, software, and templates to create standardization in each project. What term is assigned to the forms, templates, and software that your program will provide for your projects?",
+  "choices": [
+   "A. Program governance",
+   "B. Project management assets",
+   "C. Enterprise environmental factors",
+   "D. Organizational process assets"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 42077017,
+  "text": "You are the program manager of a new program in your organization. This program will last for one year and your program team will work full-time on the effort. The nature of the work requires that the program team work closely together for the next year, but many of the program team members have never met one another. You decide to take the team on an outing where they can work together through challenges, learn teamwork, and get to know one another. This is an example of what process?",
+  "choices": [
+   "A. Cost of quality",
+   "B. Storming",
+   "C. Forming",
+   "D. Team development"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 42077018,
+  "text": "A team member has made a mistake during the installation of a fixture in your program. You have requested that the team member should correct the problem so that the fixture is installed properly. Once the team members has corrected the problem what action should be taken next?",
+  "choices": [
+   "A. Defect repair validation",
+   "B. Lesson learned documentation",
+   "C. Corrective actions",
+   "D. Preventive actions"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 42077019,
+  "text": "Gary is the program manager for his organization. His current program has 432 stakeholders, some of which are external to his organization. He would like to create a chart that identifies each stakeholder's opinion of the program, influence over program decisions, their requirements and affect on program priorities, and other information. What kind of chart should Gary create in this instance?",
+  "choices": [
+   "A. Resource breakdown structure",
+   "B. Resource management chart",
+   "C. Stakeholder analysis chart",
+   "D. RACI chart"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 42077020,
+  "text": "Which one of the following is the best example of transference?",
+  "choices": [
+   "A. Your program has some very dangerous activities so you hire a training company to train your program team.",
+   "B. Your program creates an opportunity that your company can realize on its own so it brings in a competitor to help seize the opportunity.",
+   "C. Your program must be completed by a given deadline as government inspectors are scheduled to review the work to determine its accuracy.",
+   "D. Your program is dealing with a new technology that you and your program team are not familiar with so you hire a consulting company to complete this work"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 42077021,
+  "text": "You are the program manager of the HNG Program. This program has a budget at completion of $2,345,900 and is expected to last two years. The program is currently 30 percent complete and you have spent $789,000. The program is supposed to be 35 percent complete but do to some delays you're slightly behind schedule. Based on this information, what is the schedule performance index (SPI) for this program?",
+  "choices": [
+   "A. $821,065",
+   "B. 0.86",
+   "C. 1.05",
+   "D. 0.89"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 42077022,
+  "text": "You are the program manager for your organization and you're coaching Tom, an aspiring program manager, on program management. Tom is curious about controlling communications. Which one of the following is an output of the communications control process?",
+  "choices": [
+   "A. Approved change requests",
+   "B. Communications management plan",
+   "C. Stakeholder analysis charts",
+   "D. Performance reports"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 42077023,
+  "text": "You are the project manager for the JJY Project, which is similar to the HHG Project you managed last quarter. You would like to model the current project scope on the previous project to save time and effort. This is an example of what kind of scope definition?",
+  "choices": [
+   "A. Analogous estimating",
+   "B. Organizational process assets",
+   "C. Parametric scope definition",
+   "D. Template driven"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 42077024,
+  "text": "You need to create a document that will define the costs, resources, and characteristics of each deliverable the program will create. What document should you create?",
+  "choices": [
+   "A. Program work breakdown structure",
+   "B. Program work breakdown structure dictionary",
+   "C. Program charter",
+   "D. Program scope statement"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 42077025,
+  "text": "Mary Anne is the program manager for her organization. In her program there are six projects. One of the projects in her program has been performing well. It is on schedule and has no cost or schedule variances. Mary Anne has decided, however, that her program needs to be terminated. Which one of the following is a likely reason why the project should be terminated?",
+  "choices": [
+   "A. The program scope has changed.",
+   "B. The scope is not being met as planned due to scope creep.",
+   "C. The project resources are not completing their project tasks as assigned.",
+   "D. The project scope has changed from the original intent of the project"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 42077026,
+  "text": "An organization is considering a new program. The business analyst believes that the benefits to the organization would equate to $1,550,000 in five years. If the rate of return for this program is six percent what is the maximum amount the organization should invest in this program?",
+  "choices": [
+   "A. $1,158,250",
+   "B. It depends on the internal decision-making process.",
+   "C. $2,074,249",
+   "D. $1,550,000"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 42077027,
+  "text": "You are trying to determine if you should buy or build a solution for your program. If you build the solution it'll cost you $45,000 to create and $7,000 per month to support. A vendor reports that they can create the solution for you for $1,000 but you'll have to pay them $9,000 per month to support the solution. Should you buy or build this solution?",
+  "choices": [
+   "A. Build the solution if you'll use it longer than 22 months.",
+   "B. Buy the solution if you'll use it longer than 24 months.",
+   "C. Buy the solution if you'll use it longer than 22 months.",
+   "D. Build the solution if you'll use it longer than 25 months."
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 42077028,
+  "text": "You are the program manager of the GHY Program. Your program team has identified a risk dealing with the materials you will be using in the program. It is possible that if the materials are not installed properly, they will cause serious damage in future phases of the program. Your team has recommended additional training and a consultant to help the team members install the material accurately to reduce the likelihood of the risk event. You agree and the team executes the risk response. What type of risk response have you implemented in this situation?",
+  "choices": [
+   "A. Enhancing",
+   "B. Workaround",
+   "C. Mitigation",
+   "D. Avoidance"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 42077029,
+  "text": "You are the program manager for the HNY Corporation and you complete programs for other companies in your role. You have just been assigned a new program that is very similar to a recently completed program you did for your company. Management has asked you to create a cost estimate for the program so you base your current cost estimate on the recently finished program. What type of estimating technique have you used in this instance?",
+  "choices": [
+   "A. Bottom-up",
+   "B. Parametric",
+   "C. Analogous",
+   "D. Rough order of magnitude"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 42077030,
+  "text": "You are the program manager for a large program in your matrix organization. You need to define when the resources in your program will be brought into the program and then released from the program so that the project managers, operational managers, and your program team can plan accordingly. What program management plan defines when resources are needed, how the resources will be obtained, and how the resources may be released from the program?",
+  "choices": [
+   "A. Procurement management plan",
+   "B. Resource management plan",
+   "C. Team management plan",
+   "D. Schedule management plan"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 42077031,
+  "text": "In your organization there are rules and procedures that the program manager must follow and abide by before the program can begin and must continue to follow once the program is in execution. What term is assigned to the enforcement of these program management rules and procedures?",
+  "choices": [
+   "A. Program governance",
+   "B. Organizational process assets",
+   "C. Program standards",
+   "D. Process analysis"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 42077032,
+  "text": "Your program has a budget at completion of $1,550,000 and is expected to last one year. Currently your program is 45 percent complete and has spent $725,000. According to the program schedule you are actually to be fifty percent complete at this, but due to some vendor delays your program is running just a bit late. Management is concerned that your program will not be able to recoup the costs of the expenses. They've asked you to determine the cost variance for the program. What is the cost variance based on this information?",
+  "choices": [
+   "A. -$27,500",
+   "B. -$77,500",
+   "C. -$61,111",
+   "D. .90"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 42077033,
+  "text": "You are the program manager for your organization and are working with Tracy, one of the project managers in your program. Tracy is having some trouble understanding the concept of the critical path in her project's network diagram. Which one of the following is the best definition of the critical path?",
+  "choices": [
+   "A. It is the path that carries the most risk of project failure.",
+   "B. It is the path that reveals the earliest date the project can finish.",
+   "C. It is the path with the most important activities in the project.",
+   "D. It is the duration of all the project activities if the labor is summed."
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 42077034,
+  "text": "What quality control chart compares two or more variables over time to determine how closely the variables may be related to one another?",
+  "choices": [
+   "A. Run chart",
+   "B. Scatter diagram",
+   "C. Control chart",
+   "D. Pareto diagram"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 42077035,
+  "text": "You are the program manager for your organization and are reviewing several proposed change requests for your program. Mary, a stakeholder, who has made a change request is asking why it is taking you so long to review the change. You tell her that you must perform integrated change control to review each change request. What is integrated change control?",
+  "choices": [
+   "A. It is the review of the impact of the change on the program's knowledge areas.",
+   "B. It is the review of the impact of the change on the time, cost, scope, and quality baselines.",
+   "C. It is the review of the impact of the change on the program's triple constraints.",
+   "D. It is the review of the impact of the change on the program's Iron Triangle."
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 42077036,
+  "text": "Josh is the program manager for his organization and he's leading the analysis for a new program that may be initiated by his company. The analysis is a focus on the return on investment for new software that may be created if the program is initiated. What type of a document is Josh likely creating for his company?",
+  "choices": [
+   "A. Business case",
+   "B. Program charter",
+   "C. Program scope statement",
+   "D. Statement of work"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 42077037,
+  "text": "You are the program manager of the MQQ Program. Your program will use equipment and materials that are new to your industry. You have some concerns that there will be delays and waste by your program team because they've not worked with these materials or tools before. You elect to send the resources that will work the most with these tools through training. The cost of the training in this instance is known as which one of the following?",
+  "choices": [
+   "A. Indirect costs",
+   "B. Cost of doing business",
+   "C. Direct costs",
+   "D. Cost of conformance quality"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 42077038,
+  "text": "Over the life of your program you've received many change request forms. Some of the change requests have been approved and some have been declined. Where should you record all change requests and their status?",
+  "choices": [
+   "A. Change register",
+   "B. Integrated change control",
+   "C. Program Management Information System",
+   "D. Change log"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 42077039,
+  "text": "What project management term would you associated with a predetermined budget you’re your program?",
+  "choices": [
+   "A. Program governance",
+   "B. Constraint",
+   "C. Cost baseline",
+   "D. Assumption"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 42077040,
+  "text": "You are the program manager for your organization and working to create the program statement of work for approval by the program director. All of the following information is defined in the program statement of work except for which one?",
+  "choices": [
+   "A. Program requirements for resource competency levels",
+   "B. Structure of the program management team",
+   "C. Metrics and qualifications for program acceptance",
+   "D. Location of the program work"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 42077041,
+  "text": "You are the program manager for your organization. A new program is about to initiated and Marcy, your assistant, asks you about the themes that all new programs must map to. All of the following are themes that you can discuss with Marcy except for which one is not a program theme?",
+  "choices": [
+   "A. Stakeholder management",
+   "B. Requirements analysis",
+   "C. Benefits management",
+   "D. Program governance"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 42077042,
+  "text": "Part of program management is to understand how the communication model works in a program. The program manager must be able to effectively communicate with the program team and stakeholders. What component of the communication model is responsible for carrying the message?",
+  "choices": [
+   "A. Medium",
+   "B. Sender",
+   "C. Decoder",
+   "D. Encoder"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 42077043,
+  "text": "You are the program manager for your organization and are planning the composition of the project team. In your organization resources are used from throughout the company and may serve on more than one project. While you, the program manager, will have most of the authority on the program you want the project managers to have authority over the project decisions. What type of an organizational structure does your organization have?",
+  "choices": [
+   "A. Strong Matrix",
+   "B. Functional",
+   "C. Weak Matrix",
+   "D. Projectized"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 42077044,
+  "text": "You are the program manager for your organization and your team has reported on a new issue among your program stakeholders. You want to address this issue as soon as possible, but it will need to be studied and reviewed. You recommend that Shirley, one of your program team members, study the issue and present a few solutions in a week's time. What else should you do with the issue?",
+  "choices": [
+   "A. Determine the time and cost of researching the issue for resolution.",
+   "B. Record the issue in the issue log.",
+   "C. Document the issue in the lessons learned.",
+   "D. Communicate with the stakeholders that you are addressing the issue."
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 42077045,
+  "text": "All of the following are resources that need to be monitored and controlled except for which one?",
+  "choices": [
+   "A. Equipment",
+   "B. Staff",
+   "C. Quality",
+   "D. Facilities"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 42077046,
+  "text": "Performing quality assurance in a program can result in which one of the following?",
+  "choices": [
+   "A. Quality control execution",
+   "B. Scope fulfillment",
+   "C. Quality management plan",
+   "D. Change requests"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 42077047,
+  "text": "You are the program manager for your organization. This program will last for two years and has eight projects. The cost of your program is $4 million and there are some risk concerns that may affect the overall cost of the program. Management is concerned with how long it will take the program to reach the management horizon. What is management horizon also known as?",
+  "choices": [
+   "A. Payback period",
+   "B. Cost performance index",
+   "C. Cost-to-benefits ratio",
+   "D. Return on investment"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 42077048,
+  "text": "Hal is the program manager for his organization. He would like your organization to provide his program with 4 tons of pea gravel for a construction project in his program. Hal send you a statement of work and an IFB. What document should you provide to Hal?",
+  "choices": [
+   "A. Invoice",
+   "B. Proposal",
+   "C. Bid",
+   "D. Quote"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 42077049,
+  "text": "You are the project manager of a construction project. You have to close a phase of the project. Which is the only technique (or tool) available in the Close Project or Phase process?",
+  "choices": [
+   "A. Change control meetings",
+   "B. Project management information system",
+   "C. Expert judgment",
+   "D. Observations"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 42077050,
+  "text": "You are the program manager of the NQA Program. In this program you're planning which contract types you'll allow into the program and which ones you will not. One contract type you won't accept is the cost plus percentage of cost contract. Which of the following is a valid reason you would not allow this contract type into your program?",
+  "choices": [
+   "A. The contract type requires the vendor to provide a fee for the time invested and the materials used.",
+   "B. The contract type allows the vendor to change the price of the work he's completed.",
+   "C. The contract type allows is the most dangerous for the buyer.",
+   "D. The contract type requires the vendor to provide a fixed price for the work."
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 42077051,
+  "text": "Alice is the project manager of the NHQ Project and is entering the project's closing processes. The project, she has managed, has been for another organization in a contractual relationship. Her organization requires Alice to complete performance reviews of the project team, review the deliverables with the project customer, and to obtain formal signoff of the project deliverables. There may be other conditions and activities that Alice likely will need to do in this final project phase. Where can Alice check regarding this project?",
+  "choices": [
+   "A. Project Integration Plan",
+   "B. Project Contract",
+   "C. Project Quality Control procedures",
+   "D. Project Communications Management Plan"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 42077052,
+  "text": "Your program has just been chartered during the program initiation process. Your program also needs to create three program statements. Which program statement defines how your program will manage tradeoffs, competing objectives, and program and organization decisions?",
+  "choices": [
+   "A. Value",
+   "B. Vision",
+   "C. Scope",
+   "D. Mission"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 42077053,
+  "text": "Which of the following is not a phase of program life cycle?",
+  "choices": [
+   "A. Program Initiation",
+   "B. Program Closure",
+   "C. Program Setup",
+   "D. Program Planning",
+   "E. Delivery of Program Benefits",
+   "F. Pre-program Preparation"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 42077054,
+  "text": "You are the program manager for your organization and are coaching Bonnie, a project manager, who would like to be a program manager wants to know what a program is. Which one of the following statements best defines what a program is for Bonnie?",
+  "choices": [
+   "A. A program is a collection of projects that work together to create one deliverable for the organization",
+   "B. A program is a collection of projects managed to gain benefits for the organization; the organization could not realize the benefits of the project if they were managed independently.",
+   "C. A program is a uniform set of goals that are too large to be managed as one independent project so the project is subdivided into multiple objectives led by multiple project managers and orchestrated by one program manager.",
+   "D. A program is a large collection of projects lead by a single project manager."
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 42077055,
+  "text": "What duration compression technique typically adds risk when it's used during a program?",
+  "choices": [
+   "A. Lead time generation",
+   "B. Fast tracking",
+   "C. Resource leveling heuristics",
+   "D. Crashing"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 42077056,
+  "text": "What schedule analysis simulation tool allows you, the project manager, to review possible combinations of events such as optimistic, most likely and pessimistic outcomes for your project?",
+  "choices": [
+   "A. PERT",
+   "B. GERT",
+   "C. PMIS",
+   "D. Monte Carlo"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 42077057,
+  "text": "Tom is the program manager for his organization. He has to balance the resources he'll be using in the program with the demand for operations to use the same resources. What program document can Tom reference to determine the availability of certain program resources, such as application developers, engineers, and technical writers?",
+  "choices": [
+   "A. Staffing management plan",
+   "B. Resource calendar",
+   "C. Functional management plan",
+   "D. The resource pool description"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 42077058,
+  "text": "Molly is the program manager for her organization and she is creating a program plan that defines the benefits of the program and how her program and team will create the benefits for the organization. What plan is Molly creating in this scenario?",
+  "choices": [
+   "A. Quality management plan",
+   "B. Business case",
+   "C. Program management plan",
+   "D. Benefits management plan"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 42077059,
+  "text": "Which of the following is NOT true regarding the program work breakdown structure (WBS)?",
+  "choices": [
+   "A. It defines a program and groups the program's discrete work elements in a way that helps organize and define the total work scope of the program.",
+   "B. It subdivides the program deliverables to work packages that are linked to the activities within the program.",
+   "C. It defines all the work and only the required work for the program.",
+   "D. It subdivides the program deliverables to work packages that are linked to the activities within the program."
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 42077060,
+  "text": "Program management has several themes that the program manager must be aware of. Which one of the following is not a program management theme?",
+  "choices": [
+   "A. Benefit management",
+   "B. Stakeholder management",
+   "C. Program governance",
+   "D. Organizational planning"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 42077061,
+  "text": "You are the program manager for your organization. One of the projects within your program is to install 15,000 light fixtures throughout your organization's corporate campus. The new fixtures will save on electrical costs. Which one of the following choices is an ideal approach to quality assurance and the installation of the light fixtures for this project team?",
+  "choices": [
+   "A. The cost and time of each installation should go down because of the learning curve.",
+   "B. The project manager should work with the project team to understand how each fixture is to be installed.",
+   "C. The project team members should develop their own system for installation of the fixtures.",
+   "D. Use a checklist for the installation because it is repeatable work."
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 42077062,
+  "text": "Gary is program manager for his organization. His current program is over budget and is slipping on the program schedule. Management has demanded a change to the program scope. What is the most likely type of change management would make to this program scope?",
+  "choices": [
+   "A. A change to add additional funds to the program scope",
+   "B. A change to reduce the program scope",
+   "C. Anything that management demands",
+   "D. A change to add additional time to the program schedule"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 42077063,
+  "text": "Mary has just completed a large program for her organization. What should Mary now do with the program records that she has created throughout the program?",
+  "choices": [
+   "A. The program records should be archived with the program customer.",
+   "B. The program records should be archived with the program sponsor.",
+   "C. The program records should be archived as part of organizational process assets.",
+   "D. The program records should be archived as part of enterprise environmental factors."
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 42077064,
+  "text": "You are hosting a meeting with all of the vendors that have received a copy of your statement of work. In this meeting, you'll be discussing the statement of work, clarifying the details, and answering any questions the vendors may have about the project. What is this meeting called?",
+  "choices": [
+   "A. Sales meeting",
+   "B. Select sellers process",
+   "C. Bidder conference",
+   "D. Negotiations"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 42077065,
+  "text": "Your program will create new software and install new hardware for your organization. Some of the goals of the program is to improve employee morale, improve customer service, and boost customer satisfaction. These intangible goals need metrics. What program stakeholder is responsible for quantifying these goals?",
+  "choices": [
+   "A. Program customer",
+   "B. Program director",
+   "C. Program manager",
+   "D. Business analyst"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 42077066,
+  "text": "Hans is the program manager for his organization. His current project has seven constituent projects that each will create deliverables for the organization. Who is responsible for the project deliverables in this scenario?",
+  "choices": [
+   "A. Project managers",
+   "B. Hans",
+   "C. Program director",
+   "D. Hans and each project manager"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 42077067,
+  "text": "All of the following are resources that you will need to monitor and control in a program environment except for which one?",
+  "choices": [
+   "A. Staff members",
+   "B. Contracts",
+   "C. Quality",
+   "D. Equipment"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 42077068,
+  "text": "What is the primary purpose of a project kick-off meeting?",
+  "choices": [
+   "A. To establish why the project has been initiated.",
+   "B. To establish the direction and purpose of the project management plan.",
+   "C. To establish the roles and responsibilities of the stakeholders.",
+   "D. To establish who the project manager and project sponsor are for the project."
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 42077069,
+  "text": "At what point in the project is the risk of failing to achieve the project objectives the greatest?",
+  "choices": [
+   "A. During project planning",
+   "B. During the project execution",
+   "C. At the project start",
+   "D. At the end of the project"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 42077070,
+  "text": "Gina is the program manager for her organization and is reviewing the results of quality control. She would like to create a chart that shows the categories of defects within the program so that she and the program team can address the largest categories in descending order. Which one of the following is the best chart for Gina in this situation?",
+  "choices": [
+   "A. Cause and effect chart",
+   "B. Pareto chart",
+   "C. Control chart",
+   "D. Ishikawa chart"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 42077071,
+  "text": "You are the program manager for your organization. As your program is being initiated there is some initial concern from the management about the utilization of resources in your program and the need for resources in their day-to-day roles in operations. Management has set a limit on your program that resources may only work 20 hours per week on the program. What is this limit of resource hours in a time period known as?",
+  "choices": [
+   "A. Resource leveling heuristic",
+   "B. Resource requirements",
+   "C. Program risk",
+   "D. Resource utilization"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 42077072,
+  "text": "You are the program manager for your organization. You are planning a new program that will construct a new warehouse facility for your company. As you look forward to the conclusion of the program you need an official document that will signify the program has ended. What document should you specify in your program management plan for the conclusion of the program?",
+  "choices": [
+   "A. Final program audit report",
+   "B. Audit of program financials",
+   "C. Lessons learned documentation",
+   "D. Certificate of program completion"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 42077073,
+  "text": "You are the program manager for your organization and are working with your team to create the program scope management plan. This plan defines several things in your program except for which one of the following?",
+  "choices": [
+   "A. How quality control will be included in the scope",
+   "B. How changes may be allowed to enter the program scope",
+   "C. How the program scope will be created for your program",
+   "D. How the program scope will be controlled"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 42077074,
+  "text": "Management is trying to determine which program to initiate. Each of the potential programs has the possibility of creating an income for each it is in existence. Management would like to consider the present value for each year a program creates a return on investment. What program selection method is management using in this instance?",
+  "choices": [
+   "A. Present value",
+   "B. Internal rate of return",
+   "C. Time value of money",
+   "D. Net present value"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 42077075,
+  "text": "You are the program manager for your program and are creating a communications management plan. Management wants you to address the type of communications based on the number of communication channels you'll have within the program. Currently there are 345 stakeholders in your program but next week you'll have 387 stakeholders. How many more communication channels will you have next week in your program?",
+  "choices": [
+   "A. 59,340",
+   "B. 15,351",
+   "C. 861",
+   "D. 74,691"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 42077076,
+  "text": "There are five stages of team development. At which stage are there likely to be disagreements and struggle for roles in the program team?",
+  "choices": [
+   "A. Adjourning",
+   "B. Forming",
+   "C. Confronting",
+   "D. Storming"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 42077077,
+  "text": "Which one of the following is the best definition of program quality?",
+  "choices": [
+   "A. Satisfying the program scope, conforming to requirements, and ensuring a fitness for use.",
+   "B. Working with the program team, project managers, and the project team members to ensure that the work is done accurately and correctly the first time.",
+   "C. Creating the program scope statement exactly as the stakeholders have requested.",
+   "D. Balancing the time, cost, and scope objectives of the project."
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 42077078,
+  "text": "You are the program manager for your organization. Your program will create a new condominium in your community. There are several concerns about the condos including the timing, the local economy, the environment, and the proposed schedule. You and your team are creating the program management plan to address these concerns along with identifying the constituent projects that will build the structures and deliverables. What group will need to review your program plan to approve the plan before you may proceed in the work?",
+  "choices": [
+   "A. The local government",
+   "B. The change control board",
+   "C. The stakeholders",
+   "D. The program board"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 42077079,
+  "text": "Which one of the following is not an output of the direct and manage program execution process?",
+  "choices": [
+   "A. Results of program work",
+   "B. Program budget",
+   "C. Change requests",
+   "D. Request to terminate the program"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 42077080,
+  "text": "Paula is program manager for her organization. It has come to her attention that several of the projects within her program have stalled which has now caused her project to be delayed. Paula is required by her organization to create a certain type of report when there are variances in the program dealing with time and cost. What type of report is Paula likely to create in this instance?",
+  "choices": [
+   "A. Earned Value Management report on the schedule performance index",
+   "B. Exceptions report",
+   "C. Status report",
+   "D. Quality Control Report"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 42077081,
+  "text": "Holly is the program manager for her program. She is creating with her team a plan that will address how the program team will achieve program goals based on who the program will need to interact with in the program. This plan should define all of the people, groups, and other entities the program needs to interact with in order to move the program forward. On what plan is Holly working?",
+  "choices": [
+   "A. Stakeholder management plan",
+   "B. Communications management plan",
+   "C. Human resource management plan",
+   "D. Interface management plan"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 42077082,
+  "text": "What is a stakeholder analysis chart?",
+  "choices": [
+   "A. It is a matrix that identifies who must communicate with whom.",
+   "B. It is a matrix that documents the stakeholders' requirements, when the requirements were created, and when the fulfillment of the requirements took place.",
+   "C. It is a matrix that documents stakeholders' threats, perceived threats, and communication needs.",
+   "D. It is a matrix that identifies all of the stakeholders and to whom they must report to."
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 42077083,
+  "text": "You are the program manager for the GHT Program for your company. This program has a budget at completion of $789,000 and is currently 40 percent complete, though it was scheduled to be 50 percent at this time. Your program has spent $325,000 of the budget to date. Based on this information, how many pennies is your program losing per dollar spent on the work?",
+  "choices": [
+   "A. 11",
+   "B. 20",
+   "C. 3",
+   "D. 1"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 42077084,
+  "text": "Wanda is the program manager for her organization. Her program team consists of resources from across the organization - many of whom have not worked together before. Wanda thinks that she'll need to complete some team development but would like to focus the development on the materials and activities that the program team will need to complete in the program. What plan should Wanda reference and update to complete her team development process?",
+  "choices": [
+   "A. Training plan",
+   "B. Communications management plan",
+   "C. Staffing management plan",
+   "D. Requirements management plan"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 42077085,
+  "text": "You have identified several issues in your program and have assigned issue owners. What component of program management oversees issue resolution?",
+  "choices": [
+   "A. Program governance",
+   "B. Program risk management",
+   "C. Quality assurance",
+   "D. Issue owner management"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 42077086,
+  "text": "You are the program manager for your organization and are coaching your project managers on the program's schedule. Alice wants to know what the schedule control process creates. All of the following are outputs of the schedule control process except for which one?",
+  "choices": [
+   "A. Stakeholder communication information",
+   "B. Schedule variances",
+   "C. Program schedule updates",
+   "D. Change requests"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 42077087,
+  "text": "Leigh is working with the project stakeholders to define the project scope. The stakeholders are deciding on what type of dooring their new hotel should have in the lobby. They have narrowed their choices to either carpet or tile. The two acceptable choices of carpet or tile during scope definition is an example of what planning approach?",
+  "choices": [
+   "A. Alternative identification",
+   "B. Work packages",
+   "C. Requirements",
+   "D. Scope decomposition"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 42077088,
+  "text": "You are the program manager for your organization and are working with your program team to create the program scope. Based on the program requirements you have identified the major deliverables of each phase in your program scope. Management has requested that you plan for cost estimating to happen at each phase of the program before continuing the work. Management may elect to cancel the program at the end of each phase based on past performance of the program. What are the reviews of management called at each phase?",
+  "choices": [
+   "A. Phase gate estimates",
+   "B. Murder board",
+   "C. Portfolio review sessions",
+   "D. Kill points"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 42077089,
+  "text": "What cost estimating approach uses the work breakdown structure to create a cost estimate?",
+  "choices": [
+   "A. Analogous",
+   "B. Definitive",
+   "C. Top down",
+   "D. Parametric"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 42077090,
+  "text": "Robert is the program manager for his organization which operates in a matrix structure. Resources in Robert's program will be utilized on several projects in and out of his program. He wants to be certain that all of the resources will be planned accordingly and that the project managers communicate with one another about when the resources will be needed and utilized in the projects. What plan should Robert create along with the project managers to ensure that the resources are scheduled and managed effectively?",
+  "choices": [
+   "A. Resource management plan",
+   "B. Program management calendar",
+   "C. Schedule management plan",
+   "D. Resource calendar"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 42077091,
+  "text": "Wan is the program manager for his organization. He has been hearing reports that some project team members are complaining about the number of hours they're required to work on the program's projects and that some scheduling of team assignments are conflicting with their regular operational duties. You investigate the problem and agree that many team members are being assigned too much work within a given time period. You decide to enforce resource leveling heuristics to thirty hours of project work per week maximum. What will likely happen to the program and projects?",
+  "choices": [
+   "A. The schedule to complete the work will take longer.",
+   "B. The cost of the program and project will increase.",
+   "C. The risks of failure will increase.",
+   "D. The morale of the project managers will decline."
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 42077092,
+  "text": "Ben is the program manager for his organization. He's working with program team to determine what activities need to be completed in order to move the program into execution. He and the team are subdividing the program scope into smaller, manageable components to determine the activity list. What is Ben and his program team creating by subdividing the program scope in this scenario?",
+  "choices": [
+   "A. Work breakdown structure",
+   "B. Program network diagram",
+   "C. Program scope baseline",
+   "D. Activity list"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 42077093,
+  "text": "You are the program manager for the JQN Program in your organization. There have been some delays in your schedule and you're about to perform some schedule control activities. Which one of the following will not help you as you perform schedule control?",
+  "choices": [
+   "A. Change requests",
+   "B. Performance reports",
+   "C. Forecasts",
+   "D. Earned value management"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 42077094,
+  "text": "Julie is the program manager of the NHQ Program for her organization and she believes the program is now complete. Julie is closing her program, and she's working with her program sponsor to review the program's deliverables and benefits. Janet, the program sponsor, is very pleased with the program and agrees that the program has met the program scope. What should Julie and the program sponsor do next?",
+  "choices": [
+   "A. Close the constituent projects before closing the program",
+   "B. Complete the program's budget",
+   "C. Release the program's resources",
+   "D. Sign the certificate of program closure"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 42077095,
+  "text": "You are the program manager for your organization and you are trying to determine the possible outcomes of a risk event. You're analyzing the risk event's worst case scenario, most likely scenario, and optimistic scenario to simulate the possible affects of the risk on the program's cost, time, and scope ramifications. What simulation technique are you using in this situation?",
+  "choices": [
+   "A. Monte Carlo simulation",
+   "B. Sensitivity analysis",
+   "C. Force field analysis",
+   "D. Decision tree analysis"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 42077096,
+  "text": "You are the program manager for your project. You are working with the project managers regarding the procurement processes for their projects. You have ruled out one particular contract type because it is considered too risky for the program. Which one of the following contract types is usually considered to be the most dangerous for the buyer?",
+  "choices": [
+   "A. Cost plus incentive fee",
+   "B. Cost plus percentage of costs",
+   "C. Time and materials",
+   "D. Fixed fee"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 42077097,
+  "text": "Julie is the project manager of the NHQ Project. She and her project team have successfully finished the project and the customers have signed the project closure agreement. Julie has compiled all of the project records and the project's lessons learned documentation. What should Julie do with the project's lessons learned documentation?",
+  "choices": [
+   "A. These are for Julie's reference when she is reviewed by the project sponsor.",
+   "B. These are given to the project sponsor so he can review the project.",
+   "C. These are given to the project steering committee so they may review the project performance.",
+   "D. These are transferred to the lessons learned knowledge base."
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 42117001,
+  "text": "Which of the following statements are true regarding the Monitoring and Controlling Program Risks process? Each correct answer represents a complete solution.",
+  "choices": [
+   "A. Risk Monitoring and Control is an ongoing process for the life of the program.",
+   "B. Planned risk responses should be continuously monitored for new and changing risks.",
+   "C. Monitoring reduces the impact of risk by identifying, analyzing, reporting, and managing risks on a continuous basis.",
+   "D. It is the process of selecting the most suitable response to reduce the threats to the program objectives."
+  ],
+  "answer": "ABC"
+ },
+ {
+  "id": 42117002,
+  "text": "Which of the following tools and techniques are parts of the Administer Program Procurements process? Each correct answer represents a complete solution. Choose all that apply.",
+  "choices": [
+   "A. Inspection and audits",
+   "B. Budget management system",
+   "C. Supplier performance review",
+   "D. Contract performance review"
+  ],
+  "answer": "ABD"
+ },
+ {
+  "id": 42117003,
+  "text": "You are a program manager for a large construction program. You need to ensure that the projects in the program are in accordance with the schedule. You are tracking start and finish dates for them. Which of the following processes are you on?",
+  "choices": [
+   "A. Report Program Performance",
+   "B. Monitor and Control Program Scope",
+   "C. Monitor and Control Program Schedule",
+   "D. Monitor and Control Program Performance"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 42117004,
+  "text": "You are working with Sam, a project manager on one of the projects within your program. Sam doesn't understand all of the rules and procedures that he's required to do as a project manager in your program. What are the rules and procedures called in project that Sam must abide by?",
+  "choices": [
+   "A. Project governance",
+   "B. Process procedures",
+   "C. Enterprise environmental factors",
+   "D. Program governance"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 42117005,
+  "text": "Which of the following is described in the statement given below? \"It serves as the primary input for the Plan Program Stakeholder Management process, as well as for the distribution of program reports and other communication.\"",
+  "choices": [
+   "A. Stakeholder register",
+   "B. Program scope statement",
+   "C. Governance plan",
+   "D. Organizational chart"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 42117006,
+  "text": "Which of the following statements are true regarding program scope statement?",
+  "choices": [
+   "A. It defines all the work and only the required work for the program.",
+   "B. It formally authorizes the program.",
+   "C. It sets authorities and limits for the program manager and team.",
+   "D. It represents a common understanding of the program for the purpose of facilitating communication among the stakeholders."
+  ],
+  "answer": "ACD"
+ },
+ {
+  "id": 42117007,
+  "text": "You are the program manager for the HGQ Program in your organization. Your program has eight constituent projects including a small project which you've assigned to Beth a new project manager in your organization. Part of your assignment is to coach Beth on project management in your program. You are telling Beth about the five process groups of project management and how they map to the progression of the project. Which process group would you tell Beth is where she'll likely spend the bulk of the project time and the project budget?",
+  "choices": [
+   "A. Monitoring and Controlling",
+   "B. Planning",
+   "C. Executing",
+   "D. Procurement"
+  ],
+  "answer": "C"
+ }
+]

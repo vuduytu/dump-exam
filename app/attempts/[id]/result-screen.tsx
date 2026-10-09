@@ -12,12 +12,20 @@ import { DuplicateNote, QuestionLayout, questionLabel, usePosition } from "./que
 
 type Question = { id: number; number: number; explanation: string | null; duplicates: Duplicate[]; voted: boolean; task: string | null; text: string; choices: (Choice & { percent: number })[]; correct: string; suggested: string; selected: string[]; isCorrect: boolean; marked: boolean };
 
-/** Colors per Domain: the Task tag and the score bar (full class names so Tailwind sees them). */
+/** Colors per Domain: the Task tag and the score bar (full class names so Tailwind sees them). PgMP reuses the 3 PMP hues. */
+const violet = { tag: "border-people/40 bg-people-soft text-people", bar: "bg-people" };
+const sky = { tag: "border-process/40 bg-process-soft text-process", bar: "bg-process" };
+const fuchsia = { tag: "border-business/40 bg-business-soft text-business", bar: "bg-business" };
+// ponytail: Benefits Management and Governance fall back to neutral; add two hues if the owner wants all 5 PgMP Domains colored
 const domainTone: Record<string, { tag: string; bar: string }> = {
-  People: { tag: "border-people/40 bg-people-soft text-people", bar: "bg-people" },
-  Process: { tag: "border-process/40 bg-process-soft text-process", bar: "bg-process" },
-  "Business Environment": { tag: "border-business/40 bg-business-soft text-business", bar: "bg-business" },
+  People: violet,
+  Process: sky,
+  "Business Environment": fuchsia,
+  "Strategic Program Alignment": fuchsia,
+  "Program Life Cycle Management": sky,
+  "Stakeholder Engagement": violet,
 };
+const toneOf = (domain: string) => domainTone[domain] ?? { tag: "", bar: "bg-primary" };
 
 const tabs: { value: ResultTab; label: string }[] = [
   { value: undefined, label: "Tất cả" },
@@ -113,7 +121,7 @@ export function ResultScreen(props: { title: string; drill: boolean; domains: { 
                       <span className="text-muted-foreground tabular-nums">{p}% · {d.correct}/{d.total}</span>
                     </div>
                     <div role="meter" aria-label={`${d.domain} ${p}%`} aria-valuenow={p} aria-valuemin={0} aria-valuemax={100} className="mt-1 h-2 overflow-hidden rounded-full bg-muted">
-                      <div className={cn("h-full", domainTone[d.domain]?.bar)} style={{ width: `${p}%` }} />
+                      <div className={cn("h-full", toneOf(d.domain).bar)} style={{ width: `${p}%` }} />
                     </div>
                   </li>
                 );
@@ -152,7 +160,7 @@ export function ResultScreen(props: { title: string; drill: boolean; domains: { 
                 <Flag className="size-4" /> Đã đánh dấu
               </span>
             )}
-            {taskLabel(q.task) && <Badge variant="outline" className={cn("ml-auto h-auto max-w-full whitespace-normal font-normal", domainTone[taskOf(q.task)!.domain].tag)}>{taskLabel(q.task)}</Badge>}
+            {taskLabel(q.task) && <Badge variant="outline" className={cn("ml-auto h-auto max-w-full whitespace-normal font-normal", toneOf(taskOf(q.task)!.domain).tag)}>{taskLabel(q.task)}</Badge>}
           </p>
           <div className="question-text mt-3" dangerouslySetInnerHTML={{ __html: q.text }} /> {/* sanitized at import */}
           <DuplicateNote duplicates={q.duplicates} />

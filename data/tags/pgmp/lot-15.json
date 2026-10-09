@@ -1,0 +1,728 @@
+[
+ {
+  "id": 41905133,
+  "task": "governance-2",
+  "confidence": "medium",
+  "reason": "Vai trò steering committee trong cấu trúc governance: phê duyệt khuyến nghị"
+ },
+ {
+  "id": 41905134,
+  "task": "benefits-6",
+  "confidence": "medium",
+  "reason": "Benefits register ghi ngưỡng KPI và thành tựu benefits"
+ },
+ {
+  "id": 41905135,
+  "task": "strategy-1",
+  "confidence": "low",
+  "reason": "Câu định nghĩa: tiêu chí chọn nỗ lực thành program"
+ },
+ {
+  "id": 41905136,
+  "task": "governance-7",
+  "confidence": "medium",
+  "reason": "Lập quy trình leo thang rõ ràng và phản hồi nhanh cho thay đổi tiến độ"
+ },
+ {
+  "id": 41905137,
+  "task": "stakeholder-7",
+  "confidence": "medium",
+  "reason": "Thành viên steering committee thiếu tham gia, phân tích và hành động phù hợp"
+ },
+ {
+  "id": 41905138,
+  "task": "stakeholder-3",
+  "confidence": "medium",
+  "reason": "Giải quyết khác biệt kỳ vọng về mục tiêu bằng họp nhóm có điều phối"
+ },
+ {
+  "id": 41905139,
+  "task": "governance-7",
+  "confidence": "medium",
+  "reason": "Program governance plan định nghĩa kỳ vọng leo thang issue"
+ },
+ {
+  "id": 41905140,
+  "task": "strategy-5",
+  "confidence": "high",
+  "reason": "Nghiên cứu, ước tính, đánh giá rủi ro sơ bộ là lập business case"
+ },
+ {
+  "id": 41905141,
+  "task": "governance-6",
+  "confidence": "low",
+  "reason": "Program bị huỷ do đánh giá rủi ro chiến lược không đúng"
+ },
+ {
+  "id": 41905142,
+  "task": "strategy-1",
+  "confidence": "high",
+  "reason": "Căn chỉnh chiến lược dựa trên kế hoạch chiến lược, vision, mission tổ chức mình"
+ },
+ {
+  "id": 41905143,
+  "task": "governance-2",
+  "confidence": "medium",
+  "reason": "Vai trò steering committee: phê duyệt cách tiếp cận chất lượng"
+ },
+ {
+  "id": 41905144,
+  "task": "lifecycle-21",
+  "confidence": "low",
+  "reason": "Vai trò quản lý hợp đồng, đảm bảo ngân sách chi đúng để đạt benefits"
+ },
+ {
+  "id": 41905145,
+  "task": "strategy-1",
+  "confidence": "low",
+  "reason": "Câu kiến thức: portfolio manager chịu trách nhiệm mục tiêu chiến lược"
+ },
+ {
+  "id": 41905146,
+  "task": "lifecycle-31",
+  "confidence": "medium",
+  "reason": "Nội dung báo cáo hiệu suất program gồm sử dụng nguồn lực"
+ },
+ {
+  "id": 41905147,
+  "task": "stakeholder-4",
+  "confidence": "low",
+  "reason": "Câu chung: mục đích engagement là truyền đạt benefits"
+ },
+ {
+  "id": 41905148,
+  "task": "governance-2",
+  "confidence": "medium",
+  "reason": "Governance kém trưởng thành, cần thiết lập governance có cấu trúc"
+ },
+ {
+  "id": 41905149,
+  "task": "lifecycle-3",
+  "confidence": "medium",
+  "reason": "Roadmap thể hiện quan hệ hoạt động program và benefits"
+ },
+ {
+  "id": 41905150,
+  "task": "lifecycle-3",
+  "confidence": "medium",
+  "reason": "Đặc điểm program roadmap theo dõi tiến độ hướng tới benefits"
+ },
+ {
+  "id": 41905151,
+  "task": "strategy-7",
+  "confidence": "low",
+  "reason": "Quản lý tài chính program bao gồm chi phí vận hành"
+ },
+ {
+  "id": 41905152,
+  "task": "benefits-8",
+  "confidence": "low",
+  "reason": "Khả năng tổ chức hấp thụ thay đổi để hiện thực benefits"
+ },
+ {
+  "id": 41905153,
+  "task": "governance-1",
+  "confidence": "medium",
+  "reason": "PMO định nghĩa tiêu chuẩn chất lượng cho program"
+ },
+ {
+  "id": 41905154,
+  "task": "benefits-1",
+  "confidence": "low",
+  "reason": "Benefit management thiết lập kiến trúc program"
+ },
+ {
+  "id": 41905155,
+  "task": "lifecycle-8",
+  "confidence": "medium",
+  "reason": "Scope baseline gồm scope statement, PWBS và từ điển PWBS"
+ },
+ {
+  "id": 41905156,
+  "task": "strategy-8",
+  "confidence": "low",
+  "reason": "Xung đột lợi ích khi tuyển PM, xử lý theo đạo đức"
+ },
+ {
+  "id": 41905157,
+  "task": "stakeholder-5",
+  "confidence": "medium",
+  "reason": "Các kênh giao tiếp với nhóm stakeholder trong program"
+ },
+ {
+  "id": 41905158,
+  "task": "lifecycle-2",
+  "confidence": "medium",
+  "reason": "Cung cấp high-level scope statement khi stakeholder hiểu khác mục đích"
+ },
+ {
+  "id": 41905159,
+  "task": "lifecycle-17",
+  "confidence": "high",
+  "reason": "PMO chuẩn hoá template, quy trình cho component mới sáp nhập"
+ },
+ {
+  "id": 41905160,
+  "task": "lifecycle-28",
+  "confidence": "medium",
+  "reason": "Steering committee định nghĩa thay đổi nào PM tự giải quyết"
+ },
+ {
+  "id": 41905161,
+  "task": "lifecycle-10",
+  "confidence": "medium",
+  "reason": "Tối ưu nguồn lực khan hiếm dùng chung giữa các program"
+ },
+ {
+  "id": 41905162,
+  "task": "governance-7",
+  "confidence": "low",
+  "reason": "Thu hẹp ngưỡng kiểm soát làm chậm thực thi program"
+ },
+ {
+  "id": 41905163,
+  "task": "lifecycle-25",
+  "confidence": "high",
+  "reason": "Phân tích EVM: variance tiến độ và chi phí"
+ },
+ {
+  "id": 41905164,
+  "task": "strategy-9",
+  "confidence": "high",
+  "reason": "Xin uỷ quyền sử dụng nguồn lực bằng program charter"
+ },
+ {
+  "id": 41905165,
+  "task": "strategy-8",
+  "confidence": "low",
+  "reason": "Đạo đức nghề nghiệp: từ chối nhiệm vụ khi thiếu kinh nghiệm"
+ },
+ {
+  "id": 41905166,
+  "task": "strategy-5",
+  "confidence": "medium",
+  "reason": "Business case không ghi rõ giá trị benefit gây xung đột"
+ },
+ {
+  "id": 41905167,
+  "task": "stakeholder-5",
+  "confidence": "medium",
+  "reason": "Thông tin phù hợp từng stakeholder: CEO, sponsor quan tâm EAC"
+ },
+ {
+  "id": 41905168,
+  "task": "lifecycle-12",
+  "confidence": "high",
+  "reason": "Issue chỉ ảnh hưởng component, leo thang tới CCB cấp project"
+ },
+ {
+  "id": 41905169,
+  "task": "lifecycle-3",
+  "confidence": "medium",
+  "reason": "Ánh xạ benefits với component trong program roadmap"
+ },
+ {
+  "id": 41905170,
+  "task": "strategy-7",
+  "confidence": "medium",
+  "reason": "Môi trường tài chính program định nghĩa khi thiết lập financial framework"
+ },
+ {
+  "id": 42001001,
+  "task": "stakeholder-5",
+  "confidence": "medium",
+  "reason": "Đầu vào phân phối thông tin: phân tích stakeholder"
+ },
+ {
+  "id": 42001002,
+  "task": "lifecycle-21",
+  "confidence": "low",
+  "reason": "Đào tạo và thử vật liệu là hành động phòng ngừa khi thực thi"
+ },
+ {
+  "id": 42001003,
+  "task": "lifecycle-26",
+  "confidence": "medium",
+  "reason": "Fast tracking để nén tiến độ không tăng chi phí"
+ },
+ {
+  "id": 42001004,
+  "task": "lifecycle-21",
+  "confidence": "medium",
+  "reason": "Chuyển giao benefits trong thực thi là direct and manage program execution"
+ },
+ {
+  "id": 42001005,
+  "task": "strategy-7",
+  "confidence": "low",
+  "reason": "Tính giá trị hiện tại của program, kiến thức tài chính"
+ },
+ {
+  "id": 42001006,
+  "task": "lifecycle-28",
+  "confidence": "high",
+  "reason": "Ghi kết quả change request bị từ chối vào change register"
+ },
+ {
+  "id": 42001007,
+  "task": "lifecycle-30",
+  "confidence": "medium",
+  "reason": "Rủi ro tiêu cực ghi trong risk register"
+ },
+ {
+  "id": 42001008,
+  "task": "strategy-7",
+  "confidence": "low",
+  "reason": "Tính giá trị hiện tại của program"
+ },
+ {
+  "id": 42001009,
+  "task": "stakeholder-7",
+  "confidence": "medium",
+  "reason": "Giao tiếp trực tiếp với stakeholder tiêu cực để xử lý lo ngại"
+ },
+ {
+  "id": 42001010,
+  "task": "lifecycle-15",
+  "confidence": "low",
+  "reason": "Điều khoản chấm dứt hợp đồng quyết định thanh toán vendor"
+ },
+ {
+  "id": 42001011,
+  "task": "lifecycle-27",
+  "confidence": "low",
+  "reason": "Tranh chấp với vendor về deliverable là claim"
+ },
+ {
+  "id": 42001012,
+  "task": "lifecycle-9",
+  "confidence": "low",
+  "reason": "Định luật Parkinson chống đệm thời gian trong lập lịch"
+ },
+ {
+  "id": 42001013,
+  "task": "lifecycle-25",
+  "confidence": "high",
+  "reason": "Công thức tính earned value"
+ },
+ {
+  "id": 42001014,
+  "task": "lifecycle-15",
+  "confidence": "medium",
+  "reason": "Báo cáo hiệu suất để giám sát nhân sự program"
+ },
+ {
+  "id": 42001015,
+  "task": "lifecycle-21",
+  "confidence": "low",
+  "reason": "Rule of Seven trong control chart, kiểm soát chất lượng"
+ },
+ {
+  "id": 42001016,
+  "task": "lifecycle-28",
+  "confidence": "medium",
+  "reason": "Configuration management system đánh giá, ghi nhận thay đổi phạm vi"
+ },
+ {
+  "id": 42001017,
+  "task": "lifecycle-11",
+  "confidence": "medium",
+  "reason": "PMIS là hệ thống cha của change control system"
+ },
+ {
+  "id": 42001018,
+  "task": "strategy-7",
+  "confidence": "high",
+  "reason": "Cấp vốn theo từng mốc là step funding"
+ },
+ {
+  "id": 42001019,
+  "task": "lifecycle-25",
+  "confidence": "high",
+  "reason": "Dự báo chi phí còn lại bằng EAC-AC"
+ },
+ {
+  "id": 42001020,
+  "task": "lifecycle-24",
+  "confidence": "medium",
+  "reason": "Khách hàng ký chứng nhận hoàn thành project thành phần"
+ },
+ {
+  "id": 42001021,
+  "task": "lifecycle-16",
+  "confidence": "low",
+  "reason": "Thời điểm thu nhận đội ngũ program trong vòng đời"
+ },
+ {
+  "id": 42001022,
+  "task": "benefits-1",
+  "confidence": "low",
+  "reason": "Câu định nghĩa khái niệm benefit"
+ },
+ {
+  "id": 42001023,
+  "task": "lifecycle-10",
+  "confidence": "low",
+  "reason": "Xác định nguồn lực program, thiếu đáp án"
+ },
+ {
+  "id": 42001024,
+  "task": "lifecycle-15",
+  "confidence": "low",
+  "reason": "Yêu cầu sàng lọc vendor trong RFP là screening system"
+ },
+ {
+  "id": 42001025,
+  "task": "lifecycle-1",
+  "confidence": "medium",
+  "reason": "Nội dung program charter, không gồm scope statement của project"
+ },
+ {
+  "id": 42001026,
+  "task": "lifecycle-28",
+  "confidence": "medium",
+  "reason": "Change request phải được ghi trên form, thiếu đáp án"
+ },
+ {
+  "id": 42001027,
+  "task": "lifecycle-32",
+  "confidence": "medium",
+  "reason": "Khách hàng ký chứng nhận đóng program"
+ },
+ {
+  "id": 42001028,
+  "task": "lifecycle-33",
+  "confidence": "low",
+  "reason": "Ký chứng nhận hoàn thành với vendor khi đóng hợp đồng, thiếu đáp án"
+ },
+ {
+  "id": 42001029,
+  "task": "lifecycle-10",
+  "confidence": "medium",
+  "reason": "Giải phóng nguồn lực không cần để tối ưu, thiếu đáp án"
+ },
+ {
+  "id": 42001030,
+  "task": "benefits-1",
+  "confidence": "medium",
+  "reason": "Tài liệu định nghĩa benefits là benefits realization plan, thiếu đáp án"
+ },
+ {
+  "id": 42001031,
+  "task": "lifecycle-30",
+  "confidence": "medium",
+  "reason": "Chuyển giao rủi ro cho bên thứ ba"
+ },
+ {
+  "id": 42001032,
+  "task": "lifecycle-15",
+  "confidence": "low",
+  "reason": "Cập nhật SOW sau hội nghị nhà thầu trong mua sắm"
+ },
+ {
+  "id": 42001033,
+  "task": "lifecycle-7",
+  "confidence": "low",
+  "reason": "Cần scope statement xác định chính xác deliverables"
+ },
+ {
+  "id": 42001034,
+  "task": "strategy-1",
+  "confidence": "low",
+  "reason": "Những gì xác định khi khởi tạo program, câu kiến thức"
+ },
+ {
+  "id": 42001035,
+  "task": "lifecycle-7",
+  "confidence": "medium",
+  "reason": "Scope statement ghi nhận lo ngại, mục tiêu stakeholder"
+ },
+ {
+  "id": 42001036,
+  "task": "lifecycle-9",
+  "confidence": "low",
+  "reason": "Câu định nghĩa vòng đời quản lý project và vòng đời project"
+ },
+ {
+  "id": 42001037,
+  "task": "lifecycle-9",
+  "confidence": "medium",
+  "reason": "Phụ thuộc tuỳ chọn khi sắp xếp lịch program, thiếu đáp án"
+ },
+ {
+  "id": 42001038,
+  "task": "lifecycle-4",
+  "confidence": "high",
+  "reason": "Định nghĩa biểu đồ RACI phân vai trò trách nhiệm"
+ },
+ {
+  "id": 42001039,
+  "task": "lifecycle-21",
+  "confidence": "medium",
+  "reason": "Nhấn mạnh quality assurance khi thực thi kế hoạch"
+ },
+ {
+  "id": 42001040,
+  "task": "lifecycle-23",
+  "confidence": "low",
+  "reason": "Những gì cần giám sát và kiểm soát trong program"
+ },
+ {
+  "id": 42001041,
+  "task": "lifecycle-25",
+  "confidence": "high",
+  "reason": "Tính ETC từ dữ liệu EVM"
+ },
+ {
+  "id": 42001042,
+  "task": "lifecycle-25",
+  "confidence": "high",
+  "reason": "So sánh SPI và CPI để biết chi phí hay tiến độ kém hơn"
+ },
+ {
+  "id": 42001043,
+  "task": "lifecycle-8",
+  "confidence": "low",
+  "reason": "Phần tử template công việc, giống từ điển WBS"
+ },
+ {
+  "id": 42001044,
+  "task": "strategy-1",
+  "confidence": "low",
+  "reason": "Câu kiến thức: lợi ích của program so với nhiều project"
+ },
+ {
+  "id": 42001045,
+  "task": "lifecycle-15",
+  "confidence": "medium",
+  "reason": "Tháp nhu cầu Maslow để tạo động lực đội ngũ"
+ },
+ {
+  "id": 42001046,
+  "task": "lifecycle-21",
+  "confidence": "medium",
+  "reason": "Quality control kiểm tra công việc theo phạm vi"
+ },
+ {
+  "id": 42001047,
+  "task": "lifecycle-10",
+  "confidence": "medium",
+  "reason": "Resource histogram thể hiện mức sử dụng nguồn lực"
+ },
+ {
+  "id": 42001048,
+  "task": "lifecycle-26",
+  "confidence": "medium",
+  "reason": "Crashing để nén tiến độ chương trình"
+ },
+ {
+  "id": 42001049,
+  "task": "lifecycle-28",
+  "confidence": "high",
+  "reason": "Change request phạm vi phải được lập tài liệu"
+ },
+ {
+  "id": 42001050,
+  "task": "stakeholder-1",
+  "confidence": "high",
+  "reason": "Phân loại stakeholder tiêu cực khi nhận diện"
+ },
+ {
+  "id": 42001051,
+  "task": "lifecycle-33",
+  "confidence": "medium",
+  "reason": "Lưu trữ hồ sơ khi đóng project"
+ },
+ {
+  "id": 42001052,
+  "task": "lifecycle-9",
+  "confidence": "medium",
+  "reason": "Đặc điểm critical path trong lập lịch"
+ },
+ {
+  "id": 42001053,
+  "task": "stakeholder-5",
+  "confidence": "medium",
+  "reason": "Tính số kênh giao tiếp cho kế hoạch truyền thông"
+ },
+ {
+  "id": 42001054,
+  "task": "lifecycle-25",
+  "confidence": "high",
+  "reason": "Tính schedule variance từ dữ liệu EVM"
+ },
+ {
+  "id": 42001055,
+  "task": "lifecycle-1",
+  "confidence": "medium",
+  "reason": "Program charter trao uỷ quyền thực thi và mốc, thiếu đáp án"
+ },
+ {
+  "id": 42001056,
+  "task": "lifecycle-1",
+  "confidence": "medium",
+  "reason": "Program charter được tạo trong quy trình Initiate Program"
+ },
+ {
+  "id": 42001057,
+  "task": "lifecycle-30",
+  "confidence": "medium",
+  "reason": "Teaming agreement là phản hồi rủi ro sharing"
+ },
+ {
+  "id": 42001058,
+  "task": "lifecycle-25",
+  "confidence": "high",
+  "reason": "Tính CPI để biết mất bao nhiêu trên mỗi đô la"
+ },
+ {
+  "id": 42001059,
+  "task": "lifecycle-33",
+  "confidence": "low",
+  "reason": "Những gì chuyển giao cho tổ chức trong vòng đời program"
+ },
+ {
+  "id": 42001060,
+  "task": "benefits-8",
+  "confidence": "high",
+  "reason": "Program transition plan chuyển giao benefits sang vận hành"
+ },
+ {
+  "id": 42001061,
+  "task": "lifecycle-25",
+  "confidence": "high",
+  "reason": "Phân tích SPI xác định hiệu suất tiến độ kém"
+ },
+ {
+  "id": 42001062,
+  "task": "stakeholder-1",
+  "confidence": "low",
+  "reason": "Xác định người PM báo cáo trong số stakeholder"
+ },
+ {
+  "id": 42001063,
+  "task": "lifecycle-28",
+  "confidence": "medium",
+  "reason": "Điều chỉnh cost baseline sau thay đổi phạm vi được duyệt"
+ },
+ {
+  "id": 42001064,
+  "task": "lifecycle-21",
+  "confidence": "medium",
+  "reason": "Quality assurance là quy trình phòng ngừa lỗi"
+ },
+ {
+  "id": 42001065,
+  "task": "lifecycle-28",
+  "confidence": "medium",
+  "reason": "Tài liệu cần cập nhật khi thay đổi yêu cầu, trừ charter"
+ },
+ {
+  "id": 42001066,
+  "task": "lifecycle-21",
+  "confidence": "low",
+  "reason": "Duyệt thanh toán vendor khi hoàn thành hợp đồng"
+ },
+ {
+  "id": 42001067,
+  "task": "lifecycle-25",
+  "confidence": "high",
+  "reason": "Tính SPI từ dữ liệu tiến độ"
+ },
+ {
+  "id": 42001068,
+  "task": "lifecycle-28",
+  "confidence": "medium",
+  "reason": "Thêm tính năng ngoài phạm vi là gold plating"
+ },
+ {
+  "id": 42001069,
+  "task": "lifecycle-16",
+  "confidence": "high",
+  "reason": "Lập project charter cho mỗi project thành phần để cấp nguồn lực"
+ },
+ {
+  "id": 42001070,
+  "task": "strategy-1",
+  "confidence": "low",
+  "reason": "Câu định nghĩa portfolio"
+ },
+ {
+  "id": 42001071,
+  "task": "governance-5",
+  "confidence": "medium",
+  "reason": "PMIS tập trung ghi nhận và truyền đạt thông tin program"
+ },
+ {
+  "id": 42001072,
+  "task": "lifecycle-10",
+  "confidence": "medium",
+  "reason": "Critical chain xét nguồn lực dùng chung giữa các project"
+ },
+ {
+  "id": 42001073,
+  "task": "strategy-7",
+  "confidence": "low",
+  "reason": "Phân tích make-or-buy về chi phí"
+ },
+ {
+  "id": 42001074,
+  "task": "lifecycle-19",
+  "confidence": "medium",
+  "reason": "Thông tin cần cho phát triển đội ngũ program"
+ },
+ {
+  "id": 42001075,
+  "task": "lifecycle-15",
+  "confidence": "low",
+  "reason": "Định nghĩa proposal trong mua sắm"
+ },
+ {
+  "id": 42001076,
+  "task": "lifecycle-24",
+  "confidence": "low",
+  "reason": "Phòng tránh khách hàng từ chối nghiệm thu deliverable"
+ },
+ {
+  "id": 42001077,
+  "task": "stakeholder-2",
+  "confidence": "medium",
+  "reason": "Kỹ thuật Delphi thu thập yêu cầu stakeholder ẩn danh"
+ },
+ {
+  "id": 42001078,
+  "task": "strategy-7",
+  "confidence": "low",
+  "reason": "Tính giá trị tương lai tối thiểu của program"
+ },
+ {
+  "id": 42001079,
+  "task": "lifecycle-28",
+  "confidence": "medium",
+  "reason": "Thêm deliverable để dùng hết ngân sách là gold plating"
+ },
+ {
+  "id": 42001080,
+  "task": "lifecycle-27",
+  "confidence": "high",
+  "reason": "Ghi issue cấp program vào issue register"
+ },
+ {
+  "id": 42001081,
+  "task": "stakeholder-5",
+  "confidence": "low",
+  "reason": "Rào cản trong mô hình giao tiếp giữa hai PM"
+ },
+ {
+  "id": 42001082,
+  "task": "lifecycle-24",
+  "confidence": "medium",
+  "reason": "Sponsor ký tài liệu đóng project"
+ },
+ {
+  "id": 42001083,
+  "task": "lifecycle-24",
+  "confidence": "medium",
+  "reason": "Project bị huỷ cần scope verification phần đã làm"
+ }
+]

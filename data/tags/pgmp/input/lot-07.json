@@ -1,0 +1,1332 @@
+[
+ {
+  "id": 40780145,
+  "text": "A program manager is working in a motor automation company. The company is outsourcing its complex piece of work from a local vendor in the same city. This outsourcing has made the program manager to keep additional funds in reserve for the related work. As the vendor is new in the market, the program manager is a bit worried about the reliability of this vendor. According to the given scenario, this is an example of which type of risk?",
+  "choices": [
+   "A. Residual risk",
+   "B. Pure risk",
+   "C. Absolute risk",
+   "D. Secondary risk"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 40780146,
+  "text": "An enterprise program management office has an effective PMIS (program management information system) for a program that is undertaken in an organization. This effective PMIS is a key element of which of the following?",
+  "choices": [
+   "A. Program oversight",
+   "B. Program analysis",
+   "C. Program infrastructure",
+   "D. Program transition"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 40780147,
+  "text": "Which of the following is the function of program governance?",
+  "choices": [
+   "A. It describes evolving aspects of the program containing incremental benefits delivery.",
+   "B. It identifies the associated activities, processes, and systems required for the change driven by the realization of benefits.",
+   "C. It provides a formal declaration of the program benefits, the expected delivery, and the justification for the resources that will be expended for delivering it.",
+   "D. It helps the program team in determining if benefits achievement is occurring within the stated parameters."
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 40780148,
+  "text": "Maria is a program manager for a new program that involves the development of a new interface for an existing time management system. She is planning to outsource services from an outside company to do the development work for the program. She has started working on the legal contract that will engage this company. Which of the following program management activities is Maria employing while doing so?",
+  "choices": [
+   "A. Program scope management planning",
+   "B. Program resource management planning",
+   "C. Program information management planning",
+   "D. Program procurement management planning"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 40780149,
+  "text": "Stakeholder engagement is important for any organization and concerns which of the following?Each correct answer represents a complete solution. Choose all that apply.",
+  "choices": [
+   "A. Negotiation of objectives",
+   "B. Agreement on desired benefits",
+   "C. Commitment to resources",
+   "D. Ongoing support only at the program delivery phase"
+  ],
+  "answer": "ABC"
+ },
+ {
+  "id": 40780150,
+  "text": "Who authorizes the program management team to utilize organizational resources for executing the program and linking the program to the organization's strategic objectives?",
+  "choices": [
+   "A. Program manager",
+   "B. Program sponsor",
+   "C. Project manager",
+   "D. Program management office"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 40930001,
+  "text": "The benefits management plan should be used for which of the following?",
+  "choices": [
+   "A. Defining how the resulting benefits and capabilities will be transitioned into an operational state to achieve benefits",
+   "B. Defining roles and responsibilities required to manage the benefits",
+   "C. Linking components outputs to the planned program outcomes",
+   "D. Recording program progress in the benefits register"
+  ],
+  "answer": "ABC"
+ },
+ {
+  "id": 40930002,
+  "text": "In which program benefits management phase are the benefits metrics and framework developed?",
+  "choices": [
+   "A. Benefits delivery",
+   "B. Benefits sustainment",
+   "C. Benefits transition",
+   "D. Benefits analysis and planning"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 40930003,
+  "text": "Which of the following program artifacts needs to be assessed for potential revision when there is a significant change in the program master schedule?",
+  "choices": [
+   "A. Program charter",
+   "B. Program roadmap",
+   "C. Transition plan",
+   "D. Sustainment plan"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 40930004,
+  "text": "Kate is evaluating the program component performance against the program success criteria. Who is responsible for establishing minimum acceptable criteria?",
+  "choices": [
+   "A. Program sponsor",
+   "B. Project manager",
+   "C. Program manager",
+   "D. Program governance board"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 40930005,
+  "text": "The program performance monitoring and controlling activities are performed by which of the following during delivery management?",
+  "choices": [
+   "A. Subprogram-level components only",
+   "B. Program-level components only",
+   "C. Project-level components only",
+   "D. Both program- and project-level components"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 40930006,
+  "text": "Sam is a program manager who is currently creating a stakeholder register. Which of the following items will you include in this register?",
+  "choices": [
+   "A. Stakeholder's decision-making policies",
+   "B. Stakeholder's degree of support for the program",
+   "C. Stakeholder's ability to affect the program outcome or result",
+   "D. Stakeholder relationship to the program"
+  ],
+  "answer": "BCD"
+ },
+ {
+  "id": 40930007,
+  "text": "Jack works as a program manager for the X-Tel program. The program management plan has been developed and the component program's end date has been finalized. During the program delivery phase, one of your stakeholders has requested you to add some new features to the component program but will not renegotiate the end date. To manage the additional changes in the component program, you have submitted the change request. Who among the following will be responsible for approving or rejecting the change request?",
+  "choices": [
+   "A. Component program coordinator",
+   "B. SME",
+   "C. Program steering committee",
+   "D. Component program scheduler"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 40930008,
+  "text": "A program manager, John, needs information on the groups and individuals with an interest and involvement in a program. To which program document should the program manager refer?",
+  "choices": [
+   "A. Business case",
+   "B. Program roadmap",
+   "C. Stakeholder standard plan",
+   "D. Stakeholder register"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 40930009,
+  "text": "A program manager wants to use a visual tool that organizes stakeholders according to the key criteria with which the program manager will be managing them during the program. Which of the following will help in accomplishing it?",
+  "choices": [
+   "A. Stakeholder map",
+   "B. Stakeholder register",
+   "C. Stakeholder engagement plan",
+   "D. Program charter"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 40930010,
+  "text": "A program manager who is managing an IT program has outsourced a third-party vendor for a program's component as the vendor has expertise on the related technology. Considering the third-party involvement, the manager is assessing and determining all risks for developing the business case of the program. The team identifies sources of change, such as the volatility of the enterprise environmental factors, the sensitivity of the proposed program's business case to changes in organizational strategy, and the possible frequency and magnitude of changes that may occur from components during the program delivery. Which program activity will take care of these actions?",
+  "choices": [
+   "A. Program change controlling assessment",
+   "B. Program change monitoring assessment",
+   "C. Program change assessment",
+   "D. Program change organizational assessment"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 40930011,
+  "text": "Ana is managing a program for designer shirts in a global garment manufacturing company. This program requires interaction with key stakeholders, who are located globally at different locations. Once the program is finalized and the contract is signed, Ana along with her team will perform stakeholder analysis based on the program statement of work. She has started planning to hold sessions, conduct survey, and use focus groups among stakeholders. This approach enables Ana to:",
+  "choices": [
+   "A. Create a communications management plan.",
+   "B. Identify suitable technologies for distributing program information.",
+   "C. Develop a stakeholder communications strategy.",
+   "D. Identify stakeholders' attitudes toward the program."
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 40930012,
+  "text": "A program manager, Jack, is creating a document where he is integrating the program's subsidiary plans and establishing the overall plan for integrating and managing the program individual components. Which plan is Jack creating?",
+  "choices": [
+   "A. Business case",
+   "B. Program governance plan",
+   "C. Program management plan",
+   "D. Program charter"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 40930013,
+  "text": "Who among the following is responsible for defining the types of changes that a program manager would be independently authorized to approve and those changes that would require further discussion before approval?",
+  "choices": [
+   "A. Portfolio manager",
+   "B. Regulatory agency",
+   "C. Program sponsor",
+   "D. Program steering committee"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 40930014,
+  "text": "A program manager has been assigned a new development program in his organization. During the program definition phase, he has defined the cost estimates for the program components. Now, during the benefits delivery phase, he realized that his estimation was not accurate enough for one of his program components. What should be the best choice for the program manager?",
+  "choices": [
+   "A. Record issue in the log for this lack of budget.",
+   "B. Generate a change request to get the required additional budget.",
+   "C. Talk regarding the issue to the component manager to find the solution.",
+   "D. De-scope some items to fit the budget."
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 40930015,
+  "text": "Which of the following statements are true of the program schedule monitoring and controlling activity?",
+  "choices": [
+   "A. Ensures that the program produces the required capabilities and benefits on time",
+   "B. Works closely with other program activities to determine schedule variances and direct corrective actions when required",
+   "C. Tracks and monitors the start and finish of all high-level component and program activities and milestones against the program roadmap planned timelines",
+   "D. Includes updates to the program master schedule and identification of schedule risks as outputs to the activity"
+  ],
+  "answer": "ABD"
+ },
+ {
+  "id": 40930016,
+  "text": "Which of the following statements are true of program periodic health checks?",
+  "choices": [
+   "A. Held between decision-point reviews.",
+   "B. Determine the program's investment against the intended benefits.",
+   "C. Progress the program towards the realization and sustainment of benefits",
+   "D. Assess the ongoing performance of the program."
+  ],
+  "answer": "ACD"
+ },
+ {
+  "id": 40930017,
+  "text": "As a program manager, Josephine, is looking for a document that provides critical information used in the development of program documentation and its ongoing alignment as the known stakeholder's change. Which of the following is the required document?",
+  "choices": [
+   "A. Business case",
+   "B. Stakeholder engagement plan",
+   "C. Stakeholder standard plan",
+   "D. Program charter"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 40930018,
+  "text": "Ana is a program manager of her organization. She is working on a program that involves the installation of the wind turbine across the country. During the program delivery phase, a stakeholder raises a change request to add an additional module with the existing installation. The program steering committee has approved the change request. Which of the following statements are true regarding this scenario?",
+  "choices": [
+   "A. The program master schedule is updated to reflect the changes in the program.",
+   "B. A new program master schedule document is created containing the approved changes.",
+   "C. A new program charter document is created containing the approved changes.",
+   "D. The program roadmap is upgraded to include the approved changes in the program."
+  ],
+  "answer": "AD"
+ },
+ {
+  "id": 40930019,
+  "text": "Smith is managing a program for the next generation of parachutes for his department of the Army. In total, his program has five projects and all the work is to be done in three years. As he regularly reports on the status of the benefits of this program, he must measure the benefits that have accrued to date and communicate the information to the program sponsor and program governance board. Which of the following documents includes the metrics and procedures that Smith is using for this reporting?",
+  "choices": [
+   "A. Program charter",
+   "B. Program roadmap",
+   "C. Benefits management plan",
+   "D. Business case"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 40930020,
+  "text": "In which of the following cases does the program budget become the primary financial target that the program is measured against?",
+  "choices": [
+   "A. When the program plan is created",
+   "B. When the budget is baselined",
+   "C. When the budget is allocated",
+   "D. When the program charter is created"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 40930021,
+  "text": "A program manager can use which document that provides guidance and information to aid in managing stakeholder expectations, as well as to promote stakeholder interaction and involvement?",
+  "choices": [
+   "A. Stakeholder engagement plan",
+   "B. Stakeholder engagement alignment plan",
+   "C. Stakeholder map",
+   "D. Stakeholder register"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 40930022,
+  "text": "Who is responsible for reviewing the stakeholder metrics regularly for identifying potential risks caused by a lack of participation from stakeholders?",
+  "choices": [
+   "A. Program team",
+   "B. Program manager",
+   "C. Component manager",
+   "D. Program sponsor"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 40930023,
+  "text": "Bob is a new program manager who has been asked to spend his maximum hours working with the stakeholders who are involved in his program. Why do you think these long working hours spent with stakeholders are valuable to the program?",
+  "choices": [
+   "A. For better understanding of the change request for the program",
+   "B. For better understanding of the organizational culture and politics",
+   "C. For better understanding of the concerns related to the program",
+   "D. For better understanding of the overall impact of the program"
+  ],
+  "answer": "BCD"
+ },
+ {
+  "id": 40930024,
+  "text": "Which of the following are parts of the program governance plan?",
+  "choices": [
+   "A. Phase gate review",
+   "B. Program health check",
+   "C. Audit",
+   "D. Status report"
+  ],
+  "answer": "ABC"
+ },
+ {
+  "id": 40930025,
+  "text": "A program manager is performing the program cost estimation activity and is asked to define a confidence factor for his program. Why is the confidence factor used?",
+  "choices": [
+   "A. To define the program capital cost",
+   "B. To define the estimated program cost",
+   "C. To determine the potential range of program costs",
+   "D. To define the estimated program running cost"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 40930026,
+  "text": "Gisselle has been asked to create a communications management plan for her program. Which of the following factors should she take into account when developing this plan?",
+  "choices": [
+   "A. Cultural differences",
+   "B. Time zones",
+   "C. Anti-globalism",
+   "D. Language differences"
+  ],
+  "answer": "ABD"
+ },
+ {
+  "id": 40930027,
+  "text": "Which of the following phases of benefits management domain verifies that the integration and closure of the program and its components meet or exceed the benefit realization criteria established to achieve the strategic objectives of the program?",
+  "choices": [
+   "A. Benefits sustainment",
+   "B. Benefits analysis and planning",
+   "C. Benefits delivery",
+   "D. Benefits transition"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 40930028,
+  "text": "A pen making US-based company has thrived an advanced technology fountain pen program in joint collaboration with a multinational company. A number of business tycoons from other countries are interested in investment for this program. Who should primarily be involved in making this decision?",
+  "choices": [
+   "A. Project manager based on his team recommendation",
+   "B. Program governance board and senior executives in alliance",
+   "C. Project manager based on the recommendation of the program managers",
+   "D. Program manager based on the recommendation of the project managers"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 40930029,
+  "text": "Holly is a new program manager of the HQQ program for his organization. Bob, the project sponsor, has asked him to use SWOT analysis for the component program based on a cost overrun, but he is unaware of this analysis. As an experienced program manager, what will be your answer?",
+  "choices": [
+   "A. It refers to analyzing the scope, weaknesses, opportunities, and timely risks of the program.",
+   "B. It means scope, waiting, open, and team work for the program objectives.",
+   "C. It means scope, weaknesses, opportunities, and threats for the program objectives.",
+   "D. It refers to analyzing the strengths, weaknesses, opportunities, and threats of the program."
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 40930030,
+  "text": "A program manager will perform which of the following tasks in the program scope monitoring and controlling activity?",
+  "choices": [
+   "A. Direct corrective actions when required.",
+   "B. Record scope changes that are requested.",
+   "C. Communicate the decision to affected stakeholders.",
+   "D. Evaluate each requested change."
+  ],
+  "answer": "BCD"
+ },
+ {
+  "id": 40930031,
+  "text": "Which of the following formally documents the activities required for obtaining the planned benefits of the program?",
+  "choices": [
+   "A. Benefits management plan",
+   "B. Benefits register",
+   "C. Benefits engagement plan",
+   "D. Benefits sustainment plan"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 40930032,
+  "text": "Which of the following documents is described in the statement given below? \"It is used for collecting and listing the planned benefits for the program. It measures and communicates the delivery of benefits throughout the program's duration.\"",
+  "choices": [
+   "A. Benefits charter",
+   "B. Benefits roadmap",
+   "C. Benefits business case",
+   "D. Benefits register"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 40930033,
+  "text": "You are a senior program manager of your organization. You are performing a risk management strategy to ensure that the organizational goals and objectives are aligned with the organizational strategy. Which of the following activities should you include?",
+  "choices": [
+   "A. Recognize the threats the organization faces.",
+   "B. Determine how risks will be communicated to strategic levels of the organization.",
+   "C. Develop a high-level program risk response strategy.",
+   "D. Define program risk thresholds."
+  ],
+  "answer": "BCD"
+ },
+ {
+  "id": 40930034,
+  "text": "The IT company ABC has been actively working since years following the good project management principles however, the company has not executed projects based on the program management. John, from the ABC company, has recently done the PgMP certification and suggested to his supervisor that two of his current ongoing projects could be better managed and executed as a program. John's supervisor further met the executive board and collectively, they realized that along with the above two projects few more ongoing projects would be better handled through a program structure. One of the members in the executive board was well aware of the importance of governance and stage-gate reviews from his previous work experience and he recommended that all the programs should also have a governance structure. The recommended governance structure is mentioned in which of the following documents?",
+  "choices": [
+   "A. Program charter",
+   "B. Benefits management plan",
+   "C. Stakeholder engagement plan",
+   "D. Sustainment plan"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 40930035,
+  "text": "The program formulation and program planning subphases are parts of which of the following?",
+  "choices": [
+   "A. Program engagement phase",
+   "B. Program definition phase",
+   "C. Program delivery phase",
+   "D. Program closure phase"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 40930036,
+  "text": "In which of the following ways do programs deliver benefits to the sponsor organizations?",
+  "choices": [
+   "A. By providing a means to effectively manage a collection of investment and work",
+   "B. By offering new products and services",
+   "C. By enhancing current capabilities",
+   "D. By creating or maintaining assets"
+  ],
+  "answer": "BCD"
+ },
+ {
+  "id": 40930037,
+  "text": "Which document establishes the rationale behind the program requirement or proposal?",
+  "choices": [
+   "A. Program charter",
+   "B. Business case",
+   "C. Program roadmap",
+   "D. Benefits register"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 40930038,
+  "text": "A management is asking for a document that provides authority to execute the program within a certain timeline and includes key milestone dates for the delivery of the program or incremental benefits. Which of the following is the required document?",
+  "choices": [
+   "A. Program charter",
+   "B. Benefits register",
+   "C. Program management plan",
+   "D. Program roadmap"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 40930039,
+  "text": "Cheri is managing a large construction program. Stakeholders have asked her to provide a document that shows the stages of construction contribute to the final benefits of the construction. Which document will Cheri provide to the stakeholders?",
+  "choices": [
+   "A. Program charter",
+   "B. Business case",
+   "C. Benefits register",
+   "D. Program roadmap"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 40930040,
+  "text": "Terri, a program manager, is looking for a document that describes the guidelines for making program resource prioritization decisions and resolving resource conflicts. Which of the following is the required artifact?",
+  "choices": [
+   "A. Resource engagement plan",
+   "B. Resource prioritization plan",
+   "C. Resource strategy plan",
+   "D. Resource management plan"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 40930041,
+  "text": "Sally has been recently assigned as a program manager for the C-MAX program. She has read and thoroughly understood the business case and overall goals and objectives of the program. However, she is curious about the key outcomes that are required for achieving the program vision and benefits. These key outcomes are stated in which of the following documents?",
+  "choices": [
+   "A. Program charter",
+   "B. Program management plan",
+   "C. Sustainment plan",
+   "D. Program governance plan"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 40930042,
+  "text": "The program WBS (work breakdown structure) includes which of the following elements?",
+  "choices": [
+   "A. Program management deliverables",
+   "B. Program management artifacts such as plans, procedures, standards, processes",
+   "C. Program baseline activities",
+   "D. Program management office support deliverables"
+  ],
+  "answer": "ABD"
+ },
+ {
+  "id": 40930043,
+  "text": "Ana is a project manager of her organization. She is involved in preparing the closure for her component project delivered by a vendor. She has contacted the program manager to officially close out the vendor contract. According to the given scenario, when should the program manager formally close out the vendor contract?",
+  "choices": [
+   "A. After making sure that the program has begun to deliver its intended benefits",
+   "B. After making sure that there are no outstanding contractual issues",
+   "C. After making sure that some of the payments have been made",
+   "D. After making sure that all deliverables have been satisfactorily completed"
+  ],
+  "answer": "ABD"
+ },
+ {
+  "id": 40930044,
+  "text": "Sally, a program manager, is managing a hexacore processor development program in her company. During the delivery phase, the program team members identify several issues that force Sally to modify program requirements. Some changes were minor, but two issues require a program scope change. According to the scenario, what will be the program manager's next step?",
+  "choices": [
+   "A. Update the program management plan.",
+   "B. Reassign work to the team.",
+   "C. Update the component plan.",
+   "D. Prepare the change request."
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 40930045,
+  "text": "In which phase are the high-level scope, risks, costs, and expected benefits of the program assessed to ensure that the program represents a viable way for the organization and is well aligned with the strategic objectives of the organization?",
+  "choices": [
+   "A. Program formulation",
+   "B. Program planning",
+   "C. Program delivery",
+   "D. Program closure"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 40930046,
+  "text": "Which of the following are the program activities that support program management and governance?",
+  "choices": [
+   "A. Program governance management",
+   "B. Program change management",
+   "C. Program communications management",
+   "D. Program quality management"
+  ],
+  "answer": "BCD"
+ },
+ {
+  "id": 40930047,
+  "text": "John is working as a program manager in an organization. His first program will be in the area of portable financial transactions by any type of device—a phone, PDA, tablet, e-Reader, or computer. He realized that two of the projects in the program needs an expert approximately at the same time. The project managers of both of these projects have included this expert in their project management plans, resource assignment metrics, and project schedules. This is an example of which of the following?",
+  "choices": [
+   "A. Risk",
+   "B. Dependency",
+   "C. Assumption",
+   "D. Constraint"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 40930048,
+  "text": "As a program manager, you have been asked to create the reporting and controlling documents for monitoring program's progress and strengthening the organization's ability to assess program status and conformance with organizational controls. What will you include in the documents?",
+  "choices": [
+   "A. Known program risks, their response plans, and escalation criteria",
+   "B. Potential profits, social needs, and environmental influences",
+   "C. Program funding and financial performance",
+   "D. Expected or incurred program resource requirements"
+  ],
+  "answer": "ACD"
+ },
+ {
+  "id": 40930049,
+  "text": "Ryan is a program manager in XYZ Inc. He has started working in a new program. The area to be addressed by the program is understood, and the stakeholders with whom communication should be established are identified. What is the next step that Ryan should take?",
+  "choices": [
+   "A. Manage the program components.",
+   "B. Define program risk thresholds.",
+   "C. Monitor the environmental factors.",
+   "D. Develop a roadmap."
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 40930050,
+  "text": "Who is the program champion and provides resources and support for the program?",
+  "choices": [
+   "A. Program management office",
+   "B. Program manager",
+   "C. Program sponsor",
+   "D. Portfolio manager"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 40930051,
+  "text": "For securing program funding from external sources, who is typically responsible for entering into the appropriate agreements necessary to secure it?",
+  "choices": [
+   "A. Program governance",
+   "B. Program management office",
+   "C. Project manager",
+   "D. Program manager"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 40930052,
+  "text": "The program is closed for which of the following reasons?",
+  "choices": [
+   "A. When the desired benefits are met",
+   "B. When any change requests arise",
+   "C. When measurements against the program's key performance indicators reveal that the business case for the program is no longer viable",
+   "D. When the benefits and objectives to be achieved by the program are no longer in alignment with the organization's strategy"
+  ],
+  "answer": "ACD"
+ },
+ {
+  "id": 40930053,
+  "text": "Kate was assigned a new program in the TYK organization. The organization has its predefined approaches to risk management that can be used by Kate in her program. Which of the following can be considered part of this approach?",
+  "choices": [
+   "A. Risk performance information",
+   "B. Common definition of concepts and terms",
+   "C. Risk statement formats",
+   "D. Authority levels for decision making"
+  ],
+  "answer": "BCD"
+ },
+ {
+  "id": 40930054,
+  "text": "When does a program steering committee request for a decision-point review?",
+  "choices": [
+   "A. When there is a need to add governance structures for monitoring and managing the program component",
+   "B. When there is a need to review the stakeholder satisfaction with the current program performance",
+   "C. When they need to compare the strategic alignment of the program with the intended goals of both the program and the organization",
+   "D. When there is a need to assess the potential impact of external (environmental) developments on program strategies and plans"
+  ],
+  "answer": "BCD"
+ },
+ {
+  "id": 40930055,
+  "text": "Who provides professional expertise using staff, highly trained in applying program governance practices for providing oversight, support, and decision-making capability to the program?",
+  "choices": [
+   "A. Program manager",
+   "B. Project manager",
+   "C. Program sponsor",
+   "D. Program management office"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 40930056,
+  "text": "A business case is developed for determining the program's investment against the intended benefits. Which stakeholder should be the best suitable to approve the program business case?",
+  "choices": [
+   "A. Program manager",
+   "B. Program governance board",
+   "C. Project manager",
+   "D. Program sponsor"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 40930057,
+  "text": "Jerry is assigned a task to execute one critical program in an organization. He is trying to convince the portfolio management body to authorize his program. Which of the following artifacts should Jerry present?",
+  "choices": [
+   "A. Roadmap",
+   "B. Benefits management plan",
+   "C. Program charter",
+   "D. Business case"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 40930058,
+  "text": "Jim is assigned to manage a program for the first time. He is confused about the purpose of defining a program vision. Which of the following statements can help him?",
+  "choices": [
+   "A. The vision statement is used to align the objectives and intended benefits of the program with the organization strategic objectives.",
+   "B. The vision statement is not necessary as many programs succeeded without having a vision statement created.",
+   "C. The vision statement describes the purpose of the program, articulating the reason the program exists.",
+   "D. The vision statement is used as a constant reminder of the objectives and intended benefits of the program."
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 40930059,
+  "text": "Joseph is a program manager of his organization. He is required to create a document for his new development program. While document creation, he tried to get answers to the following questions: What are the key outcomes required to achieve the program vision and benefits? Why is the program important and what does it achieve? What is the approach to ensure the realization of the planned benefits? What is the total length of the program, including all key milestone dates Which of the following documents is Joseph working on?",
+  "choices": [
+   "A. Program roadmap",
+   "B. Program charter",
+   "C. Benefits register",
+   "D. Program final report"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 40930060,
+  "text": "Lisa is a program manager assigned to a new program in her organization. She is collecting information about the program benefits, mapping the planned benefits to the program components, and describing how each benefit will be measured in the program. Which artifact is Lisa creating?",
+  "choices": [
+   "A. Benefits management plan",
+   "B. Benefits engagement plan",
+   "C. Business case",
+   "D. Benefits register"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 40930061,
+  "text": "The sources of complexity within programs and projects can be grouped into which of the following?",
+  "choices": [
+   "A. Ambiguity",
+   "B. Process behavior",
+   "C. System behavior",
+   "D. Human behavior"
+  ],
+  "answer": "ACD"
+ },
+ {
+  "id": 40930062,
+  "text": "Which document provides authority to the program manager for directing other subsidiary programs, projects, and related activities to be initiated, along with the framework that manages and monitors these program components during the course of the program?",
+  "choices": [
+   "A. Program roadmap",
+   "B. Program charter",
+   "C. Benefits register",
+   "D. Business case"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 40930063,
+  "text": "A risk response in a program has actually caused new risks. What term is assigned to the new risks that a risk response has created?",
+  "choices": [
+   "A. Secondary risks",
+   "B. Absolute risks",
+   "C. Pure risks",
+   "D. Residual risks"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 40930064,
+  "text": "Vienna is a program manager of an organization. Her organization is launching new versions of electronic appliances and she is given the responsibility for managing this program. What is the best way for Vienna to get clear requirements?",
+  "choices": [
+   "A. Interviews with customers to determine their requirements",
+   "B. Questionnaires sent to existing customers",
+   "C. Suggestions from experts in the appliance industry",
+   "D. Observations and historical records of feedback from customers"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 40930065,
+  "text": "Jack is working in an organization where he is managing the M-Tel program. He is responsible for management and oversight of the interactions of the program with the program governance function. He is also making decisions on behalf of the program steering committee. Jack is performing the responsibilities of which of the following?",
+  "choices": [
+   "A. Program manager",
+   "B. Program sponsor",
+   "C. Program management office",
+   "D. Project manager"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 40930066,
+  "text": "You're helping John, a new program manager in your organization. John wants to know why anyone can't just launch a program. He has a question as to what document in the organization authorizes a program to exist. What document does your organization use to formally authorize a program?",
+  "choices": [
+   "A. Statement of work",
+   "B. Program management plan",
+   "C. Program charter",
+   "D. Transition plan"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 40930067,
+  "text": "As a program manager, you are looking for a document that describes the overall expected benefits to be addressed by the program in support of the strategic initiatives. Which of the following is the required document?",
+  "choices": [
+   "A. Program charter",
+   "B. Transition plan",
+   "C. Business case",
+   "D. Sustainment plan"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 40930068,
+  "text": "A power/interest grid model used for stakeholder analysis categorizes stakeholders based on which of the following?",
+  "choices": [
+   "A. Level of authority",
+   "B. Level of urgency",
+   "C. Level of engagement",
+   "D. Level of concern"
+  ],
+  "answer": "AD"
+ },
+ {
+  "id": 40930069,
+  "text": "Which of the following domains enables and performs program decision making, establishes practices to support the program, and maintain program oversight?",
+  "choices": [
+   "A. Program Benefits Management",
+   "B. Program Strategy Alignment",
+   "C. Program Life Cycle Management",
+   "D. Program Governance"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 40930070,
+  "text": "Alice is a program manager for his organization. He has been assigned a four years' program for building a bridge. Alice assignment has started in the third year of the program. After he joined this program, he reviewed the program benefits register and discovered that the benefits are realized only at the end of the program. What should Alice do?",
+  "choices": [
+   "A. Set up a meeting with the program steering committee to review the approved program governance plan.",
+   "B. Continue with his assignment as it is regular for large public work programs to realize the benefits at the end of the program.",
+   "C. Discuss with the program team to review the benefits register."
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 40930071,
+  "text": "Which of the following activities of program risk management are in the program delivery phase?",
+  "choices": [
+   "A. Program risk management planning",
+   "B. Program initial risk assessment",
+   "C. Program risk identification",
+   "D. Program risk monitoring and controlling"
+  ],
+  "answer": "CD"
+ },
+ {
+  "id": 40930072,
+  "text": "A program manager is in the program closure phase and is required to create a final program report document. Which of the following items will the program manager include in this document?",
+  "choices": [
+   "A. Identified areas for improvement",
+   "B. Financial and performance assessments",
+   "C. Contingency plans and trigger conditions",
+   "D. History of all baselines"
+  ],
+  "answer": "ABD"
+ },
+ {
+  "id": 40930073,
+  "text": "Ana is a program manager for her organization, and she is leading the analysis for a new program that may be initiated by her company. Her analysis focuses on the return on investment for new software that may be created if the program is initiated. What type of document is Ana likely creating for her company?",
+  "choices": [
+   "A. Statement of work",
+   "B. Business case",
+   "C. Program scope statement",
+   "D. Program charter"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 40930074,
+  "text": "A program manager is working on a complex program and wants to use an artifact that visually represents the interaction of all stakeholders' current and desired support and influence. Which of the following will help in accomplishing it?",
+  "choices": [
+   "A. Stakeholder engagement plan",
+   "B. Stakeholder register",
+   "C. Stakeholder map",
+   "D. Program roadmap"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 40930075,
+  "text": "Which of the following are the roles of a program manager in program stakeholder communications?",
+  "choices": [
+   "A. To continually monitor changes and update stakeholder engagement activities and deliverables as required",
+   "B. To constantly monitor and foster an environment where stakeholder communication needs are met",
+   "C. To create a strategy for each stakeholder as recognized in the stakeholder register",
+   "D. To actively engage stakeholders only the program's delivery phase"
+  ],
+  "answer": "ABC"
+ },
+ {
+  "id": 40930076,
+  "text": "Which of the following statements describe a portfolio?",
+  "choices": [
+   "A. A portfolio describes the organization of related projects, programs, and operations.",
+   "B. A portfolio is a group of related projects that are managed together using coordinated processes and techniques.",
+   "C. A portfolio defines and manages the program-related governance processes, procedures, and templates.",
+   "D. A portfolio provides a means for organizations to effectively manage a collection of investments and work that is crucial for the achievement of the organization's strategic objectives."
+  ],
+  "answer": "AD"
+ },
+ {
+  "id": 40930077,
+  "text": "Which of the following are examples of intangible elements?",
+  "choices": [
+   "A. Strategic alignment",
+   "B. Monetary assets",
+   "C. Equity",
+   "D. Compliance"
+  ],
+  "answer": "AD"
+ },
+ {
+  "id": 40930078,
+  "text": "You are a program manager of your organization. Your program team has finished the third phase of a seven-phase program. At the end of each phase, management reviews the work your program team has completed and determines if the program should be allowed to continue. What name describes this type of review?",
+  "choices": [
+   "A. Quality control",
+   "B. Phase-gate review",
+   "C. Phase-program review",
+   "D. Audit"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 40930079,
+  "text": "Maria is a program manager of her organization. She is creating a WBS (work breakdown structure) of a program where she is showing how each component contributes to the program objectives. Which of the following program management activities is the program manager performing?",
+  "choices": [
+   "A. Program information management planning",
+   "B. Program risk management planning",
+   "C. Program scope management planning",
+   "D. Program resource management planning"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 40930080,
+  "text": "Jack is a member of the program steering committee. What are his responsibilities?",
+  "choices": [
+   "A. Endorsing or approving program recommendations and changes",
+   "B. Ensuring that all stakeholders are adequately and appropriately engaged",
+   "C. Conducting planning sessions to confirm, prioritize, and fund the program",
+   "D. Reviewing expected benefits and benefits delivery"
+  ],
+  "answer": "ACD"
+ },
+ {
+  "id": 40930081,
+  "text": "Sally is a program manager of the ABC program for her organization. She has reviewed some of the program activities and analyzed that her team will not be able to complete the activities as they may have not the expertise to accomplish and can give rise to risk if it is managed by the team. She allotted the program activities to another team who is ready to take on the work and perform the job. According to the given scenario, the program manager has performed which program risk management activity?",
+  "choices": [
+   "A. Program risk identification",
+   "B. Program risk analysis",
+   "C. Program risk response management",
+   "D. Program risk recognition"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 40930082,
+  "text": "Andy is a program manager for a new software development program. His program team consists of software developers, testers, and project managers. He has identified a large number of stakeholders for his program. He needs to engage each stakeholder group, even if they are negative to the program. Recently, Andy and his team members realized that some of the active stakeholders were missing from some of the key meetings. He finds out that some also missed the previous key meetings. According to the scenario, Andy will perform which of the following to identify and assess the reasons for nonparticipation of active stakeholders?",
+  "choices": [
+   "A. Assumptions analysis",
+   "B. Root-cause analysis",
+   "C. SWOT analysis",
+   "D. Comparative advantage analysis"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 40930083,
+  "text": "Jack, a program manager, is performing the program quality control activity. The outputs of this activity include which of the following?",
+  "choices": [
+   "A. Quality change requests",
+   "B. Quality test reports",
+   "C. Quality control completed checklists",
+   "D. Quality control findings"
+  ],
+  "answer": "ABC"
+ },
+ {
+  "id": 40930084,
+  "text": "Joseph is a newly assigned program manager in your organization. He is trying to understand the main purpose of the program governance plan. He came to you for help. As an experienced program manager, what will you respond?",
+  "choices": [
+   "A. Describe the structure, goals, roles, responsibilities, policies, procedures, and logistics for executing the governance process.",
+   "B. Guide the program manager to develop the rest of the program management plans.",
+   "C. Define the way that the steering committee will guide the program.",
+   "D. Guide the program sponsor to provide resources and support for the program."
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 40930085,
+  "text": "As a program manager, you are finally in the program closure phase. As part of this phase, you are currently documenting important information that can be applied for enhancing the success of future programs and component projects. In which document does the program manager working on?",
+  "choices": [
+   "A. Program roadmap",
+   "B. Program final report",
+   "C. Business case",
+   "D. Program charter"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 40930086,
+  "text": "A program manager, Ana, is currently monitoring the organizational environment (including internal and external factors), program objectives, and benefits realization to make sure that the program remains aligned with the organization's strategic objectives. With respect to the benefits management domain, in which phase is she working?",
+  "choices": [
+   "A. Benefits delivery",
+   "B. Benefits transition",
+   "C. Benefits sustainment",
+   "D. Benefits analysis and planning"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 40930087,
+  "text": "Andrew, a program manager, is working on a program, which was set up with eight separate projects. Since each project in this program has inter-relationships with other projects in terms of the benefits to be delivered, he decided one best practice to follow was to track the benefits described in his benefits management plan in a benefits register and make this register visible not only to his entire team but also to his client organization. He felt such a benefits register would help track the benefits accrued by the eight projects, thus enabling his organization to realize and sustain all the benefits of its investment in the program. When does this register end in terms of the program benefits management life cycle?",
+  "choices": [
+   "A. When benefits planning is completed",
+   "B. When the positive and negative risks to benefits are updated",
+   "C. When the program is terminated",
+   "D. When benefits are mapped to the program components"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 40930088,
+  "text": "Giselle has been assigned as a program manager for executing a critical program in her organization. The program infrastructure includes a quality manager who was appointed by the program steering committee. While conducting a meeting with Giselle's team members for developing a program resource management plan, the quality manager requested her to attend the meeting for verifying that quality activities and controls are applied in the program planning phase. What should Giselle do?",
+  "choices": [
+   "A. Ask the quality manager to concentrate on the deliverables and services, and not on the program management activities.",
+   "B. Speak to the steering committee to let the quality manager concentrate on his/her job only.",
+   "C. Conduct a separate meeting with the quality manager for quality management.",
+   "D. Allow the quality manager to attend the meeting and do his/her job in the program planning activities."
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 40930089,
+  "text": "Alice is in the program planning phase of his ABC program. He is currently decomposing his program work into deliverable components for delivering the associated benefits. What activity is Alice executing?",
+  "choices": [
+   "A. Program resource management planning",
+   "B. Program scope management planning",
+   "C. Program procurement management planning",
+   "D. Program quality management planning"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 40930090,
+  "text": "A program manager along with the component managers created a resource management plan. During the program delivery phase, the necessity for resources changed. How should the program manager prioritize the resource requirements within the program?",
+  "choices": [
+   "A. A program manager should discuss with his component managers for resource conflict and add new issue to the register.",
+   "B. A program manager should review the program charter document.",
+   "C. A program manager should focus only on the program level resource requirements and should not drag his concern to the project level resource management.",
+   "D. A program manager should manage resources at the program level and work together with the component managers who manage resources at the component level to balance the program requirements with the availability of resources."
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 40930091,
+  "text": "When is the program governance plan referenced for ensuring that the program is conforming to established governance expectations and agreements?",
+  "choices": [
+   "A. At the program formulation sub-phase",
+   "B. At the program delivery phase",
+   "C. At the program definition phase",
+   "D. Throughout the program life cycle"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 40930092,
+  "text": "You are working as a program manager in your organization. Your program is to construct a new condo building in California. You and the project managers are working together to define the project assumptions about the program. Which one of the following is an example of an assumption for this program?",
+  "choices": [
+   "A. Weather conditions",
+   "B. Building codes",
+   "C. A predetermined program budget",
+   "D. Deadlines for project milestones"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 40930093,
+  "text": "Kate is a program manager of her organization. She has asked to create her first draft of the stakeholder engagement plan. Which of the following will Kate include in her stakeholder engagement plan?",
+  "choices": [
+   "A. Metrics for measuring the performance of stakeholder engagement activities",
+   "B. Stakeholder engagement guidelines",
+   "C. Measures of participation in meetings and other communication channels",
+   "D. Visual representation of the interaction of all stakeholders' current and desired support and influence"
+  ],
+  "answer": "ABC"
+ },
+ {
+  "id": 40930094,
+  "text": "A program manager is releasing the program resources and supporting the transition of any remaining program outputs and assets, including its documents and databases, to ongoing organizational activities. In which phase is the program manager working?",
+  "choices": [
+   "A. Program acceptance",
+   "B. Program definition",
+   "C. Program delivery",
+   "D. Program closure"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 40930095,
+  "text": "As a program manager, you are required to distribute program information to the receiving parties including the clients, program sponsor, and program steering committee. Which of the following methods can be used for your program information distribution?",
+  "choices": [
+   "A. Social media (Internet-based group communication tools), interviews, conference presentations",
+   "B. Electronic tools for program management, such as web interfaces for scheduling and project management software",
+   "C. Electronic communications and conferencing tools, such as email, fax, voicemail, telephone, video and web conferencing, and web publishing",
+   "D. Formal communications such as emails, small group conversations, instant messaging, and staff meetings"
+  ],
+  "answer": "ABC"
+ },
+ {
+  "id": 40930096,
+  "text": "Josephine is a program manager of her organization. She is defining the degree of support or opposition to the program benefits, attitudes about the program and its sponsors, the expectation of program benefits delivery, and the ability to influence the outcome of the program for each stakeholder. Which program artifact is Josephine creating?",
+  "choices": [
+   "A. Stakeholder register",
+   "B. Stakeholder map",
+   "C. Stakeholder standard plan",
+   "D. Stakeholder engagement plan"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 40930097,
+  "text": "Which of the following domains includes the policies, procedures, and processes used for reviewing the program, analyzing the results, and making decisions about the program?",
+  "choices": [
+   "A. Program Life Cycle Management",
+   "B. Program Strategy Alignment",
+   "C. Program Benefits Management",
+   "D. Program Governance"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 40930098,
+  "text": "Changes in scope have a significant impact on a component or the program and may originate from which of the following?",
+  "choices": [
+   "A. External sources",
+   "B. Previously identified requirements issues",
+   "C. Components within the program",
+   "D. Stakeholders"
+  ],
+  "answer": "ACD"
+ },
+ {
+  "id": 40930099,
+  "text": "Jack's suggestion to the city government to combine projects into programs in the regulations and standards area has been well received. After a meeting of the city's commissioners, the city government appointed Jack as the program manager to oversee this work. He has decided to prepare a benefits management plan and share it with the city manager and the commissioners at their next meeting. Jack will base this plan on the expected benefits as defined in which of the following documents?",
+  "choices": [
+   "A. Benefits register",
+   "B. Program roadmap",
+   "C. Program charter",
+   "D. Program business case"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 40930100,
+  "text": "Which of the following is true about program roadmap?",
+  "choices": [
+   "A. It defines the scope and purpose of a program.",
+   "B. It provides an overview of a program and outlines its key elements.",
+   "C. It describes the purpose and authority behind the drivers of the program.",
+   "D. It shows how benefits are delivered within major stages or milestones"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 40930101,
+  "text": "David is the program manager of the ABC program for his organization. This program is about creating a new sports arena for the city. It has seven projects and each project requires a huge amount of investment. David needs to get approval for funds and make sure that costs are documented and approved for a period of time. Which of the following documents will help David in this scenario?",
+  "choices": [
+   "A. Business case",
+   "B. Program charter",
+   "C. Program roadmap",
+   "D. Benefits register"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 40930102,
+  "text": "As a program manager, which of the following skills or information will directly help you to have a good procurement plan?",
+  "choices": [
+   "A. Understanding the resource requirements for the delivery of benefits expected of the program",
+   "B. Ability to re-baseline the program budget",
+   "C. Knowledge of the available funds and the needs of the components",
+   "D. Ability to take make-or-buy decisions"
+  ],
+  "answer": "ACD"
+ },
+ {
+  "id": 40930103,
+  "text": "You are a program manager in XYZ Inc., which is specialized in producing and exporting only goods and services. XYZ Inc. produces goods and services more efficiently and at lower opportunity cost, than other goods and services, which should be imported. This is an example of which of the following?",
+  "choices": [
+   "A. Feasibility study",
+   "B. Negative risk",
+   "C. Positive risk",
+   "D. Comparative advantage"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 40930104,
+  "text": "During the program closeout phase, which of the following statements described the benefits status after the program charter is fulfilled?",
+  "choices": [
+   "A. Benefits may continue to be realized",
+   "B. Benefits may be managed as part of organizational operations",
+   "C. Benefits may either be realized or canceled",
+   "D. Benefits may have been fully realized"
+  ],
+  "answer": "ABD"
+ },
+ {
+  "id": 40930105,
+  "text": "What are the governance-related responsibilities of a project manager?",
+  "choices": [
+   "A. Monitoring and managing performance and communications",
+   "B. Managing project interactions with the program manager, steering committee, and sponsor",
+   "C. Overseeing project conformance to governance policies and processes",
+   "D. Managing only internal dependencies for the project"
+  ],
+  "answer": "ABC"
+ },
+ {
+  "id": 40930106,
+  "text": "Which of the following phases is described in the statement given below? \"The purpose of this phase is to ensure and provide the ongoing maintenance activities performed by receiving organizations long after the program is closed.\"",
+  "choices": [
+   "A. Benefits sustainment",
+   "B. Benefits transition",
+   "C. Benefits delivery",
+   "D. Benefits identification"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 40930107,
+  "text": "Alice, as a program manager, is working on the TTK program for her company. She has hired a licensed electrician to manage the electrical work of the program because of the dangers involved. According to the given scenario, the program manager has performed which program risk management activity?",
+  "choices": [
+   "A. Program risk response management",
+   "B. Program risk analysis",
+   "C. Program risk identification",
+   "D. Program risk alignment"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 40930108,
+  "text": "Which of the following supporting program activities come under the program formulation phase?",
+  "choices": [
+   "A. Program resource management planning",
+   "B. Program schedule assessment",
+   "C. Program initial cost estimation",
+   "D. Program resource requirements estimation"
+  ],
+  "answer": "BCD"
+ },
+ {
+  "id": 40930109,
+  "text": "An effective PMIS (program management information system) incorporates which of the following items for collecting, integrating, and communicating information critical to the effective management of one or more organizational programs?",
+  "choices": [
+   "A. Software tools",
+   "B. Documents, data, and knowledge repositories",
+   "C. Change management system",
+   "D. Communications management system"
+  ],
+  "answer": "ABC"
+ },
+ {
+  "id": 40930110,
+  "text": "Jenny is the program manager for her organization. Throughout the program life cycle, there will be several elements, resources, and benefits that can be transferred from her program to the organization. Which of the following documents defines how these things can be transferred from the program to the organization?",
+  "choices": [
+   "A. Program charter document",
+   "B. Program scope statement",
+   "C. Transition plan document",
+   "D. Business case document"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 40930111,
+  "text": "For which of the following purposes does the program manager use program benefits management?",
+  "choices": [
+   "A. Identifying and assessing the value and impact of program benefits",
+   "B. Identifying stakeholder expectations and determining key indicators and expected benefits",
+   "C. Developing financial metrics by which the benefits of the program are measured",
+   "D. Aligning the expected benefits with the organization's goals and objectives"
+  ],
+  "answer": "AD"
+ },
+ {
+  "id": 40930112,
+  "text": "As part of the program closeout activity, successful completion of the program is judged against which of the following?",
+  "choices": [
+   "A. Approved business case",
+   "B. Lessons learned",
+   "C. Organization's current goals",
+   "D. Actual program outcomes"
+  ],
+  "answer": "ACD"
+ },
+ {
+  "id": 40930113,
+  "text": "Which of the following statements are true about strategic alignment?",
+  "choices": [
+   "A. It aligns program management with enterprise operations management.",
+   "B. It defines, maintains, and validates the program value proposition.",
+   "C. It ensures the linkage of enterprise and program plans.",
+   "D. It ensures that the program delivers the required benefits."
+  ],
+  "answer": "ABC"
+ },
+ {
+  "id": 40930114,
+  "text": "What are the management of items that are covered by the program financial management plan and not covered by the program financial framework?",
+  "choices": [
+   "A. Trends in material costs",
+   "B. Risk reserves",
+   "C. Funding estimates",
+   "D. International exchange rate fluctuations"
+  ],
+  "answer": "ABD"
+ },
+ {
+  "id": 40930115,
+  "text": "On the basis of the risk appetite of the organization, who among the following establishes the program risk thresholds for adherence within the program?",
+  "choices": [
+   "A. Program governance",
+   "B. Component manager",
+   "C. Project manager",
+   "D. Program sponsor"
+  ],
+  "answer": "A"
+ }
+]

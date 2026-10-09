@@ -1,11 +1,13 @@
 import { after, before, test } from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
-import { and, asc, count, eq } from "drizzle-orm";
+import { and, asc, count, eq, isNull } from "drizzle-orm";
 import { db } from "@/db";
 import { examQuestions, exams, questions, userCertifications, users } from "@/db/schema";
 import { generateExams, seedPgmp, seedQuestions, seedTags, type PgmpQuestion } from "@/db/seed";
 import { getAttempt, getResult, saveAnswer, startAttempt, submitAttempt } from "@/lib/attempts";
+import { startDrill, topicStats } from "@/lib/drills";
+import { tasksOf } from "@/lib/question-tags";
 import { closeDb, resetDb } from "./db";
 
 const pgmp: PgmpQuestion[] = JSON.parse(readFileSync("data/pgmp-questions.json", "utf8"));
@@ -26,7 +28,7 @@ async function pgmpCount() {
 test("PgMP seeded first: PMP Questions, Tags and Exams still seed as before", async () => {
   assert.equal(await seedPgmp(pgmp), 22);
   await seedQuestions(JSON.parse(readFileSync("data/questions.json", "utf8")));
-  await seedTags(JSON.parse(readFileSync("data/question-tags.json", "utf8")));
+  await seedTags(JSON.parse(readFileSync("data/question-tags.json", "utf8")), "PMP");
   assert.equal(await generateExams(), true);
   const pmp = await db.select().from(exams).where(eq(exams.certification, "PMP"));
   assert.equal(pmp.length, 7);
@@ -90,4 +92,37 @@ test("a PgMP Attempt shows original numbers and Duplicate Questions; multi-answe
   const result = await getResult(user, id);
   assert.equal(result.certification, "PgMP");
   assert.match(result.questions.find((x) => x.id === multi.id)!.explanation!, /correct/);
+});
+
+test("PgMP labels seed onto PgMP Questions only, no Approach; a PgMP Drill and Result use only PgMP", async () => {
+  const pgTasks = tasksOf("PgMP");
+  const tags = pgmp.map((q, i) => ({ id: q.id, task: pgTasks[i % pgTasks.length].code, confidence: "high" }));
+  await assert.rejects(seedTags(tags.slice(1), "PgMP"), /missing id/);
+  await assert.rejects(seedTags(tags.map((t, i) => (i ? t : { ...t, task: "people-1" })), "PgMP"), /invalid task "people-1"/);
+  await seedTags(tags.map((t, i) => (i ? t : { ...t, task: "governance-11" })), "PgMP");
+  await seedTags(tags, "PgMP"); // a corrected label overwrites
+  const pg = await db.select({ id: questions.id, task: questions.task, approach: questions.approach }).from(questions).where(eq(questions.certification, "PgMP"));
+  assert.equal(pg.length, 3023);
+  assert.ok(pg.every((q) => q.task && q.approach === null && pgTasks.some((t) => t.code === q.task)));
+  assert.equal(pg.find((q) => q.id === tags[0].id)!.task, tags[0].task);
+  const [{ n }] = await db.select({ n: count() }).from(questions).where(and(eq(questions.certification, "PMP"), isNull(questions.approach)));
+  assert.equal(n, 0); // PMP tags untouched
+
+  const [{ insertId: user }] = await db.insert(users).values({ email: "drill@x.test", passwordHash: "-" });
+  await db.insert(userCertifications).values({ userId: user, certification: "PgMP" });
+  const drill = await getAttempt(user, await startDrill(user, "PgMP", "Governance", 20));
+  const governance = new Set(pgTasks.filter((t) => t.domain === "Governance").map((t) => t.code));
+  assert.equal(drill.questions.length, 20);
+  assert.ok(drill.questions.every((q) => { const p = pgmp.find((x) => x.id === q.id); return p?.usable && governance.has(pg.find((x) => x.id === q.id)!.task!); }));
+  for (const q of drill.questions) await saveAnswer(user, drill.id, q.id, ["A"]);
+  await submitAttempt(user, drill.id);
+  const stats = await topicStats(user, "PgMP");
+  assert.equal(stats.find((d) => d.domain === "Governance")!.done, 20);
+  assert.equal(stats.reduce((n, d) => n + d.total, 0), 3013); // every usable PgMP Question, nothing from PMP
+
+  const exam = await startAttempt(user, (await db.select({ id: exams.id }).from(exams).where(eq(exams.name, "6_6_2024 11_05_01 AM")))[0].id);
+  await submitAttempt(user, exam);
+  const domains = (await getResult(user, exam)).domains;
+  assert.deepEqual(domains.map((d) => d.domain), stats.map((d) => d.domain));
+  assert.equal(domains.reduce((n, d) => n + d.total, 0), 100);
 });

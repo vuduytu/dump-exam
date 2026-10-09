@@ -1,0 +1,728 @@
+[
+ {
+  "id": 42311078,
+  "task": "lifecycle-32",
+  "confidence": "medium",
+  "reason": "Đóng program: steering committee quyết định nguồn lực, quỹ còn lại"
+ },
+ {
+  "id": 42311079,
+  "task": "lifecycle-28",
+  "confidence": "medium",
+  "reason": "Change management plan với ngưỡng xét change request"
+ },
+ {
+  "id": 42311080,
+  "task": "governance-1",
+  "confidence": "low",
+  "reason": "Định nghĩa PMO là cấu trúc quản lý"
+ },
+ {
+  "id": 42311081,
+  "task": "benefits-3",
+  "confidence": "medium",
+  "reason": "Board từ chối đóng vì chưa có sustainment plan cho benefits còn lại"
+ },
+ {
+  "id": 42311082,
+  "task": "lifecycle-15",
+  "confidence": "low",
+  "reason": "Kiến thức tài liệu mời thầu RFI/RFP/RFQ trong mua sắm"
+ },
+ {
+  "id": 42311083,
+  "task": "lifecycle-22",
+  "confidence": "low",
+  "reason": "Đầu ra quản lý truyền thông: thông tin trạng thái, thông báo thay đổi"
+ },
+ {
+  "id": 42311084,
+  "task": "lifecycle-20",
+  "confidence": "medium",
+  "reason": "Project A gây khó khăn, yêu cầu PM thực hiện hành động khắc phục"
+ },
+ {
+  "id": 42311085,
+  "task": "strategy-1",
+  "confidence": "low",
+  "reason": "Khác biệt program và portfolio: thời gian và tính liên quan"
+ },
+ {
+  "id": 42311086,
+  "task": "lifecycle-15",
+  "confidence": "medium",
+  "reason": "Thuê nhà cung cấp ngoài, bước tiếp theo là viết SOW"
+ },
+ {
+  "id": 42311087,
+  "task": "lifecycle-28",
+  "confidence": "medium",
+  "reason": "Thẩm quyền quản lý thay đổi ghi trong change management plan"
+ },
+ {
+  "id": 42311088,
+  "task": "governance-1",
+  "confidence": "low",
+  "reason": "Trách nhiệm PMO, không chịu trách nhiệm giải trình thành công"
+ },
+ {
+  "id": 42311089,
+  "task": "strategy-5",
+  "confidence": "high",
+  "reason": "Chọn program dựa trên business case và tính chiến lược"
+ },
+ {
+  "id": 42311090,
+  "task": "lifecycle-28",
+  "confidence": "medium",
+  "reason": "Định nghĩa ngưỡng thay đổi trong change management plan"
+ },
+ {
+  "id": 42311091,
+  "task": "strategy-7",
+  "confidence": "medium",
+  "reason": "Nội dung financial framework của program"
+ },
+ {
+  "id": 42311092,
+  "task": "stakeholder-5",
+  "confidence": "low",
+  "reason": "Các hoạt động thuộc quản lý truyền thông program"
+ },
+ {
+  "id": 42311093,
+  "task": "stakeholder-5",
+  "confidence": "medium",
+  "reason": "Chọn phương thức truyền thông chính thức trạng thái program"
+ },
+ {
+  "id": 42311094,
+  "task": "lifecycle-28",
+  "confidence": "low",
+  "reason": "Khác biệt quản lý thay đổi giữa project và program"
+ },
+ {
+  "id": 42311095,
+  "task": "lifecycle-9",
+  "confidence": "medium",
+  "reason": "Nội dung resource management plan, kế hoạch con của PMP"
+ },
+ {
+  "id": 42311096,
+  "task": "lifecycle-9",
+  "confidence": "low",
+  "reason": "Mục tiêu hoạt động đánh giá lịch trình program"
+ },
+ {
+  "id": 42311097,
+  "task": "lifecycle-3",
+  "confidence": "medium",
+  "reason": "Roadmap chứa milestone và điểm quyết định chính"
+ },
+ {
+  "id": 42311098,
+  "task": "lifecycle-33",
+  "confidence": "medium",
+  "reason": "Đầu ra đóng tài chính: lưu trữ tri thức, đóng ngân sách"
+ },
+ {
+  "id": 42311099,
+  "task": "lifecycle-32",
+  "confidence": "medium",
+  "reason": "Không đóng program khi hợp đồng còn mở"
+ },
+ {
+  "id": 42311100,
+  "task": "lifecycle-10",
+  "confidence": "high",
+  "reason": "Dàn xếp lịch dùng chung nguồn lực quan trọng giữa hai project"
+ },
+ {
+  "id": 42311101,
+  "task": "lifecycle-1",
+  "confidence": "low",
+  "reason": "Charter xác định mục tiêu chiến lược và benefits kỳ vọng"
+ },
+ {
+  "id": 42311102,
+  "task": "stakeholder-1",
+  "confidence": "low",
+  "reason": "Khái niệm stakeholder không chỉ nội bộ"
+ },
+ {
+  "id": 42311103,
+  "task": "stakeholder-1",
+  "confidence": "medium",
+  "reason": "Ghi nhận thay đổi thái độ stakeholder vào stakeholder register"
+ },
+ {
+  "id": 42311104,
+  "task": "lifecycle-11",
+  "confidence": "medium",
+  "reason": "Thành phần của PMIS hiệu quả"
+ },
+ {
+  "id": 42311105,
+  "task": "lifecycle-7",
+  "confidence": "medium",
+  "reason": "Program scope statement mô tả deliverable, tiêu chí chấp nhận, loại trừ"
+ },
+ {
+  "id": 42311106,
+  "task": "stakeholder-1",
+  "confidence": "high",
+  "reason": "Stakeholder register thay đổi suốt vòng đời program"
+ },
+ {
+  "id": 42311107,
+  "task": "governance-10",
+  "confidence": "medium",
+  "reason": "Chiến lược công ty thay đổi khiến benefits vô dụng, program bị huỷ"
+ },
+ {
+  "id": 42311108,
+  "task": "strategy-5",
+  "confidence": "high",
+  "reason": "Chọn program dựa trên business case và tính chiến lược"
+ },
+ {
+  "id": 42311109,
+  "task": "governance-2",
+  "confidence": "low",
+  "reason": "Trách nhiệm của governance board"
+ },
+ {
+  "id": 42311110,
+  "task": "governance-10",
+  "confidence": "medium",
+  "reason": "Mục đích governance: giữ program gắn với mục tiêu chiến lược"
+ },
+ {
+  "id": 42311111,
+  "task": "strategy-7",
+  "confidence": "medium",
+  "reason": "Ước tính chi phí program gồm cả component và PMO"
+ },
+ {
+  "id": 42311112,
+  "task": "lifecycle-10",
+  "confidence": "medium",
+  "reason": "Ưu tiên nguồn lực theo resource management plan"
+ },
+ {
+  "id": 42311113,
+  "task": "lifecycle-30",
+  "confidence": "low",
+  "reason": "Khái niệm contingency và management reserve"
+ },
+ {
+  "id": 42311114,
+  "task": "strategy-7",
+  "confidence": "medium",
+  "reason": "Kỹ thuật ước tính chi phí ban đầu để quyết định cấp vốn"
+ },
+ {
+  "id": 42311115,
+  "task": "stakeholder-6",
+  "confidence": "medium",
+  "reason": "Stakeholder nêu rủi ro năng lực nhân sự trong đánh giá rủi ro ban đầu"
+ },
+ {
+  "id": 42311116,
+  "task": "stakeholder-5",
+  "confidence": "medium",
+  "reason": "Tính số kênh truyền thông giữa các stakeholder"
+ },
+ {
+  "id": 42311117,
+  "task": "lifecycle-32",
+  "confidence": "low",
+  "reason": "Lý do đóng program hợp lệ và không hợp lệ"
+ },
+ {
+  "id": 42311118,
+  "task": "lifecycle-21",
+  "confidence": "medium",
+  "reason": "Khái niệm quality assurance trong thực thi quality plan"
+ },
+ {
+  "id": 42311119,
+  "task": "benefits-8",
+  "confidence": "medium",
+  "reason": "Chuyển giao deliverable khi benefits xảy ra sau khi đóng program"
+ },
+ {
+  "id": 42311120,
+  "task": "governance-10",
+  "confidence": "medium",
+  "reason": "PM đảm bảo program luôn gắn với mục tiêu chiến lược"
+ },
+ {
+  "id": 42311121,
+  "task": "stakeholder-2",
+  "confidence": "medium",
+  "reason": "Chiến lược engagement chi tiết theo mức ủng hộ từng component"
+ },
+ {
+  "id": 42311122,
+  "task": "lifecycle-30",
+  "confidence": "low",
+  "reason": "Khái niệm management reserve cho công việc chưa lường trước"
+ },
+ {
+  "id": 42311123,
+  "task": "benefits-1",
+  "confidence": "low",
+  "reason": "Khái niệm benefit, căn chỉnh chiến lược không phải benefit"
+ },
+ {
+  "id": 42311124,
+  "task": "governance-3",
+  "confidence": "medium",
+  "reason": "Gate review: board từ chối khởi tạo component vì chưa đủ tiêu chí"
+ },
+ {
+  "id": 42311125,
+  "task": "lifecycle-3",
+  "confidence": "medium",
+  "reason": "Phân biệt roadmap và master schedule"
+ },
+ {
+  "id": 42311126,
+  "task": "stakeholder-5",
+  "confidence": "high",
+  "reason": "Đánh giá truyền thông ban đầu trước khi lập communications plan"
+ },
+ {
+  "id": 42311127,
+  "task": "lifecycle-25",
+  "confidence": "low",
+  "reason": "Hoạt động quản lý tài chính: theo dõi thay đổi ngân sách, chi hợp đồng"
+ },
+ {
+  "id": 42311128,
+  "task": "benefits-3",
+  "confidence": "medium",
+  "reason": "Chi phí duy trì benefits do bộ phận vận hành chịu"
+ },
+ {
+  "id": 42311129,
+  "task": "stakeholder-7",
+  "confidence": "medium",
+  "reason": "Kỹ thuật engagement stakeholder: đàm phán, giải quyết xung đột"
+ },
+ {
+  "id": 42311130,
+  "task": "governance-6",
+  "confidence": "medium",
+  "reason": "Hết contingency reserve, board đánh giá mức rủi ro để quyết định"
+ },
+ {
+  "id": 42311131,
+  "task": "lifecycle-11",
+  "confidence": "medium",
+  "reason": "Đánh giá nhu cầu quản lý thông tin của program"
+ },
+ {
+  "id": 42311132,
+  "task": "lifecycle-8",
+  "confidence": "high",
+  "reason": "Cập nhật program WBS khi thêm project mới, stakeholder đồng ý"
+ },
+ {
+  "id": 42311133,
+  "task": "lifecycle-30",
+  "confidence": "medium",
+  "reason": "Các chiến lược phản hồi rủi ro tiêu cực"
+ },
+ {
+  "id": 42311134,
+  "task": "lifecycle-9",
+  "confidence": "low",
+  "reason": "Mục tiêu đánh giá mua sắm cho program và component"
+ },
+ {
+  "id": 42311135,
+  "task": "strategy-7",
+  "confidence": "medium",
+  "reason": "Tổng chi phí sở hữu gồm phát triển, triển khai, chuyển giao, duy trì"
+ },
+ {
+  "id": 42311136,
+  "task": "lifecycle-9",
+  "confidence": "low",
+  "reason": "Mục tiêu hoạt động đánh giá chất lượng program"
+ },
+ {
+  "id": 42311137,
+  "task": "governance-2",
+  "confidence": "low",
+  "reason": "Phân biệt governance program và project"
+ },
+ {
+  "id": 42311138,
+  "task": "lifecycle-15",
+  "confidence": "medium",
+  "reason": "Chọn hợp đồng giá cố định khi SOW rõ, ngân sách hạn chế"
+ },
+ {
+  "id": 42311139,
+  "task": "strategy-9",
+  "confidence": "medium",
+  "reason": "Artifact dùng để charter và phê duyệt program"
+ },
+ {
+  "id": 42311140,
+  "task": "lifecycle-33",
+  "confidence": "medium",
+  "reason": "Đóng hợp đồng mua sắm khi close-out program"
+ },
+ {
+  "id": 42311141,
+  "task": "lifecycle-35",
+  "confidence": "high",
+  "reason": "Lưu trữ lessons learned vào PMIS khi đóng program"
+ },
+ {
+  "id": 42311142,
+  "task": "stakeholder-1",
+  "confidence": "medium",
+  "reason": "Stakeholder map và stakeholder register"
+ },
+ {
+  "id": 42311143,
+  "task": "lifecycle-12",
+  "confidence": "medium",
+  "reason": "Project A quản lý nhà cung cấp, cảnh báo program khi khó khăn"
+ },
+ {
+  "id": 42311144,
+  "task": "benefits-6",
+  "confidence": "medium",
+  "reason": "Báo cáo benefits đã giao qua communications management plan"
+ },
+ {
+  "id": 42311145,
+  "task": "lifecycle-32",
+  "confidence": "high",
+  "reason": "Đóng program khi governance board chấp thuận đề xuất"
+ },
+ {
+  "id": 42311146,
+  "task": "governance-10",
+  "confidence": "low",
+  "reason": "Quy định mới ảnh hưởng program, họp PMO và component managers"
+ },
+ {
+  "id": 42311147,
+  "task": "lifecycle-15",
+  "confidence": "low",
+  "reason": "Chọn loại yêu cầu mời thầu khi ưu tiên năng lực kỹ thuật"
+ },
+ {
+  "id": 42311148,
+  "task": "lifecycle-25",
+  "confidence": "high",
+  "reason": "Phân tích EVM: CV, SV để kết luận tiến độ, chi phí"
+ },
+ {
+  "id": 42311149,
+  "task": "lifecycle-8",
+  "confidence": "low",
+  "reason": "Định nghĩa công việc quản lý program là program activities"
+ },
+ {
+  "id": 42311150,
+  "task": "lifecycle-21",
+  "confidence": "medium",
+  "reason": "Công cụ kỹ thuật quản lý chất lượng"
+ },
+ {
+  "id": 42311151,
+  "task": "benefits-1",
+  "confidence": "low",
+  "reason": "Thành công program đo bằng benefits thực hiện được"
+ },
+ {
+  "id": 42311152,
+  "task": "lifecycle-8",
+  "confidence": "high",
+  "reason": "PWBS không chứa vai trò trách nhiệm"
+ },
+ {
+  "id": 42311153,
+  "task": "lifecycle-30",
+  "confidence": "low",
+  "reason": "Định nghĩa ngưỡng rủi ro"
+ },
+ {
+  "id": 42311154,
+  "task": "lifecycle-32",
+  "confidence": "medium",
+  "reason": "Program manager yêu cầu đóng program"
+ },
+ {
+  "id": 42311155,
+  "task": "lifecycle-16",
+  "confidence": "medium",
+  "reason": "Chuẩn bị khởi tạo project mới, trình governance board phê duyệt"
+ },
+ {
+  "id": 42311156,
+  "task": "governance-1",
+  "confidence": "low",
+  "reason": "Trách nhiệm PMO, không có quyền huỷ program"
+ },
+ {
+  "id": 42311157,
+  "task": "lifecycle-25",
+  "confidence": "high",
+  "reason": "Tham số chính của EVM"
+ },
+ {
+  "id": 42311158,
+  "task": "lifecycle-4",
+  "confidence": "high",
+  "reason": "Ý nghĩa RACI trong ma trận phân công trách nhiệm"
+ },
+ {
+  "id": 42311159,
+  "task": "benefits-1",
+  "confidence": "low",
+  "reason": "Khái niệm business value"
+ },
+ {
+  "id": 42311160,
+  "task": "governance-7",
+  "confidence": "medium",
+  "reason": "Rủi ro project không giải quyết được, xử lý ở cấp program"
+ },
+ {
+  "id": 42311161,
+  "task": "benefits-5",
+  "confidence": "medium",
+  "reason": "Đảm bảo mọi benefits được chuyển giao, duy trì trước khi đóng"
+ },
+ {
+  "id": 42311162,
+  "task": "lifecycle-8",
+  "confidence": "high",
+  "reason": "Program WBS gồm toàn bộ công việc kể cả PMO"
+ },
+ {
+  "id": 42311163,
+  "task": "strategy-5",
+  "confidence": "medium",
+  "reason": "Payback period trong business case"
+ },
+ {
+  "id": 42311164,
+  "task": "stakeholder-5",
+  "confidence": "high",
+  "reason": "Xác định thông tin cần truyền trước khi chọn người giao tiếp với khách hàng"
+ },
+ {
+  "id": 42311165,
+  "task": "lifecycle-33",
+  "confidence": "medium",
+  "reason": "Chuyển rủi ro còn lại cho tổ chức tiếp nhận khi đóng"
+ },
+ {
+  "id": 42311166,
+  "task": "stakeholder-5",
+  "confidence": "low",
+  "reason": "Truyền thông program khác project do stakeholder đa dạng"
+ },
+ {
+  "id": 42311167,
+  "task": "lifecycle-33",
+  "confidence": "low",
+  "reason": "Không có hoạt động duy trì quản lý rủi ro sau đóng"
+ },
+ {
+  "id": 42311168,
+  "task": "strategy-1",
+  "confidence": "low",
+  "reason": "Vòng đời program cần gắn với mục tiêu chiến lược"
+ },
+ {
+  "id": 42311169,
+  "task": "lifecycle-10",
+  "confidence": "medium",
+  "reason": "Ước tính ban đầu nguồn lực cho program và component"
+ },
+ {
+  "id": 42311170,
+  "task": "governance-1",
+  "confidence": "low",
+  "reason": "Định nghĩa PMO là cấu trúc quản lý"
+ },
+ {
+  "id": 42361001,
+  "task": "benefits-1",
+  "confidence": "high",
+  "reason": "Metric benefits xác định trong giai đoạn phân tích và lập kế hoạch"
+ },
+ {
+  "id": 42361002,
+  "task": "strategy-9",
+  "confidence": "low",
+  "reason": "Thứ tự phê duyệt: mandate, charter, PMP, sign off"
+ },
+ {
+  "id": 42361003,
+  "task": "lifecycle-29",
+  "confidence": "medium",
+  "reason": "Phân tích tác động rủi ro công nghệ mới rồi trình board quyết định"
+ },
+ {
+  "id": 42361004,
+  "task": "stakeholder-2",
+  "confidence": "medium",
+  "reason": "Bỏ qua nhu cầu riêng của seller từng khu vực"
+ },
+ {
+  "id": 42361005,
+  "task": "stakeholder-7",
+  "confidence": "high",
+  "reason": "Gần gũi stakeholder hoài nghi để mở lại thảo luận"
+ },
+ {
+  "id": 42361006,
+  "task": "benefits-8",
+  "confidence": "medium",
+  "reason": "Cùng tất cả seller xem lại transition plan sang vận hành"
+ },
+ {
+  "id": 42361007,
+  "task": "benefits-6",
+  "confidence": "medium",
+  "reason": "Cập nhật benefits register theo tiêu chí địa phương và gửi stakeholder"
+ },
+ {
+  "id": 42361008,
+  "task": "lifecycle-7",
+  "confidence": "medium",
+  "reason": "Nội dung chính của program scope statement"
+ },
+ {
+  "id": 42361009,
+  "task": "lifecycle-23",
+  "confidence": "medium",
+  "reason": "Đánh giá trạng thái program, thiếu thông tin để kết luận"
+ },
+ {
+  "id": 42361010,
+  "task": "governance-7",
+  "confidence": "medium",
+  "reason": "Quy trình leo thang lên governance board"
+ },
+ {
+  "id": 42361011,
+  "task": "governance-2",
+  "confidence": "low",
+  "reason": "Tái cơ cấu tổ chức gây thay đổi governance"
+ },
+ {
+  "id": 42361012,
+  "task": "lifecycle-11",
+  "confidence": "high",
+  "reason": "Thiết lập PMIS riêng ở cấp program"
+ },
+ {
+  "id": 42361013,
+  "task": "stakeholder-2",
+  "confidence": "high",
+  "reason": "Stakeholder analysis để xây stakeholder engagement plan"
+ },
+ {
+  "id": 42361014,
+  "task": "stakeholder-7",
+  "confidence": "medium",
+  "reason": "Tìm hiểu stakeholder không tham gia trước khi hành động"
+ },
+ {
+  "id": 42361015,
+  "task": "stakeholder-6",
+  "confidence": "high",
+  "reason": "Ghi nhận rủi ro do governance board nêu vào risk register"
+ },
+ {
+  "id": 42361016,
+  "task": "stakeholder-1",
+  "confidence": "high",
+  "reason": "Lập stakeholder register sau khi xác định stakeholder"
+ },
+ {
+  "id": 42361017,
+  "task": "lifecycle-30",
+  "confidence": "medium",
+  "reason": "Rà soát rủi ro sau thất bại kiểm thử"
+ },
+ {
+  "id": 42361018,
+  "task": "lifecycle-22",
+  "confidence": "low",
+  "reason": "Truyền thông thay đổi baseline tài chính cho governance, kiểm toán"
+ },
+ {
+  "id": 42361019,
+  "task": "lifecycle-28",
+  "confidence": "high",
+  "reason": "Chấp nhận fix với điều kiện nộp change request cho CCB"
+ },
+ {
+  "id": 42361020,
+  "task": "lifecycle-12",
+  "confidence": "high",
+  "reason": "Issue giữa hai project được leo thang, họp phân tích issue"
+ },
+ {
+  "id": 42361021,
+  "task": "stakeholder-2",
+  "confidence": "low",
+  "reason": "Ba hoạt động stakeholder engagement theo Standard"
+ },
+ {
+  "id": 42361022,
+  "task": "lifecycle-9",
+  "confidence": "low",
+  "reason": "Câu nhắc hình không có, tên sơ đồ mạng lịch trình"
+ },
+ {
+  "id": 42361023,
+  "task": "strategy-2",
+  "confidence": "low",
+  "reason": "Ước tính thời gian PERT sơ bộ khi khởi tạo program"
+ },
+ {
+  "id": 42361024,
+  "task": "lifecycle-10",
+  "confidence": "low",
+  "reason": "Gộp project để giảm chi phí, chứng minh phụ thuộc lẫn nhau"
+ },
+ {
+  "id": 42361025,
+  "task": "stakeholder-1",
+  "confidence": "high",
+  "reason": "Xác định stakeholder cấp program và từ các project"
+ },
+ {
+  "id": 42361026,
+  "task": "benefits-1",
+  "confidence": "medium",
+  "reason": "Benefits map liên kết benefits với output của project"
+ },
+ {
+  "id": 42361027,
+  "task": "strategy-1",
+  "confidence": "low",
+  "reason": "Nội dung strategic plan của tổ chức"
+ },
+ {
+  "id": 42361028,
+  "task": "strategy-1",
+  "confidence": "low",
+  "reason": "Mục đích tối ưu portfolio"
+ }
+]

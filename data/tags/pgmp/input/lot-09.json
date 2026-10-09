@@ -1,0 +1,1333 @@
+[
+ {
+  "id": 41439087,
+  "text": "A program manager wants to establish temporary workers or contracting as an alternate resourcing mechanism. She senses that the project managers are not convinced and they believe all the work must be done in-house to give them the necessary control. How should the program manager proceed?",
+  "choices": [
+   "A. Get the program steering committee to create a procurement policy that will be applicable for the program",
+   "B. Talk to the project managers and strive to achieve consensus",
+   "C. Call for a bidder's conference so that the vendors can showcase their capabilities to the project managers",
+   "D. Start a pilot project with the new resourcing mechanism and build on the success of the pilot"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 41439088,
+  "text": "A program for data analytics techniques announced a competition to crowd-source some algorithms for use in its products. One of the participants came up with some very original ideas which were raw and untested, but potentially high value. What risk management strategy might be most useful in this case?",
+  "choices": [
+   "A. Ask the participant to develop the ideas fully and come back if they are found successful",
+   "B. Invite the participant to develop the ideas by offering a risk sharing contract",
+   "C. Appoint an expert to further enhance some of the ideas",
+   "D. Buy the rights to the ideas from the participant and initiate a project"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 41439089,
+  "text": "A program manager noticed that one of the projects on the program did not have a baselined scope though it was at the execution stage. What should the program manager do?",
+  "choices": [
+   "A. Ask the project manager to immediately baseline the scope, while continuing work on the project",
+   "B. Discuss the finding and provide assistance if necessary",
+   "C. Let the project manager deal with the issue unless there are any deviations in the plan",
+   "D. Stop work on the project till clarity on the scope can be arrived at"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 41439090,
+  "text": "The work involved in a ____ is usually inter-dependent in a way that the intended outcome requires all the elements to deliver; whereas the work involved in a _____ is grouped together due to some common factor but may or may not be inter-related. Find the appropriate words to fill in the blanks.",
+  "choices": [
+   "A. Programs, Projects",
+   "B. Portfolios, Programs",
+   "C. Projects, Programs",
+   "D. Programs, Portfolios"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 41439091,
+  "text": "During a particular year, the organization's strategy has changed as a result of getting acquired by a bigger company. A program is in progress, and is on target to deliver the benefits and has only about 6 months left. However, the program is not in alignment with the new strategy of the organization. What should the program manager do?",
+  "choices": [
+   "A. Evaluate the options to continue, stop or scale down the program and approach the program steering committee to ask them to make a decision",
+   "B. Prepared a revised business case and justification to continue the program",
+   "C. Stop work on the program as it is no longer aligned with the strategy",
+   "D. Continue with the program until the management of the new organization conveys otherwise"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 41439092,
+  "text": "A project within a program is likely to be late by 2 months. This delay is likely to have a snowballing effect on other components. The program manager and the project manager are discussing the issue and exploring suggestions to address this. Which of the following is the most useful suggestion?",
+  "choices": [
+   "A. Find the best way to reset stakeholder expectations about the project and the overall program",
+   "B. Check if some of the work can be outsourced under stringent time lines",
+   "C. Find ways to assign resources from other components to the troubled project to speed it up",
+   "D. Check if there are ways to quickly unblock the work of other components while looking to speed up the troubled project"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 41439093,
+  "text": "Stakeholder engagement is a joint responsibility of the program steering committee, program manager and the project managers. Which is the best set of focus areas for stakeholder engagement by the program manager?",
+  "choices": [
+   "A. Identification, assessing and establishing their interest in the program, agreement about sought benefits and resources, determining the engagement strategy",
+   "B. Identify the only a few key stakeholders and prioritize the engagement approach, engage them using multiple channels",
+   "C. (Along with the project managers) identify the stakeholders, determine who is a supporter and who is resisting, start with the supporters and then address the resistors",
+   "D. Identify stakeholders, establish a relationship with the stakeholders, determine how to make each stakeholder happy with the outcomes of the program"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 41439094,
+  "text": "One of the projects in the program is frequently getting affected by lack of support from IT function. The project manager has escalated this to the program manager. Who is primarily responsible for solving this problem?",
+  "choices": [
+   "A. Program manager",
+   "B. Program sponsor",
+   "C. Manager of IT function",
+   "D. Concerned project manager"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 41439095,
+  "text": "A program has started initiating the components and they have started delivering the work and benefits have started to accrue to the program. At this time, what should the program manager focus on?",
+  "choices": [
+   "A. Ensuring that the benefits realization is as per expectations and taking steps to address any deviations",
+   "B. Exercising tight control over and managing the changes at the program level",
+   "C. Issuing charters to the components and signing off on the closure reports",
+   "D. Spending quality time with the team, ensuring they are actively engaged and enabled"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 41439096,
+  "text": "A program is in the Definition phase and the program management plan is being prepared. The program manager performed an assessment of the risks early on during the planning process. She then involved a broad spectrum of stakeholders in the risk identification, risk analysis and response planning. The initial set of project level risk registers have been prepared and reviewed. The frequency and mechanisms for risk monitoring and control at project and program level have also been defined. What seems to be the biggest missing element in this process so far?",
+  "choices": [
+   "A. There needs to be an explicit plan for unknown unknowns and appropriate workarounds need to be identified",
+   "B. The program manager needs to map the risk profile of the program with the risk tolerance of the organization",
+   "C. The program sponsor needs to be involved in the risk identification as well",
+   "D. The program manager ought to have conducted a third party independent assessment of the risks on the program"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 41439097,
+  "text": "What can be inferred from the program management plan once it has been baselined?",
+  "choices": [
+   "A. A blueprint to prevent and manage changes to the scope of the program and its projects",
+   "B. The bare minimum expectations that can be kept about the program and its components. Ideally, the program should try to deliver more than the baseline.",
+   "C. The correlation between the work of the components and the desired benefits",
+   "D. The agreement between the program and its stakeholders about the outcomes and benefits that the program will deliver"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 41439098,
+  "text": "In a program led by NGO's working for common social benefit under funding received from donors, what is the most likely role of the local government authorities?",
+  "choices": [
+   "A. Performing organization",
+   "B. Provide governance structure for the program",
+   "C. Sponsor",
+   "D. Providing constraints and local expertise"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 41439099,
+  "text": "Project A and Project B are part of a program with a number of inter-dependent activities. One of the deliverables from Project A is delayed and the project manager of project A has asked for help. How can the program manager help expedite project A?",
+  "choices": [
+   "A. From the contingency reserves, announce an incentive for people willing to work extra hours to complete the work",
+   "B. Analyze the casues of the delay and work with the manager of project A to identify options to speed up the delivery",
+   "C. Identify idle resources from the program's resource pool and temporarily assign them to project A",
+   "D. Ask the manager of project A to identify activities that can be performed in parallel so that they can be fast tracked"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 41439100,
+  "text": "How does the project level WBS add value for a project that is being done as part of a program, which already has a program WBS created?",
+  "choices": [
+   "A. To facilitate make-or-buy analysis",
+   "B. To better organize the work of the projects into smaller, more manageable units that the project manager can keep track of",
+   "C. To meet the requirements of relevant standards",
+   "D. To illustrate the dependencies among the projects and sequence them"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 41439101,
+  "text": "A company is working on a new technology that will produce operational efficiencies. The discovery and planned rollout is being considered as a program. What should be the first step to kik off this activity?",
+  "choices": [
+   "A. Ensure the program aligns with organizational strategy",
+   "B. Assign a program manager",
+   "C. Determine significant milestones and prepare a business case",
+   "D. Check the level of risk involved and if it is in line with the organization's risk threshold"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 41439102,
+  "text": "M-series is a music company. It was extremely popular at one time, but is losing ground to competitors quickly. The key issue according to the portfolio managers is that M-series has failed to expand its appeal to the Gen Y audience. There is a program to try and improve its ratings and make it a competitive brand again. The program team wants to dig deep and figure out the best way to appeal to this audience. What is the best way to figure out activities that will help achieve this goal?",
+  "choices": [
+   "A. Getting expert musicians together to generate more content which appeals to the target audience",
+   "B. Conduct interviews with randomly selected representatives of Gen Y",
+   "C. Open house brainstorming sessions with stakeholders from different age groups",
+   "D. A structured questionaire which is administered through the social media"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 41439103,
+  "text": "A program is up against a rigid budget constraint. The program manager and the project managers agreed that creating a tool for monitoring and optimizing program finances (especially the shared resources) will be helpful for the program. How should the chartering process work for this project?",
+  "choices": [
+   "A. A separate charter is not needed as it is an internal tools project",
+   "B. Provide a vision statement for the tool and start the work",
+   "C. The charter should be issued only after the program steering committee approves it",
+   "D. The project will create a tool for optimizing program finances"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 41439104,
+  "text": "A program management plan will contain a number of subsidiary plans. Which of the following is not likely to be a part of the program management plan?",
+  "choices": [
+   "A. Communications management plan",
+   "B. Management plans for each of the component",
+   "C. Governance plan",
+   "D. Benefits realization plan"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 41439105,
+  "text": "A company is working on advanced telemetry for an early warning system for severe weather conditions. The program will cover a geographically diverse and large target area. Which of the following components should probably not be included in the program?",
+  "choices": [
+   "A. An disaster recovery unit to manage relief operations after adverse weather events",
+   "B. An operational unit to process the data collected by the systems and issue severe weather warnings when required",
+   "C. Installation and commissioning of the radar systems integrated with computing resources to process the readings",
+   "D. A project to create an algorithm that will correlate the data points and the output parameters"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 41439106,
+  "text": "The output of Project B is a critical input for project A. Project A and B are both part of the same program. The output of Project A is delayed, which causes resources from Project B to remain idle. Who is primarily responsible for solving this problem?",
+  "choices": [
+   "A. Program Manager",
+   "B. Manager of Project A",
+   "C. Manager of Project B",
+   "D. The functional managers"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 41439107,
+  "text": "Should the non-project work (\"other work\") be included in the Program WBS (P-WBS)?",
+  "choices": [
+   "A. It should be included. The P-WBS should cover all the work of the program at a high level",
+   "B. It should not be included. The P-WBS only focuses on project level deliverables.",
+   "C. It should be decided by the program manager and the managers of the projects and the other work",
+   "D. It depends upon whether the other work contributes to the \"value creation\" or \"value realization\""
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 41439108,
+  "text": "Due to a resource crunch, a program needs to re-prioritize the work on various components. Who is primarily responsible for determine the priorities?",
+  "choices": [
+   "A. Program Sponsor",
+   "B. Program Manager",
+   "C. Program Team",
+   "D. Program steering committee"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 41439109,
+  "text": "The CFO of a large company decided to embark on a program to deploy the temporary and static surpluses through a more proactive investment strategy to generate higher returns. Which of the following benefit measures is best to assess the success of the program?",
+  "choices": [
+   "A. Planned vs. actual returns on investment",
+   "B. Number of investments that made money vs. those that lost money",
+   "C. Current and forecast return generated on the invested surplus",
+   "D. Risk adjusted return on investment compared with benchmarks"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 41439110,
+  "text": "A project is part of a program. The project manager has used many different techniques to identify and analyze risks and plan responses. She has further provided for contingency reserves. However, the project manager feels (based on sixth sense) that there are probably more risks that could arise during the project execution. What would be the program manager's view about this while finalizing the plan?",
+  "choices": [
+   "A. To create workarounds to be deployed in case some unidentified risk occurs",
+   "B. Tell the project manager not to worry too much; if an unknown risk occurs it is always possible to raise a change request to cover for the impact",
+   "C. Use the program level contingency reserves can be utilized for these",
+   "D. Set aside some management reserves to be used in case an unknown risk event occurs"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 41439111,
+  "text": "A program charter was drafted by a new program manager and sent for review to the PMO. It clearly articulated the justification for the program along with the vision for the program. It contained a high level scope statement along with desired outcomes and benefits. It also outlined a high level plan in terms of cost, time and an initial assessment of stakeholders and risks. Which is the most important piece of information that may be missing from this?",
+  "choices": [
+   "A. The details about the components that will be initiated and how they will be inter-connected",
+   "B. Technical approach",
+   "C. Strategic fit of the program",
+   "D. Information about how the program should be governed"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 41439112,
+  "text": "A program has recently concluded and is in the transition phase of the program life-cycle. What is the best description of what should be transitioned during this phase from the Program team to the receiving organization?",
+  "choices": [
+   "A. Program Deliverables, Program Benefits, Program Knowledge",
+   "B. Program Resources, Lessons learned, Financial surplus",
+   "C. Programs assets, Program Budget, Program Deliverables",
+   "D. Lessons learned, Program Budget, Program Deliverables"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 41439113,
+  "text": "Program management is trying to meet program requirements and to obtain benefits and control not available by managing the projects individually. In trying to achieve greater benefits and control, which of the following is the least beneficial to the program manager?",
+  "choices": [
+   "A. Resolving resource constraints and/or conflicts affecting multiple projects in a program",
+   "B. Responding proactively to risks affecting multiple components of the program",
+   "C. Ensuring the compliance with the local and governmental regulations",
+   "D. Aligning overall program activities with the strategy of the organization"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 41439114,
+  "text": "What role does the program manager play in the quality assurance activities on each project?",
+  "choices": [
+   "A. The program manager should establish guidelines and processes. They should look to optimize and rationalize processes and resources across projects.",
+   "B. The program manager is responsible for consolidating and reporting on the metrics and control charts at program level",
+   "C. The project managers are responsible for QA processes in their own projects. The program manager should only ensure adequate involvement from the program management office in this process",
+   "D. The program manager is responsible for overall quality, so they need to act as the final reviewer and arbiter of all project level quality assurance activities."
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 41439115,
+  "text": "The most beneficial role for the program manager in change management activities at component level is:",
+  "choices": [
+   "A. To audit that the defined process is followed",
+   "B. To escalate the change requests to the Program steering committee",
+   "C. To initiate changes that enhance the ability to achieve the overall program objectives",
+   "D. To prevent changes as far as possible to avoid disruption to the plan"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 41439116,
+  "text": "A program contains several projects with inter-dependencies. One of the issues in arriving at a program schedule is that some projects are \"research oriented\" and the project managers are unable to provide definitive estimates. How should the program manager proceed?",
+  "choices": [
+   "A. Ask the project managers of research projects to use bottom-up estimation to improve the confidence level in the estimates",
+   "B. Ask the project manager to submit a coarse estimate and use rolling wave planning",
+   "C. Plan for an estimation workshop with all the project managers and try to get to more reliable estimates",
+   "D. Proceed with the planning for the rest of the program considering only those projects whose estimates are available"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 41439117,
+  "text": "A program has a number of stakeholders and they refer the program's progress reports frequently. What is the least appropriate mechanism for information distribution about the program?",
+  "choices": [
+   "A. An email attachment containing the details of progress on all the tasks on the components and the overall program",
+   "B. By using social media tools",
+   "C. As a formal communication from the Program office to the relevant stakeholders",
+   "D. An online program dashboard summary page that refreshes automatically as data is added"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 41439118,
+  "text": "A project manager in consultation with the program manager decided to outsource a complex piece of work on her project, as the project did not have in-house technical expertise. As a result of this change, the program had to shell out additional funds. Another risk was added to the program risk register pertaining to the financial stability and reliability of the vendor. This is an example of:",
+  "choices": [
+   "A. Secondary risk for the program",
+   "B. Residual risk for the project",
+   "C. Unknown unknown or black swans",
+   "D. Peripheral risk for both project and program"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 41439119,
+  "text": "A large manufacturing company is working on a program for roll-out of an ERP system across the board. This has widespread impact on all functions. The program is sponsored by a senior executive and the program manager has been appointed. The program manager fears that there would be a lot of reservations among the different departments, especially at mid-management and lower levels. The extent of change they will experience is quite large. What of the following ways may be most effective in reducing the resistance to change?",
+  "choices": [
+   "A. Ask the CEO to announce the change and lend his personal brand to the initiative",
+   "B. Start with a small scale pilot roll out and showcase the success of the pilot",
+   "C. Establish small task forces across functions to drive the change",
+   "D. Start a visible communication campaign about the expected benefits to the organization"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 41439120,
+  "text": "A company working in the metals and minerals industry has been acquired by another company. The ongoing programs in the acquired company are being reviewed for alignment with the overall group strategy. Which of the following documents will be least useful in this process?",
+  "choices": [
+   "A. Business case",
+   "B. Benefits realization plan",
+   "C. Governance plan",
+   "D. Program Charter"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 41439121,
+  "text": "A program relies heavily on vendors for completing different components. The components need to integrate together for the product suite to come together. The vendor establishments are in 5 different locations. The program is approaching a deadline and the deliverables from components are not integrating properly. None of the teams is taking ownership of resolving the issues. Which of the following is most likely to be useful in this situation?",
+  "choices": [
+   "A. Adding penalty clauses to the contracts of all the vendors in case the product is not successful",
+   "B. Co-locating the teams for a short period till issues are resolved",
+   "C. Increase the contingency reserves with regard to cost and time in anticipation of over-runs",
+   "D. Call for an emergency meeting of all the project managers and issue a deadline"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 41439122,
+  "text": "A program is being executed largely with the help of vendors at offshore locations. Couple of vendors have complained that the business representatives have not been responsive about queries related to specifications. What should the program manager do?",
+  "choices": [
+   "A. Use the program sponsor's political clout with the business functions to coax the business to be more responsive",
+   "B. Ask the vendors for more details about their queries and to quantify the impact of delay in responses",
+   "C. Organize a meeting of the business representatives with the vendors to gain more clarity",
+   "D. Ask the concerned project managers to help the vendors"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 41439123,
+  "text": "A program is designed to release a suite of products related to processing of complex data consists of multiple projects, with complex integrations and interfaces between them. A couple of the projects are completed and ready for deployment. The project managers are keen to release their products and get market feedback, but the program manager feels it is better to release together. The decision is referred to the program steering committee. How should the decision be taken?",
+  "choices": [
+   "A. It is advisable as per Agile principles to unlock value to the market as fast as possible, hence releasing early is advisable",
+   "B. It is inappropriate to release the products piecemeal as it might confuse the market - hence it is better to wait",
+   "C. The early products can be released as unsuported or \"beta\" offerings to garner feedback",
+   "D. Consider the relative benefit of early release of value against the cost of incurring the testing and release overhead"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 41439124,
+  "text": "Two projects were part of a program. They both produce some intermediate artifacts that come together to deliver the output for the program. The integration tests failed leading to a blame game. Both projects are adamant it is not their fault. What is the best course of action for the program manager, who is keen to solve the problem and move forward?",
+  "choices": [
+   "A. The project managers along with a program team member should draw up an Ishikawa diagram to try and identify a root cause",
+   "B. The QA managers of the two projects need to look at the Pareto diagrams for their projects to prioritize the best course of action",
+   "C. The program manager needs to review the process flowchart to discover where the process is lacking",
+   "D. The project managers should be draw up a Control or run chart to identify the extent of the quality issues"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 41439125,
+  "text": "A quality control engineer has risen through the ranks of a company to become a project manager and has recently been selected to lead a program. Which of the following issues should be her topmost priority?",
+  "choices": [
+   "A. One of the projects needs help on prioritizing the quality related issues",
+   "B. Most projects are meeting the quality goals but one project has been a consistent outlier",
+   "C. Recruiting good test engineers for the project teams has been a challenge",
+   "D. The specifications for one of the products have changed requiring a recalibration of the test equipment"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 41439126,
+  "text": "A program manager has just received approval for the program charter and is about to start the planning process. Which of the following steps should be done first?",
+  "choices": [
+   "A. Prepare the project level plans first, then aggregate them to form the program management plan",
+   "B. Proceed to define the scope of the program and how it should be managed",
+   "C. Quantify the potential benefits from the program compared with the likely cost and see if the program is justified",
+   "D. Prepare a plan that achieves the best balance between scope, cost and time objectives"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 41439127,
+  "text": "A program for a petroleum company is targeting reduction in effluents discharged from the factories to meet stricter compliance requirements. The program generated a set of deliverables and is about to close. Which of the following would be LEAST important artifact from the closure processes?",
+  "choices": [
+   "A. Acceptance report from the relevant compliance authority",
+   "B. Cost-benefit analysis of the program",
+   "C. Lessons Learned",
+   "D. Training plan for the factory employees"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 41439128,
+  "text": "A program has been initiated by a gas distribution company to build a complex grid based distribution system for natural gas to commercial and domestic customers. There are multiple components in this program with complex dependencies. The program manager finished writing a Program Scope Management Plan based on a template provided by the Program Management Office. How should this plan be used by the project managers?",
+  "choices": [
+   "A. To validate the scope of the program once it is ready to be closed and transitioned",
+   "B. Based on this plan, they can determine the scope statement for their project",
+   "C. To determine how the program scope and that of its components will be managed",
+   "D. To build the Program WBS together with the Program team"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 41439129,
+  "text": "A program is about to close and transition to the function which will oversee the operations. As part of the transition, it is needed to conduct training for the staff members and develop a system for managing the inventory and supply chain. Which is the most logical source for the budget needed for these activities?",
+  "choices": [
+   "A. As part of a separate entity that is explicitly meant to track the transition",
+   "B. The budget of the function that is taking over",
+   "C. The overall portfolio budget",
+   "D. The program budget"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 41439130,
+  "text": "Project A and Project B are part of a program with a number of inter-dependent activities. One of the deliverables from Project A is delayed. What should the program manaer do first?",
+  "choices": [
+   "A. The program manager should work with the manager of project B to try and crash the schedule to absorb the delay",
+   "B. The program manager should analyze the impact on the overall program schedule and flag a risk to the program steering committee",
+   "C. The program manager should analyze the impact of the delay on the program's benefits",
+   "D. The program manager should work with the manager of project A to expedite the completion of project A"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 41439131,
+  "text": "A product manager for a project within a program suggested a modification that would reduce the development cost. However, it will increase the operations and maintenance cost slightly. An older version of the product is in service at present. How should this request be handled?",
+  "choices": [
+   "A. Refuse the change as increase in operational cost will more than offset the saving in development cost",
+   "B. Submit a change request and discuss the change with operations to come up with mitigating actions",
+   "C. Approve the request as it reduces the program cost",
+   "D. Ask the project manager for the concerned product to give a recommendation"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 41439132,
+  "text": "Which is the most complete and correct set of activities that should be performed during a program's closure?",
+  "choices": [
+   "A. Approve component transitions, document lessons learned, archive project and program records, close contracts and take acceptance from the customer",
+   "B. Close the program, approve component transitions, deliver required reports along with financial and benefit realization reports and document lessons learned",
+   "C. Close projects and document lessons learned, produce financial and benefit realization reports, close contracts and release the resources of the program",
+   "D. Approve closure and transition of components, close contracts, perform financial closure, plan for benefits transition and sustainment and create lessons learned"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 41439133,
+  "text": "A multi-year program ran into budget constraints during a particular financial period due to the limitations of the funding organization. The program manager would like to prioritize funds allocation based on the value delivered against the plan. Which of these would be the best metrics to use as the basis for allocation?",
+  "choices": [
+   "A. Earned value",
+   "B. S-curves",
+   "C. Milestones completed",
+   "D. Trends and Forecast reports"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 41439134,
+  "text": "A new drug program for a pharmaceutical company is in its second year. The program level CPI was reported to be 0.78 and SPI is 1.22. Which of the following is most likely to have caused this?",
+  "choices": [
+   "A. Some of the dependencies between the projects may not have been met",
+   "B. The projects may have used crashing techniques to save time",
+   "C. The projects may have used less expensive resources to save on cost",
+   "D. The cost of man-power or materials may have gone up"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 41439135,
+  "text": "A project within a program is likely to get delayed, causing a cascading effect on other components. The project manager in consultation with the program team has come up with a mitigating plan that needs to be presented to the Program steering committee. Who should be the primary communicator for this?",
+  "choices": [
+   "A. Chairperson of the Program steering committee",
+   "B. Manager of the concerned project",
+   "C. Program Sponsor",
+   "D. Program Manager"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 41439136,
+  "text": "A large aerospace component design program is in vendor selection proces. A number of projects require similar parts made of the sub-assemblies, which are relatively standardized and have large number of suppliers in the market. Which of the following vendors should the program manager consider?",
+  "choices": [
+   "A. Vendor D, which has the best reputation for after sales service",
+   "B. Vendor C who has manufacturing facilities near all locations that the projects have and can offer volume discounts",
+   "C. Vendor A, who seems to have the confidence of most of the project managers",
+   "D. Vendor B, who has the lowest price point"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 41439137,
+  "text": "Which of the following is the most important activity for a program manager?",
+  "choices": [
+   "A. Creates a framework to plan for and track the delivery of benefits to the organization",
+   "B. Communicates aggressively using appropriate escalation paths about the risks involved in the components and the overall program",
+   "C. Balances the RoI from different business areas and determines which areas the organization should invest in",
+   "D. Create detailed plans across the different components and makes sure that the appropriate level of oversight is given to the components"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 41439138,
+  "text": "All the components of the program have been closed, the lessons learned were documented and formal sign-offs on the deliverables were received. The contracts and financials were audited and closed as well and the team members released. Which of the following is the most important additional step that needs to be performed for the program to be formally closed?",
+  "choices": [
+   "A. Provision has to be made for the transition and sustenance of the benefits",
+   "B. The payments for the vendors need to be released",
+   "C. Formal acceptance is required not just on the deliverables, but also the benefits delivered",
+   "D. The skill sets of the team members need to be updated in the resource database"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 41439139,
+  "text": "A program is under severe cost constraints and the program manager would like to ensure targeted allocation of the funds to the projects within the program. Which of the following techniques is most helpful for the program manager exercise close control over program costs?",
+  "choices": [
+   "A. Hedging and forward contracts",
+   "B. Work authorization system",
+   "C. Quality management frameworks",
+   "D. Program change control system"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 41439140,
+  "text": "A technology startup company is famous for innovation and is known for coming up with and working with path-breaking programs. A progam manager is working on a new idea and is seeking a charter. What is the most important step for the program manager at this stage?",
+  "choices": [
+   "A. Identify potential sponsors for the idea",
+   "B. Identify what resources and skillsets would be needed",
+   "C. Prepare a draft proposal and solicit some feedback",
+   "D. Creating a water-tight business case that outlines the resourcing requirements and likely benefits"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 41439141,
+  "text": "Many of the projects in a construction program rely on the procurement of steel of various grades. This is an important part of the materials budget for most of the components. The parts are standardized and are procured using open bidding through a web portal. It is seen that the cost of steel is rising and is likely to rise further and vendors are requesting for an increase in the price upper limit specified in the system. What should be done in this case?",
+  "choices": [
+   "A. Discuss with the vendors and inform the project managers and the procurement team about the situation",
+   "B. Check the cost buffers on the projects to ensure they can accommodate an increase in material cost",
+   "C. Request the Centralized procurement team for their opinion",
+   "D. Refuse the request so long as suppliers are ready to bid"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 41439142,
+  "text": "A fast food restaurant chain is expanding into a new geography. There are a number of projects to set up the restaurants, supply chain and manage the operations. All of these components share a common area budget though they are not necessarily related to each other in a significant way. This is best described as?",
+  "choices": [
+   "A. Portfolio",
+   "B. Project",
+   "C. Program",
+   "D. Operation"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 41439143,
+  "text": "A program has several projects and a couple of operations. It has been in progress for a while and the processes across the different components have evolved and matured over a period of time. A new manager was recently appointed as the manager of the portfolio and has taken over program sponsor responsibilities. She has directed the program manager to \"increase the focus on quality\". Which of the following techniques might be most helpful for the program manager in this scenario?",
+  "choices": [
+   "A. Follow an Agile life-cycle which allows more frequent checks",
+   "B. Introduce a culture of quality by applying Kaizen principles",
+   "C. Increase the investment in testing",
+   "D. Try to reduce the cost of quality across the projects"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 41439144,
+  "text": "Feasibility studies for a project being initiated as a part of the program whose RoI and marketability have already been established should consider which of the following?",
+  "choices": [
+   "A. Checking if there is a valid business case behind the project",
+   "B. Ensuring that the necessary resources and capabilities are present within the organization",
+   "C. Ensuring that there is a qualified project manager available",
+   "D. Checking if the benefits projected will eventually translate into reality"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 41439145,
+  "text": "A pharmaceutical company is planning to consolidate all the projects related to drug discovery into a single organizational entity with an executive in-charge. This will be most likely to be managed as a:",
+  "choices": [
+   "A. Operation",
+   "B. Program",
+   "C. Portfolio",
+   "D. Product line"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 41439146,
+  "text": "What should be the role of a program manager in risk management processes within a program?",
+  "choices": [
+   "A. Program manager focuses only on the risks escalated from the project to program level. Otherwise, the project managers basically manage risks on the program.",
+   "B. Risks are identified by the project managers and responses are developed at the program level",
+   "C. Program manager focuses more on risks impacting overall program - this may overlap with some project level risks",
+   "D. The program level risk register is essentially a master copy of all the project level risk registers including time allocation, cost, and resources needed to established responses"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 41439147,
+  "text": "A research program identified a large number of opportunities that could be developed as potential offshoots in the future. What is the best course of action for harnessing the opportunities given that the budget for the program itself may be limited?",
+  "choices": [
+   "A. Use the opportunities to offset some of the threats that the program faces",
+   "B. Work with the program team and project managers to build strong business cases for the opportunities identified",
+   "C. Request the program steering committee to spawn off separate projects or programs in light of these opportunities",
+   "D. Draw upon contingency funds to help realize additional benefits by realizing some of the opportunities"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 41439148,
+  "text": "What should be part of a program level resource plan?",
+  "choices": [
+   "A. Policies around compliance, diversity, equal opportunity, etc.",
+   "B. Job descriptions and skill sets for the projects",
+   "C. Optimal utilization of shared resources across the program management plan",
+   "D. Identifying clear reporting lines for all the project's human resources"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 41439149,
+  "text": "While deciding whether or not to approve the charter for a component within a program, which should be the most important criterion?",
+  "choices": [
+   "A. Contributes to delivering additional benefits to the program",
+   "B. Reduce the cost of the overall program",
+   "C. Having dependencies with other components within the program",
+   "D. Having shared resources with other components within the program"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 41439150,
+  "text": "A public facing web portal containing many components is about a week from launch. During operational readiness assessment, a defect was discovered which will make it vulnerable to security breaches under certain circumstances. How should this situation be dealt with?",
+  "choices": [
+   "A. The marketing department in consultation with the program team as it is a public facing launch",
+   "B. The program steering committee should decide in consultation with the influential external stakeholders",
+   "C. The program manager should decide how to proceed in consultation with the program steering committee and technical expert",
+   "D. The technical expert should determine the way forward in consultation with the program manager and program steering committee"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 41439151,
+  "text": "A large program involves laying down, interlinking and commisioning undersea pipes. The program scope statement has just been approved. The Program WBS has been prepared and the program team along with the component managers have agreed upon the allocation of work among various components. What is the next logical step for the program manager and the component managers?",
+  "choices": [
+   "A. Determine the schedule, cost and resource requirements and the implications on risk and quality",
+   "B. Determine the RoI for the agreed scope based upon an estimation of the time required and cost",
+   "C. Baseline the scope and start the planning processes relate to scheduling, budgeting and risk planning",
+   "D. Get stakeholder approval on the schedule, cost and scope, then move on to planning the resources and procurements related to the projects and the program"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 41439152,
+  "text": "A program in a company with a diversified portfolio is meant to come up with a cross-cutting reporting framework. The program is cross-functional and crosses company boundaries as well. What qualities and capabilities would be most helpful for the program manager?",
+  "choices": [
+   "A. Expertise in general management, ability to command respect",
+   "B. Pleasant personality, hard to say no to",
+   "C. Negotiation skills, ability to create win-win situations",
+   "D. Influencing without authority, encouraging others to contribute"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 41439153,
+  "text": "A program is in the \"Program Delivery\" phase of the program life-cycle. At this time, how should any new components be initiated?",
+  "choices": [
+   "A. In the same sequence, and as per the schedule laid out in the program management plan right in the beginning",
+   "B. By taking prior approval of the program steering committee",
+   "C. After validating that component level business cases are validated",
+   "D. Checking that the components will end up contributing to the benefits of the program"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 41439154,
+  "text": "A company manufacturing automotive components issued the charter and appointed a program manager for an ambitious program to double the topline in 2 years. The program manager is now trying to figure out the details and the components needed to achieve the results. Which technique will help the program manager in this case?",
+  "choices": [
+   "A. Establish a task force to examine the feasibility of the target",
+   "B. Start a geographic expansion inititive to get into newer markets",
+   "C. Perform a SWOT analysis to understand the strengths and the opportunities",
+   "D. Go for deeper price cuts to expand market share that will ultimately result in higher volumes"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 41439155,
+  "text": "A program has many projects which are inter-dependent. The program manager has determined a critical path for the overall program and found that 4 projects viz. W, X, Y and Z are critical for the program schedule and occur in sequence. The projects use probabilistic estimation techniques and have expected duration as 10, 12, 14 and 16 weeks respectively. The standard deviations are 4, 6, 8 and 10 weeks respectively. From a scheduling perspective, which project should the program manager be most concerned about?",
+  "choices": [
+   "A. Project W",
+   "B. Project Y",
+   "C. Project X",
+   "D. Project Z"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 41439156,
+  "text": "A program has just received a charter. The program manager appointed a few project managers and wants to initiate a few of the components. One of the project managers asked for a project charter. Which of the following is the most appropriate statement about this situation",
+  "choices": [
+   "A. A project charter may be necessary only if the business case for the project has not been approved yet",
+   "B. Instead of separate charters for the projects, the program charter itself can be modified to include all the components",
+   "C. A project charter is needed to formally authorize each project and provide buy-in to apply organizational resources to it",
+   "D. A separate project charter is not required for every component as long as the overall program has been chartered"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 41439157,
+  "text": "A program manager is anxious that the initial risk identification for the program is as thorough as possible. Which of these techniques would be most helpful in this regard?",
+  "choices": [
+   "A. Use techniques like Ishikawa diagrams to identify risks",
+   "B. Ask the project managers and team members to prepare mind maps",
+   "C. Conduct an anonymous risk identification exercise with a wide variety of stakeholders using the Delphi technique and consolidate the findings",
+   "D. Ask the project managers to prioritize the risks and focus on the top 20% as per the Pareto principle"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 41439158,
+  "text": "A project manager who was a stickler for details has recently been promoted to a program manager position. She is now managing a program comprising of 12 projects spread across 3 locations and a combined staff of over 90. What is the level of detail that should be included in the program management plan?",
+  "choices": [
+   "A. The plans should be very high level. Details should be linked to the project management plans",
+   "B. The plan should be as detailed as possible. It should guide all the activities across the projects",
+   "C. The level of detail in the plan should be such that the program team can effectively handle",
+   "D. The PMO should provide guidance about the level of detail in the plan"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 41439159,
+  "text": "A product created by one of the projects within a program is ready for deployment. During the transition process, the manager of the operations team responsible for taking over the product sales and service suggests that some extra expenditure on creating a spares supply chain would greatly increase the service experience and drive future sales. What should the program manager do with this request?",
+  "choices": [
+   "A. Pass on the suggestion to the operations team which is taking over the product and let them decide",
+   "B. Close the project that created a product, but raise a request for a new project to set up the supply chain",
+   "C. Grant the request only if the project or program level contingency reserve can cover the additional spend",
+   "D. Create a change request and work with the project and operations manager to quickly put together a business case"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 41439160,
+  "text": "A program has recently been chartered and is in early stages of planning. There is a high degree of variability and multiple parameters that could impact the program. A program manager and the project managers on the team have been asked by the program sponsor to compute the overall contingency reserve requirements for the program. How should they go about this task?",
+  "choices": [
+   "A. Use techniques like Monte Carlo simulation to evaluate the likely spread of outcomes and provide guidance",
+   "B. Add up the contingency requirements of all the individual projects and then add a program level buffer",
+   "C. Categorize the overall risks using a probability-impact matrix and use it to prioritize which risks should be included in the computation",
+   "D. Perform an expected monetary value calculation for all the projects to determine the likely impact of all the risks"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 41439161,
+  "text": "Zero defects is a quality philosophy that requires clearly identifying what the customer wants and providing it the first time, without having to repeat or rework. In which of the following programs would this be the MOST important goal?",
+  "choices": [
+   "A. A program to roll out an enterprisewide resource planning (ERP) system across the company",
+   "B. A program to build embedded software for medical devices used in life saving surgeries",
+   "C. A program for utilizing data analytics services to program traffic signals",
+   "D. A program to integrate the billing systems in use by a large telecom operator"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 41439162,
+  "text": "What is the difference between projects, programs and portfolios?",
+  "choices": [
+   "A. A project provides benefits to a program, which coordinates them to create a strategic value, whereas portfolios effectively maintain and sustain the benefits for the organization",
+   "B. A portfolio create a program for effectively delivery management of projects, which then deliver the strategic benefits",
+   "C. A project provides a set of deliverables to a program which integrates them to create benefits which flow into the portfolio which is of strategic importance to the organization",
+   "D. A projects goal is to create something of temporary and unique value, whereas a program takes over what a project creates and a portfolio elevates it to a strategic level"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 41439163,
+  "text": "A manufacturer of high end watches based in Switzerland is planning to enter a new market. What should be the first step for the company on this venture?",
+  "choices": [
+   "A. Establish a joint venture with a local company",
+   "B. Prepare a business case",
+   "C. Undertake a detailed market study",
+   "D. Issue a program charter and appoint a program manager"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 41439164,
+  "text": "A company is looking to reduce its operational expenses by half in view of a tough financial year and mounting debt. Which of the following programs will help achieve this?",
+  "choices": [
+   "A. Undertake a review of the portfolio and the competitive positioning of the company",
+   "B. Find the worst performing businesses in the past year and exit those businesses",
+   "C. Carry out a cost audit across the company to find out where the money is being spent",
+   "D. Start separate programs in each portfolio to look at opportunities to cut costs"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 41439165,
+  "text": "In what way does the program architecture help in benefits management?",
+  "choices": [
+   "A. It documents the initial understanding of the businesss requirements and expectations from a program",
+   "B. It helps establish a mechanism for monitoring and controlling the program",
+   "C. It helps correlate the components and how they contribute to the benefits",
+   "D. It is helpful in understanding the technology and design principles for the program"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 41439166,
+  "text": "Who should attend the closure meeting for a program?",
+  "choices": [
+   "A. Select team members, project managers, program manager, program sponsor",
+   "B. Select team members, project managers, a neutral facilitator, program steering committee",
+   "C. All team members, project managers, program manager, program sponsor",
+   "D. A Program manager, project managers, PMO representative, select stakeholders"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 41439167,
+  "text": "A program consists of 5 projects and 2 operations. Who should be responsible for the identification of risks on the program?",
+  "choices": [
+   "A. The program managers and the project managers",
+   "B. All the stakeholders of the program",
+   "C. The program manager, the project managers and the operations managers",
+   "D. The program team"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 41439168,
+  "text": "Which of the following is the most appropriate sequence for closure activities on a program?",
+  "choices": [
+   "A. Closure of projects, Program Closure, Transition and benefits sustainment, Financial closure, Closing Program Procurements",
+   "B. Closure of projects, Closing Program Procurements, Transition and benefits sustainment, Financial Closure, Program closure",
+   "C. Transition and benefits sustainment, Closure of projects, Financial closure, Closing Program Procurements, Program Closure",
+   "D. Program Closure, Closure of projects and operations, Transition and benefits sustainment, Closing Program Procurements, Financial Closure"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 41439169,
+  "text": "A newly initiated program has most of its work components being executed in foreign countries. Which of the following would be the biggest concern for the program manager?",
+  "choices": [
+   "A. Finding the best set of partners for the work components in foreign countries",
+   "B. Ensuring that the right resources are available",
+   "C. Ensuring that the scope of the work components being executed remotely are broken down using the WBS",
+   "D. Optimize the program's ROI by shutting down the components with lower RoI and initiating those with higher RoI"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 41439170,
+  "text": "The program manager was sitting on the change control board for a project within the program. They were evaluating a change request that was within the reserves of the project and the project manager was in favor of moving forward. What else should be the program manager be worried about?",
+  "choices": [
+   "A. Adherence to organization wide processes in change and configuration management",
+   "B. Evaluating the impact on any other program component",
+   "C. The change should contribute to the benefits that the program is trying to deliver",
+   "D. Making sure the change is aligned with the strategy of the organization"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 41605001,
+  "text": "A program manager looks after a program comprising 15 projects at different sites spread out geographically over different continents. The program manager regularly holds a “staff meeting” where she calls all the project managers to share information about the program and topics of general interest. Which of the following is the LEAST suitable agenda item for such a staff meeting?",
+  "choices": [
+   "A. Demonstration of a tool built by Project C to carry out non-destructive testing of micro-electronic parts, which may be useful to other projects",
+   "B. Discuss measures to address the people retention issues in the program",
+   "C. Discuss final performance data about Project D, a project that was recently concluded successfully",
+   "D. Best practice sharing by Project A – initiative to trigger innovation"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 41605002,
+  "text": "A program manager took over the management of a program which has been running for about 3 years. She found that many of the projects use the services of fabrication and manufacturing units operated by different vendors in a remote location. She sensed that there may be an opportunity to rationalize and optimize. How should the program manager go about this?",
+  "choices": [
+   "A. Centralize procurement for the program for a period of 6 months, during which time she can evaluate the current vendors and move all the work to the best among them",
+   "B. Ask the project managers how open they would be to switch vendors if there were opportunities to save money in the bargain",
+   "C. Initiate a component and assign resources to a team that will evaluate the work currently being outsourced and recommend opportunities to rationalize and optimize",
+   "D. Use the services of the PMO to identify the preferred suppliers among supplier units and start negotiations"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 41605003,
+  "text": "An organization has a practice of a six monthly audit of all programs conducted by the Program Management Office. After a recent audit, a number of recommendations were made. Which of the following is the LEAST appropriate recommendation to be included in the final report?",
+  "choices": [
+   "A. The program seems to be making good use of the organization’s tools and templates with regard to quality assurance procedures and should continue to leverage them",
+   "B. The program should review the effectiveness of the communication plan as the customers did not find many of the reports being sent to them to be useful",
+   "C. The program should review the adequacy of the contingency reserves of the components and the overall program on a regular basis",
+   "D. The program seems has done a thorough job of stakeholder identification but it is focused on the engagement of only some stakeholders – it should ensure equal engagement with all stakeholders"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 41605004,
+  "text": "Projects A and B are part of a larger program. Project A was delayed due to an identified project level risk, and there is a cascading effect of the delay on Project B and the overall program. The delay will cause a monetary loss of $50,000 to Project A. The impact of the delay in project B is $40,000. How should this be funded?",
+  "choices": [
+   "A. It should be funded through the program level contingency reserves",
+   "B. It should be funded through the management reserves of project B and if those are insufficient, through the program reserves",
+   "C. It should be funded by the program level management reserves",
+   "D. It should be funded through the contingency reserves of project A, since the delays were caused by project A"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 41605005,
+  "text": "A large software company just announced a goal of getting 20% operating margins within the next year. A program manager is trying to cascade the organization level objectives down to the individual components and their managers. The program has negative operating margins and is hoping to achieve break even in the following year. Which of the following is the best way to achieve alignment with the organizational objectives?",
+  "choices": [
+   "A. Discuss with the component managers how the program can achieve the goal of 20% or higher margin in a year",
+   "B. Discuss with the portfolio manager and program sponsor to clarify and set expectations",
+   "C. Set goals for each component to contribute to increasing revenue by 20%",
+   "D. Set goals for each component to reduce operational expenses by 20%"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 41605006,
+  "text": "A program consists of several projects. One of them has been hit with several risk events recently and the project manager escalated a concern to the program manager that she has run out of her allocated contingency reserves, with 6 months left to completion. How should the program manager respond?",
+  "choices": [
+   "A. There is no point in asking for additional reserves as only 6 months are left - the project manager can always dip into management reserves if an eventuality arises",
+   "B. Ask for an estimation of the required reserves based on a revised outlook towards risks in the remaining period",
+   "C. Ask for an estimation of the required reserves based on a revised outlook towards risks in the remaining period",
+   "D. It is not a matter of concern, as long as the program reserves are adequate and can cover the uncertainties related to the project"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 41605007,
+  "text": "A program for a multinational company comprises of 10 different projects. The purpose of the program is to standardize on procurement practices, global supplier agreements. In doing so, it is envisaged that there is potential to cut operating costs by about 20% because more than 40% of the operational expense is routed as payments to contractors. The program office is designing a dashboard for tracking progress. Which of the following would be of most interest to the program manager?",
+  "choices": [
+   "A. Percent of milestones delivered on time",
+   "B. Number of escalations received from Suppliers",
+   "C. Actual v/s planned progress on the projects",
+   "D. Number of suppliers, with whom contract consolidation was achieved"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 41605008,
+  "text": "A UN mandated re-construction program is being conducted in a remote country in Africa. Health centers are being run in each major location to help the personnel who are working on the program. It works out very well because medical facilities are otherwise far away and people working on the program often need assistance. These health centers can be referred to:",
+  "choices": [
+   "A. Work that is related to but not part of the program",
+   "B. Other work that is part of the program",
+   "C. A part of the Program Office – supporting the program",
+   "D. A project that is part of the program"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 41605009,
+  "text": "Emilio was recently appointed as a program manager for a program that aims to achieve a 30% cost reduction across 10 different functional areas of an organization. The program charter is about to be issued. The organization has traditionally been functionally focused and the functional leaders enjoy tremendous clout. Emilio is worried how he would be able to influence the functions and deliver the results that the organization expects. What is the best thing for Emilio to do?",
+  "choices": [
+   "A. Call for a meeting of all the functional leaders and explain to them the benefit of the program to the overall organization",
+   "B. Emilio should focus on doing the best he can and leave the rest to the program steering committee",
+   "C. Attend a class about influencing without authority, as he would need to do that a lot during the program",
+   "D. Negotiate up-front to get the required authority and commitment from the functional leaders"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 41605010,
+  "text": "A well-diversified automobile company just launched a new commercial vehicle in the market. It has not done very well despite getting the highest ratings from independent rating agencies. The reason is that the company is viewed as a low cost supplier and does not enjoy customer confidence. As the revenues have not met the targets, the program is not being funded to develop the model further. What is the best thing for the program manager to do?",
+  "choices": [
+   "A. Think of easy to add new features that will create a greater excitement for the vehicle",
+   "B. Stop the current model and launch a new one with a greater style quotient",
+   "C. Invest in a targeted marketing campaign that stresses on the quality and utility of the vehicle",
+   "D. Lower the cost of the vehicle to boost sales"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 41605011,
+  "text": "During a recently portfolio review, a set of medical products owned by a healthcare company were deemed “non-strategic”. Although they make decent revenues and have a fairly large customer base, they do not align with the future strategic plan for the company. Which of the following would be the best course of action for program managers who are currently managing these products?",
+  "choices": [
+   "A. Initiate a research project to study these products became non-strategic and recommend ways to make them strategic again",
+   "B. Try and internally search other positions in the company so that they get to work on strategically important products",
+   "C. Look for partners who would be interested in licensing and re-selling these products, so that the costs can be minimized, while protecting the interests of existing customers",
+   "D. Put up a strong business case in favor of continuing to retain these products on the strategic roadmap given the number of customers and revenues they bring in"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 41605012,
+  "text": "A program has been constituted for a healthcare company to ensure regulatory compliance. Due to a recent change in the norms, a few projects now need additional resources and funding for meeting the new reporting purposes. The change was not anticipated earlier and cannot be met out of the project or program reserves. Who is responsible for providing the additional resources and funds needed?",
+  "choices": [
+   "A. The concerned project managers",
+   "B. Program Manager",
+   "C. The regulatory authorities",
+   "D. program steering committee"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 41605013,
+  "text": "A company makes cleaning appliances and finds that the market for its products in the United States and Europe is saturated. It has therefore initiated a program to launch a foray into the growing economies in the APAC region. Which of the following would be candidate projects to be included as part of this program? (A) – Conduct market research in target geographies to identify the size of the opportunity (B) – Make the user manuals and support web sites available in local languages (C) – Identify partners to source and sell spares locally (D) – Set up sales quotas and compensation structure for the sales people in the region",
+  "choices": [
+   "A. A, B and C",
+   "B. A, B, C and D",
+   "C. B , C and D",
+   "D. A, C and D"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 41605014,
+  "text": "A company engaged in business process outsourcing for banks and financial institutions recently had a data integrity issue reported in an audit. This is a very serious issue as the company handles all the customer data for its clients. The company took the breach seriously and has launched a program to look at all aspects of security and implement water-tight measures. One of the recommendations was to set up a governance structure for periodically reviewing the security measures. Which of the following are relevant factors to consider while designing the governance structure for security? (I) Industry standards like ISO, BS 7799, etc. (II) Organization’s current practices (III) Expert recommendations (IV) Compliance requirements from specific customers",
+  "choices": [
+   "A. I, II and IV",
+   "B. I, II, III and IV",
+   "C. I, III and IV",
+   "D. IV only"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 41605015,
+  "text": "A program manager working in a venture funded startup company in the highly competitive online advertising metering space is reviewing its roadmap. There are three main areas in which project ideas were presented. (A) Adding a new search engine to the algorithm which competitors already support and might result in customers switching over (B) Improving the scalability of the existing engine to support expected transaction volumes (C) Improving the accuracy of the hit counts so that space can be auctioned with more precise information. Which of the following should be of greatest concern to the program manager?",
+  "choices": [
+   "A. There are no new or exciting features in the this list",
+   "B. It is important to correctly predict the future volumes so that idea B can be based on a realistic goal",
+   "C. Absence of feature A seems to add serious risk and it must be completed as soon as possible to remain competitive",
+   "D. It is important that data quality issues are sorted out which will help development of all the new ideas"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 41605016,
+  "text": "There are about 1500 staff members working on a large international program with multiple projects and operations included in it. The program manager holds a quarterly all-hands meeting where all team members around the globe join in via telephone and video conferencing. During the Q&A session of one of the meetings, a team member brought up a risk that the program manager was not previously apprised about. In the project she was working on that many tasks were being performed manually, because the machinery that was ordered had not yet arrived and this could delay or compromise the quality of the deliverables. What should the program manager do about this?",
+  "choices": [
+   "A. Ask the team member to take the matter offline with her project manager and let them investigate the issue internally",
+   "B. Ask the procurement manager to investigate the reasons for the delay in delivery of the machines and expedite it",
+   "C. Thank the team member for bringing the issue up and make a commitment to investigate and come back with a response",
+   "D. Put the project manager on the spot by asking him to explain why this risk was not flagged earlier and what was the action plan"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 41605017,
+  "text": "The telecom regulatory authority (let us call it R) in a country has mandated the introduction of mobile number portability, i.e. allowing subscribers to switch providers (let us call them P) without having to change the number. An external vendor (let us call it O) has been appointed to operate the program and the providers have been given a period of 3 months to make necessary changes in their systems. The regulator is contemplating how to constitute the program steering committee, in particular whom to appoint as the Program Sponsor and Program manager. What would the best recommendation for this program?",
+  "choices": [
+   "A. The Sponsor should be from R, program manager from R or O and the Board should comprise representatives from R, P and O",
+   "B. The Sponsor should be from P or R, program manager from R and the Board should comprise representatives from R, P and O",
+   "C. The Sponsor should be from O, program manager from R or P and the Board should comprise representatives from R and O",
+   "D. The Sponsor should be from R, program manager from P or O and the Board should comprise representatives from R, P and O"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 41605018,
+  "text": "A program is going through an annual budgeting cycle. There is a possibility of a 50% budget cut across the board in the organization. The program manager is collecting component level budget estimates so that they can be rolled up. What guidance should the program manager give the component managers for their budgeting exercise?",
+  "choices": [
+   "A. Look for projects that can be canceled or deferred for the time being",
+   "B. Look at the activities that can be pushed to the following year to reduce the current year’s budgetary needs",
+   "C. Look at means to reduce the budget requirements by 50% over the previous year",
+   "D. Take a fresh look at the component’s activities for the forthcoming year and be prepared to prioritize"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 41605019,
+  "text": "A start-up company has an app development program that scouts for opportunities to develop applications for mobile devices primarily focused on maps and related services. In the latest release, Google maps started offering similar features for free. What should the program manager do?",
+  "choices": [
+   "A. Discuss with the project and product managers about the features to be added to the next release of the app",
+   "B. Recommend closure of the component team for this app and consider how the accrued benefits can be transitioned and sustained",
+   "C. Recommend investment in a marketing campaign to promote the features of the app over Google’s",
+   "D. Consider acquiring Google’s map functionality so that it can be integrated with the application"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 41605020,
+  "text": "An IT services company offers remote management of IT infrastructure and applications to its customers. One of the programs being managed for a particular client was in deep trouble, getting consistently poor customer satisfaction scores. Julie, an expert program manager was appointed by the PMO to investigate and suggest remedial action. She found that the program did not have clearly defined service level agreements with the customer, no clear charter for the components, project plans were either too perfunctory or absent and nobody in the program team could articulate how the program aligns with the business strategy. Which of these should be fixed first?",
+  "choices": [
+   "A. Charters should be issued and approved first as it would immediately become clear which projects should not have been started in the first place",
+   "B. Service level agreements should be defined first as this would clarify expectations from the customer and act as the basis for planning",
+   "C. The project plans should be reviewed and completed because everything needs to follow the plan",
+   "D. Strategic alignment should be explained first to the team as everything follows from the strategic benefits overall"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 41605021,
+  "text": "A newly appointed program manager is struggling to come to terms with the level and rigor of risk management processes to be applied. The project managers seem to be doing a reasonable job preparing the risk register and planning responses for the identified risks on their individual projects, but the program manager is unable to figure out how to translate all this information to determine the extent of contingency and management reserves needed. What is the best way to come up with this plan?",
+  "choices": [
+   "A. Program manager should consult the program steering committee and ask for level of reserves that are normally considered acceptable",
+   "B. Program manager should consult the Corporate PMO for advice",
+   "C. Program manager should appoint a risk management consultant who can cover for this gap in understanding",
+   "D. Program manager should meet with the project managers and take their opinion"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 41605022,
+  "text": "A customer escalated an issue to a program manager. They were promised delivery from one of the projects by a certain date and the project manager has reported the status as delayed. Upon inquiring with the project manager, the program manager learns that the deadline is impossible to meet and the Sales team made a big mistake in promising it to the customer. What should be the immediate concern for the program manager?",
+  "choices": [
+   "A. Let the program steering committee know about this situation as they will also ultimately hear from the customer",
+   "B. Figure out why the Sales team made such a wild promise in the first place and put in place measures to prevent recurrence of this in the future",
+   "C. Figure out why the issue was not highlighted by the project manager earlier, i.e. before the customer escalated to her",
+   "D. Get an estimate of the amount of delay and present a revised forecast and a mitigation plan to the customer"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 41605023,
+  "text": "A large number of services and projects for a customer having diversified business interests are being managed by a vendor as part of a program. The program manager was recently alerted to the possibility of providing some additional services to the same customer, which would nearly double the business. The new services are in an adjacent domain in which the vendor has no prior experience or in-house expertise. However, it is possible to sub-contract this work to other vendors. What would be the best way for the program manager to proceed?",
+  "choices": [
+   "A. Wait for the formal RFP to be floated by the customer and then consult the program steering committee",
+   "B. Submit a proposal to the customer and start looking for vendors who can perform the work under a sub-contracting arrangement",
+   "C. Prepare the charter for evaluating the possibility of doing the the additional work and submit to the program steering committee for approval",
+   "D. Discuss with the project and service managers in the program about their opinion regarding offering these additional services"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 41605024,
+  "text": "One of the projects that are part of a program has been delayed by about 4 weeks. What should the program manager be MOST concerned about?",
+  "choices": [
+   "A. Identify the impact of the project’s delays on other parameters like cost, risk, quality and the ability to deliver to the baseline plan and try to mitigate it to the extent possible",
+   "B. Identify the impact of the project’s delays on the other projects and work with the other project managers to mitigate it to the extent possible",
+   "C. Identify the root causes of the delay and come up with an action plan to institutionalize the learning from the causes",
+   "D. Identify the impact of the project’s delays on the ability of the program to deliver the benefits back to the organization and try to mitigate it to the extent possible"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 41605025,
+  "text": "At a scheduled program level business review, a number of risks were highlighted by the project and operations managers. Which one should the program manager devote her personal attention to?",
+  "choices": [
+   "A. A project is running late by about 2 weeks due to power shortages in the region which requires re-scheduling of the project working hours",
+   "B. Operations manager says staff turnover is a risk due to market conditions and the requirement to work in shifts",
+   "C. A project is facing shortage of skilled man-power in a niche skill set that is required to deliver a particular component",
+   "D. Operations manager complains that the warranty costs are rising due to failure of multiple products in the field when they are deployed in untested scenarios"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 41605026,
+  "text": "An automobile company is running a program for development and manufacture of its best-selling hatchback model. There are 4 integrated manufacturing plants across the country and a central research and development center where new developments take place. One day the paint shop at the largest factory burnt down. An emergency sub-program was put in place to reconstruct the paint shop, while minimizing the disruption to operations. In order to maintain production levels, the program manager has identified a paint factory about 100 miles away from the affected factory where the finished chassis can be sent for painting. The manager of the paint-shop operations brings up the issue that the workers are hesitant to move to the new location. All of the following measures will help address the issue, EXCEPT:",
+  "choices": [
+   "A. Ask the workers who are resisting the move to work reduced hours with a slightly reduced compensation",
+   "B. Provide a free, express bus service to reduce the commute time for workers who do not want to shift their residence",
+   "C. Provide an additional allowance to the workers who agree to move and work at the new location",
+   "D. Order a safety audit of the affected factory and implement corrective actions"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 41605027,
+  "text": "A program has been initiated to implement an enterprise wide resource planning (ERP) system. Due to the heavy customization needed, multiple projects were initiated. There is a lot of user dissatisfaction as the projects are getting rolled out. It is found that the operational group which is responsible for supporting the end users has received product training but is not aware of the customizations and is heavily reliant on the project teams for help. The project teams are under severe deadline pressure. They see the support work as a disruption and tend to give it the lowest priority. This slows down the response and holds up vital business functions for the users. What should the program manager do?",
+  "choices": [
+   "A. Talk to the program steering committee & suggest the inclusion of the support and maintenance as part of the program until the customizations are completed so that they can be better managed together",
+   "B. Ask the provider of the ERP tool to organize a one week training to better enable the support staff",
+   "C. Implement an operational best practice model like CoBIT or ITIL to ensure a more efficient support team",
+   "D. Ask for details of all the user reported errors and undertake a thorough root cause analysis before deciding on what to do"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 41605028,
+  "text": "Two projects in a program are using the services of a vendor to deliver electronic chips for a large assembly. During a quarterly vendor review for the program, Project Manager A gave huge thumbs up for the vendor on quality and punctuality. Project Manager B rated the same supplier very poorly on the same aspects and wants permission to change vendors. What should the program manager do?",
+  "choices": [
+   "A. Give the vendor a 3 month extension due to good performance on Project A, but issue a warning that unless Project B was also satisfied, the contract may not be renewed",
+   "B. Ask Project Manager B to get in touch with Project Manager A to discuss the strengths and weaknesses of the vendor and come up with a recommendation",
+   "C. Ask project manager B to relay the feedback to the vendor and come up with a vendor development plan",
+   "D. Look up the past performance data for the vendor from the PMO archives to get more data about the vendor’s performance on other projects and programs"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 41605029,
+  "text": "A service improvement program is being implemented in the repairs and maintenance division of a company manufacturing high-end printers. The program manager noticed that in the past year, the cost of the repair and maintenance operation was well below budgeted levels, but there were instances where the clients would report a delay in completing the repairs beyond the service level agreements that were signed. Once the repairs were done, there was rarely any recurrence of the complaint. In response to this, the program manager decided to set performance objectives for the repair team based on “turnaround time for repairs”. What should the program manager expect to see after this change?",
+  "choices": [
+   "A. The repairs will initially happen faster, but the quality will be poor and the cost will be somewhat uncertain",
+   "B. The repairs will actually slow down in the long term, while the cost will remain the same and quality will be poorer",
+   "C. The repairs will happen faster, but the cost will go up and the quality of the job may suffer",
+   "D. The repairs will happen faster, but at the cost of quality and the cost will be the same"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 41605030,
+  "text": "A product line is deemed as non-strategic for an organization and is not getting much new investment. However it is earning sizeable revenues and has some very influential customers. The program manager is asked by the program steering committee to submit a proposal about the long term plan for this product line. There were a number of options considered. Which one is most suitable to be presented to the committee?",
+  "choices": [
+   "A. Identify a partner who will take up and maintain the product line under licensing and revenue sharing model",
+   "B. Provide the customers a free upgrade to the latest products if they will stop requesting support for this product line",
+   "C. Announce a deadline of 6 months during which the customers will have to switch to other products or accept the withdrawal of services",
+   "D. Outsource the entire work to a low cost supplier so that cost of operations can be minimized while retaining the revenue"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 41605031,
+  "text": "A manufacturing organization is adopting Lean methodologies. A program has been constituted for achieving this transition. The Sponsor for the program is a senior executive who is convinced about the business benefits and is ready to commit the funds and resources necessary for the program. What are the 3 things the program manager should ask the Sponsor to do?",
+  "choices": [
+   "A. Provide funds and resources, Manage the stakeholders of the program, Be available to deal with escalations",
+   "B. Manage the stakeholders of the program, Recruit the best project managers, Generate cross-functional support",
+   "C. Generate cross-functional support, provide funds and resources, Recruit the best project managers for the program",
+   "D. Generate cross-functional support, be available to deal with escalations, Ask good questions to track progress"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 41605032,
+  "text": "A large organization recently opened a new center for clinical research in a different geography. This activity was so far performed only in the parent geography and the existing staff has expressed serious reservations and anxiety about the move. What is the best statement that the program manager can make to justify the decision and address the team’s anxiety?",
+  "choices": [
+   "A. The opening up of the new center will help reduce cost of research and improve operational margins",
+   "B. Diversity fosters innovation and inclusion of fresh talent will improve the quality of research",
+   "C. The program will announce a relocation policy so that staff can relocate to other regions if they so desire",
+   "D. There is no need to worry about the new center as there are no plans to retrench staff in the parent geography at least for 6 months"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 41605033,
+  "text": "At the program initiation phase, the program manager realized that many of the components seemed to involve a very high amount of uncertainty. The project managers asked for high levels of management reserves as it was not possible to fully predict the risks on their components. Which of the following would help the program manager limit the amount of management reserves and create greater visibility into the uncertainties surrounding the program?",
+  "choices": [
+   "A. Discuss with the project managers and make appropriate recommendation about the size of the contingency and management reserves needed",
+   "B. Appoint risk management consultants with domain expertise to better identify and analyze the risks",
+   "C. Outsource the work to a third party",
+   "D. Take the issue to the program steering committee to ascertain if the risk level is commensurate with the organization’s risk thresholds"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 41605034,
+  "text": "A program team is spread over multiple countries. Due to a movement in currency exchange rates, the cost of operation in one of the countries has come down drastically. What would be a prudent thing for the program manager do to benefit from this occurrence?",
+  "choices": [
+   "A. Return the excess budget to the organization",
+   "B. Discuss with the finance department about possibility of locking in the exchange rate by forward contracts",
+   "C. Do nothing, as exchange rate fluctuations are very volatile and my cause unnecessary risk to the program",
+   "D. Expand operations in that country"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 41605035,
+  "text": "A manufacturing organization is adopting Lean methodologies. A program has been constituted for achieving this transition. The Sponsor for the program is a senior executive who is convinced about the business benefits and is ready to commit funds and resources necessary for the program. The program manager is trying to identify senior stakeholders from every function that will be impacted so that they can be engaged and on-boarded to become champions for the initiative for that function. What is it that the program manager should NOT ask from these stakeholders?",
+  "choices": [
+   "A. Budgetary support for changes needed within their functions",
+   "B. Help with recruiting change agents within their functions",
+   "C. To help evangelize the program within their functions",
+   "D. Participate in the program steering committee meetings to review progress periodically"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 41605036,
+  "text": "A large program comprises of 7 projects and a service operation that supports the output of the projects and a program costing division that supports the program manager. Which of the following should be explicitly included in the program management plan rather than the component level plans?",
+  "choices": [
+   "A. Stakeholder registers",
+   "B. Risk registers",
+   "C. Cost management plan",
+   "D. Interface management plan"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 41605037,
+  "text": "A leading company is organized as follows. The R&D function is responsible for coming up with new product ideas and developing prototypes, Engineering function is responsible to design the product and set up the manufacturing process. Quality function is responsible to ensure that the processes and product is correct and meets expectations of current and future users. Manufacturing function takes over the operations once the Engineering is complete and Quality sign-off has been received. A highly strategic program is started in this company to come up with new products that rely on renewable energy sources. A number of projects are in flight to look at different products and components. What is the best way for the program manager to recruit the resources required for this program?",
+  "choices": [
+   "A. Ask the functional managers to provide the resources",
+   "B. Ask the project managers to drive the recruitment processes as they know best the number and type of resources needed",
+   "C. Outsource the work so that the resources can be obtained quickly",
+   "D. Set up a recruitment function that will understand the requirements and determine the appropriate sourcing strategy"
+  ],
+  "answer": "A"
+ }
+]

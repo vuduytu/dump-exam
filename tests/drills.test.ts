@@ -19,7 +19,7 @@ let admin: number;
 before(async () => {
   await resetDb();
   await seedQuestions(JSON.parse(readFileSync("data/questions.json", "utf8")));
-  await seedTags(tags);
+  await seedTags(tags, "PMP");
   await generateExams();
   [{ insertId: alice }] = await db.insert(users).values({ email: "alice@x.test", passwordHash: "-" });
   [{ insertId: bob }] = await db.insert(users).values({ email: "bob@x.test", passwordHash: "-" });
@@ -33,15 +33,15 @@ const usableOf = async (task: string) =>
 const wrongLetter = (correct: string) => ["A", "B", "C", "D"].find((l) => !correct.includes(l))!;
 
 test("seeding tags twice keeps 1,250 Questions, every one tagged, and applies a corrected label", async () => {
-  await seedTags(tags.map((t) => (t.id === 1 ? { ...t, task: "people-2", approach: "predictive" } : t)));
-  await seedTags(tags.map((t) => (t.id === 1 ? { ...t, task: "people-2", approach: "predictive" } : t)));
+  await seedTags(tags.map((t) => (t.id === 1 ? { ...t, task: "people-2", approach: "predictive" } : t)), "PMP");
+  await seedTags(tags.map((t) => (t.id === 1 ? { ...t, task: "people-2", approach: "predictive" } : t)), "PMP");
   const [{ n }] = await db.select({ n: count() }).from(questions);
   const [{ untagged }] = await db.select({ untagged: count() }).from(questions).where(isNull(questions.task));
   assert.deepEqual({ n, untagged }, { n: 1250, untagged: 0 });
   const [q1] = await db.select().from(questions).where(eq(questions.id, 1));
   assert.deepEqual([q1.task, q1.approach], ["people-2", "predictive"]);
-  await seedTags(tags);
-  await assert.rejects(seedTags(tags.slice(1)), /missing id/);
+  await seedTags(tags, "PMP");
+  await assert.rejects(seedTags(tags.slice(1), "PMP"), /missing id/);
 });
 
 test("a Drill picks never-answered Questions first, then wrong on the latest try, then the rest", async () => {

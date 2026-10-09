@@ -1,0 +1,1332 @@
+[
+ {
+  "id": 40039022,
+  "text": "Program management office (PMO) and Program management information system (PMIS) are very important elements in the program management. PMO establishes consistent policy, standards, and training for the program. The program management information system (PMIS) consists of tools used to collect, integrate, and communicate the program information. The above elements are parts of -------------- .",
+  "choices": [
+   "A. Program Governance framework.",
+   "B. Program management plan.",
+   "C. Program infrastructure.",
+   "D. Program information management plan."
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 40039023,
+  "text": "You are a program manager for the construction of the infrastructure of a new Village. After some analysis you defined a misalignment between the components and the organization's strategic plan elements. Which of the following are the least significant elements in the organization's strategic plan?",
+  "choices": [
+   "A. Strategic goals and objectives",
+   "B. Values.",
+   "C. Organization's vision.",
+   "D. Organization's mission."
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 40039024,
+  "text": "You are a program manager for a construction of a new power plant program. The program charter is approved, and now you officially commence the program planning sub-phase. During this sub-phase, governance structure is established, the initial program organization is defined, and a team is assembled to develop the program management plan. Within the above context, which of the following is least likely for an effective governance structure?",
+  "choices": [
+   "A. Creating an environment for communicating and addressing program risks and uncertainties to the organization, as well as opportunities and issues that arise during the course of program performance.",
+   "B. Ensuring that the goals of the program remain aligned with the strategic vision, operational capabilities, and resource commitments of the sponsoring organization.",
+   "C. Making decisions to transition between phases, terminate, or close the program.",
+   "D. Resolution of project issues at project level."
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 40039025,
+  "text": "You are a member in the selection committee to select the programs and projects that your organizations will pursuit next season. One of the selected programs is for socioeconomic changes. This program contains 3 projects and one subsidiary program. One of the projects for improving the level of behavior and morality in the neighborhood. In which of the following do you document the output /outcome of that project?",
+  "choices": [
+   "A. Benefits management plan.",
+   "B. Program risk register.",
+   "C. Program business case.",
+   "D. Program management plan."
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 40039026,
+  "text": "You are a manager of a large program. The program contains 7 projects and 3 subsidiary programs. While you are discussing the benefit register with the key stakeholders, for clear understanding of stakeholders, you should map the benefits to program components as in ----------",
+  "choices": [
+   "A. The program roadmap.",
+   "B. The benefits management plan",
+   "C. The program business case.",
+   "D. The stakeholder map."
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 40039027,
+  "text": "Which of the following is logically linking components, milestones, and high-level activities necessary to deliver program benefits?",
+  "choices": [
+   "A. Program Benefits register.",
+   "B. Program Roadmap.",
+   "C. Program Architecture.",
+   "D. Program Master Schedule."
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 40039028,
+  "text": "Your company had been awarded a new program. You are the program manager of that program. The stakeholders don't know why the program will be pursued and they don't have any visibility about the program. Within the above context, what is the best document will be used?",
+  "choices": [
+   "A. Program charter.",
+   "B. Program high level scope statement.",
+   "C. Program benefits register.",
+   "D. Program business case."
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 40039029,
+  "text": "You are a program manager of a new hospital which is aim to improve the treatment procedures. The components have initiated to achieve the program objectives and benefits. One of these components is for construction of a modern nursery for the employee's babies. During the evaluation of this component benefits, the stakeholders are not agreeing about the value that will be delivered from this component. As a program manager, what is the reason of this problem?",
+  "choices": [
+   "A. The expected levels of value that will be delivered from the tangible and intangible benefits are not clearly documented in the business case.",
+   "B. The stakeholders are not identified in the stakeholders register.",
+   "C. The stakeholders are not contributing in the program activities.",
+   "D. Program benefits register."
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 40039030,
+  "text": "You are a member in the selection committee. The following data has been given.Program A: Cost = 30,000,000 and CBR=0.8; Program B: Cost = 20,000,000 and CBR=0.5; Program C: Cost = 40,000,000 and CBR=0.7; Program D: Cost = 35,000,000 and CBR=1.5. What program will be selected?",
+  "choices": [
+   "A. Program A.",
+   "B. Program B.",
+   "C. Program C.",
+   "D. Program D."
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 40039031,
+  "text": "The stakeholders may be internal or external to the program and may have a positive or negative impact on the outcome of the program. Program and project managers need to be aware of the stakeholders’ impact and level of influence to understand and address the changing environments of programs and projects. Within the above context, you decided to categorize the stakeholders relationship to the program. Which of the following Documents can help you?",
+  "choices": [
+   "A. Program business case.",
+   "B. Program Communication management plan.",
+   "C. Program Stakeholders register.",
+   "D. Program stakeholder engagement plan."
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 40039032,
+  "text": "You are a program manager of a telecommunication program. The program contains 3 projects. Now your program is in the delivery phase and the earned value calculations as per the below table. Within the above context and the below table, what is the situation of the program?",
+  "choices": [
+   "A. The program is ahead of schedule and you spent more than planned.",
+   "B. The program is ahead of schedule and you performance more than planned.",
+   "C. The program is ahead of schedule and over budget.",
+   "D. The program is late and you spent less than the planned."
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 40039033,
+  "text": "Your program is in the delivery phase and three components need to start. You want to identify the component managers. What will you do?",
+  "choices": [
+   "A. Contacting with your colleagues.",
+   "B. Contacting human resource team to get profiles.",
+   "C. Contacting the functional manager for profiles.",
+   "D. Hiring from the local market."
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 40039034,
+  "text": "Your program is critical for your organization investments. The sponsor informed you that all the high management focus on this program and its performance, so you decided to increase the number of health checks. Which of the following can affect the number of the previous activities?",
+  "choices": [
+   "A. Stakeholders register.",
+   "B. Period between scheduled decision-point reviews.",
+   "C. Program risk tolerance.",
+   "D. Number of the change requests."
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 40039035,
+  "text": "Kelly is a manager of an infrastructure program for her organization SDF Inc. During the planning meeting with the team, she is discussing a document that contains the boundaries of the program scope. Which of the following documents is she discussing?",
+  "choices": [
+   "A. Program Business Case.",
+   "B. Program Charter.",
+   "C. Program Work breakdown structure.",
+   "D. Program Scope Statement."
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 40039036,
+  "text": "Your program contains 15 projects, 3 subsidiary programs and program activities. While you and the component managers are in the meeting, you notice that one of the component manger is always not participating in the meeting discussion and setting silent all the time. What should you do first to know his point of view?",
+  "choices": [
+   "A. Escalate to the program governance board.",
+   "B. Request everyone in the meeting to say his point of view about the meeting.",
+   "C. Escalate to the program Sponsor.",
+   "D. Arrange training for him in the communication skills."
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 40039037,
+  "text": "You are a program manager of the relocation of the headquarter office from the downtown to the industrial area. Some of the stakeholders are against the program and others are supportive to the program. As a program manager, what will you do first?",
+  "choices": [
+   "A. Define the expectations of all stakeholders about the program.",
+   "B. Identify the supportive stakeholders only and send them all the documents of the program.",
+   "C. Identify the negative stakeholders only and send them all the documents of the program.",
+   "D. send them the mission, vision and the benefits of the program with the clarification of how the program will benefits the stakeholders and the organisation."
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 40039038,
+  "text": "While you are in the delivery phase, two of the component managers need the senior consultant who is working in the program level and after discussion with them you discovered that they need the consultant at the same time. What should you do?",
+  "choices": [
+   "A. Hire additional senior consultant to assign one for each component.",
+   "B. Use resources interdependency management by a careful controlling of the schedule for scarce resources.",
+   "C. Assign the senior consultant to the components as prioritized by the guidelines in the program resources management plan.",
+   "D. Assign the senior consultant to the components as prioritized by him."
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 40039039,
+  "text": "In your program, you have defined key performance indicators and metrics for stakeholders and their desired engagement. As a program manager, what is the next step?",
+  "choices": [
+   "A. You should monitor and track the stakeholder engagement with help of the defined metrics and KPIs.",
+   "B. Get the approval of steering committee for the metrics and KPIs.",
+   "C. Document the key performance indicators and the metrics in the program stakeholder engagement plan.",
+   "D. Document the key performance indicators and the metrics in stakeholder register."
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 40039040,
+  "text": "You are a program manager of a construction of a new airport. You know that the Civil Aviation Authority is waiting impatiently for the airport. The delivery date of the airport after two days only. It's very important to deliver the program in time and any delay will irritate the client. The delivery is a major milestone for the program. The program performance was very good. But now you discovered technical points that can't be rectified before the delivery date. Within the above context, what will you do?",
+  "choices": [
+   "A. Inform the customer in a virtual meeting about the technical points, without documenting anything about these points and release the airport.",
+   "B. Release the airport without any reference about these points.",
+   "C. Develop a clear document of these technical point and their impacts, and Inform the customer in a virtual meeting about them, then get there preference about releasing the airport.",
+   "D. Escalate the problem to the program steering committee to get approval to release the airport without mentioning anything about these points."
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 40039041,
+  "text": "In your program, you are preparing the stakeholder engagement plan. One of the key stakeholders informs you that you have to perform stakeholder analysis and planning before developing the stakeholder engagement plan. You agree with the key stakeholder. Within the above context, what will you do first?",
+  "choices": [
+   "A. Identify all stakeholders by using brainstorming technique.",
+   "B. Develop the program communication management plan.",
+   "C. Evaluate the stakeholders ability to influence the outcome of the program.",
+   "D. Understanding of expectation of program benefits delivery."
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 40039042,
+  "text": "Your program is the construction of 15 buildings inside the university. While you are in the execution phase, the sponsor informed you to upgrade three existing buildings. What will you do first?",
+  "choices": [
+   "A. Update the benefits management plan.",
+   "B. Understand the stakeholders expectation.",
+   "C. Identify the stakeholders of the three existing buildings.",
+   "D. Add the benefits of the three buildings in the benefits register."
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 40039043,
+  "text": "You are defining and prioritizing the program components and their interdependencies to create .....",
+  "choices": [
+   "A. Risk management strategy.",
+   "B. Program Charter.",
+   "C. Program Roadmap.",
+   "D. Program benefits management plan."
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 40039044,
+  "text": "You are a program manager of an important program for your company. Now you are in the initiation stage developing a milestone plan. Which of the following contains the above information?",
+  "choices": [
+   "A. Program benefits management plan.",
+   "B. Program benefits register.",
+   "C. Program Charter.",
+   "D. Program Roadmap."
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 40039045,
+  "text": "You are the program manager of a construction of a high dam in your country. The program consists of 20 projects and 7 subsidiary programs. The program management plan has been approved. Now you are in the delivery phase, and many risks have been identified, some of these risks from projects that may impact other components in the program. You have noticed that the project managers reports to each other only about the risks that may impact other projects and the program which leads to delay the program. Which of the following can avoid that problem in future?",
+  "choices": [
+   "A. Develop program governance plan.",
+   "B. Develop governance framework.",
+   "C. Develop escalation policies and procedures.",
+   "D. Develop program governance frameworks, functions, and processes."
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 40039046,
+  "text": "While you are identifying the program outputs and outcomes to provide benefits aligned with the organization’s strategic goals and objectives, the sponsor asks you this question, when will the program strategic alignment be performed? Your answer is...",
+  "choices": [
+   "A. During the definition phase.",
+   "B. During the closing phase.",
+   "C. During the delivery phase.",
+   "D. Throughout the program life cycle."
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 40039047,
+  "text": "You are analyzing the stakeholders information that you have collected through interviews, focus groups, and historical information. The information is about the stakeholders influence and impact on the program, about who influence whom, the relations between the stakeholders and who is in conflict with whom. All these information will be documented in.......",
+  "choices": [
+   "A. Benefits register.",
+   "B. Stakeholders engagement plan.",
+   "C. Stakeholders register.",
+   "D. Communication management plan."
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 40039048,
+  "text": "You are a manager of the construction of a new airport program in your city. Your program contains 11 projects and now in the execution stage. While you are in a meeting with the sponsor, he requests you to provide the performance of the project managers by next week. Which of the following is most likely considered to do that?",
+  "choices": [
+   "A. Benefits management plan.",
+   "B. Program management plan.",
+   "C. Governance plan.",
+   "D. Project management plans."
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 40039049,
+  "text": "While you are in the delivery phase of your program which contains 10 projects and two subsidiary programs. The component managers are assigned early in the delivery phase. You noticed that some of them don't know how to interact with other components and don't know how to identify the issues, risks, and dependencies that may impact other program components. Within the above context, what will you do?",
+  "choices": [
+   "A. Provide training to the component managers on program benefits, objectives, strategy and goals.",
+   "B. Review the program charter with the component managers",
+   "C. Update the benefits management plan with the component managers.",
+   "D. Understand the expectations and needs of the component managers."
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 40039050,
+  "text": "One of the stakeholders submitted you a request to change some points in the program, you discussed that request with the stakeholder and you started the impact analysis of that request. You found that the request will impact the program scope, schedule, cost and benefits. You submitted the change request with the analysis to the program governance board for approval. After three days the governance board replied with approval, immediately you documented the approval in the change log. Within the above context, what will you do next?",
+  "choices": [
+   "A. Update the change log.",
+   "B. Communicate the approval to the stakeholders.",
+   "C. Update the program management plan.",
+   "D. Update risk, schedule, cost, scope, and benefits management plans."
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 40039051,
+  "text": "Program stakeholder communication is at the heart of program stakeholder engagement. It is key to executing program endeavors and, ultimately, delivering benefits to the organization. This critical component is a vehicle for information sharing, negotiation, and collaboration among the program team members to drive program implementation efforts. Within the above context, who is accountable for the above?",
+  "choices": [
+   "A. Program Manager.",
+   "B. Program Management Office.",
+   "C. Project Managers.",
+   "D. Program Sponsor."
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 40039052,
+  "text": "A key stakeholder request a change that may impact the schedule of the program, you captured the request in the change log, performed the impact analysis then you take the decision on behalf of the program governance board. The key stakeholder refused your behavior and requested an approval on the change request from the governance board.Which of the following will you submit to the key stakeholder to show him that you are right?",
+  "choices": [
+   "A. Program Charter.",
+   "B. Program Business case.",
+   "C. Program Roadmap.",
+   "D. Program governance plan."
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 40039053,
+  "text": "A key stakeholder request a change that may impact the schedule of the program, you captured the request in the change log, performed the impact analysis then you take the decision on behalf of the program governance board. In which phase are you?",
+  "choices": [
+   "A. Definition phase.",
+   "B. Closure phase.",
+   "C. Delivery phase.",
+   "D. Planning sub-phase."
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 40039054,
+  "text": "You are the program manager of a construction of an airport in your city. The program consists of 15 projects and 4 subsidiary programs. The program management plan has been approved. Now you are in the delivery phase, and many risks have been identified. You have noticed that the project managers report to you all the project risks that have caused you to be preoccupied with project risks and loss of time needed to manage the program. Which of the following can avoid that problem in future?",
+  "choices": [
+   "A. Develop program governance plan.",
+   "B. Develop governance framework.",
+   "C. Develop escalation policies and procedures.",
+   "D. Develop program governance frameworks, functions, and processes."
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 40039055,
+  "text": "Kelly is a program manager of an advertisements program. Now she is in the delivery phase, and the program sponsor is worried about the current status of the program cost and benefits, within the above context, which of the following will she provide to the sponsor?",
+  "choices": [
+   "A. Program Charter.",
+   "B. Program performance report.",
+   "C. BSC/Dashboard.",
+   "D. Program business case."
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 40162001,
+  "text": "The relationship between program management and project management is:",
+  "choices": [
+   "A. Master/servant",
+   "B. Collaborative",
+   "C. Iterative",
+   "D. Command and control"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 40162002,
+  "text": "Even though a portfolio may be composed of a number of different programs or projects; portfolio, program and projects domains are really different. Among the possible choices below, which one is WRONG about portfolios, programs and projects?",
+  "choices": [
+   "A. The portfolio authorizes only components that have a direct contribution to the business objectives of the performing organization",
+   "B. The portfolio directs the program objectives",
+   "C. The portfolio directs the program and the projects' objectives",
+   "D. The portfolio and the program have an ongoing life cycle"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 40162003,
+  "text": "You have recently been appointed as program manager, and during the definition phase of your program, you need to produce the detailed program management plan that will be needed to efficiently provide strategic benefits to your organization. Your governance board also expects that your program will enhance the performing organization's lessons learned. According to you, what is the MOST efficient mean to maximize this enhancement?",
+  "choices": [
+   "A. To ask your sponsor what is already going on in the organization; after all, they know the organization well enough to provide you with this overview",
+   "B. To perform a physical survey among key stakeholders and members of the governance board",
+   "C. To identify and apply existing lessons learned; monitor how they perform throughout the life cycle of your program, so that. after program closure, the board will really know how they are applicable to future programs or as organizational improvements",
+   "D. To identify existing lessons learned that could serve your program but, rather than applying them, try to change and adapt them now. If these changes perform satisfactorily, then they could replace the existing lessons learned. Your efforts for improving the lessons learned from scratch will make the governance board very proud of you"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 40162004,
+  "text": "What are the 3 main artifacts elaborated during program formulation activities?",
+  "choices": [
+   "A. Organization's Strategic Plan, Program Risk Management Strategy, Environmental Assessments",
+   "B. Organization's Strategic Plan, Program Business Case, Environmental Assessments",
+   "C. Program Charter, Program Business Case, Environmental Assessments",
+   "D. Program Charter, Program Business Case, Program Roadmap"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 40162005,
+  "text": "What is the MAIN purpose of the Program Business Case?",
+  "choices": [
+   "A. To authorize the program team to use organizational resources",
+   "B. To assess the program's resources against the program's deliverables",
+   "C. To assess the program's benefits against the program's risks",
+   "D. To assess the program's investments against the intended benefits"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 40162006,
+  "text": "Which definition is NOT a valid statement that applies to the program charter?",
+  "choices": [
+   "A. It sets the base to measure the program success",
+   "B. It formally expresses the high-level benefits expected to be produced by the program",
+   "C. It consists in key elements such as: program scope, assumptions, high-level benefits, low level risks",
+   "D. It formally authorizes the program"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 40162007,
+  "text": "What is the BEST definition of the program roadmap?",
+  "choices": [
+   "A. A chronological representation of the program's intended deliverables and outcomes",
+   "B. A chronological representation of a program's intended direction, graphically depicting dependencies between major milestones and decision points in order to reflect the pace at which benefits will be realized",
+   "C. A chronological representation of a program's intended direction, in order to reflect the pace at which resources will be consumed",
+   "D. A chronological representation of detailed schedules of future projects to be launched"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 40162008,
+  "text": "What are the key components of the program strategy alignment performance domain?",
+  "choices": [
+   "A. Program business case, program roadmap, program governance processes, program risk management strategy, and environmental assessments",
+   "B. Program business case, program roadmap, program charter, program SWOT",
+   "C. Program business case, program roadmap, program charter, program risk management strategy, and environmental assessments",
+   "D. Sustainability assessments, program roadmap, program charter, program risk management strategy"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 40162009,
+  "text": "The main objective of portfolio management is to achieve organizational strategic objectives. What is NOT a true statement with regard to portfolio management?",
+  "choices": [
+   "A. Portfolio management is concerned with managing portfolio components",
+   "B. Portfolio management interacts with operational management",
+   "C. Portfolio management is a process with regular, repeated activities for the management of decisions related to portfolio components",
+   "D. The portfolio manager participates in key program and project reviews to reflect senior level support, leadership and involvement"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 40162010,
+  "text": "The program charter is one of the documents that will be used to measure program success. What are some of the components of the program charter?",
+  "choices": [
+   "A. Program vision, program mission, program goals and objectives, and program management plan",
+   "B. Program vision, program mission, program goals and objectives, and metrics for success",
+   "C. Program vision, program mission, stakeholder analysis, and program management plan",
+   "D. Program goals and objectives, metrics for success, business case, and program management plan"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 40162011,
+  "text": "Among the following answers, which one BEST describes why organizations initiate programs?",
+  "choices": [
+   "A. To optimize resource usage",
+   "B. To comply with regulation",
+   "C. To group several projects",
+   "D. To deliver benefits"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 40162012,
+  "text": "In strategic program alignment, an important task is establishing the program direction. In this context, among the following options, which one BEST fits the role of the program manager?",
+  "choices": [
+   "A. To define key performance indicators for measuring and monitoring the value of the organization",
+   "B. To confirm that the program is aligned with the portfolio strategic goals",
+   "C. To evaluate stakeholders' concerns and expectations",
+   "D. To elaborate the strategic plans of the performing organizations"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 40162013,
+  "text": "Interaction between the program manager and the project manager is the CLOSEST in which stage(s} of the project?\nages\n~Executing\n}",
+  "choices": [
+   "A. Initiation, planning and closing",
+   "B. Initiation and closing",
+   "C. All"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 40162014,
+  "text": "An important task of 'strategic program definition' consists of ensuring that the program objectives will be delivered and will meet the stakeholders' expectations. A number of criteria serve to evaluate this. Which of the following lists BEST describes these TYPICAL criteria?",
+  "choices": [
+   "A. Staff capability, seniority of organizational leaders and program manager, knowledge of stakeholders, and level of resources needed to be acquired",
+   "B. Regulatory and legal constraints, social impacts, sustainability, cultural considerations, and political climate",
+   "C. Regulatory and legal constraints, financial climate, ethical concerns, cultural considerations, and political climate",
+   "D. Regulatory and legal constraints, financial climate, local ecological concerns, cultural considerations, and political climate"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 40162015,
+  "text": "The program definition phase is composed of the following sub phases:",
+  "choices": [
+   "A. Program initiation, program formulation, and program preparation",
+   "B. Program formulation, program preparation, and program planning",
+   "C. Program formulation and program planning",
+   "D. Program initiation and program planning"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 40162016,
+  "text": "The program manager is selected and assigned during:",
+  "choices": [
+   "A. Program formulation",
+   "B. Program initiation",
+   "C. Program planning",
+   "D. Program preparation"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 40162017,
+  "text": "What is NOT a correct list of program charter elements?",
+  "choices": [
+   "A. Vision, strategic alignment, key expected outcomes, estimated costs and resource needs",
+   "B. Vision, program management plan, strategic alignment, key outcomes required to achieve the vision and expected benefits",
+   "C. Benefits strategy, assumptions and constraints, timeline, and program governance",
+   "D. Timeline, stakeholder considerations, components, and program governance"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 40162018,
+  "text": "Program resource requirements estimation is the activity performed to estimate the resources required to plan and deliver a program. What is WRONG in below statements?",
+  "choices": [
+   "A. Resources include office space, data centers, and other facilities",
+   "B. Resources include vehicles, office space, but do not include people",
+   "C. Resources include office space, data centers, but do not include estimated program cost",
+   "D. Resources include facilities, data centers, but do not include initial risks"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 40162019,
+  "text": "Which activities support program formulation?",
+  "choices": [
+   "A. Program change assessment, program quality assessment, program initial cost estimate, and program scope assessment",
+   "B. Program change assessment, program governance assessment, program stakeholders assessment, and program schedule assessment",
+   "C. Program change assessment, program information management assessment, program initial program cost estimate, and program initial benefits evaluation",
+   "D. Program strategy evaluation, program procurement assessment, program life cycle assessment, and program communications assessment 5 questions scenario oriented"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 40162020,
+  "text": "You are initiating a program for a catering company. This program is responsible for introducing a new process to improve the production of a complete set of products. This program covers 1 2 nations, 4 regional head-offices and 6 business units. What is the MOST likely number of persons you should invite to the kick off meeting?",
+  "choices": [
+   "A. 12",
+   "B. 24",
+   "C. 48",
+   "D. 72"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 40162021,
+  "text": "Program X has obtained the authorization to proceed. Resources are scarce in your company, but the program is vital to the organizational success. In order to be successful, it is clear that the program will need to subcontract a major portion of the work, and outside vendors will participate in the execution part. At this moment, the sponsor has asked you to develop the program charter in order to present it to the steering committee and obtain approval to proceed with the next phase of the program. You prepare the program charter and present it to the steering committee that disagrees with what you present, asks you to modify the charter and does not give the OK to proceed to the next phase. From the options below, which one contains the BEST list of program charter ingredients?",
+  "choices": [
+   "A. Program justification, strategic fit, initial identified risks, estimate of cost and resources, recommended governance structure, in scope and out of scope elements, key benefits, key milestone dates",
+   "B. Program justification, strategic fit, initial identified risks, estimate of cost and resources, planned RFPs and RFls, key benefits, key milestone dotes, recommended governance structure",
+   "C. Program justification, strategic fit, initial identified risks, screening and scoring options for vendors, key benefits, key milestone dates, recommended governance structure, estimate of cost and resources",
+   "D. Strategic fit, initial identified risks, recommended governance structure, planned contract types, key benefits, key milestone dates, estimate of cost and resources, in scope and out of scope elements"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 40162022,
+  "text": "Your construction company has run many programs during recent years, and almost all programs run so far are very similar in nature. In your company, lessons learned have been captured, and many standards (quality, regulations. success, etc.) have been developed and repeatedly re-used in various programs. You have been nominated as program manager for construction program X which is composed of three component projects: A, B and C. You are in the definition phase of program X and you are in the process of identifying success criteria for the program and for the component projects. According to the following options, what will be the MOST appropriate way to handle this situation?",
+  "choices": [
+   "A. Define standard measurement criteria for success for program X and for the three component projects",
+   "B. Define standard measurement criteria for success for program X but let each project manager define the success criteria for their project. They have enough experience",
+   "C. Do not use standard measurement criteria for the success of program X. \"Similar programs\" does not mean they are identical",
+   "D. Ask the PMO to define those measurement criteria. They are the experts"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 40162023,
+  "text": "You are a portfolio manager in a very profitable company which manufactures spare parts for the automotive industry. You observe that the car market is increasing dramatically in 4 continents: A, B, C and D. You have performed initial business studies that are based on the Net Present Values (NPV) that these continents could generate. This business has to be sustained for several years and you are not sure how the financial global instability will affect these studies. Based on current studies. select which continent seems to be the BEST?",
+  "choices": [
+   "A. Continent A",
+   "B. Continent B",
+   "C. Continent C",
+   "D. Continent D"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 40162024,
+  "text": "Interactions between the program manager and the project manager tend to be:",
+  "choices": [
+   "A. Iterative and cyclical",
+   "B. Constructive",
+   "C. Time boxed",
+   "D. Controversial"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 40162025,
+  "text": "The concept of initiating Program X has been accepted by a group of company executives who ask you to prepare the documentation to formalize the acceptance of the program, and to present it at the next steering committee meeting. With a group of experts, you initiate feasibility studies, conduct a series of SWOT sessions on risk identification, lead comparative analyses with competition, and also perform cost/benefit analyses to define the expected benefits. What are you trying to CREATE?",
+  "choices": [
+   "A. The program scope statement",
+   "B. The program roadmap",
+   "C. The program mandate",
+   "D. The program charter"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 40162026,
+  "text": "What is the MOST IMPORTANT artifact created during the program planning sub phase?",
+  "choices": [
+   "A. The benefits management plan",
+   "B. The stakeholder engagement plan",
+   "C. The governance plan",
+   "D. The program management plan"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 40162027,
+  "text": "A KEY OUTPUT from the program risk management planning activity is:",
+  "choices": [
+   "A. The risk acceptance level of the organization",
+   "B. The risk appetite of the organization",
+   "C. The program risk register",
+   "D. Contingency and management reserves"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 40162028,
+  "text": "The program quality management plan is the main output from the program quality management planning activity. What is TRUE about this plan?",
+  "choices": [
+   "A. It identifies quality standards that are relevant at the program level only",
+   "B. It is not a component of the program management plan",
+   "C. It contains the quality policy that is applicable at the program level only",
+   "D. It identifies the quality standards that are relevant to the program and its components"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 40162029,
+  "text": "What is a CORRECT list of outputs coming from the program financial management planning activity?",
+  "choices": [
+   "A. Program financial management plan. program funding schedules. and program financial metrics",
+   "B. Program financial management plan. program cost estimates, component cost estimation guidelines",
+   "C. Initial program budget. program funding schedules, and contract payments",
+   "D. Program funding schedules. program operational costs. and cost estimates"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 40162030,
+  "text": "The program management plan is developed during the program planning sub phase of the program definition phase, on a number of inputs. What BEST describes this list of inputs?",
+  "choices": [
+   "A. The organization's strategic plan, the business case, and realized benefits",
+   "B. The strategic plan, the business case, and the governance plan",
+   "C. The business case, the program charter, and the assessments completed during program formulation",
+   "D. The organization's strategic plan, the business case, the program charter, and the assessments completed during program formulation"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 40162031,
+  "text": "You are involved in planning activities for program X. This program is composed of four projects A, B, C and D. Projects B and C already existed as standalone projects before being regrouped in a program. Projects B and C have their own Project Management Information System (PMIS). You wonder if program X and projects A and D should have their own PMIS defined. You discuss this with the program PMO and with the project managers. What is the BEST way to handle this situation?",
+  "choices": [
+   "A. Programs do not need to have access to a PMIS, projects do",
+   "B. Projects do not need to have access to a PMIS, programs do",
+   "C. Program X needs to have access to a PMIS. Projects A and D do not need to have access to a PMIS, because projects B and C already have a PMIS",
+   "D. Program X, projects A and D can use the existing PMIS structure of projects B and C and adapt it for the new environment"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 40162032,
+  "text": "You are managing a program which is now a candidate for closure. All components have been properly closed, and all planned deliverables have been created. A steering committee meeting is planned for the end of next week, and you prepare yourself for the meeting. You want to convince the steering committee members that the program is actually ready for closure. You look at the documents you developed during the planning phase of the program. From the list of arguments, which is the MOST important you should use to convince the steering committee that the program can be closed?",
+  "choices": [
+   "A. Show that all contracts' closing conditions are met",
+   "B. Show that the exit criteria are met",
+   "C. Show that all Customer expectations are met",
+   "D. Show that your program closes on schedule, within budget limitations. and produced the planned benefits described in planning documents"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 40162033,
+  "text": "In this PWBS, how many program packages are depicted?",
+  "choices": [
+   "A. 5",
+   "B. 7",
+   "C. 12",
+   "D. 9"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 40162034,
+  "text": "You are conducting planning activities for a major program which will cover several countries and will last several years. Four projects have been identified as part of the program, and due to resource shortage in your company, you will need to subcontract part of the work, in various parts of the world. You know that most of the project members will be junior technicians who have never worked on a project before. You have discussed the necessity to improve members' competencies and to be ready to develop their project teams, in order to maximize project and program performance, with the potential project managers. In this situation, which option will contribute LEAST to team development?",
+  "choices": [
+   "A. Co-location",
+   "B. Team building activities",
+   "C. Training",
+   "D. Team rewards"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 40162035,
+  "text": "The business value may be defined as the sum of:",
+  "choices": [
+   "A. Positive and negative program benefits",
+   "B. Financial inflows and financial outflows",
+   "C. Profit and loss flows",
+   "D. Tangible and intangible elements of the business"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 40162036,
+  "text": "You are developing the schedule for your program. The program is composed of three component projects: A B a n d C. Project managers A and Bare familiar with the critical chain method and plan to use it on their projects. Project manager C plans to use the critical path method. In parallel, you have started to develop the program master schedule and you have prepared a Gantt chart which shows the major activities and program milestones. You have set-up a meeting with your project managers in order to choose a scheduling tool for the projects and for the program. What is the BEST option for it?",
+  "choices": [
+   "A. Impose Gantt as the common scheduling method, because Gantt charts are very popular",
+   "B. Impose the critical chain method because the method is well known by two project managers",
+   "C. Impose a common scheduling tool",
+   "D. Let each project manager decide which tool she is most comfortable with"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 40162037,
+  "text": "The program delivery phase is composed of the following sub phases:",
+  "choices": [
+   "A. Component definition, component integration, component closure",
+   "B. Component authorization and planning, component oversight and integration. Component transition and closure",
+   "C. Component planning, component integration, component transition and closure",
+   "D. Component authorization and planning, component transition, component closure"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 40162038,
+  "text": "Which PERFORMANCE DOMAIN provides guidance for processes leading to component authorization?",
+  "choices": [
+   "A. Program governance",
+   "B. Program benefits management",
+   "C. Program strategy alignment",
+   "D. Program stakeholder engagement"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 40162039,
+  "text": "What is TRUE concerning program cost budgeting activities?",
+  "choices": [
+   "A. The program payment schedules identify the schedules and milestones where funding is received by the customer",
+   "B. The program payment schedules identify the schedules and milestones where funding is received by the funding organization",
+   "C. The component payment schedules indicate when team members will be paid",
+   "D. There are no component payment schedules, only program ones"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 40162040,
+  "text": "What is a CORRECT list of outputs from program procurement management activities performed during the program delivery phase?",
+  "choices": [
+   "A. Request for proposal (RFP), request for comments (RFC), and request for debate",
+   "B. Request for proposal (RFP), invitation for bid (IFB), and request for claim",
+   "C. Request for proposal (RFP), invitation for bid (IFB), and request for quote (RFQ)",
+   "D. Invitation for bid (IBB), signed agreements and request for claim"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 40162041,
+  "text": "Which activity is defined as the CORE activity in the standard?",
+  "choices": [
+   "A. Program communications management",
+   "B. Program integration management",
+   "C. Program procurement management",
+   "D. Program scope management"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 40162042,
+  "text": "You are managing a software development program that includes three projects and a set of recurring testing activities which are common to these three projects. Testing activities are not managed as a project, but as a non-project component. In the program roadmap, you have indicated the key milestones to initiate and close components. Two projects are late because they are short of resources. Testing activities have been completed and now you would like to close this component in order to release the resources and dispatch them into the delayed projects. What should be the IMMEDIATE ACTION with regard to closing testing activities?",
+  "choices": [
+   "A. You should close the testing activities because they are not managed as a project and do not require governance board approval",
+   "B. You should issue a component transition request to the governance board, even though it is not a project",
+   "C. You should issue a component initiation request to the governance board, even though it is not a project",
+   "D. You should close the testing activities because they are completed"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 40162043,
+  "text": "You are managing a program that is composed of three component projects: A. B and C. You just exited the definition phase and you start the execution of the program in order to generate planned deliverables and to create expected benefits. You understand that in order to initiate the program components, you will have to issue component initiation requests which will be accepted or rejected) by the program governance board. Which DOCUMENT indicates the timing of the components to be initiated?",
+  "choices": [
+   "A. The program roadmap",
+   "B. The program business case",
+   "C. The program benefits management plan",
+   "D. The program charter"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 40162044,
+  "text": "You are managing a program that is composed of three component projects: A, B a n d C. You just exited the definition phase. Project managers are identified and you start the execution of the program in order to generate planned deliverables and to create expected benefits. Project A will provide two deliverables. project B will provide three deliverables, and project C will provide four deliverables. Projects B and C are more critical for the program success than project A. You understand that. in order to initiate program components, you will have to issue component initiation requests which will be reviewed by the program governance board. According to the plan, you have issued a request to initiate component project A. This request has been rejected by the board. What is the MOST probable cause for the board refusal?",
+  "choices": [
+   "A. Project A does not have a sponsor",
+   "B. Project A does not have an identified manager",
+   "C. Project A does not have a business case",
+   "D. Project A only provides two deliverables and project C provides four deliverables, so project C should start first"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 40162045,
+  "text": "You are managing a program that is composed of three component projects: A B a n d C. You just exited the definition phase. You start the execution of the program in order to create the planned deliverables and to create expected benefits. You have previously developed a communication plan which gives all details about the methods used to distribute accurate and useful information regarding the program status to program stakeholders. From this list of distribution methods. which one is NOT considered a valid list of methods used to formally communicate the program status to stakeholders?",
+  "choices": [
+   "A. Face to face meetings, hard copy distribution. and shared-filing systems",
+   "B. Face to face meetings, hard copy distribution, electronic tools for program management such as scheduling tools",
+   "C. Hard copy distribution. electronic tools for program management. conferencing tools such as voice mail, telephone. and video",
+   "D. Electronic tools for program management. informal meetings, conferencing tools such as voice mail. telephone. and video"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 40162046,
+  "text": "What are the skills commonly required by program managers?",
+  "choices": [
+   "A. Stakeholder engagement, strategic management, leadership, analytical and integration skills",
+   "B. Stakeholder engagement, change management, leadership, analytical and integration skills",
+   "C. Stakeholder engagement, governance, benefits management, strategic alignment skills",
+   "D. Stakeholder engagement, strategic management, leadership, negotiation and integration skills"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 40162047,
+  "text": "Best practices in project and program management recommend using lessons learned in order to capitalize on good and bad things that have happened in past projects or programs. and to take corrective actions for future endeavors. In addition, the program manager must organize lessons learned sessions to inform key stakeholders. Lessons learned will be compiled and archived at program closure time and a final report will be issued and distributed. When is the BEST time to conduct stakeholders' lessons learned sessions in a program?",
+  "choices": [
+   "A. During all phases of the program life cycle",
+   "B. During the execution phase of the program life cycle",
+   "C. At program closure",
+   "D. Only when a major event (good or bad) occurs"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 40162048,
+  "text": "Risk monitoring and controlling activities are conducted to determine whether:",
+  "choices": [
+   "A. Program assumptions are still valid, and proper risk management policies and procedures are being followed",
+   "B. Program assumptions are still valid, and contractual agreements are actually signed",
+   "C. Proper risk management policies and procedures are being followed, and lessons learned reports are communicated to stakeholders",
+   "D. Assessed risk has changed from its prior state. with analysis of trends; and the program budget baseline has been updated"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 40162049,
+  "text": "The program schedule monitoring and controlling activity includes:",
+  "choices": [
+   "A. Tracking and monitoring the attendance of stakeholders to key checkpoint meetings",
+   "B. Tracking and monitoring the start and finish of all high-level component and program activities and milestones against the program master schedule",
+   "C. Tracking and monitoring the start and finish of all high-level component and program activities and milestones against the program roadmap",
+   "D. Tracking and monitoring the start and finish of program activities and milestones against the program master schedule, but not component ones"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 40162050,
+  "text": "Program scope monitoring and controlling activity should:",
+  "choices": [
+   "A. Capture requested scope changes coming from customers only",
+   "B. Evaluate each change request and communicate the decision to the steering committee",
+   "C. Determine the disposition of each requested change and update the risk management plan",
+   "D. Capture requested scope changes, evaluate them and communicate the decision to affected stakeholders, and record the request and supporting detail"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 40162051,
+  "text": "What is TRUE about the program reporting activity?",
+  "choices": [
+   "A. Program reporting is concerned by program results only and reporting them to stakeholders",
+   "B. Program reporting is not an element of program communications",
+   "C. Outputs from this activity include reports required by program sponsors or program agreements",
+   "D. Outputs from this activity do not include customer feedback requests"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 40162052,
+  "text": "CORRECTIVE and PREVENTIVE actions are needed to bring the program back in alignment with:",
+  "choices": [
+   "A. The strategic priorities",
+   "B. The original budget",
+   "C. The original schedule",
+   "D. The sponsor priorities"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 40162053,
+  "text": "You are managing a program under a firm fixed price contract for an important customer. Up to now, this program was progressing well but suddenly, an unforeseen major risk appears that may severely impact the program. The mitigation plan for that risk implies a significant program budget increase. Your organization has serious financial issues during the coming months. According to the following options, what will be the MOST appropriate way to handle this situation?",
+  "choices": [
+   "A. Formally ask the board to authorize you to obtain additional budget from your customer",
+   "B. Ask for permission to use the management reserve and ask for no additional funds from the customer",
+   "C. Modify the contract type because the conditions have changed significantly",
+   "D. Ask for the authorization to close the program, as the conditions have changed significantly. There is no need to continue."
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 40162054,
+  "text": "What should be the FIRST STEP in implementing a change originating from a project which is integrated into the program you manage?",
+  "choices": [
+   "A. Follow the management procedures of the work package change control board",
+   "B. Follow the management procedures of the integrated change control board",
+   "C. Follow the management procedures of the component-level change control board",
+   "D. Follow the management procedures of the governance change control board"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 40162055,
+  "text": "Your program has an estimated budget at completion of 40000. As of now, 6400 has been consumed to complete 10% of the work. You have a contingency reserve of 8000. What should be your NEXT action?",
+  "choices": [
+   "A. You have already consumed 2400 from the contingency reserve. You have to ask the governance board for 16000 more to be sure of finishing",
+   "B. Perform a program review with all project managers to assess the reason for this cost overrun",
+   "C. Allocate the remaining contingency reserve immediately to the other projects, to make sure the program won't be delayed any longer",
+   "D. Perform a detailed review of the components which are delayed"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 40162056,
+  "text": "You are managing a program which has four component projects: A, B, C and D. During the definition phase of the program, with the help of the PMO, you have defined several rules for your project managers, such as: all issues must be logged in a project issues register, with a predefined code, in order to be able to track them easily. You request that the status of those issues be reported and discussed during your weekly status meetings with the project managers. During today's meeting, project manager C reports a high severity issue which has a major impact on the delivery of a project outcome which is urgently expected at program level. During the meeting, project manager A says that he encountered a similar problem, and it took him a long time to develop a correction which works. The correction is documented. Project manager A proposes to provide the fix to project manager C. What IMMEDIATE action should be taken?",
+  "choices": [
+   "A. The program manager immediately brings the meeting to a close and asks project manager C to apply the fix right away",
+   "B. Project Manager C reads the documentation related to the correction, and then decides whether or not to apply the fix",
+   "C. Project manager C applies the correction to project C with the assistance of a person from project A",
+   "D. The program manager spends the necessary time to understand what the similarities between projects A and C are"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 40162057,
+  "text": "Embracing the PM/ Code of Ethics and Professional Conduct is a requirement for PMP® and PgMP® certifications. The code specifies the behavior that project and program managers should have for themselves and the behavior they can expect from other project and program management practitioners. From the following lists, what are the essential obligations of the Code?",
+  "choices": [
+   "A. Responsibility, respect, fairness, accountability",
+   "B. Responsibility, respect, fairness, honesty",
+   "C. Responsibility, leadership, fairness, honesty",
+   "D. Responsibility, leadership, power, honesty"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 40162058,
+  "text": "Company XYZ has decided to launch a program which has a strategic position in the company portfolio. A high number of change requests are expected to impact the program, and your company has decided to have a dedicated change manager for the program. You are the change manager for the program. In your position, you review all change requests, and recommend accepting or rejecting them. Your main focus is on reviewing changes on scope, but also on time, quality, costs, risks, contracts and rewards. Which DOCUMENT will you base your decisions upon?",
+  "choices": [
+   "A. The program scope statement",
+   "B. The program scope management plan",
+   "C. The change management plan",
+   "D. The program management plan"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 40162059,
+  "text": "Which artifact contains component TRANSITION CRITERIA related to organizational expectations?",
+  "choices": [
+   "A. Benefits management plan",
+   "B. Component management plan",
+   "C. Governance plan",
+   "D. Delivery management plan"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 40162060,
+  "text": "Once the transitioning activities are completed, WHO provides the authorization to formally close the program?",
+  "choices": [
+   "A. The Customer",
+   "B. The program manager",
+   "C. The portfolio manager",
+   "D. The sponsoring organization"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 40162061,
+  "text": "The request to CLOSE a program component and then to ACCEPT the request is done by:",
+  "choices": [
+   "A. The project manager and the program manager",
+   "B. The program manager and the steering committee",
+   "C. The project manager and the steering committee",
+   "D. The customer and the program manager"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 40162062,
+  "text": "What is a condition to PREMATURELY CLOSE the program?",
+  "choices": [
+   "A. The charter is fulfilled",
+   "B. Expected benefits will be realized",
+   "C. Customer is unhappy",
+   "D. Expected benefits cannot be achieved"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 40162063,
+  "text": "Successful completion of the program is judged against:",
+  "choices": [
+   "A. The approved business case, actual program outcomes, and the current goals and strategic objectives of the organization",
+   "B. The approved business case, the customer dissatisfaction, and sponsor expectations",
+   "C. The customer dissatisfaction, the money spent and the sponsor recommendation",
+   "D. The program roadmap, the current goals of the organization, and the sustainment activities"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 40162064,
+  "text": "A program may be closed under various conditions. Among the following choices, which one is NOT a condition to close the program?",
+  "choices": [
+   "A. The program has been cancelled",
+   "B. The sponsoring organization has approved the program closure",
+   "C. All program objectives have not been achieved yet",
+   "D. The program has become unnecessary"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 40162065,
+  "text": "You are the program manager of a new line of breakfast cereals to be sold worldwide. The program is organized in several projects, one per line of products which ore each adapted to their targeted market. This year, you have successfully completed the commercial launch of a number of new products. Your governance board asks you to initiate close-out activities related to these projects so that operations can start working. Among the following reasons, which one is NOT a typical reason to invoke the \"Program closure \"activities?",
+  "choices": [
+   "A. Only one out of several projects released its products onto the market",
+   "B. Several projects released their products onto the market",
+   "C. The new product lines have been released according to the benefit plans, and the governance board needs a formal sign-off from the operations",
+   "D. You have not fully convinced the board that benefits will be realized, but lessons learned have been thoroughly collected and documented"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 40162066,
+  "text": "You are the program manager of a new line of breakfast cereals to be sold worldwide. The program is organized in several projects, one per line of products which ore each adapted to their targeted market. This year, you have successfully completed the commercial launch of a number of new products. Your governance board asks you to initiate close-out activities related to these projects so that the operations can start working. Program performance has been analyzed and proven to be high, and according to the survey of the stakeholders' opinion, they seem to be very satisfied. Among the following choices, which one is NOT a probable end of this program?",
+  "choices": [
+   "A. The program has performed satisfactorily and is fully closed",
+   "B. The program is transitioned to the operations",
+   "C. The program is cancelled",
+   "D. The program has partially realized benefits and you will have to propose new benefits to the governance board"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 40162067,
+  "text": "Program X hos three component projects: A, B and C. All three component projects have been closed with the agreement of the steering committee. One month later, the program is still not closed. Generally, the final decision to close a program is under the sponsor's responsibility. What is the MOST probable cause for NOT closing program X?",
+  "choices": [
+   "A. Not all of the expected benefits have been realized",
+   "B. The program closure recommendation was not formulated by the steering committee",
+   "C. The steering committee has been disbanded",
+   "D. The program sponsor has left the organization"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 40162068,
+  "text": "A program is made up of a number of projects or discrete components. These components mainly consist of activities organized to produce specific deliverables. Aggregation of these deliverables at the program level serves the strategic benefits of the performing organization. Program management targets the global optimization of its resources. This needs a specific management effort. Among the following choices, which one BEST describes this management effort?",
+  "choices": [
+   "A. The management effort of a program is only made by the program manager",
+   "B. The management effort is ultimately the responsibility of the PMO",
+   "C. The management effort often resides outside the scope of the discrete components",
+   "D. The management effort always requires a specific infrastructure"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 40162069,
+  "text": "Program X hos three component projects: A, B a n d C. As of today, projects A and B are closed, but project C is due to close in one month. Three months later, the program remains open. The steering committee requests that the program be closed as soon as possible. What is the MOST probable cause for the steering committee to ask for the closure of program X?",
+  "choices": [
+   "A. Program governance does not recommend the program closure",
+   "B. All contracts are not formally closed",
+   "C. The program has been cancelled",
+   "D. All component projects are not formally closed"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 40162070,
+  "text": "What is NOT true concerning program benefits?",
+  "choices": [
+   "A. Benefits are the gains and assets realized by the organization and other stakeholders as the result of outcomes delivered by the program",
+   "B. Program benefits management do not consider negative impact but rather concentrates on maximizing positive benefits",
+   "C. A benefit may be realized after program closure",
+   "D. Program benefits management continually aligns benefits with the organization's goals and objectives"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 40162071,
+  "text": "What are the 5 phases of program benefits management?",
+  "choices": [
+   "A. Identification, analysis and planning, delivery, transition, sustainment",
+   "B. Assessment, analysis and planning, delivery, transition, sustainment",
+   "C. Identification, analysis and planning, execution, transition, sustainment",
+   "D. Identification, analysis and planning, delivery, transition, closure"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 40162072,
+  "text": "What is NOT included in a typical benefit register?",
+  "choices": [
+   "A. KPls and thresholds for achieving the benefit",
+   "B. Risk assessment for achieving the benefit",
+   "C. Target dates and milestones for benefits achievement",
+   "D. Change Log for non-benefits achievement"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 40162073,
+  "text": "What is TRUE concerning the costs to realize benefits after program closeout?",
+  "choices": [
+   "A. There are no additional costs because the program is closed",
+   "B. Operational costs may be needed to sustain benefits",
+   "C. There are no additional costs because benefits are always higher than costs after program closure",
+   "D. There are no additional costs for intangible benefits as they cannot be measured"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 40162074,
+  "text": "What is the MAIN purpose of an effective governance when dealing with benefits delivery?",
+  "choices": [
+   "A. To control and sign off the benefits",
+   "B. To authorize, oversight and close components",
+   "C. To adapt program resources to program pace",
+   "D. To align the program with the organization's strategy"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 40162075,
+  "text": "You have managed a program and all planned benefits have been realized when the program ends. At the start of the program, you developed the benefits management plan which was the baseline for the management of benefits. The board wants to ensure that the program delivered the full benefits for which it was created. At the end of the program, benefits should Al WAYS be compared against those promised in:",
+  "choices": [
+   "A. The benefits management plan",
+   "B. The program charter",
+   "C. The program business case",
+   "D. The portfolio objectives"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 40162076,
+  "text": "The main purpose of a program is to realize benefits that are aligned with a company's strategic objectives. Identified benefits may or may not be easily measurable, but benefits should be defined with a clear notion of improvement that can be tracked and analyzed. As an example, a program benefit for a commercial company could be identified as 'bigger profits'. From the list of options, which one is LEAST clearly stated as a benefit?",
+  "choices": [
+   "A. Increased market share",
+   "B. Lower manufacturing costs",
+   "C. Faster product delivery",
+   "D. Better administrative support"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 40162077,
+  "text": "You manage program X which is composed of four projects: A, B, C and D. From the beginning of your program, you have been extremely sensitive to the fact that program outcomes must generate benefits which are in line with the strategic objectives of your company. The program is well underway, but you realize that several opportunities have emerged that your program could take advantage of. You believe that with a few more resources added into the component projects, more benefits could be generated. You think about what you should do in order to seize the opportunities for your program. What will be the LEAST useful action to take?",
+  "choices": [
+   "A. You start interviewing new people with the objective of increasing the size of your project teams",
+   "B. You talk to your sponsor about these opportunities in order to have his position",
+   "C. You update the benefits management plan and distribute it to all key stakeholders for advice",
+   "D. You ask that the business case of your program be updated and re-evaluated with the new opportunities"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 40162078,
+  "text": "You manage program X which is composed of four projects: A B, C and D. From the beginning of your program, you have been extremely sensitive to the fact that program outcomes must generate benefits which are in line' with the strategic objectives of your company. The program is well underway, but you realize that several opportunities have emerged that your program could take advantage of. You believe that with a few more resources added into the component projects, more benefits could be generated. You think about what you should do in order to seize the opportunities for your program. What is the IMMEDIATE action you should take?",
+  "choices": [
+   "A. You start interviewing new people with the objective of increasing the size of your project teams",
+   "B. You tell your sponsor that your program will be updated to seize these opportunities",
+   "C. You inform key stakeholders that your program will include these opportunities",
+   "D. You ask that the business case of your program be updated and re-evaluated with the new opportunities"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 40162079,
+  "text": "A program is made up of a number of projects or discrete components. These components mainly consist of activities organized to produce specific deliverables. Aggregation of these deliverables at the program level serves the strategic benefits of the performing organization. Program management targets the definition and production of strategic benefits. According to the following choices, which one BEST describes how the discrete outcomes produced by the projects will be organized at the program level?",
+  "choices": [
+   "A. The unitary deliverables produced by all discrete components should have a one-to-one relationship with the benefits of the program. Then, it is easy to justify the budget for each of them",
+   "B. Each project outcome is targeted in order to be directly transitioned to the operations",
+   "C. The interdependent components are integrated, controlled and monitored in order to deliver program's strategic benefits",
+   "D. All the unitary deliverables produced by the discrete components will be justified in front of the SAME business objective as their hosting portfolio"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 40162080,
+  "text": "You work for construction company ABC for which you have been managing a program over the last four years. The main product generated by the program is a hospital which will bring lots of benefits to the community. According to the plan, most benefits will occur only after the program is completed. You are currently in the closure phase of the program. In order to request formal closure acceptance from the program steering committee, you prepare the program transition plan. The steering committee wants to understand what type of guarantee will be included in the transition plan in order to make sure that benefits will be sustained when the hospital is operational. What type of guarantee is NOT related to benefits sustainment?",
+  "choices": [
+   "A. The Customer has an appropriate support organization for the hospital",
+   "B. Company ABC support organization is well trained to understand hospital support requirements",
+   "C. Company ABC support organization understands when and how updates should be made to the hospital",
+   "D. Company ABC program resources are properly redeployed when the program is over"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 40162081,
+  "text": "Why is it preferable to focus on the notion of stakeholder engagement rather than stakeholder management?",
+  "choices": [
+   "A. Because engagement means \"to have a direct managerial relationship\", which is often the case between the program manager and a stakeholder",
+   "B. They are basically the same notions, but as there is no stakeholder management plan, the word \"engagement\" is better",
+   "C. People have a tendency to resist direct management, and most of the program stakeholders do not have a hierarchical affiliation with the program manager",
+   "D. Because most of the time it is enough to just engage with the stakeholders in order to gain their support. and nothing more"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 40162082,
+  "text": "What is the primary goal of stakeholder engagement?",
+  "choices": [
+   "A. To gain and maintain stakeholder buy-in for the program's objectives, benefits, and outcomes",
+   "B. To keep them aware of the program progress",
+   "C. To obtain from the stakeholders a formal approval of the program's benefits",
+   "D. To have them elaborate and approve the stakeholder engagement plan"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 40162083,
+  "text": "What is a typical composition of a program steering committee?",
+  "choices": [
+   "A. Sponsor, business owner, portfolio manager, key senior managers, program manager",
+   "B. Sponsor, PMO director, key senior managers, program manager",
+   "C. Sponsor. business owner, project managers, key senior managers, program manager",
+   "D. Sponsor. business owner, portfolio manager, key senior managers, financial VP"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 40162084,
+  "text": "What is NOT the purpose of the stakeholder register?",
+  "choices": [
+   "A. To systematically identify all key stakeholders",
+   "B. To collect emerging stakeholders",
+   "C. To easily report, distribute program deliverables, and provide formal and informal communications",
+   "D. To contain and distribute confidential information"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 40162085,
+  "text": "What is the primary role of the program sponsor?",
+  "choices": [
+   "A. The program sponsor is accountable for the program success",
+   "B. The program sponsor is accountable for enabling the program success",
+   "C. The program sponsor is responsible to achieve program objectives",
+   "D. The program sponsor provides only financial resources to the program"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 40162086,
+  "text": "You are managing a program which is composed of three projects: A B and C. The three projects all work with different subcontractors, but they also have the same subcontractor X in common. Project managers A and B have no problem with subcontractor X, but you are aware that project manager C and subcontractor X have difficulties in their relations, and that the work climate tends to be deteriorated as a result. Project manager C h a s already spent a lot of time with you explaining the situation. One day you receive a phone call from subcontractor X who complains about project manager C's attitude towards him. Subcontractor X plays a key role in the program and you do not want him to leave! What is the BEST action you should take to handle the situation?",
+  "choices": [
+   "A. Call a meeting between subcontractor X and yourself",
+   "B. Discuss the problem with project manager C in order to understand the situation better, and then decide whether or not to talk to subcontractor X",
+   "C. Call a meeting between project manager C, subcontractor X and yourself",
+   "D. Call a meeting between project managers A B and C, subcontractor X and yourself"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 40162087,
+  "text": "You manage the PMO of a large program in your company. You understand that the main purpose of the PMO is to support and help the program manager to make the program a success. There ore various types of PMO, depending on the need of the organization. Some PMOs provide mainly administrative support; some may have more responsibilities such as providing expertise in certain critical areas of the program. There are some characteristics which ore common to any type of PMO, as far as program support is concerned. What is a COMMON characteristic of all program PMOs?",
+  "choices": [
+   "A. The PMO is accountable for the success of the program",
+   "B. The PMO is a member of the steering committee",
+   "C. The PMO is responsible for assigning component project managers of your program",
+   "D. The PMO is a program stakeholder"
+  ],
+  "answer": "D"
+ }
+]

@@ -13,7 +13,7 @@ export default async function globalSetup() {
   if (!password) throw new Error("E2E_PASSWORD is not set (see .env.example)");
   await resetDb();
   await seedQuestions(JSON.parse(readFileSync("data/questions.json", "utf8")));
-  await seedTags(JSON.parse(readFileSync("data/question-tags.json", "utf8")));
+  await seedTags(JSON.parse(readFileSync("data/question-tags.json", "utf8")), "PMP");
   await generateExams();
   await seedPgmp(JSON.parse(readFileSync("data/pgmp-questions.json", "utf8")));
   const [{ insertId }] = await db.insert(users).values({ email: E2E_EMAIL, passwordHash: await hashPassword(password) });

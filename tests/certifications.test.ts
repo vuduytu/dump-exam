@@ -5,12 +5,12 @@ import { db } from "@/db";
 import { examQuestions, exams, questions, users } from "@/db/schema";
 import { generateExams, seedQuestions, seedTags } from "@/db/seed";
 import { abandonAttempt, AttemptNotFound, getAttempt, getResult, listAttempts, saveAnswer, setMark, startAttempt, submitAttempt } from "@/lib/attempts";
-import { openDrills, startDrill, topicStats } from "@/lib/drills";
+import { InvalidDrill, openDrills, startDrill, topicStats } from "@/lib/drills";
 import { getScoreboard } from "@/lib/scoreboard";
 import { certificationsOf, createUser, currentCertification, listUsers, NoAccess, NoCertification, NotAdmin, setCertifications, UserNotFound } from "@/lib/users";
 import { closeDb, resetDb } from "./db";
 
-// Two PgMP Questions of one PgMP Exam; tagged with a PMP Task only so a PgMP Drill can be drawn before ticket 03.
+// Two PgMP Questions of one PgMP Exam, tagged with a PgMP Task.
 const PGMP_Q = [900001, 900002];
 let pgmpExam: number;
 let admin: number;
@@ -21,7 +21,7 @@ let both: number; // PMP and PgMP
 before(async () => {
   await resetDb();
   await seedQuestions(JSON.parse(readFileSync("data/questions.json", "utf8")));
-  await seedTags(JSON.parse(readFileSync("data/question-tags.json", "utf8"))); // before the PgMP Questions: it wants every Question tagged
+  await seedTags(JSON.parse(readFileSync("data/question-tags.json", "utf8")), "PMP"); // before the PgMP Questions: it wants every Question tagged
   await generateExams();
   await db.insert(questions).values(
     PGMP_Q.map((id) => ({
@@ -34,7 +34,7 @@ before(async () => {
       correctAnswer: "A",
       votes: [],
       usable: true,
-      task: "people-1",
+      task: "governance-1",
     })),
   );
   [{ insertId: pgmpExam }] = await db.insert(exams).values({ name: "PgMP 1", certification: "PgMP" });
@@ -72,7 +72,7 @@ test("a User without Certification Access cannot start an Exam or a Drill of it,
   await assert.rejects(startAttempt(pam, pgmpExam), NoAccess);
   await assert.rejects(startAttempt(gus, 1), NoAccess); // a PMP Exam
   await assert.rejects(startAttempt(pam, 999999), NoAccess); // unknown Exam: same answer
-  await assert.rejects(startDrill(pam, "PgMP", "people-1", 10), NoAccess);
+  await assert.rejects(startDrill(pam, "PgMP", "governance-1", 10), NoAccess);
   await assert.rejects(listAttempts(pam, "PgMP"), NoAccess);
   await assert.rejects(topicStats(pam, "PgMP"), NoAccess);
   await assert.rejects(openDrills(pam, "PgMP"), NoAccess);
@@ -85,13 +85,16 @@ test("Home, Drill and History data are filtered by Certification", async () => {
   assert.deepEqual((await listAttempts(gus, "PgMP")).map((a) => a.id), [id]);
   await assert.rejects(listAttempts(gus, "PMP"), NoAccess);
 
-  const pgmpPeople = (await topicStats(gus, "PgMP")).find((d) => d.domain === "People")!;
-  assert.equal(pgmpPeople.total, 2); // only the PgMP Questions
-  assert.equal(pgmpPeople.done, 0); // the submitted Attempt had no answers
-  const drill = await startDrill(gus, "PgMP", "people-1", 10);
+  const pgmpStats = await topicStats(gus, "PgMP");
+  assert.deepEqual(pgmpStats.map((d) => d.domain), ["Strategic Program Alignment", "Program Life Cycle Management", "Benefits Management", "Stakeholder Engagement", "Governance"]);
+  const pgmpGovernance = pgmpStats.find((d) => d.domain === "Governance")!;
+  assert.equal(pgmpGovernance.total, 2); // only the PgMP Questions
+  assert.equal(pgmpGovernance.done, 0); // the submitted Attempt had no answers
+  const drill = await startDrill(gus, "PgMP", "governance-1", 10);
   assert.deepEqual((await getAttempt(gus, drill)).questions.map((q) => q.id).sort(), PGMP_Q);
-  assert.equal((await openDrills(gus, "PgMP")).get("people-1")?.id, drill);
+  assert.equal((await openDrills(gus, "PgMP")).get("governance-1")?.id, drill);
   await assert.rejects(openDrills(gus, "PMP"), NoAccess);
+  await assert.rejects(startDrill(gus, "PgMP", "People", 10), InvalidDrill); // a PMP Domain is no PgMP Drill source
   await abandonAttempt(gus, drill);
 
   const pmpDrill = await startDrill(pam, "PMP", "people-1", 20);
@@ -105,7 +108,7 @@ test("revoking hides every Exam, Drill, Attempt and Result of the Certification;
   const score = await submitAttempt(both, done);
   const open = await startAttempt(both, pgmpExam);
   await saveAnswer(both, open, PGMP_Q[1], ["B"]);
-  const drill = await startDrill(both, "PgMP", "people-1", 10);
+  const drill = await startDrill(both, "PgMP", "governance-1", 10);
   const pmp = await startAttempt(both, 1);
 
   await setCertifications(admin, both, ["PMP"]);

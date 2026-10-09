@@ -1,0 +1,728 @@
+[
+ {
+  "id": 41439087,
+  "task": "lifecycle-15",
+  "confidence": "medium",
+  "reason": "Thử nghiệm cơ chế nguồn lực thuê ngoài/tạm thời để thuyết phục PM"
+ },
+ {
+  "id": 41439088,
+  "task": "lifecycle-30",
+  "confidence": "medium",
+  "reason": "Chọn chiến lược chia sẻ rủi ro cho ý tưởng giá trị cao chưa kiểm chứng"
+ },
+ {
+  "id": 41439089,
+  "task": "lifecycle-12",
+  "confidence": "medium",
+  "reason": "Xử lý vấn đề cấp project: scope chưa baseline, trao đổi và hỗ trợ"
+ },
+ {
+  "id": 41439090,
+  "task": "strategy-1",
+  "confidence": "low",
+  "reason": "Câu định nghĩa phân biệt program và portfolio"
+ },
+ {
+  "id": 41439091,
+  "task": "governance-10",
+  "confidence": "high",
+  "reason": "Chiến lược tổ chức đổi sau sáp nhập, đánh giá lại sự phù hợp của program"
+ },
+ {
+  "id": 41439092,
+  "task": "lifecycle-12",
+  "confidence": "medium",
+  "reason": "Project trễ ảnh hưởng component khác, gỡ phụ thuộc và đẩy nhanh"
+ },
+ {
+  "id": 41439093,
+  "task": "stakeholder-2",
+  "confidence": "medium",
+  "reason": "Trọng tâm phân tích, đánh giá lợi ích stakeholder và chiến lược engagement"
+ },
+ {
+  "id": 41439094,
+  "task": "lifecycle-12",
+  "confidence": "low",
+  "reason": "Vấn đề project được escalate, xác định người chịu trách nhiệm giải quyết"
+ },
+ {
+  "id": 41439095,
+  "task": "benefits-4",
+  "confidence": "high",
+  "reason": "Benefits bắt đầu tích lũy, theo dõi và xử lý sai lệch"
+ },
+ {
+  "id": 41439096,
+  "task": "governance-6",
+  "confidence": "medium",
+  "reason": "Đối chiếu hồ sơ rủi ro program với ngưỡng chịu rủi ro tổ chức"
+ },
+ {
+  "id": 41439097,
+  "task": "lifecycle-9",
+  "confidence": "medium",
+  "reason": "Ý nghĩa program management plan đã baseline"
+ },
+ {
+  "id": 41439098,
+  "task": "stakeholder-1",
+  "confidence": "low",
+  "reason": "Xác định vai trò stakeholder chính quyền địa phương, câu kiến thức"
+ },
+ {
+  "id": 41439099,
+  "task": "lifecycle-12",
+  "confidence": "medium",
+  "reason": "Phân tích nguyên nhân trễ deliverable project và cùng PM tìm phương án"
+ },
+ {
+  "id": 41439100,
+  "task": "lifecycle-8",
+  "confidence": "medium",
+  "reason": "Giá trị WBS cấp project so với program WBS"
+ },
+ {
+  "id": 41439101,
+  "task": "strategy-1",
+  "confidence": "low",
+  "reason": "Bước đầu khởi động program, câu chung chung"
+ },
+ {
+  "id": 41439102,
+  "task": "stakeholder-2",
+  "confidence": "medium",
+  "reason": "Phỏng vấn đại diện nhóm khách hàng để phân tích kỳ vọng"
+ },
+ {
+  "id": 41439103,
+  "task": "lifecycle-16",
+  "confidence": "low",
+  "reason": "Charter cho component nội bộ, đáp án khó hiểu"
+ },
+ {
+  "id": 41439104,
+  "task": "lifecycle-9",
+  "confidence": "high",
+  "reason": "Thành phần của program management plan, không gồm plan component"
+ },
+ {
+  "id": 41439105,
+  "task": "lifecycle-7",
+  "confidence": "medium",
+  "reason": "Xác định phạm vi program, component nào không thuộc program"
+ },
+ {
+  "id": 41439106,
+  "task": "lifecycle-27",
+  "confidence": "medium",
+  "reason": "Vấn đề phụ thuộc giữa các project là issue cấp program"
+ },
+ {
+  "id": 41439107,
+  "task": "lifecycle-8",
+  "confidence": "high",
+  "reason": "Program WBS phải bao gồm cả other work"
+ },
+ {
+  "id": 41439108,
+  "task": "lifecycle-10",
+  "confidence": "medium",
+  "reason": "PgM ưu tiên lại component khi thiếu nguồn lực"
+ },
+ {
+  "id": 41439109,
+  "task": "benefits-1",
+  "confidence": "medium",
+  "reason": "Chọn thước đo benefits để đánh giá thành công program"
+ },
+ {
+  "id": 41439110,
+  "task": "lifecycle-30",
+  "confidence": "medium",
+  "reason": "Dự phòng management reserve cho rủi ro chưa biết"
+ },
+ {
+  "id": 41439111,
+  "task": "lifecycle-1",
+  "confidence": "high",
+  "reason": "Charter thiếu strategic fit"
+ },
+ {
+  "id": 41439112,
+  "task": "lifecycle-33",
+  "confidence": "high",
+  "reason": "Nội dung chuyển giao: deliverables, benefits, knowledge"
+ },
+ {
+  "id": 41439113,
+  "task": "strategy-1",
+  "confidence": "low",
+  "reason": "Câu chung về giá trị của program management"
+ },
+ {
+  "id": 41439114,
+  "task": "lifecycle-21",
+  "confidence": "medium",
+  "reason": "Vai trò PgM trong quality assurance giữa các project"
+ },
+ {
+  "id": 41439115,
+  "task": "lifecycle-28",
+  "confidence": "medium",
+  "reason": "Vai trò PgM trong quản lý thay đổi cấp component"
+ },
+ {
+  "id": 41439116,
+  "task": "lifecycle-9",
+  "confidence": "high",
+  "reason": "Lập lịch program với rolling wave cho project nghiên cứu"
+ },
+ {
+  "id": 41439117,
+  "task": "stakeholder-5",
+  "confidence": "medium",
+  "reason": "Cơ chế phân phối thông tin phù hợp cho stakeholder"
+ },
+ {
+  "id": 41439118,
+  "task": "lifecycle-30",
+  "confidence": "low",
+  "reason": "Câu định nghĩa secondary risk"
+ },
+ {
+  "id": 41439119,
+  "task": "stakeholder-7",
+  "confidence": "medium",
+  "reason": "Giảm kháng cự thay đổi bằng pilot thành công"
+ },
+ {
+  "id": 41439120,
+  "task": "governance-10",
+  "confidence": "medium",
+  "reason": "Rà soát sự phù hợp chiến lược sau sáp nhập, tài liệu ít hữu ích"
+ },
+ {
+  "id": 41439121,
+  "task": "lifecycle-27",
+  "confidence": "medium",
+  "reason": "Issue tích hợp giữa các vendor, co-locate để giải quyết"
+ },
+ {
+  "id": 41439122,
+  "task": "stakeholder-7",
+  "confidence": "medium",
+  "reason": "Kết nối đại diện business với vendor để cải thiện giao tiếp"
+ },
+ {
+  "id": 41439123,
+  "task": "lifecycle-29",
+  "confidence": "medium",
+  "reason": "Đánh giá lợi ích so với chi phí để đề xuất quyết định phát hành"
+ },
+ {
+  "id": 41439124,
+  "task": "lifecycle-27",
+  "confidence": "medium",
+  "reason": "Lỗi tích hợp giữa hai project, phân tích nguyên nhân gốc"
+ },
+ {
+  "id": 41439125,
+  "task": "lifecycle-15",
+  "confidence": "low",
+  "reason": "Ưu tiên tuyển dụng nhân sự cho program"
+ },
+ {
+  "id": 41439126,
+  "task": "lifecycle-9",
+  "confidence": "medium",
+  "reason": "Sau khi duyệt charter, lập plan cân bằng scope, cost, time"
+ },
+ {
+  "id": 41439127,
+  "task": "lifecycle-32",
+  "confidence": "medium",
+  "reason": "Tài liệu đóng program ít quan trọng nhất"
+ },
+ {
+  "id": 41439128,
+  "task": "lifecycle-9",
+  "confidence": "medium",
+  "reason": "Dùng program scope management plan để quản lý scope component"
+ },
+ {
+  "id": 41439129,
+  "task": "benefits-8",
+  "confidence": "medium",
+  "reason": "Ngân sách cho hoạt động chuyển giao sang vận hành"
+ },
+ {
+  "id": 41439130,
+  "task": "benefits-4",
+  "confidence": "medium",
+  "reason": "Phân tích tác động trễ lên benefits của program"
+ },
+ {
+  "id": 41439131,
+  "task": "lifecycle-28",
+  "confidence": "high",
+  "reason": "Tạo change request và bàn với vận hành"
+ },
+ {
+  "id": 41439132,
+  "task": "lifecycle-32",
+  "confidence": "medium",
+  "reason": "Tập hoạt động đầy đủ khi đóng program"
+ },
+ {
+  "id": 41439133,
+  "task": "lifecycle-25",
+  "confidence": "medium",
+  "reason": "Dùng earned value làm cơ sở phân bổ quỹ"
+ },
+ {
+  "id": 41439134,
+  "task": "lifecycle-25",
+  "confidence": "high",
+  "reason": "Phân tích CPI/SPI, nguyên nhân crashing"
+ },
+ {
+  "id": 41439135,
+  "task": "stakeholder-5",
+  "confidence": "medium",
+  "reason": "PgM là người truyền thông chính tới steering committee"
+ },
+ {
+  "id": 41439136,
+  "task": "lifecycle-10",
+  "confidence": "medium",
+  "reason": "Chọn vendor tận dụng chiết khấu khối lượng giữa các project"
+ },
+ {
+  "id": 41439137,
+  "task": "benefits-1",
+  "confidence": "medium",
+  "reason": "Hoạt động quan trọng nhất: khung lập kế hoạch và theo dõi benefits"
+ },
+ {
+  "id": 41439138,
+  "task": "benefits-3",
+  "confidence": "medium",
+  "reason": "Đóng program cần dự liệu duy trì benefits"
+ },
+ {
+  "id": 41439139,
+  "task": "lifecycle-21",
+  "confidence": "low",
+  "reason": "Work authorization system để kiểm soát chi phí"
+ },
+ {
+  "id": 41439140,
+  "task": "stakeholder-1",
+  "confidence": "medium",
+  "reason": "Xác định sponsor tiềm năng cho ý tưởng program"
+ },
+ {
+  "id": 41439141,
+  "task": "lifecycle-27",
+  "confidence": "medium",
+  "reason": "Issue giá thép tăng ảnh hưởng nhiều component"
+ },
+ {
+  "id": 41439142,
+  "task": "strategy-1",
+  "confidence": "low",
+  "reason": "Câu định nghĩa portfolio"
+ },
+ {
+  "id": 41439143,
+  "task": "lifecycle-21",
+  "confidence": "medium",
+  "reason": "Tăng chú trọng chất lượng bằng Kaizen"
+ },
+ {
+  "id": 41439144,
+  "task": "strategy-5",
+  "confidence": "medium",
+  "reason": "Feasibility xét năng lực và nguồn lực sẵn sàng"
+ },
+ {
+  "id": 41439145,
+  "task": "strategy-1",
+  "confidence": "low",
+  "reason": "Câu định nghĩa portfolio"
+ },
+ {
+  "id": 41439146,
+  "task": "lifecycle-30",
+  "confidence": "medium",
+  "reason": "Vai trò PgM trong quản lý rủi ro program"
+ },
+ {
+  "id": 41439147,
+  "task": "strategy-11",
+  "confidence": "medium",
+  "reason": "Khai thác cơ hội bằng cách tách thành project/program mới"
+ },
+ {
+  "id": 41439148,
+  "task": "lifecycle-10",
+  "confidence": "high",
+  "reason": "Resource plan tối ưu nguồn lực dùng chung"
+ },
+ {
+  "id": 41439149,
+  "task": "lifecycle-16",
+  "confidence": "high",
+  "reason": "Tiêu chí duyệt charter component: đóng góp benefits"
+ },
+ {
+  "id": 41439150,
+  "task": "lifecycle-27",
+  "confidence": "medium",
+  "reason": "Lỗi bảo mật trước ra mắt, PgM quyết định cùng steering committee"
+ },
+ {
+  "id": 41439151,
+  "task": "lifecycle-9",
+  "confidence": "high",
+  "reason": "Sau WBS, xác định schedule, cost, resource"
+ },
+ {
+  "id": 41439152,
+  "task": "stakeholder-7",
+  "confidence": "low",
+  "reason": "Kỹ năng ảnh hưởng không cần quyền hạn"
+ },
+ {
+  "id": 41439153,
+  "task": "lifecycle-16",
+  "confidence": "high",
+  "reason": "Khởi tạo component mới trong giai đoạn delivery"
+ },
+ {
+  "id": 41439154,
+  "task": "strategy-6",
+  "confidence": "medium",
+  "reason": "Phân tích SWOT để xác định component đạt mục tiêu"
+ },
+ {
+  "id": 41439155,
+  "task": "lifecycle-9",
+  "confidence": "medium",
+  "reason": "Phân tích lịch theo độ lệch chuẩn ước lượng"
+ },
+ {
+  "id": 41439156,
+  "task": "lifecycle-16",
+  "confidence": "high",
+  "reason": "Project charter cần để ủy quyền từng project"
+ },
+ {
+  "id": 41439157,
+  "task": "lifecycle-9",
+  "confidence": "medium",
+  "reason": "Nhận diện rủi ro ban đầu bằng Delphi khi lập plan"
+ },
+ {
+  "id": 41439158,
+  "task": "lifecycle-9",
+  "confidence": "high",
+  "reason": "Mức chi tiết của program management plan"
+ },
+ {
+  "id": 41439159,
+  "task": "lifecycle-28",
+  "confidence": "medium",
+  "reason": "Yêu cầu chi thêm khi chuyển giao qua change request"
+ },
+ {
+  "id": 41439160,
+  "task": "lifecycle-9",
+  "confidence": "medium",
+  "reason": "Tính contingency reserve bằng Monte Carlo khi lập plan"
+ },
+ {
+  "id": 41439161,
+  "task": "lifecycle-21",
+  "confidence": "low",
+  "reason": "Câu kiến thức về zero defects"
+ },
+ {
+  "id": 41439162,
+  "task": "strategy-1",
+  "confidence": "low",
+  "reason": "Phân biệt project, program, portfolio"
+ },
+ {
+  "id": 41439163,
+  "task": "strategy-5",
+  "confidence": "high",
+  "reason": "Bước đầu tiên là chuẩn bị business case"
+ },
+ {
+  "id": 41439164,
+  "task": "strategy-1",
+  "confidence": "low",
+  "reason": "Rà soát portfolio để giảm chi phí, câu chung"
+ },
+ {
+  "id": 41439165,
+  "task": "benefits-1",
+  "confidence": "medium",
+  "reason": "Program architecture liên kết component với benefits"
+ },
+ {
+  "id": 41439166,
+  "task": "lifecycle-34",
+  "confidence": "medium",
+  "reason": "Thành phần tham dự họp đóng program"
+ },
+ {
+  "id": 41439167,
+  "task": "lifecycle-30",
+  "confidence": "low",
+  "reason": "Trách nhiệm nhận diện rủi ro, câu kiến thức"
+ },
+ {
+  "id": 41439168,
+  "task": "lifecycle-32",
+  "confidence": "medium",
+  "reason": "Trình tự hoạt động đóng program"
+ },
+ {
+  "id": 41439169,
+  "task": "lifecycle-10",
+  "confidence": "low",
+  "reason": "Đảm bảo nguồn lực cho component ở nước ngoài"
+ },
+ {
+  "id": 41439170,
+  "task": "lifecycle-29",
+  "confidence": "medium",
+  "reason": "Đánh giá change request theo đóng góp benefits"
+ },
+ {
+  "id": 41605001,
+  "task": "lifecycle-18",
+  "confidence": "low",
+  "reason": "Nội dung họp chia sẻ thông tin và kinh nghiệm giữa project"
+ },
+ {
+  "id": 41605002,
+  "task": "benefits-2",
+  "confidence": "medium",
+  "reason": "Tạo component để hợp lý hóa vendor, khai thác synergy"
+ },
+ {
+  "id": 41605003,
+  "task": "stakeholder-2",
+  "confidence": "low",
+  "reason": "Khuyến nghị audit sai về engagement đồng đều mọi stakeholder"
+ },
+ {
+  "id": 41605004,
+  "task": "lifecycle-30",
+  "confidence": "medium",
+  "reason": "Dùng contingency reserve cấp program cho rủi ro lan truyền"
+ },
+ {
+  "id": 41605005,
+  "task": "stakeholder-3",
+  "confidence": "medium",
+  "reason": "Làm rõ và đặt kỳ vọng với sponsor, portfolio manager"
+ },
+ {
+  "id": 41605006,
+  "task": "lifecycle-30",
+  "confidence": "medium",
+  "reason": "Ước lượng lại reserve theo đánh giá rủi ro còn lại"
+ },
+ {
+  "id": 41605007,
+  "task": "governance-4",
+  "confidence": "medium",
+  "reason": "Chỉ số dashboard theo dõi benefits hợp nhất hợp đồng"
+ },
+ {
+  "id": 41605008,
+  "task": "lifecycle-7",
+  "confidence": "low",
+  "reason": "Phân loại other work thuộc program"
+ },
+ {
+  "id": 41605009,
+  "task": "stakeholder-3",
+  "confidence": "high",
+  "reason": "Thương lượng quyền hạn và cam kết từ lãnh đạo chức năng"
+ },
+ {
+  "id": 41605010,
+  "task": "strategy-11",
+  "confidence": "low",
+  "reason": "Khai thác cơ hội cải thiện nhận thức khách hàng"
+ },
+ {
+  "id": 41605011,
+  "task": "governance-10",
+  "confidence": "medium",
+  "reason": "Sản phẩm không còn chiến lược, chọn hướng xử lý"
+ },
+ {
+  "id": 41605012,
+  "task": "strategy-7",
+  "confidence": "medium",
+  "reason": "Steering committee cấp thêm nguồn lực và vốn"
+ },
+ {
+  "id": 41605013,
+  "task": "lifecycle-7",
+  "confidence": "low",
+  "reason": "Xác định project thuộc phạm vi program"
+ },
+ {
+  "id": 41605014,
+  "task": "governance-2",
+  "confidence": "high",
+  "reason": "Yếu tố khi thiết kế cấu trúc governance"
+ },
+ {
+  "id": 41605015,
+  "task": "lifecycle-3",
+  "confidence": "low",
+  "reason": "Rà soát roadmap, ưu tiên chất lượng dữ liệu"
+ },
+ {
+  "id": 41605016,
+  "task": "stakeholder-6",
+  "confidence": "high",
+  "reason": "Rủi ro do thành viên nêu, ghi nhận và điều tra"
+ },
+ {
+  "id": 41605017,
+  "task": "governance-2",
+  "confidence": "medium",
+  "reason": "Cơ cấu sponsor, PgM, steering committee"
+ },
+ {
+  "id": 41605018,
+  "task": "strategy-7",
+  "confidence": "medium",
+  "reason": "Cắt giảm ngân sách, chuẩn bị ưu tiên hoạt động"
+ },
+ {
+  "id": 41605019,
+  "task": "governance-10",
+  "confidence": "medium",
+  "reason": "Môi trường cạnh tranh đổi, đóng component và chuyển giao benefits"
+ },
+ {
+  "id": 41605020,
+  "task": "stakeholder-3",
+  "confidence": "medium",
+  "reason": "Xác định SLA để làm rõ kỳ vọng khách hàng"
+ },
+ {
+  "id": 41605021,
+  "task": "governance-1",
+  "confidence": "low",
+  "reason": "Tham vấn PMO về tiêu chuẩn tính reserve"
+ },
+ {
+  "id": 41605022,
+  "task": "stakeholder-5",
+  "confidence": "medium",
+  "reason": "Trình bày dự báo và kế hoạch giảm thiểu cho khách hàng"
+ },
+ {
+  "id": 41605023,
+  "task": "strategy-11",
+  "confidence": "medium",
+  "reason": "Lập charter đánh giá cơ hội kinh doanh mới"
+ },
+ {
+  "id": 41605024,
+  "task": "benefits-4",
+  "confidence": "medium",
+  "reason": "Tác động trễ lên khả năng mang lại benefits"
+ },
+ {
+  "id": 41605025,
+  "task": "benefits-7",
+  "confidence": "medium",
+  "reason": "Rủi ro chi phí bảo hành ảnh hưởng benefits"
+ },
+ {
+  "id": 41605026,
+  "task": "lifecycle-15",
+  "confidence": "medium",
+  "reason": "Biện pháp động viên công nhân chuyển địa điểm"
+ },
+ {
+  "id": 41605027,
+  "task": "strategy-10",
+  "confidence": "medium",
+  "reason": "Tích hợp hoạt động vận hành hỗ trợ vào program"
+ },
+ {
+  "id": 41605028,
+  "task": "lifecycle-15",
+  "confidence": "low",
+  "reason": "Đánh giá vendor trái chiều giữa hai project"
+ },
+ {
+  "id": 41605029,
+  "task": "lifecycle-14",
+  "confidence": "low",
+  "reason": "Tác động của chỉ tiêu hiệu suất lên cost và quality"
+ },
+ {
+  "id": 41605030,
+  "task": "governance-10",
+  "confidence": "medium",
+  "reason": "Đề xuất kế hoạch dài hạn cho dòng sản phẩm không chiến lược"
+ },
+ {
+  "id": 41605031,
+  "task": "governance-2",
+  "confidence": "low",
+  "reason": "Vai trò sponsor trong program"
+ },
+ {
+  "id": 41605032,
+  "task": "stakeholder-5",
+  "confidence": "low",
+  "reason": "Thông điệp giải thích quyết định cho nhân viên lo lắng"
+ },
+ {
+  "id": 41605033,
+  "task": "lifecycle-30",
+  "confidence": "low",
+  "reason": "Dùng chuyên gia rủi ro để giảm management reserve"
+ },
+ {
+  "id": 41605034,
+  "task": "lifecycle-30",
+  "confidence": "medium",
+  "reason": "Khai thác cơ hội tỷ giá bằng hợp đồng kỳ hạn"
+ },
+ {
+  "id": 41605035,
+  "task": "stakeholder-3",
+  "confidence": "medium",
+  "reason": "Kỳ vọng phù hợp với stakeholder champion"
+ },
+ {
+  "id": 41605036,
+  "task": "lifecycle-9",
+  "confidence": "high",
+  "reason": "Interface management plan thuộc program management plan"
+ },
+ {
+  "id": 41605037,
+  "task": "lifecycle-10",
+  "confidence": "low",
+  "reason": "Lấy nguồn lực từ quản lý chức năng"
+ }
+]

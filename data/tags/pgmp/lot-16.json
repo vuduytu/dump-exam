@@ -1,0 +1,728 @@
+[
+ {
+  "id": 42001084,
+  "task": "lifecycle-7",
+  "confidence": "medium",
+  "reason": "Scope statement đặt mục tiêu dự án; gần Task phát triển scope statement chi tiết."
+ },
+ {
+  "id": 42001085,
+  "task": "lifecycle-15",
+  "confidence": "low",
+  "reason": "Câu kiến thức procurement về người soạn SOW; gần nhất Task thương lượng hợp đồng."
+ },
+ {
+  "id": 42001086,
+  "task": "lifecycle-16",
+  "confidence": "high",
+  "reason": "Tạo project charter để khởi tạo các dự án thành phần trong program."
+ },
+ {
+  "id": 42001087,
+  "task": "lifecycle-4",
+  "confidence": "low",
+  "reason": "Không có đáp án; hỏi quy trình xác định sponsor khi lập ma trận trách nhiệm."
+ },
+ {
+  "id": 42001088,
+  "task": "stakeholder-2",
+  "confidence": "high",
+  "reason": "Lập stakeholder analysis chart để phân tích mối quan tâm, đe doạ của stakeholder."
+ },
+ {
+  "id": 42001089,
+  "task": "lifecycle-9",
+  "confidence": "medium",
+  "reason": "Staffing management plan là kế hoạch hỗ trợ trong program management plan."
+ },
+ {
+  "id": 42001090,
+  "task": "stakeholder-2",
+  "confidence": "medium",
+  "reason": "Force field analysis so sánh stakeholder tích cực và tiêu cực."
+ },
+ {
+  "id": 42001091,
+  "task": "governance-3",
+  "confidence": "high",
+  "reason": "Kill point là review cuối phase quyết định có tiếp tục hay không."
+ },
+ {
+  "id": 42001092,
+  "task": "lifecycle-30",
+  "confidence": "medium",
+  "reason": "Phản hồi rủi ro tích cực exploit theo risk management plan."
+ },
+ {
+  "id": 42001093,
+  "task": "lifecycle-7",
+  "confidence": "medium",
+  "reason": "Program scope statement làm baseline cho các quyết định program."
+ },
+ {
+  "id": 42001094,
+  "task": "stakeholder-5",
+  "confidence": "low",
+  "reason": "Câu kiến thức chung về giao tiếp phi ngôn ngữ."
+ },
+ {
+  "id": 42001095,
+  "task": "lifecycle-24",
+  "confidence": "high",
+  "reason": "Program manager đảm bảo dự án thành phần đã đóng ở cấp project."
+ },
+ {
+  "id": 42001096,
+  "task": "lifecycle-30",
+  "confidence": "medium",
+  "reason": "Thành phần của quy trình theo dõi và kiểm soát rủi ro."
+ },
+ {
+  "id": 42001097,
+  "task": "lifecycle-32",
+  "confidence": "medium",
+  "reason": "Thủ tục, biểu mẫu tổ chức yêu cầu khi đóng program."
+ },
+ {
+  "id": 42001098,
+  "task": "governance-11",
+  "confidence": "low",
+  "reason": "Câu định nghĩa integration management; gần Task kế hoạch tích hợp program."
+ },
+ {
+  "id": 42001099,
+  "task": "lifecycle-16",
+  "confidence": "high",
+  "reason": "Project charter chỉ định project manager cho từng dự án thành phần."
+ },
+ {
+  "id": 42001100,
+  "task": "lifecycle-15",
+  "confidence": "low",
+  "reason": "Câu procurement về weighted scoring chọn nhà cung cấp."
+ },
+ {
+  "id": 42077001,
+  "task": "lifecycle-30",
+  "confidence": "medium",
+  "reason": "Secondary risk phát sinh từ phản hồi rủi ro."
+ },
+ {
+  "id": 42077002,
+  "task": "lifecycle-21",
+  "confidence": "low",
+  "reason": "Coaching về định nghĩa quality control; câu kiến thức chất lượng."
+ },
+ {
+  "id": 42077003,
+  "task": "lifecycle-6",
+  "confidence": "high",
+  "reason": "Kick-off meeting giúp stakeholder gặp nhau và tìm hiểu dự án."
+ },
+ {
+  "id": 42077004,
+  "task": "lifecycle-32",
+  "confidence": "medium",
+  "reason": "Tạo program closure reports khi program đạt deliverable cuối."
+ },
+ {
+  "id": 42077005,
+  "task": "lifecycle-15",
+  "confidence": "low",
+  "reason": "Câu procurement về RFI gửi nhà cung cấp."
+ },
+ {
+  "id": 42077006,
+  "task": "lifecycle-25",
+  "confidence": "high",
+  "reason": "Tính cost variance bằng earned value."
+ },
+ {
+  "id": 42077007,
+  "task": "strategy-5",
+  "confidence": "medium",
+  "reason": "NPV là phương pháp đo lợi ích dùng khi đánh giá business case."
+ },
+ {
+  "id": 42077008,
+  "task": "lifecycle-9",
+  "confidence": "low",
+  "reason": "Câu kiến thức lập lịch về các loại float."
+ },
+ {
+  "id": 42077009,
+  "task": "lifecycle-27",
+  "confidence": "low",
+  "reason": "Chấm dứt hợp đồng vendor, ghi nhận công việc đã và chưa làm."
+ },
+ {
+  "id": 42077010,
+  "task": "lifecycle-21",
+  "confidence": "medium",
+  "reason": "Six Sigma là quality assurance khi thực thi kế hoạch chất lượng."
+ },
+ {
+  "id": 42077011,
+  "task": "lifecycle-16",
+  "confidence": "high",
+  "reason": "Thời điểm khởi tạo các dự án thành phần trong program."
+ },
+ {
+  "id": 42077012,
+  "task": "strategy-7",
+  "confidence": "medium",
+  "reason": "Tính giá trị tương lai để đánh giá tài chính, xin cấp vốn program."
+ },
+ {
+  "id": 42077013,
+  "task": "benefits-8",
+  "confidence": "medium",
+  "reason": "Program transition agreement định nghĩa chuyển giao sang tổ chức."
+ },
+ {
+  "id": 42077014,
+  "task": "lifecycle-30",
+  "confidence": "medium",
+  "reason": "Thuê chuyên gia làm việc nguy hiểm là transference rủi ro."
+ },
+ {
+  "id": 42077015,
+  "task": "lifecycle-35",
+  "confidence": "medium",
+  "reason": "Hoàn thiện lessons learned trong giai đoạn đóng program."
+ },
+ {
+  "id": 42077016,
+  "task": "lifecycle-17",
+  "confidence": "high",
+  "reason": "Chuẩn hoá biểu mẫu, phần mềm, template cho mọi dự án."
+ },
+ {
+  "id": 42077017,
+  "task": "lifecycle-19",
+  "confidence": "high",
+  "reason": "Hoạt động team development để gắn kết đội program."
+ },
+ {
+  "id": 42077018,
+  "task": "lifecycle-21",
+  "confidence": "medium",
+  "reason": "Defect repair validation trong thực thi kế hoạch chất lượng."
+ },
+ {
+  "id": 42077019,
+  "task": "stakeholder-2",
+  "confidence": "high",
+  "reason": "Stakeholder analysis chart ghi ý kiến, ảnh hưởng, yêu cầu stakeholder."
+ },
+ {
+  "id": 42077020,
+  "task": "lifecycle-30",
+  "confidence": "medium",
+  "reason": "Ví dụ transference khi thuê công ty tư vấn."
+ },
+ {
+  "id": 42077021,
+  "task": "lifecycle-25",
+  "confidence": "high",
+  "reason": "Tính SPI để phân tích variance tiến độ."
+ },
+ {
+  "id": 42077022,
+  "task": "stakeholder-5",
+  "confidence": "medium",
+  "reason": "Đầu ra của kiểm soát truyền thông là communications management plan."
+ },
+ {
+  "id": 42077023,
+  "task": "lifecycle-7",
+  "confidence": "medium",
+  "reason": "Định nghĩa scope dựa trên template từ dự án trước."
+ },
+ {
+  "id": 42077024,
+  "task": "lifecycle-8",
+  "confidence": "high",
+  "reason": "WBS dictionary định nghĩa chi phí, nguồn lực của từng deliverable."
+ },
+ {
+  "id": 42077025,
+  "task": "lifecycle-28",
+  "confidence": "medium",
+  "reason": "Thay đổi program scope dẫn đến chấm dứt dự án thành phần."
+ },
+ {
+  "id": 42077026,
+  "task": "strategy-5",
+  "confidence": "medium",
+  "reason": "Tính present value để quyết định mức đầu tư cho program mới."
+ },
+ {
+  "id": 42077027,
+  "task": "lifecycle-15",
+  "confidence": "low",
+  "reason": "Phân tích make-or-buy trong procurement của program."
+ },
+ {
+  "id": 42077028,
+  "task": "lifecycle-30",
+  "confidence": "high",
+  "reason": "Thực hiện phản hồi rủi ro mitigation giảm khả năng xảy ra."
+ },
+ {
+  "id": 42077029,
+  "task": "strategy-2",
+  "confidence": "medium",
+  "reason": "Ước tính chi phí sơ bộ bằng analogous estimating cho program mới."
+ },
+ {
+  "id": 42077030,
+  "task": "lifecycle-10",
+  "confidence": "medium",
+  "reason": "Resource management plan định thời điểm nhận và giải phóng nguồn lực."
+ },
+ {
+  "id": 42077031,
+  "task": "governance-2",
+  "confidence": "medium",
+  "reason": "Program governance là thực thi quy tắc, thủ tục của tổ chức."
+ },
+ {
+  "id": 42077032,
+  "task": "lifecycle-25",
+  "confidence": "high",
+  "reason": "Tính cost variance bằng earned value."
+ },
+ {
+  "id": 42077033,
+  "task": "lifecycle-9",
+  "confidence": "low",
+  "reason": "Coaching khái niệm critical path; câu kiến thức lập lịch."
+ },
+ {
+  "id": 42077034,
+  "task": "lifecycle-21",
+  "confidence": "low",
+  "reason": "Câu kiến thức công cụ quality control scatter diagram."
+ },
+ {
+  "id": 42077035,
+  "task": "lifecycle-29",
+  "confidence": "medium",
+  "reason": "Integrated change control đánh giá tác động thay đổi lên các knowledge area."
+ },
+ {
+  "id": 42077036,
+  "task": "strategy-5",
+  "confidence": "high",
+  "reason": "Phân tích ROI cho program mới là business case."
+ },
+ {
+  "id": 42077037,
+  "task": "lifecycle-21",
+  "confidence": "low",
+  "reason": "Chi phí đào tạo là cost of conformance; kiến thức chất lượng."
+ },
+ {
+  "id": 42077038,
+  "task": "lifecycle-28",
+  "confidence": "medium",
+  "reason": "Ghi mọi change request và trạng thái vào change register."
+ },
+ {
+  "id": 42077039,
+  "task": "lifecycle-1",
+  "confidence": "low",
+  "reason": "Ngân sách định trước là constraint; kiến thức chung."
+ },
+ {
+  "id": 42077040,
+  "task": "lifecycle-7",
+  "confidence": "low",
+  "reason": "Nội dung program statement of work; gần Task scope chi tiết."
+ },
+ {
+  "id": 42077041,
+  "task": "strategy-1",
+  "confidence": "low",
+  "reason": "Câu định nghĩa các theme của program management."
+ },
+ {
+  "id": 42077042,
+  "task": "stakeholder-5",
+  "confidence": "low",
+  "reason": "Câu kiến thức mô hình giao tiếp, thành phần medium."
+ },
+ {
+  "id": 42077043,
+  "task": "lifecycle-4",
+  "confidence": "low",
+  "reason": "Cấu trúc strong matrix ảnh hưởng thẩm quyền; kiến thức chung."
+ },
+ {
+  "id": 42077044,
+  "task": "lifecycle-27",
+  "confidence": "medium",
+  "reason": "Ghi issue cấp program vào issue log để xử lý."
+ },
+ {
+  "id": 42077045,
+  "task": "lifecycle-10",
+  "confidence": "low",
+  "reason": "Các loại nguồn lực cần theo dõi; kiến thức chung."
+ },
+ {
+  "id": 42077046,
+  "task": "lifecycle-21",
+  "confidence": "medium",
+  "reason": "Quality assurance có thể tạo change request khi thực thi."
+ },
+ {
+  "id": 42077047,
+  "task": "strategy-7",
+  "confidence": "medium",
+  "reason": "Payback period là chỉ số tài chính đánh giá program."
+ },
+ {
+  "id": 42077048,
+  "task": "lifecycle-15",
+  "confidence": "low",
+  "reason": "Câu procurement: IFB thì phản hồi bằng bid."
+ },
+ {
+  "id": 42077049,
+  "task": "lifecycle-24",
+  "confidence": "low",
+  "reason": "Công cụ của quy trình đóng project/phase; kiến thức PMBOK."
+ },
+ {
+  "id": 42077050,
+  "task": "lifecycle-15",
+  "confidence": "low",
+  "reason": "Loại hợp đồng CPPC rủi ro nhất cho bên mua."
+ },
+ {
+  "id": 42077051,
+  "task": "lifecycle-24",
+  "confidence": "medium",
+  "reason": "Kiểm tra hợp đồng để biết điều kiện đóng dự án."
+ },
+ {
+  "id": 42077052,
+  "task": "strategy-4",
+  "confidence": "medium",
+  "reason": "Value statement định hướng đánh đổi và quyết định của program."
+ },
+ {
+  "id": 42077053,
+  "task": "governance-3",
+  "confidence": "low",
+  "reason": "Câu kiến thức về các phase của program life cycle."
+ },
+ {
+  "id": 42077054,
+  "task": "strategy-1",
+  "confidence": "low",
+  "reason": "Câu định nghĩa program khác project."
+ },
+ {
+  "id": 42077055,
+  "task": "lifecycle-26",
+  "confidence": "medium",
+  "reason": "Fast tracking nén lịch làm tăng rủi ro khi điều chỉnh kế hoạch."
+ },
+ {
+  "id": 42077056,
+  "task": "lifecycle-25",
+  "confidence": "low",
+  "reason": "Monte Carlo mô phỏng kết quả lịch; kiến thức công cụ."
+ },
+ {
+  "id": 42077057,
+  "task": "lifecycle-10",
+  "confidence": "medium",
+  "reason": "Resource calendar xác định tính sẵn có nguồn lực dùng chung."
+ },
+ {
+  "id": 42077058,
+  "task": "benefits-1",
+  "confidence": "high",
+  "reason": "Lập kế hoạch định nghĩa lợi ích và cách tạo ra lợi ích."
+ },
+ {
+  "id": 42077059,
+  "task": "lifecycle-8",
+  "confidence": "high",
+  "reason": "Đặc điểm của program WBS."
+ },
+ {
+  "id": 42077060,
+  "task": "strategy-1",
+  "confidence": "low",
+  "reason": "Câu định nghĩa các theme của program management."
+ },
+ {
+  "id": 42077061,
+  "task": "lifecycle-21",
+  "confidence": "medium",
+  "reason": "Áp dụng checklist trong quality assurance cho công việc lặp lại."
+ },
+ {
+  "id": 42077062,
+  "task": "lifecycle-28",
+  "confidence": "medium",
+  "reason": "Thay đổi giảm scope khi program vượt ngân sách, trễ tiến độ."
+ },
+ {
+  "id": 42077063,
+  "task": "lifecycle-33",
+  "confidence": "medium",
+  "reason": "Lưu trữ hồ sơ program vào organizational process assets khi close-out."
+ },
+ {
+  "id": 42077064,
+  "task": "lifecycle-15",
+  "confidence": "low",
+  "reason": "Câu procurement về bidder conference."
+ },
+ {
+  "id": 42077065,
+  "task": "benefits-1",
+  "confidence": "medium",
+  "reason": "Program manager định lượng metric cho lợi ích vô hình."
+ },
+ {
+  "id": 42077066,
+  "task": "lifecycle-4",
+  "confidence": "medium",
+  "reason": "Phân định trách nhiệm deliverable giữa program và project manager."
+ },
+ {
+  "id": 42077067,
+  "task": "lifecycle-10",
+  "confidence": "low",
+  "reason": "Các loại nguồn lực cần theo dõi; kiến thức chung."
+ },
+ {
+  "id": 42077068,
+  "task": "lifecycle-6",
+  "confidence": "high",
+  "reason": "Mục đích chính của kick-off meeting."
+ },
+ {
+  "id": 42077069,
+  "task": "lifecycle-30",
+  "confidence": "low",
+  "reason": "Kiến thức chung: rủi ro cao nhất ở đầu dự án."
+ },
+ {
+  "id": 42077070,
+  "task": "lifecycle-21",
+  "confidence": "medium",
+  "reason": "Dùng Pareto chart phân tích kết quả quality control."
+ },
+ {
+  "id": 42077071,
+  "task": "lifecycle-10",
+  "confidence": "high",
+  "reason": "Giới hạn giờ làm là resource leveling heuristic."
+ },
+ {
+  "id": 42077072,
+  "task": "lifecycle-32",
+  "confidence": "medium",
+  "reason": "Certificate of program completion xác nhận program kết thúc."
+ },
+ {
+  "id": 42077073,
+  "task": "lifecycle-9",
+  "confidence": "medium",
+  "reason": "Nội dung scope management plan trong program management plan."
+ },
+ {
+  "id": 42077074,
+  "task": "strategy-5",
+  "confidence": "medium",
+  "reason": "NPV làm phương pháp chọn program để khởi tạo."
+ },
+ {
+  "id": 42077075,
+  "task": "stakeholder-5",
+  "confidence": "medium",
+  "reason": "Tính số kênh truyền thông khi lập communications management plan."
+ },
+ {
+  "id": 42077076,
+  "task": "lifecycle-19",
+  "confidence": "medium",
+  "reason": "Giai đoạn storming trong phát triển đội."
+ },
+ {
+  "id": 42077077,
+  "task": "lifecycle-21",
+  "confidence": "low",
+  "reason": "Câu định nghĩa program quality."
+ },
+ {
+  "id": 42077078,
+  "task": "governance-3",
+  "confidence": "medium",
+  "reason": "Program board phê duyệt kế hoạch trước khi tiến hành."
+ },
+ {
+  "id": 42077079,
+  "task": "lifecycle-21",
+  "confidence": "medium",
+  "reason": "Đầu ra của quy trình direct and manage program execution."
+ },
+ {
+  "id": 42077080,
+  "task": "lifecycle-22",
+  "confidence": "medium",
+  "reason": "Exceptions report báo cáo variance thời gian, chi phí."
+ },
+ {
+  "id": 42077081,
+  "task": "lifecycle-9",
+  "confidence": "low",
+  "reason": "Interface management plan là kế hoạch hỗ trợ; có thể là stakeholder."
+ },
+ {
+  "id": 42077082,
+  "task": "stakeholder-2",
+  "confidence": "medium",
+  "reason": "Định nghĩa stakeholder analysis chart."
+ },
+ {
+  "id": 42077083,
+  "task": "lifecycle-25",
+  "confidence": "high",
+  "reason": "Tính CPI để biết program lỗ bao nhiêu trên mỗi đô."
+ },
+ {
+  "id": 42077084,
+  "task": "lifecycle-19",
+  "confidence": "high",
+  "reason": "Dùng training plan để phát triển đội program."
+ },
+ {
+  "id": 42077085,
+  "task": "governance-7",
+  "confidence": "medium",
+  "reason": "Program governance giám sát giải quyết issue và leo thang."
+ },
+ {
+  "id": 42077086,
+  "task": "lifecycle-25",
+  "confidence": "low",
+  "reason": "Đầu ra của quy trình kiểm soát lịch; kiến thức."
+ },
+ {
+  "id": 42077087,
+  "task": "lifecycle-7",
+  "confidence": "medium",
+  "reason": "Alternative identification khi định nghĩa scope."
+ },
+ {
+  "id": 42077088,
+  "task": "governance-3",
+  "confidence": "high",
+  "reason": "Kill point là review quản lý cuối mỗi phase."
+ },
+ {
+  "id": 42077089,
+  "task": "lifecycle-9",
+  "confidence": "low",
+  "reason": "Ước tính definitive dựa trên WBS; kiến thức ước tính."
+ },
+ {
+  "id": 42077090,
+  "task": "lifecycle-10",
+  "confidence": "medium",
+  "reason": "Resource management plan điều phối nguồn lực dùng chung giữa dự án."
+ },
+ {
+  "id": 42077091,
+  "task": "lifecycle-10",
+  "confidence": "high",
+  "reason": "Resource leveling làm lịch kéo dài."
+ },
+ {
+  "id": 42077092,
+  "task": "lifecycle-8",
+  "confidence": "high",
+  "reason": "Chia nhỏ program scope để tạo WBS."
+ },
+ {
+  "id": 42077093,
+  "task": "lifecycle-25",
+  "confidence": "medium",
+  "reason": "Công cụ hỗ trợ kiểm soát lịch khi có delay."
+ },
+ {
+  "id": 42077094,
+  "task": "lifecycle-32",
+  "confidence": "high",
+  "reason": "Ký certificate of program closure với sponsor khi đóng program."
+ },
+ {
+  "id": 42077095,
+  "task": "lifecycle-30",
+  "confidence": "medium",
+  "reason": "Monte Carlo phân tích định lượng tác động rủi ro."
+ },
+ {
+  "id": 42077096,
+  "task": "lifecycle-15",
+  "confidence": "low",
+  "reason": "Loại hợp đồng nguy hiểm nhất cho bên mua."
+ },
+ {
+  "id": 42077097,
+  "task": "lifecycle-35",
+  "confidence": "high",
+  "reason": "Chuyển lessons learned vào knowledge base sau khi đóng."
+ },
+ {
+  "id": 42117001,
+  "task": "lifecycle-30",
+  "confidence": "high",
+  "reason": "Đặc điểm quy trình theo dõi và kiểm soát rủi ro program."
+ },
+ {
+  "id": 42117002,
+  "task": "lifecycle-15",
+  "confidence": "low",
+  "reason": "Công cụ của quy trình quản lý procurement program."
+ },
+ {
+  "id": 42117003,
+  "task": "lifecycle-23",
+  "confidence": "medium",
+  "reason": "Theo dõi ngày bắt đầu, kết thúc dự án để kiểm soát lịch program."
+ },
+ {
+  "id": 42117004,
+  "task": "governance-2",
+  "confidence": "low",
+  "reason": "Quy tắc, thủ tục dự án phải tuân theo là EEF."
+ },
+ {
+  "id": 42117005,
+  "task": "stakeholder-1",
+  "confidence": "high",
+  "reason": "Stakeholder register là đầu vào chính cho lập kế hoạch stakeholder."
+ },
+ {
+  "id": 42117006,
+  "task": "lifecycle-7",
+  "confidence": "high",
+  "reason": "Đặc điểm của program scope statement."
+ },
+ {
+  "id": 42117007,
+  "task": "lifecycle-21",
+  "confidence": "low",
+  "reason": "Coaching về process group executing tốn nhiều thời gian, ngân sách nhất."
+ }
+]

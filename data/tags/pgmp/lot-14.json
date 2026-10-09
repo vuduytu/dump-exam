@@ -1,0 +1,728 @@
+[
+ {
+  "id": 41905012,
+  "task": "stakeholder-4",
+  "confidence": "medium",
+  "reason": "Nhân viên bỏ kick-off, tìm nguyên nhân để xác nhận lại sự ủng hộ"
+ },
+ {
+  "id": 41905013,
+  "task": "benefits-3",
+  "confidence": "medium",
+  "reason": "Kiểm hoạt động còn lại để duy trì benefits sau chuyển giao"
+ },
+ {
+  "id": 41905014,
+  "task": "governance-11",
+  "confidence": "low",
+  "reason": "Program architecture ánh xạ component tới benefits, câu định nghĩa"
+ },
+ {
+  "id": 41905015,
+  "task": "lifecycle-5",
+  "confidence": "high",
+  "reason": "Tiêu chí đo lường chuẩn cho mọi component"
+ },
+ {
+  "id": 41905016,
+  "task": "strategy-11",
+  "confidence": "medium",
+  "reason": "Chiến lược cơ hội enhance để tăng benefits"
+ },
+ {
+  "id": 41905017,
+  "task": "strategy-11",
+  "confidence": "medium",
+  "reason": "Chiến lược cơ hội exploit để tối đa benefits"
+ },
+ {
+  "id": 41905018,
+  "task": "strategy-5",
+  "confidence": "medium",
+  "reason": "Kỹ thuật phân tích khi chuẩn bị business case"
+ },
+ {
+  "id": 41905019,
+  "task": "benefits-3",
+  "confidence": "medium",
+  "reason": "Ai lập kế hoạch duy trì benefits"
+ },
+ {
+  "id": 41905020,
+  "task": "lifecycle-16",
+  "confidence": "medium",
+  "reason": "Chọn project manager cho component"
+ },
+ {
+  "id": 41905021,
+  "task": "strategy-5",
+  "confidence": "high",
+  "reason": "Business case đánh giá tính khả thi của program"
+ },
+ {
+  "id": 41905022,
+  "task": "strategy-2",
+  "confidence": "high",
+  "reason": "Roadmap sơ bộ để xin phê duyệt sponsor"
+ },
+ {
+  "id": 41905023,
+  "task": "governance-11",
+  "confidence": "low",
+  "reason": "Program architecture liên kết component mới, câu định nghĩa"
+ },
+ {
+  "id": 41905024,
+  "task": "governance-10",
+  "confidence": "high",
+  "reason": "Theo dõi môi trường để giữ alignment chiến lược"
+ },
+ {
+  "id": 41905025,
+  "task": "stakeholder-3",
+  "confidence": "medium",
+  "reason": "Làm việc với stakeholder để định nghĩa KPI cho benefits"
+ },
+ {
+  "id": 41905026,
+  "task": "stakeholder-5",
+  "confidence": "high",
+  "reason": "Stakeholder không nhận báo cáo, rà communication plan"
+ },
+ {
+  "id": 41905027,
+  "task": "stakeholder-5",
+  "confidence": "medium",
+  "reason": "Cách giao tiếp tốt nhất với stakeholder"
+ },
+ {
+  "id": 41905028,
+  "task": "lifecycle-19",
+  "confidence": "medium",
+  "reason": "Coach project manager yếu kém"
+ },
+ {
+  "id": 41905029,
+  "task": "stakeholder-1",
+  "confidence": "high",
+  "reason": "Nội dung stakeholder register"
+ },
+ {
+  "id": 41905030,
+  "task": "lifecycle-33",
+  "confidence": "low",
+  "reason": "Các bước đóng hợp đồng"
+ },
+ {
+  "id": 41905031,
+  "task": "lifecycle-8",
+  "confidence": "high",
+  "reason": "Mức phân rã PWBS"
+ },
+ {
+  "id": 41905032,
+  "task": "benefits-6",
+  "confidence": "medium",
+  "reason": "Nội dung benefits register"
+ },
+ {
+  "id": 41905033,
+  "task": "lifecycle-17",
+  "confidence": "medium",
+  "reason": "Ép tuân thủ chuẩn báo cáo thống nhất"
+ },
+ {
+  "id": 41905034,
+  "task": "stakeholder-1",
+  "confidence": "medium",
+  "reason": "Xác định key stakeholder"
+ },
+ {
+  "id": 41905035,
+  "task": "stakeholder-3",
+  "confidence": "medium",
+  "reason": "Đàm phán, thỏa hiệp để stakeholder đồng thuận"
+ },
+ {
+  "id": 41905036,
+  "task": "stakeholder-5",
+  "confidence": "medium",
+  "reason": "Vẫn gửi báo cáo performance theo kế hoạch"
+ },
+ {
+  "id": 41905037,
+  "task": "strategy-6",
+  "confidence": "high",
+  "reason": "Market analysis, cost-benefit để ra scope sơ bộ và kế hoạch benefits"
+ },
+ {
+  "id": 41905038,
+  "task": "governance-2",
+  "confidence": "medium",
+  "reason": "Dùng governance plan giải thích vai trò thành viên board"
+ },
+ {
+  "id": 41905039,
+  "task": "lifecycle-34",
+  "confidence": "high",
+  "reason": "Đầu ra post-review meeting"
+ },
+ {
+  "id": 41905040,
+  "task": "lifecycle-33",
+  "confidence": "high",
+  "reason": "Chuyển giao, lưu trữ PMIS sau khi duyệt đóng"
+ },
+ {
+  "id": 41905041,
+  "task": "lifecycle-24",
+  "confidence": "medium",
+  "reason": "Đóng component sau khi giao output"
+ },
+ {
+  "id": 41905042,
+  "task": "strategy-5",
+  "confidence": "medium",
+  "reason": "Phân tích benefit-cost trong business case"
+ },
+ {
+  "id": 41905043,
+  "task": "lifecycle-7",
+  "confidence": "low",
+  "reason": "Tài liệu cần đọc khi nhận program giai đoạn planning"
+ },
+ {
+  "id": 41905044,
+  "task": "lifecycle-3",
+  "confidence": "low",
+  "reason": "Tài liệu cần đọc khi nhận program giai đoạn delivery"
+ },
+ {
+  "id": 41905045,
+  "task": "lifecycle-27",
+  "confidence": "medium",
+  "reason": "Sự cố cấp program gây thiệt hại, leo thang steering committee"
+ },
+ {
+  "id": 41905046,
+  "task": "strategy-1",
+  "confidence": "medium",
+  "reason": "Đánh giá rủi ro ban đầu khi thiếu ngân sách"
+ },
+ {
+  "id": 41905047,
+  "task": "strategy-7",
+  "confidence": "medium",
+  "reason": "Nguồn tài trợ bên ngoài cho program và component"
+ },
+ {
+  "id": 41905048,
+  "task": "benefits-1",
+  "confidence": "high",
+  "reason": "BMP là baseline hiệu suất của program"
+ },
+ {
+  "id": 41905049,
+  "task": "governance-7",
+  "confidence": "medium",
+  "reason": "Rủi ro vượt thẩm quyền, phân tích và trình steering committee"
+ },
+ {
+  "id": 41905050,
+  "task": "stakeholder-1",
+  "confidence": "medium",
+  "reason": "Xác định key stakeholder"
+ },
+ {
+  "id": 41905051,
+  "task": "lifecycle-25",
+  "confidence": "low",
+  "reason": "Đọc số liệu chi phí/tiến độ, thiếu bảng dữ liệu"
+ },
+ {
+  "id": 41905052,
+  "task": "lifecycle-27",
+  "confidence": "low",
+  "reason": "Thành viên steering ép chọn nhà thầu, leo thang sponsor"
+ },
+ {
+  "id": 41905053,
+  "task": "governance-10",
+  "confidence": "medium",
+  "reason": "CEO mới đổi khẩu vị rủi ro, cập nhật business case"
+ },
+ {
+  "id": 41905054,
+  "task": "benefits-7",
+  "confidence": "high",
+  "reason": "Phân tích, cập nhật kế hoạch benefits do bất định"
+ },
+ {
+  "id": 41905055,
+  "task": "stakeholder-7",
+  "confidence": "medium",
+  "reason": "Gặp stakeholder phản đối, lắng nghe và thuyết phục"
+ },
+ {
+  "id": 41905056,
+  "task": "stakeholder-4",
+  "confidence": "medium",
+  "reason": "Sau kế hoạch thì tiến hành engagement stakeholder"
+ },
+ {
+  "id": 41905057,
+  "task": "governance-11",
+  "confidence": "high",
+  "reason": "Mục đích program integration management plan"
+ },
+ {
+  "id": 41905058,
+  "task": "lifecycle-9",
+  "confidence": "high",
+  "reason": "Nội dung master schedule"
+ },
+ {
+  "id": 41905059,
+  "task": "lifecycle-12",
+  "confidence": "medium",
+  "reason": "Issue nhân sự cấp project, leo thang functional manager"
+ },
+ {
+  "id": 41905060,
+  "task": "lifecycle-29",
+  "confidence": "high",
+  "reason": "Phân tích tác động thay đổi và đề xuất"
+ },
+ {
+  "id": 41905061,
+  "task": "lifecycle-29",
+  "confidence": "high",
+  "reason": "Phân tích tác động thay đổi và đề xuất"
+ },
+ {
+  "id": 41905062,
+  "task": "lifecycle-29",
+  "confidence": "high",
+  "reason": "Phân tích tác động thay đổi và đề xuất"
+ },
+ {
+  "id": 41905063,
+  "task": "lifecycle-24",
+  "confidence": "low",
+  "reason": "Component đóng dưới ngân sách, trả tiền cho sponsor"
+ },
+ {
+  "id": 41905064,
+  "task": "lifecycle-28",
+  "confidence": "medium",
+  "reason": "Bước đầu xử lý thay đổi là ghi nhận"
+ },
+ {
+  "id": 41905065,
+  "task": "lifecycle-21",
+  "confidence": "low",
+  "reason": "Thứ tự bước mua sắm"
+ },
+ {
+  "id": 41905066,
+  "task": "governance-3",
+  "confidence": "high",
+  "reason": "Phase gate review đề xuất dừng program"
+ },
+ {
+  "id": 41905067,
+  "task": "strategy-5",
+  "confidence": "high",
+  "reason": "Đánh giá năng lực tổ chức để xác thực mục tiêu, khả thi"
+ },
+ {
+  "id": 41905068,
+  "task": "lifecycle-21",
+  "confidence": "medium",
+  "reason": "Kiểm thử hỏng nhiều, yêu cầu audit chất lượng"
+ },
+ {
+  "id": 41905069,
+  "task": "strategy-5",
+  "confidence": "medium",
+  "reason": "Business case giải thích lý do program"
+ },
+ {
+  "id": 41905070,
+  "task": "lifecycle-30",
+  "confidence": "low",
+  "reason": "Công cụ phân tích rủi ro định lượng"
+ },
+ {
+  "id": 41905071,
+  "task": "lifecycle-27",
+  "confidence": "medium",
+  "reason": "Thiếu nguồn lực cấp program, leo thang steering committee"
+ },
+ {
+  "id": 41905072,
+  "task": "lifecycle-32",
+  "confidence": "medium",
+  "reason": "Đóng program sau quyết định chấm dứt"
+ },
+ {
+  "id": 41905073,
+  "task": "benefits-6",
+  "confidence": "high",
+  "reason": "Benefits register báo cáo tiến độ benefits"
+ },
+ {
+  "id": 41905074,
+  "task": "strategy-8",
+  "confidence": "medium",
+  "reason": "Hiểu văn hóa tổ chức trước tái cấu trúc"
+ },
+ {
+  "id": 41905075,
+  "task": "strategy-8",
+  "confidence": "high",
+  "reason": "Mục đích đánh giá ràng buộc pháp lý, xã hội"
+ },
+ {
+  "id": 41905076,
+  "task": "stakeholder-7",
+  "confidence": "medium",
+  "reason": "Giải quyết xung đột giữa các sponsor"
+ },
+ {
+  "id": 41905077,
+  "task": "stakeholder-7",
+  "confidence": "medium",
+  "reason": "Quà tặng khách hàng là hối lộ, quan hệ đạo đức"
+ },
+ {
+  "id": 41905078,
+  "task": "stakeholder-7",
+  "confidence": "medium",
+  "reason": "Xin ý kiến trước khi đi ăn với khách hàng"
+ },
+ {
+  "id": 41905079,
+  "task": "strategy-1",
+  "confidence": "medium",
+  "reason": "Alignment chiến lược khi chọn program để dừng"
+ },
+ {
+  "id": 41905080,
+  "task": "lifecycle-17",
+  "confidence": "medium",
+  "reason": "Mục đích hạ tầng program"
+ },
+ {
+  "id": 41905081,
+  "task": "stakeholder-1",
+  "confidence": "high",
+  "reason": "Lập stakeholder register sau khi xác định"
+ },
+ {
+  "id": 41905082,
+  "task": "lifecycle-10",
+  "confidence": "low",
+  "reason": "Giải phóng nguồn lực trong tổ chức ma trận"
+ },
+ {
+  "id": 41905083,
+  "task": "stakeholder-5",
+  "confidence": "medium",
+  "reason": "Stakeholder register hỗ trợ giao tiếp theo nhu cầu"
+ },
+ {
+  "id": 41905084,
+  "task": "strategy-5",
+  "confidence": "medium",
+  "reason": "Mức chấp nhận rủi ro ghi trong business case"
+ },
+ {
+  "id": 41905085,
+  "task": "lifecycle-24",
+  "confidence": "medium",
+  "reason": "Chuyển giao, đóng component đã đạt benefits"
+ },
+ {
+  "id": 41905086,
+  "task": "stakeholder-5",
+  "confidence": "medium",
+  "reason": "Tài liệu đi kèm communications management plan"
+ },
+ {
+  "id": 41905087,
+  "task": "lifecycle-16",
+  "confidence": "low",
+  "reason": "Project manager component chưa đủ chứng chỉ, báo khách hàng"
+ },
+ {
+  "id": 41905088,
+  "task": "governance-2",
+  "confidence": "medium",
+  "reason": "Vai trò steering committee phê duyệt thay đổi"
+ },
+ {
+  "id": 41905089,
+  "task": "lifecycle-1",
+  "confidence": "medium",
+  "reason": "Program charter liệt kê outcome"
+ },
+ {
+  "id": 41905090,
+  "task": "benefits-1",
+  "confidence": "high",
+  "reason": "Mục đích benefits management plan"
+ },
+ {
+  "id": 41905091,
+  "task": "benefits-1",
+  "confidence": "high",
+  "reason": "BMP là baseline hướng dẫn giao benefits"
+ },
+ {
+  "id": 41905092,
+  "task": "lifecycle-9",
+  "confidence": "low",
+  "reason": "Tiêu chí chọn mua sắm khi lập kế hoạch"
+ },
+ {
+  "id": 41905093,
+  "task": "stakeholder-5",
+  "confidence": "high",
+  "reason": "Communications strategy cho nhu cầu báo cáo khác nhau"
+ },
+ {
+  "id": 41905094,
+  "task": "lifecycle-26",
+  "confidence": "medium",
+  "reason": "Cập nhật tài liệu program theo quyết định steering"
+ },
+ {
+  "id": 41905095,
+  "task": "strategy-5",
+  "confidence": "medium",
+  "reason": "Bước đầu là feasibility study"
+ },
+ {
+  "id": 41905096,
+  "task": "governance-10",
+  "confidence": "low",
+  "reason": "Theo dõi thay đổi môi trường, đáp án lạ"
+ },
+ {
+  "id": 41905097,
+  "task": "lifecycle-9",
+  "confidence": "medium",
+  "reason": "Sau charter, lập change management plan"
+ },
+ {
+  "id": 41905098,
+  "task": "strategy-1",
+  "confidence": "medium",
+  "reason": "Giả định khi thiếu dữ liệu đánh giá ban đầu"
+ },
+ {
+  "id": 41905099,
+  "task": "lifecycle-16",
+  "confidence": "low",
+  "reason": "Phê duyệt component còn lại để rút ngắn tiến độ"
+ },
+ {
+  "id": 41905100,
+  "task": "benefits-7",
+  "confidence": "medium",
+  "reason": "Benefit không còn khả thi, cập nhật roadmap"
+ },
+ {
+  "id": 41905101,
+  "task": "governance-3",
+  "confidence": "high",
+  "reason": "Phase gate review tập trung vào việc tiếp tục"
+ },
+ {
+  "id": 41905102,
+  "task": "strategy-3",
+  "confidence": "medium",
+  "reason": "Program dài hạn cần roadmap"
+ },
+ {
+  "id": 41905103,
+  "task": "strategy-7",
+  "confidence": "low",
+  "reason": "Ngân sách vượt do không rà tài liệu formulation"
+ },
+ {
+  "id": 41905104,
+  "task": "strategy-1",
+  "confidence": "low",
+  "reason": "Phân biệt vòng đời program và project"
+ },
+ {
+  "id": 41905105,
+  "task": "governance-10",
+  "confidence": "medium",
+  "reason": "Kiểm cửa sổ cơ hội sau khi giảm scope"
+ },
+ {
+  "id": 41905106,
+  "task": "governance-7",
+  "confidence": "high",
+  "reason": "Thiết lập mức leo thang tránh chậm quyết định"
+ },
+ {
+  "id": 41905107,
+  "task": "lifecycle-10",
+  "confidence": "medium",
+  "reason": "Xung đột nguồn lực giữa hai project"
+ },
+ {
+  "id": 41905108,
+  "task": "lifecycle-22",
+  "confidence": "medium",
+  "reason": "Báo cáo dự báo vượt ngân sách"
+ },
+ {
+  "id": 41905109,
+  "task": "lifecycle-17",
+  "confidence": "low",
+  "reason": "Quy trình thống nhất qua các pha PLC"
+ },
+ {
+  "id": 41905110,
+  "task": "benefits-1",
+  "confidence": "medium",
+  "reason": "Benefits breakdown structure mô hình hóa benefits"
+ },
+ {
+  "id": 41905111,
+  "task": "strategy-4",
+  "confidence": "medium",
+  "reason": "Việc đầu tiên là thiết lập vision"
+ },
+ {
+  "id": 41905112,
+  "task": "benefits-1",
+  "confidence": "medium",
+  "reason": "Công dụng của BMP"
+ },
+ {
+  "id": 41905113,
+  "task": "governance-2",
+  "confidence": "low",
+  "reason": "Program manager do sponsor bổ nhiệm"
+ },
+ {
+  "id": 41905114,
+  "task": "lifecycle-28",
+  "confidence": "medium",
+  "reason": "Ghi lý do quyết định thay đổi"
+ },
+ {
+  "id": 41905115,
+  "task": "lifecycle-18",
+  "confidence": "medium",
+  "reason": "Lessons learned ghi suốt program"
+ },
+ {
+  "id": 41905116,
+  "task": "lifecycle-23",
+  "confidence": "medium",
+  "reason": "Liên tục rà master schedule theo dõi trạng thái"
+ },
+ {
+  "id": 41905117,
+  "task": "strategy-8",
+  "confidence": "medium",
+  "reason": "Phân tích văn hóa trước tái cấu trúc"
+ },
+ {
+  "id": 41905118,
+  "task": "lifecycle-27",
+  "confidence": "medium",
+  "reason": "Khách chậm thanh toán, hành động khắc phục"
+ },
+ {
+  "id": 41905119,
+  "task": "governance-3",
+  "confidence": "medium",
+  "reason": "Giả định còn hiệu lực khi xin duyệt tiếp tục"
+ },
+ {
+  "id": 41905120,
+  "task": "lifecycle-1",
+  "confidence": "high",
+  "reason": "Nội dung program charter gồm giả định"
+ },
+ {
+  "id": 41905121,
+  "task": "strategy-1",
+  "confidence": "high",
+  "reason": "Đánh giá ban đầu để đảm bảo alignment"
+ },
+ {
+  "id": 41905122,
+  "task": "lifecycle-8",
+  "confidence": "high",
+  "reason": "PWBS bảo đảm scope bao phủ benefits"
+ },
+ {
+  "id": 41905123,
+  "task": "stakeholder-2",
+  "confidence": "medium",
+  "reason": "Kỹ thuật thu thập thông tin văn hóa stakeholder"
+ },
+ {
+  "id": 41905124,
+  "task": "governance-2",
+  "confidence": "low",
+  "reason": "Sponsor chịu trách nhiệm cung cấp nguồn lực"
+ },
+ {
+  "id": 41905125,
+  "task": "governance-2",
+  "confidence": "medium",
+  "reason": "Lên kế hoạch họp governance sau dựng steering"
+ },
+ {
+  "id": 41905126,
+  "task": "lifecycle-16",
+  "confidence": "high",
+  "reason": "Khởi tạo component sau khi duyệt PMP"
+ },
+ {
+  "id": 41905127,
+  "task": "strategy-7",
+  "confidence": "medium",
+  "reason": "Xác định benefits nội tại và ngoại tại"
+ },
+ {
+  "id": 41905128,
+  "task": "stakeholder-3",
+  "confidence": "medium",
+  "reason": "Gặp stakeholder để xây KPI benefits"
+ },
+ {
+  "id": 41905129,
+  "task": "strategy-5",
+  "confidence": "medium",
+  "reason": "Phân tích lợi thế so sánh trong business case"
+ },
+ {
+  "id": 41905130,
+  "task": "lifecycle-20",
+  "confidence": "low",
+  "reason": "Bảo đảm component manager hợp tác"
+ },
+ {
+  "id": 41905131,
+  "task": "stakeholder-7",
+  "confidence": "medium",
+  "reason": "Stakeholder vắng họp, tìm nguyên nhân gốc"
+ },
+ {
+  "id": 41905132,
+  "task": "strategy-1",
+  "confidence": "low",
+  "reason": "Sponsor bổ nhiệm program manager trước tiên"
+ }
+]

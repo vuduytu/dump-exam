@@ -1,0 +1,1333 @@
+[
+ {
+  "id": 41840061,
+  "text": "You have been appointed by the sponsor to replace the program manager on a program half way through delivery. You have been informed that the stakeholders do not understand why this program was undertaken and what the boundaries of the program are. You notice that the scope statement was missing and you decided to prepare it. The program scope statement",
+  "choices": [
+   "A. Facilitates overall planning",
+   "B. Builds a PWBS",
+   "C. Maintains advocacy",
+   "D. None of the options"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 41840062,
+  "text": "Programs are complex; they undergo a lot of changes and face problems during their lifecycles. As a program manager, it is your responsibility to capture, analyze, record and take action against the problems that occur and implement changes as a result of that. Many of the changes are authorized directly by you but others require the approval of the steering committee. For all changes",
+  "choices": [
+   "A. Program manager alone maintains a record of the proposed change for all changes",
+   "B. Program manager should maintain a record of the proposed change that he/she authorized it and steering committee should maintain a record of the proposed change that they authorized it",
+   "C. Program management team should maintain a record of the proposed change",
+   "D. Only important changes are maintained"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 41840063,
+  "text": "During the program definition phase, you prepare the infrastructure that will guide the program and its components through the delivery phase. In your program to deliver a drug to cure cancer patients throughout the world, you are currently establishing a program management plan and schedule in order to",
+  "choices": [
+   "A. Start the benefits delivery phase",
+   "B. Effectively forecast, monitor and identify variances during program execution",
+   "C. Get authorization for resources",
+   "D. Achieve program benefits"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 41840064,
+  "text": "Throughout the delivery of your program, you have faced multiple issues and problems. Corrective actions were taken accordingly and program documentation was being continuously updated to maintain alignment. In a program, you identify and manage unresolved project-level issues in order to",
+  "choices": [
+   "A. Maximize synergies in accordance with the governance model",
+   "B. Achieve program benefits",
+   "C. Define PMIS",
+   "D. facilitate overall planning"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 41840065,
+  "text": "You have been assigned as the program manager to manage the release of five new ice cream flavors within the next year. The company is betting a lot on this program because it has been failing its last few programs and is currently facing hard times keeping up with the fast growing market. You are in formulation and are preparing your charter and estimating costs, you should",
+  "choices": [
+   "A. Consider the program roadmap",
+   "B. Consider the rough order of magnitude estimates while developing the business case",
+   "C. Let the component managers estimate their projects and roll back estimations to you",
+   "D. Re-do the assessment done in business case in order to make sure it is correct"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 41840066,
+  "text": "You are newly appointed as a program manager to a program in its delivery phase. You have noticed that the program components are not effectively integrating with each other and the program seems to lack consistency. In order to drive efficiency and consistency among projects and deliver program objectives, you decided to",
+  "choices": [
+   "A. Develop a good communication management plan",
+   "B. Obtain approvals to continue to the next phase",
+   "C. Develop program and project management standards and structure",
+   "D. Develop a roadmap"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 41840067,
+  "text": "Throughout the program, program manager and steering committee work to deliver benefits within program scope. Continuous performance data maintains the alignment of the program with strategic objectives. As a program manager, you obtain authorization and approval through stage gate reviews by presenting the program status and performance data to governance authorities in order to",
+  "choices": [
+   "A. Continue to the next phase",
+   "B. Get stakeholder feedback on the program status",
+   "C. Make sure that the business case is still viable",
+   "D. Evaluate key performance indicators"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 41840068,
+  "text": "You are bidding to gain a program for a reputable customer. After thorough analysis, you came out with a result of 3 years to finish and you cannot do it in less time; another company gave an estimation of 2.5 years and a third one of 2.8 years. You learned about a niche market technological breakthrough which will definitely make you finish the program in 2 years. Your given estimation would be",
+  "choices": [
+   "A. 2 years",
+   "B. 3 years as you haven’t yet used the new technological breakthrough",
+   "C. You ask for more time to analyze your bid",
+   "D. 3 years as your company needs that much time to deliver"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 41840069,
+  "text": "As part of a major phase gate review, steering committee was looking at an escalated issue affecting 3 projects: X, Y and Z. The issue was escalated by Project X. As a result, steering committee decided to end projects Y and Z, continue with A as planned and add a new project W to cater for the misalignment caused by the issue. What is your next course of action as a program manager when it comes to initiating project W?",
+  "choices": [
+   "A. Revise the program documentation to incorporate the change",
+   "B. Communicate change to stakeholders",
+   "C. Meet with program team and component managers to discuss the change",
+   "D. Give a reward to project A’s project manager for capturing the issue"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 41840070,
+  "text": "You are appointed as a program manager for the development of new remote cars. The cars need to be available for a two-hour play time on a full battery and has to be pushed to the market within one year in order to beat competition. You are mid-way through the program and a lot of requirements have changed since the start, in addition, 55% of the budget has been used so far and the remaining budget will barely suffice the program. In addition, a good number of the remote cars are failing inspection. What is your best course of action?",
+  "choices": [
+   "A. Continue as planned with components transitions and closures",
+   "B. Re-baseline budget",
+   "C. Conduct a phase gate review",
+   "D. Requesting a quality assurance audit"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 41840071,
+  "text": "You are appointed as a program manager for the development of new remote cars. The cars need to be available for a two-hour play time on a full battery and has to be pushed to the market within one year in order to beat competition. You are mid-way through the program and everything is going according to plan. However, you are finding it more and more tiring to ensure stakeholders receive the appropriate information, in the right format and on time; this situation is due to the stakeholders having different communications needs. What will your best course of action be?",
+  "choices": [
+   "A. Document lessons learned",
+   "B. Maintain a Benefit Register",
+   "C. Maintain a Stakeholder Register",
+   "D. Establish a Project Management Information System (PMIS)"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 41840072,
+  "text": "What is the difference between a Portfolio and a Program",
+  "choices": [
+   "A. A portfolio includes initiatives that are independent",
+   "B. A program includes initiatives that are independent",
+   "C. A portfolio includes initiatives that are interdependent",
+   "D. Both have strict start and end dates"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 41840073,
+  "text": "You have been assigned as the program manager to manage the release of five new ice cream flavors within the next year. The company is betting a lot on this program because it has been failing its last few programs and is currently facing hard times keeping up with the fast growing market. You are working on the preparation of the business case including a cost-benefit analysis in order to get your program approved by sponsor. Which of the below is correct?",
+  "choices": [
+   "A. You should identify only the financial benefits",
+   "B. You should identify the key stakeholders",
+   "C. You should identify intrinsic and extrinsic beneﬁts",
+   "D. You should identify only high level benefits"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 41840074,
+  "text": "Program manager needs to closely monitor program components in order to efficiently manage the delivery of the program. Program manager constantly tries to maximize the benefits delivery and continuously tries to maximize the contribution of project managers to the program. During delivery phase, how does the program manager maximizes the contribution of a project manager in achieving program goals?",
+  "choices": [
+   "A. Approve closure of the project",
+   "B. Deploy uniform standards",
+   "C. Review the project manager’s performance in executing the project management plan",
+   "D. Aggregate information from program and constituent projects"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 41840075,
+  "text": "Your program to bring potable water to the nearby city is nearing the end and you have successfully delivered the program benefits. During the course of the program, you executed the different plans to guide the delivery process. In a program, you execute the program management plan In order to",
+  "choices": [
+   "A. Ensure program outcomes meet stakeholder expectations and standards",
+   "B. Deliver benefits",
+   "C. Establish consistency",
+   "D. Remain strategically aligned"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 41840076,
+  "text": "Program manager needs to do resource optimization in order to effectively employ the program resources throughout the course of the program. This optimization will allow the successful delivery of benefits. How do you ensure that program resources are employed effectively?",
+  "choices": [
+   "A. Regularly prepare performance reports",
+   "B. Conduct change impact assessment",
+   "C. Record each change request in a change log",
+   "D. Update program plans by incorporating corrective actions"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 41840077,
+  "text": "Issues occur throughout the lifecycle of the program; issues should be handled at their appropriate level based on the escalation process prepared during the planning phase. Some of the issues are handled at project-level by project managers, others by program manager, and others by steering committees. How do you, as a program manager, manage program level issues?",
+  "choices": [
+   "A. By managing changes in accordance with the engagement management plan",
+   "B. By managing changes in accordance with the risk management plan",
+   "C. By identifying and selecting a course of action consistent with program scope",
+   "D. By working with known stakeholders to consider all points of view"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 41840078,
+  "text": "Your program to design a new airport for your city is in its early phases and is expected to span along 7 years. The new airport will be built as an extension to the existing one with 5 times the runways it currently has. Which of the below documents expresses the program vision and the benefits the program is to produce?",
+  "choices": [
+   "A. Business case",
+   "B. Program charter",
+   "C. Strategic plan",
+   "D. Program management plan"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 41840079,
+  "text": "Experience levels differ between project managers and the degree of autonomy and follow up from the program manager is highly dependent on the project manager’s experience. You have multiple components in your program. Component A’s project manager is the most experienced and has prepared a communication management plan. Others are approaching you for help in preparing their plans. You",
+  "choices": [
+   "A. Ask the PMO for standardization",
+   "B. Ask all the projects to use the plan of component A and update it to their needs",
+   "C. Ask them to consult their functional managers",
+   "D. Ask all the projects to use the program communication management plan"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 41840080,
+  "text": "You program has a steering committee to provide support and oversight. This committee is responsible to provide governance support and resources to oversee and monitor program uncertainty and complexity. Which of the below ensures the effectiveness of the governance process?",
+  "choices": [
+   "A. Regularly scheduled reviews",
+   "B. Preparing performance reports",
+   "C. Following the program management plan",
+   "D. Engaging stakeholders"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 41840081,
+  "text": "During the definition phase, the program manager, along with the program management team prepare the program management plan with all its subsidiary plans which will guide the execution of the delivery phase. From the below options, who is responsible for reviewing all program management plans?",
+  "choices": [
+   "A. Program manager",
+   "B. PMO",
+   "C. Steering committee",
+   "D. Sponsor"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 41840082,
+  "text": "During the course of the program, the program manager will spend most of his time engaging stakeholders and managing their expectations. A stakeholder on your program is furious and is not accepting to meet you; even you tried to call him and went to his office but he refused to see you. What should you do in this case?",
+  "choices": [
+   "A. Try another time as it is your responsibility to maintain stakeholders buy-in",
+   "B. Escalate to PMO",
+   "C. Escalate to Steering committee",
+   "D. Escalate to Sponsor"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 41840083,
+  "text": "Your company was recently audited by the government and they had several findings. In order to implement the changes, you are now managing a program to acquire a new information system which will handle all the requested validations and authorizations. After sending the RFP, the vendor informs you that the IT department in your company had already issued an RFP for the same. What should you do in this case?",
+  "choices": [
+   "A. Proceed as planned",
+   "B. Ask for a meeting with the IT director",
+   "C. Escalate to steering committee",
+   "D. Retract your request and terminate your program"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 41840084,
+  "text": "The program manager needs to identify project managers with appropriate experience to manage the related component in order to ensure successful completion of the program. When identifying suitable profiles for project managers, the program manager needs to?",
+  "choices": [
+   "A. Refer to the Human resources department",
+   "B. Refer to your acquaintances",
+   "C. Refer to functional managers",
+   "D. Escalate to Sponsor"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 41840085,
+  "text": "During the strategic planning cycle of an organization, the vision and mission are used to produce strategic goals and objectives documented in the strategic plan, which is then divided into sets of initiatives. Each set of initiatives may be grouped under a portfolio grouping multiple programs within it. In which phase of the program are the program managers assigned?",
+  "choices": [
+   "A. Definition phase – formulation sub-phase",
+   "B. Definition phase – planning sub-phase",
+   "C. Before the start of the program",
+   "D. After approval of program charter"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 41840086,
+  "text": "Program governance enables and performs program decision making, establishes practices to support the program and maintains program oversight with a focus on delivering benefits. In addition, program governance",
+  "choices": [
+   "A. Facilitates program funding to support business case",
+   "B. Outlines responsibility for approving each program’s approach",
+   "C. Is responsible for agreements needed for external funding",
+   "D. All of the options"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 41840087,
+  "text": "Throughout the program lifecycle, and knowing that stakeholder engagement is critical to program success, the program manager works constantly to engage stakeholders and gain their support. You are the program manager for a multi-tier program ranging across multiple stakeholder channels and a wide range of stakeholders’ groups. You noticed that multiple stakeholders have conflicting priorities. In order to set clear expectations among stakeholders, you must possess",
+  "choices": [
+   "A. Negotiation skills",
+   "B. Leadership skills",
+   "C. Customer management skills",
+   "D. Political skills"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 41840088,
+  "text": "Stakeholder engagement is one of the most important aspects in a program. The program manager is responsible for stakeholders’ identification, analysis and engagement throughout the program lifecycle. You perform stakeholder analysis through historical analysis, personal experience, interviews, knowledge base, review of formal agreements and inputs from other sources in order to",
+  "choices": [
+   "A. Create the communication management plan",
+   "B. Create the stakeholder management plan",
+   "C. Create the stakeholder register",
+   "D. Engage stakeholders"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 41840089,
+  "text": "Stakeholder engagement is one of the most important aspects in a program. The program manager is responsible for stakeholders’ identification, analysis and engagement throughout the program lifecycle. After stakeholders’ identification, your next activity is",
+  "choices": [
+   "A. Update stakeholder register",
+   "B. Analyze stakeholders",
+   "C. Define critical success factor",
+   "D. Defines KPIs"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 41840090,
+  "text": "Stakeholder engagement is one of the most important aspects in a program. The program manager is responsible for stakeholders’ identification, analysis and engagement throughout the program lifecycle. Stakeholders have different interests, expectations, level of support and impact on a program. Which document represents the interaction of all stakeholders’ current and desired support and influence?",
+  "choices": [
+   "A. Stakeholder register",
+   "B. Stakeholder map",
+   "C. Stakeholder engagement plan",
+   "D. Communication management plan"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 41840091,
+  "text": "Companies undertake programs internal to the organization and programs external to the organization where the company is outsourced by a customer to deliver benefits based on a well-defined agreement. Consider you are studying a proposal to manage a program for a customer. In order to establish strategic alignment. You refer to",
+  "choices": [
+   "A. Business case prepared by your portfolio board",
+   "B. Your organization's strategic plan, vision and mission",
+   "C. Your customer organization's strategic plan, vision and mission",
+   "D. Business case prepared by your customer"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 41840092,
+  "text": "Program managers may join at the early start of a program or during any other phase of it. When a program manager joins an already debuted program, he has a major responsibility of understanding the program and the program’s status in order to continue with a successful execution and delivery. You have been newly appointed as a program manager replacing another program manager who has left the company. You want to know about the vision, stakeholders’ considerations and program justification. You refer to",
+  "choices": [
+   "A. ​Program roadmap",
+   "B. ​Business case",
+   "C. Program charter",
+   "D. Program scope statement"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 41840093,
+  "text": "Program managers may join at the early start of a program or during any other phase of it. When a program manager joins an already debuted program, he has a major responsibility of understanding the program and the program’s status in order to continue with a successful execution and delivery. You have been newly appointed as a program manager replacing another program manager who has left the company. You want to understand the program quickly. You refer to",
+  "choices": [
+   "A. Program roadmap",
+   "B. Business case",
+   "C. Program charter",
+   "D. Program scope statement"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 41840094,
+  "text": "Planning is a very important sub-phase in the definition of a program because it will guide the entire program delivery. Program management plan and all subsequent documents are prepared, recommended by program manager and approved by steering committee. Which of the below methods help while doing the planning?",
+  "choices": [
+   "A. SWOT analysis",
+   "B. Monte Carlo",
+   "C. Sensitivity analysis",
+   "D. 80/20 rule"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 41840095,
+  "text": "The program manager continuously looks into opportunities to maximize the realization of benefits and prepare plans for continuous benefits realization after the program ends. Your program to deliver the city metro which will link both ends of the city together is performing well and components are producing the intended outcomes. In order to align and integrate benefits within or across the organization, you",
+  "choices": [
+   "A. Identify and evaluate integration opportunities and needs",
+   "B. Obtain organizational leadership approval",
+   "C. ​Develop a benefits register",
+   "D. Define program mission and vision"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 41840096,
+  "text": "Throughout the program lifecycle, the program manager monitors and controls the status of the program, presenting it to the steering committee through reviews and recommending actions to course correct or enhance the delivery. You have been aggregating delivery information from the program and constituent components in order to prepare the performance reports. In order to determine program performance, you",
+  "choices": [
+   "A. Compare final values to planned values for scope, quality, cost schedule and resources",
+   "B. Obtain organizational leadership approval",
+   "C. Develop a benefits register",
+   "D. Conduct phase gate reviews"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 41840097,
+  "text": "Benefits are the endpoint of a program manager, however, the delivery needs to be efficient and within set limitations in order to be considered successful. The program managers try to identify and capture synergies and efficiencies identified throughout the program lifecycle in order to",
+  "choices": [
+   "A. Compare final values to planned values for scope, quality, cost schedule and resources",
+   "B. Obtain organizational leadership approval",
+   "C. Update and communicate the benefits realization plan to stakeholders",
+   "D. Ensure continued realization of benefits"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 41840098,
+  "text": "Metrics are important in a program to be able to measure progress against planned values and maintain program alignment with set objectives. In your program to deliver the drug that will cure cancer patients instantly all around the world and throughout the program, you monitor metrics in order to",
+  "choices": [
+   "A. Take corrective actions in the program and maintain and/or potentially improve benefits realization",
+   "B. Obtain organizational leadership approval",
+   "C. Update and communicate the benefits realization plan to stakeholders",
+   "D. Ensure continued realization of benefits"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 41840099,
+  "text": "Throughout the program lifecycle, and knowing that stakeholder engagement is critical to program success, the program manager works constantly to engage stakeholders and gain their support. You are the program manager for a multi-tier program ranging across multiple stakeholder channels and a wide range of stakeholders’ groups. Throughout the program lifecycle, you achieve and maintain stakeholders’ alignment to the program objectives by",
+  "choices": [
+   "A. Negotiating the support of stakeholders by setting clear expectations and acceptance criteria",
+   "B. Performing stakeholders’ analysis",
+   "C. Updating business case",
+   "D. Updating program roadmap"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 41840100,
+  "text": "Communications are an integral part to every program. The program manager thrives to maintain a good communication level with all stakeholders. The communication strategy is derived from the stakeholder engagement strategy and plan to maximize engagement. In a program, you define and maintain communications adapted to different stakeholders in order to",
+  "choices": [
+   "A. Maintain program alignment to strategic plan",
+   "B. Ensure their support for the program",
+   "C. Update business case",
+   "D. Update program roadmap"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 41840101,
+  "text": "Key Performance Indicators (KPIs) enable the team to make smart business decisions about the direction of a program and its subsidiary projects. They are used to follow up on program status and measure performance. Which of the below documents helps you identify the KPIs related to benefits?",
+  "choices": [
+   "A. Benefit register",
+   "B. Benefit management plan",
+   "C. Governance plan",
+   "D. Business case"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 41840102,
+  "text": "During definition phase, the program manager is responsible to prepare multiple documents and get them approved by the steering committee. These documents are continuously reviewed during the course of the program to maintain program viability and deliver the program successfully. Which of these documents contains the justification for the resources to be expended during the course of the program?",
+  "choices": [
+   "A. Benefit register",
+   "B. Benefit management plan",
+   "C. Program charter",
+   "D. Business case"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 41840103,
+  "text": "Program success criteria are used in a program to maintain the minimum level of acceptable delivery of benefits. The program undergoes a lot of changes and it is the responsibility of the program manager to always keep an eye on meeting the program success criteria. Which of the below documents contains the program success criteria?",
+  "choices": [
+   "A. Benefit register",
+   "B. Benefit management plan",
+   "C. Program charter",
+   "D. Business case"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 41840104,
+  "text": "Program success is measured against a successful delivery based on charter and business case. The success of a program can be viewed differently by stakeholders based on their position with relation to the program. For this reason, the program manager needs to define a clear definition for success and get it approved by steering committee. Which document contains the clear definition of success?",
+  "choices": [
+   "A. Benefit register",
+   "B. Benefit management plan",
+   "C. Program charter",
+   "D. Business case"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 41840105,
+  "text": "Programs normally use the procurement policies and procedures of the organization, unless the program has particular procurement specifications; in this case, the program manager will use the organization procurement processes and tailor them with the support from PMO to the program’s needs. Which of the below is an input to make or buy decisions?",
+  "choices": [
+   "A. Scope statement",
+   "B. Benefits management plan",
+   "C. Procurement management plan",
+   "D. PWBS"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 41840106,
+  "text": "Programs normally use the procurement policies and procedures of the organization, unless the program has particular procurement specifications; in this case, the program manager will use the organization procurement processes and tailor them with the support from PMO to the program’s needs. Procurement is done from a qualified sellers’ list. After completing the qualified sellers list, you normally?",
+  "choices": [
+   "A. Issue an IFB",
+   "B. Sign Agreements",
+   "C. Issue an RFP",
+   "D. Update the program procurement management plan"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 41840107,
+  "text": "A balanced scorecard is a performance metric used in strategic management to identify and improve various internal functions of a business and their resulting external outcomes. It is used to measure and provide feedback to organizations. In addition, Balanced score card is used to?",
+  "choices": [
+   "A. Define critical success factor CSF",
+   "B. Define KPIs",
+   "C. Measure the value of benefit derived from the program",
+   "D. All of the options"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 41840108,
+  "text": "During the delivery phase, components are initiated, integrated, transitioned and closed. Each one of these steps represents different criteria for continuing to the next step. In your program to deliver the new metro which will link both ends of the city together, multiple components are being initiated. Which of the below is a part of components initiation criteria?",
+  "choices": [
+   "A. Component business case",
+   "B. Lessons learned",
+   "C. Component roadmap",
+   "D. Component management plan"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 41840109,
+  "text": "During the delivery phase, components are initiated, integrated, transitioned and closed. Each one of these steps represents different criteria for continuing to the next step. In your program to deliver the new metro which will link both ends of the city together, multiple components are coming to their end. Which of the below is a part of components transition and closure criteria?",
+  "choices": [
+   "A. Assess Component charter",
+   "B. Assess lessons learned",
+   "C. Assess Component roadmap",
+   "D. Assess Component management plan"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 41840110,
+  "text": "The governance board is responsible for defining and implementing appropriate governance practices; it often includes senior leaders from the functional groups responsible for supporting program elements. During the course of a program, Governance board is more interested in?",
+  "choices": [
+   "A. CPI and SPI",
+   "B. Strategic alignment and value delivery",
+   "C. program roadmap",
+   "D. Quality standards"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 41840111,
+  "text": "Program manager should maintain a good relationship with the program team and should sponsor efficiency in their work by giving them the credits they deserve. You want to give your team rewards for giving the best they could on the successful program. Most importantly, you should give the reward",
+  "choices": [
+   "A. Based on the management guidelines",
+   "B. Based on the needs of the individual",
+   "C. Based on the budget left in your program",
+   "D. Based on the PMO standards"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 41840112,
+  "text": "Programs normally use the procurement policies and procedures of the organization, unless the program has particular procurement specifications; in this case, the program manager will use the organization procurement processes and tailor them with the support from PMO to the program’s needs. Which of the below is an important input when selecting a seller",
+  "choices": [
+   "A. Governance plan",
+   "B. Benefits management plan",
+   "C. Risk register",
+   "D. All of the options"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 41840113,
+  "text": "Program uses a variety of templates, forms, processes and procedures to effectively guide each phase of the program. The requirements to complete forms and paperwork required by organization are part of",
+  "choices": [
+   "A. Governance plan",
+   "B. Enterprise Environmental Factors EEFs",
+   "C. Risk register",
+   "D. Quality plan"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 41840114,
+  "text": "Programs are complex; they undergo a lot of changes and face problems during their lifecycles. As a program manager, it is your responsibility to capture, analyze, record and take action against the problems that occur. In order to identify causes for a problem and come out with possible solution. You use",
+  "choices": [
+   "A. Ishikawa diagram",
+   "B. Root cause analysis",
+   "C. Pareto diagram",
+   "D. Monte Carlo analysis"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 41840115,
+  "text": "Business case contains cost/benefit analysis, market demand and barriers, approved concepts, legal implications, capability analysis, business impact, operational impact, alignment level, problems and opportunities, time to market, alternative solutions, benefits and most importantly a high-level risk assessment containing the risk tolerance acting as a reminder and constraint when making program decisions. The business case is especially important in program delivery to ensure",
+  "choices": [
+   "A. Understanding the governance authority",
+   "B. Updates to roadmap are done in timely manner",
+   "C. Benefits delivery",
+   "D. Continuous viability of the program"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 41840116,
+  "text": "The formulation phase marks the beginning of a program. Early on in formulation, the program manager is assigned by the sponsor. The program manager starts by defining the program’s vision and conducting the initial assessments. As a program manager and while conducting the initial assessment, if you do not have sufficient information to estimate all inputs to schedule or cost, you proceed by?",
+  "choices": [
+   "A. Asking component managers for analysis of their components and roll back results",
+   "B. Terminating program",
+   "C. Making assumptions",
+   "D. Putting the non-assessed parts as constraints"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 41840117,
+  "text": "Program activities are the tasks and work conducted to support a program and which contributes throughout the program lifecycle; activities supporting the program management include change, communication, information, procurement, quality, resource, risk, schedule, scope and financial management activities. Which of the below is an output of the financial management activity?",
+  "choices": [
+   "A. Program management updates",
+   "B. Contract payments",
+   "C. Approved change requests",
+   "D. All of the options"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 41840118,
+  "text": "You are managing a program for the government and due to the high stakes you maintain a close eye on the schedule and budget in order not to derail from the plan. Program budget incorporates the costs for each individual component and the cost for resources to manage the program itself. Which of the below is an output of the program cost budgeting?",
+  "choices": [
+   "A. Program management updates",
+   "B. Contract payments",
+   "C. Program payment schedules",
+   "D. All of the options"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 41840119,
+  "text": "Once funds are received and program begins paying expenses, the financial effort moves into tracking, monitoring and controlling the program’s funds and expenditures. As part of program financial management, the program team prepares component cost estimation and program cost budgeting. Which of the below is an input to the program cost budgeting?",
+  "choices": [
+   "A. Component cost estimates",
+   "B. Cost of program management and supporting program activities",
+   "C. Contracts",
+   "D. All of the options"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 41840120,
+  "text": "Programs are complex; they undergo a lot of changes and face problems during their lifecycles. As a program manager, it is your responsibility to capture, analyze, record and take action against the problems that occur and implement changes as a result of that. Your program is having a lot of changes and it is over budget and behind schedule; however, the steering committee gave you a go decision during the last phase gate review meeting. What is a possible reason for this?",
+  "choices": [
+   "A. You are a highly regarded program manager and steering committee is sure you can meet objectives",
+   "B. Program hasn’t crossed the organization’s risk threshold yet",
+   "C. You have met with key stakeholders and asked them to give you one last chance to course correct the program",
+   "D. You brother is the CEO"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 41840121,
+  "text": "Programs are complex in nature and undergo a lot of changes through their lifecycles. The changes may require modifications at the level of the program and program documents; bigger changes may affect the organization’s strategic objectives of the organization. Your program to launch the new ice cream flavors is having a lot of unexpected changes and stakeholders are not happy about this. What is your best course of action?",
+  "choices": [
+   "A. Do nothing as changes are normal in a program",
+   "B. Perform a change assessment and update the affected documents",
+   "C. Recommend program termination",
+   "D. Resign from your position"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 41840122,
+  "text": "Success criteria are used in a program to maintain the minimum level of acceptable delivery of benefits, outputs or results. The program undergoes a lot of changes and it is the responsibility of the program manager to always keep an eye on meeting the program success criteria. Which of the below documents contains the component success criteria?",
+  "choices": [
+   "A. Program business case",
+   "B. Program charter",
+   "C. Component business case",
+   "D. Program scope statement"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 41840123,
+  "text": "You are managing a big festival near a village and during the festival; a big circus parade will be present with a lot of animals doing shows. A week before the festival start, animal rights agents have filed a complaint against you to the village council and their request was accepted. What is your mistake in this case?",
+  "choices": [
+   "A. You did not analyze your stakeholder correctly",
+   "B. You did not have a strong business case",
+   "C. You did not identify animal rights agents as stakeholders in your program",
+   "D. You did not offer benefits to the village council"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 41840124,
+  "text": "Throughout the program lifecycle, and knowing that stakeholder engagement is critical to program success, the program manager works constantly to engage stakeholders and gain their support. You are the program manager for a multi-tier program ranging across multiple stakeholder channels and a wide range of stakeholders’ groups and you know that you will need a good communication strategy to maintain alignment with stakeholders’ expectations. Communication strategy is derived from?",
+  "choices": [
+   "A. Business case",
+   "B. Stakeholder engagement strategy and plan",
+   "C. PWBS",
+   "D. Program architecture"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 41840125,
+  "text": "Throughout the program lifecycle, and knowing that stakeholder engagement is critical to program success, the program manager works constantly to engage stakeholders and gain their support. You are the program manager for a multi-tier program ranging across multiple stakeholder channels and a wide range of stakeholders’ groups and you know that you will need a good communication strategy to maintain alignment with stakeholders’ expectations. Stakeholders’ engagement strategy is derived from?",
+  "choices": [
+   "A. Power vs. interest grid",
+   "B. Business case",
+   "C. Stakeholders’ engagement",
+   "D. Program architecture"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 41840126,
+  "text": "Your CEO is a PMI member with the right experience to back it up. He injected the spirit of the project, program and portfolio management in the organization and has been leading the way all along. After the strategic planning cycle, objectives and goals were divided into initiatives to be targeted in portfolios. You were appointed as a program manager on an important program having the highest priority in the portfolio. Which of the below documents describes the purpose of the program?",
+  "choices": [
+   "A. Program mission statement",
+   "B. Business case",
+   "C. Program charter",
+   "D. Program architecture"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 41840127,
+  "text": "You company is going through hard times and they are losing their market shares. With all the trials to improve their situation, they are still losing money. Last week, your sponsor informs you that there will be 30% funding-cut and requests from you to analyze the impact. You use which of the below?",
+  "choices": [
+   "A. SWOT analysis",
+   "B. What-if analysis",
+   "C. Sensitivity analysis",
+   "D. Monte Carlo analysis"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 41840128,
+  "text": "Your program to launch new flavors of ice cream is mid-way through the delivery phase and the steering committee is constantly having a close eye on the program closure because it is critical to the sustainability of the organization. Which of the below ensures achieving strategic alignment in a program?",
+  "choices": [
+   "A. Health checks",
+   "B. Good planning",
+   "C. Phase gate reviews",
+   "D. Sustainment plan"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 41840129,
+  "text": "Your program is mid-way through the delivery phase and it is performing as planned. So far, you have been managing the resources allocation and optimization successfully. Today, one of your component managers raises an issue to you that one scarce resource is needed as a full-timer by two of the components concurrently. What is your best course of action?",
+  "choices": [
+   "A. Assign the needed resource to a component as prioritized by steering committee",
+   "B. Assign the needed resource to a component as prioritized by sponsor",
+   "C. Assign the needed resource to a component as prioritized by criteria defined in resource management plan",
+   "D. Assign the needed resource to a component as prioritized by the component managers"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 41840130,
+  "text": "Benefits are the most important in a program; the successful delivery of the intended benefits is required for the program successful delivery. Due to the complexity and uncertainty in a program, a lot of changes occur and some of them are reflected to the benefit level. Changes to the benefit level are to be documented in",
+  "choices": [
+   "A. Benefit register",
+   "B. Benefit list",
+   "C. Benefit transition plan",
+   "D. Benefit management plan"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 41840131,
+  "text": "During the strategic planning cycle of an organization, the vision and mission are used to produce strategic goals and objectives documented in the strategic plan, which is then divided into sets of initiatives. Each set of initiatives may be grouped under a portfolio grouping multiple programs within it. When starting a program, what should be your first step/activity as a program manager?",
+  "choices": [
+   "A. Preparing business case",
+   "B. Preparing high level roadmap",
+   "C. Engage stakeholders",
+   "D. Defining program vision"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 41840132,
+  "text": "Resources are planned right from the beginning of a program, with an estimate of the required staff and facilities prepared during business case and reflected in program charter. You are managing a program which will include a large number of program resources due to its criticality and complexity. You realize, that in your program, you get permanent resources to manage the program during",
+  "choices": [
+   "A. Program infrastructure development",
+   "B. Program delivery phase",
+   "C. Right before the closure phase",
+   "D. When preparing the charter"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 41840133,
+  "text": "During the course of the program, the program manager and program team use quantitative and qualitative analysis techniques to collect and analyze data related to risks, stakeholders, etc. Which of the below are quantitative analysis techniques and tools",
+  "choices": [
+   "A. High/Medium/Low measurements",
+   "B. Impact Scale",
+   "C. Monte Carlo analysis",
+   "D. All of the options"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 41840134,
+  "text": "You are in the delivery phase of the program to deliver the next generation remote cars with an extremely reliable battery that will last for 12 hours of play time. You are mid-way through your program and due to changes you realize the need to integrate two new components in order to answer to new regulations. When integrating this change, which of the below is unlikely to be modified?",
+  "choices": [
+   "A. Roadmap",
+   "B. Charter",
+   "C. Program management plan",
+   "D. Business case"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 41840135,
+  "text": "During the formulation phase of a program, the program manager does initial assessments in order to come out with estimates to be presented to the steering committee as part of the feasibility analysis in the business case. The steering committee is especially concerned when studying the business case in the cost of investment and the return on investment; they look at the total cost of ownership (TCO) in order to know the direct and indirect costs in a program. TCO includes",
+  "choices": [
+   "A. Full cycle cost",
+   "B. Transition cost",
+   "C. Sustainment cost",
+   "D. All of the options"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 41840136,
+  "text": "Throughout the program lifecycle, and knowing that stakeholder engagement is critical to program success, the program manager works constantly to engage stakeholders and gain their support. You are the program manager for a multi-tier program ranging across multiple stakeholder channels and a wide range of stakeholders’ groups. Who is responsible for stakeholder communication in a program?",
+  "choices": [
+   "A. Program sponsor",
+   "B. Program manager",
+   "C. Program steering committee",
+   "D. All of the options"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 41840137,
+  "text": "You and your program team are estimating the duration of the program. You came out with the following: Optimistic: 5 months; Pessimistic: 12 months; Most probable: 8 months. What is the proposed duration of the program?",
+  "choices": [
+   "A. 5 months",
+   "B. 24.5 months",
+   "C. 8.16 months",
+   "D. 8 months"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 41840138,
+  "text": "During the definition phase, the program manager prepares and presents multiple documents to the steering committee for approval, authorization and management of the program. The document you present to receive authorization for your program is?",
+  "choices": [
+   "A. Business case",
+   "B. Program charter",
+   "C. Program roadmap",
+   "D. Program management plan"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 41840139,
+  "text": "You are in the definition phase and preparing the program charter. You have your planned benefits and you are listing them along with the benefits strategy in the charter. Which document establishes the relationship between the expected benefits and the planned program activities?",
+  "choices": [
+   "A. Program roadmap",
+   "B. Program architecture",
+   "C. Program schedule",
+   "D. Program charter"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 41840140,
+  "text": "You are conducting program assessments in order to prepare the business case for you program. You are excited about being the program manager on the program with the highest priority in your organization. You have submitted your business case. After business case approval, program manager?",
+  "choices": [
+   "A. Prepares high level assessments",
+   "B. Prepares roadmap",
+   "C. Prepares charter",
+   "D. Prepares program management plan"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 41840141,
+  "text": "You have been working on the launching of the new ice cream flavors and you have excelled in doing so. The program has arrived to the final stage and all the projects and contracts are now closed. After program close-out decision, you?",
+  "choices": [
+   "A. Transition program",
+   "B. Do financial closure",
+   "C. Prepare final performance report",
+   "D. Close program"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 41840142,
+  "text": "During planning, the program manager and the program management team prepare the program management plan with its subsidiary plans in order to guide the program delivery and closure activities to a successful benefits realization. From the subsidiary plans, the change management plan is particularly important to monitor and control changes through the course of the program. What is considered a part of the Program change management plan?",
+  "choices": [
+   "A. Establishes change management principles and procedures",
+   "B. Evaluates and determines disposition of requested changes",
+   "C. Includes how to authorize the change requests",
+   "D. All of the options"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 41840143,
+  "text": "Program manager manages performance throughout the program lifecycle and continuously report to steering committee and stakeholders about the progress. Earned value management EVM is used by the program manager to compare planned vs. actual work and is especially important for",
+  "choices": [
+   "A. Performance Measurement",
+   "B. Financial Management",
+   "C. Contract Administration",
+   "D. All of the options"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 41840144,
+  "text": "You are mid-way through your program to launch a new line of remote control cars and due to the high level of complexity you realize that stakeholders have conflicting understandings of program purpose. What should be your best course of action in this case?",
+  "choices": [
+   "A. Explain the program's vision",
+   "B. Allocate more time and effort with known stakeholders to align their understandings",
+   "C. Perform beneﬁts management plan",
+   "D. Continue as planned because this situation is normal in large and complex programs"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 41840145,
+  "text": "During the last meeting with the steering committee, they advised you to update your risk management plan and do the program risk identification and analysis again because multiple unidentified risks have been occurring and the program is at a critical phase. The advice of the steering committee is given as part of its role in",
+  "choices": [
+   "A. The escalation process",
+   "B. Program monitor and control",
+   "C. Program phase gate reviews",
+   "D. Program health checks"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 41840146,
+  "text": "You are a member of the portfolio board and choosing a program to undertake. Program A has a Cost of $250000 and a revenue of $50000 per year, Program B has a Cost of $200000 and a revenue of $50000 per year, Program C has a Cost of $150000 and a revenue of $50000 per year, Program D has a Cost of $100000 and a revenue of $50000 per year. Which program will you recommend?",
+  "choices": [
+   "A. Program A",
+   "B. Program B",
+   "C. Program C",
+   "D. Program D"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 41840147,
+  "text": "Program manager spends a good amount of time preparing the schedule. From the scope statement, the program manager derives the PWBS which will help in the make-or-buy decisions, and in estimating the cost, quality, resource and duration. Consider you are building your schedule using the PWBS. Which of the below is the best approach to start with?",
+  "choices": [
+   "A. Meet with components manager and build the schedule together",
+   "B. Design a first draft of the schedule including the components start and end dates",
+   "C. Have the components managers design their schedules and then combine all schedules together to form the program schedule",
+   "D. Have the program team build the schedule and let the components managers use the same schedule with changes based on their work"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 41840148,
+  "text": "Your customer has outsourced your company to manage a transformation program on their premises. You have three components on your program; components A, B and C. Component A has a delayed milestone due to multiple changes and component B, which is dependent on the output of component A, is scheduled to use an important resource from component A. Component A’s project manager refuses to let go of the resource until the project delivers its due milestone. What should you, as the program manager do?",
+  "choices": [
+   "A. Let Component A’s project manager give the resource to component B",
+   "B. Let Component B wait for component A to finish and release resources",
+   "C. Work to balance program needs with resource availability",
+   "D. Let component A and component B sit together and come up with a collaborative decision"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 41840149,
+  "text": "Part of the program manager’s work is to track the planned benefits and identify opportunities for improvement in order to maximize and/or enhance benefits. You are managing a program to design remote control cars with the technology to climb walls not existing anywhere in the world. After identifying benefits and listing them in the benefit register, you",
+  "choices": [
+   "A. Define critical success factors",
+   "B. Define KPIs",
+   "C. Review benefits management plan",
+   "D. You start engaging stakeholders"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 41840150,
+  "text": "The sponsor acts as an advocate in a program and ensures that the program gets the management attention while informing the program manager of any strategic change. The sponsor is an executive member who acts as the chair of the steering committee. Who usually takes up the role of sponsor in components’ steering committees?",
+  "choices": [
+   "A. Program sponsor",
+   "B. Program manager",
+   "C. Project manager",
+   "D. Functional manager"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 41840151,
+  "text": "Consider you are the program manager and your program is 5% complete. The program has a budget at completion BAC=5 million dollars, the actual cost is $250 000 and earned value is $245 000. What can you tell about the program status?",
+  "choices": [
+   "A. The program is slightly over budget, which is not a problem at this stage",
+   "B. The program is slightly over budget, which is a huge problem at this stage",
+   "C. Budget needs to be re-baselined",
+   "D. Steering committee should intervene because the situation is out of control being at just 5%"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 41840152,
+  "text": "You are in a matrix organization and managing program A. Program steering committee is shared between your program and program B. Program B has been experiencing severe delays and steering committee has decided that multiple resources should be transferred from your program to be full-timers on program B. Two of the resources had issues with the transfer and are not accepting to communicate with you. What should you do in this case?",
+  "choices": [
+   "A. Terminate program A because there is no chance of delivering the intended benefits with less resources",
+   "B. Involve the functional managers of the resources to be transferred",
+   "C. Raise this issue to executive management and do not accept the resources transfer",
+   "D. Inform stakeholders of this change"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 41840153,
+  "text": "Your company is project-based and has been delivering successful projects for many years. An executive manager was recently recruited and he comes from a programs-based organization. As a first act, he asked you to perform an initial assessment to know if adopting program approaches would be an added value to the organization; based on your findings, he will be able to present the approach to the executive management. What is your best course of action?",
+  "choices": [
+   "A. ​Create business case",
+   "B. ​Create roadmap",
+   "C. Analyze the strategic plan",
+   "D. Deﬁne the objectives"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 41840154,
+  "text": "Funding frameworks differ between programs. You are managing a step-funding program where the program receives funds at the start of each year. The remaining funds at the end of each year are returned back to the organization. What should you ensure as a program manager?",
+  "choices": [
+   "A. You add a 15% to the total budget amount in order to stay on the safe side",
+   "B. Compiling all available financial information and listing all income and payment schedules in sufficient detail so that program costs can be tracked as part of program budget",
+   "C. You spend all the remaining money on rewarding the team",
+   "D. You make sure to only accept important change requests so you do not affect the budget"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 41840155,
+  "text": "The CEO of a risk adverse company decided to change the culture of his organization after several pitfalls; he decided that the company needs to take more risks if it wants to gain from its investments. A program was designed with you as the program manager. While in the definition phase, in which of the following documents is the organization’s risk tolerance recorded?",
+  "choices": [
+   "A. Business case",
+   "B. Program charter",
+   "C. Mandate",
+   "D. Strategic plan"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 41840156,
+  "text": "You were planning to launch a new component in order to maximize the delivery of benefits; your recommendation got accepted by the steering committee and you need two of your program management team members to dedicate a week’s time to this component due to its strategic importance for the success of the program. To determine the availability of certain program resources, you reference",
+  "choices": [
+   "A. Resources calendar​",
+   "B. Resources management plan",
+   "C. Governance plan",
+   "D. Project management plan"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 41840157,
+  "text": "You are mid-way through your program and you realize that stakeholders have conflicting concerns and issues, and that operational departments are a bit reluctant to change. You do not understand the reason behind this, however, in your analysis of the issues in order to come out with necessary changes, you need to evaluate",
+  "choices": [
+   "A. Resources availability",
+   "B. Program scope",
+   "C. Include the operational departments in the steering committee",
+   "D. Benefit register"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 41840158,
+  "text": "Which one of the below programs would you suggest to remove? Program A NPV at: 5% = 5,243, 10% = 2,841, 15% = 1,563; Program B NPV at: 5% = 2,320, 10% = 1,254, 15% = 688; Program C NPV at: 5% = 6,400, 10% = 3,275, 15% = 1,679; Program D NPV at: 5% = 3,000, 10% = 2,755, 15% = 700",
+  "choices": [
+   "A. Program A",
+   "B. Program B",
+   "C. Program C",
+   "D. Program D"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 41840159,
+  "text": "When you started your career, you were keen to get onto the management path and you worked day and night to get your PMP certification followed by the PgMP certification. Today, you are a highly regarded program manager in your organization and you are the one that people come to for advice. This warrants that",
+  "choices": [
+   "A. Portfolio management will give you the choice to choose specific types of programs to undertake",
+   "B. Steering committee will give you a higher degree of autonomy",
+   "C. Management will give you a raise and make you a portfolio manager",
+   "D. You will assume the role of the steering committee in your programs"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 41840160,
+  "text": "Programs are undertaken to deliver benefits to the sponsoring organization. Some of these benefits are targeted to the internal entities of the organization. In this context, consider you are managing a program to improve employee morale. You find it hard to define benefit level (value) because",
+  "choices": [
+   "A. You are not experienced enough",
+   "B. You should consult with subject matter experts",
+   "C. This type of benefits is less easily quantified",
+   "D. You should consult the historical information"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 41840161,
+  "text": "The program managers work with the program management team for the entire course of the program in order to successfully deliver the benefits. Some programs succeed and others fail. You are now in closing phase and your program has delivered its benefits; you receive a call from the operations manager stating that he is not ready for the change. In this scenario, you should have",
+  "choices": [
+   "A. Prepared a good benefits management plan",
+   "B. Been informing the functional managers",
+   "C. Added the operations manager to the steering committee",
+   "D. Let the operations manager prepare the benefit sustainment plan with you"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 41840162,
+  "text": "Component A’s project manager has requested a resource which is currently being used by component B. This is an important resource and is required to work on component A in order to mitigate a spotted risk; however, the resource is also important for component B for 30% of her time each day. What should you do in this case?",
+  "choices": [
+   "A. Escalate to steering committee",
+   "B. Escalate to sponsor",
+   "C. Do resource prioritization",
+   "D. Do resource interdependency"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 41840163,
+  "text": "One of your components managers has approached you with an opportunity that will benefit the program and speed up the delivery time dramatically. You have been avoiding the project manager’s request as you already have more important changes to undergo. What is the best course of action for the project manager?",
+  "choices": [
+   "A. Escalate to project steering committee",
+   "B. Escalate to project CCB",
+   "C. Escalate to program steering committee",
+   "D. Escalate to program sponsor"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 41840164,
+  "text": "Risks are an integral part of every program. During initiation, the program manager along with the sponsor and the available members of the program team, prepare an initial risk assessment which will be included in the presented business case. Risks are added, analyzed, refined and tracked throughout the program. You are now planning for a risk and you have already prepared your risk response, what next?",
+  "choices": [
+   "A. Define management reserve",
+   "B. Define contingency reserve",
+   "C. Update the risk management plan",
+   "D. Derive a mitigation strategy"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 41840165,
+  "text": "Due to the complexity and uncertainty of a program and the large number of stakeholders involved, the program manager needs to maintain a good level of communication and always present the right information at the right time. Which plan documents the process to communicate the right program information to the right person at the right time?",
+  "choices": [
+   "A. Program communication management plan",
+   "B. Program stakeholder engagement plan",
+   "C. Program information management plan",
+   "D. Program benefits management plan"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 41840166,
+  "text": "Your team and yourself have worked hard for the tight schedule delivery of the program and are now in the closure phase. An unidentified issue was spotted in the product to be delivered to the customer. The delivery is due tomorrow and you do not have time to fix the issue prior to the delivery. In this case you should",
+  "choices": [
+   "A. Deliver without mentioning the issue",
+   "B. Inform the customer about the issue and its impact",
+   "C. Escalate to sponsor",
+   "D. Escalate to steering committee"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 41840167,
+  "text": "You are in the definition phase of a 5-years program and you know that you need to plan thoroughly in order not to deviate from the purpose of the program and be able to continuously maintain viability of the program by integrating changes as needed. You have just completed the PWBS which will allow you to",
+  "choices": [
+   "A. Develop the risk management plan",
+   "B. Identify critical success factors",
+   "C. Get authorization to start program work",
+   "D. Develop the program schedule"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 41840168,
+  "text": "Your program is delivering incremental benefits; you have already identified benefits and listed them in your charter, which was approved. During the conduct of the program, you realized that a key benefit was not valid anymore due to market change and you need to take corrective actions. What is your next step?",
+  "choices": [
+   "A. Continue with the implementation as planned",
+   "B. Escalate to steering committee",
+   "C. Revising the beneﬁts management plan",
+   "D. Analyze the impact and the needed change"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 41840169,
+  "text": "Through program performance monitoring and controlling, the program management team continuously monitor the health of the program and ensure that it remains aligned with the strategic objectives and in-line with the planned values. During which phase you do program performance monitoring and controlling?",
+  "choices": [
+   "A. Program definition",
+   "B. Program delivery phase",
+   "C. Program closure",
+   "D. Throughout the program"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 41840170,
+  "text": "Throughout the program lifecycle, and knowing that stakeholder engagement is critical to program success, the program manager works constantly to engage stakeholders and gain their support. You are the program manager for a multi-tier program ranging across multiple stakeholder channels and a wide range of stakeholders’ groups. You are now in the process of categorizing the stakeholders in order to analyze them. Which of the following is the best approach to get feedback about stakeholders’ attitudes regarding the program impact?",
+  "choices": [
+   "A. Questionnaires and surveys",
+   "B. Interviews",
+   "C. Brainstorming sessions with the program team",
+   "D. Focus groups using open-ended questions"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 41905001,
+  "text": "Throughout the program lifecycle, and knowing that stakeholder engagement is critical to program success, the program manager works constantly to engage stakeholders and gain their support. You are the program manager for a multi-tier program ranging across multiple stakeholder channels and a wide range of stakeholders’ groups. Which document visually represents the interactions of all stakeholders’ current and desired support and influence?",
+  "choices": [
+   "A. Stakeholder Engagement Plan",
+   "B. Stakeholder Register",
+   "C. Stakeholder Map",
+   "D. Stakeholder strategy"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 41905002,
+  "text": "You have been assigned to a low-priority program in the organization and you have been struggling in getting the needed resources on time. You are working in a complex environment due to the changing market of the transportation industry. When working in complex environments with limited resources, the program manager should",
+  "choices": [
+   "A. Establish Human Resource Management Plan",
+   "B. Establish a PMIS",
+   "C. Set up program change control board",
+   "D. Establish a good benefits realization plan"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 41905003,
+  "text": "Your client has requested you to send him project managers in order to interview them before assigning them to components. Your client rejected the first project manager you sent. What should be your next course of action?",
+  "choices": [
+   "A. Escalate to sponsor as it is his responsibility to handle resources",
+   "B. Reviewing the skill inventory",
+   "C. Call the client or meet him to find out the cause and take corrective action if any is needed",
+   "D. Escalate to steering committee"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 41905004,
+  "text": "Your client has requested you to send him project managers in order to interview them before assigning them to components. Your client has rejected multiple project managers you sent. What should be your next course of action?",
+  "choices": [
+   "A. Escalate to sponsor as it is his responsibility to handle resources",
+   "B. Reviewing the skill inventory",
+   "C. Call the client or meet him to find out the cause and take corrective action if any is needed",
+   "D. Escalate to steering committee"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 41905005,
+  "text": "Throughout the program lifecycle, and knowing that stakeholder engagement is critical to program success, the program manager works constantly to engage stakeholders and gain their support. You are the program manager for a multi-tier program ranging across multiple stakeholder channels and a wide range of stakeholders’ groups. To resolve stakeholder expectations, which of the below techniques you use ?",
+  "choices": [
+   "A. Brainstorming and expert judgment",
+   "B. Negotiation and Conflict Resolution",
+   "C. SWOT Analysis and Comparative analysis",
+   "D. Stakeholder checklists and program stake impact analysis"
+  ],
+  "answer": "B"
+ },
+ {
+  "id": 41905006,
+  "text": "Program manager is responsible for managing the financial aspects of the program with the oversight from the steering committee. Program payment schedules, component payment schedules and updates to program budget baseline are outputs of?",
+  "choices": [
+   "A. Finance management planning",
+   "B. Component cost estimation",
+   "C. Procurement management",
+   "D. Program cost budgeting"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 41905007,
+  "text": "You are already mid-way through your program and the steering committee has been following up with you on a regular basis in order to ensure the delivery of benefits because this is the first program you manage in the company. Two of your components need the use of a scarce resource as a full-timer, and they have escalated this issue to you, what is your next course of action?",
+  "choices": [
+   "A. Escalate to sponsor",
+   "B. Do resource interdependency",
+   "C. Do resource prioritization",
+   "D. Escalate to functional manager"
+  ],
+  "answer": "C"
+ },
+ {
+  "id": 41905008,
+  "text": "You are in the definition phase of a 7-years program. You are determining the financial framework of the program with an oversight from the steering committee. Multiple funding options exist due to the strategic importance of the program to the medical industry. Program financial framework is used to?",
+  "choices": [
+   "A. Coordinating available funding",
+   "B. Determine constraint and how funding is allocated",
+   "C. Defines and describes the program funding flows",
+   "D. All of the options"
+  ],
+  "answer": "D"
+ },
+ {
+  "id": 41905009,
+  "text": "During your program to design a new metro station for your city aimed to reduce traffic and travel time for the residents, you have been monitoring the financial environment due to the step-funding given by your government and trying to cope with it by planning for the necessary phase during each period. The objective of financing in program development is to?",
+  "choices": [
+   "A. Obtain funds to bridge the gap between paying and getting benefits",
+   "B. Fund programs",
+   "C. Fund program components",
+   "D. Fund program and program components"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 41905010,
+  "text": "You successfully managed your program to deliver the drug to cure cancer throughout the world and your sponsor has agreed to the closure. You are now working to transition your program to operations. Continued realization of the program benefits is ensured by the?",
+  "choices": [
+   "A. Benefits sustainment plan",
+   "B. Program governance plan",
+   "C. Program management plan",
+   "D. Operations"
+  ],
+  "answer": "A"
+ },
+ {
+  "id": 41905011,
+  "text": "You are the program manager of a complex program in a risk adverse company; during the kick-off meeting, two employees moved out of the room as they were not interested in the change being proposed. What is your next course of action?",
+  "choices": [
+   "A. Escalate to steering committee",
+   "B. Do nothing, as the functional managers are responsible for employees",
+   "C. Consult with the functional managers, do root-cause analysis and take appropriate actions",
+   "D. Escalate to functional manager"
+  ],
+  "answer": "C"
+ }
+]
