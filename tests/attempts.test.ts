@@ -6,6 +6,7 @@ import { db } from "@/db";
 import { attempts, examQuestions, questions, users } from "@/db/schema";
 import { generateExams, seedQuestions } from "@/db/seed";
 import { abandonAttempt, deadlineOf, AttemptExpired, AttemptInProgress, AttemptNotFound, AttemptSubmitted, findOpenAttempt, getAttempt, openAttemptSummary, listAttempts, InvalidAnswer, saveAnswer, startAttempt, submitAttempt, setMark } from "@/lib/attempts";
+import { TIME_LIMIT_MIN } from "@/lib/utils";
 import { closeDb, resetDb } from "./db";
 
 const EXAM = 1;
@@ -205,7 +206,7 @@ test("findOpenAttempt picks the newest when old data has several in-progress Att
 });
 
 const MIN = 60_000;
-const DEADLINE_MS = 240 * MIN;
+const DEADLINE_MS = TIME_LIMIT_MIN * MIN;
 
 test("deadline of a Timed Attempt = start + 240 minutes; none when untimed", () => {
   const startedAt = new Date("2026-10-09T08:00:00Z");
@@ -270,7 +271,7 @@ test("a Timed Attempt left past its deadline is in history, no longer open, and 
   assert.equal(await findOpenAttempt(bob, 4), null);
   const listed = (await listAttempts(bob)).find((x) => x.id === id);
   assert.equal(listed?.timed, true);
-  assert.equal(listed?.durationSec, 240 * 60);
+  assert.equal(listed?.durationSec, TIME_LIMIT_MIN * 60);
   assert.ok(await startAttempt(bob, 4)); // the expired one was closed before the in-progress check
 });
 
