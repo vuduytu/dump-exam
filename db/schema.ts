@@ -4,6 +4,8 @@ import { boolean, datetime, int, json, mysqlTable, primaryKey, text, timestamp, 
 export type Choice = { letter: string; text: string };
 // One ExamTopics vote row: the voted combination of Choice letters (e.g. "AC"), not a single Choice.
 export type Vote = { letters: string; count: number; mostVoted: boolean };
+// Where a Duplicate Question's twin sits: Exam name and its number in that Exam.
+export type Duplicate = { exam: string; number: number };
 
 export const CERTIFICATIONS = ["PMP", "PgMP"] as const;
 export type Certification = (typeof CERTIFICATIONS)[number];
@@ -11,7 +13,7 @@ export type Certification = (typeof CERTIFICATIONS)[number];
 const certification = () => varchar("certification", { length: 8 }).$type<Certification>().notNull().default("PMP");
 
 export const questions = mysqlTable("questions", {
-  id: int("id").primaryKey(), // original ExamTopics number (`Question #N`)
+  id: int("id").primaryKey(), // PMP: original ExamTopics number (`Question #N`); PgMP: seconds of the day in the file name * 1000 + number (scripts/parse_pgmp.py)
   certification: certification(),
   text: text("text").notNull(),
   choices: json("choices").$type<Choice[]>().notNull(),
@@ -22,6 +24,11 @@ export const questions = mysqlTable("questions", {
   usable: boolean("usable").notNull(),
   task: varchar("task", { length: 16 }), // Task code from data/tasks.json (its Domain follows); null until tags are seeded
   approach: varchar("approach", { length: 16 }),
+  // PgMP only (null for PMP): dump file = Exam name, number in that file, Explanation (sanitized HTML), Duplicate Questions
+  source: varchar("source", { length: 64 }),
+  number: int("number"),
+  explanation: text("explanation"),
+  duplicates: json("duplicates").$type<Duplicate[]>(),
 });
 
 export const users = mysqlTable("users", {
@@ -55,7 +62,7 @@ export const examQuestions = mysqlTable(
   "exam_questions",
   {
     examId: int("exam_id").notNull().references(() => exams.id),
-    position: int("position").notNull(), // 1..180, fixed
+    position: int("position").notNull(), // fixed; PMP 1..180, PgMP the number in the dump file (gaps where Unusable)
     questionId: int("question_id").notNull().references(() => questions.id),
   },
   (t) => [primaryKey({ columns: [t.examId, t.position] }), unique().on(t.examId, t.questionId)],

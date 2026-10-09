@@ -1,0 +1,30 @@
+Question 1
+WHO closes the program??
+A. Sponsor
+B. Governance board
+C. PMO
+D. Customer
+The answer is incorrect
+
+The correct answer is: Governance board
+
+Question 2
+Which is not a phase of the program life cycle?
+A. Initiation
+B. Closure
+C. Setup &amp; tuning
+D. Planning
+E. Delivery
+
+F. Preparation
+Your answer is correct.
+
+The correct answer is: Setup & tuning
+
+Question 3
+Who closes the program
+A. Sponsor
+B. Governance board
+C. PMO
+D. Customer
+

@@ -4,11 +4,15 @@ import { useCallback, useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight, LayoutGrid } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
+import type { Duplicate } from "@/db/schema";
 import { cn } from "@/lib/utils";
 import { keyCommand, type Command } from "./logic";
 
-/** One grid cell: 1-based position in the Exam, colours for its state, and an accessible label ("Câu 3, đã trả lời"). */
-export type GridCell = { pos: number; className: string; label: string };
+/** One grid cell: 1-based position in the Exam, its shown number (PgMP: the number in the dump file), colours for its state, and an accessible label ("Câu 3, đã trả lời"). */
+export type GridCell = { pos: number; number: number; className: string; label: string };
+
+/** "Câu 72/180", or "Câu 24 (23/91)" when the shown number is not the position (PgMP Exam with an Unusable Question skipped). */
+export const questionLabel = (n: number, pos: number, total: number) => `Câu ${n === pos ? `${pos}/${total}` : `${n} (${pos}/${total})`}`;
 
 /** Current 1-based position, switched on the client; `?q=N` follows via replaceState so a reload opens the same Question. */
 export function usePosition(initial: number) {
@@ -34,6 +38,7 @@ const isTyping = (t: EventTarget | null) =>
  */
 export function QuestionLayout(props: {
   title: string; // line 1: "Đề 2 · Câu 72/180"
+  number: number; // shown number of the Question at `pos`; differs from `pos` only after an Unusable Question of a PgMP Exam
   meta?: React.ReactNode; // line 1, right-aligned
   figure?: React.ReactNode; // line 2
   stats?: React.ReactNode; // line 3, see Stats
@@ -55,7 +60,7 @@ export function QuestionLayout(props: {
   const i = cells.findIndex((c) => c.pos === pos);
   const prev = cells[i - 1]?.pos;
   const next = cells[i + 1]?.pos;
-  const heading = `${props.title} · Câu ${pos}/${total}`;
+  const heading = `${props.title} · ${questionLabel(props.number, pos, total)}`;
 
   useEffect(() => {
     function onKey(e: KeyboardEvent) {
@@ -94,7 +99,7 @@ export function QuestionLayout(props: {
             }}
             className={cn("block w-full rounded border py-1.5 outline-none focus-visible:ring-3 focus-visible:ring-ring/50", c.className, c.pos === pos && "ring-2 ring-ring ring-offset-1 ring-offset-background")}
           >
-            {c.pos}
+            {c.number}
           </button>
         </li>
       ))}
@@ -194,4 +199,10 @@ export function Stats({ items }: { items: { glyph: string; label: string; n: num
       <span aria-hidden className={x.tone}>{x.glyph}</span> {x.label} {x.n}
     </span>
   ));
+}
+
+/** "Trùng: <Exam> · Câu N" for a Duplicate Question, one entry per twin. */
+export function DuplicateNote({ duplicates }: { duplicates: Duplicate[] }) {
+  if (!duplicates.length) return null;
+  return <p className="mt-3 text-sm text-muted-foreground">Trùng: {duplicates.map((d) => `${d.exam} · Câu ${d.number}`).join("; ")}</p>;
 }

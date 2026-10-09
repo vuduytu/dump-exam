@@ -1,13 +1,14 @@
 // Usage: npm run audit   (compares data/questions.json with the `questions` table; exits 1 on any difference)
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
+import { eq } from "drizzle-orm";
 import { db } from "@/db";
 import { questions } from "@/db/schema";
 import type { ParsedQuestion } from "@/db/seed";
 
 async function main() {
   const parsed: ParsedQuestion[] = JSON.parse(readFileSync("data/questions.json", "utf8"));
-  const rows = new Map((await db.select().from(questions)).map((r) => [r.id, r]));
+  const rows = new Map((await db.select().from(questions).where(eq(questions.certification, "PMP"))).map((r) => [r.id, r]));
   const problems: string[] = [];
   // eslint-disable-next-line @typescript-eslint/no-unused-vars -- `images` is parser metadata, not a column
   for (const { number, images, ...want } of parsed) {

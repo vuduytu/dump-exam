@@ -4,13 +4,13 @@ import { useEffect, useState } from "react";
 import { Check, Flag, X } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import type { Choice } from "@/db/schema";
+import type { Choice, Duplicate } from "@/db/schema";
 import { taskLabel, taskOf } from "@/lib/question-tags";
 import { cn, TIME_LIMIT_MIN } from "@/lib/utils";
 import { formatDuration, inTab, resultCell, type ResultTab } from "./logic";
-import { QuestionLayout, usePosition } from "./question-layout";
+import { DuplicateNote, QuestionLayout, questionLabel, usePosition } from "./question-layout";
 
-type Question = { id: number; task: string | null; text: string; choices: (Choice & { percent: number })[]; correct: string; suggested: string; selected: string[]; isCorrect: boolean; marked: boolean };
+type Question = { id: number; number: number; explanation: string | null; duplicates: Duplicate[]; voted: boolean; task: string | null; text: string; choices: (Choice & { percent: number })[]; correct: string; suggested: string; selected: string[]; isCorrect: boolean; marked: boolean };
 
 /** Colors per Domain: the Task tag and the score bar (full class names so Tailwind sees them). */
 const domainTone: Record<string, { tag: string; bar: string }> = {
@@ -25,7 +25,10 @@ const tabs: { value: ResultTab; label: string }[] = [
   { value: "marked", label: "Đánh dấu" },
 ];
 
-/** Read-only Result: all Questions arrive once, the tab and position switch on the client (`?f=`, `?q=` follow via replaceState). */
+/**
+ * Read-only Result: all Questions arrive once, the tab and position switch on the client (`?f=`, `?q=` follow via replaceState).
+ * A Question without Votes (PgMP) shows its Explanation instead.
+ */
 export function ResultScreen(props: { title: string; drill: boolean; domains: { domain: string; correct: number; total: number }[]; score: number; timed: boolean; durationSec: number; questions: Question[]; initialPos: number; initialTab: ResultTab }) {
   const { questions: qs } = props;
   const total = qs.length;
@@ -51,8 +54,9 @@ export function ResultScreen(props: { title: string; drill: boolean; domains: { 
     const { correct, marked } = resultCell(x);
     return {
       pos: p,
+      number: x.number,
       className: cn(correct ? "bg-correct-soft text-correct" : "bg-wrong-soft text-wrong", marked ? "border-marked border-2" : correct ? "border-correct" : "border-wrong"),
-      label: `Câu ${p}, ${correct ? "đúng" : "sai"}${marked ? ", đánh dấu" : ""}`,
+      label: `Câu ${x.number}, ${correct ? "đúng" : "sai"}${marked ? ", đánh dấu" : ""}`,
     };
   });
   const pct = Math.round((props.score / total) * 100);
@@ -74,6 +78,7 @@ export function ResultScreen(props: { title: string; drill: boolean; domains: { 
   return (
     <QuestionLayout
       title={props.title}
+      number={q?.number ?? pos}
       meta={props.timed ? `Thi thử · ${formatDuration(props.durationSec)} / ${TIME_LIMIT_MIN} phút` : `${props.drill ? "Ôn" : "Luyện tập"} · ${formatDuration(props.durationSec)}`}
       figure={`Điểm: ${props.score}/${total} (${pct}%)`}
       summary={
@@ -141,7 +146,7 @@ export function ResultScreen(props: { title: string; drill: boolean; domains: { 
           <p className={cn("flex flex-wrap items-center gap-1.5 text-sm font-semibold", q.isCorrect ? "text-correct" : "text-wrong")}>
             {q.isCorrect ? <Check className="size-4" /> : <X className="size-4" />}
             {q.isCorrect ? "Đúng" : q.selected.length ? "Sai" : "Sai (bỏ trống)"}
-            <span className="font-normal text-muted-foreground tabular-nums">· Câu {pos}/{total}</span>
+            <span className="font-normal text-muted-foreground tabular-nums">· {questionLabel(q.number, pos, total)}</span>
             {q.marked && (
               <span className="ml-2 flex items-center gap-1 text-marked">
                 <Flag className="size-4" /> Đã đánh dấu
@@ -150,6 +155,7 @@ export function ResultScreen(props: { title: string; drill: boolean; domains: { 
             {taskLabel(q.task) && <Badge variant="outline" className={cn("ml-auto h-auto max-w-full whitespace-normal font-normal", domainTone[taskOf(q.task)!.domain].tag)}>{taskLabel(q.task)}</Badge>}
           </p>
           <div className="question-text mt-3" dangerouslySetInnerHTML={{ __html: q.text }} /> {/* sanitized at import */}
+          <DuplicateNote duplicates={q.duplicates} />
           <ul className="mt-6 flex flex-col gap-2">
             {q.choices.map((c) => {
               const isCorrect = q.correct.includes(c.letter);
@@ -165,18 +171,24 @@ export function ResultScreen(props: { title: string; drill: boolean; domains: { 
                     {isCorrect && <Badge variant="outline" className="border-correct text-correct">Đáp án đúng</Badge>}
                     {suggested && <Badge variant="outline">ExamTopics gợi ý</Badge>}
                   </div>
-                  <div className="mt-2 flex items-center gap-2 text-xs text-muted-foreground tabular-nums">
+                  {q.voted && <div className="mt-2 flex items-center gap-2 text-xs text-muted-foreground tabular-nums">
                     <div role="meter" aria-label={`${c.percent}% vote`} aria-valuenow={c.percent} aria-valuemin={0} aria-valuemax={100} className="h-2 flex-1 overflow-hidden rounded-full bg-muted">
                       <div className="h-full bg-primary" style={{ width: `${c.percent}%` }} />
                     </div>
                     {c.percent}% vote
-                  </div>
+                  </div>}
                 </li>
               );
             })}
           </ul>
+          {q.explanation && (
+            <section className="mt-6 rounded-lg border bg-card p-3">
+              <h2 className="text-sm font-semibold">Lời giải</h2>
+              <div className="question-text mt-2 text-sm" dangerouslySetInnerHTML={{ __html: q.explanation }} /> {/* sanitized at import */}
+            </section>
+          )}
           <p className="mt-4 text-sm text-muted-foreground">
-            Bạn chọn: {q.selected.join("") || "(bỏ trống)"} · Đáp án đúng: {q.correct} · ExamTopics gợi ý: {q.suggested}
+            Bạn chọn: {q.selected.join("") || "(bỏ trống)"} · Đáp án đúng: {q.correct}{q.voted && ` · ExamTopics gợi ý: ${q.suggested}`}
           </p>
         </article>
       )}

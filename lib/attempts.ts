@@ -159,7 +159,7 @@ export async function abandonAttempt(userId: number, attemptId: number, now = ne
 /** The User's Attempt with every Question of its Exam or Drill in order, Correct Answer included: callers decide what to expose. */
 async function loadAttempt(userId: number, attemptId: number) {
   const [attempt] = await db
-    .select({ id: attempts.id, examId: attempts.examId, examName: exams.name, drillSource: attempts.drillSource, timed: attempts.timed, startedAt: attempts.startedAt, submittedAt: attempts.submittedAt, score: attempts.score })
+    .select({ id: attempts.id, certification: attempts.certification, examId: attempts.examId, examName: exams.name, drillSource: attempts.drillSource, timed: attempts.timed, startedAt: attempts.startedAt, submittedAt: attempts.submittedAt, score: attempts.score })
     .from(attempts)
     .leftJoin(exams, eq(exams.id, attempts.examId))
     .where(and(eq(attempts.id, attemptId), eq(attempts.userId, userId), await accessible(userId)));
@@ -168,12 +168,15 @@ async function loadAttempt(userId: number, attemptId: number) {
   const rows = await db
     .select({
       id: questions.id,
+      number: items.position, // shown as "Câu N": the number in the PgMP dump file, else the order in the Exam or Drill
       task: questions.task,
       text: questions.text,
       choices: questions.choices,
       correct: questions.correctAnswer,
       suggested: questions.suggestedAnswer,
       votes: questions.votes,
+      explanation: questions.explanation,
+      duplicates: questions.duplicates,
       selected: attemptAnswers.selected,
       marked: attemptAnswers.marked,
     })
@@ -181,7 +184,7 @@ async function loadAttempt(userId: number, attemptId: number) {
     .innerJoin(questions, eq(questions.id, items.questionId))
     .leftJoin(attemptAnswers, and(eq(attemptAnswers.attemptId, attemptId), eq(attemptAnswers.questionId, questions.id)))
     .orderBy(asc(items.position));
-  return { attempt: { ...attempt, title: titleOf(attempt) }, rows };
+  return { attempt: { ...attempt, title: titleOf(attempt) }, rows: rows.map((r) => ({ ...r, duplicates: r.duplicates ?? [] })) };
 }
 
 /**
@@ -191,7 +194,7 @@ async function loadAttempt(userId: number, attemptId: number) {
 export async function getAttempt(userId: number, attemptId: number, now = new Date()) {
   await finalizeExpired(userId, now);
   const { attempt, rows } = await loadAttempt(userId, attemptId);
-  const qs = rows.map((r) => ({ id: r.id, text: r.text, choices: r.choices, need: r.correct.length, selected: r.selected ? r.selected.split("") : [], marked: !!r.marked }));
+  const qs = rows.map((r) => ({ id: r.id, number: r.number, text: r.text, choices: r.choices, duplicates: r.duplicates, need: r.correct.length, selected: r.selected ? r.selected.split("") : [], marked: !!r.marked }));
   return { ...attempt, deadline: deadlineOf(attempt), questions: qs };
 }
 
@@ -263,6 +266,7 @@ export async function getResult(userId: number, attemptId: number, filter?: "wro
     const percent = (letter: string) => (all ? Math.round((votes.filter((v) => v.letters.includes(letter)).reduce((n, v) => n + v.count, 0) / all) * 100) : 0);
     return {
       ...q,
+      voted: votes.length > 0, // PMP only: PgMP has no Vote, its Explanation (if any) shows instead
       choices: q.choices.map((c) => ({ ...c, percent: percent(c.letter) })),
       selected: selected ? selected.split("") : [],
       marked: !!marked,

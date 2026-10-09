@@ -4,14 +4,14 @@ import { useEffect, useRef, useState } from "react";
 import { Clock } from "lucide-react";
 import { saveAnswerAction, setMarkAction } from "@/app/actions";
 import { Progress } from "@/components/ui/progress";
-import type { Choice } from "@/db/schema";
+import type { Choice, Duplicate } from "@/db/schema";
 import { TIME_LIMIT_MIN } from "@/lib/utils";
 import { Choices } from "./choices";
 import { Countdown, MarkButton, SubmitForm } from "./controls";
 import { attemptCell, toggleChoice, type AttemptCell, type Command } from "./logic";
-import { QuestionLayout, Stats, usePosition } from "./question-layout";
+import { DuplicateNote, QuestionLayout, Stats, usePosition } from "./question-layout";
 
-type Question = { id: number; text: string; choices: Choice[]; need: number; selected: string[]; marked: boolean };
+type Question = { id: number; number: number; text: string; choices: Choice[]; duplicates: Duplicate[]; need: number; selected: string[]; marked: boolean };
 type Saved = Pick<Question, "selected" | "marked">;
 
 const cellStyle: Record<AttemptCell, [string, string]> = {
@@ -103,7 +103,7 @@ export function AttemptScreen(props: { attemptId: number; title: string; drill: 
   }
 
   const failedIds = new Set([...failed].map((k) => Number(k.split(":")[1])));
-  const failedPos = qs.flatMap((x, i) => (failedIds.has(x.id) ? [i + 1] : []));
+  const failedPos = qs.flatMap((x) => (failedIds.has(x.id) ? [x.number] : []));
   const status = failedPos.length
     ? `Không lưu được Câu ${failedPos.join(", ")}, hãy thử lại.`
     : pending === null ? "" : pending > 0 ? "Đang lưu…" : "Đã lưu";
@@ -113,12 +113,13 @@ export function AttemptScreen(props: { attemptId: number; title: string; drill: 
   const total = qs.length;
   const cells = qs.map((x, i) => {
     const [className, label] = cellStyle[attemptCell(x)];
-    return { pos: i + 1, className, label: `Câu ${i + 1}, ${label}` };
+    return { pos: i + 1, number: x.number, className, label: `Câu ${x.number}, ${label}` };
   });
 
   return (
     <QuestionLayout
       title={props.title}
+      number={q.number}
       meta={props.msLeft !== null ? `Thi thử · ${TIME_LIMIT_MIN} phút` : props.drill ? "Ôn" : "Luyện tập"}
       figure={`Đã làm: ${answered}/${total} (${Math.round((answered / total) * 100)}%)`}
       stats={
@@ -161,6 +162,7 @@ export function AttemptScreen(props: { attemptId: number; title: string; drill: 
     >
       <article>
         <div className="question-text" dangerouslySetInnerHTML={{ __html: q.text }} /> {/* sanitized at import */}
+        <DuplicateNote duplicates={q.duplicates} />
         <Choices key={q.id} questionId={q.id} choices={q.choices} need={q.need} selected={q.selected} onPick={pick} />
       </article>
       <p role="status" className={`mt-3 min-h-5 text-sm ${failedPos.length ? "text-destructive" : "text-muted-foreground"}`}>

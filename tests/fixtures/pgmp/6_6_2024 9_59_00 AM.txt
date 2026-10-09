@@ -1,0 +1,33 @@
+Question 1
+: Which document authorizes the program?
+A. Program charter.
+B. Business case.
+C. Roadmap.
+D. Benefits register.
+The answer is incorrect.
+
+Correct answer is A: The charter authorizes the program. Reference page 1
+The correct answer is: Program charter.
+
+Question 2
+Which items belong to the program scope? Choose all that apply.
+a. Cost, schedule, and quality
+b. Stakeholder list
+c. Benefits register
+d. Roadmap
+
+
+Explanation:
+
+Answers A and C are correct.
+The correct answers are: Cost, schedule, and quality, Benefits register
+
+Question 3
+Who closes the program?
+A. Sponsor
+B. Governance board
+C. PMO
+Your answer
+is incorrect.
+
+The correct answer is: Governance board
