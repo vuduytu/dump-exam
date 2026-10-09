@@ -54,7 +54,7 @@ Người được admin tạo tài khoản (email và mật khẩu). Không có 
 _Avoid_: account, member
 
 **Attempt** (Lượt làm):
-Một lần một User làm một Exam. Một Exam có nhiều Attempt. Attempt đang làm dở thì làm tiếp được, đã nộp rồi thì không sửa được.
+Một lần một User làm một Exam hoặc một Drill (thuộc đúng một trong hai). Một Exam có nhiều Attempt; mỗi Drill chỉ có một Attempt. Attempt đang làm dở thì làm tiếp được, đã nộp rồi thì không sửa được.
 _Avoid_: submission, session, lần thi
 
 **Admin**:

@@ -13,6 +13,7 @@ export async function Header() {
       <div className="mx-auto flex max-w-5xl flex-wrap items-center gap-x-4 gap-y-1 px-4 py-2">
         <Link href="/" className="font-semibold">PMP Practice</Link>
         <nav className="flex gap-1 text-sm">
+          <Link href="/drills" className={buttonVariants({ variant: "ghost" })}>Theo chủ đề</Link>
           <Link href="/history" className={buttonVariants({ variant: "ghost" })}>Lịch sử</Link>
           <Link href="/account" className={buttonVariants({ variant: "ghost" })}>Tài khoản</Link>
           {user.isAdmin && <Link href="/admin" className={buttonVariants({ variant: "ghost" })}>Quản lý User</Link>}

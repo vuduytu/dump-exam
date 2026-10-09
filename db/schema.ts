@@ -14,6 +14,8 @@ export const questions = mysqlTable("questions", {
   correctAnswer: varchar("correct_answer", { length: 8 }).notNull(),
   votes: json("votes").$type<Vote[]>().notNull(),
   usable: boolean("usable").notNull(),
+  task: varchar("task", { length: 16 }), // Task code from data/tasks.json (its Domain follows); null until tags are seeded
+  approach: varchar("approach", { length: 16 }),
 });
 
 export const users = mysqlTable("users", {
@@ -45,7 +47,9 @@ export const examQuestions = mysqlTable(
 export const attempts = mysqlTable("attempts", {
   id: int("id").autoincrement().primaryKey(),
   userId: int("user_id").notNull().references(() => users.id),
-  examId: int("exam_id").notNull().references(() => exams.id),
+  // An Attempt belongs to either an Exam or a Drill: examId is null exactly when drillSource is set
+  examId: int("exam_id").references(() => exams.id),
+  drillSource: varchar("drill_source", { length: 32 }), // Domain name or Task code, see lib/question-tags.ts
   timed: boolean("timed").notNull().default(false), // Timed Attempt: deadline = startedAt + TIME_LIMIT_MS (lib/attempts.ts)
   startedAt: timestamp("started_at").notNull().default(sql`CURRENT_TIMESTAMP`),
   submittedAt: datetime("submitted_at"), // null while in progress; not timestamp: MySQL 5.7 makes a nullable timestamp NOT NULL
@@ -61,4 +65,15 @@ export const attemptAnswers = mysqlTable(
     marked: boolean("marked").notNull().default(false), // Marked Question, for review only: never counts in the Score
   },
   (t) => [primaryKey({ columns: [t.attemptId, t.questionId] })],
+);
+
+/** A Drill's Questions, fixed in the order they were picked at start. */
+export const drillQuestions = mysqlTable(
+  "drill_questions",
+  {
+    attemptId: int("attempt_id").notNull().references(() => attempts.id),
+    position: int("position").notNull(),
+    questionId: int("question_id").notNull().references(() => questions.id),
+  },
+  (t) => [primaryKey({ columns: [t.attemptId, t.position] }), unique().on(t.attemptId, t.questionId)],
 );

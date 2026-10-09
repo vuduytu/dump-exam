@@ -24,7 +24,7 @@ export default async function History({ searchParams }: { searchParams: Promise<
         {list.map((a) => (
           <li key={a.id}>
             <Link href={`/attempts/${a.id}`} className="flex flex-wrap items-center gap-x-4 gap-y-1 p-3 hover:bg-muted">
-              <span className="font-medium">{a.examName}</span>
+              <span className="font-medium">{a.title}</span>
               <span className="text-sm text-muted-foreground">{a.submittedAt.toLocaleString("vi-VN", { timeZone: "Asia/Ho_Chi_Minh" })}</span>
               <span className="text-sm text-muted-foreground">{a.timed ? "Bấm giờ" : "Không bấm giờ"}</span>
               <span className="text-sm text-muted-foreground">{Math.round(a.durationSec / 60)} phút</span>

@@ -1,6 +1,7 @@
 import { and, asc, count, desc, eq, isNotNull, isNull, sql } from "drizzle-orm";
 import { db } from "@/db";
-import { attemptAnswers, attempts, examQuestions, exams, questions, users } from "@/db/schema";
+import { attemptAnswers, attempts, drillQuestions, examQuestions, exams, questions, users } from "@/db/schema";
+import { drillTitle } from "@/lib/question-tags";
 
 export class AttemptNotFound extends Error {
   constructor() {
@@ -34,11 +35,20 @@ export class AttemptExpired extends Error {
 
 export class AttemptInProgress extends Error {
   constructor(public attemptId: number) {
-    super("Exam này đang có Attempt làm dở");
+    super("Đang có Attempt làm dở");
   }
 }
 
 type Tx = Parameters<Parameters<typeof db.transaction>[0]>[0];
+
+/** The Attempt's Questions with their position: its Exam's, or its Drill's. */
+const itemsOf = (a: { id: number; examId: number | null }) =>
+  a.examId === null
+    ? db.select({ questionId: drillQuestions.questionId, position: drillQuestions.position }).from(drillQuestions).where(eq(drillQuestions.attemptId, a.id)).as("items")
+    : db.select({ questionId: examQuestions.questionId, position: examQuestions.position }).from(examQuestions).where(eq(examQuestions.examId, a.examId)).as("items");
+
+/** "Đề 2" for an Exam, "Ôn: People · Manage conflicts" for a Drill. */
+const titleOf = (a: { examName: string | null; drillSource: string | null }) => a.examName ?? drillTitle(a.drillSource!);
 
 export const TIME_LIMIT_MS = 230 * 60_000;
 
@@ -131,18 +141,20 @@ export async function abandonAttempt(userId: number, attemptId: number, now = ne
   await db.transaction(async (tx) => {
     await lockOpenAttempt(tx, userId, attemptId, now);
     await tx.delete(attemptAnswers).where(eq(attemptAnswers.attemptId, attemptId));
+    await tx.delete(drillQuestions).where(eq(drillQuestions.attemptId, attemptId));
     await tx.delete(attempts).where(eq(attempts.id, attemptId));
   });
 }
 
-/** The User's Attempt with every Question of its Exam in order, Correct Answer included: callers decide what to expose. */
+/** The User's Attempt with every Question of its Exam or Drill in order, Correct Answer included: callers decide what to expose. */
 async function loadAttempt(userId: number, attemptId: number) {
   const [attempt] = await db
-    .select({ id: attempts.id, examId: attempts.examId, examName: exams.name, timed: attempts.timed, startedAt: attempts.startedAt, submittedAt: attempts.submittedAt, score: attempts.score })
+    .select({ id: attempts.id, examId: attempts.examId, examName: exams.name, drillSource: attempts.drillSource, timed: attempts.timed, startedAt: attempts.startedAt, submittedAt: attempts.submittedAt, score: attempts.score })
     .from(attempts)
-    .innerJoin(exams, eq(exams.id, attempts.examId))
+    .leftJoin(exams, eq(exams.id, attempts.examId))
     .where(and(eq(attempts.id, attemptId), eq(attempts.userId, userId)));
   if (!attempt) throw new AttemptNotFound();
+  const items = itemsOf(attempt);
   const rows = await db
     .select({
       id: questions.id,
@@ -154,16 +166,15 @@ async function loadAttempt(userId: number, attemptId: number) {
       selected: attemptAnswers.selected,
       marked: attemptAnswers.marked,
     })
-    .from(examQuestions)
-    .innerJoin(questions, eq(questions.id, examQuestions.questionId))
+    .from(items)
+    .innerJoin(questions, eq(questions.id, items.questionId))
     .leftJoin(attemptAnswers, and(eq(attemptAnswers.attemptId, attemptId), eq(attemptAnswers.questionId, questions.id)))
-    .where(eq(examQuestions.examId, attempt.examId))
-    .orderBy(asc(examQuestions.position));
-  return { attempt, rows };
+    .orderBy(asc(items.position));
+  return { attempt: { ...attempt, title: titleOf(attempt) }, rows };
 }
 
 /**
- * The User's Attempt with its Questions in Exam order. Never includes the Correct Answer, only how many letters it has.
+ * The User's Attempt with its Questions in Exam (or Drill) order. Never includes the Correct Answer, only how many letters it has.
  * A Timed Attempt past its deadline comes back submitted.
  */
 export async function getAttempt(userId: number, attemptId: number, now = new Date()) {
@@ -177,11 +188,12 @@ export async function getAttempt(userId: number, attemptId: number, now = new Da
 export async function saveAnswer(userId: number, attemptId: number, questionId: number, letters: string[], now = new Date()) {
   await db.transaction(async (tx) => {
     const attempt = await lockOpenAttempt(tx, userId, attemptId, now);
+    const items = itemsOf(attempt);
     const [q] = await tx
       .select({ choices: questions.choices, correct: questions.correctAnswer })
-      .from(examQuestions)
-      .innerJoin(questions, eq(questions.id, examQuestions.questionId))
-      .where(and(eq(examQuestions.examId, attempt.examId), eq(examQuestions.questionId, questionId)));
+      .from(items)
+      .innerJoin(questions, eq(questions.id, items.questionId))
+      .where(eq(items.questionId, questionId));
     const valid = q?.choices.map((c) => c.letter) ?? [];
     if (!q || letters.length > q.correct.length || new Set(letters).size !== letters.length || !letters.every((l) => valid.includes(l)))
       throw new InvalidAnswer();
@@ -197,16 +209,14 @@ export async function saveAnswer(userId: number, attemptId: number, questionId: 
 export async function setMark(userId: number, attemptId: number, questionId: number, marked: boolean, now = new Date()) {
   await db.transaction(async (tx) => {
     const attempt = await lockOpenAttempt(tx, userId, attemptId, now);
-    const [inExam] = await tx
-      .select({ id: examQuestions.questionId })
-      .from(examQuestions)
-      .where(and(eq(examQuestions.examId, attempt.examId), eq(examQuestions.questionId, questionId)));
-    if (!inExam) throw new InvalidAnswer();
+    const items = itemsOf(attempt);
+    const [inAttempt] = await tx.select({ id: items.questionId }).from(items).where(eq(items.questionId, questionId));
+    if (!inAttempt) throw new InvalidAnswer();
     await tx.insert(attemptAnswers).values({ attemptId, questionId, selected: "", marked }).onDuplicateKeyUpdate({ set: { marked } });
   });
 }
 
-const sameLetters = (a: string, b: string) => [...a].sort().join("") === [...b].sort().join("");
+export const sameLetters = (a: string, b: string) => [...a].sort().join("") === [...b].sort().join("");
 
 /**
  * Scores and closes the Attempt: one point per Question whose selected letters equal the Correct Answer exactly.
@@ -215,12 +225,12 @@ const sameLetters = (a: string, b: string) => [...a].sort().join("") === [...b].
 export async function submitAttempt(userId: number, attemptId: number, now = new Date()) {
   return db.transaction(async (tx) => {
     const attempt = await lockOpenAttempt(tx, userId, attemptId);
+    const items = itemsOf(attempt);
     const rows = await tx
       .select({ correct: questions.correctAnswer, selected: attemptAnswers.selected })
-      .from(examQuestions)
-      .innerJoin(questions, eq(questions.id, examQuestions.questionId))
-      .leftJoin(attemptAnswers, and(eq(attemptAnswers.attemptId, attemptId), eq(attemptAnswers.questionId, questions.id)))
-      .where(eq(examQuestions.examId, attempt.examId));
+      .from(items)
+      .innerJoin(questions, eq(questions.id, items.questionId))
+      .leftJoin(attemptAnswers, and(eq(attemptAnswers.attemptId, attemptId), eq(attemptAnswers.questionId, questions.id)));
     const score = rows.filter((r) => r.selected && sameLetters(r.selected, r.correct)).length;
     const deadline = deadlineOf(attempt);
     const submittedAt = deadline && deadline < now ? deadline : now;
@@ -252,7 +262,7 @@ export async function getResult(userId: number, attemptId: number, filter?: "wro
   return { ...attempt, total: rows.length, questions: questionsShown };
 }
 
-/** The User's submitted Attempts, newest first. Abandoned/in-progress ones are not history. */
+/** The User's submitted Attempts of Exams and Drills, newest first. Abandoned/in-progress ones are not history. */
 export async function listAttempts(userId: number, now = new Date()) {
   await finalizeExpired(userId, now);
   const rows = await db
@@ -260,20 +270,25 @@ export async function listAttempts(userId: number, now = new Date()) {
       id: attempts.id,
       examId: attempts.examId,
       examName: exams.name,
+      drillSource: attempts.drillSource,
       timed: attempts.timed,
       startedAt: attempts.startedAt,
       submittedAt: attempts.submittedAt,
       score: attempts.score,
-      total: count(examQuestions.questionId),
+      examTotal: count(examQuestions.questionId),
+      drillTotal: count(drillQuestions.questionId),
     })
     .from(attempts)
-    .innerJoin(exams, eq(exams.id, attempts.examId))
+    .leftJoin(exams, eq(exams.id, attempts.examId))
     .leftJoin(examQuestions, eq(examQuestions.examId, attempts.examId))
+    .leftJoin(drillQuestions, eq(drillQuestions.attemptId, attempts.id)) // an Attempt has rows in only one of the two
     .where(and(eq(attempts.userId, userId), isNotNull(attempts.submittedAt)))
     .groupBy(attempts.id, exams.name) // TiDB's only_full_group_by does not infer exams.name from the join
     .orderBy(desc(attempts.submittedAt), desc(attempts.id));
-  return rows.map((r) => ({
+  return rows.map(({ examName, examTotal, drillTotal, ...r }) => ({
     ...r,
+    title: titleOf({ examName, drillSource: r.drillSource }),
+    total: examTotal + drillTotal,
     submittedAt: r.submittedAt!,
     score: r.score ?? 0,
     durationSec: Math.round((r.submittedAt!.getTime() - r.startedAt.getTime()) / 1000),

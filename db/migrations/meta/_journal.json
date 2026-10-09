@@ -43,6 +43,13 @@
       "when": 1791511256861,
       "tag": "0005_premium_vindicator",
       "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "5",
+      "when": 1791526159440,
+      "tag": "0006_silly_guardsmen",
+      "breakpoints": true
     }
   ]
 }

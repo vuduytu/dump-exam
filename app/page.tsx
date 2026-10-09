@@ -21,7 +21,7 @@ export default async function Home() {
     .groupBy(exams.id)
     .orderBy(exams.id);
   const best = new Map<number, number>();
-  for (const a of user ? await listAttempts(user.id) : []) best.set(a.examId, Math.max(best.get(a.examId) ?? 0, a.score));
+  for (const a of user ? await listAttempts(user.id) : []) if (a.examId) best.set(a.examId, Math.max(best.get(a.examId) ?? 0, a.score));
   const open = new Set<number>();
   for (const e of list) if (user && (await findOpenAttempt(user.id, e.id))) open.add(e.id);
   return (

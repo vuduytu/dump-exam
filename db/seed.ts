@@ -1,7 +1,8 @@
-import { eq, sql } from "drizzle-orm";
+import { eq, inArray, sql } from "drizzle-orm";
 import { db } from "@/db";
 import { examQuestions, exams, questions, users } from "@/db/schema";
 import { hashPassword } from "@/lib/auth";
+import { validateTags, type Tag } from "@/lib/question-tags";
 
 /** One entry of data/questions.json, as written by scripts/parse_html.py. */
 export type ParsedQuestion = Omit<typeof questions.$inferInsert, "id"> & { number: number; images?: string[] };
@@ -23,6 +24,23 @@ export async function seedQuestions(parsed: ParsedQuestion[]) {
       },
     });
   }
+}
+
+/**
+ * Sets each Question's Task and Approach from data/question-tags.json. Refuses invalid or incomplete tags.
+ * Overwrites, so re-running after the owner corrects labels applies the corrections and never duplicates.
+ */
+export async function seedTags(tags: Tag[]) {
+  const ids = (await db.select({ id: questions.id }).from(questions)).map((q) => q.id);
+  const errors = validateTags(ids, tags);
+  if (errors.length) throw new Error(`invalid tags:\n${errors.slice(0, 20).join("\n")}`);
+  const groups = Map.groupBy(tags, (t) => `${t.task}|${t.approach}`); // one UPDATE per pair, not per Question
+  await db.transaction(async (tx) => {
+    for (const [key, group] of groups) {
+      const [task, approach] = key.split("|");
+      await tx.update(questions).set({ task, approach }).where(inArray(questions.id, group.map((t) => t.id)));
+    }
+  });
 }
 
 export const ADMIN_EMAIL = "admin@dump-exam.local";

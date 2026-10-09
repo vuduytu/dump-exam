@@ -91,7 +91,7 @@ test("listAttempts returns only the User's submitted Attempts, newest first, wit
   await startAttempt(bob, 3); // in progress: not listed
   const list = await listAttempts(bob);
   assert.deepEqual(list.map((x) => x.id), [b, a]);
-  assert.equal(list[1].examName, "Đề 2");
+  assert.equal(list[1].title, "Đề 2");
   assert.equal(list[1].total, 180);
   assert.equal(list[1].score, 0);
   assert.ok(list[1].durationSec > 0);

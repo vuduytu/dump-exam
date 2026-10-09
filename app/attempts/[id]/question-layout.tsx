@@ -33,7 +33,7 @@ const isTyping = (t: EventTarget | null) =>
  * bars and a grid drawer on mobile, ←/→ between `cells`. Other shortcuts go to `onCommand`, which returns whether it used them.
  */
 export function QuestionLayout(props: {
-  examName: string; // line 1: "Đề 2 · Câu 72/180"
+  title: string; // line 1: "Đề 2 · Câu 72/180"
   meta?: React.ReactNode; // line 1, right-aligned
   figure: React.ReactNode; // line 2
   stats: React.ReactNode; // line 3, see Stats
@@ -54,7 +54,7 @@ export function QuestionLayout(props: {
   const i = cells.findIndex((c) => c.pos === pos);
   const prev = cells[i - 1]?.pos;
   const next = cells[i + 1]?.pos;
-  const heading = `${props.examName} · Câu ${pos}/${total}`;
+  const heading = `${props.title} · Câu ${pos}/${total}`;
 
   useEffect(() => {
     function onKey(e: KeyboardEvent) {

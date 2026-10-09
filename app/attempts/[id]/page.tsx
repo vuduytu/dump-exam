@@ -35,7 +35,7 @@ export default async function AttemptPage({ params, searchParams }: { params: Pr
     const pos = Math.min(Math.max(Math.trunc(Number(qParam)) || 1, 1), total);
     return (
       <ResultScreen
-        examName={result.examName}
+        title={result.title}
         score={score ?? 0}
         timed={result.timed}
         durationSec={Math.round(((result.submittedAt?.getTime() ?? 0) - result.startedAt.getTime()) / 1000)}
@@ -54,7 +54,7 @@ export default async function AttemptPage({ params, searchParams }: { params: Pr
       <RefreshOnReturn renderId={crypto.randomUUID()} />
       <AttemptScreen
         attemptId={attempt.id}
-        examName={attempt.examName}
+        title={attempt.title}
         questions={attempt.questions} // getAttempt never includes the Correct Answer
         initialPos={pos}
         msLeft={attempt.deadline && attempt.deadline.getTime() - Date.now()}

@@ -1,10 +1,10 @@
-import { and, asc, count, desc, eq, ne } from "drizzle-orm";
+import { and, asc, count, desc, eq, isNotNull, ne } from "drizzle-orm";
 import { db } from "@/db";
 import { attemptAnswers, attempts, examQuestions, exams, users } from "@/db/schema";
 import { AttemptNotFound, finalizeExpired } from "@/lib/attempts";
 import { requireAdmin } from "@/lib/users";
 
-type Cell = { userId: number; examId: number; latestAttemptId: number | null; latestScore: number | null; submitted: number; openAnswered: number | null };
+type Cell = { userId: number; examId: number | null; latestAttemptId: number | null; latestScore: number | null; submitted: number; openAnswered: number | null };
 
 /**
  * Admin-only Scoreboard: every User × every Exam. A cell exists once the User has a submitted or open Attempt of the
@@ -25,6 +25,7 @@ export async function getScoreboard(actingId: number, now = new Date()) {
     .select({ id: attempts.id, userId: attempts.userId, examId: attempts.examId, score: attempts.score, submittedAt: attempts.submittedAt, answered: count(attemptAnswers.questionId) })
     .from(attempts)
     .leftJoin(attemptAnswers, and(eq(attemptAnswers.attemptId, attempts.id), ne(attemptAnswers.selected, "")))
+    .where(isNotNull(attempts.examId)) // Exams only: Drills are not on the Scoreboard
     .groupBy(attempts.id)
     .orderBy(desc(attempts.submittedAt), desc(attempts.id)); // MySQL sorts NULL last on DESC: newest submitted first
 

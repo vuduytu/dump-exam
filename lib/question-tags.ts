@@ -20,3 +20,14 @@ export function validateTags(questionIds: number[], tags: Tag[]): string[] {
   for (const id of questionIds) if (!seen.has(id)) errors.push(`missing id ${id}`);
   return errors;
 }
+
+/** Task codes a Drill source covers: a Domain name gives its Tasks, a Task code itself; unknown gives []. */
+export function tasksOfSource(source: string) {
+  return taxonomy.tasks.filter((t) => t.domain === source || t.code === source).map((t) => t.code);
+}
+
+/** "Ôn: People" for a Domain, "Ôn: People · Manage conflicts" for a Task. */
+export function drillTitle(source: string) {
+  const task = taxonomy.tasks.find((t) => t.code === source);
+  return `Ôn: ${task ? `${task.domain} · ${task.name}` : source}`;
+}

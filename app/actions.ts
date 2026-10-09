@@ -7,6 +7,7 @@ import { revalidatePath } from "next/cache";
 import { cookies } from "next/headers";
 import { notFound, redirect } from "next/navigation";
 import { abandonAttempt, AttemptExpired, AttemptInProgress, AttemptNotFound, AttemptSubmitted, saveAnswer, startAttempt, setMark, submitAttempt } from "@/lib/attempts";
+import { DrillEmpty, InvalidDrill, startDrill } from "@/lib/drills";
 import { changePassword, createSessionToken, InvalidCredentials, login, WeakPassword, WrongOldPassword, SESSION_COOKIE, SESSION_DAYS, UserLocked, userFromSession } from "@/lib/auth";
 import { CannotLockSelf, createUser, EmailTaken, InvalidEmail, NotAdmin, resetPassword, setLocked, UserNotFound } from "@/lib/users";
 
@@ -46,6 +47,18 @@ export async function startAttemptAction(examId: number, form: FormData) {
   } catch (err) {
     if (!(err instanceof AttemptInProgress)) throw err;
     id = err.attemptId; // double click or stale page: carry on with the open Attempt
+  }
+  redirect(`/attempts/${id}`);
+}
+
+export async function startDrillAction(source: string, size: number) {
+  let id: number;
+  try {
+    id = await startDrill(await currentUserId(), String(source), Number(size));
+  } catch (err) {
+    if (err instanceof InvalidDrill || err instanceof DrillEmpty) notFound(); // the page offers only real, non-empty sources
+    if (!(err instanceof AttemptInProgress)) throw err;
+    id = err.attemptId; // an open Drill of this source: carry on with it
   }
   redirect(`/attempts/${id}`);
 }

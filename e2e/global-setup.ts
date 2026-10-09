@@ -1,7 +1,7 @@
 import { readFileSync } from "node:fs";
 import { db } from "@/db";
 import { users } from "@/db/schema";
-import { generateExams, seedQuestions } from "@/db/seed";
+import { generateExams, seedQuestions, seedTags } from "@/db/seed";
 import { hashPassword } from "@/lib/auth";
 import { closeDb, resetDb } from "../tests/db";
 
@@ -13,6 +13,7 @@ export default async function globalSetup() {
   if (!password) throw new Error("E2E_PASSWORD is not set (see .env.example)");
   await resetDb();
   await seedQuestions(JSON.parse(readFileSync("data/questions.json", "utf8")));
+  await seedTags(JSON.parse(readFileSync("data/question-tags.json", "utf8")));
   await generateExams();
   await db.insert(users).values({ email: E2E_EMAIL, passwordHash: await hashPassword(password) });
   await closeDb();
