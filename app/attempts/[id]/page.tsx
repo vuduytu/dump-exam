@@ -4,7 +4,7 @@ import { notFound, redirect } from "next/navigation";
 import { AttemptNotFound, AttemptNotSubmitted, getAttempt, getResult } from "@/lib/attempts";
 import { SESSION_COOKIE, userFromSession } from "@/lib/auth";
 import { Choices } from "./choices";
-import { MarkButton, SubmitForm } from "./controls";
+import { Countdown, MarkButton, SubmitForm } from "./controls";
 
 export default async function AttemptPage({ params, searchParams }: { params: Promise<{ id: string }>; searchParams: Promise<{ q?: string; f?: string }> }) {
   const user = await userFromSession((await cookies()).get(SESSION_COOKIE)?.value);
@@ -68,6 +68,7 @@ export default async function AttemptPage({ params, searchParams }: { params: Pr
   }
 
   const attempt = await getAttempt(user.id, id);
+  if (attempt.submittedAt) redirect(`/attempts/${id}`); // expired between getResult and getAttempt
   const total = attempt.questions.length;
 
   const pos = Math.min(Math.max(Number(qParam) || 1, 1), total); // 1-based
@@ -78,6 +79,7 @@ export default async function AttemptPage({ params, searchParams }: { params: Pr
     <main className="mx-auto max-w-2xl p-4">
       <header className="flex items-center justify-between">
         <h1 className="text-xl font-semibold">{attempt.examName}</h1>
+        {attempt.deadline && <Countdown attemptId={attempt.id} deadline={attempt.deadline.getTime()} />}
         <span className="text-sm">Câu {pos}/{total}</span>
       </header>
       <article className="mt-6">

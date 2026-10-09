@@ -46,6 +46,7 @@ export const attempts = mysqlTable("attempts", {
   id: int("id").autoincrement().primaryKey(),
   userId: int("user_id").notNull().references(() => users.id),
   examId: int("exam_id").notNull().references(() => exams.id),
+  timed: boolean("timed").notNull().default(false), // Timed Attempt: deadline = startedAt + TIME_LIMIT_MS (lib/attempts.ts)
   startedAt: timestamp("started_at").notNull().default(sql`CURRENT_TIMESTAMP`),
   submittedAt: datetime("submitted_at"), // null while in progress; not timestamp: MySQL 5.7 makes a nullable timestamp NOT NULL
   score: int("score"), // correct Questions, set on submit

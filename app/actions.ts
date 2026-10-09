@@ -6,7 +6,7 @@
 import { revalidatePath } from "next/cache";
 import { cookies } from "next/headers";
 import { notFound, redirect } from "next/navigation";
-import { abandonAttempt, AttemptInProgress, AttemptNotFound, AttemptSubmitted, saveAnswer, startAttempt, submitAttempt, toggleMark } from "@/lib/attempts";
+import { abandonAttempt, AttemptExpired, AttemptInProgress, AttemptNotFound, AttemptSubmitted, saveAnswer, startAttempt, submitAttempt, toggleMark } from "@/lib/attempts";
 import { createSessionToken, InvalidCredentials, login, SESSION_COOKIE, SESSION_DAYS, UserLocked, userFromSession } from "@/lib/auth";
 
 async function currentUserId() {
@@ -37,11 +37,11 @@ export async function logoutAction() {
   redirect("/login");
 }
 
-export async function startAttemptAction(examId: number) {
+export async function startAttemptAction(examId: number, form: FormData) {
   if (!Number.isInteger(Number(examId))) notFound();
   let id: number;
   try {
-    id = await startAttempt(await currentUserId(), Number(examId));
+    id = await startAttempt(await currentUserId(), Number(examId), form.get("timed") === "1");
   } catch (err) {
     if (!(err instanceof AttemptInProgress)) throw err;
     id = err.attemptId; // double click or stale page: carry on with the open Attempt
@@ -53,19 +53,27 @@ export async function abandonAttemptAction(attemptId: number) {
   try {
     await abandonAttempt(await currentUserId(), Number(attemptId));
   } catch (err) {
-    if (!(err instanceof AttemptNotFound)) throw err; // already gone (double click)
+    if (!(err instanceof AttemptNotFound || err instanceof AttemptExpired)) throw err; // already gone (double click) / now in history
   }
   revalidatePath("/");
 }
 
 export async function saveAnswerAction(attemptId: number, questionId: number, letters: string[]) {
   if (!Array.isArray(letters) || !letters.every((l) => typeof l === "string")) throw new Error("letters must be a string array");
-  await saveAnswer(await currentUserId(), Number(attemptId), Number(questionId), letters);
+  try {
+    await saveAnswer(await currentUserId(), Number(attemptId), Number(questionId), letters);
+  } catch (err) {
+    if (err instanceof AttemptExpired) redirect(`/attempts/${Number(attemptId)}`); // the page closes it and shows the Score
+    throw err;
+  }
   revalidatePath(`/attempts/${Number(attemptId)}`); // refreshes the question grid
 }
 
 export async function toggleMarkAction(attemptId: number, questionId: number) {
-  const marked = await toggleMark(await currentUserId(), Number(attemptId), Number(questionId));
+  const marked = await toggleMark(await currentUserId(), Number(attemptId), Number(questionId)).catch((err) => {
+    if (err instanceof AttemptExpired) redirect(`/attempts/${Number(attemptId)}`);
+    throw err;
+  });
   revalidatePath(`/attempts/${Number(attemptId)}`);
   return marked;
 }

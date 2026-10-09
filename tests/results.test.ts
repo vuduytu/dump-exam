@@ -84,9 +84,9 @@ test("getResult rejects an in-progress Attempt and another User's Attempt", asyn
 
 test("listAttempts returns only the User's submitted Attempts, newest first, with duration and total", async () => {
   const t0 = new Date("2026-03-01T10:00:00Z");
-  const a = await startAttempt(bob, 2, t0);
+  const a = await startAttempt(bob, 2, false, t0);
   await submitAttempt(bob, a);
-  const b = await startAttempt(bob, 2, new Date(Date.now() + 3_600_000)); // started later
+  const b = await startAttempt(bob, 2, false, new Date(Date.now() + 3_600_000)); // started later
   await submitAttempt(bob, b);
   await startAttempt(bob, 3); // in progress: not listed
   const list = await listAttempts(bob);

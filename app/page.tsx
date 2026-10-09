@@ -50,8 +50,9 @@ export default async function Home() {
                 <AbandonForm action={abandonAttemptAction.bind(null, open.get(e.id)!)} />
               </>
             ) : (
-              <form action={startAttemptAction.bind(null, e.id)}>
-                <button className="rounded border px-3 py-1 text-sm">Làm bài</button>
+              <form action={startAttemptAction.bind(null, e.id)} className="flex gap-2">
+                <button name="timed" value="1" className="rounded border px-3 py-1 text-sm">Bấm giờ 230 phút</button>
+                <button name="timed" value="0" className="rounded border px-3 py-1 text-sm">Không bấm giờ</button>
               </form>
             )}
           </li>

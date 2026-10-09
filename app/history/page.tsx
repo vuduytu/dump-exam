@@ -21,6 +21,7 @@ export default async function History() {
             <Link href={`/attempts/${a.id}`} className="flex flex-wrap items-center gap-x-4 gap-y-1 p-3">
               <span className="font-medium">{a.examName}</span>
               <span className="text-sm">{a.submittedAt.toLocaleString("vi-VN", { timeZone: "Asia/Ho_Chi_Minh" })}</span>
+              <span className="text-sm">{a.timed ? "Bấm giờ" : "Không bấm giờ"}</span>
               <span className="text-sm">{Math.round(a.durationSec / 60)} phút</span>
               <span className="ml-auto">
                 {a.score}/{a.total} ({Math.round((a.score / a.total) * 100)}%)

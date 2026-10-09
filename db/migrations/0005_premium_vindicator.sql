@@ -1,0 +1,1 @@
+ALTER TABLE `attempts` ADD `timed` boolean DEFAULT false NOT NULL;

@@ -26,6 +26,12 @@ export class InvalidAnswer extends Error {
   }
 }
 
+export class AttemptExpired extends Error {
+  constructor() {
+    super("Đã hết giờ làm bài");
+  }
+}
+
 export class AttemptInProgress extends Error {
   constructor(public attemptId: number) {
     super("Exam này đang có Attempt làm dở");
@@ -34,8 +40,16 @@ export class AttemptInProgress extends Error {
 
 type Tx = Parameters<Parameters<typeof db.transaction>[0]>[0];
 
-/** Locks the User's in-progress Attempt row until the transaction ends, so saves and submit never interleave. */
-async function lockOpenAttempt(tx: Tx, userId: number, attemptId: number) {
+export const TIME_LIMIT_MS = 230 * 60_000;
+
+/** When a Timed Attempt ends, computed here only; null for an untimed Attempt, which never expires. */
+export const deadlineOf = (a: { timed: boolean; startedAt: Date }) => (a.timed ? new Date(a.startedAt.getTime() + TIME_LIMIT_MS) : null);
+
+/**
+ * Locks the User's in-progress Attempt row until the transaction ends, so saves and submit never interleave.
+ * With `now`, also refuses a Timed Attempt past its deadline (AttemptExpired); finalizeExpired closes it later.
+ */
+async function lockOpenAttempt(tx: Tx, userId: number, attemptId: number, now?: Date) {
   const [attempt] = await tx
     .select()
     .from(attempts)
@@ -43,25 +57,51 @@ async function lockOpenAttempt(tx: Tx, userId: number, attemptId: number) {
     .for("update");
   if (!attempt) throw new AttemptNotFound();
   if (attempt.submittedAt) throw new AttemptSubmitted();
+  const deadline = deadlineOf(attempt);
+  if (now && deadline && now >= deadline) throw new AttemptExpired();
   return attempt;
+}
+
+/**
+ * Submits the User's Timed Attempts that are past their deadline, at the deadline. There is no background job:
+ * every read that shows Attempt state calls this first. Saves after the deadline are refused, so the Score holds
+ * only answers saved before it. Safe to race: submitAttempt locks the row, the loser gets AttemptSubmitted.
+ */
+export async function finalizeExpired(userId: number, now = new Date()) {
+  const open = await db
+    .select({ id: attempts.id, timed: attempts.timed, startedAt: attempts.startedAt })
+    .from(attempts)
+    .where(and(eq(attempts.userId, userId), eq(attempts.timed, true), isNull(attempts.submittedAt)));
+  for (const a of open) {
+    if (now < deadlineOf(a)!) continue;
+    await submitAttempt(userId, a.id, now).catch((err) => {
+      if (!(err instanceof AttemptSubmitted)) throw err;
+    });
+  }
 }
 
 // startedAt comes from JS, not the column's CURRENT_TIMESTAMP default: on MAMP that default is in the
 // session time zone (+07) while Drizzle reads it as UTC, which would shift durations and deadlines.
-export async function startAttempt(userId: number, examId: number, now = new Date()) {
+export async function startAttempt(userId: number, examId: number, timed = false, now = new Date()) {
+  await finalizeExpired(userId, now); // an expired Timed Attempt must not count as in progress
   return db.transaction(async (tx) => {
     // Lock the User's row first: concurrent starts by the same User queue here, so the check below sees the
     // earlier insert once it commits. (Locking only the matching attempts rows would lock nothing when there are none.)
     await tx.select({ id: users.id }).from(users).where(eq(users.id, userId)).for("update");
-    const open = await findOpenAttempt(userId, examId, tx);
+    const open = await openAttemptId(tx, userId, examId);
     if (open) throw new AttemptInProgress(open);
-    const [{ insertId }] = await tx.insert(attempts).values({ userId, examId, startedAt: now });
+    const [{ insertId }] = await tx.insert(attempts).values({ userId, examId, timed, startedAt: now });
     return insertId;
   });
 }
 
 /** The User's newest unsubmitted Attempt of the Exam, or null. Newest, because older dev data may hold several. */
-export async function findOpenAttempt(userId: number, examId: number, conn: Pick<typeof db, "select"> = db) {
+export async function findOpenAttempt(userId: number, examId: number, now = new Date()) {
+  await finalizeExpired(userId, now);
+  return openAttemptId(db, userId, examId);
+}
+
+async function openAttemptId(conn: Pick<typeof db, "select">, userId: number, examId: number) {
   const [row] = await conn
     .select({ id: attempts.id })
     .from(attempts)
@@ -71,10 +111,13 @@ export async function findOpenAttempt(userId: number, examId: number, conn: Pick
   return row?.id ?? null;
 }
 
-/** Deletes the User's unsubmitted Attempt with its answers (Abandoned Attempt). Answers first: FKs do not cascade. */
-export async function abandonAttempt(userId: number, attemptId: number) {
+/**
+ * Deletes the User's unsubmitted Attempt with its answers (Abandoned Attempt). Answers first: FKs do not cascade.
+ * An expired Timed Attempt is refused: it belongs in history, not in the bin.
+ */
+export async function abandonAttempt(userId: number, attemptId: number, now = new Date()) {
   await db.transaction(async (tx) => {
-    await lockOpenAttempt(tx, userId, attemptId);
+    await lockOpenAttempt(tx, userId, attemptId, now);
     await tx.delete(attemptAnswers).where(eq(attemptAnswers.attemptId, attemptId));
     await tx.delete(attempts).where(eq(attempts.id, attemptId));
   });
@@ -83,7 +126,7 @@ export async function abandonAttempt(userId: number, attemptId: number) {
 /** The User's Attempt with every Question of its Exam in order, Correct Answer included: callers decide what to expose. */
 async function loadAttempt(userId: number, attemptId: number) {
   const [attempt] = await db
-    .select({ id: attempts.id, examId: attempts.examId, examName: exams.name, startedAt: attempts.startedAt, submittedAt: attempts.submittedAt, score: attempts.score })
+    .select({ id: attempts.id, examId: attempts.examId, examName: exams.name, timed: attempts.timed, startedAt: attempts.startedAt, submittedAt: attempts.submittedAt, score: attempts.score })
     .from(attempts)
     .innerJoin(exams, eq(exams.id, attempts.examId))
     .where(and(eq(attempts.id, attemptId), eq(attempts.userId, userId)));
@@ -107,17 +150,21 @@ async function loadAttempt(userId: number, attemptId: number) {
   return { attempt, rows };
 }
 
-/** The User's Attempt with its Questions in Exam order. Never includes the Correct Answer, only how many letters it has. */
-export async function getAttempt(userId: number, attemptId: number) {
+/**
+ * The User's Attempt with its Questions in Exam order. Never includes the Correct Answer, only how many letters it has.
+ * A Timed Attempt past its deadline comes back submitted.
+ */
+export async function getAttempt(userId: number, attemptId: number, now = new Date()) {
+  await finalizeExpired(userId, now);
   const { attempt, rows } = await loadAttempt(userId, attemptId);
   const qs = rows.map((r) => ({ id: r.id, text: r.text, choices: r.choices, need: r.correct.length, selected: r.selected ? r.selected.split("") : [], marked: !!r.marked }));
-  return { ...attempt, questions: qs };
+  return { ...attempt, deadline: deadlineOf(attempt), questions: qs };
 }
 
 /** Replaces the selected Choice letters of one Question; [] clears it. At most as many letters as the Correct Answer has. */
-export async function saveAnswer(userId: number, attemptId: number, questionId: number, letters: string[]) {
+export async function saveAnswer(userId: number, attemptId: number, questionId: number, letters: string[], now = new Date()) {
   await db.transaction(async (tx) => {
-    const attempt = await lockOpenAttempt(tx, userId, attemptId);
+    const attempt = await lockOpenAttempt(tx, userId, attemptId, now);
     const [q] = await tx
       .select({ choices: questions.choices, correct: questions.correctAnswer })
       .from(examQuestions)
@@ -132,9 +179,9 @@ export async function saveAnswer(userId: number, attemptId: number, questionId: 
 }
 
 /** Flips the review mark of one Question of an open Attempt and returns the new state. Never touches the answer. */
-export async function toggleMark(userId: number, attemptId: number, questionId: number) {
+export async function toggleMark(userId: number, attemptId: number, questionId: number, now = new Date()) {
   return db.transaction(async (tx) => {
-    const attempt = await lockOpenAttempt(tx, userId, attemptId);
+    const attempt = await lockOpenAttempt(tx, userId, attemptId, now);
     const [inExam] = await tx
       .select({ id: examQuestions.questionId })
       .from(examQuestions)
@@ -154,8 +201,11 @@ export async function toggleMark(userId: number, attemptId: number, questionId: 
 
 const sameLetters = (a: string, b: string) => [...a].sort().join("") === [...b].sort().join("");
 
-/** Scores and closes the Attempt: one point per Question whose selected letters equal the Correct Answer exactly. */
-export async function submitAttempt(userId: number, attemptId: number) {
+/**
+ * Scores and closes the Attempt: one point per Question whose selected letters equal the Correct Answer exactly.
+ * Past a Timed Attempt's deadline (late countdown, or finalizeExpired) it closes at the deadline, not at `now`.
+ */
+export async function submitAttempt(userId: number, attemptId: number, now = new Date()) {
   return db.transaction(async (tx) => {
     const attempt = await lockOpenAttempt(tx, userId, attemptId);
     const rows = await tx
@@ -165,7 +215,9 @@ export async function submitAttempt(userId: number, attemptId: number) {
       .leftJoin(attemptAnswers, and(eq(attemptAnswers.attemptId, attemptId), eq(attemptAnswers.questionId, questions.id)))
       .where(eq(examQuestions.examId, attempt.examId));
     const score = rows.filter((r) => r.selected && sameLetters(r.selected, r.correct)).length;
-    await tx.update(attempts).set({ submittedAt: new Date(), score }).where(eq(attempts.id, attemptId));
+    const deadline = deadlineOf(attempt);
+    const submittedAt = deadline && deadline < now ? deadline : now;
+    await tx.update(attempts).set({ submittedAt, score }).where(eq(attempts.id, attemptId));
     return score;
   });
 }
@@ -174,7 +226,8 @@ export async function submitAttempt(userId: number, attemptId: number) {
  * Review of a submitted Attempt. A Vote is per combination of letters, so a Choice's percent is the share of all
  * votes whose combination includes it.
  */
-export async function getResult(userId: number, attemptId: number, filter?: "wrong" | "marked") {
+export async function getResult(userId: number, attemptId: number, filter?: "wrong" | "marked", now = new Date()) {
+  await finalizeExpired(userId, now);
   const { attempt, rows } = await loadAttempt(userId, attemptId);
   if (!attempt.submittedAt) throw new AttemptNotSubmitted();
   const qs = rows.map(({ votes, selected, marked, ...q }) => {
@@ -193,12 +246,14 @@ export async function getResult(userId: number, attemptId: number, filter?: "wro
 }
 
 /** The User's submitted Attempts, newest first. Abandoned/in-progress ones are not history. */
-export async function listAttempts(userId: number) {
+export async function listAttempts(userId: number, now = new Date()) {
+  await finalizeExpired(userId, now);
   const rows = await db
     .select({
       id: attempts.id,
       examId: attempts.examId,
       examName: exams.name,
+      timed: attempts.timed,
       startedAt: attempts.startedAt,
       submittedAt: attempts.submittedAt,
       score: attempts.score,
