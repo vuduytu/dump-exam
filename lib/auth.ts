@@ -21,6 +21,20 @@ export class UserLocked extends Error {
   }
 }
 
+export class WeakPassword extends Error {
+  constructor() {
+    super(`Mật khẩu phải có ít nhất ${MIN_PASSWORD} ký tự`);
+  }
+}
+
+export class WrongOldPassword extends Error {
+  constructor() {
+    super("Mật khẩu cũ không đúng");
+  }
+}
+
+export const MIN_PASSWORD = 8;
+
 /** `<salt hex>:<scrypt key hex>`, fresh 16-byte salt per call. */
 export async function hashPassword(password: string) {
   const salt = randomBytes(16);
@@ -42,6 +56,14 @@ export async function login(email: string, password: string): Promise<User> {
   if (!user || !ok) throw new InvalidCredentials();
   if (user.locked) throw new UserLocked();
   return user;
+}
+
+/** Sets a new password for `userId` after checking the old one. */
+export async function changePassword(userId: number, oldPassword: string, newPassword: string) {
+  const [user] = await db.select().from(users).where(eq(users.id, userId));
+  if (!user || !(await verifyPassword(oldPassword, user.passwordHash))) throw new WrongOldPassword();
+  if (newPassword.length < MIN_PASSWORD) throw new WeakPassword();
+  await db.update(users).set({ passwordHash: await hashPassword(newPassword) }).where(eq(users.id, userId));
 }
 
 function sign(payload: string) {

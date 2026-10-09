@@ -7,7 +7,8 @@ import { revalidatePath } from "next/cache";
 import { cookies } from "next/headers";
 import { notFound, redirect } from "next/navigation";
 import { abandonAttempt, AttemptExpired, AttemptInProgress, AttemptNotFound, AttemptSubmitted, saveAnswer, startAttempt, submitAttempt, toggleMark } from "@/lib/attempts";
-import { createSessionToken, InvalidCredentials, login, SESSION_COOKIE, SESSION_DAYS, UserLocked, userFromSession } from "@/lib/auth";
+import { changePassword, createSessionToken, InvalidCredentials, login, WeakPassword, WrongOldPassword, SESSION_COOKIE, SESSION_DAYS, UserLocked, userFromSession } from "@/lib/auth";
+import { CannotLockSelf, createUser, EmailTaken, InvalidEmail, NotAdmin, resetPassword, setLocked, UserNotFound } from "@/lib/users";
 
 async function currentUserId() {
   const user = await userFromSession((await cookies()).get(SESSION_COOKIE)?.value);
@@ -88,4 +89,46 @@ export async function submitAttemptAction(attemptId: number) {
     if (!(err instanceof AttemptSubmitted)) throw err; // double click: already submitted, just show the Score
   }
   redirect(`/attempts/${Number(attemptId)}`);
+}
+
+export type FormState = { error?: string; ok?: string } | null;
+
+/** Runs an Admin/account change: known errors become a message for the form, a non-Admin gets 404. */
+async function formResult(ok: string, run: () => Promise<unknown>): Promise<FormState> {
+  try {
+    await run();
+  } catch (err) {
+    if (err instanceof NotAdmin) notFound();
+    if (err instanceof InvalidEmail || err instanceof EmailTaken || err instanceof WeakPassword || err instanceof WrongOldPassword || err instanceof UserNotFound) return { error: err.message };
+    throw err;
+  }
+  revalidatePath("/admin");
+  return { ok };
+}
+
+// Admin actions: the Admin check lives in lib/users.ts, not here.
+export async function createUserAction(_prev: FormState, form: FormData) {
+  const actingId = await currentUserId();
+  return formResult("Đã tạo User", () => createUser(actingId, String(form.get("email") ?? ""), String(form.get("password") ?? "")));
+}
+
+export async function resetPasswordAction(userId: number, _prev: FormState, form: FormData) {
+  const actingId = await currentUserId();
+  return formResult("Đã đặt lại mật khẩu", () => resetPassword(actingId, Number(userId), String(form.get("password") ?? "")));
+}
+
+export async function setLockedAction(userId: number, locked: boolean) {
+  const actingId = await currentUserId();
+  try {
+    await setLocked(actingId, Number(userId), locked === true);
+  } catch (err) {
+    if (err instanceof NotAdmin) notFound();
+    if (!(err instanceof CannotLockSelf || err instanceof UserNotFound)) throw err; // the UI hides the button for yourself
+  }
+  revalidatePath("/admin");
+}
+
+export async function changePasswordAction(_prev: FormState, form: FormData) {
+  const userId = await currentUserId();
+  return formResult("Đã đổi mật khẩu", () => changePassword(userId, String(form.get("old") ?? ""), String(form.get("new") ?? "")));
 }

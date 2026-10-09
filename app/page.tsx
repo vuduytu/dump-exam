@@ -35,7 +35,11 @@ export default async function Home() {
           <button className="rounded border px-3 py-1 text-sm">Đăng xuất</button>
         </form>
       </header>
-      <Link href="/history" className="mt-4 inline-block underline">Lịch sử</Link>
+      <nav className="mt-4 flex gap-4">
+        <Link href="/history" className="underline">Lịch sử</Link>
+        <Link href="/account" className="underline">Tài khoản</Link>
+        {user?.isAdmin && <Link href="/admin" className="underline">Quản lý User</Link>}
+      </nav>
       <ul className="mt-6 divide-y rounded border">
         {list.map((e) => (
           <li key={e.id} className="flex items-center justify-between gap-3 p-3">
