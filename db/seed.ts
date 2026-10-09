@@ -1,24 +1,14 @@
 import { sql } from "drizzle-orm";
 import { db } from "@/db";
-import { questions, type Choice, type Vote } from "@/db/schema";
+import { questions } from "@/db/schema";
 
 /** One entry of data/questions.json, as written by scripts/parse_html.py. */
-export type ParsedQuestion = {
-  number: number;
-  text: string;
-  choices: Choice[];
-  suggestedAnswer: string;
-  mostVotedAnswer: string;
-  correctAnswer: string;
-  votes: Vote[];
-  usable: boolean;
-};
+export type ParsedQuestion = Omit<typeof questions.$inferInsert, "id"> & { number: number; images?: string[] };
 
 /** Upserts Questions by original number, so re-running never duplicates. */
 export async function seedQuestions(parsed: ParsedQuestion[]) {
-  const rows = parsed.map(({ number, text, choices, suggestedAnswer, mostVotedAnswer, correctAnswer, votes, usable }) => ({
-    id: number, text, choices, suggestedAnswer, mostVotedAnswer, correctAnswer, votes, usable,
-  }));
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars -- `images` is parser metadata, not a column
+  const rows = parsed.map(({ number, images, ...rest }) => ({ id: number, ...rest }));
   for (let i = 0; i < rows.length; i += 200) { // keep each insert under MySQL's max_allowed_packet
     await db.insert(questions).values(rows.slice(i, i + 200)).onDuplicateKeyUpdate({
       set: {

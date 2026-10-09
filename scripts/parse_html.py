@@ -22,7 +22,8 @@ def clean(fragment):
             return f'<img src="/media/{src.group(1).rsplit("/", 1)[-1]}">' if src else ""
         return f"<{m.group(1)}{name}>"
 
-    out = re.sub(r"<(script|style)\b.*?</\1\s*>", "", fragment, flags=re.S | re.I)
+    out = re.sub(r"<!--.*?-->", "", fragment, flags=re.S)
+    out = re.sub(r"<(script|style)\b.*?</\1\s*>", "", out, flags=re.S | re.I)
     out = re.sub(r"<(/?)([a-zA-Z0-9]+)[^>]*>", tag, out)
     out = re.sub(r"\s+", " ", out).strip()
     return re.sub(r"\s*<br>\s*", "<br>", out)
@@ -38,13 +39,13 @@ def parse_card(c):
     ]
     votes_json = re.search(r'<script id="\d+" type="application/json">(.*?)</script>', c, re.S)
     votes = [
-        {"answer": v["voted_answers"], "count": v["vote_count"], "mostVoted": v["is_most_voted"]}
+        {"letters": v["voted_answers"], "count": v["vote_count"], "mostVoted": v["is_most_voted"]}
         for v in (json.loads(votes_json.group(1)) if votes_json else [])
     ]
     suggested = re.search(r'<span class="correct-answer">(.*?)</span>', c, re.S).group(1).strip()
     if not re.fullmatch(r"[A-Z]+", suggested):
         suggested = ""  # image / empty answer (drag-drop etc.)
-    most_voted = next((v["answer"] for v in votes if v["mostVoted"]), "")
+    most_voted = next((v["letters"] for v in votes if v["mostVoted"]), "")
     correct = most_voted or suggested
     letters = {ch["letter"] for ch in choices}
     usable = bool(choices) and bool(correct) and set(correct) <= letters

@@ -22,6 +22,9 @@ _Avoid_: option, đáp án (khi chưa biết đúng hay sai)
 Đáp án dùng để chấm điểm. Bằng Most Voted Answer nếu có, nếu không thì bằng Suggested Answer.
 _Avoid_: key, answer (đứng một mình)
 
+**Vote**:
+Một dòng vote của cộng đồng ExamTopics cho một tổ hợp Choice (ví dụ "AC"), không phải cho từng Choice riêng lẻ. Tỉ lệ vote từng Choice phải tính ra từ các Vote.
+
 **Unusable Question**:
 Question thiếu Choice hoặc thiếu Correct Answer. Vẫn lưu nhưng không bao giờ được đưa vào Exam.
 

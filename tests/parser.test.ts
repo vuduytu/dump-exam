@@ -28,7 +28,7 @@ test("single-answer Question: Choices, Suggested, Most Voted and Correct Answer"
   assert.equal(q(1).suggestedAnswer, "A");
   assert.equal(q(1).mostVotedAnswer, "A");
   assert.equal(q(1).correctAnswer, "A");
-  assert.deepEqual(q(1).votes[0], { answer: "A", count: 100, mostVoted: true });
+  assert.deepEqual(q(1).votes[0], { letters: "A", count: 100, mostVoted: true });
   assert.equal(q(1).usable, true);
 });
 

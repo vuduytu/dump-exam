@@ -32,5 +32,5 @@ test("seeding twice does not duplicate and updates Questions by original number"
   assert.equal(q1.text, "edited");
   assert.equal(q1.correctAnswer, "A");
   assert.deepEqual(q1.choices.map((c) => c.letter), ["A", "B", "C", "D"]);
-  assert.deepEqual(q1.votes[0], { answer: "A", count: 100, mostVoted: true });
+  assert.deepEqual(q1.votes[0], { letters: "A", count: 100, mostVoted: true });
 });

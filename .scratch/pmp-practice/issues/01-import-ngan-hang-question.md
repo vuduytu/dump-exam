@@ -16,6 +16,7 @@
 
 ## Comments
 
+- Sinh lại `data/questions.json` từ file HTML: `python3 -I scripts/parse_html.py <PMP_examtopic.html> data/questions.json`.
 - Xong. Chạy: `npm run db:migrate && npm run db:seed` (đọc `.env.local`), test: `npm test` (đọc `.env.test`, tên DB phải kết thúc `_test`). Mẫu biến môi trường ở `.env.example`.
 - Hạ tầng test cho ticket sau: `tests/db.ts` có `resetDb()` (chạy migration rồi truncate mọi bảng) và `closeDb()`; gọi trong `before`/`after` của mỗi file test. Các file test chạy tuần tự (`--test-concurrency=1`).
 - Test parser bắt được lỗi XSS: text của Choice bị `html.unescape` sau khi lọc, nên `&lt;img onerror&gt;` thành thẻ thật. Đã đổi sang unescape trước khi lọc, và bỏ luôn nội dung `<script>`/`<style>`. `data/questions.json` sinh lại không đổi.
