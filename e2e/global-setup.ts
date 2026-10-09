@@ -1,6 +1,6 @@
 import { readFileSync } from "node:fs";
 import { db } from "@/db";
-import { users } from "@/db/schema";
+import { userCertifications, users } from "@/db/schema";
 import { generateExams, seedQuestions, seedTags } from "@/db/seed";
 import { hashPassword } from "@/lib/auth";
 import { closeDb, resetDb } from "../tests/db";
@@ -15,6 +15,7 @@ export default async function globalSetup() {
   await seedQuestions(JSON.parse(readFileSync("data/questions.json", "utf8")));
   await seedTags(JSON.parse(readFileSync("data/question-tags.json", "utf8")));
   await generateExams();
-  await db.insert(users).values({ email: E2E_EMAIL, passwordHash: await hashPassword(password) });
+  const [{ insertId }] = await db.insert(users).values({ email: E2E_EMAIL, passwordHash: await hashPassword(password) });
+  await db.insert(userCertifications).values({ userId: insertId, certification: "PMP" });
   await closeDb();
 }

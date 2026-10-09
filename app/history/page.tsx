@@ -5,18 +5,24 @@ import { buttonVariants } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { listAttempts } from "@/lib/attempts";
 import { SESSION_COOKIE, userFromSession } from "@/lib/auth";
-import { listUsers } from "@/lib/users";
+import { CERTIFICATION_COOKIE, currentCertification, listUsers, NoAccess } from "@/lib/users";
 
 export const dynamic = "force-dynamic";
 
 export default async function History({ searchParams }: { searchParams: Promise<{ user?: string }> }) {
-  const user = await userFromSession((await cookies()).get(SESSION_COOKIE)?.value);
+  const jar = await cookies();
+  const user = await userFromSession(jar.get(SESSION_COOKIE)?.value);
   if (!user) redirect("/login");
+  const { current } = await currentCertification(user.id, jar.get(CERTIFICATION_COOKIE)?.value);
   // ?user=<id>: an Admin reads another User's History, read-only
   const userParam = (await searchParams).user;
   const other = userParam === undefined ? null : user.isAdmin ? (await listUsers(user.id)).find((u) => u.id === Number(userParam)) : null;
   if (userParam !== undefined && !other) notFound();
-  const list = await listAttempts(other?.id ?? user.id);
+  // an Admin reading a User without access to the current Certification sees an empty History
+  const list = await listAttempts(other?.id ?? user.id, current).catch((err) => {
+    if (err instanceof NoAccess) return [];
+    throw err;
+  });
   return (
     <main className="mx-auto max-w-2xl p-4">
       <h1 className="text-2xl font-semibold">Lịch sử{other && ` · ${other.email}`}</h1>

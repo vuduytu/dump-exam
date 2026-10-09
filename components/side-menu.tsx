@@ -4,13 +4,14 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { BookOpen, FileText, History, LogOut, Menu, Trophy, User, Users } from "lucide-react";
-import { logoutAction } from "@/app/actions";
+import { logoutAction, selectCertificationAction } from "@/app/actions";
+import type { Certification } from "@/db/schema";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
 
 /** Left drawer, closed by default; the ☰ button floats top-left on every signed-in page. */
-export function SideMenu({ email, isAdmin }: { email: string; isAdmin: boolean }) {
+export function SideMenu({ email, isAdmin, certifications, current }: { email: string; isAdmin: boolean; certifications: Certification[]; current: Certification }) {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
   const links = [
@@ -35,6 +36,18 @@ export function SideMenu({ email, isAdmin }: { email: string; isAdmin: boolean }
         <SheetHeader className="p-1">
           <SheetTitle render={<Link href="/" onClick={() => setOpen(false)} />}>PMP Practice</SheetTitle>
         </SheetHeader>
+        {/* the picker only matters with access to 2+ Certifications */}
+        {certifications.length > 1 && (
+          <div role="group" aria-label="Certification" className="flex gap-1 rounded-lg bg-muted p-1">
+            {certifications.map((c) => (
+              <form key={c} action={selectCertificationAction.bind(null, c)} className="flex-1">
+                <Button type="submit" size="sm" variant={c === current ? "default" : "ghost"} aria-pressed={c === current} className="w-full">
+                  {c}
+                </Button>
+              </form>
+            ))}
+          </div>
+        )}
         <nav className="flex flex-col gap-1">
           {links.map(({ href, label, icon: Icon }) => (
             <Link

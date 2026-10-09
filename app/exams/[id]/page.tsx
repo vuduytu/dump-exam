@@ -1,4 +1,4 @@
-import { count, eq } from "drizzle-orm";
+import { and, count, eq, inArray } from "drizzle-orm";
 import { cookies } from "next/headers";
 import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
@@ -8,6 +8,7 @@ import { abandonAttemptAction, startAttemptAction } from "@/app/actions";
 import { listAttempts, openAttemptSummary } from "@/lib/attempts";
 import { TIME_LIMIT_MIN } from "@/lib/utils";
 import { SESSION_COOKIE, userFromSession } from "@/lib/auth";
+import { certificationsOf } from "@/lib/users";
 import { Card } from "@/components/ui/card";
 import { RefreshOnReturn } from "@/components/refresh-on-return";
 import { buttonVariants } from "@/components/ui/button";
@@ -23,13 +24,13 @@ export default async function ExamPage({ params }: { params: Promise<{ id: strin
   const user = await userFromSession((await cookies()).get(SESSION_COOKIE)?.value);
   if (!user) redirect("/login");
   const [exam] = await db
-    .select({ id: exams.id, name: exams.name, total: count(examQuestions.questionId) })
+    .select({ id: exams.id, name: exams.name, certification: exams.certification, total: count(examQuestions.questionId) })
     .from(exams)
     .leftJoin(examQuestions, eq(examQuestions.examId, exams.id))
-    .where(eq(exams.id, examId))
+    .where(and(eq(exams.id, examId), inArray(exams.certification, await certificationsOf(user.id)))) // no Certification Access: 404
     .groupBy(exams.id);
   if (!exam) notFound();
-  const history = (await listAttempts(user.id)).filter((a) => a.examId === examId); // own Attempts only
+  const history = (await listAttempts(user.id, exam.certification)).filter((a) => a.examId === examId); // own Attempts only
   const best = Math.max(0, ...history.map((a) => a.score));
   const open = await openAttemptSummary(user.id, examId);
   const minLeft = open?.deadline ? Math.max(0, Math.ceil((open.deadline.getTime() - Date.now()) / 60_000)) : null;

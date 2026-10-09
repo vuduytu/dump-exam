@@ -4,18 +4,29 @@ import { notFound, redirect } from "next/navigation";
 import { Card } from "@/components/ui/card";
 import { SESSION_COOKIE, userFromSession } from "@/lib/auth";
 import { getScoreboard } from "@/lib/scoreboard";
+import { CERTIFICATIONS } from "@/db/schema";
+import { buttonVariants } from "@/components/ui/button";
 
 export const dynamic = "force-dynamic";
 
-export default async function Scoreboard() {
+export default async function Scoreboard({ searchParams }: { searchParams: Promise<{ c?: string }> }) {
   const me = await userFromSession((await cookies()).get(SESSION_COOKIE)?.value);
   if (!me) redirect("/login");
   if (!me.isAdmin) notFound();
-  const { users, exams, cells } = await getScoreboard(me.id);
+  const { c: tab } = await searchParams;
+  const certification = CERTIFICATIONS.find((x) => x === tab) ?? CERTIFICATIONS[0]; // ?c=PgMP: one tab per Certification
+  const { users, exams, cells } = await getScoreboard(me.id, certification);
   const cellOf = new Map(cells.map((c) => [`${c.userId}:${c.examId}`, c]));
   return (
     <main className="mx-auto max-w-5xl p-4">
       <h1 className="text-2xl font-semibold">Bảng điểm</h1>
+      <nav aria-label="Certification" className="mt-4 flex gap-2">
+        {CERTIFICATIONS.map((x) => (
+          <Link key={x} href={`?c=${x}`} aria-current={x === certification ? "page" : undefined} className={buttonVariants({ size: "sm", variant: x === certification ? "default" : "outline" })}>
+            {x}
+          </Link>
+        ))}
+      </nav>
       <Card className="mt-6 overflow-x-auto py-0">
         <table className="w-full text-sm">
           <thead>

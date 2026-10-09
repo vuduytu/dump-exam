@@ -1,10 +1,12 @@
 import { count, eq } from "drizzle-orm";
 import { cookies } from "next/headers";
 import Link from "next/link";
+import { redirect } from "next/navigation";
 import { db } from "@/db";
 import { examQuestions, exams } from "@/db/schema";
 import { findOpenAttempt, listAttempts } from "@/lib/attempts";
 import { SESSION_COOKIE, userFromSession } from "@/lib/auth";
+import { CERTIFICATION_COOKIE, currentCertification } from "@/lib/users";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { RefreshOnReturn } from "@/components/refresh-on-return";
@@ -13,17 +15,21 @@ export const dynamic = "force-dynamic"; // read Exams per request, not at build
 
 export default async function Home() {
   // middleware already rejected anonymous requests; this read is for display
-  const user = await userFromSession((await cookies()).get(SESSION_COOKIE)?.value);
+  const jar = await cookies();
+  const user = await userFromSession(jar.get(SESSION_COOKIE)?.value);
+  if (!user) redirect("/login");
+  const { current } = await currentCertification(user.id, jar.get(CERTIFICATION_COOKIE)?.value);
   const list = await db
     .select({ id: exams.id, name: exams.name, total: count(examQuestions.questionId) })
     .from(exams)
     .leftJoin(examQuestions, eq(examQuestions.examId, exams.id))
+    .where(eq(exams.certification, current))
     .groupBy(exams.id)
     .orderBy(exams.id);
   const best = new Map<number, number>();
-  for (const a of user ? await listAttempts(user.id) : []) if (a.examId) best.set(a.examId, Math.max(best.get(a.examId) ?? 0, a.score));
+  for (const a of await listAttempts(user.id, current)) if (a.examId) best.set(a.examId, Math.max(best.get(a.examId) ?? 0, a.score));
   const open = new Set<number>();
-  for (const e of list) if (user && (await findOpenAttempt(user.id, e.id))) open.add(e.id);
+  for (const e of list) if (await findOpenAttempt(user.id, e.id)) open.add(e.id);
   return (
     <main className="mx-auto max-w-4xl p-4">
       <RefreshOnReturn renderId={crypto.randomUUID()} />

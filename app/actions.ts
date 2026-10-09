@@ -9,7 +9,8 @@ import { notFound, redirect } from "next/navigation";
 import { abandonAttempt, AttemptExpired, AttemptInProgress, AttemptNotFound, AttemptSubmitted, saveAnswer, startAttempt, setMark, submitAttempt } from "@/lib/attempts";
 import { DrillEmpty, InvalidDrill, startDrill } from "@/lib/drills";
 import { changePassword, createSessionToken, InvalidCredentials, login, WeakPassword, WrongOldPassword, SESSION_COOKIE, SESSION_DAYS, UserLocked, userFromSession } from "@/lib/auth";
-import { CannotLockSelf, createUser, EmailTaken, InvalidEmail, NotAdmin, resetPassword, setLocked, UserNotFound } from "@/lib/users";
+import { CannotLockSelf, CERTIFICATION_COOKIE, createUser, EmailTaken, InvalidEmail, NoAccess, NoCertification, NotAdmin, resetPassword, setCertifications, setLocked, UserNotFound } from "@/lib/users";
+import type { Certification } from "@/db/schema";
 
 async function currentUserId() {
   const user = await userFromSession((await cookies()).get(SESSION_COOKIE)?.value);
@@ -39,24 +40,32 @@ export async function logoutAction() {
   redirect("/login");
 }
 
+/** Side menu Certification picker: only remembers the choice; every page re-checks Certification Access when reading it. */
+export async function selectCertificationAction(certification: string) {
+  await currentUserId();
+  (await cookies()).set(CERTIFICATION_COOKIE, String(certification), { httpOnly: true, secure: true, sameSite: "lax", path: "/", maxAge: 365 * 86_400 });
+  revalidatePath("/", "layout");
+}
+
 export async function startAttemptAction(examId: number, form: FormData) {
   if (!Number.isInteger(Number(examId))) notFound();
   let id: number;
   try {
     id = await startAttempt(await currentUserId(), Number(examId), form.get("timed") === "1");
   } catch (err) {
+    if (err instanceof NoAccess) notFound();
     if (!(err instanceof AttemptInProgress)) throw err;
     id = err.attemptId; // double click or stale page: carry on with the open Attempt
   }
   redirect(`/attempts/${id}`);
 }
 
-export async function startDrillAction(source: string, size: number | "all") {
+export async function startDrillAction(certification: Certification, source: string, size: number | "all") {
   let id: number;
   try {
-    id = await startDrill(await currentUserId(), String(source), size === "all" ? size : Number(size));
+    id = await startDrill(await currentUserId(), certification, String(source), size === "all" ? size : Number(size));
   } catch (err) {
-    if (err instanceof InvalidDrill || err instanceof DrillEmpty) notFound(); // the page offers only real, non-empty sources
+    if (err instanceof InvalidDrill || err instanceof DrillEmpty || err instanceof NoAccess) notFound(); // the page offers only real, non-empty sources of a Certification the User has access to
     if (!(err instanceof AttemptInProgress)) throw err;
     id = err.attemptId; // an open Drill of this source: carry on with it
   }
@@ -79,6 +88,7 @@ export async function saveAnswerAction(attemptId: number, questionId: number, le
   try {
     await saveAnswer(await currentUserId(), Number(attemptId), Number(questionId), letters);
   } catch (err) {
+    if (err instanceof AttemptNotFound) notFound(); // another User's, or Certification Access revoked
     if (err instanceof AttemptExpired || err instanceof AttemptSubmitted) redirect(`/attempts/${Number(attemptId)}`); // the page shows the Score
     throw err;
   }
@@ -88,6 +98,7 @@ export async function setMarkAction(attemptId: number, questionId: number, marke
   try {
     await setMark(await currentUserId(), Number(attemptId), Number(questionId), marked === true);
   } catch (err) {
+    if (err instanceof AttemptNotFound) notFound();
     if (err instanceof AttemptExpired || err instanceof AttemptSubmitted) redirect(`/attempts/${Number(attemptId)}`);
     throw err;
   }
@@ -98,6 +109,7 @@ export async function submitAttemptAction(attemptId: number) {
   try {
     await submitAttempt(await currentUserId(), Number(attemptId));
   } catch (err) {
+    if (err instanceof AttemptNotFound) notFound();
     if (!(err instanceof AttemptSubmitted)) throw err; // double click: already submitted, just show the Score
   }
   redirect(`/attempts/${Number(attemptId)}`);
@@ -111,7 +123,8 @@ async function formResult(ok: string, run: () => Promise<unknown>): Promise<Form
     await run();
   } catch (err) {
     if (err instanceof NotAdmin) notFound();
-    if (err instanceof InvalidEmail || err instanceof EmailTaken || err instanceof WeakPassword || err instanceof WrongOldPassword || err instanceof UserNotFound) return { error: err.message };
+    if (err instanceof InvalidEmail || err instanceof EmailTaken || err instanceof WeakPassword || err instanceof WrongOldPassword || err instanceof UserNotFound || err instanceof NoCertification)
+      return { error: err.message };
     throw err;
   }
   revalidatePath("/admin");
@@ -121,7 +134,12 @@ async function formResult(ok: string, run: () => Promise<unknown>): Promise<Form
 // Admin actions: the Admin check lives in lib/users.ts, not here.
 export async function createUserAction(_prev: FormState, form: FormData) {
   const actingId = await currentUserId();
-  return formResult("Đã tạo User", () => createUser(actingId, String(form.get("email") ?? ""), String(form.get("password") ?? "")));
+  return formResult("Đã tạo User", () => createUser(actingId, String(form.get("email") ?? ""), String(form.get("password") ?? ""), form.getAll("certification").map(String)));
+}
+
+export async function setCertificationsAction(userId: number, _prev: FormState, form: FormData) {
+  const actingId = await currentUserId();
+  return formResult("Đã lưu Certification", () => setCertifications(actingId, Number(userId), form.getAll("certification").map(String)));
 }
 
 export async function resetPasswordAction(userId: number, _prev: FormState, form: FormData) {

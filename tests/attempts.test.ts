@@ -7,7 +7,7 @@ import { attempts, examQuestions, questions, users } from "@/db/schema";
 import { generateExams, seedQuestions } from "@/db/seed";
 import { abandonAttempt, deadlineOf, AttemptExpired, AttemptInProgress, AttemptNotFound, AttemptSubmitted, findOpenAttempt, getAttempt, openAttemptSummary, listAttempts, InvalidAnswer, saveAnswer, startAttempt, submitAttempt, setMark } from "@/lib/attempts";
 import { TIME_LIMIT_MIN } from "@/lib/utils";
-import { closeDb, resetDb } from "./db";
+import { closeDb, grantPmp, resetDb } from "./db";
 
 const EXAM = 1;
 let alice: number;
@@ -21,6 +21,7 @@ before(async () => {
   await generateExams();
   [{ insertId: alice }] = await db.insert(users).values({ email: "alice@x.test", passwordHash: "-" });
   [{ insertId: bob }] = await db.insert(users).values({ email: "bob@x.test", passwordHash: "-" });
+  await grantPmp(alice, bob);
   correctAnswers = await db
     .select({ id: questions.id, correct: questions.correctAnswer })
     .from(examQuestions)
@@ -184,7 +185,7 @@ test("abandonAttempt removes the Attempt and its answers, it is not in history, 
   await abandonAttempt(bob, id);
   assert.equal(await findOpenAttempt(bob, EXAM), null);
   await assert.rejects(getAttempt(bob, id), AttemptNotFound);
-  assert.equal((await listAttempts(bob)).some((a) => a.id === id), false);
+  assert.equal((await listAttempts(bob, "PMP")).some((a) => a.id === id), false);
   assert.ok(await startAttempt(bob, EXAM));
 });
 
@@ -194,7 +195,7 @@ test("abandonAttempt refuses another User's Attempt and a submitted one", async 
   await getAttempt(alice, id); // still there
   await submitAttempt(alice, id);
   await assert.rejects(abandonAttempt(alice, id), AttemptSubmitted);
-  assert.equal((await listAttempts(alice)).some((a) => a.id === id), true);
+  assert.equal((await listAttempts(alice, "PMP")).some((a) => a.id === id), true);
   assert.ok(await startAttempt(alice, 5)); // submitted does not block a new Attempt
 });
 
@@ -269,7 +270,7 @@ test("a Timed Attempt left past its deadline is in history, no longer open, and 
   const id = await fresh(bob, 4, t0, true);
   await assert.rejects(abandonAttempt(bob, id), AttemptExpired); // it belongs in history
   assert.equal(await findOpenAttempt(bob, 4), null);
-  const listed = (await listAttempts(bob)).find((x) => x.id === id);
+  const listed = (await listAttempts(bob, "PMP")).find((x) => x.id === id);
   assert.equal(listed?.timed, true);
   assert.equal(listed?.durationSec, TIME_LIMIT_MIN * 60);
   assert.ok(await startAttempt(bob, 4)); // the expired one was closed before the in-progress check

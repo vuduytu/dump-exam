@@ -1,7 +1,8 @@
-import { and, asc, count, desc, eq, isNotNull, isNull, sql } from "drizzle-orm";
+import { and, asc, count, desc, eq, inArray, isNotNull, isNull, sql } from "drizzle-orm";
 import { db } from "@/db";
-import { attemptAnswers, attempts, drillQuestions, examQuestions, exams, questions, users } from "@/db/schema";
+import { attemptAnswers, attempts, drillQuestions, examQuestions, exams, questions, users, type Certification } from "@/db/schema";
 import { domainScores, drillTitle } from "@/lib/question-tags";
+import { assertAccess, certificationsOf, NoAccess } from "@/lib/users";
 import { TIME_LIMIT_MIN } from "@/lib/utils";
 
 export class AttemptNotFound extends Error {
@@ -56,6 +57,9 @@ export const TIME_LIMIT_MS = TIME_LIMIT_MIN * 60_000;
 /** When a Timed Attempt ends, computed here only; null for an untimed Attempt, which never expires. */
 export const deadlineOf = (a: { timed: boolean; startedAt: Date }) => (a.timed ? new Date(a.startedAt.getTime() + TIME_LIMIT_MS) : null);
 
+/** Only Attempts of a Certification the User has access to: the rest are hidden as if they did not exist, never deleted. */
+const accessible = async (userId: number, conn: Pick<typeof db, "select"> = db) => inArray(attempts.certification, await certificationsOf(userId, conn));
+
 /**
  * Locks the User's in-progress Attempt row until the transaction ends, so saves and submit never interleave.
  * With `now`, also refuses a Timed Attempt past its deadline (AttemptExpired); finalizeExpired closes it later.
@@ -64,7 +68,7 @@ async function lockOpenAttempt(tx: Tx, userId: number, attemptId: number, now?: 
   const [attempt] = await tx
     .select()
     .from(attempts)
-    .where(and(eq(attempts.id, attemptId), eq(attempts.userId, userId)))
+    .where(and(eq(attempts.id, attemptId), eq(attempts.userId, userId), await accessible(userId, tx)))
     .for("update");
   if (!attempt) throw new AttemptNotFound();
   if (attempt.submittedAt) throw new AttemptSubmitted();
@@ -94,6 +98,11 @@ export async function finalizeExpired(userId: number, now = new Date()) {
 // startedAt comes from JS, not the column's CURRENT_TIMESTAMP default: on MAMP that default is in the
 // session time zone (+07) while Drizzle reads it as UTC, which would shift durations and deadlines.
 export async function startAttempt(userId: number, examId: number, timed = false, now = new Date()) {
+  const [exam] = await db
+    .select({ certification: exams.certification })
+    .from(exams)
+    .where(and(eq(exams.id, examId), inArray(exams.certification, await certificationsOf(userId))));
+  if (!exam) throw new NoAccess();
   await finalizeExpired(userId, now); // an expired Timed Attempt must not count as in progress
   return db.transaction(async (tx) => {
     // Lock the User's row first: concurrent starts by the same User queue here, so the check below sees the
@@ -101,7 +110,7 @@ export async function startAttempt(userId: number, examId: number, timed = false
     await tx.select({ id: users.id }).from(users).where(eq(users.id, userId)).for("update");
     const open = await openAttemptId(tx, userId, examId);
     if (open) throw new AttemptInProgress(open);
-    const [{ insertId }] = await tx.insert(attempts).values({ userId, examId, timed, startedAt: now });
+    const [{ insertId }] = await tx.insert(attempts).values({ userId, examId, certification: exam.certification, timed, startedAt: now });
     return insertId;
   });
 }
@@ -153,7 +162,7 @@ async function loadAttempt(userId: number, attemptId: number) {
     .select({ id: attempts.id, examId: attempts.examId, examName: exams.name, drillSource: attempts.drillSource, timed: attempts.timed, startedAt: attempts.startedAt, submittedAt: attempts.submittedAt, score: attempts.score })
     .from(attempts)
     .leftJoin(exams, eq(exams.id, attempts.examId))
-    .where(and(eq(attempts.id, attemptId), eq(attempts.userId, userId)));
+    .where(and(eq(attempts.id, attemptId), eq(attempts.userId, userId), await accessible(userId)));
   if (!attempt) throw new AttemptNotFound();
   const items = itemsOf(attempt);
   const rows = await db
@@ -265,8 +274,9 @@ export async function getResult(userId: number, attemptId: number, filter?: "wro
   return { ...attempt, total: rows.length, domains, questions: questionsShown };
 }
 
-/** The User's submitted Attempts of Exams and Drills, newest first. Abandoned/in-progress ones are not history. */
-export async function listAttempts(userId: number, now = new Date()) {
+/** The User's submitted Attempts of Exams and Drills of one Certification, newest first; NoAccess without Certification Access. Abandoned/in-progress ones are not history. */
+export async function listAttempts(userId: number, certification: Certification, now = new Date()) {
+  await assertAccess(userId, certification);
   await finalizeExpired(userId, now);
   const rows = await db
     .select({
@@ -285,7 +295,7 @@ export async function listAttempts(userId: number, now = new Date()) {
     .leftJoin(exams, eq(exams.id, attempts.examId))
     .leftJoin(examQuestions, eq(examQuestions.examId, attempts.examId))
     .leftJoin(drillQuestions, eq(drillQuestions.attemptId, attempts.id)) // an Attempt has rows in only one of the two
-    .where(and(eq(attempts.userId, userId), isNotNull(attempts.submittedAt)))
+    .where(and(eq(attempts.userId, userId), eq(attempts.certification, certification), isNotNull(attempts.submittedAt)))
     .groupBy(attempts.id, exams.name) // TiDB's only_full_group_by does not infer exams.name from the join
     .orderBy(desc(attempts.submittedAt), desc(attempts.id));
   return rows.map(({ examName, examTotal, drillTotal, ...r }) => ({

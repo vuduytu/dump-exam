@@ -13,7 +13,7 @@ before(async () => {
   process.env.ADMIN_PASSWORD = "admin-pass-1";
   await seedAdmin();
   adminId = (await login(ADMIN_EMAIL, "admin-pass-1")).id;
-  aliceId = (await createUser(adminId, "  Alice@Example.com ", "alice-pass-1")).id;
+  aliceId = (await createUser(adminId, "  Alice@Example.com ", "alice-pass-1", ["PMP"])).id;
 });
 after(closeDb);
 
@@ -24,9 +24,9 @@ test("createUser normalizes the email and the new User can log in", async () => 
 });
 
 test("createUser rejects a duplicate email (case-insensitive), a bad email and a short password", async () => {
-  await assert.rejects(createUser(adminId, "ALICE@example.com", "alice-pass-1"), EmailTaken);
-  for (const bad of ["", "nope", "a@b", "a b@c.com"]) await assert.rejects(createUser(adminId, bad, "alice-pass-1"), InvalidEmail);
-  await assert.rejects(createUser(adminId, "bob@example.com", "short"), WeakPassword);
+  await assert.rejects(createUser(adminId, "ALICE@example.com", "alice-pass-1", ["PMP"]), EmailTaken);
+  for (const bad of ["", "nope", "a@b", "a b@c.com"]) await assert.rejects(createUser(adminId, bad, "alice-pass-1", ["PMP"]), InvalidEmail);
+  await assert.rejects(createUser(adminId, "bob@example.com", "short", ["PMP"]), WeakPassword);
 });
 
 test("listUsers returns email, locked, createdAt and never the password hash", async () => {
@@ -38,7 +38,7 @@ test("listUsers returns email, locked, createdAt and never the password hash", a
 
 test("a non-Admin is refused every Admin function", async () => {
   await assert.rejects(listUsers(aliceId), NotAdmin);
-  await assert.rejects(createUser(aliceId, "bob@example.com", "bob-pass-12"), NotAdmin);
+  await assert.rejects(createUser(aliceId, "bob@example.com", "bob-pass-12", ["PMP"]), NotAdmin);
   await assert.rejects(resetPassword(aliceId, aliceId, "alice-pass-2"), NotAdmin);
   await assert.rejects(setLocked(aliceId, adminId, true), NotAdmin);
   await assert.rejects(listUsers(99999), NotAdmin);

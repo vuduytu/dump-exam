@@ -1,6 +1,7 @@
 import { sql } from "drizzle-orm";
 import { migrate } from "drizzle-orm/mysql2/migrator";
 import { db } from "@/db";
+import { userCertifications } from "@/db/schema";
 
 /** Call in `before()` of each DB test file: applies migrations, then empties every table. */
 export async function resetDb() {
@@ -21,4 +22,9 @@ export async function resetDb() {
 /** Call in `after()` so the test process can exit. */
 export async function closeDb() {
   await db.$client.end();
+}
+
+/** Certification Access to PMP for Users inserted straight into the table (createUser grants it itself). */
+export async function grantPmp(...userIds: number[]) {
+  await db.insert(userCertifications).values(userIds.map((userId) => ({ userId, certification: "PMP" as const })));
 }

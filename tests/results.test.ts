@@ -6,7 +6,8 @@ import { db } from "@/db";
 import { examQuestions, questions, users } from "@/db/schema";
 import { generateExams, seedQuestions } from "@/db/seed";
 import { AttemptNotFound, AttemptNotSubmitted, getResult, listAttempts, saveAnswer, startAttempt, submitAttempt, setMark } from "@/lib/attempts";
-import { closeDb, resetDb } from "./db";
+import { NoAccess } from "@/lib/users";
+import { closeDb, grantPmp, resetDb } from "./db";
 
 let alice: number;
 let bob: number;
@@ -18,6 +19,7 @@ before(async () => {
   await generateExams();
   [{ insertId: alice }] = await db.insert(users).values({ email: "alice@x.test", passwordHash: "-" });
   [{ insertId: bob }] = await db.insert(users).values({ email: "bob@x.test", passwordHash: "-" });
+  await grantPmp(alice, bob);
   ks = await db
     .select({ id: questions.id, correct: questions.correctAnswer })
     .from(examQuestions)
@@ -89,16 +91,16 @@ test("listAttempts returns only the User's submitted Attempts, newest first, wit
   const b = await startAttempt(bob, 2, false, new Date(Date.now() + 3_600_000)); // started later
   await submitAttempt(bob, b);
   await startAttempt(bob, 3); // in progress: not listed
-  const list = await listAttempts(bob);
+  const list = await listAttempts(bob, "PMP");
   assert.deepEqual(list.map((x) => x.id), [b, a]);
   assert.equal(list[1].title, "Đề 2");
   assert.equal(list[1].total, 180);
   assert.equal(list[1].score, 0);
   assert.ok(list[1].durationSec > 0);
   assert.ok(list.every((x) => x.id !== alice));
-  const others = await listAttempts(alice);
+  const others = await listAttempts(alice, "PMP");
   assert.ok(others.every((x) => x.id !== a && x.id !== b));
-  assert.equal((await listAttempts(999999)).length, 0);
+  await assert.rejects(listAttempts(999999, "PMP"), NoAccess);
 });
 
 test("getResult gives the score per Domain for an Exam: correct / its Questions in that Exam", async () => {

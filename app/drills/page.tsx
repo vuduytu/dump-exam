@@ -4,6 +4,7 @@ import { redirect } from "next/navigation";
 import { abandonAttemptAction, startDrillAction } from "@/app/actions";
 import { SESSION_COOKIE, userFromSession } from "@/lib/auth";
 import { openDrills, topicStats } from "@/lib/drills";
+import { CERTIFICATION_COOKIE, currentCertification } from "@/lib/users";
 import { Card } from "@/components/ui/card";
 import { buttonVariants } from "@/components/ui/button";
 import { ConfirmDialog } from "@/components/confirm-dialog";
@@ -14,9 +15,11 @@ export const dynamic = "force-dynamic";
 type Stat = { source: string; name: string; total: number; done: number; correct: number };
 
 export default async function Drills() {
-  const user = await userFromSession((await cookies()).get(SESSION_COOKIE)?.value);
+  const jar = await cookies();
+  const user = await userFromSession(jar.get(SESSION_COOKIE)?.value);
   if (!user) redirect("/login");
-  const [domains, open] = await Promise.all([topicStats(user.id), openDrills(user.id)]);
+  const { current } = await currentCertification(user.id, jar.get(CERTIFICATION_COOKIE)?.value);
+  const [domains, open] = await Promise.all([topicStats(user.id, current), openDrills(user.id, current)]);
   const row = (s: Stat, strong = false) => {
     const o = open.get(s.source);
     return (
@@ -42,12 +45,12 @@ export default async function Drills() {
           s.total > 0 && (
             <span className="ml-auto flex flex-wrap gap-2">
               {[10, 20].map((size) => (
-                <form key={size} action={startDrillAction.bind(null, s.source, size)}>
+                <form key={size} action={startDrillAction.bind(null, current, s.source, size)}>
                   <SubmitButton size="sm" variant="outline">Ôn {size}</SubmitButton>
                 </form>
               ))}
               {!strong && (
-                <form action={startDrillAction.bind(null, s.source, "all")}>
+                <form action={startDrillAction.bind(null, current, s.source, "all")}>
                   <SubmitButton size="sm" variant="outline">Ôn hết ({s.total})</SubmitButton>
                 </form>
               )}

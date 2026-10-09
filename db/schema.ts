@@ -5,8 +5,14 @@ export type Choice = { letter: string; text: string };
 // One ExamTopics vote row: the voted combination of Choice letters (e.g. "AC"), not a single Choice.
 export type Vote = { letters: string; count: number; mostVoted: boolean };
 
+export const CERTIFICATIONS = ["PMP", "PgMP"] as const;
+export type Certification = (typeof CERTIFICATIONS)[number];
+// Every Question, Exam and Attempt (so every Drill) belongs to one Certification; data from before PgMP is PMP.
+const certification = () => varchar("certification", { length: 8 }).$type<Certification>().notNull().default("PMP");
+
 export const questions = mysqlTable("questions", {
   id: int("id").primaryKey(), // original ExamTopics number (`Question #N`)
+  certification: certification(),
   text: text("text").notNull(),
   choices: json("choices").$type<Choice[]>().notNull(),
   suggestedAnswer: varchar("suggested_answer", { length: 8 }).notNull(),
@@ -29,9 +35,20 @@ export const users = mysqlTable("users", {
 
 export type User = typeof users.$inferSelect;
 
+/** Certification Access: one row per Certification a User may use. Admins have every Certification without rows. */
+export const userCertifications = mysqlTable(
+  "user_certifications",
+  {
+    userId: int("user_id").notNull().references(() => users.id),
+    certification: varchar("certification", { length: 8 }).$type<Certification>().notNull(),
+  },
+  (t) => [primaryKey({ columns: [t.userId, t.certification] })],
+);
+
 export const exams = mysqlTable("exams", {
   id: int("id").autoincrement().primaryKey(),
   name: varchar("name", { length: 64 }).notNull(),
+  certification: certification(),
 });
 
 export const examQuestions = mysqlTable(
@@ -47,6 +64,7 @@ export const examQuestions = mysqlTable(
 export const attempts = mysqlTable("attempts", {
   id: int("id").autoincrement().primaryKey(),
   userId: int("user_id").notNull().references(() => users.id),
+  certification: certification(), // its Exam's, or its Drill's: copied at start so Drills need no join
   // An Attempt belongs to either an Exam or a Drill: examId is null exactly when drillSource is set.
   // ponytail: kept by startAttempt/startDrill only (MySQL 5.7 ignores CHECK); add a CHECK once 5.7 is gone
   examId: int("exam_id").references(() => exams.id),
