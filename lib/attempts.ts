@@ -1,6 +1,6 @@
-import { and, asc, count, desc, eq, isNotNull, sql } from "drizzle-orm";
+import { and, asc, count, desc, eq, isNotNull, isNull, sql } from "drizzle-orm";
 import { db } from "@/db";
-import { attemptAnswers, attempts, examQuestions, exams, questions } from "@/db/schema";
+import { attemptAnswers, attempts, examQuestions, exams, questions, users } from "@/db/schema";
 
 export class AttemptNotFound extends Error {
   constructor() {
@@ -26,6 +26,12 @@ export class InvalidAnswer extends Error {
   }
 }
 
+export class AttemptInProgress extends Error {
+  constructor(public attemptId: number) {
+    super("Exam này đang có Attempt làm dở");
+  }
+}
+
 type Tx = Parameters<Parameters<typeof db.transaction>[0]>[0];
 
 /** Locks the User's in-progress Attempt row until the transaction ends, so saves and submit never interleave. */
@@ -43,8 +49,35 @@ async function lockOpenAttempt(tx: Tx, userId: number, attemptId: number) {
 // startedAt comes from JS, not the column's CURRENT_TIMESTAMP default: on MAMP that default is in the
 // session time zone (+07) while Drizzle reads it as UTC, which would shift durations and deadlines.
 export async function startAttempt(userId: number, examId: number, now = new Date()) {
-  const [{ insertId }] = await db.insert(attempts).values({ userId, examId, startedAt: now });
-  return insertId;
+  return db.transaction(async (tx) => {
+    // Lock the User's row first: concurrent starts by the same User queue here, so the check below sees the
+    // earlier insert once it commits. (Locking only the matching attempts rows would lock nothing when there are none.)
+    await tx.select({ id: users.id }).from(users).where(eq(users.id, userId)).for("update");
+    const open = await findOpenAttempt(userId, examId, tx);
+    if (open) throw new AttemptInProgress(open);
+    const [{ insertId }] = await tx.insert(attempts).values({ userId, examId, startedAt: now });
+    return insertId;
+  });
+}
+
+/** The User's newest unsubmitted Attempt of the Exam, or null. Newest, because older dev data may hold several. */
+export async function findOpenAttempt(userId: number, examId: number, conn: Pick<typeof db, "select"> = db) {
+  const [row] = await conn
+    .select({ id: attempts.id })
+    .from(attempts)
+    .where(and(eq(attempts.userId, userId), eq(attempts.examId, examId), isNull(attempts.submittedAt)))
+    .orderBy(desc(attempts.id))
+    .limit(1);
+  return row?.id ?? null;
+}
+
+/** Deletes the User's unsubmitted Attempt with its answers (Abandoned Attempt). Answers first: FKs do not cascade. */
+export async function abandonAttempt(userId: number, attemptId: number) {
+  await db.transaction(async (tx) => {
+    await lockOpenAttempt(tx, userId, attemptId);
+    await tx.delete(attemptAnswers).where(eq(attemptAnswers.attemptId, attemptId));
+    await tx.delete(attempts).where(eq(attempts.id, attemptId));
+  });
 }
 
 /** The User's Attempt with every Question of its Exam in order, Correct Answer included: callers decide what to expose. */

@@ -6,7 +6,7 @@
 import { revalidatePath } from "next/cache";
 import { cookies } from "next/headers";
 import { notFound, redirect } from "next/navigation";
-import { AttemptSubmitted, saveAnswer, startAttempt, submitAttempt, toggleMark } from "@/lib/attempts";
+import { abandonAttempt, AttemptInProgress, AttemptNotFound, AttemptSubmitted, saveAnswer, startAttempt, submitAttempt, toggleMark } from "@/lib/attempts";
 import { createSessionToken, InvalidCredentials, login, SESSION_COOKIE, SESSION_DAYS, UserLocked, userFromSession } from "@/lib/auth";
 
 async function currentUserId() {
@@ -39,8 +39,23 @@ export async function logoutAction() {
 
 export async function startAttemptAction(examId: number) {
   if (!Number.isInteger(Number(examId))) notFound();
-  const id = await startAttempt(await currentUserId(), Number(examId));
+  let id: number;
+  try {
+    id = await startAttempt(await currentUserId(), Number(examId));
+  } catch (err) {
+    if (!(err instanceof AttemptInProgress)) throw err;
+    id = err.attemptId; // double click or stale page: carry on with the open Attempt
+  }
   redirect(`/attempts/${id}`);
+}
+
+export async function abandonAttemptAction(attemptId: number) {
+  try {
+    await abandonAttempt(await currentUserId(), Number(attemptId));
+  } catch (err) {
+    if (!(err instanceof AttemptNotFound)) throw err; // already gone (double click)
+  }
+  revalidatePath("/");
 }
 
 export async function saveAnswerAction(attemptId: number, questionId: number, letters: string[]) {
