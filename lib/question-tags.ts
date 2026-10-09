@@ -40,8 +40,13 @@ export function domainScores(items: { task: string | null; correct: boolean }[])
   return [...byDomain].filter(([, s]) => s.total).map(([domain, s]) => ({ domain, ...s }));
 }
 
+/** "People · Manage conflicts" for a Task code; null for none or unknown. */
+export function taskLabel(code: string | null) {
+  const task = taxonomy.tasks.find((t) => t.code === code);
+  return task ? `${task.domain} · ${task.name}` : null;
+}
+
 /** "Ôn: People" for a Domain, "Ôn: People · Manage conflicts" for a Task. */
 export function drillTitle(source: string) {
-  const task = taxonomy.tasks.find((t) => t.code === source);
-  return `Ôn: ${task ? `${task.domain} · ${task.name}` : source}`;
+  return `Ôn: ${taskLabel(source) ?? source}`;
 }

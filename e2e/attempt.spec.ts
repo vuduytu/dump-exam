@@ -119,5 +119,5 @@ test("Timed Attempt: 240-minute label on the Exam page, attempt screen and Resul
   await button(page, "Nộp bài").click();
   await page.getByRole("dialog").getByRole("button", { name: "Nộp bài" }).click();
   await expect(visible(page, /^Thi thử · .* \/ 240 phút$/)).toBeVisible();
-  await expect(page.getByText(/People \d+% · Process \d+% · Business Environment \d+%/).filter({ visible: true })).toBeVisible();
+  await expect(page.getByText(/People \d+% \(\d+\/\d+\) · Process \d+% \(\d+\/\d+\) · Business Environment \d+% \(\d+\/\d+\)/).filter({ visible: true })).toBeVisible();
 });

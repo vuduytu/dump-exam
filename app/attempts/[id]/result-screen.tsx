@@ -5,11 +5,12 @@ import { Check, Flag, X } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import type { Choice } from "@/db/schema";
+import { taskLabel } from "@/lib/question-tags";
 import { cn, TIME_LIMIT_MIN } from "@/lib/utils";
 import { formatDuration, inTab, resultCell, type ResultTab } from "./logic";
 import { QuestionLayout, Stats, usePosition } from "./question-layout";
 
-type Question = { id: number; text: string; choices: (Choice & { percent: number })[]; correct: string; suggested: string; selected: string[]; isCorrect: boolean; marked: boolean };
+type Question = { id: number; task: string | null; text: string; choices: (Choice & { percent: number })[]; correct: string; suggested: string; selected: string[]; isCorrect: boolean; marked: boolean };
 
 const tabs: { value: ResultTab; label: string }[] = [
   { value: undefined, label: "Tất cả" },
@@ -78,7 +79,7 @@ export function ResultScreen(props: { title: string; drill: boolean; domains: { 
           ]}
         />
       }
-      domains={props.domains.map((d) => `${d.domain} ${Math.round((d.correct / d.total) * 100)}%`).join(" · ")}
+      domains={props.domains.map((d) => `${d.domain} ${Math.round((d.correct / d.total) * 100)}% (${d.correct}/${d.total})`).join(" · ")}
       tabs={tabBar}
       pos={pos}
       total={total}
@@ -109,6 +110,7 @@ export function ResultScreen(props: { title: string; drill: boolean; domains: { 
               </span>
             )}
           </p>
+          {taskLabel(q.task) && <p className="mt-1 text-xs text-muted-foreground">{taskLabel(q.task)}</p>}
           <div className="question-text mt-3" dangerouslySetInnerHTML={{ __html: q.text }} /> {/* sanitized at import */}
           <ul className="mt-6 flex flex-col gap-2">
             {q.choices.map((c) => {
