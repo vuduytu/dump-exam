@@ -1,7 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { execFileSync } from "node:child_process";
-import { mkdtempSync, readFileSync } from "node:fs";
+import { execFileSync, spawnSync } from "node:child_process";
+import { mkdtempSync, readFileSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import type { ParsedQuestion } from "@/db/seed";
@@ -65,4 +65,19 @@ test("text and Choices keep only whitelisted tags, without attributes or script 
   }
   assert.doesNotMatch(q(1140).text, /alert/);
   assert.match(q(1140).text, /How <em>should<\/em>/);
+});
+
+test("audit script agrees with the parser on the fixture and flags a wrong answer", () => {
+  const dir = mkdtempSync(join(tmpdir(), "audit-"));
+  const good = join(dir, "questions.json");
+  execFileSync("python3", ["-I", "scripts/parse_html.py", "tests/fixtures/examtopics-sample.html", good]);
+  const audit = (json: string) => spawnSync("python3", ["-I", "scripts/audit_answers.py", "tests/fixtures/examtopics-sample.html", json]);
+  assert.equal(audit(good).status, 0);
+  const bad = join(dir, "bad.json");
+  const parsed: ParsedQuestion[] = JSON.parse(readFileSync(good, "utf8"));
+  parsed.find((p) => p.number === 57)!.correctAnswer = "AB";
+  writeFileSync(bad, JSON.stringify(parsed));
+  const result = audit(bad);
+  assert.equal(result.status, 1);
+  assert.match(result.stdout.toString(), /Q57 correctAnswer/);
 });
