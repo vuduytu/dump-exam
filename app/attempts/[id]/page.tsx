@@ -79,7 +79,7 @@ export default async function AttemptPage({ params, searchParams }: { params: Pr
     <main className="mx-auto max-w-2xl p-4">
       <header className="flex items-center justify-between">
         <h1 className="text-xl font-semibold">{attempt.examName}</h1>
-        {attempt.deadline && <Countdown attemptId={attempt.id} deadline={attempt.deadline.getTime()} />}
+        {attempt.deadline && <Countdown attemptId={attempt.id} msLeft={attempt.deadline.getTime() - Date.now()} />}
         <span className="text-sm">Câu {pos}/{total}</span>
       </header>
       <article className="mt-6">

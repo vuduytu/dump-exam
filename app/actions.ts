@@ -63,17 +63,20 @@ export async function saveAnswerAction(attemptId: number, questionId: number, le
   try {
     await saveAnswer(await currentUserId(), Number(attemptId), Number(questionId), letters);
   } catch (err) {
-    if (err instanceof AttemptExpired) redirect(`/attempts/${Number(attemptId)}`); // the page closes it and shows the Score
+    if (err instanceof AttemptExpired || err instanceof AttemptSubmitted) redirect(`/attempts/${Number(attemptId)}`); // the page shows the Score
     throw err;
   }
   revalidatePath(`/attempts/${Number(attemptId)}`); // refreshes the question grid
 }
 
 export async function toggleMarkAction(attemptId: number, questionId: number) {
-  const marked = await toggleMark(await currentUserId(), Number(attemptId), Number(questionId)).catch((err) => {
-    if (err instanceof AttemptExpired) redirect(`/attempts/${Number(attemptId)}`);
+  let marked: boolean;
+  try {
+    marked = await toggleMark(await currentUserId(), Number(attemptId), Number(questionId));
+  } catch (err) {
+    if (err instanceof AttemptExpired || err instanceof AttemptSubmitted) redirect(`/attempts/${Number(attemptId)}`);
     throw err;
-  });
+  }
   revalidatePath(`/attempts/${Number(attemptId)}`);
   return marked;
 }

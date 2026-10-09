@@ -75,7 +75,7 @@ export async function finalizeExpired(userId: number, now = new Date()) {
   for (const a of open) {
     if (now < deadlineOf(a)!) continue;
     await submitAttempt(userId, a.id, now).catch((err) => {
-      if (!(err instanceof AttemptSubmitted)) throw err;
+      if (!(err instanceof AttemptSubmitted || err instanceof AttemptNotFound)) throw err; // closed or abandoned meanwhile
     });
   }
 }
