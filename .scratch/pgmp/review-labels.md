@@ -1,0 +1,2135 @@
+# Duyệt nhãn Task PgMP
+
+Sửa nhãn sai trong `data/tags/pgmp/lot-NN.json` rồi chạy lại `npx tsx scripts/tags.ts merge PgMP`. Mẫu ngẫu nhiên lấy bằng mulberry32, seed 20261009.
+
+Khác với các lô PMP, người gắn nhãn PgMP được xem chữ cái của Correct Answer (không xem Explanation).
+
+## Low confidence (678)
+
+- **6_6_2024 11_05_01 AM · Câu 4** (id 39901004) → `lifecycle-7` Program Life Cycle Management · Develop a detailed program scope statement · low
+  - Lý do: Scope statement tạo hiểu biết chung về lý do và phạm vi program
+  - Câu hỏi: In an electrical equipments manufacturing company, you are a program manager of a program that is expected to design and build a new generation of protection equipments. Your program may possibly run over three years. You have noticed that the stakeholders are confused regarding the reasons of starting that program in your organization. Some stakeholders are thinking that the program is for increasing the revenue of the organization, other stakeholders are thinking that the program is to reduce the outage. Which of the following would you provide to all the stakeholders to have a common understanding among them?
+- **6_6_2024 11_05_01 AM · Câu 5** (id 39901005) → `governance-2` Governance · Select a governance framework · low
+  - Lý do: Câu kiến thức về vai trò sponsor là champion của program
+  - Câu hỏi: The program sponsor is the individual responsible for securing financing for the program and selecting the program manager who is responsible for conducting and managing the program. Who is the champion of the program?
+- **6_6_2024 11_05_01 AM · Câu 6** (id 39901006) → `governance-2` Governance · Select a governance framework · low
+  - Lý do: Câu kiến thức về vai trò program manager là champion of change
+  - Câu hỏi: The program sponsor is the individual responsible for securing financing for the program and selecting the program manager who is responsible for conducting and managing the program. Who is the champion of change in the organization?
+- **6_6_2024 11_05_01 AM · Câu 7** (id 39901007) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Câu định nghĩa phân biệt portfolio và program
+  - Câu hỏi: The portfolio is different than the program. The portfolio is a collection of projects, programs, subsidiary portfolios, and operations managed as a group to achieve strategic objectives, but the program consists of related projects, subsidiary programs, and program activities managed in a coordinated manner to obtain benefits not available from managing them individually. Within the above context, which of the following would differentiate the portfolio from the program?
+- **6_6_2024 11_05_01 AM · Câu 25** (id 39901025) → `strategy-8` Strategic Program Alignment · Evaluate regulatory, legal, social and ethical constraints · low
+  - Lý do: Từ chối vị trí không đủ năng lực: câu đạo đức nghề nghiệp
+  - Câu hỏi: KLACO is a petrochemical organization, they want to start a new critical program for production line of light materials that will be used in car manufacturing. The sponsor proposed you to be the program manager, but you are not qualified and don’t have experience in the program management. What should you do?
+- **6_6_2024 11_05_01 AM · Câu 36** (id 39901036) → `lifecycle-25` Program Life Cycle Management · Analyze variances and trends · low
+  - Lý do: Tính EAC theo EVM nhưng thiếu bảng dữ liệu
+  - Câu hỏi: You are a program manager of a construction program. Your program contains 4 projects. Now you are in the delivery phase and you have some earned value calculations. According to the values in the below table, what is the Estimate at completion (EAC) for project B?
+- **6_6_2024 11_05_01 AM · Câu 37** (id 39901037) → `lifecycle-21` Program Life Cycle Management · Execute program management plans · low
+  - Lý do: Thực thi mua sắm: sau danh sách nhà thầu đủ điều kiện gửi RFP
+  - Câu hỏi: ZUA is an international company; they won the construction of the new airport in your city. The sponsor assigned you as a program manager. Now you have completed the qualified seller list. What is the next action to get a solution?
+- **6_6_2024 11_05_01 AM · Câu 38** (id 39901038) → `lifecycle-16` Program Life Cycle Management · Charter and initiate constituent components · low
+  - Lý do: Bổ nhiệm PM có xung đột lợi ích, leo thang governance board
+  - Câu hỏi: You need to assign a project manager for a project in your program. A member from the program governance board has referred a candidate who is his relative. What will you do?
+- **6_6_2024 11_05_01 AM · Câu 39** (id 39901039) → `lifecycle-21` Program Life Cycle Management · Execute program management plans · low
+  - Lý do: Bước đầu mua sắm phần mềm là gửi RFI
+  - Câu hỏi: Your company has decided to develop a new software system; you have been selected as a program manager for this program. You are planning to have the software from the vendors. What will you do first?
+- **6_6_2024 11_05_01 AM · Câu 41** (id 39901041) → `benefits-2` Benefits Management · Capture synergies and update the benefits plan · low
+  - Lý do: Thêm component tăng benefits, tập trung yếu tố thành công then chốt
+  - Câu hỏi: The sponsor gave you an idea that adding a new component will increase the program benefits. What should you focus on?
+- **6_6_2024 11_05_01 AM · Câu 42** (id 39901042) → `benefits-1` Benefits Management · Develop the benefits realization plan · low
+  - Lý do: Phân loại benefit hữu hình, không quy ra tiền
+  - Câu hỏi: Ted is assigned as a program manager of a program for improvement of the IT systems in your organization. One of the main benefits in your program is decreasing the processing time of the customers by 40%. What is the type of this benefit?
+- **6_6_2024 11_05_01 AM · Câu 56** (id 39901056) → `lifecycle-21` Program Life Cycle Management · Execute program management plans · low
+  - Lý do: Dùng risk register khi chọn nhà cung cấp trong thực thi mua sắm
+  - Câu hỏi: The sponsor of your company IT system improvement program assigned you as a program manager for the same program. The sponsor has informed you that the new system will be provided from vendors. Now you are working on the procurement activity as a part of the program procurement plan. Which of the following inputs can help you to select the vendor?
+- **6_6_2024 11_05_01 AM · Câu 57** (id 39901057) → `lifecycle-9` Program Life Cycle Management · Establish the program management plan and schedule · low
+  - Lý do: SWOT hỗ trợ xây charter và program management plan
+  - Câu hỏi: A program has created a new service for an electrical company. Now you are developing the program management plan after the approval of the program charter by the program steering committee. Which of the following will be the most useful in the development of the program charter and the program management plan?
+- **6_6_2024 11_05_01 AM · Câu 62** (id 39901062) → `strategy-2` Strategic Program Alignment · Establish a high-level roadmap for sponsor approval · low
+  - Lý do: Ước tính thời gian hoàn thành sơ bộ bằng PERT
+  - Câu hỏi: Ted is a program manager of construction of a steel factory. He has estimated the completion time of 5 years, other program managers in the organization estimate is 6 years and the subject matter expert estimate is7 years. What is the expected period to complete the program?
+- **6_6_2024 11_05_01 AM · Câu 69** (id 39901069) → `strategy-11` Strategic Program Alignment · Exploit strategic opportunities for change · low
+  - Lý do: Kỹ năng quản lý thay đổi cho thay đổi tổ chức then chốt
+  - Câu hỏi: MAG is an electrical equipment manufacturing company. You are a program manager of a program that is expected to design and build a new generation of power transformers. The program is considered as a critical change in the organization and you expect that this change will not be well received by employees. Now, you want to provide an integrated view of the perspectives of the stakeholders and committees and you need to plan the change actions. Within the above context, you should have strong.
+- **6_6_2024 11_05_01 AM · Câu 70** (id 39901070) → `benefits-1` Benefits Management · Develop the benefits realization plan · low
+  - Lý do: Câu định nghĩa: giảm lỗi sản phẩm là một benefit
+  - Câu hỏi: You are assigned to a program to reduce the number of product defects to 15%. This is an example of.
+- **6_6_2024 11_05_01 AM · Câu 74** (id 39901074) → `strategy-3` Strategic Program Alignment · Define the high-level roadmap and financial framework · low
+  - Lý do: Lịch thanh toán thuộc financial framework, cost budgeting
+  - Câu hỏi: The sponsor of your program has asked you about the program Payment schedules that identify the schedules and milestones where funding is received by the funding organization. The program Payment schedules are outputs of.
+- **6_6_2024 11_05_01 AM · Câu 75** (id 39901075) → `governance-10` Governance · Monitor the business environment for alignment · low
+  - Lý do: Governance đánh giá alignment chiến lược và value delivery
+  - Câu hỏi: The effective governance helps to ensure that the promised outcomes are achieved and delivered for the organization to realize the intended benefits. Therefore the governance will focus on the analysis and assessment of the strategic alignment and.
+- **6_6_2024 11_05_01 AM · Câu 82** (id 39901082) → `lifecycle-4` Program Life Cycle Management · Develop a responsibility assignment matrix · low
+  - Lý do: Thời điểm phân công cố định nhân sự cho program core team
+  - Câu hỏi: You are a program manager of a critical program in your organization. You have temporary assigned three engineers for 7 days only from the risk department to develop the program risk management plan. When will these resources be assigned permanently?
+- **6_6_2024 11_05_01 AM · Câu 84** (id 39901084) → `lifecycle-9` Program Life Cycle Management · Establish the program management plan and schedule · low
+  - Lý do: Ước tính chi phí component để lập ngân sách program
+  - Câu hỏi: The program budget should include the costs for each individual component as well as costs for the resources to manage the program itself. Which of the following is required to the above activities?
+- **6_6_2024 11_05_01 AM · Câu 96** (id 39901096) → `stakeholder-5` Stakeholder Engagement · Define and maintain stakeholder communications · low
+  - Lý do: Câu kiến thức: program manager chịu trách nhiệm truyền thông stakeholder
+  - Câu hỏi: The effective communications create a bridge between diverse stakeholders who may have different cultural and organizational backgrounds, different levels of expertise, and different perspectives and interests. Within the above context, who is responsible for the program stakeholders communication?
+- **6_6_2024 11_05_01 AM · Câu 97** (id 39901097) → `lifecycle-26` Program Life Cycle Management · Update plans with corrective actions · low
+  - Lý do: Project đóng: cập nhật program roadmap ngay
+  - Câu hỏi: Your are a program manager for one of a critical programs in your organization. The program contains 8 projects, one of these projects has been closed, what will you update immediately?
+- **6_6_2024 11_07_19 AM · Câu 3** (id 40039003) → `lifecycle-3` Program Life Cycle Management · Develop the program roadmap · low
+  - Lý do: Định hướng program nằm trong management plan và roadmap
+  - Câu hỏi: Which of the following options contain the direction of the program?
+- **6_6_2024 11_07_19 AM · Câu 8** (id 40039008) → `governance-2` Governance · Select a governance framework · low
+  - Lý do: Câu kiến thức: OPM tích hợp portfolio, program, project
+  - Câu hỏi: MANZI is a large construction company in the Middle East. You are the program manager for the construction of a new airport program. The program is complex and has 20 components. Now you are in a meeting with the portfolio manager discussing the framework in which the portfolio, program and projects management are integrated to achieve the strategic objectives. Which one of the following options can provide the mentioned above framework?
+- **6_6_2024 11_07_19 AM · Câu 9** (id 40039009) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Câu kiến thức: program tăng cường benefits nhờ thích ứng
+  - Câu hỏi: Your organization just awarded the construction of a new seaport. During the portfolio meeting, some of the members prefer to pursuit it as a project, while other members suggest to pursuit it as program to enhance the delivery of benefits. How can the program enhance the delivery of benefits?
+- **6_6_2024 11_07_19 AM · Câu 11** (id 40039011) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Câu kiến thức: các project liên quan quản lý như program
+  - Câu hỏi: Your company just awarded 15 projects, each project scope is “construction of a new factory”, in the same industrial city. All factories are different and all will be funded and supported by the government. All projects material will be provided from Hitachi Japan, as a preferred vendor. Now, you are a program manager of an existing program and your manager requests your proposal on; how you will manage these projects. What is the best proposal?
+- **6_6_2024 11_07_19 AM · Câu 13** (id 40039013) → `governance-2` Governance · Select a governance framework · low
+  - Lý do: Câu kiến thức: ai thay vai trò sponsor
+  - Câu hỏi: DEGA is a large organization in the production of steel. They what to increase the productivity by the construction of a new steel factory. The management assigned you as a program manager for the construction of the new factory. During the planning sub-phase, the program sponsor got his annual vacation. Within the above context, who may assume the role of the program sponsor?
+- **6_6_2024 11_07_19 AM · Câu 17** (id 40039017) → `lifecycle-30` Program Life Cycle Management · Manage risk per the risk management plan · low
+  - Lý do: Tính contingency reserve còn lại nhưng thiếu bảng dữ liệu
+  - Câu hỏi: You are a program manager of the construction of a new tower in your city. The program contains 4 projects (project 1 up to project 4). While the program in the delivery phase, an identified risk (R1) of project 1 occurred. Within the above context and the given tables, what is the remaining contingency reserve of the program?
+- **6_6_2024 11_07_19 AM · Câu 18** (id 40039018) → `strategy-2` Strategic Program Alignment · Establish a high-level roadmap for sponsor approval · low
+  - Lý do: Độ tin cậy ước tính thời lượng ở formulation
+  - Câu hỏi: You are a program manager of a construction of a new road for your organization ASDDM Inc. During the meeting, you and the sponsor are discussing the level of confidence in the appraisal of the activity durations. In which phase are you working on?
+- **6_6_2024 11_07_19 AM · Câu 21** (id 40039021) → `governance-2` Governance · Select a governance framework · low
+  - Lý do: Câu kiến thức: sponsor thúc đẩy thay đổi tổ chức
+  - Câu hỏi: You are discussing the program with an individual or a group that is required to drive changes through the organization so the operations can accommodate capabilities delivered by the program, and to secure the available positive benefits and steward the handling of negative benefits. Who is that individual or group?
+- **6_6_2024 11_07_19 AM · Câu 32** (id 40039032) → `lifecycle-25` Program Life Cycle Management · Analyze variances and trends · low
+  - Lý do: Phân tích EVM nhưng thiếu bảng dữ liệu
+  - Câu hỏi: You are a program manager of a telecommunication program. The program contains 3 projects. Now your program is in the delivery phase and the earned value calculations as per the below table. Within the above context and the below table, what is the situation of the program?
+- **6_6_2024 11_07_19 AM · Câu 53** (id 40039053) → `lifecycle-28` Program Life Cycle Management · Manage changes per the change management plan · low
+  - Lý do: Câu hỏi phase khi xử lý change request, kiến thức chung
+  - Câu hỏi: A key stakeholder request a change that may impact the schedule of the program, you captured the request in the change log, performed the impact analysis then you take the decision on behalf of the program governance board. In which phase are you?
+- **6_6_2024 11_09_22 AM · Câu 1** (id 40162001) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Định nghĩa quan hệ program và project
+  - Câu hỏi: The relationship between program management and project management is:
+- **6_6_2024 11_09_22 AM · Câu 2** (id 40162002) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Phân biệt portfolio, program, project
+  - Câu hỏi: Even though a portfolio may be composed of a number of different programs or projects; portfolio, program and projects domains are really different. Among the possible choices below, which one is WRONG about portfolios, programs and projects?
+- **6_6_2024 11_09_22 AM · Câu 4** (id 40162004) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Kiến thức artifact giai đoạn formulation
+  - Câu hỏi: What are the 3 main artifacts elaborated during program formulation activities?
+- **6_6_2024 11_09_22 AM · Câu 8** (id 40162008) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Thành phần performance domain strategy alignment, kiến thức chung
+  - Câu hỏi: What are the key components of the program strategy alignment performance domain?
+- **6_6_2024 11_09_22 AM · Câu 9** (id 40162009) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Định nghĩa portfolio management
+  - Câu hỏi: The main objective of portfolio management is to achieve organizational strategic objectives. What is NOT a true statement with regard to portfolio management?
+- **6_6_2024 11_09_22 AM · Câu 11** (id 40162011) → `benefits-1` Benefits Management · Develop the benefits realization plan · low
+  - Lý do: Program được khởi tạo để mang lại benefits, khái niệm
+  - Câu hỏi: Among the following answers, which one BEST describes why organizations initiate programs?
+- **6_6_2024 11_09_22 AM · Câu 13** (id 40162013) → `lifecycle-16` Program Life Cycle Management · Charter and initiate constituent components · low
+  - Lý do: Tương tác program-project theo giai đoạn, câu bị lỗi
+  - Câu hỏi: Interaction between the program manager and the project manager is the CLOSEST in which stage(s} of the project? ages ~Executing }
+- **6_6_2024 11_09_22 AM · Câu 15** (id 40162015) → `lifecycle-1` Program Life Cycle Management · Develop the program charter · low
+  - Lý do: Kiến thức sub-phase của definition phase
+  - Câu hỏi: The program definition phase is composed of the following sub phases:
+- **6_6_2024 11_09_22 AM · Câu 16** (id 40162016) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Kiến thức thời điểm bổ nhiệm program manager
+  - Câu hỏi: The program manager is selected and assigned during:
+- **6_6_2024 11_09_22 AM · Câu 19** (id 40162019) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Hoạt động hỗ trợ formulation, kiến thức chung
+  - Câu hỏi: Which activities support program formulation?
+- **6_6_2024 11_09_22 AM · Câu 23** (id 40162023) → `strategy-6` Strategic Program Alignment · Identify and quantify expected benefits · low
+  - Lý do: Phân tích NPV thị trường nhưng thiếu dữ liệu bảng
+  - Câu hỏi: You are a portfolio manager in a very profitable company which manufactures spare parts for the automotive industry. You observe that the car market is increasing dramatically in 4 continents: A, B, C and D. You have performed initial business studies that are based on the Net Present Values (NPV) that these continents could generate. This business has to be sustained for several years and you are not sure how the financial global instability will affect these studies. Based on current studies. select which continent seems to be the BEST?
+- **6_6_2024 11_09_22 AM · Câu 24** (id 40162024) → `lifecycle-16` Program Life Cycle Management · Charter and initiate constituent components · low
+  - Lý do: Tương tác program-project lặp và tuần hoàn, kiến thức chung
+  - Câu hỏi: Interactions between the program manager and the project manager tend to be:
+- **6_6_2024 11_09_22 AM · Câu 33** (id 40162033) → `lifecycle-8` Program Life Cycle Management · Develop the program WBS · low
+  - Lý do: Đếm work package trong PWBS nhưng thiếu hình
+  - Câu hỏi: In this PWBS, how many program packages are depicted?
+- **6_6_2024 11_09_22 AM · Câu 35** (id 40162035) → `benefits-1` Benefits Management · Develop the benefits realization plan · low
+  - Lý do: Định nghĩa business value, khái niệm
+  - Câu hỏi: The business value may be defined as the sum of:
+- **6_6_2024 11_09_22 AM · Câu 37** (id 40162037) → `lifecycle-16` Program Life Cycle Management · Charter and initiate constituent components · low
+  - Lý do: Kiến thức sub-phase của delivery phase
+  - Câu hỏi: The program delivery phase is composed of the following sub phases:
+- **6_6_2024 11_09_22 AM · Câu 38** (id 40162038) → `governance-2` Governance · Select a governance framework · low
+  - Lý do: Performance domain governance hướng dẫn phê duyệt component
+  - Câu hỏi: Which PERFORMANCE DOMAIN provides guidance for processes leading to component authorization?
+- **6_6_2024 11_09_22 AM · Câu 39** (id 40162039) → `lifecycle-9` Program Life Cycle Management · Establish the program management plan and schedule · low
+  - Lý do: Kiến thức payment schedule trong lập ngân sách program
+  - Câu hỏi: What is TRUE concerning program cost budgeting activities?
+- **6_6_2024 11_09_22 AM · Câu 40** (id 40162040) → `lifecycle-21` Program Life Cycle Management · Execute program management plans · low
+  - Lý do: Đầu ra quản lý mua sắm trong delivery
+  - Câu hỏi: What is a CORRECT list of outputs from program procurement management activities performed during the program delivery phase?
+- **6_6_2024 11_09_22 AM · Câu 41** (id 40162041) → `governance-11` Governance · Support the program integration management plan · low
+  - Lý do: Integration management là hoạt động cốt lõi, kiến thức chung
+  - Câu hỏi: Which activity is defined as the CORE activity in the standard?
+- **6_6_2024 11_09_22 AM · Câu 46** (id 40162046) → `lifecycle-19` Program Life Cycle Management · Lead, train, coach and recognize the team · low
+  - Lý do: Kỹ năng cần có của program manager, kiến thức chung
+  - Câu hỏi: What are the skills commonly required by program managers?
+- **6_6_2024 11_09_22 AM · Câu 57** (id 40162057) → `strategy-8` Strategic Program Alignment · Evaluate regulatory, legal, social and ethical constraints · low
+  - Lý do: Nghĩa vụ đạo đức nghề nghiệp, kiến thức chung
+  - Câu hỏi: Embracing the PM/ Code of Ethics and Professional Conduct is a requirement for PMP® and PgMP® certifications. The code specifies the behavior that project and program managers should have for themselves and the behavior they can expect from other project and program management practitioners. From the following lists, what are the essential obligations of the Code?
+- **6_6_2024 11_09_22 AM · Câu 59** (id 40162059) → `governance-2` Governance · Select a governance framework · low
+  - Lý do: Governance plan chứa tiêu chí chuyển giao component
+  - Câu hỏi: Which artifact contains component TRANSITION CRITERIA related to organizational expectations?
+- **6_6_2024 11_09_22 AM · Câu 65** (id 40162065) → `lifecycle-32` Program Life Cycle Management · Conduct program closure under governance · low
+  - Lý do: Lý do kích hoạt hoạt động đóng program, câu khó hiểu
+  - Câu hỏi: You are the program manager of a new line of breakfast cereals to be sold worldwide. The program is organized in several projects, one per line of products which ore each adapted to their targeted market. This year, you have successfully completed the commercial launch of a number of new products. Your governance board asks you to initiate close-out activities related to these projects so that operations can start working. Among the following reasons, which one is NOT a typical reason to invoke the "Program closure "activities?
+- **6_6_2024 11_09_22 AM · Câu 66** (id 40162066) → `lifecycle-32` Program Life Cycle Management · Conduct program closure under governance · low
+  - Lý do: Các kết cục đóng program, kiến thức chung
+  - Câu hỏi: You are the program manager of a new line of breakfast cereals to be sold worldwide. The program is organized in several projects, one per line of products which ore each adapted to their targeted market. This year, you have successfully completed the commercial launch of a number of new products. Your governance board asks you to initiate close-out activities related to these projects so that the operations can start working. Program performance has been analyzed and proven to be high, and according to the survey of the stakeholders' opinion, they seem to be very satisfied. Among the following choices, which one is NOT a probable end of this program?
+- **6_6_2024 11_09_22 AM · Câu 68** (id 40162068) → `governance-11` Governance · Support the program integration management plan · low
+  - Lý do: Nỗ lực quản lý tích hợp nằm ngoài các component
+  - Câu hỏi: A program is made up of a number of projects or discrete components. These components mainly consist of activities organized to produce specific deliverables. Aggregation of these deliverables at the program level serves the strategic benefits of the performing organization. Program management targets the global optimization of its resources. This needs a specific management effort. Among the following choices, which one BEST describes this management effort?
+- **6_6_2024 11_09_22 AM · Câu 70** (id 40162070) → `benefits-1` Benefits Management · Develop the benefits realization plan · low
+  - Lý do: Khái niệm program benefits
+  - Câu hỏi: What is NOT true concerning program benefits?
+- **6_6_2024 11_09_22 AM · Câu 71** (id 40162071) → `benefits-1` Benefits Management · Develop the benefits realization plan · low
+  - Lý do: Các giai đoạn benefits management, kiến thức chung
+  - Câu hỏi: What are the 5 phases of program benefits management?
+- **6_6_2024 11_09_22 AM · Câu 79** (id 40162079) → `governance-11` Governance · Support the program integration management plan · low
+  - Lý do: Tích hợp component để mang lại benefits chiến lược
+  - Câu hỏi: A program is made up of a number of projects or discrete components. These components mainly consist of activities organized to produce specific deliverables. Aggregation of these deliverables at the program level serves the strategic benefits of the performing organization. Program management targets the definition and production of strategic benefits. According to the following choices, which one BEST describes how the discrete outcomes produced by the projects will be organized at the program level?
+- **6_6_2024 11_09_22 AM · Câu 81** (id 40162081) → `stakeholder-7` Stakeholder Engagement · Develop relationships with stakeholders · low
+  - Lý do: Khái niệm engagement thay vì quản lý stakeholder
+  - Câu hỏi: Why is it preferable to focus on the notion of stakeholder engagement rather than stakeholder management?
+- **6_6_2024 11_09_22 AM · Câu 82** (id 40162082) → `stakeholder-3` Stakeholder Engagement · Negotiate stakeholder support and expectations · low
+  - Lý do: Mục tiêu engagement: giữ ủng hộ mục tiêu, benefits
+  - Câu hỏi: What is the primary goal of stakeholder engagement?
+- **6_6_2024 11_09_22 AM · Câu 83** (id 40162083) → `governance-2` Governance · Select a governance framework · low
+  - Lý do: Thành phần steering committee, kiến thức governance
+  - Câu hỏi: What is a typical composition of a program steering committee?
+- **6_6_2024 11_09_22 AM · Câu 85** (id 40162085) → `governance-2` Governance · Select a governance framework · low
+  - Lý do: Vai trò program sponsor, kiến thức governance
+  - Câu hỏi: What is the primary role of the program sponsor?
+- **6_6_2024 11_09_22 AM · Câu 87** (id 40162087) → `stakeholder-1` Stakeholder Engagement · Identify stakeholders and create the stakeholder matrix · low
+  - Lý do: PMO là một stakeholder của program
+  - Câu hỏi: You manage the PMO of a large program in your company. You understand that the main purpose of the PMO is to support and help the program manager to make the program a success. There ore various types of PMO, depending on the need of the organization. Some PMOs provide mainly administrative support; some may have more responsibilities such as providing expertise in certain critical areas of the program. There are some characteristics which ore common to any type of PMO, as far as program support is concerned. What is a COMMON characteristic of all program PMOs?
+- **6_6_2024 11_09_22 AM · Câu 90** (id 40162090) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Câu định nghĩa quan hệ program và project
+  - Câu hỏi: Even though a program may be composed of a number of different projects; program and project domains are really different. Among the possible choices below, which one is WRONG when describing their relationships?
+- **6_6_2024 11_09_22 AM · Câu 92** (id 40162092) → `governance-2` Governance · Select a governance framework · low
+  - Lý do: Định nghĩa performance domain Program Governance
+  - Câu hỏi: Program Governance is the performance domain that:
+- **6_6_2024 11_11_06 AM · Câu 21** (id 40266021) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Câu định nghĩa phân biệt portfolio và program
+  - Câu hỏi: What is the difference between the portfolio and the program?
+- **6_6_2024 11_11_06 AM · Câu 27** (id 40266027) → `governance-3` Governance · Obtain approval through stage gate reviews · low
+  - Lý do: Phase gate cuối khi board thay người
+  - Câu hỏi: You are a program manager of a 3-year program, the program now is coming to an end. Most of the governance board members left the organization. New members have joined the board. Many of the new members do not know their roles and responsibilities. What should you do to address this situation at the final phase gate review?
+- **6_6_2024 11_11_06 AM · Câu 31** (id 40266031) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Ngưỡng rủi ro khi đánh giá alignment ban đầu
+  - Câu hỏi: The organization is implementing a new business strategy to improve the revenue. The chairman of the company wants to initiate a new program to support this strategy. Before initiating the program, the strategy should be aligned with the strategic goals of the organization. What should you do first as a program manager?
+- **6_6_2024 11_11_06 AM · Câu 32** (id 40266032) → `lifecycle-16` Program Life Cycle Management · Charter and initiate constituent components · low
+  - Lý do: Đạo đức khi nhận giao component vượt năng lực
+  - Câu hỏi: An organization initiated a critical program to deliver a key benefit to achieve the strategic objectives. The program manager requests a newly graduated project manager to manage a complex program component that has dependencies with other components in the program. What should the project manager do?
+- **6_6_2024 11_11_06 AM · Câu 49** (id 40266049) → `lifecycle-19` Program Life Cycle Management · Lead, train, coach and recognize the team · low
+  - Lý do: Nâng cam kết đội ngũ qua best practice
+  - Câu hỏi: You are a program manager. You want to improve the program’s team commitment to the objectives and goals of the program. What should you do?
+- **6_6_2024 11_11_06 AM · Câu 56** (id 40266056) → `lifecycle-21` Program Life Cycle Management · Execute program management plans · low
+  - Lý do: Thực hiện mua sắm: lập RFP từ danh sách nhà cung cấp
+  - Câu hỏi: You are a program manager for the construction of a new airport. The program has 10 components. One of the components must be outsourced, so you request the qualified seller list to …………
+- **6_6_2024 11_11_06 AM · Câu 73** (id 40266073) → `lifecycle-33` Program Life Cycle Management · Execute program transition and close-out · low
+  - Lý do: Phân biệt hạng mục thuộc thủ tục close-out
+  - Câu hỏi: Your company Beta requests you to improve the transition procedure to meet the closeout requirements. You have reviewed the procedure to remove any item that doesn’t relate to the closeout phase? What item should you remove?
+- **6_6_2024 11_11_06 AM · Câu 78** (id 40266078) → `lifecycle-24` Program Life Cycle Management · Approve closure of constituent components · low
+  - Lý do: Chuyển giao component, cập nhật roadmap
+  - Câu hỏi: One of the components is completed and ready for the transition. What should you do as a program manager to proceed with the component transition?
+- **6_6_2024 11_11_06 AM · Câu 86** (id 40266086) → `benefits-5` Benefits Management · Verify transition meets benefit criteria · low
+  - Lý do: Bước kế tiếp: chuyển giao và duy trì benefits
+  - Câu hỏi: You are a program manager. One of the components has been delivered. And another component did not meet the expectations due to a change request. What should you do next?
+- **6_6_2024 11_11_06 AM · Câu 87** (id 40266087) → `stakeholder-2` Stakeholder Engagement · Analyze stakeholders and plan engagement · low
+  - Lý do: Văn hoá tổ chức ảnh hưởng quản lý stakeholder
+  - Câu hỏi: You are a program manager of a multinational program to implement a protection system for the company copyrights. The company is intolerant of processes to the point of being considered process-adverse but is tolerant of long-term program activities of the protection of its intellectual property. The expectation for progress is slow. Within the above context, what should you do next?
+- **6_6_2024 11_12_21 AM · Câu 29** (id 40341029) → `benefits-4` Benefits Management · Monitor benefit metrics and take corrective action · low
+  - Lý do: Rà benefits management plan để đảm bảo hiện thực hoá benefits
+  - Câu hỏi: How do you ensure that benefits are realized according to the program governance during the program execution?
+- **6_6_2024 11_12_21 AM · Câu 31** (id 40341031) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Câu định nghĩa lợi ích của việc gom thành program
+  - Câu hỏi: A software company wants to improve its delivery methodology. The company develops a benefits management plan to identify formal program governance. What is the benefit of structuring the work into a program?
+- **6_6_2024 11_12_21 AM · Câu 38** (id 40341038) → `lifecycle-16` Program Life Cycle Management · Charter and initiate constituent components · low
+  - Lý do: Câu kiến thức pha lập kế hoạch component
+  - Câu hỏi: The program is started and preparation is completed. In which phase the component projects are planned?
+- **6_6_2024 11_12_21 AM · Câu 49** (id 40341049) → `lifecycle-6` Program Life Cycle Management · Conduct the program kick-off · low
+  - Lý do: Kick-off, thu thập yêu cầu rồi trình steering committee
+  - Câu hỏi: You are a program manager of the implementation of the CMC System. The company mandates the program after the failure of the sales department in the audits. After you start the program, you discovered that the sales department already has selected the technology that will be used in the CMC system. What should you do to ensure the program's success?
+- **6_6_2024 11_12_21 AM · Câu 71** (id 40341071) → `lifecycle-15` Program Life Cycle Management · Monitor human resources and team motivation · low
+  - Lý do: Ưu đãi hợp đồng nhà thầu phụ xung đột mục tiêu program
+  - Câu hỏi: You are a program manager of a multinational software program. While you are in the planning phase, the contracts manager informed you that the primary subcontractor's agreement includes incentives that would potentially conflict with program objectives. What should you do first?
+- **6_6_2024 11_16_20 AM · Câu 2** (id 40580002) → `stakeholder-2` Stakeholder Engagement · Analyze stakeholders and plan engagement · low
+  - Lý do: Câu kiến thức: program manager chịu trách nhiệm engagement
+  - Câu hỏi: During the meeting, a program plan report shows that the stakeholders are not efficiently engaged in the Tech development program. Who among the following is responsible for making sure that all stakeholders are adequately and appropriately engaged throughout the duration of the Tech development program?
+- **6_6_2024 11_16_20 AM · Câu 3** (id 40580003) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Câu định nghĩa program
+  - Câu hỏi: Which of the following statements are true about a program? Each correct answer represents a complete solution. Choose all that apply.
+- **6_6_2024 11_16_20 AM · Câu 4** (id 40580004) → `lifecycle-28` Program Life Cycle Management · Manage changes per the change management plan · low
+  - Lý do: Câu kiến thức: project dùng change management trên baseline
+  - Câu hỏi: Which of the following uses change management for monitoring and controlling the impact of variability on its baselines?
+- **6_6_2024 11_16_20 AM · Câu 5** (id 40580005) → `strategy-7` Strategic Program Alignment · Estimate financial framework and nonfinancial benefits · low
+  - Lý do: Câu kiến thức nguồn tài trợ program
+  - Câu hỏi: Your organization currently requires funding for preparing a critical program. Which of the following cannot be considered as a source for funding?
+- **6_6_2024 11_16_20 AM · Câu 7** (id 40580007) → `governance-2` Governance · Select a governance framework · low
+  - Lý do: Câu kiến thức vai trò program manager trong governance
+  - Câu hỏi: Who is responsible for performing management activities ensuring that the program is run within the governance framework while managing the day-to-day program activities?
+- **6_6_2024 11_16_20 AM · Câu 10** (id 40580010) → `lifecycle-9` Program Life Cycle Management · Establish the program management plan and schedule · low
+  - Lý do: Câu định nghĩa domain Program Life Cycle Management
+  - Câu hỏi: Which of the following domains describes the various stages involved throughout the program's span, from its origin until closure?
+- **6_6_2024 11_16_20 AM · Câu 11** (id 40580011) → `lifecycle-4` Program Life Cycle Management · Develop a responsibility assignment matrix · low
+  - Lý do: Câu kiến thức bổ nhiệm vai trò trong pha definition
+  - Câu hỏi: Sam is a renowned industry leader of a banking sector and has prepared the program charter of the new program for his banking and finance company. He has gone through the phases of the program definition including the objectives, scope, purpose, and deliverables of the program. He has reached now to the end of the most crucial phase of the program life cycle, i.e., the program definition phase. Which of the following appointments are made during this phase?Each correct answer represents a complete solution. Choose all that apply.
+- **6_6_2024 11_16_20 AM · Câu 12** (id 40580012) → `governance-5` Governance · Use the program management information system · low
+  - Lý do: Cung cấp thông tin đầy đủ cho người ra quyết định
+  - Câu hỏi: In order to move the program forward, which of the following is important to be provided by the program manager to the decision-making stakeholders to make the right decisions at the right time?
+- **6_6_2024 11_16_20 AM · Câu 13** (id 40580013) → `strategy-8` Strategic Program Alignment · Evaluate regulatory, legal, social and ethical constraints · low
+  - Lý do: Câu định nghĩa cơ quan quản lý pháp lý
+  - Câu hỏi: Who among the following is a public authority responsible for setting and managing the legal boundaries of their local and national sovereign governments?
+- **6_6_2024 11_16_20 AM · Câu 15** (id 40580015) → `benefits-1` Benefits Management · Develop the benefits realization plan · low
+  - Lý do: Câu kiến thức: thành công đo bằng benefits delivery
+  - Câu hỏi: Cheri is working on a program for the system integration process in an organization. She has a number of projects such as hardware systems project and information systems project. She has recently added a software engineering project and now she's planning to add a verification and validation project. She also has some other projects in the roadmap. In terms of which of the following will Cheri's overall program success be measured?
+- **6_6_2024 11_16_20 AM · Câu 17** (id 40580017) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Câu định nghĩa lợi ích portfolio management
+  - Câu hỏi: Which of the following are the benefits of portfolio management?Each correct answer represents a complete solution. Choose all that apply.
+- **6_6_2024 11_16_20 AM · Câu 22** (id 40580022) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Câu định nghĩa vai trò portfolio manager
+  - Câu hỏi: Ryan is monitoring the organizational planning activities of the organization to help prioritize projects according to fund availability, risk, and strategic mission. What is Ryan's role in the organization?
+- **6_6_2024 11_16_20 AM · Câu 25** (id 40580025) → `lifecycle-33` Program Life Cycle Management · Execute program transition and close-out · low
+  - Lý do: Phối hợp sponsor và khách hàng chuyển component sang production
+  - Câu hỏi: Jenny is a program manager of the C-MAX program. One of her component programs is about to be transitioned to production. With whom should Jenny collaborate to present a request to transit the program component to production?Each correct answer represents a complete solution. Choose all that apply.
+- **6_6_2024 11_16_20 AM · Câu 26** (id 40580026) → `strategy-5` Strategic Program Alignment · Evaluate the program business case · low
+  - Lý do: Câu kiến thức tài liệu pha formulation
+  - Câu hỏi: Which of the following documents are established as part of program formulation activities?Each correct answer represents a complete solution. Choose all that apply.
+- **6_6_2024 11_16_20 AM · Câu 30** (id 40580030) → `stakeholder-7` Stakeholder Engagement · Develop relationships with stakeholders · low
+  - Lý do: Câu kiến thức: engage stakeholder suốt vòng đời
+  - Câu hỏi: In which phase does the program manager make sure that all stakeholders are adequately and appropriately engaged?
+- **6_6_2024 11_16_20 AM · Câu 33** (id 40580033) → `lifecycle-1` Program Life Cycle Management · Develop the program charter · low
+  - Lý do: Câu định nghĩa assumption
+  - Câu hỏi: John is a program manager of a software development project. In the early stages of planning, he and the stakeholders operated with the belief that the software they were developing would work with their organization's current computer operating system. Now that the program team has started developing the software, it has become apparent that the software will not work with nearly half of the organization's computer operating systems. The incorrect belief John had in the software compatibility is an example of what in program management?
+- **6_6_2024 11_16_20 AM · Câu 38** (id 40580038) → `strategy-6` Strategic Program Alignment · Identify and quantify expected benefits · low
+  - Lý do: Câu kiến thức phân tích thông tin lịch sử
+  - Câu hỏi: Ria is recently appointed as a project manager in an organization. She has just started working on a new project. She needs to get some information about the previous project's activities or events to provide sufficient information to the team, which will help the team in making decisions in the current project. Which of the following environmental analyses will help Riya?
+- **6_6_2024 11_16_20 AM · Câu 41** (id 40580041) → `strategy-7` Strategic Program Alignment · Estimate financial framework and nonfinancial benefits · low
+  - Lý do: Câu kiến thức hoạt động quản lý tài chính program
+  - Câu hỏi: Program financial management includes the activities related to which of the following?Each correct answer represents a complete solution. Choose all that apply.
+- **6_6_2024 11_16_20 AM · Câu 46** (id 40580046) → `lifecycle-9` Program Life Cycle Management · Establish the program management plan and schedule · low
+  - Lý do: Câu kiến thức procurement management plan
+  - Câu hỏi: As a program manager, you will view which of the following documents to know how goods and services will be acquired by the program from outside of the performing organization?
+- **6_6_2024 11_16_20 AM · Câu 50** (id 40580050) → `strategy-3` Strategic Program Alignment · Define the high-level roadmap and financial framework · low
+  - Lý do: Đầu ra của hoạt động thiết lập financial framework
+  - Câu hỏi: A program manager has just finished the execution of the program financial framework establishment activity. Which of the following items should the program manager have as part of this activity?Each correct answer represents a complete solution. Choose all that apply.
+- **6_6_2024 11_16_20 AM · Câu 51** (id 40580051) → `lifecycle-30` Program Life Cycle Management · Manage risk per the risk management plan · low
+  - Lý do: Câu kiến thức risk management plan
+  - Câu hỏi: Ana is looking for a document that describes how risk-related activities will be structured and conducted. Which of the following is the required document?
+- **6_6_2024 11_16_20 AM · Câu 54** (id 40580054) → `governance-2` Governance · Select a governance framework · low
+  - Lý do: Định nghĩa vai trò sponsor trong cấu trúc governance
+  - Câu hỏi: Which of the following is an individual or a group responsible for providing resources and support for the program and is accountable for enabling success?
+- **6_6_2024 11_16_20 AM · Câu 65** (id 40580065) → `governance-2` Governance · Select a governance framework · low
+  - Lý do: Trách nhiệm governance của program manager, câu kiến thức chung
+  - Câu hỏi: What are the governance-related responsibilities of a program manager?Each correct answer represents a complete solution. Choose all that apply.
+- **6_6_2024 11_16_20 AM · Câu 68** (id 40580068) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Câu định nghĩa các Performance Domain
+  - Câu hỏi: According to the Standard of Program Management, which of the following are Program Management Performance Domains?Each correct answer represents a complete solution. Choose all that apply.
+- **6_6_2024 11_16_20 AM · Câu 69** (id 40580069) → `benefits-4` Benefits Management · Monitor benefit metrics and take corrective action · low
+  - Lý do: Xác minh deliverable đạt kế hoạch trong quá trình hiện thực benefits
+  - Câu hỏi: You are a senior program manager of your organization. You are currently in the middle of executing a strategic program, called UC-program, of your organization. During the benefit realization process of a subprogram of UC-program, you find that it is very technical for you to decide whether a specific deliverable delivered was as planned or not. What should you do?Each correct answer represents a complete solution. Choose all that apply.
+- **6_6_2024 11_16_20 AM · Câu 70** (id 40580070) → `benefits-1` Benefits Management · Develop the benefits realization plan · low
+  - Lý do: Vai trò program manager trong quản lý benefits, câu chung
+  - Câu hỏi: Which of the following best describe the role of a program manager in benefits management?Each correct answer represents a complete solution. Choose all that apply.
+- **6_6_2024 11_16_20 AM · Câu 75** (id 40580075) → `lifecycle-32` Program Life Cycle Management · Conduct program closure under governance · low
+  - Lý do: Hoạt động hỗ trợ trong pha đóng program, câu kiến thức
+  - Câu hỏi: A program life cycle consists of program definition, program delivery, and program closure phases. To support these phases, a list of program activities is performed to accomplish its successful delivery. The closure phase is one of the important phases of the program and is not part of which of the following supporting program activities?
+- **6_6_2024 11_16_20 AM · Câu 79** (id 40580079) → `stakeholder-7` Stakeholder Engagement · Develop relationships with stakeholders · low
+  - Lý do: Câu khái niệm chung về stakeholder engagement
+  - Câu hỏi: Which of the following statements are true of stakeholder engagement?Each correct answer represents a complete solution. Choose all that apply.
+- **6_6_2024 11_16_20 AM · Câu 89** (id 40580089) → `lifecycle-1` Program Life Cycle Management · Develop the program charter · low
+  - Lý do: Khái niệm ràng buộc ngân sách, câu kiến thức
+  - Câu hỏi: John has started working on a program whose budget is specified. He has a doubt that the program investment may exceed the specified budget. He needs to take care of the predetermined budget of the program so that the program scope will not get affected. Which of the following factors should John consider?
+- **6_6_2024 11_16_20 AM · Câu 93** (id 40580093) → `strategy-7` Strategic Program Alignment · Estimate financial framework and nonfinancial benefits · low
+  - Lý do: Chi phí program chủ yếu nằm ở các component
+  - Câu hỏi: You are helping John, a new program manager in your organization. He is currently preparing the program cost estimates for his new, assigned program. He wants to know how the program's cost is attributed. What will you reply to John?
+- **6_6_2024 11_16_20 AM · Câu 94** (id 40580094) → `lifecycle-21` Program Life Cycle Management · Execute program management plans · low
+  - Lý do: Định nghĩa hoạt động quản lý delivery các component
+  - Câu hỏi: The program delivery management activity contains which of the following for delivering the capabilities and benefits needed for the organization to realize value?
+- **6_6_2024 11_16_20 AM · Câu 95** (id 40580095) → `governance-2` Governance · Select a governance framework · low
+  - Lý do: Phân biệt program governance và program management
+  - Câu hỏi: Two program managers, Shelly and Jack are discussing the difference between program management and program governance. Shelly says program governance includes the framework, functions, and processes by which a program is monitored, managed, and supported for meeting the organizational strategic and operational goals and program management is the application of knowledge, skills, tools, and techniques. However, Jack says program governance is one of the performance domains that is all about managing program activities required for facilitating effective program definition, program delivery, and program closure and program management is an ongoing function in an organization that performs activities that produce products or services. Which of the following will be the correct answer?
+- **6_6_2024 11_16_20 AM · Câu 101** (id 40580101) → `governance-10` Governance · Monitor the business environment for alignment · low
+  - Lý do: Định nghĩa domain về alignment chiến lược, câu chung
+  - Câu hỏi: Which domain clarifies the vision of the organization, facilitates alignment of the program with organizational strategy, and enables the periodic balancing of program demands with current organizational capabilities?
+- **6_6_2024 11_16_20 AM · Câu 106** (id 40580106) → `governance-10` Governance · Monitor the business environment for alignment · low
+  - Lý do: Vai trò yếu tố môi trường doanh nghiệp, câu chung
+  - Câu hỏi: How does the consideration of enterprise environmental factors help?Each correct answer represents a complete solution. Choose all that apply.
+- **6_6_2024 11_16_20 AM · Câu 110** (id 40580110) → `lifecycle-9` Program Life Cycle Management · Establish the program management plan and schedule · low
+  - Lý do: Định nghĩa domain Life Cycle Management, câu chung
+  - Câu hỏi: Which of the following domains manages the activities of the program required for facilitating effective program definition, program delivery, and program closure?
+- **6_6_2024 11_16_20 AM · Câu 120** (id 40580120) → `lifecycle-1` Program Life Cycle Management · Develop the program charter · low
+  - Lý do: Khái niệm ràng buộc hạn chế sự linh hoạt, câu kiến thức
+  - Câu hỏi: Flora is managing a water alleviation program of an organization. She has established her program team and the program management office. She conducts regular meetings with key stakeholders and communicates frequently with the program sponsor. High priority and aggressive schedule of the program has become a challenge for her. Also, as a program manager, she needs to work with stakeholders at all levels as well as with her team and the program governance board. Her flexibility is limited by ____.
+- **6_6_2024 11_16_20 AM · Câu 128** (id 40580128) → `governance-2` Governance · Select a governance framework · low
+  - Lý do: Thành phần của program governance, câu định nghĩa
+  - Câu hỏi: Program governance includes which of the following for managing and monitoring a program?Each correct answer represents a complete solution. Choose all that apply.
+- **6_6_2024 11_16_20 AM · Câu 129** (id 40580129) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Phân biệt program và portfolio, câu định nghĩa
+  - Câu hỏi: Which of the following aspects are considered when defining the difference between programs and portfolios? Each correct answer represents a complete solution. Choose all that apply.
+- **6_6_2024 11_16_20 AM · Câu 132** (id 40580132) → `stakeholder-1` Stakeholder Engagement · Identify stakeholders and create the stakeholder matrix · low
+  - Lý do: Trách nhiệm các stakeholder chính, câu định nghĩa
+  - Câu hỏi: Which of the following responsibilities of a key stakeholder is not correct?
+- **6_6_2024 11_16_20 AM · Câu 133** (id 40580133) → `governance-2` Governance · Select a governance framework · low
+  - Lý do: Vai trò sponsor: đảm bảo tài chính, chọn program manager
+  - Câu hỏi: Who is responsible for securing financing for the program and selecting the program manager responsible for conducting and managing the program?
+- **6_6_2024 11_16_20 AM · Câu 137** (id 40580137) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Xác định sáng kiến tổ chức trong hoạch định chiến lược
+  - Câu hỏi: Stella is working as a program manager in an organization. During the organization's strategic planning, she needs to define organizational goals and activities. Which of the following should be identified and documented for this purpose?
+- **6_6_2024 11_16_20 AM · Câu 140** (id 40580140) → `lifecycle-9` Program Life Cycle Management · Establish the program management plan and schedule · low
+  - Lý do: Đầu ra quản lý procurement là RFP
+  - Câu hỏi: Which of the following is/are the output of the program procurement management activity?
+- **6_6_2024 11_16_20 AM · Câu 142** (id 40580142) → `governance-2` Governance · Select a governance framework · low
+  - Lý do: Trách nhiệm steering committee, câu định nghĩa
+  - Câu hỏi: Your program organization chart includes a program steering committee. Which of the following is not a part of the program steering committee responsibilities?
+- **6_6_2024 11_16_20 AM · Câu 144** (id 40580144) → `governance-11` Governance · Support the program integration management plan · low
+  - Lý do: Trách nhiệm tích hợp kết quả component vào sản phẩm cuối
+  - Câu hỏi: Ria is working on a program, which will create new software and install new hardware for her organization. She realized that there is a requirement to integrate the program components' deliverables, outcomes, and benefits into the program's end product, services, or results, such that the program delivers its intended benefits. Who is responsible for fulfilling this requirement?
+- **6_6_2024 11_16_20 AM · Câu 145** (id 40580145) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Định nghĩa pha program definition
+  - Câu hỏi: Which phase contains activities that are executed as the result of an organization's plan for accomplishing strategic objectives or achieving the desired state within an organization's portfolio?
+- **6_6_2024 11_16_20 AM · Câu 149** (id 40580149) → `benefits-1` Benefits Management · Develop the benefits realization plan · low
+  - Lý do: Vai trò program manager trong benefits, câu chung
+  - Câu hỏi: Which of the following describes the role of a program manager in benefits management?
+- **6_6_2024 11_19_40 AM · Câu 4** (id 40780004) → `lifecycle-9` Program Life Cycle Management · Establish the program management plan and schedule · low
+  - Lý do: Pha bắt đầu sau khi charter được duyệt
+  - Câu hỏi: Which phase or subphase begins upon the formal approval of the program charter document by the program steering committee?
+- **6_6_2024 11_19_40 AM · Câu 8** (id 40780008) → `lifecycle-9` Program Life Cycle Management · Establish the program management plan and schedule · low
+  - Lý do: Đầu ra procurement: tiêu chí đánh giá, mời thầu
+  - Câu hỏi: The outputs of the program procurement management activity includes which of the following?Each correct answer represents a complete solution. Choose all that apply.
+- **6_6_2024 11_19_40 AM · Câu 10** (id 40780010) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Khái niệm relatedness của program, câu định nghĩa
+  - Câu hỏi: Which of the following aspects best describes the concept of relatedness in a program?
+- **6_6_2024 11_19_40 AM · Câu 12** (id 40780012) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Định nghĩa domain Strategy Alignment
+  - Câu hỏi: Which of the following domains is all about identifying program outputs and outcomes for providing benefits aligned with the organization's goals and objectives?
+- **6_6_2024 11_19_40 AM · Câu 15** (id 40780015) → `governance-8` Governance · Contribute to the lessons learned repository · low
+  - Lý do: Thông tin lịch sử dùng trong program, câu kiến thức
+  - Câu hỏi: Which of the following are part of the historical information in program management?Each correct answer represents a complete solution. Choose all that apply.
+- **6_6_2024 11_19_40 AM · Câu 18** (id 40780018) → `lifecycle-9` Program Life Cycle Management · Establish the program management plan and schedule · low
+  - Lý do: Thành phần chiến lược phản hồi rủi ro trong kế hoạch
+  - Câu hỏi: Program risk response strategy integrates the elements of which of the following into a plan for managing program risks effectively and consistently throughout the program life cycle?Each correct answer represents a complete solution. Choose all that apply.
+- **6_6_2024 11_19_40 AM · Câu 19** (id 40780019) → `lifecycle-2` Program Life Cycle Management · Translate strategic objectives into program scope · low
+  - Lý do: Khái niệm scope complexity, câu định nghĩa
+  - Câu hỏi: Which program complexity occurs when there is difficulty in clearly defining the deliverables and benefits of a program and its components?
+- **6_6_2024 11_19_40 AM · Câu 29** (id 40780029) → `stakeholder-5` Stakeholder Engagement · Define and maintain stakeholder communications · low
+  - Lý do: Định nghĩa quản lý truyền thông program
+  - Câu hỏi: Which of the following includes the activities that are necessary for the timely and appropriate generation, collection, distribution, storage, retrieval, and ultimate disposition of program information?
+- **6_6_2024 11_19_40 AM · Câu 31** (id 40780031) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Định nghĩa business value, kiến thức chung
+  - Câu hỏi: Which of the following statements are true about business value?Each correct answer represents a complete solution. Choose all that apply.
+- **6_6_2024 11_19_40 AM · Câu 32** (id 40780032) → `strategy-6` Strategic Program Alignment · Identify and quantify expected benefits · low
+  - Lý do: Câu bị cắt; giai đoạn benefits identification
+  - Câu hỏi: Katy is a member of the program steering committee. She realized that the resources in terms of both people and funding are major constraints. She also works for a pharmaceutical company, and all her work is heavily audited to ensure that her country's food and drug administration follows the best practices. She should consider legal and regulatory constraints while making selection decisions as the products must be submitted to the Food and Drug Administration for approval. Therefore, one of the key criterion that her committee uses is benefits to be realized and sustained by the products of the programs and projects. In which phase of the benefits management life cycle are program benefits qualified?
+- **6_6_2024 11_19_40 AM · Câu 34** (id 40780034) → `strategy-3` Strategic Program Alignment · Define the high-level roadmap and financial framework · low
+  - Lý do: Hoạt động thuộc pha definition, financial framework
+  - Câu hỏi: Which of the following phases come under the program definition phase of the program life cycle?Each correct answer represents a complete solution. Choose all that apply.
+- **6_6_2024 11_19_40 AM · Câu 38** (id 40780038) → `lifecycle-9` Program Life Cycle Management · Establish the program management plan and schedule · low
+  - Lý do: Luồng thông tin program-component trong pha definition
+  - Câu hỏi: Which of the following statements are true regarding the flow of information during the definition phase of a program?Each correct answer represents a complete solution. Choose all that apply.
+- **6_6_2024 11_19_40 AM · Câu 40** (id 40780040) → `stakeholder-4` Stakeholder Engagement · Maintain program visibility and support · low
+  - Lý do: Metric đo mức engagement của stakeholder
+  - Câu hỏi: What are the primary metrics for stakeholder engagement?Each correct answer represents a complete solution. Choose all that apply.
+- **6_6_2024 11_19_40 AM · Câu 41** (id 40780041) → `lifecycle-16` Program Life Cycle Management · Charter and initiate constituent components · low
+  - Lý do: Hoạt động quản lý delivery component, kiến thức chung
+  - Câu hỏi: All of the following are part of the program delivery management activity except for which one?
+- **6_6_2024 11_19_40 AM · Câu 45** (id 40780045) → `governance-2` Governance · Select a governance framework · low
+  - Lý do: Vai trò governance board về vision và mục tiêu
+  - Câu hỏi: Who among the following is responsible for making sure that any program within its area of authority defines its vision and goals for effectively supporting those of the organization?
+- **6_6_2024 11_19_40 AM · Câu 49** (id 40780049) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Lý do tổ chức xây chiến lược, khái niệm
+  - Câu hỏi: John is recently appointed as a program manager in XYZ Inc. He has to manage an organization program. He started to review the program alignment with the organization strategy. Which of the following statements describes why organizations need to build a strategy?
+- **6_6_2024 11_19_40 AM · Câu 50** (id 40780050) → `stakeholder-5` Stakeholder Engagement · Define and maintain stakeholder communications · low
+  - Lý do: Kỹ năng giao tiếp của program manager
+  - Câu hỏi: Stella is assuming a position in a company that has not had much experience with program management. She will be leading the program team and performing a business function for her program. The business case has already been made, and the program is scheduled to move into the program initiation phase. What is her most important skill as a program manager?
+- **6_6_2024 11_19_40 AM · Câu 51** (id 40780051) → `governance-2` Governance · Select a governance framework · low
+  - Lý do: Vai trò PM trong cấu trúc governance
+  - Câu hỏi: Who is an important part of the program governance structure and manages the relationship of the program with the overall governance framework?
+- **6_6_2024 11_19_40 AM · Câu 56** (id 40780056) → `governance-11` Governance · Support the program integration management plan · low
+  - Lý do: Trọng tâm program integration management
+  - Câu hỏi: The program integration management focuses on which of the following activities for identifying, defining, combining, unifying, and coordinating multiple components into the program?Each correct answer represents a complete solution. Choose all that apply.
+- **6_6_2024 11_19_40 AM · Câu 59** (id 40780059) → `strategy-5` Strategic Program Alignment · Evaluate the program business case · low
+  - Lý do: Xác định pha khi lập business case
+  - Câu hỏi: Ana, a program manager, is establishing the business case and confirming for the program and then developing the detailed plan for the program. In which phase is the program manager working?
+- **6_6_2024 11_19_40 AM · Câu 61** (id 40780061) → `governance-1` Governance · Develop program management standards and structure · low
+  - Lý do: Phẩm chất của sponsor, vai trò governance
+  - Câu hỏi: An effective program sponsor should have which of the following attributes?Each correct answer represents a complete solution. Choose all that apply.
+- **6_6_2024 11_19_40 AM · Câu 66** (id 40780066) → `lifecycle-30` Program Life Cycle Management · Manage risk per the risk management plan · low
+  - Lý do: Định nghĩa risk threshold
+  - Câu hỏi: You are performing a risk assessment of a program. After conducting interviews and meetings with the stakeholders, you have fixed a certain amount of risk that organizations and stakeholders are willing to accept. Which term is described in the given scenario?
+- **6_6_2024 11_19_40 AM · Câu 68** (id 40780068) → `strategy-9` Strategic Program Alignment · Obtain program approval with the program charter · low
+  - Lý do: Mục đích pha definition, xin phê duyệt
+  - Câu hỏi: What are the primary purposes of the program definition phase?Each correct answer represents a complete solution. Choose all that apply.
+- **6_6_2024 11_19_40 AM · Câu 71** (id 40780071) → `stakeholder-1` Stakeholder Engagement · Identify stakeholders and create the stakeholder matrix · low
+  - Lý do: Câu bị cắt, phân tích ảnh hưởng stakeholder
+  - Câu hỏi: Gisselle is a program manager of her company. She is managing a T-MAX program, where she is required to integrate the back-office components of the company's system into a single system. The system includes information regarding sales, accounting, finance, personnel, program, and project management. She has reviewed the program business case and charter documents and uses the program management office's methodology both at the program and project levels. She has also performed a comprehensive analysis on how each stakeholder will be affected by the program's outcome. Till now she has identified 20 stakeholders and will add in her list as the program progresses. Apart from these activities, who will be the person responsible for providing resources on this program?
+- **6_6_2024 11_19_40 AM · Câu 75** (id 40780075) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Phân biệt trách nhiệm program và portfolio manager
+  - Câu hỏi: All of the following represent the responsibilities that a program manager has in an organization, except for which one?
+- **6_6_2024 11_19_40 AM · Câu 81** (id 40780081) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Sponsor được chỉ định ở pha formulation
+  - Câu hỏi: During which of the following phases is a program sponsor assigned by the sponsoring organization to oversee and govern the program?
+- **6_6_2024 11_19_40 AM · Câu 82** (id 40780082) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Khác biệt project và operation, kiến thức chung
+  - Câu hỏi: As a project manager, you must be able to discern the difference between a project and an operation from the onset of a potential project. Projects have all the following characteristics except for which one?
+- **6_6_2024 11_19_40 AM · Câu 94** (id 40780094) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Khái niệm subsidiary program
+  - Câu hỏi: John worked previously in XYZ Inc, which is considered as one of the first project-based organization that considers projects and programs as strategic assets for the organization. As his current organization has begun the same initiative to manage multiple related projects as a program, he realized that the organization also needs to manage independent initiatives in the program for ease of oversight and control. Which of the following will help John to manage these initiatives?
+- **6_6_2024 11_19_40 AM · Câu 97** (id 40780097) → `lifecycle-22` Program Life Cycle Management · Consolidate project and program data · low
+  - Lý do: Báo cáo đầu ra quản lý hợp đồng
+  - Câu hỏi: Lisa has finished the execution of the program contract administration activity. What are the artifacts that are expected to be produced after this activity?Each correct answer represents a complete solution. Choose all that apply.
+- **6_6_2024 11_19_40 AM · Câu 102** (id 40780102) → `lifecycle-9` Program Life Cycle Management · Establish the program management plan and schedule · low
+  - Lý do: PM đảm bảo kế hoạch project khớp program
+  - Câu hỏi: Who among the following is responsible for ensuring individual project management plans are aligned with the program's goals and intended benefits to support the achievement of the organization's strategic goals and objectives?
+- **6_6_2024 11_19_40 AM · Câu 104** (id 40780104) → `benefits-1` Benefits Management · Develop the benefits realization plan · low
+  - Lý do: Thứ tự pha benefits, kiến thức chung
+  - Câu hỏi: After completing the benefits analysis and planning phase, what is the next phase that should be performed by a program manager?
+- **6_6_2024 11_19_40 AM · Câu 106** (id 40780106) → `governance-2` Governance · Select a governance framework · low
+  - Lý do: Vai trò steering committee
+  - Câu hỏi: All the statements about the program steering committee are true except for which one?
+- **6_6_2024 11_19_40 AM · Câu 110** (id 40780110) → `lifecycle-9` Program Life Cycle Management · Establish the program management plan and schedule · low
+  - Lý do: Lập team phát triển program management plan
+  - Câu hỏi: April is one of the members of the program steering committee. She is also the head of the program for developing the next generation water treatment system. During the committee call meeting, it was decided which programs the committee will be going to pursue this year. The program to develop the water treatment system was approved. Since April now has the authorization to proceed, the committee then has to:
+- **6_6_2024 11_19_40 AM · Câu 115** (id 40780115) → `governance-3` Governance · Obtain approval through stage gate reviews · low
+  - Lý do: Governance cho phép thay đổi chiến lược
+  - Câu hỏi: Which of the following domains helps in providing an important means through which programs pursue authorization and support for dynamically changing program strategies or plans in response to emergent outcomes or results?
+- **6_6_2024 11_19_40 AM · Câu 116** (id 40780116) → `lifecycle-30` Program Life Cycle Management · Manage risk per the risk management plan · low
+  - Lý do: Rủi ro program và project, kiến thức chung
+  - Câu hỏi: Two program managers, Kate and Jenny are discussing about the difference between program and project risks. Kate says program risks are managed by the program managers, and project risks are managed by the project managers. However, Jenny says project risks are identified prior to the program risks. Which of the following will be the correct statement regarding program and project risks?
+- **6_6_2024 11_19_40 AM · Câu 117** (id 40780117) → `stakeholder-5` Stakeholder Engagement · Define and maintain stakeholder communications · low
+  - Lý do: Loại hình giao tiếp không chính thức
+  - Câu hỏi: A program manager is communicating with her program team members through emails, small group conversations, and staff meetings. Which type of communication is she using?
+- **6_6_2024 11_19_40 AM · Câu 118** (id 40780118) → `strategy-7` Strategic Program Alignment · Estimate financial framework and nonfinancial benefits · low
+  - Lý do: Phân loại tangible benefits
+  - Câu hỏi: Stella is meeting with her organization's program selection committee. She is selecting one of the two programs to undertake, as her organization has limited resources. She's focusing on the overall benefits of the programs, as the return on investment and payback periods for the programs are identical. One of the programs deliver benefits such as the reduction in cost, increased revenue, and improved cash management. These benefits are examples of what?
+- **6_6_2024 11_19_40 AM · Câu 123** (id 40780123) → `lifecycle-30` Program Life Cycle Management · Manage risk per the risk management plan · low
+  - Lý do: Định nghĩa risk appetite
+  - Câu hỏi: Jenny, a program manager, wonders what the meaning of risk appetite is, how can you help her?
+- **6_6_2024 11_19_40 AM · Câu 129** (id 40780129) → `stakeholder-2` Stakeholder Engagement · Analyze stakeholders and plan engagement · low
+  - Lý do: Câu bị cắt, stakeholder engagement plan
+  - Câu hỏi: Sally is leading a program to develop a mobile product, which is GPS enabled and has advanced positioning features. This product will help in knowing the position of caller/receiver while speaking, which will certainly help to avoid ongoing crimes in the country. Looking after the product with its advanced risk remediation features, Sally's company has approved its business case quickly as it recognizes that the product will have a huge market demand. This program has been supported by the executive board and has got go-ahead for its execution. To track the progress of a programmer, the governance board meets bi-weekly. During the last two meetings, it was found that the industry head or its delegate did not attend the meetings. According to the given scenario, metrics to measure the performance of the stakeholder engagement activities, such as meetings are contained in the ______.
+- **6_6_2024 11_19_40 AM · Câu 131** (id 40780131) → `stakeholder-3` Stakeholder Engagement · Negotiate stakeholder support and expectations · low
+  - Lý do: Khách hàng đánh giá thành công program
+  - Câu hỏi: You are a program manager of your organization. When a project in your program is completed, who will finally judge whether the program is successful or not?
+- **6_6_2024 11_19_40 AM · Câu 139** (id 40780139) → `strategy-9` Strategic Program Alignment · Obtain program approval with the program charter · low
+  - Lý do: Charter là cơ sở trách nhiệm của PM
+  - Câu hỏi: With respect to which of the following documents does the program manager assume responsibility and accountability for effectively managing programs in the pursuit of organizational goals as authorized by the program steering committee?
+- **6_6_2024 11_19_40 AM · Câu 144** (id 40780144) → `stakeholder-1` Stakeholder Engagement · Identify stakeholders and create the stakeholder matrix · low
+  - Lý do: Định nghĩa stakeholder
+  - Câu hỏi: Which is the most accurate statement about a program stakeholder?
+- **6_6_2024 11_19_40 AM · Câu 150** (id 40780150) → `strategy-9` Strategic Program Alignment · Obtain program approval with the program charter · low
+  - Lý do: Câu vai trò sponsor uỷ quyền nguồn lực và gắn chiến lược
+  - Câu hỏi: Who authorizes the program management team to utilize organizational resources for executing the program and linking the program to the organization's strategic objectives?
+- **6_6_2024 11_22_10 AM · Câu 28** (id 40930028) → `strategy-7` Strategic Program Alignment · Estimate financial framework and nonfinancial benefits · low
+  - Lý do: Quyết định đầu tư từ nhà đầu tư ngoài thuộc governance board
+  - Câu hỏi: A pen making US-based company has thrived an advanced technology fountain pen program in joint collaboration with a multinational company. A number of business tycoons from other countries are interested in investment for this program. Who should primarily be involved in making this decision?
+- **6_6_2024 11_22_10 AM · Câu 29** (id 40930029) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Định nghĩa SWOT, kiến thức đánh giá chung
+  - Câu hỏi: Holly is a new program manager of the HQQ program for his organization. Bob, the project sponsor, has asked him to use SWOT analysis for the component program based on a cost overrun, but he is unaware of this analysis. As an experienced program manager, what will be your answer?
+- **6_6_2024 11_22_10 AM · Câu 35** (id 40930035) → `lifecycle-1` Program Life Cycle Management · Develop the program charter · low
+  - Lý do: Câu kiến thức: formulation và planning thuộc definition phase
+  - Câu hỏi: The program formulation and program planning subphases are parts of which of the following?
+- **6_6_2024 11_22_10 AM · Câu 36** (id 40930036) → `benefits-1` Benefits Management · Develop the benefits realization plan · low
+  - Lý do: Khái niệm cách program mang lại benefits
+  - Câu hỏi: In which of the following ways do programs deliver benefits to the sponsor organizations?
+- **6_6_2024 11_22_10 AM · Câu 46** (id 40930046) → `governance-1` Governance · Develop program management standards and structure · low
+  - Lý do: Câu kiến thức về hoạt động hỗ trợ quản lý và governance
+  - Câu hỏi: Which of the following are the program activities that support program management and governance?
+- **6_6_2024 11_22_10 AM · Câu 50** (id 40930050) → `governance-2` Governance · Select a governance framework · low
+  - Lý do: Câu vai trò sponsor là champion của program
+  - Câu hỏi: Who is the program champion and provides resources and support for the program?
+- **6_6_2024 11_22_10 AM · Câu 55** (id 40930055) → `governance-1` Governance · Develop program management standards and structure · low
+  - Lý do: Câu vai trò PMO hỗ trợ governance
+  - Câu hỏi: Who provides professional expertise using staff, highly trained in applying program governance practices for providing oversight, support, and decision-making capability to the program?
+- **6_6_2024 11_22_10 AM · Câu 61** (id 40930061) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Câu kiến thức nguồn phức tạp trong program
+  - Câu hỏi: The sources of complexity within programs and projects can be grouped into which of the following?
+- **6_6_2024 11_22_10 AM · Câu 65** (id 40930065) → `governance-2` Governance · Select a governance framework · low
+  - Lý do: Câu vai trò program manager với governance
+  - Câu hỏi: Jack is working in an organization where he is managing the M-Tel program. He is responsible for management and oversight of the interactions of the program with the program governance function. He is also making decisions on behalf of the program steering committee. Jack is performing the responsibilities of which of the following?
+- **6_6_2024 11_22_10 AM · Câu 69** (id 40930069) → `governance-2` Governance · Select a governance framework · low
+  - Lý do: Câu định nghĩa domain Governance
+  - Câu hỏi: Which of the following domains enables and performs program decision making, establishes practices to support the program, and maintain program oversight?
+- **6_6_2024 11_22_10 AM · Câu 70** (id 40930070) → `benefits-6` Benefits Management · Maintain the benefits register · low
+  - Lý do: Rà benefits register thấy benefits cuối program, đáp án mơ hồ
+  - Câu hỏi: Alice is a program manager for his organization. He has been assigned a four years' program for building a bridge. Alice assignment has started in the third year of the program. After he joined this program, he reviewed the program benefits register and discovered that the benefits are realized only at the end of the program. What should Alice do?
+- **6_6_2024 11_22_10 AM · Câu 76** (id 40930076) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Câu định nghĩa portfolio
+  - Câu hỏi: Which of the following statements describe a portfolio?
+- **6_6_2024 11_22_10 AM · Câu 77** (id 40930077) → `strategy-7` Strategic Program Alignment · Estimate financial framework and nonfinancial benefits · low
+  - Lý do: Ví dụ yếu tố vô hình, gần benefits phi tài chính
+  - Câu hỏi: Which of the following are examples of intangible elements?
+- **6_6_2024 11_22_10 AM · Câu 80** (id 40930080) → `governance-2` Governance · Select a governance framework · low
+  - Lý do: Câu vai trò steering committee
+  - Câu hỏi: Jack is a member of the program steering committee. What are his responsibilities?
+- **6_6_2024 11_22_10 AM · Câu 97** (id 40930097) → `governance-2` Governance · Select a governance framework · low
+  - Lý do: Câu định nghĩa domain Governance
+  - Câu hỏi: Which of the following domains includes the policies, procedures, and processes used for reviewing the program, analyzing the results, and making decisions about the program?
+- **6_6_2024 11_22_10 AM · Câu 103** (id 40930103) → `strategy-6` Strategic Program Alignment · Identify and quantify expected benefits · low
+  - Lý do: Định nghĩa comparative advantage
+  - Câu hỏi: You are a program manager in XYZ Inc., which is specialized in producing and exporting only goods and services. XYZ Inc. produces goods and services more efficiently and at lower opportunity cost, than other goods and services, which should be imported. This is an example of which of the following?
+- **6_6_2024 11_22_10 AM · Câu 105** (id 40930105) → `governance-2` Governance · Select a governance framework · low
+  - Lý do: Trách nhiệm governance của project manager
+  - Câu hỏi: What are the governance-related responsibilities of a project manager?
+- **6_6_2024 11_22_10 AM · Câu 111** (id 40930111) → `benefits-1` Benefits Management · Develop the benefits realization plan · low
+  - Lý do: Câu chung về mục đích benefits management
+  - Câu hỏi: For which of the following purposes does the program manager use program benefits management?
+- **6_6_2024 11_22_10 AM · Câu 113** (id 40930113) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Câu định nghĩa strategic alignment
+  - Câu hỏi: Which of the following statements are true about strategic alignment?
+- **6_6_2024 11_22_10 AM · Câu 121** (id 40930121) → `governance-10` Governance · Monitor the business environment for alignment · low
+  - Lý do: Câu kiến thức performance domain phối hợp giữ alignment chiến lược
+  - Câu hỏi: Which performance domain integrates with the Benefits Management Performance domain for ensuring that the program is continuously aligned with the organizational strategy?
+- **6_6_2024 11_22_10 AM · Câu 123** (id 40930123) → `benefits-1` Benefits Management · Develop the benefits realization plan · low
+  - Lý do: Câu khái niệm phân biệt benefits và deliverables
+  - Câu hỏi: Which of the following statements describes the difference between deliverables and benefits?
+- **6_6_2024 11_22_10 AM · Câu 132** (id 40930132) → `lifecycle-21` Program Life Cycle Management · Execute program management plans · low
+  - Lý do: Cách tổ chức procurement tập trung cấp program
+  - Câu hỏi: A program manager is thinking about the most effective way to conduct program procurements. Which of the following options will be correct for the program manager?
+- **6_6_2024 11_22_10 AM · Câu 136** (id 40930136) → `governance-1` Governance · Develop program management standards and structure · low
+  - Lý do: Câu kiến thức liệt kê các performance domain
+  - Câu hỏi: Smith is taking a class on Program Management. His instructor, Ryan, is conducting this session to discuss the performance domains in the program life cycle. Which of the following performance domains will Ryan include in this session?
+- **6_6_2024 11_22_10 AM · Câu 141** (id 40930141) → `lifecycle-7` Program Life Cycle Management · Develop a detailed program scope statement · low
+  - Lý do: Khái niệm scope complexity khi khó định nghĩa deliverable
+  - Câu hỏi: Which of the following program complexity occurs when there is difficulty in clearly defining the deliverables and benefits of a program and its components?
+- **6_6_2024 11_22_10 AM · Câu 144** (id 40930144) → `benefits-1` Benefits Management · Develop the benefits realization plan · low
+  - Lý do: Câu định nghĩa program outcomes
+  - Câu hỏi: Which of the following statements describes the program outcomes?
+- **6_6_2024 11_22_10 AM · Câu 147** (id 40930147) → `governance-1` Governance · Develop program management standards and structure · low
+  - Lý do: Câu kiến thức vai trò program sponsor
+  - Câu hỏi: As a program sponsor, what will be your responsibilities in an organization?
+- **6_6_2024 11_22_10 AM · Câu 148** (id 40930148) → `lifecycle-9` Program Life Cycle Management · Establish the program management plan and schedule · low
+  - Lý do: Câu kiến thức các phase vòng đời program
+  - Câu hỏi: For successful delivery of benefits to an organization, programs are implemented using which of the following major phases?
+- **6_6_2024 11_22_10 AM · Câu 149** (id 40930149) → `stakeholder-1` Stakeholder Engagement · Identify stakeholders and create the stakeholder matrix · low
+  - Lý do: Câu kiến thức customer là stakeholder chủ chốt
+  - Câu hỏi: Who is a key stakeholder in the final result of the program and will influence whether the program is judged to be successful or not?
+- **6_6_2024 11_30_39 AM · Câu 2** (id 41439002) → `stakeholder-2` Stakeholder Engagement · Analyze stakeholders and plan engagement · low
+  - Lý do: Câu kiến thức lý do stakeholder kháng cự thay đổi
+  - Câu hỏi: Which of the following would be the most common reason for program stakeholders (even more than project stakeholders) to resist it?
+- **6_6_2024 11_30_39 AM · Câu 13** (id 41439013) → `lifecycle-21` Program Life Cycle Management · Execute program management plans · low
+  - Lý do: Tiêu chí đánh giá nhà cung cấp trong procurement program
+  - Câu hỏi: In order to optimize the procurements under the umbrella of the program by consolidating and offering bunched contracts, a program manager has invited existing suppliers and some new ones to a bidder conference. How should the program team evaluate the sellers at the end of this process?
+- **6_6_2024 11_30_39 AM · Câu 14** (id 41439014) → `governance-1` Governance · Develop program management standards and structure · low
+  - Lý do: Câu kiến thức trách nhiệm của program manager
+  - Câu hỏi: Which of the following is not the responsibility of the program manager?
+- **6_6_2024 11_30_39 AM · Câu 24** (id 41439024) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Câu kiến thức phân biệt program và project lớn
+  - Câu hỏi: A 50 year old construction company is building a large complex in a suburban center. The deadline for full roll-out is 5 years. There are residential apartments, office blocks, a shopping mall and a cinema hall. Work is proceeding in 3 shifts with over 800 workers present onsite along with 200 contractors. Based on this information, this seems to be an example of:
+- **6_6_2024 11_30_39 AM · Câu 29** (id 41439029) → `governance-1` Governance · Develop program management standards and structure · low
+  - Lý do: Câu kiến thức vai trò hỗ trợ của PMO
+  - Câu hỏi: A program manager recently transitioned into the role and was assigned to a program that was running for a while. She was asked to take help from the Program Management Office as needed. Which of the following will be least likely form of assistance that she can expect from the program management office?
+- **6_6_2024 11_30_39 AM · Câu 30** (id 41439030) → `stakeholder-2` Stakeholder Engagement · Analyze stakeholders and plan engagement · low
+  - Lý do: Cách phản hồi RFP, ít liên quan task rõ ràng
+  - Câu hỏi: A program is creating a dealer and service network for a luxury car being newly launched in a foreign country. An RFP has been floated among the well known car dealers in the country. How should the interested dealers respond?
+- **6_6_2024 11_30_39 AM · Câu 35** (id 41439035) → `lifecycle-21` Program Life Cycle Management · Execute program management plans · low
+  - Lý do: Chọn vendor theo năng lực kỹ thuật trong procurement
+  - Câu hỏi: A project part of a large aerospace component design program is in vendor selection proces. The assignment is to conduct a very complex strength analysis for a material and for which the project has no in-house expertise. The project manager approached the program manager for help. Which of the following vendors should the program manager recommend?
+- **6_6_2024 11_30_39 AM · Câu 36** (id 41439036) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Câu kiến thức vì sao program rủi ro cao hơn project
+  - Câu hỏi: Which is the most important reason that there is a higher level of risk within a program than a project?
+- **6_6_2024 11_30_39 AM · Câu 44** (id 41439044) → `lifecycle-21` Program Life Cycle Management · Execute program management plans · low
+  - Lý do: Chọn loại hợp đồng phù hợp khi outsource
+  - Câu hỏi: A project manager in consultation with the program manager decided to outsource a complex piece of work on her project, as the project did not have in-house technical expertise. The contract is about to be finalized. The project manager requests the program manager for suggestions regarding the appropriate contract type to be used. What should be the program manager's response?
+- **6_6_2024 11_30_39 AM · Câu 54** (id 41439054) → `strategy-7` Strategic Program Alignment · Estimate financial framework and nonfinancial benefits · low
+  - Lý do: Diễn đạt benefits của program cho lãnh đạo
+  - Câu hỏi: A program manager working at a bank is suggesting roll out of a new system for managing cash counters across the bank which will speed up transactions and reduce customer waiting time. What is the least effective articulation of the benefits of this program to the bank's executives?
+- **6_6_2024 11_30_39 AM · Câu 63** (id 41439063) → `stakeholder-2` Stakeholder Engagement · Analyze stakeholders and plan engagement · low
+  - Lý do: Câu kiến thức phân vai quản lý stakeholder program và project
+  - Câu hỏi: In a program with a large number of projects, who is responsible for stakeholder management and why?
+- **6_6_2024 11_30_39 AM · Câu 66** (id 41439066) → `lifecycle-9` Program Life Cycle Management · Establish the program management plan and schedule · low
+  - Lý do: Câu kiến thức loại dependency nội bộ program
+  - Câu hỏi: The output of Project B is a critical input for project A. Project A and B are both part of the same program. From the program perspective, this is an example of:
+- **6_6_2024 11_30_39 AM · Câu 68** (id 41439068) → `lifecycle-28` Program Life Cycle Management · Manage changes per the change management plan · low
+  - Lý do: Câu kiến thức khác biệt change management program và project
+  - Câu hỏi: A project manager was recently promoted to become the program manager for the overall program that his project was originally part of. How should her approach to change management evolve?
+- **6_6_2024 11_30_39 AM · Câu 70** (id 41439070) → `benefits-1` Benefits Management · Develop the benefits realization plan · low
+  - Lý do: Câu kiến thức vai trò program manager trong benefits management
+  - Câu hỏi: How does the program manager contribute to the benefits management function in a program?
+- **6_6_2024 11_30_39 AM · Câu 72** (id 41439072) → `benefits-1` Benefits Management · Develop the benefits realization plan · low
+  - Lý do: Câu khái niệm phân biệt benefits và deliverables
+  - Câu hỏi: What is the difference between benefits and deliverables in the context of the program?
+- **6_6_2024 11_30_39 AM · Câu 77** (id 41439077) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Câu kiến thức khác biệt program và project
+  - Câu hỏi: Program management has similarities and differences with project management. Which of the following captures the essence of the differences?
+- **6_6_2024 11_30_39 AM · Câu 78** (id 41439078) → `lifecycle-19` Program Life Cycle Management · Lead, train, coach and recognize the team · low
+  - Lý do: Điều hoà phong cách quản lý theo tình huống
+  - Câu hỏi: The program manager in a complex program is a believer in autonomy. One of the project managers is a believer in close supervision and micro-management. What should be done to reconcile the different management styles?
+- **6_6_2024 11_30_39 AM · Câu 80** (id 41439080) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Câu kiến thức khác biệt program và portfolio
+  - Câu hỏi: A program is different from a portfolio in that:
+- **6_6_2024 11_30_39 AM · Câu 85** (id 41439085) → `benefits-4` Benefits Management · Monitor benefit metrics and take corrective action · low
+  - Lý do: Câu kiến thức hoạt động giúp hiện thực hoá benefits
+  - Câu hỏi: A program manager needs to help the program realize the benefits by:
+- **6_6_2024 11_30_39 AM · Câu 90** (id 41439090) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Câu định nghĩa phân biệt program và portfolio
+  - Câu hỏi: The work involved in a ____ is usually inter-dependent in a way that the intended outcome requires all the elements to deliver; whereas the work involved in a _____ is grouped together due to some common factor but may or may not be inter-related. Find the appropriate words to fill in the blanks.
+- **6_6_2024 11_30_39 AM · Câu 94** (id 41439094) → `lifecycle-12` Program Life Cycle Management · Manage unresolved project-level issues · low
+  - Lý do: Vấn đề project được escalate, xác định người chịu trách nhiệm giải quyết
+  - Câu hỏi: One of the projects in the program is frequently getting affected by lack of support from IT function. The project manager has escalated this to the program manager. Who is primarily responsible for solving this problem?
+- **6_6_2024 11_30_39 AM · Câu 98** (id 41439098) → `stakeholder-1` Stakeholder Engagement · Identify stakeholders and create the stakeholder matrix · low
+  - Lý do: Xác định vai trò stakeholder chính quyền địa phương, câu kiến thức
+  - Câu hỏi: In a program led by NGO's working for common social benefit under funding received from donors, what is the most likely role of the local government authorities?
+- **6_6_2024 11_30_39 AM · Câu 101** (id 41439101) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Bước đầu khởi động program, câu chung chung
+  - Câu hỏi: A company is working on a new technology that will produce operational efficiencies. The discovery and planned rollout is being considered as a program. What should be the first step to kik off this activity?
+- **6_6_2024 11_30_39 AM · Câu 103** (id 41439103) → `lifecycle-16` Program Life Cycle Management · Charter and initiate constituent components · low
+  - Lý do: Charter cho component nội bộ, đáp án khó hiểu
+  - Câu hỏi: A program is up against a rigid budget constraint. The program manager and the project managers agreed that creating a tool for monitoring and optimizing program finances (especially the shared resources) will be helpful for the program. How should the chartering process work for this project?
+- **6_6_2024 11_30_39 AM · Câu 113** (id 41439113) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Câu chung về giá trị của program management
+  - Câu hỏi: Program management is trying to meet program requirements and to obtain benefits and control not available by managing the projects individually. In trying to achieve greater benefits and control, which of the following is the least beneficial to the program manager?
+- **6_6_2024 11_30_39 AM · Câu 118** (id 41439118) → `lifecycle-30` Program Life Cycle Management · Manage risk per the risk management plan · low
+  - Lý do: Câu định nghĩa secondary risk
+  - Câu hỏi: A project manager in consultation with the program manager decided to outsource a complex piece of work on her project, as the project did not have in-house technical expertise. As a result of this change, the program had to shell out additional funds. Another risk was added to the program risk register pertaining to the financial stability and reliability of the vendor. This is an example of:
+- **6_6_2024 11_30_39 AM · Câu 125** (id 41439125) → `lifecycle-15` Program Life Cycle Management · Monitor human resources and team motivation · low
+  - Lý do: Ưu tiên tuyển dụng nhân sự cho program
+  - Câu hỏi: A quality control engineer has risen through the ranks of a company to become a project manager and has recently been selected to lead a program. Which of the following issues should be her topmost priority?
+- **6_6_2024 11_30_39 AM · Câu 139** (id 41439139) → `lifecycle-21` Program Life Cycle Management · Execute program management plans · low
+  - Lý do: Work authorization system để kiểm soát chi phí
+  - Câu hỏi: A program is under severe cost constraints and the program manager would like to ensure targeted allocation of the funds to the projects within the program. Which of the following techniques is most helpful for the program manager exercise close control over program costs?
+- **6_6_2024 11_30_39 AM · Câu 142** (id 41439142) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Câu định nghĩa portfolio
+  - Câu hỏi: A fast food restaurant chain is expanding into a new geography. There are a number of projects to set up the restaurants, supply chain and manage the operations. All of these components share a common area budget though they are not necessarily related to each other in a significant way. This is best described as?
+- **6_6_2024 11_30_39 AM · Câu 145** (id 41439145) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Câu định nghĩa portfolio
+  - Câu hỏi: A pharmaceutical company is planning to consolidate all the projects related to drug discovery into a single organizational entity with an executive in-charge. This will be most likely to be managed as a:
+- **6_6_2024 11_30_39 AM · Câu 152** (id 41439152) → `stakeholder-7` Stakeholder Engagement · Develop relationships with stakeholders · low
+  - Lý do: Kỹ năng ảnh hưởng không cần quyền hạn
+  - Câu hỏi: A program in a company with a diversified portfolio is meant to come up with a cross-cutting reporting framework. The program is cross-functional and crosses company boundaries as well. What qualities and capabilities would be most helpful for the program manager?
+- **6_6_2024 11_30_39 AM · Câu 161** (id 41439161) → `lifecycle-21` Program Life Cycle Management · Execute program management plans · low
+  - Lý do: Câu kiến thức về zero defects
+  - Câu hỏi: Zero defects is a quality philosophy that requires clearly identifying what the customer wants and providing it the first time, without having to repeat or rework. In which of the following programs would this be the MOST important goal?
+- **6_6_2024 11_30_39 AM · Câu 162** (id 41439162) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Phân biệt project, program, portfolio
+  - Câu hỏi: What is the difference between projects, programs and portfolios?
+- **6_6_2024 11_30_39 AM · Câu 164** (id 41439164) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Rà soát portfolio để giảm chi phí, câu chung
+  - Câu hỏi: A company is looking to reduce its operational expenses by half in view of a tough financial year and mounting debt. Which of the following programs will help achieve this?
+- **6_6_2024 11_30_39 AM · Câu 167** (id 41439167) → `lifecycle-30` Program Life Cycle Management · Manage risk per the risk management plan · low
+  - Lý do: Trách nhiệm nhận diện rủi ro, câu kiến thức
+  - Câu hỏi: A program consists of 5 projects and 2 operations. Who should be responsible for the identification of risks on the program?
+- **6_6_2024 11_30_39 AM · Câu 169** (id 41439169) → `lifecycle-10` Program Life Cycle Management · Optimize the plan by leveling resources · low
+  - Lý do: Đảm bảo nguồn lực cho component ở nước ngoài
+  - Câu hỏi: A newly initiated program has most of its work components being executed in foreign countries. Which of the following would be the biggest concern for the program manager?
+- **6_6_2024 11_33_25 AM · Câu 1** (id 41605001) → `lifecycle-18` Program Life Cycle Management · Establish communication feedback and reporting · low
+  - Lý do: Nội dung họp chia sẻ thông tin và kinh nghiệm giữa project
+  - Câu hỏi: A program manager looks after a program comprising 15 projects at different sites spread out geographically over different continents. The program manager regularly holds a “staff meeting” where she calls all the project managers to share information about the program and topics of general interest. Which of the following is the LEAST suitable agenda item for such a staff meeting?
+- **6_6_2024 11_33_25 AM · Câu 3** (id 41605003) → `stakeholder-2` Stakeholder Engagement · Analyze stakeholders and plan engagement · low
+  - Lý do: Khuyến nghị audit sai về engagement đồng đều mọi stakeholder
+  - Câu hỏi: An organization has a practice of a six monthly audit of all programs conducted by the Program Management Office. After a recent audit, a number of recommendations were made. Which of the following is the LEAST appropriate recommendation to be included in the final report?
+- **6_6_2024 11_33_25 AM · Câu 8** (id 41605008) → `lifecycle-7` Program Life Cycle Management · Develop a detailed program scope statement · low
+  - Lý do: Phân loại other work thuộc program
+  - Câu hỏi: A UN mandated re-construction program is being conducted in a remote country in Africa. Health centers are being run in each major location to help the personnel who are working on the program. It works out very well because medical facilities are otherwise far away and people working on the program often need assistance. These health centers can be referred to:
+- **6_6_2024 11_33_25 AM · Câu 10** (id 41605010) → `strategy-11` Strategic Program Alignment · Exploit strategic opportunities for change · low
+  - Lý do: Khai thác cơ hội cải thiện nhận thức khách hàng
+  - Câu hỏi: A well-diversified automobile company just launched a new commercial vehicle in the market. It has not done very well despite getting the highest ratings from independent rating agencies. The reason is that the company is viewed as a low cost supplier and does not enjoy customer confidence. As the revenues have not met the targets, the program is not being funded to develop the model further. What is the best thing for the program manager to do?
+- **6_6_2024 11_33_25 AM · Câu 13** (id 41605013) → `lifecycle-7` Program Life Cycle Management · Develop a detailed program scope statement · low
+  - Lý do: Xác định project thuộc phạm vi program
+  - Câu hỏi: A company makes cleaning appliances and finds that the market for its products in the United States and Europe is saturated. It has therefore initiated a program to launch a foray into the growing economies in the APAC region. Which of the following would be candidate projects to be included as part of this program? (A) – Conduct market research in target geographies to identify the size of the opportunity (B) – Make the user manuals and support web sites available in local languages (C) – Identify partners to source and sell spares locally (D) – Set up sales quotas and compensation structure for the sales people in the region
+- **6_6_2024 11_33_25 AM · Câu 15** (id 41605015) → `lifecycle-3` Program Life Cycle Management · Develop the program roadmap · low
+  - Lý do: Rà soát roadmap, ưu tiên chất lượng dữ liệu
+  - Câu hỏi: A program manager working in a venture funded startup company in the highly competitive online advertising metering space is reviewing its roadmap. There are three main areas in which project ideas were presented. (A) Adding a new search engine to the algorithm which competitors already support and might result in customers switching over (B) Improving the scalability of the existing engine to support expected transaction volumes (C) Improving the accuracy of the hit counts so that space can be auctioned with more precise information. Which of the following should be of greatest concern to the program manager?
+- **6_6_2024 11_33_25 AM · Câu 21** (id 41605021) → `governance-1` Governance · Develop program management standards and structure · low
+  - Lý do: Tham vấn PMO về tiêu chuẩn tính reserve
+  - Câu hỏi: A newly appointed program manager is struggling to come to terms with the level and rigor of risk management processes to be applied. The project managers seem to be doing a reasonable job preparing the risk register and planning responses for the identified risks on their individual projects, but the program manager is unable to figure out how to translate all this information to determine the extent of contingency and management reserves needed. What is the best way to come up with this plan?
+- **6_6_2024 11_33_25 AM · Câu 28** (id 41605028) → `lifecycle-15` Program Life Cycle Management · Monitor human resources and team motivation · low
+  - Lý do: Đánh giá vendor trái chiều giữa hai project
+  - Câu hỏi: Two projects in a program are using the services of a vendor to deliver electronic chips for a large assembly. During a quarterly vendor review for the program, Project Manager A gave huge thumbs up for the vendor on quality and punctuality. Project Manager B rated the same supplier very poorly on the same aspects and wants permission to change vendors. What should the program manager do?
+- **6_6_2024 11_33_25 AM · Câu 29** (id 41605029) → `lifecycle-14` Program Life Cycle Management · Develop KPIs for scope and quality management · low
+  - Lý do: Tác động của chỉ tiêu hiệu suất lên cost và quality
+  - Câu hỏi: A service improvement program is being implemented in the repairs and maintenance division of a company manufacturing high-end printers. The program manager noticed that in the past year, the cost of the repair and maintenance operation was well below budgeted levels, but there were instances where the clients would report a delay in completing the repairs beyond the service level agreements that were signed. Once the repairs were done, there was rarely any recurrence of the complaint. In response to this, the program manager decided to set performance objectives for the repair team based on “turnaround time for repairs”. What should the program manager expect to see after this change?
+- **6_6_2024 11_33_25 AM · Câu 31** (id 41605031) → `governance-2` Governance · Select a governance framework · low
+  - Lý do: Vai trò sponsor trong program
+  - Câu hỏi: A manufacturing organization is adopting Lean methodologies. A program has been constituted for achieving this transition. The Sponsor for the program is a senior executive who is convinced about the business benefits and is ready to commit the funds and resources necessary for the program. What are the 3 things the program manager should ask the Sponsor to do?
+- **6_6_2024 11_33_25 AM · Câu 32** (id 41605032) → `stakeholder-5` Stakeholder Engagement · Define and maintain stakeholder communications · low
+  - Lý do: Thông điệp giải thích quyết định cho nhân viên lo lắng
+  - Câu hỏi: A large organization recently opened a new center for clinical research in a different geography. This activity was so far performed only in the parent geography and the existing staff has expressed serious reservations and anxiety about the move. What is the best statement that the program manager can make to justify the decision and address the team’s anxiety?
+- **6_6_2024 11_33_25 AM · Câu 33** (id 41605033) → `lifecycle-30` Program Life Cycle Management · Manage risk per the risk management plan · low
+  - Lý do: Dùng chuyên gia rủi ro để giảm management reserve
+  - Câu hỏi: At the program initiation phase, the program manager realized that many of the components seemed to involve a very high amount of uncertainty. The project managers asked for high levels of management reserves as it was not possible to fully predict the risks on their components. Which of the following would help the program manager limit the amount of management reserves and create greater visibility into the uncertainties surrounding the program?
+- **6_6_2024 11_33_25 AM · Câu 37** (id 41605037) → `lifecycle-10` Program Life Cycle Management · Optimize the plan by leveling resources · low
+  - Lý do: Lấy nguồn lực từ quản lý chức năng
+  - Câu hỏi: A leading company is organized as follows. The R&D function is responsible for coming up with new product ideas and developing prototypes, Engineering function is responsible to design the product and set up the manufacturing process. Quality function is responsible to ensure that the processes and product is correct and meets expectations of current and future users. Manufacturing function takes over the operations once the Engineering is complete and Quality sign-off has been received. A highly strategic program is started in this company to come up with new products that rely on renewable energy sources. A number of projects are in flight to look at different products and components. What is the best way for the program manager to recruit the resources required for this program?
+- **6_6_2024 11_33_25 AM · Câu 40** (id 41605040) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Câu khái niệm: chọn cấu trúc program để tích hợp thành tổng thể chiến lược
+  - Câu hỏi: An organization intends to add a new product line that is in an adjacent space to an existing product line. Many of the components required to build the product are already present and there are strong partners available to fill in the gaps. The key success criterion would be to be able to integrate the components and develop a compelling value proposition that can be used to build a market. What is the best organization structure for this new product line?
+- **6_6_2024 11_33_25 AM · Câu 43** (id 41605043) → `benefits-4` Benefits Management · Monitor benefit metrics and take corrective action · low
+  - Lý do: Phân tích nguyên nhân suy giảm metric vận hành, câu chung chung
+  - Câu hỏi: Customer satisfaction ratings for a product line had gone down. In order to review the reasons behind this, an operations review was called by the program manager. One of the metrics that caught the program manager’s attention was that the average time to respond to a complaint had shot up nearly 30%. The operations manager offered a number of explanations for this. Which of the following is NOT a valid explanation?
+- **6_6_2024 11_33_25 AM · Câu 62** (id 41605062) → `lifecycle-17` Program Life Cycle Management · Deploy governance framework and uniform standards · low
+  - Lý do: Dùng ngân sách hạ tầng dư cho lợi ích dài hạn, nhiều task hợp lý
+  - Câu hỏi: A large, multi-year program that has been sanctioned a budget of $5,000,000 to build up its infrastructure, including tools, machinery and IT systems for better management. The program manager polled the projects to collect all their tools, machinery and IT systems requirements and it summed up to only to $3,500,000. What should the program manager do?
+- **6_6_2024 11_33_25 AM · Câu 66** (id 41605066) → `benefits-4` Benefits Management · Monitor benefit metrics and take corrective action · low
+  - Lý do: Phân tích nguyên nhân chi phí thấp nhưng trễ SLA, câu suy luận chung
+  - Câu hỏi: A service improvement program is being implemented in the repairs and maintenance division of a company manufacturing high-end printers. The program manager noticed that in the past year, the cost of the repair and maintenance operation was well below budgeted levels, but there were instances where the clients would report a delay in completing the repairs beyond the service level agreements that were signed. Once the repairs were done, there was rarely any recurrence of the complaint. Which of the following is the most likely explanation for this?
+- **6_6_2024 11_33_25 AM · Câu 81** (id 41605081) → `benefits-4` Benefits Management · Monitor benefit metrics and take corrective action · low
+  - Lý do: Khắc phục benefits chưa đạt do đội bán hàng, câu mơ hồ
+  - Câu hỏi: After the launch of the first version of a product, it was found the product is not really being taken up by the medical fraternity which was the target audience. On closer investigation, it was discovered that the Sales staff were not able to clearly articulate the value to doctors. What could be the best way to address this and promote Sales?
+- **6_6_2024 11_33_25 AM · Câu 87** (id 41605087) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Lý do áp dụng program management: gắn kết chiến lược, câu khái niệm
+  - Câu hỏi: A company offers project management services for the construction industry. A recently appointed senior project manager is recommending that the company should adopt a program management approach while working on customer projects. Which of the following statements would best convince the business leaders about the justification for this change?
+- **6_6_2024 11_33_25 AM · Câu 92** (id 41605092) → `governance-11` Governance · Support the program integration management plan · low
+  - Lý do: Program manager chú trọng quản lý giao diện, phụ thuộc giữa dự án
+  - Câu hỏi: A program comprises of many components which are led by highly motivated and energetic managers. The program manager delegates most of the activities to these managers. Which of the following activities should the program manager probably pay most attention to?
+- **6_6_2024 11_33_25 AM · Câu 93** (id 41605093) → `governance-1` Governance · Develop program management standards and structure · low
+  - Lý do: Nội dung charter của PMO, câu khái niệm
+  - Câu hỏi: An experienced program manager is in-charge of setting up a program management office. Which of the following would be the LEAST appropriate statements to include in the charter of the PMO?
+- **6_6_2024 11_33_25 AM · Câu 94** (id 41605094) → `benefits-8` Benefits Management · Develop the transition plan to operations · low
+  - Lý do: Luân chuyển nhân sự giữa dự án và vận hành để chuyển giao tốt
+  - Câu hỏi: A program comprises of various projects working on development of telecommunications equipment which is later transitioned into operations which maintain them and support customers. There is constant tension between operations and projects. Operational teams complain that the project teams do not take ease of maintenance into consideration while developing the equipment whereas the project teams complain that the operations teams do not follow instructions written in the manuals. Which is the best way to resolve this impasse?
+- **6_6_2024 11_33_25 AM · Câu 97** (id 41605097) → `strategy-6` Strategic Program Alignment · Identify and quantify expected benefits · low
+  - Lý do: Chọn component giảm chi phí hiệu quả nhất, câu chung
+  - Câu hỏi: A steel manufacturer has come under severe cost pressure due to rising cost of inputs and slack demand due to which the increases could not be passed on to customers. The Board of Directors have decided to initiate a major program to find opportunities to reduce costs by 20% at which level the company will be able to stay afloat until the situation improves (which is expected to take about 2 years). Which of the following measures is likely to be most beneficial?
+- **6_6_2024 11_33_25 AM · Câu 98** (id 41605098) → `lifecycle-16` Program Life Cycle Management · Charter and initiate constituent components · low
+  - Lý do: Chọn component kém hiệu quả để tạo ý tưởng, câu chung
+  - Câu hỏi: A successful company operating in the retail segment, which has been around for many years is losing market share as it is seen by the customers as a boring company, lacking in new ideas. It has launched a program to trigger innovation that will help it shed its staid brand image. Which of the following components would be LEAST effective in generating such ideas?
+- **6_6_2024 11_33_25 AM · Câu 105** (id 41605105) → `stakeholder-7` Stakeholder Engagement · Develop relationships with stakeholders · low
+  - Lý do: Xử lý khách hàng can thiệp quá mức qua sponsor
+  - Câu hỏi: A program has been initiated under a fixed price contract with a customer. There are multiple components that deliver different products and services to the customer according to the agreement. At a program review, multiple component managers have complained about the customer trying to micro-manage their components. Some examples provided are – customers insisting on selecting the people chosen to work on the components or making design decisions, etc. What should the program manager do?
+- **6_6_2024 11_33_25 AM · Câu 106** (id 41605106) → `lifecycle-27` Program Life Cycle Management · Manage program-level issues · low
+  - Lý do: Xử lý sự cố y tế gây đình công, cam kết điều tra bồi thường
+  - Câu hỏi: A UN mandated re-construction program is being conducted in a remote country in Africa. Health centers are being run in each major location to help the personnel who are working on the program. It works out very well because medical facilities are otherwise far away and people working on the program often need assistance. One of the workers who fell sick was administered medication at the center. Unfortunately, the worker developed serious side effects and is now in critical condition. This has caused a rebellion in the work force, who have gone on strike. The program manager is meeting the leader of the worker’s union. What is the best thing for the program manager say?
+- **6_6_2024 11_33_25 AM · Câu 112** (id 41605112) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Phân biệt program với project qua mission statement, câu khái niệm
+  - Câu hỏi: There are a number of initiatives in progress in the transport department of a council. From the mission statements of the initiatives provided, which of the following sounds like a program?
+- **6_6_2024 11_33_25 AM · Câu 118** (id 41605118) → `lifecycle-10` Program Life Cycle Management · Optimize the plan by leveling resources · low
+  - Lý do: Vai trò program manager trong mua sắm, câu khái niệm
+  - Câu hỏi: Which of the following is the LEAST important reason that a Program manager should be involved in Procurement decisions on the projects within the programs?
+- **6_6_2024 11_33_25 AM · Câu 120** (id 41605120) → `governance-1` Governance · Develop program management standards and structure · low
+  - Lý do: Phân định hoạt động ủy quyền xuống component trong cấu trúc governance
+  - Câu hỏi: A program manager recently had to let go of 2 members of the Program office and is severely constrained for band-width. She is looking to limit the amount of oversight she provides and delegate as much as possible, while providing for effective governance at the same time. Which of the following activities is BEST suited to get delegated to the component level?
+- **6_6_2024 11_33_25 AM · Câu 122** (id 41605122) → `governance-11` Governance · Support the program integration management plan · low
+  - Lý do: Đảm bảo component nhận deliverable sẵn sàng, quản lý phụ thuộc
+  - Câu hỏi: At a program level status review, one of the project managers said that they have implemented fast-tracking on their projects, thus compressing the schedule. Although there are 2 months left on the schedule, they have almost completed the deliverables. As a program manager, how should you react to this information?
+- **6_6_2024 11_33_25 AM · Câu 125** (id 41605125) → `stakeholder-3` Stakeholder Engagement · Negotiate stakeholder support and expectations · low
+  - Lý do: Trách nhiệm xử lý phản đối của nhân viên, câu mơ hồ
+  - Câu hỏi: A bank has undertaken a business service restructuring program to streamline and automate operations. Many staff members in the bank oppose this program out of fear that the program will end up eliminating their jobs. Despite the best efforts of the program team, some members of the staff remain steadfastly opposed to the program and their non-cooperation is impacting the progress. Who is responsible for solving this problem?
+- **6_6_2024 11_33_25 AM · Câu 135** (id 41605135) → `lifecycle-9` Program Life Cycle Management · Establish the program management plan and schedule · low
+  - Lý do: Chọn cách tiếp cận prototype lấy phản hồi người dùng
+  - Câu hỏi: A life sciences company is working on developing a new product that will help doctors integrate data from different sources to make a faster diagnosis. One of the major concerns for the program manager is that the development team does not understand the medical domain well enough and the doctors do not have a clear view about the capabilities of the product. What is the best way to ensure that the product is being built will be accepted by the customers?
+- **6_6_2024 11_33_25 AM · Câu 140** (id 41605140) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Chọn cấu trúc program cho mở rộng, câu khái niệm
+  - Câu hỏi: A well-known international fast food chain – famous for high quality products and customer service is expanding into a new country, which is fairly large and remote. A number of activities need to happen, including creation and maintenance of supply chain for the raw materials, establish the franchise model, acquisition and re-branding of stores, setting up the IT infrastructure, etc. Given this information, what would be the best architecture for this expansion activity?
+- **6_6_2024 11_33_25 AM · Câu 146** (id 41605146) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Phân biệt portfolio, program, câu định nghĩa
+  - Câu hỏi: An organization started a new business division to manage the business in the Asia Pacific region, which is seen to be having a very high potential for future growth. There are a large number of customer engagements in this geographically widespread and diverse region. Some of them are long-running and semi-permanent, whereas others are more recent and much targeted. This division can best be expressed as:
+- **6_6_2024 11_33_25 AM · Câu 150** (id 41605150) → `strategy-7` Strategic Program Alignment · Estimate financial framework and nonfinancial benefits · low
+  - Lý do: Ưu tiên dự án khi vốn hạn chế, đáp án khả nghi
+  - Câu hỏi: A program has been initiated to build a large township consisting of residential and commercial complexes, schools, hospitals and other utilities in a remote town. During the planning stage, funding was restricted and only a few of the proposed projects might take off in the initial phases. Several projects came up for approval. Which one should receive the highest priority? (A) A movie theater and mall that will provide entertainment and shopping facilities to the residents (B) A golf club that will serve the residents and also earn revenue by offering membership and rental facilities to outsiders (C) A temple complex in deference to the religious sentiments of the potential residents (D) A water purification plant that is required for treating waste from the complex as per the pollution control norms
+- **6_6_2024 11_33_25 AM · Câu 153** (id 41605153) → `lifecycle-9` Program Life Cycle Management · Establish the program management plan and schedule · low
+  - Lý do: Chọn loại hợp đồng trong chính sách mua sắm program
+  - Câu hỏi: A large program is building infrastructure and services for a new airport terminal that is coming up. The program depends heavily on vendors and many components have outsourced the delivery and installation of several components, including baggage handling systems, ground transportation, parking management, etc. Many of these systems are so heavily integrated that even the slightest delay or compromise in specifications may cause the entire program to stall. The program manager is in the process of finalizing the program level procurement policy. Which of the following would be the LEAST suitable form of contract for this program?
+- **6_6_2024 11_33_25 AM · Câu 155** (id 41605155) → `governance-2` Governance · Select a governance framework · low
+  - Lý do: Ai phê duyệt chi phí ngoài SoW, câu về thẩm quyền
+  - Câu hỏi: A program has been initiated under a SoW issued by a customer to build an IT infrastructure management system. This involves several projects, which gradually transition into operations. The customer has recently heard about new developments around Big Data concepts and wants the program team to evaluate how these concepts can be applied to their management system. The team suggests that a good way to evaluate the options would be to go to a Big Data conference. There is a need to fund travel and logistics for the conference trip. Who should approve this funding request?
+- **6_6_2024 11_36_16 AM · Câu 3** (id 41776003) → `lifecycle-8` Program Life Cycle Management · Develop the program WBS · low
+  - Lý do: Câu định nghĩa vòng đời project và product, liên quan WBS
+  - Câu hỏi: You are trying to help managers in your organization understand the difference between program life-cycles, project life-cycles and product life-cycles. Which of the following identifies the DIFFERENCE between project and product life cycles?
+- **6_6_2024 11_36_16 AM · Câu 12** (id 41776012) → `lifecycle-5` Program Life Cycle Management · Define success measurement criteria and KPIs · low
+  - Lý do: Đáp án lạ; KRA của program manager về mục tiêu component
+  - Câu hỏi: The manager of the program manager was writing the key results areas (KRA’s) for the program manager. The most important KRA for a program manager should be to ensure:
+- **6_6_2024 11_36_16 AM · Câu 13** (id 41776013) → `stakeholder-7` Stakeholder Engagement · Develop relationships with stakeholders · low
+  - Lý do: Phẩm chất program manager: ảnh hưởng không cần quyền hạn
+  - Câu hỏi: The program manager has just resigned and you are trying to hire a replacement. What qualities would you look for in this individual above everything else:
+- **6_6_2024 11_36_16 AM · Câu 24** (id 41776024) → `lifecycle-1` Program Life Cycle Management · Develop the program charter · low
+  - Lý do: Tiếp quản program, đọc charter để hiểu business case và mục tiêu
+  - Câu hỏi: A program manager for a recently constituted program left abruptly and you are taking over in an emergency. You did not get a chance to talk to the previous manager. You have had little by way of a transition and need to start from scratch. What is the BEST way to begin?
+- **6_6_2024 11_36_16 AM · Câu 27** (id 41776027) → `strategy-8` Strategic Program Alignment · Evaluate regulatory, legal, social and ethical constraints · low
+  - Lý do: Đáp án lạ; vấn đề đạo đức khi dùng ngân sách dư
+  - Câu hỏi: Your overall program was budgeted at $2 million, but now has a CPI of 0.8 and one of your challenges is to ensure budget availability to all projects. At this time, you learn that one of the projects in your program is likely to finish under-budget by about $20,000. It so happens that this project involved some customized work for a particular customer and the customer is being billed for it under a cost-reimbursable contract. What should you do?
+- **6_6_2024 11_36_16 AM · Câu 30** (id 41776030) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Chiến lược danh mục sản phẩm question mark, câu khái niệm
+  - Câu hỏi: In an organizations’ portfolio, “question marks” represent the products that play in a market that has a high growth rate, but those products have a low share of the market. Following a recent portfolio review, a program manager discovered that many of the products that were being managed under her program fell under the question mark category. What would be the least appropriate strategy for the program manager with regard to these products?
+- **6_6_2024 11_36_16 AM · Câu 42** (id 41776042) → `benefits-1` Benefits Management · Develop the benefits realization plan · low
+  - Lý do: Câu khái niệm về nhiệm vụ quản lý benefits của program manager
+  - Câu hỏi: Which of the following is the LEAST appropriate task for a program manager in managing benefits from a program?
+- **6_6_2024 11_36_16 AM · Câu 47** (id 41776047) → `lifecycle-21` Program Life Cycle Management · Execute program management plans · low
+  - Lý do: Dùng lấy mẫu trong kiểm tra chất lượng khí thải
+  - Câu hỏi: You look after the new model development program for an automobile company. One of the statutory requirements that has surfaced recently is to adhere to a new set of emission norms. After discussing with the engineers, you feel majority of the models your company are narrowly in compliance. You have asked for emissions data for the current models. The quality analysts tells you that it will take about 2 months just to gather the data, because the monthly production for your most popular model is 200,000 units. What should you recommend?
+- **6_6_2024 11_36_16 AM · Câu 57** (id 41776057) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Câu khái niệm phân biệt vòng đời program và project
+  - Câu hỏi: Which of the following is the most appropriate statement about the program and project life cycles?
+- **6_6_2024 11_36_16 AM · Câu 59** (id 41776059) → `lifecycle-2` Program Life Cycle Management · Translate strategic objectives into program scope · low
+  - Lý do: Đáp án lạ; chọn component phù hợp phạm vi program
+  - Câu hỏi: A wildlife conservation program aims at increasing the population of tigers and other predators in a nature reserve. Which of the following components are least appropriate for inclusion in the program?
+- **6_6_2024 11_36_16 AM · Câu 70** (id 41776070) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Câu khái niệm hoạt động của program manager, đáp án lạ
+  - Câu hỏi: Among all the activities mentioned below, which one is NOT normally used by Program Managers?
+- **6_6_2024 11_36_16 AM · Câu 71** (id 41776071) → `lifecycle-19` Program Life Cycle Management · Lead, train, coach and recognize the team · low
+  - Lý do: Phong cách quản lý cho program
+  - Câu hỏi: In a program, the project manager of project-1 is a X-theory manager, whereas the manager over project-2 is a Y-theory manager. The program manager himself leans towards X-theory behavior. What should be the recommended management style for the program?
+- **6_6_2024 11_36_16 AM · Câu 73** (id 41776073) → `lifecycle-27` Program Life Cycle Management · Manage program-level issues · low
+  - Lý do: Biện pháp xử lý trễ vận chuyển cấp program
+  - Câu hỏi: You are managing a program that installs, commissions and operates wind turbines. The parts are manufactured in factories and sent to different project sites. Some of the parts are huge and transportation by road is a non-trivial activity. As the program manager, you would like to ensure that transportation does not hamper the schedule for the projects. Which of the following will NOT directly address transportation delays?
+- **6_6_2024 11_36_16 AM · Câu 76** (id 41776076) → `lifecycle-30` Program Life Cycle Management · Manage risk per the risk management plan · low
+  - Lý do: Câu khái niệm về management reserve cấp program
+  - Câu hỏi: Which of the following is the most correct statement about the management reserves on projects and programs?
+- **6_6_2024 11_36_16 AM · Câu 77** (id 41776077) → `lifecycle-19` Program Life Cycle Management · Lead, train, coach and recognize the team · low
+  - Lý do: Phân công sinh viên thực tập để đào tạo
+  - Câu hỏi: Your organization is experimenting with a university hiring program in which each business unit will have to induct a certain number of fresh university students into their active programs to get “on-the-job” training on skills required in the corporate world. Your program will have to take one graduate as well. Which of the following projects will you assign the graduate student?
+- **6_6_2024 11_36_16 AM · Câu 83** (id 41776083) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Câu khái niệm phân biệt program và portfolio
+  - Câu hỏi: Which of the following is an incorrect statement about programs and portfolios?
+- **6_6_2024 11_36_16 AM · Câu 84** (id 41776084) → `benefits-1` Benefits Management · Develop the benefits realization plan · low
+  - Lý do: Câu khái niệm ai chịu trách nhiệm quản lý benefit
+  - Câu hỏi: A program is being initiated. The program manager translated the program objectives and developed a program scope statement. Several projects were initiated to deliver specific benefits outlined in the program objectives. One of the key benefits was developing new revenue streams. Project A is delivering a new product that contributes to the delivery of this benefit, and Project B is responsible for creating a distribution network for this product. Who is responsible for managing the delivery of the benefit?
+- **6_6_2024 11_36_16 AM · Câu 86** (id 41776086) → `lifecycle-9` Program Life Cycle Management · Establish the program management plan and schedule · low
+  - Lý do: Phụ thuộc bị bỏ sót trong program schedule
+  - Câu hỏi: A program team has analyzed the inter-dependencies among the projects and arrived at an overall program schedule.. While this is in execution, a program office member informs you that the team forgot to document a dependency between two projects. Luckily this dependency does not alter the critical path for any project nor the program. What should be the program manager's concern if at all - because of this discovery?
+- **6_6_2024 11_36_16 AM · Câu 93** (id 41776093) → `lifecycle-2` Program Life Cycle Management · Translate strategic objectives into program scope · low
+  - Lý do: Xác định hoạt động thuộc phạm vi program
+  - Câu hỏi: A cell phone manufacturer is running a program to improve customer satisfaction with its products. This involves introduction of new models and features, tie-ups with leading network service providers for bouquet of offers and also improvement in the customer service for existing models, which has been a sore point with customers who complain that the service takes too long. One of the service technicians is working on forecasting techniques that determine how much stock of spares is required to support ongoing maintenance and outstanding warranties. This activity should:
+- **6_6_2024 11_36_16 AM · Câu 98** (id 41776098) → `governance-1` Governance · Develop program management standards and structure · low
+  - Lý do: Chuẩn hoá chính sách mua sắm, chọn loại hợp đồng
+  - Câu hỏi: A program has many projects. The dependencies among the projects is complex. The program is time constrained. The program’s components is also heavily dependent on vendors and the program manager is trying to standardize the procurement policies across the program. Which type of contract is least appropriate for this program?
+- **6_6_2024 11_36_16 AM · Câu 108** (id 41776108) → `stakeholder-5` Stakeholder Engagement · Define and maintain stakeholder communications · low
+  - Lý do: Thách thức giao tiếp trong tổ chức ma trận
+  - Câu hỏi: A program manager is part of a matrix organization. She leads a team of project managers, all of whom belong to one or the other functions or lines of business (LoB). Whilst they are all committed to the program, they are also accountable for the projects they are performing to the functions. The program manager herself happens to be a part of one of the LoB’s, which contributes the most to the program’s budget and reports to the Director of that LoB. What is the biggest challenge that the program manager will have in this situation?
+- **6_6_2024 11_36_16 AM · Câu 109** (id 41776109) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Câu khái niệm phân biệt project, program, portfolio
+  - Câu hỏi: A government owned shipyard is building a large cruise ship. This is a highly complex initiative that is expected to take up to 7 years. The ship is intended to join a fleet of other ships that serve customers in a specific geographic region. Some of the components of this task are as follows. Design and construction of the hull, design and construction of the suites and entertainment areas, building the engine and turbines, electric generator, etc. From the description provided, this seems to be an example of:
+- **6_6_2024 11_36_16 AM · Câu 122** (id 41776122) → `lifecycle-15` Program Life Cycle Management · Monitor human resources and team motivation · low
+  - Lý do: Chọn vendor outsource theo năng lực chuyên môn
+  - Câu hỏi: A start-up software company is working on a program to launch a slew of products targeted at the use of next generation technologies. One of the projects relates to experimenting with a new networking protocol that has never been used on such a large scale before. Since your company does not have expertise in the area, the project manager suggests that the work should be outsourced to another vendor. Which of the following vendors is best suited for taking up this task:
+- **6_6_2024 11_36_16 AM · Câu 125** (id 41776125) → `lifecycle-12` Program Life Cycle Management · Manage unresolved project-level issues · low
+  - Lý do: Xung đột giữa hai PM về báo cáo sai trạng thái
+  - Câu hỏi: After a program review meeting, one of your project managers (say B) asks to talk to you one-on-one. His issue is that another project manager in the program (say A) has been consistently reporting an “on-time” status when he knows that her project is lagging behind. He has it from authentic sources that several tasks on the project are not progressing as per plan. He says it is unethical for somebody to report an incorrect status and that you need to take some action. What would you do?
+- **6_6_2024 11_36_16 AM · Câu 135** (id 41776135) → `governance-1` Governance · Develop program management standards and structure · low
+  - Lý do: Vai trò PMO, yêu cầu không phù hợp
+  - Câu hỏi: A program manager who was newly promoted into the role relies a lot on the program management office for support. Which of the following is the LEAST appropriate request to make of the PMO?
+- **6_6_2024 11_36_16 AM · Câu 137** (id 41776137) → `lifecycle-25` Program Life Cycle Management · Analyze variances and trends · low
+  - Lý do: Phân tích nguyên nhân trễ tiến độ dựa trên CPI
+  - Câu hỏi: During a weekly program review meeting for a large construction program, you notice that one of the projects seems to have been late on deliverables for the past several weeks. The project and the overall program have a CPI of 1.1 and 1.2 respectively. What is the LEAST likely cause of this delay?
+- **6_6_2024 11_36_16 AM · Câu 143** (id 41776143) → `strategy-6` Strategic Program Alignment · Identify and quantify expected benefits · low
+  - Lý do: Kỹ thuật ra quyết định chọn sản phẩm cho khách hàng mới
+  - Câu hỏi: A program is meant to launch new products targeted at generating new revenue streams from clients that the organization hasn't targeted before. One of the challenges for the initial team was to decide upon which products might best meet expectations of potential customers. What decision making technique would be most appropriate for this?
+- **6_6_2024 11_36_16 AM · Câu 147** (id 41776147) → `strategy-7` Strategic Program Alignment · Estimate financial framework and nonfinancial benefits · low
+  - Lý do: Ảnh hưởng tài chính của khoản đầu tư nhà máy
+  - Câu hỏi: As part of your program, you have just received approval for constructing a new paint mixing factory at a cost of $1.5 million. The cost is inclusive of construction, machinery, contracts for building and commissioning. The work is expected to be completed in this financial year itself although some of the payments may actually be made next year as your company will avail of the credit period. You want to give your company’s financial analyst a “heads-up” about this. Which of the following statements would be the most accurate?
+- **6_6_2024 11_36_16 AM · Câu 164** (id 41776164) → `governance-1` Governance · Develop program management standards and structure · low
+  - Lý do: Cơ chế phân bổ chi phí tài nguyên dùng chung
+  - Câu hỏi: A program is tight on costs and the program manager would like to instill discipline in terms of cost management across projects. During the definition of cost tracking mechanism, a challenge has come up. There are many shared resources like a test lab that are used by multiple projects and this is a significant component of the overall project and program cost. The program manager is wondering how to allocate the costs of the shared resources to different projects. Which of the following is the most reasonable way forward?
+- **6_6_2024 11_37_20 AM · Câu 9** (id 41840009) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Chọn program manager giỏi nhận diện rủi ro cấp cao
+  - Câu hỏi: You are the sponsor of a program and you are in the process of choosing a program manager. All the candidates have already managed programs for the company and they have done it successfully; they are highly regarded individuals in the organization and they tend to deliver to expectations. You choose the candidate who previously excelled in
+- **6_6_2024 11_37_20 AM · Câu 10** (id 41840010) → `lifecycle-24` Program Life Cycle Management · Approve closure of constituent components · low
+  - Lý do: Thời điểm chuẩn bị yêu cầu chuyển giao component
+  - Câu hỏi: You have been assigned as the program manager to manage the release of five new ice cream flavors within the next year. The company is betting a lot on this program because it has been failing its last few programs and is currently facing hard times keeping up with the fast growing market. You have finally reached the closing phase and are working on transitioning the program to operational entities for sustainment. During which phase, the components transition requests are prepared?
+- **6_6_2024 11_37_20 AM · Câu 21** (id 41840021) → `strategy-10` Strategic Program Alignment · Identify integration opportunities with operations · low
+  - Lý do: Năng lực program manager, câu kiến thức chung
+  - Câu hỏi: You are the sponsor of a high-priority program and want to assign a program manager to manage your program. The program manager needs to have the PgMP credential and needs to be knowledgeable in the art of communication and stakeholder engagement as you know that the program will span on a long period and will have a large number of stakeholders involved. Which of the below represents an important competency you will look for it in a program manager?
+- **6_6_2024 11_37_20 AM · Câu 25** (id 41840025) → `lifecycle-30` Program Life Cycle Management · Manage risk per the risk management plan · low
+  - Lý do: Risk profile thể hiện trong policy statement
+  - Câu hỏi: You are managing a program for the government and due to the high stakes you maintain close communication with the government representatives. You are working continuously to maximize opportunities and lowering threats. In your opinion, risk profiles are
+- **6_6_2024 11_37_20 AM · Câu 30** (id 41840030) → `lifecycle-14` Program Life Cycle Management · Develop KPIs for scope and quality management · low
+  - Lý do: Định nghĩa chất lượng program, câu kiến thức chung
+  - Câu hỏi: You know that quality is often performed at the component level; the governance board is responsible for reviewing and approving the approach for quality management and the standards by which quality will be measured. Program quality
+- **6_6_2024 11_37_20 AM · Câu 33** (id 41840033) → `stakeholder-2` Stakeholder Engagement · Analyze stakeholders and plan engagement · low
+  - Lý do: Định nghĩa hoạt động stakeholder engagement
+  - Câu hỏi: The program manager engages stakeholders by assessing their attitudes towards the program and change readiness. The program manager includes stakeholders in program activities and utilizes communications targeted to their needs and expectations. This is done as part of
+- **6_6_2024 11_37_20 AM · Câu 37** (id 41840037) → `lifecycle-29` Program Life Cycle Management · Assess impact of program changes · low
+  - Lý do: Đánh giá thay đổi tổ chức bằng xác suất và tác động
+  - Câu hỏi: You are managing a restructuring program for your company which will include laying off a large number of employees and merger of multiple departments. It is a big change for the company; however, it is needed for the future of the company. In order to see how the company will adapt to change, you are now conducting a change assessment. As part of the assessment you
+- **6_6_2024 11_37_20 AM · Câu 46** (id 41840046) → `strategy-8` Strategic Program Alignment · Evaluate regulatory, legal, social and ethical constraints · low
+  - Lý do: Yêu cầu đa dạng văn hoá từ nguồn vốn là ràng buộc
+  - Câu hỏi: Funding models vary for programs and subsequent projects; funding can be internal or external. Consider you are managing a program funded by the government. The used funding is a step funding and requires the program to include workers from different cultural diversity. This is regarded as?
+- **6_6_2024 11_37_20 AM · Câu 47** (id 41840047) → `governance-1` Governance · Develop program management standards and structure · low
+  - Lý do: Phương pháp PMO, hoạt động quản lý chất lượng
+  - Câu hỏi: Your corporate PMO has defined a program management methodology to be used across all programs in the company. You were appointed to manage a transformation program in your company and are currently in the planning phase. Which of the below is considered important in defining program management activities?
+- **6_6_2024 11_37_20 AM · Câu 49** (id 41840049) → `lifecycle-10` Program Life Cycle Management · Optimize the plan by leveling resources · low
+  - Lý do: Xác định nhu cầu nguồn lực dựa trên dữ liệu lịch sử
+  - Câu hỏi: You are the program manager to build a new gas extraction station in a new country where it is the first time they try to extract gas. Your company has developed gas extraction stations in other countries, but it is its first program in this country. During definition phase and while determining resource requirements, you should
+- **6_6_2024 11_37_20 AM · Câu 50** (id 41840050) → `lifecycle-21` Program Life Cycle Management · Execute program management plans · low
+  - Lý do: Quản lý hợp đồng cấp program và component
+  - Câu hỏi: In programs, normally the contracts are signed at program level but managed at component level; admin and closeout decisions are managed at component level. However, some of the contracts are administered at program level to benefit many components. In this case
+- **6_6_2024 11_37_20 AM · Câu 57** (id 41840057) → `strategy-7` Strategic Program Alignment · Estimate financial framework and nonfinancial benefits · low
+  - Lý do: Kiểm soát nguồn vốn bên ngoài thuộc steering committee
+  - Câu hỏi: Program manager is responsible for controlling the budget in a program. Some programs are funded internally by the company, others externally. When a program is funded externally, the ____ is responsible for controlling the funding
+- **6_6_2024 11_37_20 AM · Câu 58** (id 41840058) → `governance-2` Governance · Select a governance framework · low
+  - Lý do: Vai trò sponsor là người dẫn dắt thay đổi
+  - Câu hỏi: You are the sponsor of a program and currently working on assigning a program manager to manage the definition phase. The output of this phase will be used as input in the planning phase and will be used to maintain program alignment and viability throughout the lifecycle. The change driven by this program needs to be integrated as well with the operations and throughout the company. In a program, who is considered the champion for change?
+- **6_6_2024 11_37_20 AM · Câu 68** (id 41840068) → `strategy-8` Strategic Program Alignment · Evaluate regulatory, legal, social and ethical constraints · low
+  - Lý do: Đạo đức khi đưa ước lượng thầu trung thực
+  - Câu hỏi: You are bidding to gain a program for a reputable customer. After thorough analysis, you came out with a result of 3 years to finish and you cannot do it in less time; another company gave an estimation of 2.5 years and a third one of 2.8 years. You learned about a niche market technological breakthrough which will definitely make you finish the program in 2 years. Your given estimation would be
+- **6_6_2024 11_37_20 AM · Câu 72** (id 41840072) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Câu định nghĩa phân biệt portfolio và program
+  - Câu hỏi: What is the difference between a Portfolio and a Program
+- **6_6_2024 11_37_20 AM · Câu 81** (id 41840081) → `governance-2` Governance · Select a governance framework · low
+  - Lý do: Vai trò steering committee duyệt các kế hoạch program
+  - Câu hỏi: During the definition phase, the program manager, along with the program management team prepare the program management plan with all its subsidiary plans which will guide the execution of the delivery phase. From the below options, who is responsible for reviewing all program management plans?
+- **6_6_2024 11_37_20 AM · Câu 85** (id 41840085) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Kiến thức chung về thời điểm bổ nhiệm program manager
+  - Câu hỏi: During the strategic planning cycle of an organization, the vision and mission are used to produce strategic goals and objectives documented in the strategic plan, which is then divided into sets of initiatives. Each set of initiatives may be grouped under a portfolio grouping multiple programs within it. In which phase of the program are the program managers assigned?
+- **6_6_2024 11_37_20 AM · Câu 86** (id 41840086) → `governance-2` Governance · Select a governance framework · low
+  - Lý do: Định nghĩa vai trò của program governance
+  - Câu hỏi: Program governance enables and performs program decision making, establishes practices to support the program and maintains program oversight with a focus on delivering benefits. In addition, program governance
+- **6_6_2024 11_37_20 AM · Câu 94** (id 41840094) → `lifecycle-9` Program Life Cycle Management · Establish the program management plan and schedule · low
+  - Lý do: Kỹ thuật SWOT hỗ trợ lập kế hoạch program
+  - Câu hỏi: Planning is a very important sub-phase in the definition of a program because it will guide the entire program delivery. Program management plan and all subsequent documents are prepared, recommended by program manager and approved by steering committee. Which of the below methods help while doing the planning?
+- **6_6_2024 11_37_20 AM · Câu 103** (id 41840103) → `lifecycle-5` Program Life Cycle Management · Define success measurement criteria and KPIs · low
+  - Lý do: Tài liệu chứa tiêu chí thành công program
+  - Câu hỏi: Program success criteria are used in a program to maintain the minimum level of acceptable delivery of benefits. The program undergoes a lot of changes and it is the responsibility of the program manager to always keep an eye on meeting the program success criteria. Which of the below documents contains the program success criteria?
+- **6_6_2024 11_37_20 AM · Câu 105** (id 41840105) → `lifecycle-8` Program Life Cycle Management · Develop the program WBS · low
+  - Lý do: PWBS là đầu vào quyết định make-or-buy
+  - Câu hỏi: Programs normally use the procurement policies and procedures of the organization, unless the program has particular procurement specifications; in this case, the program manager will use the organization procurement processes and tailor them with the support from PMO to the program’s needs. Which of the below is an input to make or buy decisions?
+- **6_6_2024 11_37_20 AM · Câu 106** (id 41840106) → `lifecycle-21` Program Life Cycle Management · Execute program management plans · low
+  - Lý do: Quy trình procurement: phát hành RFP sau danh sách seller
+  - Câu hỏi: Programs normally use the procurement policies and procedures of the organization, unless the program has particular procurement specifications; in this case, the program manager will use the organization procurement processes and tailor them with the support from PMO to the program’s needs. Procurement is done from a qualified sellers’ list. After completing the qualified sellers list, you normally?
+- **6_6_2024 11_37_20 AM · Câu 107** (id 41840107) → `governance-4` Governance · Evaluate KPIs to monitor benefits · low
+  - Lý do: Balanced scorecard dùng định nghĩa CSF, KPI, đo benefits
+  - Câu hỏi: A balanced scorecard is a performance metric used in strategic management to identify and improve various internal functions of a business and their resulting external outcomes. It is used to measure and provide feedback to organizations. In addition, Balanced score card is used to?
+- **6_6_2024 11_37_20 AM · Câu 112** (id 41840112) → `lifecycle-21` Program Life Cycle Management · Execute program management plans · low
+  - Lý do: Đầu vào lựa chọn seller trong procurement
+  - Câu hỏi: Programs normally use the procurement policies and procedures of the organization, unless the program has particular procurement specifications; in this case, the program manager will use the organization procurement processes and tailor them with the support from PMO to the program’s needs. Which of the below is an important input when selecting a seller
+- **6_6_2024 11_37_20 AM · Câu 113** (id 41840113) → `governance-2` Governance · Select a governance framework · low
+  - Lý do: Khái niệm EEF về thủ tục biểu mẫu tổ chức
+  - Câu hỏi: Program uses a variety of templates, forms, processes and procedures to effectively guide each phase of the program. The requirements to complete forms and paperwork required by organization are part of
+- **6_6_2024 11_37_20 AM · Câu 117** (id 41840117) → `strategy-7` Strategic Program Alignment · Estimate financial framework and nonfinancial benefits · low
+  - Lý do: Đầu ra hoạt động quản lý tài chính program
+  - Câu hỏi: Program activities are the tasks and work conducted to support a program and which contributes throughout the program lifecycle; activities supporting the program management include change, communication, information, procurement, quality, resource, risk, schedule, scope and financial management activities. Which of the below is an output of the financial management activity?
+- **6_6_2024 11_37_20 AM · Câu 118** (id 41840118) → `strategy-7` Strategic Program Alignment · Estimate financial framework and nonfinancial benefits · low
+  - Lý do: Đầu ra lập ngân sách program
+  - Câu hỏi: You are managing a program for the government and due to the high stakes you maintain a close eye on the schedule and budget in order not to derail from the plan. Program budget incorporates the costs for each individual component and the cost for resources to manage the program itself. Which of the below is an output of the program cost budgeting?
+- **6_6_2024 11_37_20 AM · Câu 119** (id 41840119) → `strategy-7` Strategic Program Alignment · Estimate financial framework and nonfinancial benefits · low
+  - Lý do: Đầu vào lập ngân sách program
+  - Câu hỏi: Once funds are received and program begins paying expenses, the financial effort moves into tracking, monitoring and controlling the program’s funds and expenditures. As part of program financial management, the program team prepares component cost estimation and program cost budgeting. Which of the below is an input to the program cost budgeting?
+- **6_6_2024 11_37_20 AM · Câu 132** (id 41840132) → `lifecycle-17` Program Life Cycle Management · Deploy governance framework and uniform standards · low
+  - Lý do: Nhận nguồn lực cố định khi phát triển hạ tầng program
+  - Câu hỏi: Resources are planned right from the beginning of a program, with an estimate of the required staff and facilities prepared during business case and reflected in program charter. You are managing a program which will include a large number of program resources due to its criticality and complexity. You realize, that in your program, you get permanent resources to manage the program during
+- **6_6_2024 11_37_20 AM · Câu 133** (id 41840133) → `lifecycle-30` Program Life Cycle Management · Manage risk per the risk management plan · low
+  - Lý do: Kỹ thuật phân tích định lượng Monte Carlo
+  - Câu hỏi: During the course of the program, the program manager and program team use quantitative and qualitative analysis techniques to collect and analyze data related to risks, stakeholders, etc. Which of the below are quantitative analysis techniques and tools
+- **6_6_2024 11_37_20 AM · Câu 136** (id 41840136) → `stakeholder-5` Stakeholder Engagement · Define and maintain stakeholder communications · low
+  - Lý do: Vai trò program manager trong truyền thông stakeholder
+  - Câu hỏi: Throughout the program lifecycle, and knowing that stakeholder engagement is critical to program success, the program manager works constantly to engage stakeholders and gain their support. You are the program manager for a multi-tier program ranging across multiple stakeholder channels and a wide range of stakeholders’ groups. Who is responsible for stakeholder communication in a program?
+- **6_6_2024 11_37_20 AM · Câu 150** (id 41840150) → `governance-2` Governance · Select a governance framework · low
+  - Lý do: Vai trò sponsor trong steering committee component
+  - Câu hỏi: The sponsor acts as an advocate in a program and ensures that the program gets the management attention while informing the program manager of any strategic change. The sponsor is an executive member who acts as the chair of the steering committee. Who usually takes up the role of sponsor in components’ steering committees?
+- **6_6_2024 11_37_20 AM · Câu 157** (id 41840157) → `lifecycle-29` Program Life Cycle Management · Assess impact of program changes · low
+  - Lý do: Đánh giá phạm vi program khi phân tích issue và thay đổi
+  - Câu hỏi: You are mid-way through your program and you realize that stakeholders have conflicting concerns and issues, and that operational departments are a bit reluctant to change. You do not understand the reason behind this, however, in your analysis of the issues in order to come out with necessary changes, you need to evaluate
+- **6_6_2024 11_37_20 AM · Câu 159** (id 41840159) → `governance-2` Governance · Select a governance framework · low
+  - Lý do: Program manager uy tín được tự chủ cao hơn
+  - Câu hỏi: When you started your career, you were keen to get onto the management path and you worked day and night to get your PMP certification followed by the PgMP certification. Today, you are a highly regarded program manager in your organization and you are the one that people come to for advice. This warrants that
+- **6_6_2024 11_37_20 AM · Câu 169** (id 41840169) → `lifecycle-23` Program Life Cycle Management · Evaluate program status · low
+  - Lý do: Thời điểm giám sát và kiểm soát program
+  - Câu hỏi: Through program performance monitoring and controlling, the program management team continuously monitor the health of the program and ensure that it remains aligned with the strategic objectives and in-line with the planned values. During which phase you do program performance monitoring and controlling?
+- **6_6_2024 11_38_25 AM · Câu 6** (id 41905006) → `strategy-7` Strategic Program Alignment · Estimate financial framework and nonfinancial benefits · low
+  - Lý do: Đầu ra lập ngân sách program
+  - Câu hỏi: Program manager is responsible for managing the financial aspects of the program with the oversight from the steering committee. Program payment schedules, component payment schedules and updates to program budget baseline are outputs of?
+- **6_6_2024 11_38_25 AM · Câu 14** (id 41905014) → `governance-11` Governance · Support the program integration management plan · low
+  - Lý do: Program architecture ánh xạ component tới benefits, câu định nghĩa
+  - Câu hỏi: Throughout the course of the program, the program manager and governance board work to ensure benefits realization within the program scope and company standards. Benefits are delivered through the work of components and component integration. Program ______ maps how the components will deliver outcomes in order to achieve program benefits?
+- **6_6_2024 11_38_25 AM · Câu 23** (id 41905023) → `governance-11` Governance · Support the program integration management plan · low
+  - Lý do: Program architecture liên kết component mới, câu định nghĩa
+  - Câu hỏi: You are mid-way through your program and due to changes; you realize the need to integrate two new components in order to realize expected benefits. Which of the following documents establishes the linkage of the new components to the already defined program components?
+- **6_6_2024 11_38_25 AM · Câu 30** (id 41905030) → `lifecycle-33` Program Life Cycle Management · Execute program transition and close-out · low
+  - Lý do: Các bước đóng hợp đồng
+  - Câu hỏi: Contracts are signed and related work is initiated throughout the program lifecycle. Contracts are normally administered at component level and the program manager maintains oversight on the financial expenditure of a contract and on its closure requests. Which of the below lists the correct steps of closing a contract?
+- **6_6_2024 11_38_25 AM · Câu 43** (id 41905043) → `lifecycle-7` Program Life Cycle Management · Develop a detailed program scope statement · low
+  - Lý do: Tài liệu cần đọc khi nhận program giai đoạn planning
+  - Câu hỏi: You have been assigned by the sponsor to manage a high priority program in your organization. The program is already in its planning phase and the previous manager has retired. The planning phase spans a full year and is considered critical to the successful delivery of a program. As a first step, which document you study?
+- **6_6_2024 11_38_25 AM · Câu 44** (id 41905044) → `lifecycle-3` Program Life Cycle Management · Develop the program roadmap · low
+  - Lý do: Tài liệu cần đọc khi nhận program giai đoạn delivery
+  - Câu hỏi: You have been assigned by the sponsor to manage a high priority program in your organization. The program is already in its delivery phase and the previous manager has retired. The delivery is already mid-way and the program is being delivered as planned. As a first step, which document you study?
+- **6_6_2024 11_38_25 AM · Câu 51** (id 41905051) → `lifecycle-25` Program Life Cycle Management · Analyze variances and trends · low
+  - Lý do: Đọc số liệu chi phí/tiến độ, thiếu bảng dữ liệu
+  - Câu hỏi: You have prepared a performance report and presented the above to steering committee. Having looked at these numbers, which of the below is true?
+- **6_6_2024 11_38_25 AM · Câu 52** (id 41905052) → `lifecycle-27` Program Life Cycle Management · Manage program-level issues · low
+  - Lý do: Thành viên steering ép chọn nhà thầu, leo thang sponsor
+  - Câu hỏi: One of your program’s components will be outsourced. You are currently preparing a Statement Of Work (SOW) in order to send RFPs to the qualified sellers list. One of your steering committee members approaches you and asks you to grant the contract to a seller that he knows will do a great job. You find out that the seller has been removed from the qualified sellers list and you inform the steering committee member, however, he insists on selecting him. What should you do in this case?
+- **6_6_2024 11_38_25 AM · Câu 63** (id 41905063) → `lifecycle-24` Program Life Cycle Management · Approve closure of constituent components · low
+  - Lý do: Component đóng dưới ngân sách, trả tiền cho sponsor
+  - Câu hỏi: You program to deliver the cancer drug to cure all the patients around the world has been performing as expected and you are nearing the closure phase. In your program, one component is already in the closure phase and has been completed under budget. What should you do?
+- **6_6_2024 11_38_25 AM · Câu 65** (id 41905065) → `lifecycle-21` Program Life Cycle Management · Execute program management plans · low
+  - Lý do: Thứ tự bước mua sắm
+  - Câu hỏi: Programs normally use the procurement policies and procedures of the organization, unless the program has particular procurement specifications; in this case, the program manager will use the organization procurement processes and tailor them with the support from PMO to the program’s needs. Which of the below options represents the correct steps for program procurement?
+- **6_6_2024 11_38_25 AM · Câu 70** (id 41905070) → `lifecycle-30` Program Life Cycle Management · Manage risk per the risk management plan · low
+  - Lý do: Công cụ phân tích rủi ro định lượng
+  - Câu hỏi: Your program is mid-way through the delivery phase and it is performing as planned. So far, you have been managing the program successfully. One of your component project managers approached you asking advice on which analysis tool to use when analyzing risks. Which of the below would you suggest to the project manager?
+- **6_6_2024 11_38_25 AM · Câu 82** (id 41905082) → `lifecycle-10` Program Life Cycle Management · Optimize the plan by leveling resources · low
+  - Lý do: Giải phóng nguồn lực trong tổ chức ma trận
+  - Câu hỏi: You are working in a matrix organization and resources from a variety of functional departments are working on your program and related components. Which of the following is true about your role?
+- **6_6_2024 11_38_25 AM · Câu 87** (id 41905087) → `lifecycle-16` Program Life Cycle Management · Charter and initiate constituent components · low
+  - Lý do: Project manager component chưa đủ chứng chỉ, báo khách hàng
+  - Câu hỏi: Your company won the bid for a large project for a multi-cultural company with offices spanning across multiple countries. In the Statement Of Work (SOW) presented by the customer, there was a clause that all project managers who will work on this program must have their PMP certifications. One of your starting components is managed by a strong project manager who always gets the job done within scope, quality, schedule and cost. This project manager, however, due to his busy schedule, failed his PMP test and has a second attempt scheduled two weeks after his component initiation date. You, as the program manager, are finalizing the definition phase and starting the delivery phase. What should your next course of action be?
+- **6_6_2024 11_38_25 AM · Câu 92** (id 41905092) → `lifecycle-9` Program Life Cycle Management · Establish the program management plan and schedule · low
+  - Lý do: Tiêu chí chọn mua sắm khi lập kế hoạch
+  - Câu hỏi: As program manager for the new ice cream flavors program, you want to select appropriate subcontractors to support your program and transfer a part from the work to be done to others. While preparing for the program, you prepare selection criteria in order to group which components to outsource and which components to undertake internally. You do this because you want to
+- **6_6_2024 11_38_25 AM · Câu 96** (id 41905096) → `governance-10` Governance · Monitor the business environment for alignment · low
+  - Lý do: Theo dõi thay đổi môi trường, đáp án lạ
+  - Câu hỏi: You are in the second year of a five years program and the program has been successfully delivering the planned benefits. Your program management team and you are constantly on the lookout for environmental changes that might affect the program delivery. The activity performed here is part of which of the following?
+- **6_6_2024 11_38_25 AM · Câu 99** (id 41905099) → `lifecycle-16` Program Life Cycle Management · Charter and initiate constituent components · low
+  - Lý do: Phê duyệt component còn lại để rút ngắn tiến độ
+  - Câu hỏi: You are in the second year of a four years program and the program has been successfully delivering the planned benefits. Management is now concerned about a new market competition and asks you to shorten the schedule to meet the newly shortened benefits window without increasing program risk. The program still have 3 components to initiate, the best course of action would be to
+- **6_6_2024 11_38_25 AM · Câu 103** (id 41905103) → `strategy-7` Strategic Program Alignment · Estimate financial framework and nonfinancial benefits · low
+  - Lý do: Ngân sách vượt do không rà tài liệu formulation
+  - Câu hỏi: All programs in your company seem to miss the allotted budget. The CEO advised to hire a subject matter expert (SME) in order to help while planning the programs’ budgets. But the situation does not seem to get any better. What is the most possible reason for this?
+- **6_6_2024 11_38_25 AM · Câu 104** (id 41905104) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Phân biệt vòng đời program và project
+  - Câu hỏi: You are working as a program manager and one of your components junior project managers comes to you seeking advice about the difference between program life cycle and project life cycle. Your answer to the junior project manager would be
+- **6_6_2024 11_38_25 AM · Câu 109** (id 41905109) → `lifecycle-17` Program Life Cycle Management · Deploy governance framework and uniform standards · low
+  - Lý do: Quy trình thống nhất qua các pha PLC
+  - Câu hỏi: Your program for launching new flavors of ice cream is in its definition phase and you are thoroughly planning it being of critical importance for your company, and you know that a good planning will normally result in successful delivery and closure phases. In program lifecycle (PLC), program manager manages activities and facilitates program definition, delivery and closure. Which of the below statements is true?
+- **6_6_2024 11_38_25 AM · Câu 113** (id 41905113) → `governance-2` Governance · Select a governance framework · low
+  - Lý do: Program manager do sponsor bổ nhiệm
+  - Câu hỏi: Not all work on a program is done during the program; some of the work is performed prior to the program when grouping the initiatives into portfolios and sometimes preparing the business cases for the programs. However, the assignment of a program manager usually marks the official debut of a program. When in program pre-setup phase, how is the program manager chosen?
+- **6_6_2024 11_38_25 AM · Câu 124** (id 41905124) → `governance-2` Governance · Select a governance framework · low
+  - Lý do: Sponsor chịu trách nhiệm cung cấp nguồn lực
+  - Câu hỏi: Each program uses a variety of resources from different technical and management backgrounds. Resources are added and removed based on the program and its constituent components needs. Who is considered responsible for providing the needed resources to a program?
+- **6_6_2024 11_38_25 AM · Câu 130** (id 41905130) → `lifecycle-20` Program Life Cycle Management · Review project managers' performance · low
+  - Lý do: Bảo đảm component manager hợp tác
+  - Câu hỏi: In definition phase, Business case, roadmap and charter are approved as part of the formulation sub-phase; and the program management plan (PMP) is approved as part of planning phase. Considering that your PMP has just been approved, what will you, as a program manager, need to do?
+- **6_6_2024 11_38_25 AM · Câu 132** (id 41905132) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Sponsor bổ nhiệm program manager trước tiên
+  - Câu hỏi: Consider you are the sponsor for a new program; this program has been sitting on the shelf for too long and the portfolio management decided during their last meeting that this program needs to be initiated. Today, you received the initiation decision. What should be your first act?
+- **6_6_2024 11_38_25 AM · Câu 135** (id 41905135) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Câu định nghĩa: tiêu chí chọn nỗ lực thành program
+  - Câu hỏi: Your CEO is a learning enthusiast and has recently completed his PgMP certification. He decided to switch the company from a silo-based company to a program-based company. You are in a committee meeting and are currently selecting which endeavors to be undertaken as programs. Which of the following validates to be undertaken as a program?
+- **6_6_2024 11_38_25 AM · Câu 141** (id 41905141) → `governance-6` Governance · Evaluate risks and update the risk plan for approval · low
+  - Lý do: Program bị huỷ do đánh giá rủi ro chiến lược không đúng
+  - Câu hỏi: You are mid-way through your program and performing as expected. During a portfolio review meeting, it was decided that your program needs to be terminated because a similar product was launched to the market last week. This issue is due to
+- **6_6_2024 11_38_25 AM · Câu 144** (id 41905144) → `lifecycle-21` Program Life Cycle Management · Execute program management plans · low
+  - Lý do: Vai trò quản lý hợp đồng, đảm bảo ngân sách chi đúng để đạt benefits
+  - Câu hỏi: You have a large program with multiple components in it. Most of the work is outsourced to contractors. Which of the below represents the role of program manager in contract administration?
+- **6_6_2024 11_38_25 AM · Câu 145** (id 41905145) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Câu kiến thức: portfolio manager chịu trách nhiệm mục tiêu chiến lược
+  - Câu hỏi: Due to high complexity and uncertainty levels in a program, multiple risks occur and changes are constantly being implemented and integrated. The program aims to achieve its strategic goals and objectives and should remain aligned with the organization/corporate strategic goals and objectives. Who is the individual or entity responsible for achieving the organization/corporate strategic objectives?
+- **6_6_2024 11_38_25 AM · Câu 147** (id 41905147) → `stakeholder-4` Stakeholder Engagement · Maintain program visibility and support · low
+  - Lý do: Câu chung: mục đích engagement là truyền đạt benefits
+  - Câu hỏi: Throughout the program lifecycle, and knowing that stakeholder engagement is critical to program success, the program manager works constantly to engage stakeholders and gain their support. You are the program manager for a multi-tier program ranging across multiple stakeholder channels and a wide range of stakeholders’ groups. Why is it important for program manager to perform stakeholder engagement?
+- **6_6_2024 11_38_25 AM · Câu 151** (id 41905151) → `strategy-7` Strategic Program Alignment · Estimate financial framework and nonfinancial benefits · low
+  - Lý do: Quản lý tài chính program bao gồm chi phí vận hành
+  - Câu hỏi: During your program to design a new metro station for your city aimed to reduce traffic and travel time for the residents, you have been monitoring the financial environment due to the step-funding given by your government and trying to cope with it by planning for the necessary phase during each period. As part of the Financial Management, you manage?
+- **6_6_2024 11_38_25 AM · Câu 152** (id 41905152) → `benefits-8` Benefits Management · Develop the transition plan to operations · low
+  - Lý do: Khả năng tổ chức hấp thụ thay đổi để hiện thực benefits
+  - Câu hỏi: Your stakeholders on your program to deliver the next-generation remote control car are interested in knowing the progress of a program in delivering its benefits. You have successfully maintained a benefit register. Each of your benefits is assigned a program team member to follow up on its progress and each benefit has a recorded probability level. A program manager should focus on
+- **6_6_2024 11_38_25 AM · Câu 154** (id 41905154) → `benefits-1` Benefits Management · Develop the benefits realization plan · low
+  - Lý do: Benefit management thiết lập kiến trúc program
+  - Câu hỏi: On your program to design the metro station to reduce travel time between two ends of a city, you are currently preparing the program management plan in order to get steering committee approval and initiate the delivery phase. You are now preparing the program architecture. As a program manager, you realize that the ___________ establishes the program architecture
+- **6_6_2024 11_38_25 AM · Câu 156** (id 41905156) → `strategy-8` Strategic Program Alignment · Evaluate regulatory, legal, social and ethical constraints · low
+  - Lý do: Xung đột lợi ích khi tuyển PM, xử lý theo đạo đức
+  - Câu hỏi: You are in the process of selecting project managers to manage the components in your program. One of the steering committee members asks you to hire his nephew. This being a conflict of interest, what should be your best course of action?
+- **6_6_2024 11_38_25 AM · Câu 162** (id 41905162) → `governance-7` Governance · Establish escalation policies and procedures · low
+  - Lý do: Thu hẹp ngưỡng kiểm soát làm chậm thực thi program
+  - Câu hỏi: You were outsourced by your company to manage a government program to bring electricity to all cities, towns and villages on a 24/7 basis. Working with the governance, you have designed a steering committee with high-level country officials and other countries’ partnerships. During the course of the program, you have been approving change requests within your authority level and recommending others to steering committee. You have encountered several planned risks and you have been continuously keeping a close eye on the KPIs and the thresholds in order to implement any preventive action needed. What is the impact of narrowing the program control thresholds?
+- **6_6_2024 11_38_25 AM · Câu 165** (id 41905165) → `strategy-8` Strategic Program Alignment · Evaluate regulatory, legal, social and ethical constraints · low
+  - Lý do: Đạo đức nghề nghiệp: từ chối nhiệm vụ khi thiếu kinh nghiệm
+  - Câu hỏi: You have been asked by the program sponsor to manage a program. After knowing the program objectives and needed work to be done, you realized that you do not have the appropriate experience to manage this program. What should you do in this case?
+- **6_6_2024 11_40_01 AM · Câu 2** (id 42001002) → `lifecycle-21` Program Life Cycle Management · Execute program management plans · low
+  - Lý do: Đào tạo và thử vật liệu là hành động phòng ngừa khi thực thi
+  - Câu hỏi: You are the program manager of the BHG Program. One of the projects in your program will be using new materials that are somewhat untested. You are worried that there may be delays and waste because the project team is unaware of how to accurately use these materials. You elect to send the people that will be using the new materials through training on how to complete their project work. You also allow them to purchase some of the materials to experiment on their use before the actual project work is to be done. You want to ensure that mistakes do not enter into the project. What type of action have you provided in this scenario?
+- **6_6_2024 11_40_01 AM · Câu 5** (id 42001005) → `strategy-7` Strategic Program Alignment · Estimate financial framework and nonfinancial benefits · low
+  - Lý do: Tính giá trị hiện tại của program, kiến thức tài chính
+  - Câu hỏi: What is the present value of a program that will be worth $3,567,000 if it lasts for six years and the rate of return is five percent?
+- **6_6_2024 11_40_01 AM · Câu 8** (id 42001008) → `strategy-7` Strategic Program Alignment · Estimate financial framework and nonfinancial benefits · low
+  - Lý do: Tính giá trị hiện tại của program
+  - Câu hỏi: You are the program manager for your organization. Management would like to consider the present value for your program. If your program is predicted to be worth $450,000 in two years what is the present value of the program if the interest rate is six percent?
+- **6_6_2024 11_40_01 AM · Câu 10** (id 42001010) → `lifecycle-15` Program Life Cycle Management · Monitor human resources and team motivation · low
+  - Lý do: Điều khoản chấm dứt hợp đồng quyết định thanh toán vendor
+  - Câu hỏi: Eric is the project manager of the NQQ Project and has hired the ZAS Corporation to complete part of the project work for Eric's organization. Due to a change request the ZAS Corporation is no longer needed on the project even though they have completed nearly all of the project work. Is Eric's organization liable to pay the ZAS Corporation for the work they have completed so far on the project?
+- **6_6_2024 11_40_01 AM · Câu 11** (id 42001011) → `lifecycle-27` Program Life Cycle Management · Manage program-level issues · low
+  - Lý do: Tranh chấp với vendor về deliverable là claim
+  - Câu hỏi: Mike is the program manager of the NHQ Program. Mike and a vendor are in disagreement over the deliverable the vendor has created for Mike's program. Mike does not believe the vendor has correctly created the deliverable, while the vendor is adamant that his company has indeed completed the contract. Both parties have documented their stance in the debate. This is an example of what?
+- **6_6_2024 11_40_01 AM · Câu 12** (id 42001012) → `lifecycle-9` Program Life Cycle Management · Establish the program management plan and schedule · low
+  - Lý do: Định luật Parkinson chống đệm thời gian trong lập lịch
+  - Câu hỏi: You are the program manager of the GHY Program in your organization. It has come to your attention that some of the project managers in your program are adding time to each project activity in an effort to pad their durations in case some event happens in their project that will cause delays. What principle should you share with these project managers that counterattack the concept of padding activities with additional time?
+- **6_6_2024 11_40_01 AM · Câu 15** (id 42001015) → `lifecycle-21` Program Life Cycle Management · Execute program management plans · low
+  - Lý do: Rule of Seven trong control chart, kiểm soát chất lượng
+  - Câu hỏi: You have created a control chart for a repeatable process in your program. You have discovered that the seven most recent measurements are all on the positive side of the mean in your control chart. What is this phenomenon called?
+- **6_6_2024 11_40_01 AM · Câu 21** (id 42001021) → `lifecycle-16` Program Life Cycle Management · Charter and initiate constituent components · low
+  - Lý do: Thời điểm thu nhận đội ngũ program trong vòng đời
+  - Câu hỏi: You are the program manager for your organization. Part of your role as the program manager is to train John, a new program manager, on the program processes within a program. John is confused as to when the program team can be acquired in the program management lifecycle. When will the program team be acquired for a program?
+- **6_6_2024 11_40_01 AM · Câu 22** (id 42001022) → `benefits-1` Benefits Management · Develop the benefits realization plan · low
+  - Lý do: Câu định nghĩa khái niệm benefit
+  - Câu hỏi: You are the program manager for your organization. You're currently working with the program director, Nancy Holmes, to define a new program and the benefits the program should create. Of the following, which is the best definition of a benefit a program creates?
+- **6_6_2024 11_40_01 AM · Câu 23** (id 42001023) → `lifecycle-10` Program Life Cycle Management · Optimize the plan by leveling resources · low
+  - Lý do: Xác định nguồn lực program, thiếu đáp án
+  - Câu hỏi: You are the program manager for your organization and you need to define all of the program resources you'll need for your program. All of the following can be considered a program resource except for which one?
+- **6_6_2024 11_40_01 AM · Câu 24** (id 42001024) → `lifecycle-15` Program Life Cycle Management · Monitor human resources and team motivation · low
+  - Lý do: Yêu cầu sàng lọc vendor trong RFP là screening system
+  - Câu hỏi: Olive is the program manager for her organization. She has created a request for proposal for a large portion of her program. In this work to be procured she has set several requirements for the vendors to participate. The chief among these requirements is a vendor must have at least four licensed electricians in his team. This requirement for four licensed electricians is an example of which one of the following terms?
+- **6_6_2024 11_40_01 AM · Câu 28** (id 42001028) → `lifecycle-33` Program Life Cycle Management · Execute program transition and close-out · low
+  - Lý do: Ký chứng nhận hoàn thành với vendor khi đóng hợp đồng, thiếu đáp án
+  - Câu hỏi: You are the program manager of the YGH Program. A vendor has recently completed his contracted work for your program. You agree that the vendor has completed the procured work so what document should you and the vendors now sign?
+- **6_6_2024 11_40_01 AM · Câu 32** (id 42001032) → `lifecycle-15` Program Life Cycle Management · Monitor human resources and team motivation · low
+  - Lý do: Cập nhật SOW sau hội nghị nhà thầu trong mua sắm
+  - Câu hỏi: You are the program manager for your organization. You have created a statement of work, request for proposal, and an invitation to a bidder's conference for 17 possible vendors. During the conference there were questions about your request for proposal and statement of work that led to clarifications. After the vendor conference you should update what information to send back to the vendors?
+- **6_6_2024 11_40_01 AM · Câu 33** (id 42001033) → `lifecycle-7` Program Life Cycle Management · Develop a detailed program scope statement · low
+  - Lý do: Cần scope statement xác định chính xác deliverables
+  - Câu hỏi: You are the project manager for your organization and are working with the project stakeholders and the business analyst to define all of the deliverables the project is to create. The stakeholders would like the option of adding more deliverables later in the project and keeping the requirements somewhat open for changes. You explain to the business analyst that you need a set of requirements that define exactly what needs to be delivered for the project. What document are you trying to create in this early stage of the project?
+- **6_6_2024 11_40_01 AM · Câu 34** (id 42001034) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Những gì xác định khi khởi tạo program, câu kiến thức
+  - Câu hỏi: A new program is being initiated for the HNQ Organization. The program manager is working with the business analyst and management to define several attributes of the program. All of the following are identified during program initiation except for which one?
+- **6_6_2024 11_40_01 AM · Câu 36** (id 42001036) → `lifecycle-9` Program Life Cycle Management · Establish the program management plan and schedule · low
+  - Lý do: Câu định nghĩa vòng đời quản lý project và vòng đời project
+  - Câu hỏi: As a program manager you must also understand the project management lifecycle and the project lifecycle. What is the difference between the two?
+- **6_6_2024 11_40_01 AM · Câu 40** (id 42001040) → `lifecycle-23` Program Life Cycle Management · Evaluate program status · low
+  - Lý do: Những gì cần giám sát và kiểm soát trong program
+  - Câu hỏi: You are the program manager for your company and are monitoring and controlling several aspects of your program. You want to make certain that you're including all areas that need to be monitored and controlled. Which one of the following is not something you'll have to monitor and control as a program manager?
+- **6_6_2024 11_40_01 AM · Câu 43** (id 42001043) → `lifecycle-8` Program Life Cycle Management · Develop the program WBS · low
+  - Lý do: Phần tử template công việc, giống từ điển WBS
+  - Câu hỏi: Which of the following is not a template element that is designed to make the project more effective?
+- **6_6_2024 11_40_01 AM · Câu 44** (id 42001044) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Câu kiến thức: lợi ích của program so với nhiều project
+  - Câu hỏi: You are coaching Tammy, a project manager in your program, on the benefits of program management. She is stumped as to why you would create a program so you're sharing with her all the difference benefits of a program. Which one of the following is a benefit of creating a program?
+- **6_6_2024 11_40_01 AM · Câu 59** (id 42001059) → `lifecycle-33` Program Life Cycle Management · Execute program transition and close-out · low
+  - Lý do: Những gì chuyển giao cho tổ chức trong vòng đời program
+  - Câu hỏi: You are the program manager for your organization. You have created a program that will create things for the organization throughout the program not only at program closure. All of the following are elements that you may transfer to the organization throughout the program's life cycle except for which one?
+- **6_6_2024 11_40_01 AM · Câu 62** (id 42001062) → `stakeholder-1` Stakeholder Engagement · Identify stakeholders and create the stakeholder matrix · low
+  - Lý do: Xác định người PM báo cáo trong số stakeholder
+  - Câu hỏi: You are the program manager for your organization. Your current program is to create a new recreational facility in your city. Franklin, the Chief Executive Officer, is concerned about meeting all of the financial and schedule requirements of the proposed program. Martina, the mayor of your town, wants to make certain the program meets all safety requirements and building codes. Your supervisor, Mary Ann, is the Program Director, and she is concerned about the start date of your program. Another stakeholder, Hal, is worried that your resources may be spread thin on the program as some of the resources are on multiple projects in your program. To whom will you report to in this program?
+- **6_6_2024 11_40_01 AM · Câu 66** (id 42001066) → `lifecycle-21` Program Life Cycle Management · Execute program management plans · low
+  - Lý do: Duyệt thanh toán vendor khi hoàn thành hợp đồng
+  - Câu hỏi: You are the program manager for your organization that utilizes vendors from several different organizations. A vendor has submitted an invoice for the work they have completed in your program. You have reviewed the work results and agree with the vendor that their contractual obligation is complete. What should you do next in regard to the vendor's invoice?
+- **6_6_2024 11_40_01 AM · Câu 70** (id 42001070) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Câu định nghĩa portfolio
+  - Câu hỏi: An organization supports both programs and projects for various industries. What is a portfolio?
+- **6_6_2024 11_40_01 AM · Câu 73** (id 42001073) → `strategy-7` Strategic Program Alignment · Estimate financial framework and nonfinancial benefits · low
+  - Lý do: Phân tích make-or-buy về chi phí
+  - Câu hỏi: You are the program manager for your organization and you're trying to determine if you buy or build a software solution for your organization. If you build the solution it'll cost you $75,000 to create and it'll cost you $12,000 per month to support. If you hire a vendor they can build the solution for $63,000 but their solution will cost you $15,500 per month to support. How many months would you have to use your in-house solution to equate to the cost of the vendor's solution?
+- **6_6_2024 11_40_01 AM · Câu 75** (id 42001075) → `lifecycle-15` Program Life Cycle Management · Monitor human resources and team motivation · low
+  - Lý do: Định nghĩa proposal trong mua sắm
+  - Câu hỏi: What document asks the seller to provide your project with a detailed description of a project solution along with a price to complete the project work?
+- **6_6_2024 11_40_01 AM · Câu 76** (id 42001076) → `lifecycle-24` Program Life Cycle Management · Approve closure of constituent components · low
+  - Lý do: Phòng tránh khách hàng từ chối nghiệm thu deliverable
+  - Câu hỏi: Martha is sharing her experience of her last project as the project manager. She tells that when she presented customer a formal acceptance and sign-off document, they refused to sign, claiming that the product does not meet their expectation. Taking which of the following steps could have been prevented the situation? Each correct answer represents a complete solution.
+- **6_6_2024 11_40_01 AM · Câu 78** (id 42001078) → `strategy-7` Strategic Program Alignment · Estimate financial framework and nonfinancial benefits · low
+  - Lý do: Tính giá trị tương lai tối thiểu của program
+  - Câu hỏi: An organization is considering a new program. The program has a cost of $1,950,000 and will last for three years. What is the minimum future value this organization should expect to receive from this program if it is initiated and the rate of return is six percent?
+- **6_6_2024 11_40_01 AM · Câu 81** (id 42001081) → `stakeholder-5` Stakeholder Engagement · Define and maintain stakeholder communications · low
+  - Lý do: Rào cản trong mô hình giao tiếp giữa hai PM
+  - Câu hỏi: Two project managers in your program, Marcy and Mary, are not agreeing with the scheduling of project resources and they have asked for your help to determine the resolution. They are refusing to speak with each other and each is telling you that the other person is scheduling project resources for the project that are already scheduled to complete the work. In the communication model, what component represents the disagreement of these two project managers and their refusal to speak with each other about a resolution?
+- **6_6_2024 11_40_01 AM · Câu 85** (id 42001085) → `lifecycle-15` Program Life Cycle Management · Monitor human resources and team motivation · low
+  - Lý do: Câu kiến thức procurement về người soạn SOW; gần nhất Task thương lượng hợp đồng.
+  - Câu hỏi: Who prepares the statement of work (SOW) for external projects?
+- **6_6_2024 11_40_01 AM · Câu 87** (id 42001087) → `lifecycle-4` Program Life Cycle Management · Develop a responsibility assignment matrix · low
+  - Lý do: Không có đáp án; hỏi quy trình xác định sponsor khi lập ma trận trách nhiệm.
+  - Câu hỏi: You are the program manager for your organization. You're currently creating an accountability matrix starting with yourself, the program manager and the program sponsor. What program management process identifies the program sponsor?
+- **6_6_2024 11_40_01 AM · Câu 94** (id 42001094) → `stakeholder-5` Stakeholder Engagement · Define and maintain stakeholder communications · low
+  - Lý do: Câu kiến thức chung về giao tiếp phi ngôn ngữ.
+  - Câu hỏi: What percentage of communication is nonverbal?
+- **6_6_2024 11_40_01 AM · Câu 98** (id 42001098) → `governance-11` Governance · Support the program integration management plan · low
+  - Lý do: Câu định nghĩa integration management; gần Task kế hoạch tích hợp program.
+  - Câu hỏi: A knowledge area defines a subset of program management and its processes within that domain. For example, the knowledge area of quality management includes the processes related directly to quality management only. Which knowledge area ensures that all knowledge areas interact correctly with one another?
+- **6_6_2024 11_40_01 AM · Câu 100** (id 42001100) → `lifecycle-15` Program Life Cycle Management · Monitor human resources and team motivation · low
+  - Lý do: Câu procurement về weighted scoring chọn nhà cung cấp.
+  - Câu hỏi: You are the program manager for your company and evaluating the sellers to determine the seller to buy from. In your analysis you've created a histogram to display the pros and cons for each seller. You've created five categories of interest and assigned values to each category for each vendor. Your five categories are: Cost, Schedule, Experience, Certification, Warranty. Each category has a different point value and the vendor that receives the maximum points in total will win the contract. What type of seller evaluation are you performing?
+- **6_6_2024 11_41_17 AM · Câu 2** (id 42077002) → `lifecycle-21` Program Life Cycle Management · Execute program management plans · low
+  - Lý do: Coaching về định nghĩa quality control; câu kiến thức chất lượng.
+  - Câu hỏi: Part of your job as the program manager is to coach the project managers on their duties and goals. One of the project managers, Holly, is having trouble discerning the difference between quality assurance and quality control. She understands that she needs both to help you reach the program goals. Which statement best describes quality control for a project within your program?
+- **6_6_2024 11_41_17 AM · Câu 5** (id 42077005) → `lifecycle-15` Program Life Cycle Management · Monitor human resources and team motivation · low
+  - Lý do: Câu procurement về RFI gửi nhà cung cấp.
+  - Câu hỏi: Ned is the program manager for his organization and he's considering some new materials for his program. He and his team have never worked with these materials before and he wants to ask the vendor for some additional information, a demon, and even some samples. What type of a document should Ned send to the vendor?
+- **6_6_2024 11_41_17 AM · Câu 8** (id 42077008) → `lifecycle-9` Program Life Cycle Management · Establish the program management plan and schedule · low
+  - Lý do: Câu kiến thức lập lịch về các loại float.
+  - Câu hỏi: Which of the following types of floats are available? Each correct answer represents a complete solution. Choose two.
+- **6_6_2024 11_41_17 AM · Câu 9** (id 42077009) → `lifecycle-27` Program Life Cycle Management · Manage program-level issues · low
+  - Lý do: Chấm dứt hợp đồng vendor, ghi nhận công việc đã và chưa làm.
+  - Câu hỏi: You are the program manager of the YHT Program. You have been working with a vendor in the program but have decided that the contract between your program and the vendor needs to be terminated. What two things must be documented if you wish to terminate a vendor's contract?
+- **6_6_2024 11_41_17 AM · Câu 27** (id 42077027) → `lifecycle-15` Program Life Cycle Management · Monitor human resources and team motivation · low
+  - Lý do: Phân tích make-or-buy trong procurement của program.
+  - Câu hỏi: You are trying to determine if you should buy or build a solution for your program. If you build the solution it'll cost you $45,000 to create and $7,000 per month to support. A vendor reports that they can create the solution for you for $1,000 but you'll have to pay them $9,000 per month to support the solution. Should you buy or build this solution?
+- **6_6_2024 11_41_17 AM · Câu 33** (id 42077033) → `lifecycle-9` Program Life Cycle Management · Establish the program management plan and schedule · low
+  - Lý do: Coaching khái niệm critical path; câu kiến thức lập lịch.
+  - Câu hỏi: You are the program manager for your organization and are working with Tracy, one of the project managers in your program. Tracy is having some trouble understanding the concept of the critical path in her project's network diagram. Which one of the following is the best definition of the critical path?
+- **6_6_2024 11_41_17 AM · Câu 34** (id 42077034) → `lifecycle-21` Program Life Cycle Management · Execute program management plans · low
+  - Lý do: Câu kiến thức công cụ quality control scatter diagram.
+  - Câu hỏi: What quality control chart compares two or more variables over time to determine how closely the variables may be related to one another?
+- **6_6_2024 11_41_17 AM · Câu 37** (id 42077037) → `lifecycle-21` Program Life Cycle Management · Execute program management plans · low
+  - Lý do: Chi phí đào tạo là cost of conformance; kiến thức chất lượng.
+  - Câu hỏi: You are the program manager of the MQQ Program. Your program will use equipment and materials that are new to your industry. You have some concerns that there will be delays and waste by your program team because they've not worked with these materials or tools before. You elect to send the resources that will work the most with these tools through training. The cost of the training in this instance is known as which one of the following?
+- **6_6_2024 11_41_17 AM · Câu 39** (id 42077039) → `lifecycle-1` Program Life Cycle Management · Develop the program charter · low
+  - Lý do: Ngân sách định trước là constraint; kiến thức chung.
+  - Câu hỏi: What project management term would you associated with a predetermined budget you’re your program?
+- **6_6_2024 11_41_17 AM · Câu 40** (id 42077040) → `lifecycle-7` Program Life Cycle Management · Develop a detailed program scope statement · low
+  - Lý do: Nội dung program statement of work; gần Task scope chi tiết.
+  - Câu hỏi: You are the program manager for your organization and working to create the program statement of work for approval by the program director. All of the following information is defined in the program statement of work except for which one?
+- **6_6_2024 11_41_17 AM · Câu 41** (id 42077041) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Câu định nghĩa các theme của program management.
+  - Câu hỏi: You are the program manager for your organization. A new program is about to initiated and Marcy, your assistant, asks you about the themes that all new programs must map to. All of the following are themes that you can discuss with Marcy except for which one is not a program theme?
+- **6_6_2024 11_41_17 AM · Câu 42** (id 42077042) → `stakeholder-5` Stakeholder Engagement · Define and maintain stakeholder communications · low
+  - Lý do: Câu kiến thức mô hình giao tiếp, thành phần medium.
+  - Câu hỏi: Part of program management is to understand how the communication model works in a program. The program manager must be able to effectively communicate with the program team and stakeholders. What component of the communication model is responsible for carrying the message?
+- **6_6_2024 11_41_17 AM · Câu 43** (id 42077043) → `lifecycle-4` Program Life Cycle Management · Develop a responsibility assignment matrix · low
+  - Lý do: Cấu trúc strong matrix ảnh hưởng thẩm quyền; kiến thức chung.
+  - Câu hỏi: You are the program manager for your organization and are planning the composition of the project team. In your organization resources are used from throughout the company and may serve on more than one project. While you, the program manager, will have most of the authority on the program you want the project managers to have authority over the project decisions. What type of an organizational structure does your organization have?
+- **6_6_2024 11_41_17 AM · Câu 45** (id 42077045) → `lifecycle-10` Program Life Cycle Management · Optimize the plan by leveling resources · low
+  - Lý do: Các loại nguồn lực cần theo dõi; kiến thức chung.
+  - Câu hỏi: All of the following are resources that need to be monitored and controlled except for which one?
+- **6_6_2024 11_41_17 AM · Câu 48** (id 42077048) → `lifecycle-15` Program Life Cycle Management · Monitor human resources and team motivation · low
+  - Lý do: Câu procurement: IFB thì phản hồi bằng bid.
+  - Câu hỏi: Hal is the program manager for his organization. He would like your organization to provide his program with 4 tons of pea gravel for a construction project in his program. Hal send you a statement of work and an IFB. What document should you provide to Hal?
+- **6_6_2024 11_41_17 AM · Câu 49** (id 42077049) → `lifecycle-24` Program Life Cycle Management · Approve closure of constituent components · low
+  - Lý do: Công cụ của quy trình đóng project/phase; kiến thức PMBOK.
+  - Câu hỏi: You are the project manager of a construction project. You have to close a phase of the project. Which is the only technique (or tool) available in the Close Project or Phase process?
+- **6_6_2024 11_41_17 AM · Câu 50** (id 42077050) → `lifecycle-15` Program Life Cycle Management · Monitor human resources and team motivation · low
+  - Lý do: Loại hợp đồng CPPC rủi ro nhất cho bên mua.
+  - Câu hỏi: You are the program manager of the NQA Program. In this program you're planning which contract types you'll allow into the program and which ones you will not. One contract type you won't accept is the cost plus percentage of cost contract. Which of the following is a valid reason you would not allow this contract type into your program?
+- **6_6_2024 11_41_17 AM · Câu 53** (id 42077053) → `governance-3` Governance · Obtain approval through stage gate reviews · low
+  - Lý do: Câu kiến thức về các phase của program life cycle.
+  - Câu hỏi: Which of the following is not a phase of program life cycle?
+- **6_6_2024 11_41_17 AM · Câu 54** (id 42077054) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Câu định nghĩa program khác project.
+  - Câu hỏi: You are the program manager for your organization and are coaching Bonnie, a project manager, who would like to be a program manager wants to know what a program is. Which one of the following statements best defines what a program is for Bonnie?
+- **6_6_2024 11_41_17 AM · Câu 56** (id 42077056) → `lifecycle-25` Program Life Cycle Management · Analyze variances and trends · low
+  - Lý do: Monte Carlo mô phỏng kết quả lịch; kiến thức công cụ.
+  - Câu hỏi: What schedule analysis simulation tool allows you, the project manager, to review possible combinations of events such as optimistic, most likely and pessimistic outcomes for your project?
+- **6_6_2024 11_41_17 AM · Câu 60** (id 42077060) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Câu định nghĩa các theme của program management.
+  - Câu hỏi: Program management has several themes that the program manager must be aware of. Which one of the following is not a program management theme?
+- **6_6_2024 11_41_17 AM · Câu 64** (id 42077064) → `lifecycle-15` Program Life Cycle Management · Monitor human resources and team motivation · low
+  - Lý do: Câu procurement về bidder conference.
+  - Câu hỏi: You are hosting a meeting with all of the vendors that have received a copy of your statement of work. In this meeting, you'll be discussing the statement of work, clarifying the details, and answering any questions the vendors may have about the project. What is this meeting called?
+- **6_6_2024 11_41_17 AM · Câu 67** (id 42077067) → `lifecycle-10` Program Life Cycle Management · Optimize the plan by leveling resources · low
+  - Lý do: Các loại nguồn lực cần theo dõi; kiến thức chung.
+  - Câu hỏi: All of the following are resources that you will need to monitor and control in a program environment except for which one?
+- **6_6_2024 11_41_17 AM · Câu 69** (id 42077069) → `lifecycle-30` Program Life Cycle Management · Manage risk per the risk management plan · low
+  - Lý do: Kiến thức chung: rủi ro cao nhất ở đầu dự án.
+  - Câu hỏi: At what point in the project is the risk of failing to achieve the project objectives the greatest?
+- **6_6_2024 11_41_17 AM · Câu 77** (id 42077077) → `lifecycle-21` Program Life Cycle Management · Execute program management plans · low
+  - Lý do: Câu định nghĩa program quality.
+  - Câu hỏi: Which one of the following is the best definition of program quality?
+- **6_6_2024 11_41_17 AM · Câu 81** (id 42077081) → `lifecycle-9` Program Life Cycle Management · Establish the program management plan and schedule · low
+  - Lý do: Interface management plan là kế hoạch hỗ trợ; có thể là stakeholder.
+  - Câu hỏi: Holly is the program manager for her program. She is creating with her team a plan that will address how the program team will achieve program goals based on who the program will need to interact with in the program. This plan should define all of the people, groups, and other entities the program needs to interact with in order to move the program forward. On what plan is Holly working?
+- **6_6_2024 11_41_17 AM · Câu 86** (id 42077086) → `lifecycle-25` Program Life Cycle Management · Analyze variances and trends · low
+  - Lý do: Đầu ra của quy trình kiểm soát lịch; kiến thức.
+  - Câu hỏi: You are the program manager for your organization and are coaching your project managers on the program's schedule. Alice wants to know what the schedule control process creates. All of the following are outputs of the schedule control process except for which one?
+- **6_6_2024 11_41_17 AM · Câu 89** (id 42077089) → `lifecycle-9` Program Life Cycle Management · Establish the program management plan and schedule · low
+  - Lý do: Ước tính definitive dựa trên WBS; kiến thức ước tính.
+  - Câu hỏi: What cost estimating approach uses the work breakdown structure to create a cost estimate?
+- **6_6_2024 11_41_17 AM · Câu 96** (id 42077096) → `lifecycle-15` Program Life Cycle Management · Monitor human resources and team motivation · low
+  - Lý do: Loại hợp đồng nguy hiểm nhất cho bên mua.
+  - Câu hỏi: You are the program manager for your project. You are working with the project managers regarding the procurement processes for their projects. You have ruled out one particular contract type because it is considered too risky for the program. Which one of the following contract types is usually considered to be the most dangerous for the buyer?
+- **6_6_2024 11_41_57 AM · Câu 2** (id 42117002) → `lifecycle-15` Program Life Cycle Management · Monitor human resources and team motivation · low
+  - Lý do: Công cụ của quy trình quản lý procurement program.
+  - Câu hỏi: Which of the following tools and techniques are parts of the Administer Program Procurements process? Each correct answer represents a complete solution. Choose all that apply.
+- **6_6_2024 11_41_57 AM · Câu 4** (id 42117004) → `governance-2` Governance · Select a governance framework · low
+  - Lý do: Quy tắc, thủ tục dự án phải tuân theo là EEF.
+  - Câu hỏi: You are working with Sam, a project manager on one of the projects within your program. Sam doesn't understand all of the rules and procedures that he's required to do as a project manager in your program. What are the rules and procedures called in project that Sam must abide by?
+- **6_6_2024 11_41_57 AM · Câu 7** (id 42117007) → `lifecycle-21` Program Life Cycle Management · Execute program management plans · low
+  - Lý do: Coaching về process group executing tốn nhiều thời gian, ngân sách nhất.
+  - Câu hỏi: You are the program manager for the HGQ Program in your organization. Your program has eight constituent projects including a small project which you've assigned to Beth a new project manager in your organization. Part of your assignment is to coach Beth on project management in your program. You are telling Beth about the five process groups of project management and how they map to the progression of the project. Which process group would you tell Beth is where she'll likely spend the bulk of the project time and the project budget?
+- **6_6_2024 11_41_57 AM · Câu 14** (id 42117014) → `lifecycle-9` Program Life Cycle Management · Establish the program management plan and schedule · low
+  - Lý do: Câu kiến thức chung về iron triangle, không gắn task rõ
+  - Câu hỏi: Which one of the following is not considered one of the three components of the Iron Triangle?
+- **6_6_2024 11_41_57 AM · Câu 16** (id 42117016) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Câu khái niệm lợi ích của program so với project rời rạc
+  - Câu hỏi: All of the following are benefits of a program except for which one?
+- **6_6_2024 11_41_57 AM · Câu 22** (id 42117022) → `lifecycle-9` Program Life Cycle Management · Establish the program management plan and schedule · low
+  - Lý do: Tra activity list và attributes về quy định; câu cấp project
+  - Câu hỏi: Don is the project manager of the NQP Project for his organization. This project is scheduled to last for 18 months and will have several elements of the project that have government regulations. Management is concerned with the regulations and would like Don to report on the activities that will be affected by the regulations. What document should Don reference for information on the activities and the regulations?
+- **6_6_2024 11_41_57 AM · Câu 24** (id 42117024) → `lifecycle-14` Program Life Cycle Management · Develop KPIs for scope and quality management · low
+  - Lý do: Khái niệm quality được hoạch định, không phải kiểm tra
+  - Câu hỏi: Complete the following phrase about quality management: Quality is ____ into a program, not ____ into a program.
+- **6_6_2024 11_41_57 AM · Câu 42** (id 42117042) → `governance-2` Governance · Select a governance framework · low
+  - Lý do: Câu vai trò sở hữu program, đáp án gây tranh cãi
+  - Câu hỏi: Who owns the program?
+- **6_6_2024 11_41_57 AM · Câu 43** (id 42117043) → `lifecycle-21` Program Life Cycle Management · Execute program management plans · low
+  - Lý do: Kiến thức loại hợp đồng CPFF trong procurement
+  - Câu hỏi: Which of the following contract types is described in the statement below? "The seller is reimbursed for all allowable costs for performing the contract work, and receives a fixed payment calculated as a percentage for the initial estimated project costs."
+- **6_6_2024 11_41_57 AM · Câu 44** (id 42117044) → `governance-1` Governance · Develop program management standards and structure · low
+  - Lý do: Câu kiến thức về số knowledge areas trong Standard
+  - Câu hỏi: According to Standard for Program Management, Second Edition, how many knowledge areas are involved for program management?
+- **6_6_2024 11_41_57 AM · Câu 51** (id 42117051) → `lifecycle-21` Program Life Cycle Management · Execute program management plans · low
+  - Lý do: Định nghĩa RFP trong procurement
+  - Câu hỏi: Which of the following documents is described in the statement below? "It is a type of procurement document used to request proposals from prospective sellers of products or services."
+- **6_6_2024 11_41_57 AM · Câu 53** (id 42117053) → `lifecycle-9` Program Life Cycle Management · Establish the program management plan and schedule · low
+  - Lý do: Kỹ thuật Delphi chung, không gắn task cụ thể
+  - Câu hỏi: Which of the following is used to build consensus through rounds of anonymous surveys?
+- **6_6_2024 11_41_57 AM · Câu 57** (id 42117057) → `lifecycle-14` Program Life Cycle Management · Develop KPIs for scope and quality management · low
+  - Lý do: Định nghĩa quality, câu kiến thức chung
+  - Câu hỏi: ____ is the degree to which a set of inherent characteristics fulfills requirements.
+- **6_6_2024 11_41_57 AM · Câu 62** (id 42117062) → `lifecycle-9` Program Life Cycle Management · Establish the program management plan and schedule · low
+  - Lý do: Định nghĩa milestone, câu kiến thức chung
+  - Câu hỏi: What is the other name for critical delivery dates?
+- **6_6_2024 11_41_57 AM · Câu 65** (id 42117065) → `lifecycle-26` Program Life Cycle Management · Update plans with corrective actions · low
+  - Lý do: Fast tracking làm tăng rủi ro; kiến thức nén lịch
+  - Câu hỏi: Which of the following increases when one fast tracks the project?
+- **6_6_2024 11_41_57 AM · Câu 68** (id 42117068) → `lifecycle-26` Program Life Cycle Management · Update plans with corrective actions · low
+  - Lý do: Định nghĩa fast tracking, kỹ thuật nén lịch
+  - Câu hỏi: Which of the following terms is used for a schedule compression technique where two activities that were previously scheduled to start sequentially start at the same time?
+- **6_6_2024 11_42_49 AM · Câu 3** (id 42169003) → `governance-2` Governance · Select a governance framework · low
+  - Lý do: Câu chung về thẩm quyền do steering committee trao
+  - Câu hỏi: Since you have your PgMP and have more than 20 years of experience, your expertise in program management in your company is well known, and you are often consulted as a subject matter expert in the field. Therefore, it is extremely likely that _____________
+- **6_6_2024 11_42_49 AM · Câu 6** (id 42169006) → `lifecycle-23` Program Life Cycle Management · Evaluate program status · low
+  - Lý do: Hoạt động monitoring diễn ra suốt program, câu khái niệm
+  - Câu hỏi: Assume your county government decided to move into program management as it found that a number of projects under way had inter-relationships and interdependencies in terms of the benefits they were to deliver to the citizens in the county. While the county has a project management methodology it did not have one for program management, so it decided to build on the best practices in the Project Management Institute’s Standard for Program Management. As you reviewed the guidelines in The Standard for Program Management, you noted some activities are performed throughout the course of the program; an example is _______________
+- **6_6_2024 11_42_49 AM · Câu 16** (id 42169016) → `lifecycle-24` Program Life Cycle Management · Approve closure of constituent components · low
+  - Lý do: Component transition request trong Program Delivery
+  - Câu hỏi: Finally, your program to develop the advanced polymer chemical for all types of coats is near to completion. You have had seven components in your program, and the last one should finish in two months. You have been involving the people in your operations support group to be part of your program team meetings now for the last year and earlier included them on the distribution list for your status reports, so they felt they were part of the team for success as you recognize transition planning is the key to benefits sustainment in program management. As a program manager, you also recognize the importance of ensuring that component transition requests are prepared. It is especially important during _____________
+- **6_6_2024 11_42_49 AM · Câu 27** (id 42169027) → `governance-11` Governance · Support the program integration management plan · low
+  - Lý do: Năng lực integration của program manager, câu chung
+  - Câu hỏi: You are assuming a position in a company that has not had much experience with program management. You will be leading the program team and performing a business function for your program. The business case has already been made, and the program is scheduled to move into the Program Initiation phase. As the program manager, one competency that is embedded in your job is ___________________
+- **6_6_2024 11_42_49 AM · Câu 30** (id 42169030) → `lifecycle-9` Program Life Cycle Management · Establish the program management plan and schedule · low
+  - Lý do: Risk profile thể hiện trong policy, lập kế hoạch rủi ro
+  - Câu hỏi: As a program manager, you recognize the importance of effective risk management. You want to maximize any risks that may be opportunities that can benefit your program and the organization. As you work in program risk management planning, you define risk profiles, which ______________
+- **6_6_2024 11_42_49 AM · Câu 38** (id 42169038) → `governance-3` Governance · Obtain approval through stage gate reviews · low
+  - Lý do: Steering committee xác định tiêu chí chấp nhận tối thiểu
+  - Câu hỏi: You are preparing for a major steering committee review of your program. The program sponsor is especially interested in progress on Project A, as it provides the foundation for two other projects, and at the last meeting it was behind schedule. You want to ask the committee to approve the initiation of a new project. However, it is the committee’s responsibility to _______________
+- **6_6_2024 11_42_49 AM · Câu 41** (id 42169041) → `governance-2` Governance · Select a governance framework · low
+  - Lý do: Vai trò chủ tịch steering committee là sponsor
+  - Câu hỏi: You are Company A’s program manager for the development of an online banking system for your community bank, for which your company will receive $20 million. Your management at the highest level is totally committed to this program and it is the number one program in Company A’s portfolio. Your program steering committee is dedicated to its success. As a result, the chairperson of the committee is _______________
+- **6_6_2024 11_42_49 AM · Câu 48** (id 42169048) → `governance-3` Governance · Obtain approval through stage gate reviews · low
+  - Lý do: Duyệt yêu cầu khởi tạo component dựa vào business case
+  - Câu hỏi: As a new program manager, your performance is evaluated according to the five domains in the Program Management Standard. One of the criterions in the governance domain is reviewing requests to initiate, transition, and close components. An example as to how you have met this criterion is by ___________________
+- **6_6_2024 11_42_49 AM · Câu 56** (id 42169056) → `strategy-11` Strategic Program Alignment · Exploit strategic opportunities for change · low
+  - Lý do: Bước tiếp theo khai thác cơ hội chiến lược: lập tổ chức portfolio
+  - Câu hỏi: About ten years ago, your CEO declared the company, which was set up in different functional silos, would change to a management-of-projects approach, recognizing its business involved providing products and services. It was a major cultural change, and it took three years to change to the new approach. You later attended a seminar on program management and mentioned to your manager, who then informed the CEO, that greater benefits could be realized if programs were used when appropriate to deliver more benefits than standalone projects. You were then charged to review the inventory of existing projects to see if there were dependencies between any of them and to try program management. You identified four projects, and in discussions with your sponsor, you proposed two new ones that you felt would increase the benefits even more. Your business case, which included the two new projects, was approved by the CEO. You also proposed that you set up a program steering committee to help oversee the program with five key stakeholders as its members. This request was approved. You met with the component managers and their teams and explained why the program approach along with governance was being used so they would buy into it. Your program was a success, and you obtained your PgMP. Programs now are being used regularly. The next step is to _____________
+- **6_6_2024 11_42_49 AM · Câu 66** (id 42169066) → `stakeholder-7` Stakeholder Engagement · Develop relationships with stakeholders · low
+  - Lý do: Program cải tổ nhiều bộ phận, PM đóng vai trò điều phối
+  - Câu hỏi: You are the program manager at your University for the number one program in the portfolio. The Chancellor initiated it and wants to streamline operational and administrative procedures. For example, even if a student’s grade needs to be changed for whatever reason, four different signatures are required. There also some duplicate places at the University to obtain help on an issue a student or a faculty member may have. If there is a vacant position at any level, three different committees make the decision, and the final most important one lacks subject matter experts on it. You are to look at these various activities plus many others and identify where you can streamline them, so you structured your program based on separate subject matter departments and other organization responsible for operations and administrative work. As well the staff members who support the Chancellor and his assistants work also is another component. In such a program you ___________
+- **6_6_2024 11_42_49 AM · Câu 68** (id 42169068) → `lifecycle-3` Program Life Cycle Management · Develop the program roadmap · low
+  - Lý do: Thay đổi benefits plan dẫn tới cập nhật roadmap
+  - Câu hỏi: On your motorcycle program, you and your team are actively tracking the benefits identified in your benefit management plan. You found, though, that employee satisfaction, which was in the first plan, was not really useful so you decided to delete this benefit and not track it. Now, you have a new plan in place. This means you should ______________
+- **6_6_2024 11_42_49 AM · Câu 70** (id 42169070) → `lifecycle-3` Program Life Cycle Management · Develop the program roadmap · low
+  - Lý do: Dùng thông tin lịch sử khi định nghĩa program
+  - Câu hỏi: During program definition even if you are working in a different area for your program, you can still benefit from ___________
+- **6_6_2024 11_42_49 AM · Câu 80** (id 42169080) → `strategy-5` Strategic Program Alignment · Evaluate the program business case · low
+  - Lý do: Giá trị benefits management: business case có danh sách benefits ban đầu
+  - Câu hỏi: Finally, your program to establish the Masters of Science degree in Program Management is complete. You have completed the transition plan to the program director and his staff, and people at the University are pleased with how you managed this program and achieved the benefits in your benefit delivery plan. To help future programs at the University, they asked you to identify what you believe is the value of benefits management. As a first step you suggest that ________________
+- **6_6_2024 11_42_49 AM · Câu 82** (id 42169082) → `strategy-7` Strategic Program Alignment · Estimate financial framework and nonfinancial benefits · low
+  - Lý do: Ngân sách thường vượt, lặp lại giai đoạn formulation
+  - Câu hỏi: Even as all the five program managers know in your company, it tends to be impossible to ensure the allotted budget will be sufficient given the resources required and the cost of each one. Your company hired a subject matter expert to assist in developing cost estimates, who is certified in the field, but it seems whenever a budget is completed. it is exceeded. This means during your program, you _______________
+- **6_6_2024 11_42_49 AM · Câu 84** (id 42169084) → `governance-11` Governance · Support the program integration management plan · low
+  - Lý do: Khác biệt vòng đời program: tích hợp project để đạt benefits
+  - Câu hỏi: On your program, you are continually spending the majority of your time communicating with stakeholders at all levels and in varying locations and coordinating activities. You also are preparing a number of status reports for different stakeholder groups and for your program steering committee with its numerous program reviews and more rigorous stage-gate reviews. Working as a program manager, you recognize the key distinctions between a project life cycle and a program life cycle. One of these distinctions is _________________
+- **6_6_2024 11_42_49 AM · Câu 91** (id 42169091) → `governance-10` Governance · Monitor the business environment for alignment · low
+  - Lý do: Governance board dùng benefit plan quyết định thay đổi component
+  - Câu hỏi: Assume you are managing a program for the National Oceanic and Atmospheric Agency in your country. Scientists in it have been doing extensive research on global warming and have noted that the current warming of the world’s oceans can cause serious diseases in the next three years. You and your team prepared a benefit delivery plan. This plan is one of the key documents that now are being used by your Governance Board members to _______________
+- **6_6_2024 11_42_49 AM · Câu 92** (id 42169092) → `governance-2` Governance · Select a governance framework · low
+  - Lý do: Vai trò sponsor bổ nhiệm program manager
+  - Câu hỏi: Assume a new program to increase the use of social media in your engineering company was approved by the Portfolio Review Board. A number of people have expressed interest in managing this program. The program manager should be ______________
+- **6_6_2024 11_42_49 AM · Câu 97** (id 42169097) → `lifecycle-3` Program Life Cycle Management · Develop the program roadmap · low
+  - Lý do: Roadmap định hướng nhưng chưa biết đủ mọi component
+  - Câu hỏi: You are responsible for developing a new on-line system for purchases with delivery in less than three hours in your grocery stores, which have not operated in this fashion at all. It represents a culture change for the company since it has almost 1,000 stores in the country. Many fear they will lose their jobs because of this program, and you must complete it in a year to outpace your competition. You recognize that even though the program management plan and roadmap document the program’s intended direction and benefits, you ____________
+- **6_6_2024 11_42_49 AM · Câu 105** (id 42169105) → `stakeholder-7` Stakeholder Engagement · Develop relationships with stakeholders · low
+  - Lý do: Minh bạch báo khách hàng về việc lùi lịch thi PgMP
+  - Câu hỏi: Assume your organization submitted its proposal to government agency ABS. One requirement was that the program manager be certified as a PgMP®. You were listed in the proposal as the program manager and plan to take the exam in three weeks; there is plenty of time as it is June 1, and the contract is not to be awarded until July 1. Your company is convinced it will win this opportunity, and you are working on the charter. Your company won the contract, but your PgMP test date was pushed out until August as the testing center was full in June. You should ____________
+- **6_6_2024 11_42_49 AM · Câu 125** (id 42169125) → `governance-2` Governance · Select a governance framework · low
+  - Lý do: Vai trò sponsor cung cấp nguồn lực
+  - Câu hỏi: You and your core team have identified within the organization 17 key stakeholders, and there are approximately 33 that have a peripheral interest in your program. You know you will have other stakeholders to add to this list as program progresses. The person, or group, who is responsible for providing project resources on this program is _______________
+- **6_6_2024 11_42_49 AM · Câu 126** (id 42169126) → `stakeholder-5` Stakeholder Engagement · Define and maintain stakeholder communications · low
+  - Lý do: Lên kế hoạch lịch họp với steering committee cấp cao
+  - Câu hỏi: Assume you are managing a program to completely change the immigration laws of your country as you are working your federal government. The problem is your county has too many people in certain urban areas and not enough people in other rural areas. Newcomers do not want to be told where to live, and many have friends or relatives in the populated areas. Plus, they feel they may not be welcomed in the rural areas. This is high profile program in your government, so you decided to form a program steering committee, with its chair the agency head of your agency plus other members at comparable levels from other agencies with interest or influence over immigration. This situation means _____________
+- **6_6_2024 11_42_49 AM · Câu 130** (id 42169130) → `strategy-6` Strategic Program Alignment · Identify and quantify expected benefits · low
+  - Lý do: Đội ảo, dùng phân tích lợi thế so sánh
+  - Câu hỏi: You are pleased to be the first program manager in your company to manage a virtual team. While the company has managed programs for several years, in the past, it tended to hire subject matter experts or ask people from its offices in four other continents to meet in one place to work as a collocated team. It also relied extensively on contactor support. Finally, your executives have recognized that it will be cost beneficial to use a virtual team for your new program to develop a new product that combines the capabilities of a smart phone, an eBook reader, and a tablet in a single device that is less expensive with a higher quality of resolution than is possible with the existing products on the marketplace. Such an approach is one in which you should consider _____________
+- **6_6_2024 11_42_49 AM · Câu 131** (id 42169131) → `lifecycle-19` Program Life Cycle Management · Lead, train, coach and recognize the team · low
+  - Lý do: Đảm bảo component manager hợp tác với nhau
+  - Câu hỏi: Assume you are managing a transformation program for your publishing company. The program goal is to make this publishing company the best in the world that appeals to each generation with its books available in innovative and traditional formats. This program was initiated by the CEO who saw a dismal trend of declining sales. Obviously improving sales, and also marketing, are components. You are to involve the organization as you work on the program since everyone is a stakeholder. As the program manager you have your PgMP, the members of the core team have their PMPs, and your nine component manages also have their PMPs. Your program management plan was approved by the CEO and the executives, who comprise your program steering committee. You now need to _______________
+- **6_6_2024 11_42_49 AM · Câu 133** (id 42169133) → `strategy-9` Strategic Program Alignment · Obtain program approval with the program charter · low
+  - Lý do: Sau phê duyệt sang initiating, bổ nhiệm program manager
+  - Câu hỏi: Assume you have decided to sponsor a new program to develop a new way to determine whether or not an organization should bid on any opportunity, and the steps it should follow to predict whether the submitted proposal will be selected. This will be a quantitative model that basically can transform the way business development is handled. It will show areas of strength and areas in need of improvement and an approach to improve an organization’s chances of winning the opportunity. As the sponsor, you received approval to move to the initiating phase from your Portfolio Review Board. It now is appropriate to ______________
+- **6_6_2024 11_42_49 AM · Câu 136** (id 42169136) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Chọn sáng kiến phù hợp quản lý như program
+  - Câu hỏi: Your organization has a defined process that it follows to determine which programs and projects should be in the portfolio, and this process is followed before leadership approval is received officially to authorize a program or project. In the past 10 years, your company, XYZ, has focused on projects. It has set up a project management methodology, which project managers are to follow, and it also has a Project Management Office. However, you recently attended a conference, and you realize since you are a member of the XYZ’s Portfolio Review Board that many of the projects you are considering at your next meeting might be better managed if they were a program. After this conference, you met with other members of the Portfolio Review Board and explained how many of the existing projects in XYZ might be better organized as a program, so they could then obtain more benefits than if the projects were managed in a standalone fashion. Now, with the upcoming Portfolio Review Board meeting, of the following possible key initiatives, which one would benefit by being managed as a program ______________
+- **6_6_2024 11_42_49 AM · Câu 142** (id 42169142) → `lifecycle-32` Program Life Cycle Management · Conduct program closure under governance · low
+  - Lý do: Program chấm dứt sớm do hiệu suất kém
+  - Câu hỏi: Your program to develop a 12G phone is being terminated early because your competition already has a 12G phone model on the market. This early closing has resulted because of ________________
+- **6_6_2024 11_42_49 AM · Câu 145** (id 42169145) → `governance-2` Governance · Select a governance framework · low
+  - Lý do: Vai trò portfolio manager chịu trách nhiệm mục tiêu chiến lược
+  - Câu hỏi: You are Company A’s program manager for the development of an online banking system for your community bank, for which your company will realize $20 million in US dollars. To track the various stakeholders, you and your team set up a stakeholder register and prepared a stakeholder engagement plan. The individual or organization responsible to achieve strategic objectives is the _____________
+- **6_6_2024 11_42_49 AM · Câu 151** (id 42169151) → `lifecycle-25` Program Life Cycle Management · Analyze variances and trends · low
+  - Lý do: Theo dõi tài chính không bỏ sót chi phí vận hành
+  - Câu hỏi: When your program is complete, it will generate more than 80 percent of the revenue earned by the company. Thus, it will have a major impact on the balance sheet. To assist you in your work, you prepared a program financial plan and established a budget baseline. Now you are tracking, monitoring, and controlling funds and expenses. Not to be overlooked in this process is ________________
+- **6_6_2024 11_42_49 AM · Câu 154** (id 42169154) → `governance-2` Governance · Select a governance framework · low
+  - Lý do: Nhóm stakeholder ra quyết định thành steering committee
+  - Câu hỏi: Ideally, the program’s architecture is built around a core group of stakeholders, who are the decision makers. While the program’s architecture obviously will evolve, if this approach is followed, then _______________
+- **6_6_2024 11_42_49 AM · Câu 160** (id 42169160) → `lifecycle-9` Program Life Cycle Management · Establish the program management plan and schedule · low
+  - Lý do: Tiêu chí make-or-buy, chọn phương án mua sắm tối ưu
+  - Câu hỏi: You are the program manager for your city’s initiative to put all electrical, cable, and telephone lines underground to prevent outages during tornadoes and hurricanes. As program manager, you will select subcontractors to support your program. You prepare criteria for the make-or-buy decisions, as well as the criteria to select the subcontractors _____________
+- **6_6_2024 11_42_49 AM · Câu 166** (id 42169166) → `strategy-3` Strategic Program Alignment · Define the high-level roadmap and financial framework · low
+  - Lý do: Lập ngân sách chi tiết theo năm tài chính
+  - Câu hỏi: You manage a program in the Ministry of Education. Your seven-year program is designed to ensure mandatory testing requirements for high school students throughout the country. Your program receives funding soon after the start of each fiscal year. Funds that are not spent during a fiscal year cannot be allocated to other programs or agency activities; rather, they revert to the general fund. As a program manager, you ensure that _____________
+- **6_6_2024 11_42_49 AM · Câu 170** (id 42169170) → `strategy-7` Strategic Program Alignment · Estimate financial framework and nonfinancial benefits · low
+  - Lý do: Chọn theo NPV nhưng thiếu dữ liệu bảng
+  - Câu hỏi: You are an executive with a major recording studio. Four new groups have auditioned for a record contract, but you can select only one. The program to launch any group consists of Web site development, music videos, a nationwide tour, T-shirts, and a fan club. Your head of Marketing has done a net present value (NPV) for each group. Which do you choose? You recommend that your company select _____________
+- **6_6_2024 11_44_24 AM · Câu 2** (id 42264002) → `governance-11` Governance · Support the program integration management plan · low
+  - Lý do: Lãnh đạo: điều phối phụ thuộc giữa các project
+  - Câu hỏi: You are pleased to finally move into a program management position in your city, and as the program manager for the new wastewater treatment initiative, you have now completed your program management plan. You have selected project managers and also a core team and had defined criteria to help you evaluate the various candidates. You are fortunate that you have worked with two of the people before on specific projects, but the others are new to you, and the team has not worked together previously as a team. As a program manager, you must be an effective leader. A key area of focus is _______________
+- **6_6_2024 11_44_24 AM · Câu 5** (id 42264005) → `lifecycle-1` Program Life Cycle Management · Develop the program charter · low
+  - Lý do: Thêm rủi ro cấp cao vào charter, xem đánh giá chất lượng
+  - Câu hỏi: Your state initiated a high-speed, luxury train between two of its major cities, and you were the program manager for it. You will continue in this role as the train expands to a larger city. But you have to complete the documentation for this new program from the beginning. The business case has been approved. The problem with cities A and B is the track crossings were very slow, and five people were killed as they either did not see them or thought it was a freight train that uses the same tracks and could outrun it easily. It moves slowly. You know this problem must be corrected, and representatives of the government’s transportation safety board are continuing to evaluate the problem. Expanding now to city C means the train should expand ridership by an estimated three times that of cites A and B. As you prepare your charter, you are following a company template and adding high-level risks. It will be helpful to ____________
+- **6_6_2024 11_44_24 AM · Câu 10** (id 42264010) → `governance-2` Governance · Select a governance framework · low
+  - Lý do: Steering committee chịu trách nhiệm tuân thủ, giả định chiến lược
+  - Câu hỏi: You have a complex program. Thus far, you have passed gate 3 and are executing your program. Because the executing phase in the life cycle will last over a year, your program steering committee is holding periodic health checks with you and your team on a bi-monthly basis. The program steering committee has assumed responsibility for compliance with organizational reporting and control functions. An example is _______________
+- **6_6_2024 11_44_24 AM · Câu 16** (id 42264016) → `governance-9` Governance · Apply lessons learned to programs and organization · low
+  - Lý do: Nguồn cải tiến liên tục cho PMO từ báo cáo program
+  - Câu hỏi: Assume you are leading your company’s PMO. Each program over $500,00 has a program steering committee, and program management is a recognized and sought-after profession. The concept of governance oversight, phase-gate reviews, and performance reviews is entrenched. As the PMO Director, you feel continuous improvements are imperative in the turbulent environment in which the company works. A source for ideas for continuous improvement is _______________
+- **6_6_2024 11_44_24 AM · Câu 21** (id 42264021) → `lifecycle-29` Program Life Cycle Management · Assess impact of program changes · low
+  - Lý do: Thêm project mới, đánh giá tác động tiêu chuẩn chất lượng
+  - Câu hỏi: You are pleased to be the program manager for a new water alleviation program in your city. So far, you have three components in your program. Six months after your program management plan was approved, the city issued some new regulations, and you requested approval and received it to add a new project to address regulatory compliance. However, you recognized this project will consuming extensive time, and it will affect other program components. Your next step is to _____________
+- **6_6_2024 11_44_24 AM · Câu 22** (id 42264022) → `lifecycle-1` Program Life Cycle Management · Develop the program charter · low
+  - Lý do: Ràng buộc giới hạn sự linh hoạt của program
+  - Câu hỏi: As the program manager for your city’s water alleviation program, you have many challenges. So far, you have four components in your program. One challenge of course is the aggressive schedule you must meet and the high priority of this program in your company’s portfolio. You also have a number of technical SMEs on your program, who seem to want to really work on technical topics in a functional environment. Also, as program manager you must work with stakeholders at all levels as well as with your team and your program steering committee. Your flexibility in managing this program is limited by ______________
+- **6_6_2024 11_44_24 AM · Câu 26** (id 42264026) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Xác định công việc nào phù hợp quản lý như program
+  - Câu hỏi: You are the director of your telecommunications company’s enterprise project management office (PMO). Your company has more than 200 projects under way, and you are considering managing some of them as a program. It took about six months to even determine how many projects were in process as many people felt if they described every project they worked on, their “pet” project that they felt would really benefit the company might be canceled. Obtaining the trust of the project professionals was a major challenge, but you believe you have an inventory now of all the project work. As you move into program management, which of the following is best suited to manage as a program?
+- **6_6_2024 11_44_24 AM · Câu 29** (id 42264029) → `lifecycle-25` Program Life Cycle Management · Analyze variances and trends · low
+  - Lý do: Chi phí hạ tầng program cần nằm trong tham số kỳ vọng
+  - Câu hỏi: You are managing a program to develop a new source of energy to use in the tropics when solar power is not available. Working with your core program team and your program steering committee, you identify a number of component projects. You also have identified some program activities. Analysis of program costs must be performed, although some overlook the need to consider the program infrastructure cost activities. You are, however, analyzing them on your program as you believe doing so is a best practice for program and project managers. Accordingly, they ______________
+- **6_6_2024 11_44_24 AM · Câu 30** (id 42264030) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Sau charter, liên kết program với ưu tiên chiến lược
+  - Câu hỏi: Assume you have sponsored a program to develop a new stent for coronary patients that is based on new laser technology and that will only take 30 minutes from the time the patient actually enters the hospital. Then, the patient will be able to be discharged and resume normal activities as if nothing happened. The patient will not experience any side effects from this new approach. You have obtained approval from your program steering committee to develop this program in more detail, so you are now in program formulation. Once the charter is approved ________________
+- **6_6_2024 11_44_24 AM · Câu 38** (id 42264038) → `governance-3` Governance · Obtain approval through stage gate reviews · low
+  - Lý do: Phê duyệt steering committee cần thông tin component
+  - Câu hỏi: You realize since your company recently merged with a competitor, and there is a revised strategic plan that for your program to continue to be in alignment, you need to add a new project. To do so, you require approval from your program steering committee, and the committee’s approval generally requires _______________
+- **6_6_2024 11_44_24 AM · Câu 50** (id 42264050) → `strategy-5` Strategic Program Alignment · Evaluate the program business case · low
+  - Lý do: Chọn program nhưng thiếu bảng dữ liệu
+  - Câu hỏi: You are a member of your energy services company’s Program Selection Committee, which is considering a number of possible programs to pursue. Each one has identified benefits that will support your company’s overall strategic plan. You have the following data on four possible programs. You may select only one because of resource limitations.You should recommend that your company select ____________
+- **6_6_2024 11_44_24 AM · Câu 56** (id 42264056) → `lifecycle-4` Program Life Cycle Management · Develop a responsibility assignment matrix · low
+  - Lý do: Năng lực cần có của program manager
+  - Câu hỏi: Researchers have noted the emergence of corporate program management and note that its processes must be structured to coordinate and manage the multiple components that together contribute to business value and organizational structure. It therefore is clear that being a program manager is different from being a project manager since required competencies as a program manager are significantly different. As the program manager is being appointed, he or she should have which skills and competencies ______________
+- **6_6_2024 11_44_24 AM · Câu 57** (id 42264057) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Thu thập thông tin phạm vi, nguồn lực, chi phí ban đầu
+  - Câu hỏi: Your goal as a program manager for yourself apart from your program is continuous improvement. You are working to improve your personal competencies as well as your performance competencies. You want to do well on all the programs you manage and also in areas of interpersonal skills. Your overall goal is to become the company’s Chief Portfolio Officer. Now, you are working to demonstrate your ability to capture information and consolidate it in your plans and in your scope statement, which means you are focusing on ______________
+- **6_6_2024 11_44_24 AM · Câu 58** (id 42264058) → `lifecycle-21` Program Life Cycle Management · Execute program management plans · low
+  - Lý do: Lập danh sách nhà cung cấp đủ điều kiện để thuê cẩu
+  - Câu hỏi: Your organization receives an award for the construction of a new courthouse complex in the state capital of State A. Your company is located in State B, approximately 1,000 miles away, and has never worked in State A. You plan to use a number of contractors and to hire local people to support the program team. From time to time, you will need cranes. To facilitate acquiring these cranes, you should _________________
+- **6_6_2024 11_44_24 AM · Câu 61** (id 42264061) → `governance-10` Governance · Monitor the business environment for alignment · low
+  - Lý do: Đánh giá tính khả thi program bằng ý kiến khách hàng
+  - Câu hỏi: You realize in your work as program manager over the past seven years that improvements in performance competencies is desired. In working with your program steering committee, for example, a performance criterion is to assess the performance and viability of the program especially considering the context of organizational standards and objectives. An example of how to meet this performance competency is _______________
+- **6_6_2024 11_44_24 AM · Câu 65** (id 42264065) → `lifecycle-6` Program Life Cycle Management · Conduct the program kick-off · low
+  - Lý do: Phát hiện xung đột tại kickoff meeting
+  - Câu hỏi: You are managing a program to evaluate all the regulations at the Federal Trade Commission to see if they are outdated and still needed or need revision. You were hired by the Commissioners because you successfully managed a similar program at the Federal Communication Commission. Now, the difference is you had worked at the Communications Commission before and knew people throughout it in the various departments and had long-standing relationships with them. You were given a charter by the Chairman, and the other Commissioners signed off on it to manage this program, which gives you the authority to acquire and manage the needed resources to complete the program and realize its benefits. But since you are new, you are unsure who should be on the team, and you know you need SMEs from each group. You met with the heads of the units in each part of the Commission, and they agreed to help and provided you with one person work full time on your program. At the kickoff meeting, you realized _________________
+- **6_6_2024 11_44_24 AM · Câu 66** (id 42264066) → `lifecycle-9` Program Life Cycle Management · Establish the program management plan and schedule · low
+  - Lý do: Lập procurement management plan dựa trên đánh giá mua sắm
+  - Câu hỏi: You are managing a construction program that will be to construct a completely new electrical system in another country. Now you are in the design phase, and for both the design and the construction phase, you will be using contractors for much of the work. During the construction phase, you know it will be difficult to obtain the contractors you need, so you decided the best approach was to partner with the government of the country where you will be working. Now you are preparing your procurement management plan and will involve the country’s government representative in the process. In addition, you know you will need the services of other contractors as well since the program is important and is in a difficult area of the country to reach. Obtaining contractor services and managing them effectively will be a major responsibility during program delivery. This situation means as you prepare your procurement management plan that you ________________
+- **6_6_2024 11_44_24 AM · Câu 69** (id 42264069) → `lifecycle-9` Program Life Cycle Management · Establish the program management plan and schedule · low
+  - Lý do: Lập tiêu chí đánh giá đề xuất trong kế hoạch mua sắm
+  - Câu hỏi: You are managing a complex program to develop the next-generation submarine. It is planned to replace the existing non-nuclear submarines in your country with nuclear weapons. It is estimated to take about nine years to complete as you will be using new technology now not available in your country. The program includes a number of components, and you plan to use contractors extensively. You also plan contracts for services to support the program since it will be constructed in another country. As the program manager, you need to __________________
+- **6_6_2024 11_44_24 AM · Câu 79** (id 42264079) → `lifecycle-17` Program Life Cycle Management · Deploy governance framework and uniform standards · low
+  - Lý do: Dùng PMO hỗ trợ quản lý nhà thầu
+  - Câu hỏi: As the program manager for the landfill program for your county, you have assembled your program team. It consists of civil engineers, regulatory specialists, project managers, and environmental engineers. This program is considered to be a very large one that will take a number of years to complete to deliver the societal benefits as planned. You plan to add some key subject matter experts as required. You also will have contractors on your team. With the various contractors, you are considering _________________
+- **6_6_2024 11_44_24 AM · Câu 80** (id 42264080) → `governance-2` Governance · Select a governance framework · low
+  - Lý do: Portfolio governance phê duyệt đầu tư program
+  - Câu hỏi: There are different types of governance, each with its own special purpose. Program investments, for example, are authorized by __________________
+- **6_6_2024 11_44_24 AM · Câu 83** (id 42264083) → `strategy-10` Strategic Program Alignment · Identify integration opportunities with operations · low
+  - Lý do: Program manager cần kỹ năng tích hợp
+  - Câu hỏi: You are working to establish program management in your organization. You recognize since you are working in the Portfolio Management Office that there are many benefits to be attained if projects that are somehow related can be part of a program structure since through a program, more benefits can be attained than if they were managed separately. You recognize the importance to aligning program goals and benefits with long-term organizational goals. Therefore, you realize as the company embraces program management, you will need to hire people as program managers, or appoint people from within the organization, who have skills in ________________
+- **6_6_2024 11_44_24 AM · Câu 86** (id 42264086) → `benefits-1` Benefits Management · Develop the benefits realization plan · low
+  - Lý do: Thành công program đo bằng benefits delivery
+  - Câu hỏi: As the program manager for the systems integration program for agency ABC, you have projects and program activities in your program. First, your program includes a hardware systems project. Second, you have a systems integration systems project, including new software. Now, you recently added a data warehouse project, and you plan to add an agile project in the fourth quarter. Other projects also are on your roadmap. Program activities include training and maintenance. You have a year and a half to complete the program. Your overall program success is measured in terms of ______________
+- **6_6_2024 11_44_24 AM · Câu 88** (id 42264088) → `strategy-11` Strategic Program Alignment · Exploit strategic opportunities for change · low
+  - Lý do: Cơ hội program mới, họp lãnh đạo tổ chức
+  - Câu hỏi: You met with the organizational leaders for your colon cancer detection program that does not involve any pre-preparation work or after effects to patients, and its business case was approved. You then were asked to take over sponsorship for a program for a long-time customer, which would be awarded to your company under contract, to develop drugs for use by people before undergoing a colon cancer detection program. Your company has never developed these types of drugs before, but your customer is convinced it will not be an issue. You do not wish to disappoint this customer. In this situation _____________
+- **6_6_2024 11_44_24 AM · Câu 101** (id 42264101) → `lifecycle-21` Program Life Cycle Management · Execute program management plans · low
+  - Lý do: Dùng báo cáo earned value quản lý hợp đồng
+  - Câu hỏi: Because of extreme droughts in your city, water restrictions have been imposed. Your company is awarded a contract to eliminate the need for these restrictions. The program includes a project to formulate and implement policies and procedures that ensure continuity of operations and performance of associated equipment. Another project will oversee improvements and modifications to existing treatment methods and facilities. A third project will design modifications to increase productivity and effectiveness. As the program manager, you will manage, contract, and provide oversight for capital improvement projects. You will need various types of resources and a variety of office supplies. To assist in managing contracts, you should _______________
+- **6_6_2024 11_44_24 AM · Câu 103** (id 42264103) → `lifecycle-9` Program Life Cycle Management · Establish the program management plan and schedule · low
+  - Lý do: Monte Carlo cho khoảng tin cậy ước tính chi phí
+  - Câu hỏi: No one wants to estimate since it tends to be impossible to ensure the estimate is totally correct and will not require revision. Recognizing this dilemma as the program manager to move your aviation company into a completely new line of new business products in the use of dirigibles as a means of passenger transportation, your program definitely is complex. People remember hearing stories when dirigibles crashed, and many fear its safety cannot be trusted. When you prepare your cost estimate you had a subject matter expert, who is certified in this area, to help you. You wanted to have a range of confidence in your estimate once you had one you thought was as complete as possible, so you decide to ________________
+- **6_6_2024 11_44_24 AM · Câu 106** (id 42264106) → `lifecycle-25` Program Life Cycle Management · Analyze variances and trends · low
+  - Lý do: Báo cáo lệch nguồn lực giúp đánh giá benefits
+  - Câu hỏi: As the manager of a major program in your company, you have access to various supporting resources. Your organization uses a balanced matrix organizational structure, and supporting resources come from a variety of functional departments. One member of your program team regularly prepares resource deviation reports. These reports are _________________
+- **6_6_2024 11_44_24 AM · Câu 108** (id 42264108) → `lifecycle-25` Program Life Cycle Management · Analyze variances and trends · low
+  - Lý do: Phương án thay thế dựa trên đánh giá lịch
+  - Câu hỏi: Your company prides itself to be a leader in automobiles. It was the first to market with the Sports Utility Vehicle and an electric car, and it is determined to be the first to manufacture a driverless car that would have the ability to safely fly if there are extreme traffic conditions. This car is to be the most up to date in terms of technology and one people will covet. You are pleased to be its program manager and were part of development of its business case. You have an aggressive schedule to complete the program in three years including obtaining all needed regulatory approvals. You have 11 components in your program. You are considering alternative approaches to initiate should you have any delays in meeting your schedule or in meeting benefit milestones. Doing so means _____________
+- **6_6_2024 11_44_24 AM · Câu 113** (id 42264113) → `lifecycle-21` Program Life Cycle Management · Execute program management plans · low
+  - Lý do: Thành công nhờ tạo kết quả theo kế hoạch
+  - Câu hỏi: Your company is noted for its maturity and excellence in program management. It has received awards for program and project delivery. People seem dedicated to the success of the company and in its management of programs and their projects, which is due to ____________
+- **6_6_2024 11_44_24 AM · Câu 119** (id 42264119) → `lifecycle-27` Program Life Cycle Management · Manage program-level issues · low
+  - Lý do: Thiết bị thuê không đạt, theo dõi chi tiêu hợp đồng
+  - Câu hỏi: As the manager for a water-gasification program that will provide potable sparkling mineral water from public water fountains in your city, you have leased some of the needed equipment. Unfortunately, you have found that on two of your projects, some of these leased resources did not meet specifications. The project managers on Projects A and D advised you of their concerns because they were concerned that overall program progress might be affected. You need to identify a course of action to best achieve program benefits, which means you need to _____________
+- **6_6_2024 11_44_24 AM · Câu 125** (id 42264125) → `benefits-4` Benefits Management · Monitor benefit metrics and take corrective action · low
+  - Lý do: Sau benefits plan, tập trung giao benefits
+  - Câu hỏi: You are managing a program in your company, and you are following the phases articulated in the Project Management Institute’s The Standard for Program Management. Assume you have prepared your benefit management plan, and It was approved. Now, you must concentrate on ___________________
+- **6_6_2024 11_44_24 AM · Câu 131** (id 42264131) → `stakeholder-2` Stakeholder Engagement · Analyze stakeholders and plan engagement · low
+  - Lý do: Phân tích stakeholder cần tính đến môi trường thay đổi của program.
+  - Câu hỏi: You have identified your stakeholders on your program to address climate change in your county. You realize that some stakeholders have more influence and interest on the program than others. But you also know _______________
+- **6_6_2024 11_44_24 AM · Câu 133** (id 42264133) → `benefits-1` Benefits Management · Develop the benefits realization plan · low
+  - Lý do: Mục đích lập program: theo dõi phụ thuộc component và cách outcome tạo benefits.
+  - Câu hỏi: Assume you have just been named program manager to develop and manufacture a new drug designed to have fewer side effects than the existing ones on the marketplace to strengthen bones and help to minimize bone cancer. A number of benefits therefore will be associated with this program. You want to establish your program in order to _______________
+- **6_6_2024 11_44_24 AM · Câu 135** (id 42264135) → `strategy-11` Strategic Program Alignment · Exploit strategic opportunities for change · low
+  - Lý do: Mở rộng phạm vi tái cấu trúc, cầu nối trạng thái hiện tại và tương lai.
+  - Câu hỏi: You are the program manager to restructure your department within your government agency. The head of the agency informed your sponsor that she wants to change the scope of the program so you will be working to restructure the entire agency instead of just one department. The entire agency basically is a stakeholder as everyone is concerned about the impact of the reorganization and the funding cuts that have been proposed. As the program manager, you need to _______________
+- **6_6_2024 11_44_24 AM · Câu 136** (id 42264136) → `lifecycle-1` Program Life Cycle Management · Develop the program charter · low
+  - Lý do: Xác định component thuộc giai đoạn Program Formulation.
+  - Câu hỏi: As a program manager for a leading defense contractor, you must determine which components should be part of your program. Your program involves the development of the next generation parachute. It is to be completely safe, easy to deploy, and available in one year at a reasonable price. You have identified eight components to be in your program. Your executives want it to be completed at the time of the next Paris Air Show. When you do this, you are working in the __________
+- **6_6_2024 11_44_24 AM · Câu 138** (id 42264138) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Câu kiến thức: quan hệ cộng tác giữa portfolio và program management.
+  - Câu hỏi: The emphasis at your logistics company has always been to ‘do projects right’. Therefore, your management established a Project Management Office, with the responsibility to develop a methodology that project managers would follow that was consistent across the organization. This has proven to be effective. Now the organization is doing the same for program management. Since it has been successful in ‘doing projects right’ and is ‘doing programs right’, the organization now has implemented portfolio management to ensure it is ‘doing the right programs and projects’. The relationship between portfolio management to program management thus is _______________
+- **6_6_2024 11_44_24 AM · Câu 156** (id 42264156) → `stakeholder-7` Stakeholder Engagement · Develop relationships with stakeholders · low
+  - Lý do: Dùng issue log theo dõi mối quan tâm của nhiều stakeholder khác nhau.
+  - Câu hỏi: You have numerous stakeholders, both internal and external as your program involves members of the public. You also are using five different vendors. Different stakeholders have different areas of interest at different times and may be positive toward the program or negative. You have decided you should _______________
+- **6_6_2024 11_44_24 AM · Câu 157** (id 42264157) → `benefits-1` Benefits Management · Develop the benefits realization plan · low
+  - Lý do: Cốt lõi khi quản lý program là nhận diện giá trị program mang lại.
+  - Câu hỏi: You have been appointed as manager for a new program in your organization. This program will receive $250,000 as an initial investment; $175,000 at the beginning of year 2; $150,000 at the beginning of year 3; and $125,000 at the beginning of year 4. The program will start with a core team of seven senior managers; three project managers will be added during year 2, and two more project managers during year 3. While you work on this program, it is essential to ensure you can ______________
+- **6_6_2024 11_45_11 AM · Câu 1** (id 42311001) → `lifecycle-26` Program Life Cycle Management · Update plans with corrective actions · low
+  - Lý do: Ký hợp đồng mới thì cập nhật budget baseline gồm chi phí hợp đồng.
+  - Câu hỏi: You are the manager of a program which has four projects, one non-project component, and a PMO. An initial budget baseline has been created for your program but since then, two contracts were signed with outside contractors. What should your program budget baseline look like now?
+- **6_6_2024 11_45_11 AM · Câu 4** (id 42311004) → `governance-2` Governance · Select a governance framework · low
+  - Lý do: Câu định nghĩa: governance không phải hoạt động hỗ trợ program management.
+  - Câu hỏi: Program activities are tasks and work conducted to support a program and which contribute throughout the program life cycle. Which activity does NOT support program management?
+- **6_6_2024 11_45_11 AM · Câu 6** (id 42311006) → `lifecycle-33` Program Life Cycle Management · Execute program transition and close-out · low
+  - Lý do: Tổ chức nhận chưa sẵn sàng nhận benefits chuyển giao, báo program manager.
+  - Câu hỏi: You are managing the program PMO which is in charge of transitioning the benefits to another organization. You also have defined a training plan which has been accepted by all. You contact the manager of this organization and you find out that she is not ready to accept the benefits at this moment because her organization has not completed training activities. What should be your IMMEDIATE action?
+- **6_6_2024 11_45_11 AM · Câu 7** (id 42311007) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Câu kiến thức về các yếu tố phức tạp của program.
+  - Câu hỏi: Which list is NOT a combination of complexity factors for a program?
+- **6_6_2024 11_45_11 AM · Câu 14** (id 42311014) → `lifecycle-15` Program Life Cycle Management · Monitor human resources and team motivation · low
+  - Lý do: Thuê nguồn lực ngoài, có thể phối hợp nhiều loại hợp đồng.
+  - Câu hỏi: You are managing a program with three component projects. Project A is highly technical, project B is addressing marketing aspects, and project C is in charge of developing new applications. You do not have all the resources needed for project A and project C. You have the budget to contract outside resources. What is your best option?
+- **6_6_2024 11_45_11 AM · Câu 15** (id 42311015) → `benefits-1` Benefits Management · Develop the benefits realization plan · low
+  - Lý do: Câu định nghĩa: vận hành duy trì benefits không thuộc benefits delivery.
+  - Câu hỏi: Which activity is NOT related to benefits delivery?
+- **6_6_2024 11_45_11 AM · Câu 17** (id 42311017) → `governance-2` Governance · Select a governance framework · low
+  - Lý do: Câu định nghĩa vai trò program sponsor.
+  - Câu hỏi: A program sponsor is an individual or a group that:
+- **6_6_2024 11_45_11 AM · Câu 22** (id 42311022) → `governance-11` Governance · Support the program integration management plan · low
+  - Lý do: Câu định nghĩa program integration management.
+  - Câu hỏi: Program integration management is defined in the standard as a core activity because:
+- **6_6_2024 11_45_11 AM · Câu 23** (id 42311023) → `lifecycle-21` Program Life Cycle Management · Execute program management plans · low
+  - Lý do: Program management team định nghĩa và thực hiện sáng kiến chất lượng.
+  - Câu hỏi: In a program, who is responsible to define and conduct quality initiatives?
+- **6_6_2024 11_45_11 AM · Câu 24** (id 42311024) → `lifecycle-30` Program Life Cycle Management · Manage risk per the risk management plan · low
+  - Lý do: Thành phần của risk register, câu kiến thức.
+  - Câu hỏi: The program risk register contains the list of identified risks. What is NOT part of a risk register?
+- **6_6_2024 11_45_11 AM · Câu 29** (id 42311029) → `lifecycle-1` Program Life Cycle Management · Develop the program charter · low
+  - Lý do: Câu định nghĩa các giai đoạn vòng đời program.
+  - Câu hỏi: The program life cycle is composed of the following phases:
+- **6_6_2024 11_45_11 AM · Câu 34** (id 42311034) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Câu kiến thức: khác biệt giữa program và project.
+  - Câu hỏi: Concerning the key difference between programs and projects, three aspects stand out:
+- **6_6_2024 11_45_11 AM · Câu 35** (id 42311035) → `lifecycle-21` Program Life Cycle Management · Execute program management plans · low
+  - Lý do: Liệt kê hoạt động giai đoạn program delivery.
+  - Câu hỏi: What is a CORRECT list of program delivery phase activities?
+- **6_6_2024 11_45_11 AM · Câu 42** (id 42311042) → `lifecycle-28` Program Life Cycle Management · Manage changes per the change management plan · low
+  - Lý do: Câu kiến thức: khác biệt thay đổi project và program.
+  - Câu hỏi: What is the KEY difference between project and program change?
+- **6_6_2024 11_45_11 AM · Câu 44** (id 42311044) → `lifecycle-4` Program Life Cycle Management · Develop a responsibility assignment matrix · low
+  - Lý do: Câu kiến thức về trách nhiệm project manager trong program.
+  - Câu hỏi: In the context of a program, project managers' responsibilities ore:
+- **6_6_2024 11_45_11 AM · Câu 47** (id 42311047) → `benefits-4` Benefits Management · Monitor benefit metrics and take corrective action · low
+  - Lý do: Câu kiến thức về khía cạnh đánh giá trong benefits delivery.
+  - Câu hỏi: The prime objective of programs is to create benefits, which in turn, provide value to the organizations. What is NOT an aspect analyzed and assessed during the benefits delivery phase?
+- **6_6_2024 11_45_11 AM · Câu 53** (id 42311053) → `governance-2` Governance · Select a governance framework · low
+  - Lý do: Câu kiến thức: program độc lập vẫn cần governance.
+  - Câu hỏi: Which statement is FALSE regarding Governance?
+- **6_6_2024 11_45_11 AM · Câu 54** (id 42311054) → `lifecycle-26` Program Life Cycle Management · Update plans with corrective actions · low
+  - Lý do: Kỹ thuật crashing rút ngắn lịch, câu kiến thức.
+  - Câu hỏi: What is the name of the technique used to shorten the schedule duration for the least incremental cost by adding resources?
+- **6_6_2024 11_45_11 AM · Câu 57** (id 42311057) → `lifecycle-9` Program Life Cycle Management · Establish the program management plan and schedule · low
+  - Lý do: Công cụ kỹ thuật quản lý lịch trình, câu kiến thức.
+  - Câu hỏi: What is a CORRECT list of Tools and Techniques used in Schedule management?
+- **6_6_2024 11_45_11 AM · Câu 59** (id 42311059) → `governance-2` Governance · Select a governance framework · low
+  - Lý do: Xác nhận căn chỉnh chiến lược là việc của governance, không phải PM.
+  - Câu hỏi: What is NOT under the responsibility of the program manager?
+- **6_6_2024 11_45_11 AM · Câu 62** (id 42311062) → `lifecycle-15` Program Life Cycle Management · Monitor human resources and team motivation · low
+  - Lý do: Câu kiến thức loại hợp đồng và phân bổ rủi ro.
+  - Câu hỏi: Contract types fall within three categories: Fixed-price, Cost- reimbursable, or Time & Material. What is TRUE about contract types?
+- **6_6_2024 11_45_11 AM · Câu 63** (id 42311063) → `strategy-9` Strategic Program Alignment · Obtain program approval with the program charter · low
+  - Lý do: Đầu ra cuối giai đoạn formulation: charter, business case, roadmap.
+  - Câu hỏi: What is a CORRECT list of outputs which should exist at the end of the formulation sub phase?
+- **6_6_2024 11_45_11 AM · Câu 69** (id 42311069) → `lifecycle-25` Program Life Cycle Management · Analyze variances and trends · low
+  - Lý do: Đầu ra quản lý tài chính program: EAC sửa đổi, corrective action.
+  - Câu hỏi: What is a correct list of OUTPUTS from program financial management activities?
+- **6_6_2024 11_45_11 AM · Câu 70** (id 42311070) → `lifecycle-4` Program Life Cycle Management · Develop a responsibility assignment matrix · low
+  - Lý do: Câu kiến thức trách nhiệm program manager.
+  - Câu hỏi: Which of the following is under the responsibility of the program manager?
+- **6_6_2024 11_45_11 AM · Câu 73** (id 42311073) → `benefits-1` Benefits Management · Develop the benefits realization plan · low
+  - Lý do: Câu kiến thức: quản lý chi phí không phải benefit.
+  - Câu hỏi: You are sponsoring a rehabilitation program in your neighborhood. What is definitely NOT a benefit which can be generated by this program?
+- **6_6_2024 11_45_11 AM · Câu 75** (id 42311075) → `lifecycle-28` Program Life Cycle Management · Manage changes per the change management plan · low
+  - Lý do: Câu kiến thức phân loại thay đổi program.
+  - Câu hỏi: Program changes can be classified in various categories. MOST OFTEN changes ore:
+- **6_6_2024 11_45_11 AM · Câu 80** (id 42311080) → `governance-1` Governance · Develop program management standards and structure · low
+  - Lý do: Định nghĩa PMO là cấu trúc quản lý
+  - Câu hỏi: A Program Management Office (PMO) is:
+- **6_6_2024 11_45_11 AM · Câu 82** (id 42311082) → `lifecycle-15` Program Life Cycle Management · Monitor human resources and team motivation · low
+  - Lý do: Kiến thức tài liệu mời thầu RFI/RFP/RFQ trong mua sắm
+  - Câu hỏi: Bid documents are used to solicit proposals from prospective sellers. What is WRONG regarding bid documents?
+- **6_6_2024 11_45_11 AM · Câu 83** (id 42311083) → `lifecycle-22` Program Life Cycle Management · Consolidate project and program data · low
+  - Lý do: Đầu ra quản lý truyền thông: thông tin trạng thái, thông báo thay đổi
+  - Câu hỏi: What is a CORRECT list of outputs from the program communications management activity?
+- **6_6_2024 11_45_11 AM · Câu 85** (id 42311085) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Khác biệt program và portfolio: thời gian và tính liên quan
+  - Câu hỏi: Concerning the key difference between programs and portfolios, two aspects stand out:
+- **6_6_2024 11_45_11 AM · Câu 88** (id 42311088) → `governance-1` Governance · Develop program management standards and structure · low
+  - Lý do: Trách nhiệm PMO, không chịu trách nhiệm giải trình thành công
+  - Câu hỏi: What is NOT under the responsibility of a Program Management Office (PMO)?
+- **6_6_2024 11_45_11 AM · Câu 92** (id 42311092) → `stakeholder-5` Stakeholder Engagement · Define and maintain stakeholder communications · low
+  - Lý do: Các hoạt động thuộc quản lý truyền thông program
+  - Câu hỏi: Which activities DO NOT support Program Communications management?
+- **6_6_2024 11_45_11 AM · Câu 94** (id 42311094) → `lifecycle-28` Program Life Cycle Management · Manage changes per the change management plan · low
+  - Lý do: Khác biệt quản lý thay đổi giữa project và program
+  - Câu hỏi: One of the fundamental differences between projects and programs are found in the way they are managed in response to change. Which statement is WRONG about project and program change management?
+- **6_6_2024 11_45_11 AM · Câu 96** (id 42311096) → `lifecycle-9` Program Life Cycle Management · Establish the program management plan and schedule · low
+  - Lý do: Mục tiêu hoạt động đánh giá lịch trình program
+  - Câu hỏi: Objective of the Program schedule assessment activity is NOT to:
+- **6_6_2024 11_45_11 AM · Câu 101** (id 42311101) → `lifecycle-1` Program Life Cycle Management · Develop the program charter · low
+  - Lý do: Charter xác định mục tiêu chiến lược và benefits kỳ vọng
+  - Câu hỏi: Which document issued by upper management defines the strategic objectives of the organization and the expected benefits?
+- **6_6_2024 11_45_11 AM · Câu 102** (id 42311102) → `stakeholder-1` Stakeholder Engagement · Identify stakeholders and create the stakeholder matrix · low
+  - Lý do: Khái niệm stakeholder không chỉ nội bộ
+  - Câu hỏi: What is WRONG about program stakeholders?
+- **6_6_2024 11_45_11 AM · Câu 109** (id 42311109) → `governance-2` Governance · Select a governance framework · low
+  - Lý do: Trách nhiệm của governance board
+  - Câu hỏi: What is NOT a responsibility of the program governance board?
+- **6_6_2024 11_45_11 AM · Câu 113** (id 42311113) → `lifecycle-30` Program Life Cycle Management · Manage risk per the risk management plan · low
+  - Lý do: Khái niệm contingency và management reserve
+  - Câu hỏi: Program risk analysis allows to estimate the amount of contingency reserves and management reserves. What is NOT a true statement about these reserves?
+- **6_6_2024 11_45_11 AM · Câu 117** (id 42311117) → `lifecycle-32` Program Life Cycle Management · Conduct program closure under governance · low
+  - Lý do: Lý do đóng program hợp lệ và không hợp lệ
+  - Câu hỏi: The WORST reason to close programs is when:
+- **6_6_2024 11_45_11 AM · Câu 122** (id 42311122) → `lifecycle-30` Program Life Cycle Management · Manage risk per the risk management plan · low
+  - Lý do: Khái niệm management reserve cho công việc chưa lường trước
+  - Câu hỏi: The PMBOK® Guide defines two types of reserves: Contingency reserve and management reserve. What is TRUE about these reserves?
+- **6_6_2024 11_45_11 AM · Câu 123** (id 42311123) → `benefits-1` Benefits Management · Develop the benefits realization plan · low
+  - Lý do: Khái niệm benefit, căn chỉnh chiến lược không phải benefit
+  - Câu hỏi: What is NOT a program benefit?
+- **6_6_2024 11_45_11 AM · Câu 127** (id 42311127) → `lifecycle-25` Program Life Cycle Management · Analyze variances and trends · low
+  - Lý do: Hoạt động quản lý tài chính: theo dõi thay đổi ngân sách, chi hợp đồng
+  - Câu hỏi: One of the program delivery phase activities is called financial management activities. What is a CORRECT list of financial management activities?
+- **6_6_2024 11_45_11 AM · Câu 134** (id 42311134) → `lifecycle-9` Program Life Cycle Management · Establish the program management plan and schedule · low
+  - Lý do: Mục tiêu đánh giá mua sắm cho program và component
+  - Câu hỏi: Objective of the Program procurement assessment activity is to:
+- **6_6_2024 11_45_11 AM · Câu 136** (id 42311136) → `lifecycle-9` Program Life Cycle Management · Establish the program management plan and schedule · low
+  - Lý do: Mục tiêu hoạt động đánh giá chất lượng program
+  - Câu hỏi: Objective of the Program quality assessment activity is NOT to:
+- **6_6_2024 11_45_11 AM · Câu 137** (id 42311137) → `governance-2` Governance · Select a governance framework · low
+  - Lý do: Phân biệt governance program và project
+  - Câu hỏi: What is NOT a true statement about governance?
+- **6_6_2024 11_45_11 AM · Câu 146** (id 42311146) → `governance-10` Governance · Monitor the business environment for alignment · low
+  - Lý do: Quy định mới ảnh hưởng program, họp PMO và component managers
+  - Câu hỏi: Your program is progressing well but is on a very tight schedule. Identified risks at program and component levels are well under control. The PMO is extremely efficient in supporting the overall program. A new regulation just came out which may severely impact your program. What is the BEST scenario to handle this new situation?
+- **6_6_2024 11_45_11 AM · Câu 147** (id 42311147) → `lifecycle-15` Program Life Cycle Management · Monitor human resources and team motivation · low
+  - Lý do: Chọn loại yêu cầu mời thầu khi ưu tiên năng lực kỹ thuật
+  - Câu hỏi: With the help of the procurement department of your organization, you have identified prospective sellers you are willing to work with. Your program is highly technical, and you are ready to solicit proposals from prospective sellers. Your primary concern is not the price, but the ability of the contractor to understand the technical details and to have the right technical approach. What is the BEST type of request?
+- **6_6_2024 11_45_11 AM · Câu 149** (id 42311149) → `lifecycle-8` Program Life Cycle Management · Develop the program WBS · low
+  - Lý do: Định nghĩa công việc quản lý program là program activities
+  - Câu hỏi: All WORK performed in a program for the purpose of program management is collectively known as:
+- **6_6_2024 11_45_11 AM · Câu 151** (id 42311151) → `benefits-1` Benefits Management · Develop the benefits realization plan · low
+  - Lý do: Thành công program đo bằng benefits thực hiện được
+  - Câu hỏi: The success of a program is measured:
+- **6_6_2024 11_45_11 AM · Câu 153** (id 42311153) → `lifecycle-30` Program Life Cycle Management · Manage risk per the risk management plan · low
+  - Lý do: Định nghĩa ngưỡng rủi ro
+  - Câu hỏi: What is a risk threshold?
+- **6_6_2024 11_45_11 AM · Câu 156** (id 42311156) → `governance-1` Governance · Develop program management standards and structure · low
+  - Lý do: Trách nhiệm PMO, không có quyền huỷ program
+  - Câu hỏi: What is NOT a correct list of PMO's responsibilities within a program?
+- **6_6_2024 11_45_11 AM · Câu 159** (id 42311159) → `benefits-1` Benefits Management · Develop the benefits realization plan · low
+  - Lý do: Khái niệm business value
+  - Câu hỏi: Which statement is TRUE about business value?
+- **6_6_2024 11_45_11 AM · Câu 166** (id 42311166) → `stakeholder-5` Stakeholder Engagement · Define and maintain stakeholder communications · low
+  - Lý do: Truyền thông program khác project do stakeholder đa dạng
+  - Câu hỏi: Program communications management is different from project communications management because of:
+- **6_6_2024 11_45_11 AM · Câu 167** (id 42311167) → `lifecycle-33` Program Life Cycle Management · Execute program transition and close-out · low
+  - Lý do: Không có hoạt động duy trì quản lý rủi ro sau đóng
+  - Câu hỏi: What is TRUE regarding the program risk management sustainment activity:
+- **6_6_2024 11_45_11 AM · Câu 168** (id 42311168) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Vòng đời program cần gắn với mục tiêu chiến lược
+  - Câu hỏi: What is TRUE about the program life cycle?
+- **6_6_2024 11_45_11 AM · Câu 170** (id 42311170) → `governance-1` Governance · Develop program management standards and structure · low
+  - Lý do: Định nghĩa PMO là cấu trúc quản lý
+  - Câu hỏi: A Program Management Office (PMO) is:
+- **6_6_2024 11_46_01 AM · Câu 2** (id 42361002) → `strategy-9` Strategic Program Alignment · Obtain program approval with the program charter · low
+  - Lý do: Thứ tự phê duyệt: mandate, charter, PMP, sign off
+  - Câu hỏi: Among the following options, in which order during the program life cycle are the following approved: the charter, the program management plan, the strategic mandate and customer sign off?
+- **6_6_2024 11_46_01 AM · Câu 11** (id 42361011) → `governance-2` Governance · Select a governance framework · low
+  - Lý do: Tái cơ cấu tổ chức gây thay đổi governance
+  - Câu hỏi: Company XYZ is involved in a major reorganization which impacts the program you are managing: your program sponsor spends very little time working with you, several issues escalated to him remain unresolved, your PMO has been disbanded and its members redeployed to other programs, and one of your project managers is temporarily working on another program. The performance of your program really suffers from these major organizational changes. The impact on your program is mainly due to CHANGES in:
+- **6_6_2024 11_46_01 AM · Câu 18** (id 42361018) → `lifecycle-22` Program Life Cycle Management · Consolidate project and program data · low
+  - Lý do: Truyền thông thay đổi baseline tài chính cho governance, kiểm toán
+  - Câu hỏi: You are in charge of a program which has been running for three years. This program consists of six projects focused on technological subsystems that are then subsequently integrated by a seventh project, namely the "integration project," to deliver a full range of IT software solutions for major customers of your organization. The program is fueled by internal funds which are submitted for board approval. This process is rather stable now as the financial effort is being tracked, monitored, and controlled according to the program's expenditure. What is the MOST recommended action for successful monitoring and control of the program financials?
+- **6_6_2024 11_46_01 AM · Câu 21** (id 42361021) → `stakeholder-2` Stakeholder Engagement · Analyze stakeholders and plan engagement · low
+  - Lý do: Ba hoạt động stakeholder engagement theo Standard
+  - Câu hỏi: Adequate stakeholder engagement is a key element of program management and is essential for the success of the program. The program manager hos the obligation to properly identify the stakeholders, manage their expectations, and make sure they remain engaged throughout the program life cycle. The PMI® Standard for Program Management details three activities which address the stakeholder engagement domain. What is the CORRECT list of activities recommended by the standard?
+- **6_6_2024 11_46_01 AM · Câu 22** (id 42361022) → `lifecycle-9` Program Life Cycle Management · Establish the program management plan and schedule · low
+  - Lý do: Câu nhắc hình không có, tên sơ đồ mạng lịch trình
+  - Câu hỏi: What is the correct name for such a diagram?
+- **6_6_2024 11_46_01 AM · Câu 23** (id 42361023) → `strategy-2` Strategic Program Alignment · Establish a high-level roadmap for sponsor approval · low
+  - Lý do: Ước tính thời gian PERT sơ bộ khi khởi tạo program
+  - Câu hỏi: You are initiating a program for a food company. This program is in charge of introducing a new process for accelerating the production of a complete set of products. With the current technology, you estimate it will take 3 years to make this new process 100% operational, whereas with more resources it will take only 2 years. This contradicts the sponsor's estimate of 7 years. What is the time estimate?
+- **6_6_2024 11_46_01 AM · Câu 24** (id 42361024) → `lifecycle-10` Program Life Cycle Management · Optimize the plan by leveling resources · low
+  - Lý do: Gộp project để giảm chi phí, chứng minh phụ thuộc lẫn nhau
+  - Câu hỏi: Your program is made up of six projects: A B, C, X, Y, Z. Project Y is the most important, project X delivers essential outcomes to project Y while project Z is of secondary importance. You have been recently asked by your governance board to reduce your overall budget. You propose to group projects A, B and C in one single project in order to reduce your infrastructure costs, making project leader A take over the responsibility of project leaders B and C. Several board members disagree. What is the IMMEDIATE action you should take?
+- **6_6_2024 11_46_01 AM · Câu 27** (id 42361027) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Nội dung strategic plan của tổ chức
+  - Câu hỏi: The organization's strategic plan is a key input to several portfolio management activities. What BEST describes the content of a strategic plan?
+- **6_6_2024 11_46_01 AM · Câu 28** (id 42361028) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Mục đích tối ưu portfolio
+  - Câu hỏi: Portfolio management includes activities to initiate, plan, execute, optimize, monitor and control the portfolio. When portfolio components have been identified, categorized, evaluated. selected and prioritized, portfolio optimization can be performed. From the list of options, what BEST describes the purpose of portfolio optimization?
+- **6_6_2024 11_46_01 AM · Câu 37** (id 42361037) → `lifecycle-25` Program Life Cycle Management · Analyze variances and trends · low
+  - Lý do: Phân tích EVM nhưng thiếu bảng dữ liệu
+  - Câu hỏi: You are managing a program which is composed of 3 projects: A, B, and C. A steering committee meeting is planned for this coming Friday, and the board wants to see your program's EVM parameters. The table below reflects the EVM data reported by your project managers: What can you conclude for your program?
+- **6_6_2024 11_46_01 AM · Câu 43** (id 42361043) → `lifecycle-1` Program Life Cycle Management · Develop the program charter · low
+  - Lý do: Câu kiến thức đầu ra giai đoạn definition (charter, roadmap, governance)
+  - Câu hỏi: Your pharmaceutical company has decided to reorganize some of its business units, and has decided to manage this major effort as a program. A business case has been developed and the program is approved. Also, it has been decided that two existing projects will become components of this program. You have been asked to manage the definition phase of the program. What does your management expect as the MAIN outputs from running the program definition phase?
+- **6_6_2024 11_46_01 AM · Câu 48** (id 42361048) → `lifecycle-23` Program Life Cycle Management · Evaluate program status · low
+  - Lý do: Câu khái niệm về tương tác program và component
+  - Câu hỏi: Your program is a nationwide reorganization of a government based agency. It consists of centralizing warehouse plants in bigger cities to cut expenditure costs such as gas and vehicles loans. This program is now 2 years old and you demonstrated that this program is on track so far. It is composed of six projects: A B, C, X, Y, Z. Generally, one of the reasons for a program to work satisfactorily is that the interdependencies between the program and its components are well managed, which is apparently the case here. What BEST describes these interactions?
+- **6_6_2024 11_46_01 AM · Câu 58** (id 42361058) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Câu khái niệm về lý do cần program
+  - Câu hỏi: You are managing a program that is in charge of developing a new set of drills for oil exploration. There are many constraints because these drills should operate in a large set of conditions: depth, underground structure, temperature and location. You have organized this program by project characteristics: one of them consists of the design and manufacturing of the drills, which is located on your corporate premises, while several others test the drills in their respective regions, ranging from polar to equatorial conditions. An important objective of the program is to minimize the overall future operational costs of the drills for your organization. Among the following options, which one does NOT characterize the need of having a program in such a case?
+- **6_6_2024 11_46_01 AM · Câu 59** (id 42361059) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Câu khái niệm vai trò portfolio manager với mục tiêu program
+  - Câu hỏi: You are managing a program that is in charge of developing a new set of drills for oil exploration. There are many constraints because these drills should operate in a large set of conditions: depth, underground structure, temperature and locations. You have organized this program by project characteristics: one of them consists of the design and manufacturing of the drills, which is located on your corporate premises, while several others test the drills in their respective regions, ranging from polar to equatorial conditions. An important objective of the program is to minimize the overall future operational costs of the drills for your organization in order to increase business efficiency. Among the following stakeholders, which one has MOST likely applied this prime objective?
+- **6_6_2024 11_46_01 AM · Câu 61** (id 42361061) → `lifecycle-1` Program Life Cycle Management · Develop the program charter · low
+  - Lý do: Câu kiến thức đầu ra giai đoạn definition
+  - Câu hỏi: Congratulations! You have been selected as the program manager in charge of managing a large program which includes five projects. and lots of stakeholders. This program is key for your company. Several benefits are expected as a result of this program that should establish your company as a leader in its field. The program existence has just been approved by a group of company executives. The fact that the go ahead has been given to proceed with the program means that the program has successfully exited the first phase of its life cycle: the definition phase. Which document is NOT an output of this phase?
+- **6_6_2024 11_46_01 AM · Câu 64** (id 42361064) → `lifecycle-19` Program Life Cycle Management · Lead, train, coach and recognize the team · low
+  - Lý do: Câu chung về kỹ năng của program manager
+  - Câu hỏi: Program management requires a special blend of skills in:
+- **6_6_2024 11_46_01 AM · Câu 73** (id 42361073) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Câu định nghĩa program
+  - Câu hỏi: What is the BEST definition of a program?
+- **6_6_2024 11_46_01 AM · Câu 79** (id 42361079) → `governance-2` Governance · Select a governance framework · low
+  - Lý do: Câu định nghĩa program governance
+  - Câu hỏi: Appropriate governance is a necessary ingredient in program management. Without proper governance, ii is highly probable that the program will fail. Would you like to sail across the Atlantic Ocean without a skilled skipper and without adequate assistance in the case of difficulties? Program governance may have various meanings and interpretations, but it covers several aspects accepted by the majority of program management experts. What is the BEST definition of program governance?
+- **6_6_2024 11_46_01 AM · Câu 85** (id 42361085) → `benefits-1` Benefits Management · Develop the benefits realization plan · low
+  - Lý do: Câu khái niệm về benefits management plan
+  - Câu hỏi: Programs are undertaken to contribute to a company's strategic objectives, and to generate benefits. In many situations. a well-managed program helps to obtain benefits and a level of control that are not available when projects are managed individually. Assume you manage a program for which benefits have been identified and recorded in the benefits register. Now it is time to develop the benefits management plan which will guide benefits realization. Which answer is TRUE regarding the benefits management plan?
+- **6_6_2024 11_46_01 AM · Câu 86** (id 42361086) → `governance-2` Governance · Select a governance framework · low
+  - Lý do: Câu khái niệm trách nhiệm sponsor và program manager
+  - Câu hỏi: The identification and engagement of key stakeholders are necessary for the success of any program. Among the list of key stakeholders are the program sponsor and the program manager. What is the CORRECT answer with regard to the prime responsibilities of the sponsor or of the program manager?
+- **6_6_2024 11_46_01 AM · Câu 95** (id 42361095) → `lifecycle-9` Program Life Cycle Management · Establish the program management plan and schedule · low
+  - Lý do: Tính critical path nhưng thiếu sơ đồ
+  - Câu hỏi: On this diagram, what are the critical path, critical path length, shortest path and shortest path length, respectively?
+- **6_6_2024 11_46_01 AM · Câu 105** (id 42361105) → `stakeholder-1` Stakeholder Engagement · Identify stakeholders and create the stakeholder matrix · low
+  - Lý do: PM mới gặp sponsor trước để nắm program
+  - Câu hỏi: Your company is a major player in the field of telecommunications. Your company has embarked on a major reorganization. and has decided to manage this initiative as a program. The program is structured with three project managers and a PMO with four experts. The program is well underway, but for some reason, the program manager has left the company. Because of your experience in similar programs in the past. management has selected you as the new program manager. You will start working Monday morning to take over the program. You have a lot of experience in the field of telecommunications and in managing restructuring programs, but you lack a lot of information about this specific program. In order to start properly, you first want to meet the most appropriate person or entity. What is the IMMEDIATE action you should take?
+- **6_6_2024 11_46_01 AM · Câu 107** (id 42361107) → `lifecycle-4` Program Life Cycle Management · Develop a responsibility assignment matrix · low
+  - Lý do: Tiêu chí chọn program manager
+  - Câu hỏi: The Executive President of your organization has to assign a program manager to a new program. This program is spread over several countries and will need to be operated by virtual teams most of the time. He will use a matrix of criteria, weighted to compare and choose the most adequate program manager. Among the following options, which factor will receive the MOST important weight?
+- **6_6_2024 11_46_01 AM · Câu 115** (id 42361115) → `lifecycle-9` Program Life Cycle Management · Establish the program management plan and schedule · low
+  - Lý do: Critical path nhưng thiếu sơ đồ
+  - Câu hỏi: In this diagram, what is the critical path?
+- **6_6_2024 11_46_01 AM · Câu 117** (id 42361117) → `lifecycle-9` Program Life Cycle Management · Establish the program management plan and schedule · low
+  - Lý do: Câu về sơ đồ mạng nhưng thiếu sơ đồ
+  - Câu hỏi: On the above diagram, which statement is TRUE?
+- **6_6_2024 11_46_01 AM · Câu 118** (id 42361118) → `lifecycle-9` Program Life Cycle Management · Establish the program management plan and schedule · low
+  - Lý do: Tính lại critical path nhưng thiếu sơ đồ
+  - Câu hỏi: On this diagram, if D duration becomes 15, what are the critical path, critical path length, shortest path, and float on the shortest path, respectively?
+- **6_6_2024 11_46_01 AM · Câu 128** (id 42361128) → `strategy-3` Strategic Program Alignment · Define the high-level roadmap and financial framework · low
+  - Lý do: Câu kiến thức đầu ra của financial framework
+  - Câu hỏi: Governance of the program you manage is working well and is composed of 13 people: the executive sponsor, the program director, 5 project managers, the PMO officer, 4 representatives from the external stakeholders and yourself. The steering board is reviewing program financials, but several questions are raised on the presence of too many constraints that are not explicitly defined at the program level. In reality, the program has complex financial sourcing that mixes public and private funds. Which one of the following is NOT a typical output of the 'Program financial framework establishment' activity?
+- **6_6_2024 11_46_01 AM · Câu 135** (id 42361135) → `strategy-8` Strategic Program Alignment · Evaluate regulatory, legal, social and ethical constraints · low
+  - Lý do: Câu kiến thức về yếu tố môi trường doanh nghiệp
+  - Câu hỏi: The program manager should be aware of the Enterprise Environmental Factors (EEF) which may influence the overall management of the program. What is a CORRECT list of Enterprise Environmental Factors?
+- **6_6_2024 11_46_01 AM · Câu 136** (id 42361136) → `strategy-5` Strategic Program Alignment · Evaluate the program business case · low
+  - Lý do: Phân tích môi trường để đánh giá business case
+  - Câu hỏi: Environmental Analysis may be used to assess the validity of the business case and program management plan. What is a CORRECT list of Environmental Analyses which may be performed by the program manager?
+- **6_6_2024 11_46_01 AM · Câu 137** (id 42361137) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Mục tiêu chính của program là benefits theo chiến lược
+  - Câu hỏi: Programs may be undertaken for a number of reasons. What is the PRIMARY objective of any program?
+- **6_6_2024 11_46_01 AM · Câu 139** (id 42361139) → `lifecycle-3` Program Life Cycle Management · Develop the program roadmap · low
+  - Lý do: Đầu vào chính để xây roadmap
+  - Câu hỏi: During the program definition phase. you develop the program roadmap. which is a chronological representation of the program's intended direction. The program roadmap bridges business strategy and key program activities. From the list of options. which is the KEY INPUT used to develop the program roadmap?
+- **6_6_2024 11_46_01 AM · Câu 142** (id 42361142) → `governance-4` Governance · Evaluate KPIs to monitor benefits · low
+  - Lý do: Health check định kỳ đánh giá hiệu quả program
+  - Câu hỏi: Program governance ensures that benefits are realized in conjunction with the strategic objectives of the organization. Governance is composed of a full range of stakeholders: executive sponsor, program director. project managers, program manager. PMO, and project teams. Among the following options. which is the MOST recommended technique to be used in order to assess ongoing performance and progress against the expected outcomes of the program?
+- **6_6_2024 11_46_01 AM · Câu 144** (id 42361144) → `lifecycle-21` Program Life Cycle Management · Execute program management plans · low
+  - Lý do: Đầu ra khi thực hiện procurement
+  - Câu hỏi: Your program deals with many vendors and most of them will be common to several of your program's constituent projects. You have consequently decided to manage procurement at the program level rather than at project level. You have assigned one procurement expert in your PMO to manage all procurements on your behalf. This PMO expert has developed the procurement management plan. and is now conducting procurements. As of today. not all vendors have been selected. and no contract has been signed with any of them. When conducting procurements, the PMO expert will generate several outputs. Which is the CORRECT list of these outputs?
+- **6_6_2024 11_46_01 AM · Câu 151** (id 42361151) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Định nghĩa: lý do cần program là benefits theo giai đoạn để nhận vốn.
+  - Câu hỏi: The program you are managing is in charge of designing, building and delivering a new space rocket to an important government agency. Even if it seems that this is a project, a program is needed in this case because it belongs to the space industry. According to the following options what is the BEST reason for having a program instead of a project?
+- **6_6_2024 11_46_01 AM · Câu 154** (id 42361154) → `lifecycle-28` Program Life Cycle Management · Manage changes per the change management plan · low
+  - Lý do: Thay đổi kiến trúc program khi steering committee duyệt thêm component.
+  - Câu hỏi: The program architecture is the set of components that define the program and contribute to its planned benefits. During the development of the program architecture. rules for the inclusion (and exclusion) of program components should be defined. and the interrelationships between the components should also be identified. During the program life cycle, the architecture of the program is subject to change. but one key responsibility of the program manager is to properly manage the program architecture. Among all the options, which is the BEST reason to change the program architecture?
+- **6_6_2024 11_46_01 AM · Câu 156** (id 42361156) → `lifecycle-27` Program Life Cycle Management · Manage program-level issues · low
+  - Lý do: Câu đếm interface component, thiếu dữ kiện để trả lời.
+  - Câu hỏi: You are managing a program which has three component projects and some other work. Recently, due to a big shift in the market, the strategic objectives of the company have changed. As a result of this change, your program has been impacted and management has decided to stop one of your components, and to initiate two new projects as part of your program. You know that, in your program, you are responsible for managing component interfaces. As a result of the management decision to stop one project and to add two more, HOW MANY program component interfaces are you managing now?
+- **6_6_2024 11_46_01 AM · Câu 167** (id 42361167) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Định nghĩa thành phần portfolio, kiến thức chung.
+  - Câu hỏi: A portfolio is usually composed of components such as programs and projects. What is a TRUE statement with regard to portfolio components?
+- **6_6_2024 11_47_06 AM · Câu 3** (id 42426003) → `lifecycle-21` Program Life Cycle Management · Execute program management plans · low
+  - Lý do: Quản lý hợp đồng cấp program, component báo cáo thông tin bàn giao.
+  - Câu hỏi: In programs, normally the contracts are signed at program level but managed at component level; admin and closeout decisions are managed at component level. However, some of the contracts are administered at program level to benefit many components. In this case
+- **6_6_2024 11_47_06 AM · Câu 18** (id 42426018) → `lifecycle-4` Program Life Cycle Management · Develop a responsibility assignment matrix · low
+  - Lý do: Thời điểm có nguồn lực cố định để quản lý program.
+  - Câu hỏi: Resources are planned right from the beginning of a program, with an estimate of the required staff and facilities prepared during business case and reflected in program charter. You are managing a program which will include a large number of program resources due to its criticality and complexity. You realize, that in your program, you get permanent resources to manage the program during
+- **6_6_2024 11_47_06 AM · Câu 19** (id 42426019) → `lifecycle-30` Program Life Cycle Management · Manage risk per the risk management plan · low
+  - Lý do: Kỹ thuật phân tích định lượng rủi ro, Monte Carlo.
+  - Câu hỏi: During the course of the program, the program manager and program team use quantitative and qualitative analysis techniques to collect and analyze data related to risks, stakeholders, etc. Which of the below are quantitative analysis techniques and tools
+- **6_6_2024 11_47_06 AM · Câu 36** (id 42426036) → `governance-2` Governance · Select a governance framework · low
+  - Lý do: Vai trò sponsor trong steering committee của component.
+  - Câu hỏi: The sponsor acts as an advocate in a program and ensures that the program gets the management attention while informing the program manager of any strategic change. The sponsor is an executive member who acts as the chair of the steering committee. Who usually takes up the role of sponsor in components’ steering committees?
+- **6_6_2024 11_47_06 AM · Câu 43** (id 42426043) → `lifecycle-27` Program Life Cycle Management · Manage program-level issues · low
+  - Lý do: Phân tích issue stakeholder bằng đánh giá lại phạm vi program.
+  - Câu hỏi: You are mid-way through your program and you realize that stakeholders have conflicting concerns and issues, and that operational departments are a bit reluctant to change. You do not understand the reason behind this, however, in your analysis of the issues in order to come out with necessary changes, you need to evaluate
+- **6_6_2024 11_47_06 AM · Câu 45** (id 42426045) → `governance-2` Governance · Select a governance framework · low
+  - Lý do: Program manager giàu kinh nghiệm được governance trao thêm tự chủ.
+  - Câu hỏi: When you started your career, you were keen to get onto the management path and you worked day and night to get your PMP certification followed by the PgMP certification. Today, you are a highly regarded program manager in your organization and you are the one that people come to for advice. This warrants that
+- **6_6_2024 11_47_06 AM · Câu 57** (id 42426057) → `governance-2` Governance · Select a governance framework · low
+  - Lý do: Vai trò steering committee kiểm soát nguồn vốn bên ngoài.
+  - Câu hỏi: Program manager is responsible for controlling the budget in a program. Some programs are funded internally by the company, others externally. When a program is funded externally, the ____ is responsible for controlling the funding
+- **6_6_2024 11_47_06 AM · Câu 58** (id 42426058) → `governance-2` Governance · Select a governance framework · low
+  - Lý do: Vai trò program manager là champion cho thay đổi.
+  - Câu hỏi: You are the sponsor of a program and currently working on assigning a program manager to manage the definition phase. The output of this phase will be used as input in the planning phase and will be used to maintain program alignment and viability throughout the lifecycle. The change driven by this program needs to be integrated as well with the operations and throughout the company. In a program, who is considered the champion for change?
+- **6_6_2024 11_47_06 AM · Câu 78** (id 42426078) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Định nghĩa khác biệt portfolio và program.
+  - Câu hỏi: What is the difference between a Portfolio and a Program
+- **6_6_2024 11_47_06 AM · Câu 81** (id 42426081) → `governance-2` Governance · Select a governance framework · low
+  - Lý do: Vai trò steering committee duyệt các kế hoạch program.
+  - Câu hỏi: During the definition phase, the program manager along with the program management team, prepare the program management plan with all its subsidiary plans which will guide the execution of the delivery phase. From the below options, who is responsible for reviewing all program management plans?
+- **6_6_2024 11_47_06 AM · Câu 85** (id 42426085) → `lifecycle-1` Program Life Cycle Management · Develop the program charter · low
+  - Lý do: Thời điểm bổ nhiệm program manager trong formulation.
+  - Câu hỏi: During the strategic planning cycle of an organization, the vision and mission are used to produce strategic goals and objectives documented in the strategic plan, which is then divided into sets of initiatives. Each set of initiatives may be grouped under a portfolio grouping multiple programs within it. In which phase of the program are the program managers assigned?
+- **6_6_2024 11_47_06 AM · Câu 86** (id 42426086) → `governance-2` Governance · Select a governance framework · low
+  - Lý do: Chức năng của program governance, câu định nghĩa.
+  - Câu hỏi: Program governance enables and performs program decision making, establishes practices to support the program and maintains program oversight with a focus on delivering benefits. In addition, program governance
+- **6_6_2024 11_47_06 AM · Câu 94** (id 42426094) → `lifecycle-9` Program Life Cycle Management · Establish the program management plan and schedule · low
+  - Lý do: Phương pháp SWOT hỗ trợ lập kế hoạch program.
+  - Câu hỏi: Planning is a very important sub-phase in the definition of a program because it will guide the entire program delivery. Program management plan and all subsequent documents are prepared, recommended by program manager and approved by steering committee. Which of the below methods help while doing the planning?
+- **6_6_2024 11_47_06 AM · Câu 105** (id 42426105) → `lifecycle-9` Program Life Cycle Management · Establish the program management plan and schedule · low
+  - Lý do: Đầu vào quyết định make-or-buy thuộc lập kế hoạch mua sắm program
+  - Câu hỏi: Programs normally use the procurement policies and procedures of the organization, unless the program has particular procurement specifications; in this case, the program manager will use the organization procurement processes and tailor them with the support from PMO to the program’s needs. Which of the below is an input to make or buy decisions?
+- **6_6_2024 11_47_06 AM · Câu 112** (id 42426112) → `lifecycle-21` Program Life Cycle Management · Execute program management plans · low
+  - Lý do: Bước tiến trình mua sắm sau danh sách nhà cung cấp đủ điều kiện
+  - Câu hỏi: Programs normally use the procurement policies and procedures of the organization, unless the program has particular procurement specifications; in this case, the program manager will use the organization procurement processes and tailor them with the support from PMO to the program’s needs. Procurement is done from a qualified sellers’ list. After completing the qualified sellers list, you normally?
+- **6_6_2024 11_47_06 AM · Câu 119** (id 42426119) → `lifecycle-21` Program Life Cycle Management · Execute program management plans · low
+  - Lý do: Đầu vào chọn nhà cung cấp trong thực thi mua sắm
+  - Câu hỏi: Programs normally use the procurement policies and procedures of the organization, unless the program has particular procurement specifications; in this case, the program manager will use the organization procurement processes and tailor them with the support from PMO to the program’s needs. Which of the below is an important input when selecting a seller
+- **6_6_2024 11_47_06 AM · Câu 120** (id 42426120) → `governance-2` Governance · Select a governance framework · low
+  - Lý do: Câu kiến thức về EEF: yêu cầu biểu mẫu của tổ chức
+  - Câu hỏi: Program uses a variety of templates, forms, processes and procedures to effectively guide each phase of the program. The requirements to complete forms and paperwork required by organization are part of
+- **6_6_2024 11_47_06 AM · Câu 123** (id 42426123) → `lifecycle-21` Program Life Cycle Management · Execute program management plans · low
+  - Lý do: Đầu ra hoạt động quản lý tài chính: thanh toán hợp đồng
+  - Câu hỏi: Program activities are the tasks and work conducted to support a program and which contributes throughout the program lifecycle; activities supporting the program management include change, communication, information, procurement, quality, resource, risk, schedule, scope and financial management activities. Which of the below is an output of the financial management activity?
+- **6_6_2024 11_47_06 AM · Câu 124** (id 42426124) → `lifecycle-9` Program Life Cycle Management · Establish the program management plan and schedule · low
+  - Lý do: Đầu ra lập ngân sách chi phí: lịch thanh toán program
+  - Câu hỏi: You are managing a program for the government and due to the high stakes you maintain a close eye on the schedule and budget in order not to derail from the plan. Program budget incorporates the costs for each individual component and the cost for resources to manage the program itself. Which of the below is an output of the program cost budgeting?
+- **6_6_2024 11_47_06 AM · Câu 126** (id 42426126) → `strategy-10` Strategic Program Alignment · Identify integration opportunities with operations · low
+  - Lý do: Báo sponsor về program tương tự sau sáp nhập để tích hợp
+  - Câu hỏi: Your company A recently acquired company B. Company B has a program similar to the one you are managing in company A; your program is still in its early stages however the program in company B is already in its final stages. You knew this from an acquaintance of yours in company B while discussing the suite of programs in the pipeline of company B. What is your best course of action?
+- **6_6_2024 11_47_06 AM · Câu 131** (id 42426131) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Chọn program manager giỏi xác định rủi ro cấp cao
+  - Câu hỏi: You are the sponsor of a program and you are in the process of choosing a program manager. All the candidates have already managed programs for the company and they have done it successfully; they are highly regarded individuals in the organization and they tend to deliver to expectations. You choose the candidate who previously excelled in
+- **6_6_2024 11_47_06 AM · Câu 132** (id 42426132) → `lifecycle-24` Program Life Cycle Management · Approve closure of constituent components · low
+  - Lý do: Yêu cầu chuyển giao component chuẩn bị trong delivery phase
+  - Câu hỏi: You have been assigned as the program manager to manage the release of five new ice cream flavors within the next year. The company is betting a lot on this program because it has been failing its last few programs and is currently facing hard times keeping up with the fast growing market. You have finally reached the closing phase and are working on transitioning the program to operational entities for sustainment. During which phase, the components transition requests are prepared?
+- **6_6_2024 11_47_06 AM · Câu 143** (id 42426143) → `stakeholder-5` Stakeholder Engagement · Define and maintain stakeholder communications · low
+  - Lý do: Năng lực giao tiếp cần có của program manager
+  - Câu hỏi: You are the sponsor of a high-priority program and want to assign a program manager to manage your program. The program manager needs to have the PgMP credential and needs to be knowledgeable in the art of communication and stakeholder engagement as you know that the program will span on a long period and will have a large number of stakeholders involved. Which of the below represents an important competency you will look for it in a program manager?
+- **6_6_2024 11_47_06 AM · Câu 145** (id 42426145) → `governance-4` Governance · Evaluate KPIs to monitor benefits · low
+  - Lý do: Health check đánh giá hiệu suất định kỳ của program
+  - Câu hỏi: During the delivery phase of your program, you and the steering committee have planned for continuous reviews in order for the steering committee to be able to maintain oversight and follow up on program performance. Health check reviews are part of these reviews. Which of the below is true about health checks?
+- **6_6_2024 11_47_06 AM · Câu 146** (id 42426146) → `governance-6` Governance · Evaluate risks and update the risk plan for approval · low
+  - Lý do: Risk profile thể hiện qua tuyên bố chính sách tổ chức
+  - Câu hỏi: You are managing a program for the government and due to the high stakes you maintain close communication with the government representatives. You are working continuously to maximize opportunities and lowering threats. In your opinion, risk profiles are
+- **6_6_2024 11_47_06 AM · Câu 151** (id 42426151) → `stakeholder-4` Stakeholder Engagement · Maintain program visibility and support · low
+  - Lý do: Câu khái niệm: mục tiêu engagement là giành, duy trì ủng hộ
+  - Câu hỏi: Throughout the program lifecycle, and knowing that stakeholder engagement is critical to program success, the program manager works constantly to engage stakeholders and gain their support. You are the program manager for a multi-tier program ranging across multiple stakeholder channels and a wide range of stakeholders’ groups. As a program manager, you know that the primary objective of stakeholder engagement is
+- **6_6_2024 11_47_06 AM · Câu 152** (id 42426152) → `lifecycle-14` Program Life Cycle Management · Develop KPIs for scope and quality management · low
+  - Lý do: Câu khái niệm chất lượng program
+  - Câu hỏi: You know that quality is often performed at the component level; the governance board is responsible for reviewing and approving the approach for quality management and the standards by which quality will be measured. Program quality
+- **6_6_2024 11_47_06 AM · Câu 155** (id 42426155) → `stakeholder-2` Stakeholder Engagement · Analyze stakeholders and plan engagement · low
+  - Lý do: Câu khái niệm stakeholder engagement: đánh giá thái độ, sẵn sàng thay đổi
+  - Câu hỏi: The program manager engages stakeholders by assessing their attitudes towards the program and change readiness. The program manager includes stakeholders in program activities and utilizes communications targeted to their needs and expectations. This is done as part of
+- **6_6_2024 11_47_06 AM · Câu 157** (id 42426157) → `governance-2` Governance · Select a governance framework · low
+  - Lý do: Vai trò sponsor làm chủ tịch steering committee
+  - Câu hỏi: You are managing a high-priority program in your company and the CEO is having a close eye on your program due to its strategic importance to the future of the company. For this reason, who should be the chairman of your program’s steering committee?
+- **6_6_2024 11_47_06 AM · Câu 160** (id 42426160) → `strategy-6` Strategic Program Alignment · Identify and quantify expected benefits · low
+  - Lý do: Benefits nội bộ như tinh thần khó định lượng
+  - Câu hỏi: Programs are undertaken to deliver benefits to the sponsoring organization. Some of these benefits are targeted to the internal entities of the organization. In this context, consider you are managing a program to improve employee morale. You find it hard to define benefit level (value) because
+- **6_6_2024 11_47_06 AM · Câu 168** (id 42426168) → `lifecycle-9` Program Life Cycle Management · Establish the program management plan and schedule · low
+  - Lý do: Hoạt động quản lý chất lượng trong lập kế hoạch program
+  - Câu hỏi: Your corporate PMO has defined a program management methodology to be used across all programs in the company. You were appointed to manage a transformation program in your company and are currently in the planning phase. Which of the below is considered important in defining program management activities?
+- **6_6_2024 11_47_06 AM · Câu 170** (id 42426170) → `lifecycle-10` Program Life Cycle Management · Optimize the plan by leveling resources · low
+  - Lý do: Xác định nhu cầu nguồn lực, xem thông tin lịch sử
+  - Câu hỏi: You are the program manager to build a new gas extraction station in a new country where it is the first time they try to extract gas. Your company has developed gas extraction stations in other countries, but it is its first program in this country. During definition phase and while determining resource requirements, you should
+- **6_6_2024 11_48_11 AM · Câu 2** (id 42491002) → `lifecycle-9` Program Life Cycle Management · Establish the program management plan and schedule · low
+  - Lý do: Lập kế hoạch quản lý nhân sự khi nguồn lực hạn chế
+  - Câu hỏi: You have been assigned to a low-priority program in the organization and you have been struggling in getting the needed resources on time. You are working in a complex environment due to the changing market of the transportation industry. When working in complex environments with limited resources, the program manager should
+- **6_6_2024 11_48_11 AM · Câu 6** (id 42491006) → `lifecycle-9` Program Life Cycle Management · Establish the program management plan and schedule · low
+  - Lý do: Đầu ra lập ngân sách chi phí program
+  - Câu hỏi: Program manager is responsible for managing the financial aspects of the program with the oversight from the steering committee. Program payment schedules, component payment schedules and updates to program budget baseline are outputs of?
+- **6_6_2024 11_48_11 AM · Câu 11** (id 42491011) → `lifecycle-6` Program Life Cycle Management · Conduct the program kick-off · low
+  - Lý do: Phản ứng tiêu cực tại kick-off, phân tích nguyên nhân
+  - Câu hỏi: You are the program manager of a complex program in a risk adverse company; during the kick-off meeting, two employees moved out of the room as they were not interested in the change being proposed. What is your next course of action?
+- **6_6_2024 11_48_11 AM · Câu 12** (id 42491012) → `lifecycle-6` Program Life Cycle Management · Conduct the program kick-off · low
+  - Lý do: Phản ứng tiêu cực tại kick-off, phân tích nguyên nhân
+  - Câu hỏi: You are the program manager of a complex program in a risk adverse company; during the kick-off meeting, a lot of employees moved out of the room as they were not interested in the change being proposed. What is your next course of action?
+- **6_6_2024 11_48_11 AM · Câu 14** (id 42491014) → `lifecycle-3` Program Life Cycle Management · Develop the program roadmap · low
+  - Lý do: Program architecture ánh xạ component tới benefits
+  - Câu hỏi: Throughout the course of the program, the program manager and governance board work to ensure benefits realization within the program scope and company standards. Benefits are delivered through the work of components and component integration. Program ______ maps how the components will deliver outcomes in order to achieve program benefits?
+- **6_6_2024 11_48_11 AM · Câu 16** (id 42491016) → `strategy-11` Strategic Program Alignment · Exploit strategic opportunities for change · low
+  - Lý do: Chiến lược enhance để hiện thực thêm benefits
+  - Câu hỏi: During the course of the program, the program manager continuously tries to optimize benefits in order to maximize the benefits delivery. Which of the below warrants realizing more benefits?
+- **6_6_2024 11_48_11 AM · Câu 23** (id 42491023) → `lifecycle-3` Program Life Cycle Management · Develop the program roadmap · low
+  - Lý do: Program architecture liên kết component mới
+  - Câu hỏi: You are mid-way through your program and due to changes; you realize the need to integrate two new components in order to realize expected benefits. Which of the following documents establishes the linkage of the new components to the already defined program components?
+- **6_6_2024 11_48_11 AM · Câu 38** (id 42491038) → `governance-2` Governance · Select a governance framework · low
+  - Lý do: Cho thành viên board mới xem governance plan
+  - Câu hỏi: At closure, a lot of stakeholders have changed since the beginning and board members changed as well; a new board member just joined the company and has vague understanding of her roles and responsibilities. What should you do in this case?
+- **6_6_2024 11_48_11 AM · Câu 43** (id 42491043) → `lifecycle-7` Program Life Cycle Management · Develop a detailed program scope statement · low
+  - Lý do: PM mới ở planning phase đọc scope statement
+  - Câu hỏi: You have been assigned by the sponsor to manage a high priority program in your organization. The program is already in its planning phase and the previous manager has retired. The planning phase spans a full year and is considered critical to the successful delivery of a program. As a first step, which document you study?
+- **6_6_2024 11_48_11 AM · Câu 44** (id 42491044) → `lifecycle-3` Program Life Cycle Management · Develop the program roadmap · low
+  - Lý do: PM mới ở delivery phase đọc roadmap
+  - Câu hỏi: You have been assigned by the sponsor to manage a high priority program in your organization. The program is already in its delivery phase and the previous manager has retired. The delivery is already mid-way and the program is being delivered as planned. As a first step, which document you study?
+- **6_6_2024 11_48_11 AM · Câu 51** (id 42491051) → `lifecycle-25` Program Life Cycle Management · Analyze variances and trends · low
+  - Lý do: Đọc số liệu báo cáo hiệu suất, thiếu bảng
+  - Câu hỏi: You have prepared a performance report and presented the above to steering committee. Having looked at these numbers, which of the below is true?
+- **6_6_2024 11_48_11 AM · Câu 63** (id 42491063) → `lifecycle-24` Program Life Cycle Management · Approve closure of constituent components · low
+  - Lý do: Component đóng dưới ngân sách; trả lại tiền cho sponsor
+  - Câu hỏi: You program to deliver the cancer drug to cure all the patients around the world has been performing as expected and you are nearing the closure phase. In your program, one component is already in the closure phase and has been completed under budget. What should you do?
+- **6_6_2024 11_48_11 AM · Câu 65** (id 42491065) → `lifecycle-21` Program Life Cycle Management · Execute program management plans · low
+  - Lý do: Kiến thức thứ tự bước mua sắm RFI, RFP, RFQ
+  - Câu hỏi: Programs normally use the procurement policies and procedures of the organization, unless the program has particular procurement specifications; in this case, the program manager will use the organization procurement processes and tailor them with the support from PMO to the program’s needs. Which of the below options represents the correct steps for program procurement?
+- **6_6_2024 11_48_11 AM · Câu 88** (id 42491088) → `governance-2` Governance · Select a governance framework · low
+  - Lý do: Vai trò steering committee phê duyệt/từ chối thay đổi
+  - Câu hỏi: Prior to a governance board meeting, a steering committee member called you and expressed his concern about the schedule delays and that he will be issuing a schedule staggering complaint and change request during the planned meeting. What should you do next?
+- **6_6_2024 11_48_11 AM · Câu 92** (id 42491092) → `lifecycle-15` Program Life Cycle Management · Monitor human resources and team motivation · low
+  - Lý do: Tiêu chí chọn thầu phụ để tối ưu mua sắm
+  - Câu hỏi: As program manager for the new ice cream flavors program, you want to select appropriate subcontractors to support your program and transfer a part from the work to be done to others. While preparing for the program, you prepare selection criteria in order to group which components to outsource, and which components to undertake internally. You do this because you want to
+- **6_6_2024 11_48_11 AM · Câu 96** (id 42491096) → `governance-10` Governance · Monitor the business environment for alignment · low
+  - Lý do: Theo dõi thay đổi môi trường; đáp án lạ là financial management
+  - Câu hỏi: You are in the second year of a five years program and the program has been successfully delivering the planned benefits. Your program management team and you are constantly on the lookout for environmental changes that might affect the program delivery. The activity performed here is part of which of the following?
+- **6_6_2024 11_48_11 AM · Câu 99** (id 42491099) → `lifecycle-16` Program Life Cycle Management · Charter and initiate constituent components · low
+  - Lý do: Rút ngắn tiến độ: duyệt khởi tạo các component còn lại cùng lúc
+  - Câu hỏi: You are in the second year of a four years program and the program has been successfully delivering the planned benefits. Management is now concerned about a new market competition and asks you to shorten the schedule to meet the newly shortened benefits window without increasing program risk. The program still have 3 components to initiate, the best course of action would be to
+- **6_6_2024 11_48_11 AM · Câu 103** (id 42491103) → `strategy-7` Strategic Program Alignment · Estimate financial framework and nonfinancial benefits · low
+  - Lý do: Vượt ngân sách do không cập nhật tài liệu formulation định kỳ
+  - Câu hỏi: All programs in your company seem to miss the allotted budget. The CEO advised to hire a subject matter expert (SME) in order to help while planning the programs’ budgets. But the situation does not seem to get any better. What is the most possible reason for this?
+- **6_6_2024 11_48_11 AM · Câu 104** (id 42491104) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Câu định nghĩa: khác biệt vòng đời program và project
+  - Câu hỏi: You are working as a program manager and one of your components junior project managers comes to you seeking advice about the difference between program life cycle and project life cycle. Your answer to the junior project manager would be
+- **6_6_2024 11_48_11 AM · Câu 109** (id 42491109) → `lifecycle-17` Program Life Cycle Management · Deploy governance framework and uniform standards · low
+  - Lý do: Kiến thức PLC: thiết kế quy trình áp dụng xuyên các giai đoạn
+  - Câu hỏi: Your program for launching new flavors of ice cream is in its definition phase and you are thoroughly planning it being of critical importance for your company, and you know that a good planning will normally result in successful delivery and closure phases. In program lifecycle (PLC), program manager manages activities and facilitates program definition, delivery and closure. Which of the below statements is true?
+- **6_6_2024 11_48_11 AM · Câu 112** (id 42491112) → `benefits-1` Benefits Management · Develop the benefits realization plan · low
+  - Lý do: Công dụng BMP: xác định thay đổi đối với component
+  - Câu hỏi: A program manager maintains a close look on the program benefits throughout the program lifecycle. Governance board is also focused on delivering benefits and conduct regular meetings to ensure it. Benefits are the most important assets of a program and you constantly work to realize them. Early in your program, you have prepared a benefits management plan in order to guide benefits delivery, their monitoring and controlling throughout the course of the program. Which option represents a use for Benefits Management Plan (BMP)?
+- **6_6_2024 11_48_11 AM · Câu 113** (id 42491113) → `governance-2` Governance · Select a governance framework · low
+  - Lý do: Vai trò: sponsor bổ nhiệm program manager
+  - Câu hỏi: Not all work on a program is done during the program; some of the work is performed prior to the program when grouping the initiatives into portfolios and sometimes preparing the business cases for the programs. However, the assignment of a program manager usually marks the official debut of a program. When in program pre-setup phase, how is the program manager chosen?
+- **6_6_2024 11_48_11 AM · Câu 124** (id 42491124) → `governance-2` Governance · Select a governance framework · low
+  - Lý do: Vai trò sponsor cung cấp nguồn lực cho program
+  - Câu hỏi: Each program uses a variety of resources from different technical and management backgrounds. Resources are added and removed based on the program and its constituent components needs. Who is considered responsible for providing the needed resources to a program?
+- **6_6_2024 11_48_11 AM · Câu 130** (id 42491130) → `lifecycle-20` Program Life Cycle Management · Review project managers' performance · low
+  - Lý do: Sau PMP: đảm bảo component manager hợp tác
+  - Câu hỏi: In definition phase, Business case, roadmap and charter are approved as part of the formulation sub-phase; and the program management plan (PMP) is approved as part of planning phase. Considering that your PMP has just been approved, what will you, as a program manager, need to do?
+- **6_6_2024 11_48_11 AM · Câu 132** (id 42491132) → `governance-2` Governance · Select a governance framework · low
+  - Lý do: Vai trò sponsor: bổ nhiệm program manager trước tiên
+  - Câu hỏi: Consider you are the sponsor for a new program; this program has been sitting on the shelf for too long and the portfolio management decided during their last meeting that this program needs to be initiated. Today, you received the initiation decision. What should be your first act?
+- **6_6_2024 11_48_11 AM · Câu 135** (id 42491135) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Định nghĩa: nỗ lực nào đủ điều kiện là program
+  - Câu hỏi: Your CEO is a learning enthusiast and has recently completed his PgMP certification. He decided to switch the company from a silo-based company to a program-based company. You are in a committee meeting and are currently selecting which endeavors to be undertaken as programs. Which of the following validates to be undertaken as a program?
+- **6_6_2024 11_48_11 AM · Câu 144** (id 42491144) → `lifecycle-15` Program Life Cycle Management · Monitor human resources and team motivation · low
+  - Lý do: Vai trò PM trong quản trị hợp đồng
+  - Câu hỏi: You have a large program with multiple components in it. Most of the work is outsourced to contractors. Which of the below represents the role of program manager in contract administration?
+- **6_6_2024 11_48_11 AM · Câu 145** (id 42491145) → `strategy-1` Strategic Program Alignment · Perform an initial program assessment · low
+  - Lý do: Định nghĩa vai trò: portfolio manager chịu trách nhiệm mục tiêu chiến lược
+  - Câu hỏi: Due to high complexity and uncertainty levels in a program, multiple risks occur and changes are constantly being implemented and integrated. The program aims to achieve its strategic goals and objectives and should remain aligned with the organization/corporate strategic goals and objectives. Who is the individual or entity responsible for achieving the organization/corporate strategic objectives?
+- **6_6_2024 11_48_11 AM · Câu 147** (id 42491147) → `stakeholder-5` Stakeholder Engagement · Define and maintain stakeholder communications · low
+  - Lý do: Câu chung: mục đích engagement là truyền đạt benefits
+  - Câu hỏi: Throughout the program lifecycle, and knowing that stakeholder engagement is critical to program success, the program manager works constantly to engage stakeholders and gain their support. You are the program manager for a multi-tier program ranging across multiple stakeholder channels and a wide range of stakeholders’ groups. Why is it important for program manager to perform stakeholder engagement?
+- **6_6_2024 11_48_11 AM · Câu 151** (id 42491151) → `strategy-7` Strategic Program Alignment · Estimate financial framework and nonfinancial benefits · low
+  - Lý do: Financial management quản lý chi phí vận hành
+  - Câu hỏi: During your program to design a new metro station for your city aimed to reduce traffic and travel time for the residents, you have been monitoring the financial environment due to the step-funding given by your government and trying to cope with it by planning for the necessary phase during each period. As part of the Financial Management, you manage?
+- **6_6_2024 11_48_11 AM · Câu 152** (id 42491152) → `strategy-10` Strategic Program Alignment · Identify integration opportunities with operations · low
+  - Lý do: Tập trung khả năng tổ chức hấp thụ thay đổi
+  - Câu hỏi: Your stakeholders on your program to deliver the next-generation remote control car are interested in knowing the progress of a program in delivering its benefits. You have successfully maintained a benefit register. Each of your benefits is assigned a program team member to follow up on its progress and each benefit has a recorded probability level. A program manager should focus on
+- **6_6_2024 11_48_11 AM · Câu 154** (id 42491154) → `benefits-1` Benefits Management · Develop the benefits realization plan · low
+  - Lý do: Benefits management thiết lập kiến trúc program
+  - Câu hỏi: On your program to design the metro station to reduce travel time between two ends of a city, you are currently preparing the program management plan in order to get steering committee approval and initiate the delivery phase. You are now preparing the program architecture. As a program manager, you realize that the ___________ establishes the program architecture
+- **6_6_2024 11_48_11 AM · Câu 156** (id 42491156) → `lifecycle-16` Program Life Cycle Management · Charter and initiate constituent components · low
+  - Lý do: Chọn project manager, xung đột lợi ích: ghi nhận, báo sponsor
+  - Câu hỏi: You are in the process of selecting project managers to manage the components in your program. One of the steering committee members asks you to hire his nephew. This being a conflict of interest, what should be your best course of action?
+- **6_6_2024 11_48_11 AM · Câu 157** (id 42491157) → `stakeholder-5` Stakeholder Engagement · Define and maintain stakeholder communications · low
+  - Lý do: Câu kiến thức: các kênh truyền thông trong program
+  - Câu hỏi: Throughout the program lifecycle, and knowing that stakeholder engagement is critical to program success, the program manager works constantly to engage stakeholders and gain their support. You are the program manager for a multi-tier program ranging across multiple stakeholder channels and a wide range of stakeholders’ groups. Which of the following represents a communication channel in a program?
+- **6_6_2024 11_48_11 AM · Câu 162** (id 42491162) → `governance-7` Governance · Establish escalation policies and procedures · low
+  - Lý do: Thu hẹp ngưỡng kiểm soát làm chậm thực thi
+  - Câu hỏi: You were outsourced by your company to manage a government program to bring electricity to all cities, towns and villages on a 24/7 basis. Working with the governance, you have designed a steering committee with high-level country officials and other countries’ partnerships. During the course of the program, you have been approving change requests within your authority level and recommending others to steering committee. You have encountered several planned risks and you have been continuously keeping a close eye on the KPIs and the thresholds in order to implement any preventive action needed. What is the impact of narrowing the program control thresholds?
+- **6_6_2024 11_48_11 AM · Câu 165** (id 42491165) → `strategy-8` Strategic Program Alignment · Evaluate regulatory, legal, social and ethical constraints · low
+  - Lý do: Đạo đức nghề nghiệp: từ chối khi thiếu kinh nghiệm
+  - Câu hỏi: You have been asked by the program sponsor to manage a program. After knowing the program objectives and needed work to be done, you realized that you do not have the appropriate experience to manage this program. What should you do in this case?
+
+## 30 random others
+
+- **6_6_2024 11_09_22 AM · Câu 3** (id 40162003) → `governance-9` Governance · Apply lessons learned to programs and organization · high
+  - Lý do: Xác định và áp dụng lessons learned cho program và tương lai
+  - Câu hỏi: You have recently been appointed as program manager, and during the definition phase of your program, you need to produce the detailed program management plan that will be needed to efficiently provide strategic benefits to your organization. Your governance board also expects that your program will enhance the performing organization's lessons learned. According to you, what is the MOST efficient mean to maximize this enhancement?
+- **6_6_2024 11_09_22 AM · Câu 50** (id 40162050) → `lifecycle-28` Program Life Cycle Management · Manage changes per the change management plan · high
+  - Lý do: Kiểm soát thay đổi phạm vi: ghi nhận, đánh giá, thông báo
+  - Câu hỏi: Program scope monitoring and controlling activity should:
+- **6_6_2024 11_11_06 AM · Câu 58** (id 40266058) → `lifecycle-30` Program Life Cycle Management · Manage risk per the risk management plan · medium
+  - Lý do: Ghi kết quả phân tích rủi ro vào risk register
+  - Câu hỏi: You are a program manager of a new program. You and the program team are identifying and analyzing the program risks, then assigning appropriate responses to these risks. In which one of the following should you document the above results?
+- **6_6_2024 11_12_21 AM · Câu 11** (id 40341011) → `stakeholder-3` Stakeholder Engagement · Negotiate stakeholder support and expectations · medium
+  - Lý do: Cân bằng nhu cầu stakeholder bằng trade-off
+  - Câu hỏi: You are a program manager for the development of new technology. Now you are evaluating the conflicting stakeholder demands associated with the program objectives, you notice that the team members have a high interest in schedule and cost, but they have a low interest in quality and benefits. The client organization has a high interest in benefits. Within the above context, what should you do?
+- **6_6_2024 11_12_21 AM · Câu 15** (id 40341015) → `strategy-5` Strategic Program Alignment · Evaluate the program business case · high
+  - Lý do: Business case gồm phân tích chi phí/lợi ích
+  - Câu hỏi: A multinational company wants to centralize its system by transitioning 20 branches around the world. The scope of this program includes 3 important points: 1- Technology.; 2- HR system.; 3- Policies and procedures. You already selected your main team and now preparing the business case. Which of the following should be included in the business case?
+- **6_6_2024 11_16_20 AM · Câu 21** (id 40580021) → `stakeholder-1` Stakeholder Engagement · Identify stakeholders and create the stakeholder matrix · high
+  - Lý do: Công dụng của stakeholder register
+  - Câu hỏi: The stakeholder register is likely to be used by a program manager for which of the following?Each correct answer represents a complete solution. Choose all that apply.
+- **6_6_2024 11_16_20 AM · Câu 62** (id 40580062) → `lifecycle-9` Program Life Cycle Management · Establish the program management plan and schedule · medium
+  - Lý do: Lập kế hoạch procurement như kế hoạch hỗ trợ của program
+  - Câu hỏi: As part of the program procurement management planning activity, which of the following will help in determining the best fit of solutions and services to meet the specific needs of the program?Each correct answer represents a complete solution. Choose all that apply.
+- **6_6_2024 11_16_20 AM · Câu 118** (id 40580118) → `stakeholder-1` Stakeholder Engagement · Identify stakeholders and create the stakeholder matrix · medium
+  - Lý do: Phân loại stakeholder nội bộ
+  - Câu hỏi: Which of the following are considered as internal stakeholders?Each correct answer represents a complete solution. Choose all that apply.
+- **6_6_2024 11_16_20 AM · Câu 127** (id 40580127) → `stakeholder-7` Stakeholder Engagement · Develop relationships with stakeholders · medium
+  - Lý do: Rà soát định kỳ metric tương tác stakeholder
+  - Câu hỏi: Alice is a program manager of his organization. He has just created the stakeholder engagement plan including the stakeholder metrics for measuring the performance of stakeholder engagement activities. When should Alice review the stakeholder engagement metrics?
+- **6_6_2024 11_19_40 AM · Câu 127** (id 40780127) → `stakeholder-1` Stakeholder Engagement · Identify stakeholders and create the stakeholder matrix · medium
+  - Lý do: Domain nhận diện stakeholder
+  - Câu hỏi: Which of the following domains helps in identifying an individual, group, or organization that are internal or external to the program and has a positive or negative impact on the program outcome or result?
+- **6_6_2024 11_30_39 AM · Câu 107** (id 41439107) → `lifecycle-8` Program Life Cycle Management · Develop the program WBS · high
+  - Lý do: Program WBS phải bao gồm cả other work
+  - Câu hỏi: Should the non-project work ("other work") be included in the Program WBS (P-WBS)?
+- **6_6_2024 11_30_39 AM · Câu 153** (id 41439153) → `lifecycle-16` Program Life Cycle Management · Charter and initiate constituent components · high
+  - Lý do: Khởi tạo component mới trong giai đoạn delivery
+  - Câu hỏi: A program is in the "Program Delivery" phase of the program life-cycle. At this time, how should any new components be initiated?
+- **6_6_2024 11_36_16 AM · Câu 38** (id 41776038) → `lifecycle-27` Program Life Cycle Management · Manage program-level issues · medium
+  - Lý do: Xung đột tài nguyên dùng chung giữa các project
+  - Câu hỏi: A large construction program comprises of a number of residential and commercial projects in an integrated township. An architect who was part of the team that designed the original blue-print is a key resource who is in great demand. Several projects are starting at the same time and require his services urgently. You can sense that this is causing conflict among projects and project managers are complaining that this is delaying their projects. What is your best approach to solving this conflict?
+- **6_6_2024 11_36_16 AM · Câu 45** (id 41776045) → `lifecycle-15` Program Life Cycle Management · Monitor human resources and team motivation · medium
+  - Lý do: Chính sách khen thưởng riêng cho program
+  - Câu hỏi: During planning of the program, the program manager was thinking about rewards and recognition. The program has a large team, spread across many geographies. How should the program manager view the rewards and recognition system?
+- **6_6_2024 11_36_16 AM · Câu 67** (id 41776067) → `lifecycle-15` Program Life Cycle Management · Monitor human resources and team motivation · medium
+  - Lý do: Hoán đổi lead theo nguyện vọng để giữ chân nhân sự
+  - Câu hỏi: Project A and Project B both had included a risk in their risk register about the likelihood of their key technical lead leaving the organization. The lead working on Project A would like to work on cutting edge technologies and is unhappy that the work in Project A requires steadiness rather than innovation is not in his area of interest. The lead on Project B would like more stability and not comfortable with the constant switching of technical environment as B is a research project. What should the program manager do?
+- **6_6_2024 11_36_16 AM · Câu 81** (id 41776081) → `lifecycle-9` Program Life Cycle Management · Establish the program management plan and schedule · medium
+  - Lý do: Xác định contingency reserve cấp program
+  - Câu hỏi: A program consists of 5 projects. Each project has submitted budget requests including the contingency reserves. How should the program manager determine the contingency reserves required for the overall program?
+- **6_6_2024 11_36_16 AM · Câu 82** (id 41776082) → `governance-10` Governance · Monitor the business environment for alignment · high
+  - Lý do: Duy trì alignment chiến lược khi portfolio biến động
+  - Câu hỏi: The biggest challenge for a program manager in an organization where the portfolio is in a state of flux is:
+- **6_6_2024 11_36_16 AM · Câu 149** (id 41776149) → `lifecycle-17` Program Life Cycle Management · Deploy governance framework and uniform standards · high
+  - Lý do: Đồng bộ hệ thống time reporting chung toàn program
+  - Câu hỏi: Project A was merged with a running program based on the recommendations of the program steering committee. Project A has a different time reporting system than the rest of the program. Time sheet reports form an important part of cost management for the overall program. What is the best course of action for the program manager?
+- **6_6_2024 11_37_20 AM · Câu 121** (id 41840121) → `lifecycle-29` Program Life Cycle Management · Assess impact of program changes · high
+  - Lý do: Đánh giá tác động thay đổi và cập nhật tài liệu
+  - Câu hỏi: Programs are complex in nature and undergo a lot of changes through their lifecycles. The changes may require modifications at the level of the program and program documents; bigger changes may affect the organization’s strategic objectives of the organization. Your program to launch the new ice cream flavors is having a lot of unexpected changes and stakeholders are not happy about this. What is your best course of action?
+- **6_6_2024 11_38_25 AM · Câu 89** (id 41905089) → `lifecycle-1` Program Life Cycle Management · Develop the program charter · medium
+  - Lý do: Program charter liệt kê outcome
+  - Câu hỏi: Portfolio managers have the role of choosing which programs to undergo based on a well-defined feasibility study and value delivery, in addition to organizational needs and legal requirements. A program has been selected and is now in delivery phase. Program manager is reviewing specific components outcomes of which a new HR management system and a new administration process are to be in place. Which of the following documents has the purpose of listing this type of outcomes?
+- **6_6_2024 11_38_25 AM · Câu 139** (id 41905139) → `governance-7` Governance · Establish escalation policies and procedures · medium
+  - Lý do: Program governance plan định nghĩa kỳ vọng leo thang issue
+  - Câu hỏi: Throughout the program lifecycle, and knowing that stakeholder engagement is critical to program success, the program manager works constantly to engage stakeholders and gain their support. You are the program manager for a multi-tier program ranging across multiple stakeholder channels and a wide range of stakeholders’ groups. Stakeholders are engaged throughout the course of a program when found needed. Which plan defines expectations for issue escalation including when to engage stakeholder?
+- **6_6_2024 11_41_17 AM · Câu 72** (id 42077072) → `lifecycle-32` Program Life Cycle Management · Conduct program closure under governance · medium
+  - Lý do: Certificate of program completion xác nhận program kết thúc.
+  - Câu hỏi: You are the program manager for your organization. You are planning a new program that will construct a new warehouse facility for your company. As you look forward to the conclusion of the program you need an official document that will signify the program has ended. What document should you specify in your program management plan for the conclusion of the program?
+- **6_6_2024 11_42_49 AM · Câu 39** (id 42169039) → `stakeholder-5` Stakeholder Engagement · Define and maintain stakeholder communications · medium
+  - Lý do: Quản lý giao tiếp với stakeholder trong engagement
+  - Câu hỏi: As a program manager, you consider the interests and concerns of all your stakeholders for program success. You manage communications to ensure that your stakeholders are informed about what is happening on your program and so that you can resolve any issues of importance to them and understand their feedback. This is done as part of your responsibilities in ____________
+- **6_6_2024 11_44_24 AM · Câu 14** (id 42264014) → `stakeholder-5` Stakeholder Engagement · Define and maintain stakeholder communications · medium
+  - Lý do: Stakeholder register dùng để phân phối truyền thông
+  - Câu hỏi: You are the program manager for a new accounting system that will affect more than 500 accounting professionals in 10 locations. You have a core team of five people, and your preliminary schedule shows that in month 13, the transition of your system to the users will begin. This aggressive schedule recently was made even more difficult as every program in your company will have a five percent budget cut; this means it will be even harder for you to get the key subject matter experts you need when you need them. You have set up a stakeholder register and are using it to _______________
+- **6_6_2024 11_44_24 AM · Câu 41** (id 42264041) → `stakeholder-2` Stakeholder Engagement · Analyze stakeholders and plan engagement · medium
+  - Lý do: Stakeholder map thể hiện benefits và đóng góp kỳ vọng
+  - Câu hỏi: One approach useful in stakeholder engagement is to think of it as a ‘two-way’ street, and it can be displayed in a stakeholder map. While the map has many purposes, it is especially useful to _______________
+- **6_6_2024 11_44_24 AM · Câu 118** (id 42264118) → `lifecycle-12` Program Life Cycle Management · Manage unresolved project-level issues · medium
+  - Lý do: Nhà cung cấp project phá sản, theo quy trình leo thang
+  - Câu hỏi: You are the program manager for a program that is using multiple suppliers. Even though you have signed partnering agreements with each supplier, you know performance problems will surface, especially with this program because more than 75 percent of the work is being done by third-party suppliers. Also, your company has not worked with five of these suppliers in the past, and two are start-up companies. Today, one of the suppliers responsible for Project D informed you that it did not have sufficient financial capacity and resources to continue on the program and was going to declare Chapter 11 and file then for bankruptcy. Obviously, this change involves other projects on your program and the entire program’s ability to deliver its benefits on time. You have decided that the best course of action is to first ______________
+- **6_6_2024 11_45_11 AM · Câu 118** (id 42311118) → `lifecycle-21` Program Life Cycle Management · Execute program management plans · medium
+  - Lý do: Khái niệm quality assurance trong thực thi quality plan
+  - Câu hỏi: What is NOT true about Quality assurance?
+- **6_6_2024 11_46_01 AM · Câu 138** (id 42361138) → `lifecycle-32` Program Life Cycle Management · Conduct program closure under governance · medium
+  - Lý do: Lập luận đóng program khi điều kiện đóng thỏa
+  - Câu hỏi: You are the program manager of program X. Your program has been running for two years. All benefits have been realized except one, but you believe that the conditions are met to close the program. You prepare a presentation to the next board meeting in order to obtain their agreement. What is the BEST convincing argument you should use?
+- **6_6_2024 11_46_01 AM · Câu 161** (id 42361161) → `stakeholder-1` Stakeholder Engagement · Identify stakeholders and create the stakeholder matrix · high
+  - Lý do: Xác định stakeholder và lập ma trận vị trí của họ.
+  - Câu hỏi: You are contributing to the initiation of a program you expect to manage. This program consists of renewing the nationwide telecommunication backhaul network of your organization. The organization has several affiliates around the country and their expenditure costs have to be cut as a result of this program. As you introduce the stakeholder register to the governance board, several board members express concerns and at this stage, you fail to pass the review to authorize the program. What is the NEXT action you should take?
+- **6_6_2024 11_48_11 AM · Câu 39** (id 42491039) → `lifecycle-34` Program Life Cycle Management · Conduct post-review meetings · high
+  - Lý do: Post-review meeting thu phản hồi và lessons learned
+  - Câu hỏi: You have successfully reached to the closure phase of your program to deliver a drug that will cure cancer instantly around the world. You have also transitioned the program to operational entities in the company and are currently conducting the review meeting. Which of the below is an output of post review meetings?
