@@ -20,7 +20,7 @@ const tabs: { value: ResultTab; label: string }[] = [
 ];
 
 /** Read-only Result: all Questions arrive once, the tab and position switch on the client (`?f=`, `?q=` follow via replaceState). */
-export function ResultScreen(props: { title: string; score: number; timed: boolean; durationSec: number; questions: Question[]; initialPos: number; initialTab: ResultTab }) {
+export function ResultScreen(props: { title: string; drill: boolean; score: number; timed: boolean; durationSec: number; questions: Question[]; initialPos: number; initialTab: ResultTab }) {
   const { questions: qs } = props;
   const total = qs.length;
   const [pos, go] = usePosition(props.initialPos);
@@ -68,7 +68,7 @@ export function ResultScreen(props: { title: string; score: number; timed: boole
   return (
     <QuestionLayout
       title={props.title}
-      meta={props.timed ? `Thi thử · ${formatDuration(props.durationSec)} / ${TIME_LIMIT_MIN} phút` : `Luyện tập · ${formatDuration(props.durationSec)}`}
+      meta={props.timed ? `Thi thử · ${formatDuration(props.durationSec)} / ${TIME_LIMIT_MIN} phút` : `${props.drill ? "Ôn" : "Luyện tập"} · ${formatDuration(props.durationSec)}`}
       figure={`Điểm: ${props.score}/${total} (${pct}%)`}
       stats={
         <Stats

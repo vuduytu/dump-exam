@@ -19,6 +19,7 @@ test("Drill: start Ôn 10 on a Task, answer, submit, see the Score and the Drill
   await page.getByRole("dialog").getByRole("button", { name: "Nộp bài" }).click();
   await expect(page.getByText(/^Điểm: [01]\/10/).filter({ visible: true })).toBeVisible();
   await expect(page.getByRole("tab", { name: /^Tất cả 10$/ })).toBeVisible();
+  await expect(page.getByText(/^Ôn · /).filter({ visible: true })).toBeVisible();
 
   await page.getByRole("link", { name: "Lịch sử" }).click();
   await expect(page.getByRole("link", { name: /Ôn: People · Manage conflicts.*\/10/ })).toBeVisible();

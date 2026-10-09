@@ -134,7 +134,7 @@ async function openAttemptId(conn: Pick<typeof db, "select">, userId: number, ex
 }
 
 /**
- * Deletes the User's unsubmitted Attempt with its answers (Abandoned Attempt). Answers first: FKs do not cascade.
+ * Deletes the User's unsubmitted Attempt with its answers and Drill Questions (Abandoned Attempt). Children first: FKs do not cascade.
  * An expired Timed Attempt is refused: it belongs in history, not in the bin.
  */
 export async function abandonAttempt(userId: number, attemptId: number, now = new Date()) {

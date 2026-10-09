@@ -26,7 +26,7 @@ const cellStyle: Record<AttemptCell, [string, string]> = {
  * succeeds. Expired/submitted Attempts: the action redirects to the Result. Fresh `questions` from the server (a refresh
  * after Back) replace the local ones, except fields with a save still in flight.
  */
-export function AttemptScreen(props: { attemptId: number; title: string; questions: Question[]; initialPos: number; msLeft: number | null }) {
+export function AttemptScreen(props: { attemptId: number; title: string; drill: boolean; questions: Question[]; initialPos: number; msLeft: number | null }) {
   const { attemptId } = props;
   const [pos, go] = usePosition(props.initialPos);
   const [qs, setQs] = useState(props.questions);
@@ -118,7 +118,7 @@ export function AttemptScreen(props: { attemptId: number; title: string; questio
   return (
     <QuestionLayout
       title={props.title}
-      meta={props.msLeft !== null ? "Thi thử · 230 phút" : "Luyện tập"}
+      meta={props.msLeft !== null ? "Thi thử · 230 phút" : props.drill ? "Ôn" : "Luyện tập"}
       figure={`Đã làm: ${answered}/${total} (${Math.round((answered / total) * 100)}%)`}
       stats={
         <Stats

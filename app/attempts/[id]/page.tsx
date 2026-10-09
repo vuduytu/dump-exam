@@ -36,6 +36,7 @@ export default async function AttemptPage({ params, searchParams }: { params: Pr
     return (
       <ResultScreen
         title={result.title}
+        drill={result.examId === null}
         score={score ?? 0}
         timed={result.timed}
         durationSec={Math.round(((result.submittedAt?.getTime() ?? 0) - result.startedAt.getTime()) / 1000)}
@@ -55,6 +56,7 @@ export default async function AttemptPage({ params, searchParams }: { params: Pr
       <AttemptScreen
         attemptId={attempt.id}
         title={attempt.title}
+        drill={attempt.examId === null}
         questions={attempt.questions} // getAttempt never includes the Correct Answer
         initialPos={pos}
         msLeft={attempt.deadline && attempt.deadline.getTime() - Date.now()}

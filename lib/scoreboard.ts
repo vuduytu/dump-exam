@@ -4,7 +4,7 @@ import { attemptAnswers, attempts, examQuestions, exams, users } from "@/db/sche
 import { AttemptNotFound, finalizeExpired } from "@/lib/attempts";
 import { requireAdmin } from "@/lib/users";
 
-type Cell = { userId: number; examId: number | null; latestAttemptId: number | null; latestScore: number | null; submitted: number; openAnswered: number | null };
+type Cell = { userId: number; examId: number; latestAttemptId: number | null; latestScore: number | null; submitted: number; openAnswered: number | null };
 
 /**
  * Admin-only Scoreboard: every User × every Exam. A cell exists once the User has a submitted or open Attempt of the
@@ -32,7 +32,7 @@ export async function getScoreboard(actingId: number, now = new Date()) {
   const cells = new Map<string, Cell>();
   for (const a of attemptRows) {
     const key = `${a.userId}:${a.examId}`;
-    const c = cells.get(key) ?? { userId: a.userId, examId: a.examId, latestAttemptId: null, latestScore: null, submitted: 0, openAnswered: null };
+    const c = cells.get(key) ?? { userId: a.userId, examId: a.examId!, latestAttemptId: null, latestScore: null, submitted: 0, openAnswered: null };
     if (a.submittedAt) {
       if (c.latestAttemptId === null) Object.assign(c, { latestAttemptId: a.id, latestScore: a.score ?? 0 });
       c.submitted++;

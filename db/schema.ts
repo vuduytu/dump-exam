@@ -47,7 +47,8 @@ export const examQuestions = mysqlTable(
 export const attempts = mysqlTable("attempts", {
   id: int("id").autoincrement().primaryKey(),
   userId: int("user_id").notNull().references(() => users.id),
-  // An Attempt belongs to either an Exam or a Drill: examId is null exactly when drillSource is set
+  // An Attempt belongs to either an Exam or a Drill: examId is null exactly when drillSource is set.
+  // ponytail: kept by startAttempt/startDrill only (MySQL 5.7 ignores CHECK); add a CHECK once 5.7 is gone
   examId: int("exam_id").references(() => exams.id),
   drillSource: varchar("drill_source", { length: 32 }), // Domain name or Task code, see lib/question-tags.ts
   timed: boolean("timed").notNull().default(false), // Timed Attempt: deadline = startedAt + TIME_LIMIT_MS (lib/attempts.ts)

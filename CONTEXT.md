@@ -44,7 +44,7 @@ Một bộ cố định 180 Question, tạo một lần và không đổi. Các 
 _Avoid_: test, quiz, bộ đề (khi chỉ một đề)
 
 **Drill** (Ôn theo chủ đề):
-Một bộ 10 hoặc 20 Question rút ra lúc bắt đầu từ một Domain hoặc một Task, ưu tiên câu User chưa làm rồi câu làm sai gần nhất. Không cố định như Exam. Được làm như một Attempt không bấm giờ, có Score và Result.
+Một bộ 10 hoặc 20 Question rút ra lúc bắt đầu từ một Domain hoặc một Task, ưu tiên câu User chưa làm rồi câu làm sai gần nhất. Không cố định như Exam. Được làm như một Attempt không bấm giờ, có Score và Result. Domain hoặc Task đó gọi là nguồn (source) của Drill; mỗi nguồn có tối đa một Drill đang làm dở.
 _Avoid_: bài tập, luyện tập, Exam (cho bộ này)
 
 ## Làm bài
