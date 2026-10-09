@@ -1,6 +1,6 @@
 import { eq, sql } from "drizzle-orm";
 import { db } from "@/db";
-import { questions, users } from "@/db/schema";
+import { examQuestions, exams, questions, users } from "@/db/schema";
 import { hashPassword } from "@/lib/auth";
 
 /** One entry of data/questions.json, as written by scripts/parse_html.py. */
@@ -34,5 +34,41 @@ export async function seedAdmin() {
   const [existing] = await db.select({ id: users.id }).from(users).where(eq(users.email, ADMIN_EMAIL));
   if (existing) return false;
   await db.insert(users).values({ email: ADMIN_EMAIL, passwordHash: await hashPassword(password), isAdmin: true });
+  return true;
+}
+
+const EXAM_SIZE = 180;
+const SHUFFLE_SEED = 20240601; // fixed: the Exams must never change
+
+function mulberry32(seed: number) {
+  return () => {
+    seed = (seed + 0x6d2b79f5) | 0;
+    let t = Math.imul(seed ^ (seed >>> 15), 1 | seed);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+
+/** Creates the fixed Exams once: usable Questions shuffled by a seeded PRNG, cut into groups of 180.
+ *  A short last group is topped up with the first Questions of the shuffle. Returns false if Exams exist. */
+export async function generateExams() {
+  const [existing] = await db.select({ id: exams.id }).from(exams).limit(1);
+  if (existing) return false;
+  const ids = (await db.select({ id: questions.id }).from(questions).where(eq(questions.usable, true)).orderBy(questions.id)).map((q) => q.id);
+  const random = mulberry32(SHUFFLE_SEED);
+  for (let i = ids.length - 1; i > 0; i--) {
+    const j = Math.floor(random() * (i + 1));
+    [ids[i], ids[j]] = [ids[j], ids[i]];
+  }
+  const groups: number[][] = [];
+  for (let i = 0; i < ids.length; i += EXAM_SIZE) groups.push(ids.slice(i, i + EXAM_SIZE));
+  const last = groups[groups.length - 1];
+  if (last && last.length < EXAM_SIZE) last.push(...ids.slice(0, EXAM_SIZE - last.length)); // ids[0..] are in earlier groups, so never in `last`
+  await db.transaction(async (tx) => {
+    for (const [i, group] of groups.entries()) {
+      const [{ insertId }] = await tx.insert(exams).values({ name: `Đề ${i + 1}` });
+      await tx.insert(examQuestions).values(group.map((questionId, p) => ({ examId: insertId, position: p + 1, questionId })));
+    }
+  });
   return true;
 }

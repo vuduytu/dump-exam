@@ -1,5 +1,5 @@
 import { sql } from "drizzle-orm";
-import { boolean, int, json, mysqlTable, text, timestamp, varchar } from "drizzle-orm/mysql-core";
+import { boolean, int, json, mysqlTable, primaryKey, text, timestamp, unique, varchar } from "drizzle-orm/mysql-core";
 
 export type Choice = { letter: string; text: string };
 // One ExamTopics vote row: the voted combination of Choice letters (e.g. "AC"), not a single Choice.
@@ -26,3 +26,18 @@ export const users = mysqlTable("users", {
 });
 
 export type User = typeof users.$inferSelect;
+
+export const exams = mysqlTable("exams", {
+  id: int("id").autoincrement().primaryKey(),
+  name: varchar("name", { length: 64 }).notNull(),
+});
+
+export const examQuestions = mysqlTable(
+  "exam_questions",
+  {
+    examId: int("exam_id").notNull().references(() => exams.id),
+    position: int("position").notNull(), // 1..180, fixed
+    questionId: int("question_id").notNull().references(() => questions.id),
+  },
+  (t) => [primaryKey({ columns: [t.examId, t.position] }), unique().on(t.examId, t.questionId)],
+);
