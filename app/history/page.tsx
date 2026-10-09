@@ -14,7 +14,7 @@ export default async function History() {
     <main className="mx-auto max-w-2xl p-4">
       <h1 className="text-2xl font-semibold">Lịch sử</h1>
       <Link href="/" className="mt-2 inline-block underline">Trang chủ</Link>
-      {list.length === 0 && <p className="mt-6">Chưa có Attempt nào đã nộp.</p>}
+      {list.length === 0 && <p className="mt-6">Chưa có lượt làm nào đã nộp.</p>}
       <ul className="mt-6 divide-y rounded border">
         {list.map((a) => (
           <li key={a.id}>
