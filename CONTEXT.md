@@ -79,3 +79,7 @@ Số Question trong Attempt được trả lời đúng. Câu chọn nhiều đ�
 **Result** (Kết quả):
 Phần xem lại một Attempt đã nộp: Score và từng Question kèm lựa chọn của User, Correct Answer, Suggested Answer và tỉ lệ Vote.
 _Avoid_: review (dễ lẫn với Marked Question)
+
+**Scoreboard** (Bảng điểm):
+Bảng chỉ Admin xem, mỗi hàng là một User, mỗi cột là một Exam. Mỗi ô hiện Score của Attempt nộp gần nhất kèm số Attempt đã nộp, và nếu có Attempt đang làm dở thì hiện thêm số câu đã trả lời. Admin chỉ xem, không sửa được gì. Admin mở được Result và lịch sử Attempt đã nộp của từng User, không xem được Attempt đang làm dở. Chỉ gồm Exam, không gồm Drill.
+_Avoid_: Progress, tiến độ (dễ lẫn với tiến độ trong một Attempt)

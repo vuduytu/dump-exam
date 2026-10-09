@@ -16,6 +16,7 @@ export async function Header() {
           <Link href="/history" className={buttonVariants({ variant: "ghost" })}>Lịch sử</Link>
           <Link href="/account" className={buttonVariants({ variant: "ghost" })}>Tài khoản</Link>
           {user.isAdmin && <Link href="/admin" className={buttonVariants({ variant: "ghost" })}>Quản lý User</Link>}
+          {user.isAdmin && <Link href="/admin/scoreboard" className={buttonVariants({ variant: "ghost" })}>Bảng điểm</Link>}
         </nav>
         <form action={logoutAction} className="ml-auto flex items-center gap-2">
           <span className="max-w-[40vw] truncate text-sm text-muted-foreground">{user.email}</span>

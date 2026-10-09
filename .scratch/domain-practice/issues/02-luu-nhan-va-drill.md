@@ -12,4 +12,5 @@
 - [ ] Attempt thuộc **hoặc** một Exam **hoặc** một Drill; Drill lưu nguồn (Domain hay Task) và danh sách Question cố định theo thứ tự đã rút. Các luật hiện có (một Attempt dở mỗi Exam, Timed Attempt, chấm Score, quyền sở hữu) vẫn đúng với Exam; Drill luôn không bấm giờ.
 - [ ] `startDrill(userId, source, size, now)`: size 10 hoặc 20; rút câu chưa làm → sai lần gần nhất → ngẫu nhiên; không rút Unusable Question; thiếu câu thì lấy hết; nguồn không có câu thì báo lỗi rõ ràng.
 - [ ] Màn làm bài, màn Result và Lịch sử hiển thị đúng với Drill (tiêu đề dạng "Ôn: People · Manage conflict", tổng câu = số câu của Drill).
+- [ ] Drill không lên Scoreboard (chỉ gồm Exam); Drill hiện trong Lịch sử, kể cả khi Admin xem Lịch sử của User khác.
 - [ ] Test: thứ tự ưu tiên rút câu; không có Unusable Question; thiếu câu; User khác không đọc/ghi được Drill; Score của Drill; seeder chạy hai lần. Cập nhật e2e một luồng Drill.

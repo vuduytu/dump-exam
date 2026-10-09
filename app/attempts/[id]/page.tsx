@@ -2,6 +2,7 @@ import { cookies } from "next/headers";
 import { notFound, redirect } from "next/navigation";
 import { AttemptNotFound, AttemptNotSubmitted, getAttempt, getResult } from "@/lib/attempts";
 import { SESSION_COOKIE, userFromSession } from "@/lib/auth";
+import { attemptOwnerForAdmin } from "@/lib/scoreboard";
 import { RefreshOnReturn } from "@/components/refresh-on-return";
 import { AttemptScreen } from "./attempt-screen";
 import { ResultScreen } from "./result-screen";
@@ -13,8 +14,18 @@ export default async function AttemptPage({ params, searchParams }: { params: Pr
   if (!Number.isInteger(id)) notFound();
   const { q: qParam, f } = await searchParams;
   const filter = f === "wrong" || f === "marked" ? f : undefined;
+  // An Admin may read another User's submitted Result; another User's open Attempt stays private (404).
+  const othersResult = async () => {
+    if (!user.isAdmin) notFound();
+    try {
+      return await getResult(await attemptOwnerForAdmin(user.id, id), id);
+    } catch (err) {
+      if (err instanceof AttemptNotFound || err instanceof AttemptNotSubmitted) notFound();
+      throw err;
+    }
+  };
   const result = await getResult(user.id, id).catch((err) => {
-    if (err instanceof AttemptNotFound) notFound();
+    if (err instanceof AttemptNotFound) return othersResult();
     if (err instanceof AttemptNotSubmitted) return null;
     throw err;
   });

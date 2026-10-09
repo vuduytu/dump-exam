@@ -34,7 +34,7 @@ export class CannotLockSelf extends Error {
 }
 
 /** Every Admin function starts here: re-reads the acting User, so a demoted or locked Admin is refused at once. */
-async function requireAdmin(actingId: number) {
+export async function requireAdmin(actingId: number) {
   const [user] = await db.select({ isAdmin: users.isAdmin, locked: users.locked }).from(users).where(eq(users.id, actingId));
   if (!user?.isAdmin || user.locked) throw new NotAdmin();
 }
