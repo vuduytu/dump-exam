@@ -1,10 +1,16 @@
-import { and, asc, eq } from "drizzle-orm";
+import { and, asc, count, desc, eq, isNotNull } from "drizzle-orm";
 import { db } from "@/db";
 import { attemptAnswers, attempts, examQuestions, exams, questions } from "@/db/schema";
 
 export class AttemptNotFound extends Error {
   constructor() {
     super("Không tìm thấy Attempt"); // also for another User's Attempt: do not reveal that it exists
+  }
+}
+
+export class AttemptNotSubmitted extends Error {
+  constructor() {
+    super("Attempt chưa nộp, chưa có kết quả");
   }
 }
 
@@ -41,22 +47,36 @@ export async function startAttempt(userId: number, examId: number, now = new Dat
   return insertId;
 }
 
-/** The User's Attempt with its Questions in Exam order. Never includes the Correct Answer, only how many letters it has. */
-export async function getAttempt(userId: number, attemptId: number) {
+/** The User's Attempt with every Question of its Exam in order, Correct Answer included: callers decide what to expose. */
+async function loadAttempt(userId: number, attemptId: number) {
   const [attempt] = await db
-    .select({ id: attempts.id, examId: attempts.examId, examName: exams.name, submittedAt: attempts.submittedAt, score: attempts.score })
+    .select({ id: attempts.id, examId: attempts.examId, examName: exams.name, startedAt: attempts.startedAt, submittedAt: attempts.submittedAt, score: attempts.score })
     .from(attempts)
     .innerJoin(exams, eq(exams.id, attempts.examId))
     .where(and(eq(attempts.id, attemptId), eq(attempts.userId, userId)));
   if (!attempt) throw new AttemptNotFound();
   const rows = await db
-    .select({ id: questions.id, text: questions.text, choices: questions.choices, correct: questions.correctAnswer, selected: attemptAnswers.selected })
+    .select({
+      id: questions.id,
+      text: questions.text,
+      choices: questions.choices,
+      correct: questions.correctAnswer,
+      suggested: questions.suggestedAnswer,
+      votes: questions.votes,
+      selected: attemptAnswers.selected,
+    })
     .from(examQuestions)
     .innerJoin(questions, eq(questions.id, examQuestions.questionId))
     .leftJoin(attemptAnswers, and(eq(attemptAnswers.attemptId, attemptId), eq(attemptAnswers.questionId, questions.id)))
     .where(eq(examQuestions.examId, attempt.examId))
     .orderBy(asc(examQuestions.position));
-  const qs = rows.map(({ correct, selected, ...q }) => ({ ...q, need: correct.length, selected: selected ? selected.split("") : [] }));
+  return { attempt, rows };
+}
+
+/** The User's Attempt with its Questions in Exam order. Never includes the Correct Answer, only how many letters it has. */
+export async function getAttempt(userId: number, attemptId: number) {
+  const { attempt, rows } = await loadAttempt(userId, attemptId);
+  const qs = rows.map((r) => ({ id: r.id, text: r.text, choices: r.choices, need: r.correct.length, selected: r.selected ? r.selected.split("") : [] }));
   return { ...attempt, questions: qs };
 }
 
@@ -93,4 +113,51 @@ export async function submitAttempt(userId: number, attemptId: number) {
     await tx.update(attempts).set({ submittedAt: new Date(), score }).where(eq(attempts.id, attemptId));
     return score;
   });
+}
+
+/**
+ * Review of a submitted Attempt. A Vote is per combination of letters, so a Choice's percent is the share of all
+ * votes whose combination includes it. "marked" returns [] until Marked Questions are stored (ticket 07).
+ */
+export async function getResult(userId: number, attemptId: number, filter?: "wrong" | "marked") {
+  const { attempt, rows } = await loadAttempt(userId, attemptId);
+  if (!attempt.submittedAt) throw new AttemptNotSubmitted();
+  const qs = rows.map(({ votes, selected, ...q }) => {
+    const all = votes.reduce((n, v) => n + v.count, 0);
+    const percent = (letter: string) => (all ? Math.round((votes.filter((v) => v.letters.includes(letter)).reduce((n, v) => n + v.count, 0) / all) * 100) : 0);
+    return {
+      ...q,
+      choices: q.choices.map((c) => ({ ...c, percent: percent(c.letter) })),
+      selected: selected ? selected.split("") : [],
+      isCorrect: !!selected && sameLetters(selected, q.correct),
+    };
+  });
+  const questionsShown = filter === "wrong" ? qs.filter((q) => !q.isCorrect) : filter === "marked" ? [] : qs;
+  return { ...attempt, total: rows.length, questions: questionsShown };
+}
+
+/** The User's submitted Attempts, newest first. Abandoned/in-progress ones are not history. */
+export async function listAttempts(userId: number) {
+  const rows = await db
+    .select({
+      id: attempts.id,
+      examId: attempts.examId,
+      examName: exams.name,
+      startedAt: attempts.startedAt,
+      submittedAt: attempts.submittedAt,
+      score: attempts.score,
+      total: count(examQuestions.questionId),
+    })
+    .from(attempts)
+    .innerJoin(exams, eq(exams.id, attempts.examId))
+    .leftJoin(examQuestions, eq(examQuestions.examId, attempts.examId))
+    .where(and(eq(attempts.userId, userId), isNotNull(attempts.submittedAt)))
+    .groupBy(attempts.id)
+    .orderBy(desc(attempts.submittedAt), desc(attempts.id));
+  return rows.map((r) => ({
+    ...r,
+    submittedAt: r.submittedAt!,
+    score: r.score ?? 0,
+    durationSec: Math.round((r.submittedAt!.getTime() - r.startedAt.getTime()) / 1000),
+  }));
 }
