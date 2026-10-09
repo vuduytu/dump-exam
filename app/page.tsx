@@ -2,7 +2,7 @@ import { count, eq } from "drizzle-orm";
 import { cookies } from "next/headers";
 import { db } from "@/db";
 import { examQuestions, exams } from "@/db/schema";
-import { logoutAction } from "@/app/actions";
+import { logoutAction, startAttemptAction } from "@/app/actions";
 import { SESSION_COOKIE, userFromSession } from "@/lib/auth";
 
 export const dynamic = "force-dynamic"; // read Exams per request, not at build
@@ -27,9 +27,12 @@ export default async function Home() {
       </header>
       <ul className="mt-6 divide-y rounded border">
         {list.map((e) => (
-          <li key={e.id} className="flex justify-between p-3">
+          <li key={e.id} className="flex items-center justify-between gap-3 p-3">
             <span>{e.name}</span>
-            <span className="text-sm">{e.total} câu</span>
+            <span className="ml-auto text-sm">{e.total} câu</span>
+            <form action={startAttemptAction.bind(null, e.id)}>
+              <button className="rounded border px-3 py-1 text-sm">Làm bài</button>
+            </form>
           </li>
         ))}
       </ul>

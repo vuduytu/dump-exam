@@ -1,5 +1,5 @@
 import { sql } from "drizzle-orm";
-import { boolean, int, json, mysqlTable, primaryKey, text, timestamp, unique, varchar } from "drizzle-orm/mysql-core";
+import { boolean, datetime, int, json, mysqlTable, primaryKey, text, timestamp, unique, varchar } from "drizzle-orm/mysql-core";
 
 export type Choice = { letter: string; text: string };
 // One ExamTopics vote row: the voted combination of Choice letters (e.g. "AC"), not a single Choice.
@@ -40,4 +40,23 @@ export const examQuestions = mysqlTable(
     questionId: int("question_id").notNull().references(() => questions.id),
   },
   (t) => [primaryKey({ columns: [t.examId, t.position] }), unique().on(t.examId, t.questionId)],
+);
+
+export const attempts = mysqlTable("attempts", {
+  id: int("id").autoincrement().primaryKey(),
+  userId: int("user_id").notNull().references(() => users.id),
+  examId: int("exam_id").notNull().references(() => exams.id),
+  startedAt: timestamp("started_at").notNull().default(sql`CURRENT_TIMESTAMP`),
+  submittedAt: datetime("submitted_at"), // null while in progress; not timestamp: MySQL 5.7 makes a nullable timestamp NOT NULL
+  score: int("score"), // correct Questions, set on submit
+});
+
+export const attemptAnswers = mysqlTable(
+  "attempt_answers",
+  {
+    attemptId: int("attempt_id").notNull().references(() => attempts.id),
+    questionId: int("question_id").notNull().references(() => questions.id),
+    selected: varchar("selected", { length: 8 }).notNull(), // sorted Choice letters, "" = cleared
+  },
+  (t) => [primaryKey({ columns: [t.attemptId, t.questionId] })],
 );
