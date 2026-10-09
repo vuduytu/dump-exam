@@ -5,7 +5,7 @@ import { asc, eq } from "drizzle-orm";
 import { db } from "@/db";
 import { attempts, examQuestions, questions, users } from "@/db/schema";
 import { generateExams, seedQuestions } from "@/db/seed";
-import { abandonAttempt, AttemptExpired, AttemptInProgress, AttemptNotFound, AttemptSubmitted, findOpenAttempt, getAttempt, openAttemptSummary, listAttempts, InvalidAnswer, saveAnswer, startAttempt, submitAttempt, setMark } from "@/lib/attempts";
+import { abandonAttempt, deadlineOf, AttemptExpired, AttemptInProgress, AttemptNotFound, AttemptSubmitted, findOpenAttempt, getAttempt, openAttemptSummary, listAttempts, InvalidAnswer, saveAnswer, startAttempt, submitAttempt, setMark } from "@/lib/attempts";
 import { closeDb, resetDb } from "./db";
 
 const EXAM = 1;
@@ -205,7 +205,13 @@ test("findOpenAttempt picks the newest when old data has several in-progress Att
 });
 
 const MIN = 60_000;
-const DEADLINE_MS = 230 * MIN;
+const DEADLINE_MS = 240 * MIN;
+
+test("deadline of a Timed Attempt = start + 240 minutes; none when untimed", () => {
+  const startedAt = new Date("2026-10-09T08:00:00Z");
+  assert.equal(deadlineOf({ timed: true, startedAt })?.toISOString(), "2026-10-09T12:00:00.000Z");
+  assert.equal(deadlineOf({ timed: false, startedAt }), null);
+});
 
 test("Timed Attempt: saves before the deadline are kept, saveAnswer and setMark from the deadline on are rejected", async () => {
   const t0 = new Date(Math.floor(Date.now() / 1000) * 1000); // whole seconds: the column has no fraction
@@ -264,7 +270,7 @@ test("a Timed Attempt left past its deadline is in history, no longer open, and 
   assert.equal(await findOpenAttempt(bob, 4), null);
   const listed = (await listAttempts(bob)).find((x) => x.id === id);
   assert.equal(listed?.timed, true);
-  assert.equal(listed?.durationSec, 230 * 60);
+  assert.equal(listed?.durationSec, 240 * 60);
   assert.ok(await startAttempt(bob, 4)); // the expired one was closed before the in-progress check
 });
 

@@ -100,3 +100,19 @@ test("listAttempts returns only the User's submitted Attempts, newest first, wit
   assert.ok(others.every((x) => x.id !== a && x.id !== b));
   assert.equal((await listAttempts(999999)).length, 0);
 });
+
+test("getResult gives the score per Domain for an Exam: correct / its Questions in that Exam", async () => {
+  const [a, b, c] = ks;
+  await db.update(questions).set({ task: "people-1" }).where(eq(questions.id, a.id));
+  await db.update(questions).set({ task: "people-2" }).where(eq(questions.id, b.id));
+  await db.update(questions).set({ task: "process-3" }).where(eq(questions.id, c.id));
+  const id = await startAttempt(bob, 1);
+  await saveAnswer(bob, id, a.id, a.correct.split(""));
+  await saveAnswer(bob, id, c.id, c.correct.split(""));
+  await submitAttempt(bob, id);
+  const r = await getResult(bob, id);
+  assert.deepEqual(r.domains, [
+    { domain: "People", correct: 1, total: 2 },
+    { domain: "Process", correct: 1, total: 1 },
+  ]);
+});

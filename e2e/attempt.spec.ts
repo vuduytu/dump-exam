@@ -1,7 +1,7 @@
 import { expect, test, type Page } from "@playwright/test";
 import { login } from "./helpers";
 
-const visible = (page: Page, text: string) => page.getByText(text, { exact: true }).filter({ visible: true });
+const visible = (page: Page, text: string | RegExp) => page.getByText(text, typeof text === "string" ? { exact: true } : {}).filter({ visible: true });
 const button = (page: Page, name: string | RegExp) => page.getByRole("button", { name }).filter({ visible: true });
 
 async function startPractice(page: Page) {
@@ -105,4 +105,19 @@ test("mobile: bottom bar moves, the grid drawer jumps to a Question, submit from
   await expect(confirm).toContainText("Còn 180 câu chưa trả lời, 1 câu đánh dấu");
   await confirm.getByRole("button", { name: "Nộp bài" }).click();
   await expect(page.getByText(/^Điểm: \d+\/180/).filter({ visible: true })).toBeVisible();
+});
+
+test("Timed Attempt: 240-minute label on the Exam page, attempt screen and Result; Result of an Exam shows Domain scores", async ({ page }) => {
+  await login(page);
+  await page.getByRole("link", { name: /câu/ }).first().click();
+  await page.waitForURL(/\/exams\/\d+/);
+  await expect(page.getByRole("heading", { name: "Thi thử · 240 phút" })).toBeVisible();
+  await page.getByRole("button", { name: "Bắt đầu thi thử" }).click();
+  await page.waitForURL(/\/attempts\/\d+/);
+  await expect(visible(page, "Thi thử · 240 phút")).toBeVisible();
+  await page.waitForLoadState("networkidle");
+  await button(page, "Nộp bài").click();
+  await page.getByRole("dialog").getByRole("button", { name: "Nộp bài" }).click();
+  await expect(visible(page, /^Thi thử · .* \/ 240 phút$/)).toBeVisible();
+  await expect(page.getByText(/People \d+% · Process \d+% · Business Environment \d+%/).filter({ visible: true })).toBeVisible();
 });

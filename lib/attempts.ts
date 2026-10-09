@@ -1,7 +1,8 @@
 import { and, asc, count, desc, eq, isNotNull, isNull, sql } from "drizzle-orm";
 import { db } from "@/db";
 import { attemptAnswers, attempts, drillQuestions, examQuestions, exams, questions, users } from "@/db/schema";
-import { drillTitle } from "@/lib/question-tags";
+import { domainScores, drillTitle } from "@/lib/question-tags";
+import { TIME_LIMIT_MIN } from "@/lib/utils";
 
 export class AttemptNotFound extends Error {
   constructor() {
@@ -50,7 +51,7 @@ const itemsOf = (a: { id: number; examId: number | null }) =>
 /** "Đề 2" for an Exam, "Ôn: People · Manage conflicts" for a Drill. */
 const titleOf = (a: { examName: string | null; drillSource: string | null }) => a.examName ?? drillTitle(a.drillSource!);
 
-export const TIME_LIMIT_MS = 230 * 60_000;
+export const TIME_LIMIT_MS = TIME_LIMIT_MIN * 60_000;
 
 /** When a Timed Attempt ends, computed here only; null for an untimed Attempt, which never expires. */
 export const deadlineOf = (a: { timed: boolean; startedAt: Date }) => (a.timed ? new Date(a.startedAt.getTime() + TIME_LIMIT_MS) : null);
@@ -158,6 +159,7 @@ async function loadAttempt(userId: number, attemptId: number) {
   const rows = await db
     .select({
       id: questions.id,
+      task: questions.task,
       text: questions.text,
       choices: questions.choices,
       correct: questions.correctAnswer,
@@ -259,7 +261,8 @@ export async function getResult(userId: number, attemptId: number, filter?: "wro
     };
   });
   const questionsShown = filter === "wrong" ? qs.filter((q) => !q.isCorrect) : filter === "marked" ? qs.filter((q) => q.marked) : qs;
-  return { ...attempt, total: rows.length, questions: questionsShown };
+  const domains = attempt.examId === null ? [] : domainScores(rows.map((r, i) => ({ task: r.task, correct: qs[i].isCorrect })));
+  return { ...attempt, total: rows.length, domains, questions: questionsShown };
 }
 
 /** The User's submitted Attempts of Exams and Drills, newest first. Abandoned/in-progress ones are not history. */

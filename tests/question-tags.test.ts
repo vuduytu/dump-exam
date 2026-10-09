@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { validateTags } from "@/lib/question-tags";
+import { domainScores, validateTags } from "@/lib/question-tags";
 
 const ok = (id: number) => ({ id, task: "process-3", approach: "agile", confidence: "high" });
 
@@ -17,5 +17,13 @@ test("reports missing, duplicate, unknown ids and invalid values", () => {
     'id 2: invalid confidence "meh"',
     "duplicate id 1 (x2)",
     "missing id 3",
+  ]);
+});
+
+test("domainScores: correct / Questions per Domain, untagged Questions left out, empty Domains omitted", () => {
+  const q = (task: string | null, correct: boolean) => ({ task, correct });
+  assert.deepEqual(domainScores([q("people-1", true), q("people-2", false), q("process-3", true), q(null, true)]), [
+    { domain: "People", correct: 1, total: 2 },
+    { domain: "Process", correct: 1, total: 1 },
   ]);
 });

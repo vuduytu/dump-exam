@@ -6,7 +6,7 @@ const prefix = process.env.SHOTS;
 const sizes = { mobile: { width: 390, height: 844 }, desktop: { width: 1280, height: 800 } };
 
 test.describe("screenshots", () => {
-  test.skip(!prefix || prefix === "03" || prefix === "04" || prefix === "dp03", "set SHOTS=<ticket number>");
+  test.skip(!prefix || prefix === "03" || prefix === "04" || prefix === "dp03" || prefix === "dp04", "set SHOTS=<ticket number>");
   test.describe.configure({ mode: "serial" });
   for (const [name, viewport] of Object.entries(sizes)) {
     test(name, async ({ browser }) => {
@@ -157,6 +157,29 @@ test.describe("screenshots dp03", () => {
       await page.getByRole("link", { name: "Làm tiếp" }).first().waitFor();
       await page.screenshot({ path: `.scratch/domain-practice/screenshots/03-${run.name}.png`, fullPage: true });
       expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
+      await page.context().close();
+    });
+  }
+});
+
+// SHOTS=dp04: Result of a Timed Attempt with the Domain scores -> .scratch/domain-practice/screenshots/04-<size>.png
+test.describe("screenshots dp04", () => {
+  test.skip(prefix !== "dp04", "set SHOTS=dp04");
+  test.describe.configure({ mode: "serial" });
+  for (const [name, viewport] of Object.entries(sizes)) {
+    test(name, async ({ browser }) => {
+      const page = await (await browser.newContext({ viewport })).newPage();
+      await login(page);
+      await page.getByRole("link", { name: /câu/ }).first().click();
+      await page.waitForURL(/\/exams\/\d+/);
+      await page.getByRole("button", { name: "Bắt đầu thi thử" }).click();
+      await page.waitForURL(/\/attempts\/\d+/);
+      await page.waitForLoadState("networkidle");
+      if (name === "mobile") await page.getByRole("button", { name: "Lưới câu" }).click(); // Submit lives in the drawer
+      await page.getByRole("button", { name: "Nộp bài" }).filter({ visible: true }).click();
+      await page.getByRole("dialog").getByRole("button", { name: "Nộp bài" }).last().click();
+      await page.getByText(/People \d+%/).filter({ visible: true }).waitFor();
+      await page.screenshot({ path: `.scratch/domain-practice/screenshots/04-${name}.png` });
       await page.context().close();
     });
   }

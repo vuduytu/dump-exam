@@ -26,6 +26,20 @@ export function tasksOfSource(source: string) {
   return taxonomy.tasks.filter((t) => t.domain === source || t.code === source).map((t) => t.code);
 }
 
+/** Per Domain (in taxonomy order): correct / number of its Questions. Questions without a Task belong to no Domain and are left out. */
+export function domainScores(items: { task: string | null; correct: boolean }[]) {
+  const domainOf = new Map(taxonomy.tasks.map((t) => [t.code, t.domain]));
+  const byDomain = new Map<string, { correct: number; total: number }>();
+  for (const d of new Set(domainOf.values())) byDomain.set(d, { correct: 0, total: 0 });
+  for (const i of items) {
+    const s = byDomain.get(domainOf.get(i.task ?? "") ?? "");
+    if (!s) continue;
+    s.total++;
+    if (i.correct) s.correct++;
+  }
+  return [...byDomain].filter(([, s]) => s.total).map(([domain, s]) => ({ domain, ...s }));
+}
+
 /** "Ôn: People" for a Domain, "Ôn: People · Manage conflicts" for a Task. */
 export function drillTitle(source: string) {
   const task = taxonomy.tasks.find((t) => t.code === source);

@@ -5,6 +5,7 @@ import { Clock } from "lucide-react";
 import { saveAnswerAction, setMarkAction } from "@/app/actions";
 import { Progress } from "@/components/ui/progress";
 import type { Choice } from "@/db/schema";
+import { TIME_LIMIT_MIN } from "@/lib/utils";
 import { Choices } from "./choices";
 import { Countdown, MarkButton, SubmitForm } from "./controls";
 import { attemptCell, toggleChoice, type AttemptCell, type Command } from "./logic";
@@ -118,7 +119,7 @@ export function AttemptScreen(props: { attemptId: number; title: string; drill: 
   return (
     <QuestionLayout
       title={props.title}
-      meta={props.msLeft !== null ? "Thi thử · 230 phút" : props.drill ? "Ôn" : "Luyện tập"}
+      meta={props.msLeft !== null ? `Thi thử · ${TIME_LIMIT_MIN} phút` : props.drill ? "Ôn" : "Luyện tập"}
       figure={`Đã làm: ${answered}/${total} (${Math.round((answered / total) * 100)}%)`}
       stats={
         <Stats

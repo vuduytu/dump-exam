@@ -37,6 +37,7 @@ export function QuestionLayout(props: {
   meta?: React.ReactNode; // line 1, right-aligned
   figure: React.ReactNode; // line 2
   stats: React.ReactNode; // line 3, see Stats
+  domains?: string; // line 4, Result of an Exam only
   tabs?: React.ReactNode; // Result: above the grid on desktop, below line 3 on mobile
   pos: number;
   total: number;
@@ -142,6 +143,7 @@ export function QuestionLayout(props: {
               {props.meta && <p className="shrink-0 text-sm text-muted-foreground lg:hidden">{props.meta}</p>}
             </div>
             <p className="mt-1 flex flex-wrap gap-x-3 gap-y-1 text-xs text-muted-foreground tabular-nums">{props.stats}</p>
+            {props.domains && <p className="mt-1 text-xs text-muted-foreground tabular-nums">{props.domains}</p>}
             {props.tabs && <div className="mt-4 lg:hidden">{props.tabs}</div>}
           </header>
           {props.children}

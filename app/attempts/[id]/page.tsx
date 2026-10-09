@@ -37,6 +37,7 @@ export default async function AttemptPage({ params, searchParams }: { params: Pr
       <ResultScreen
         title={result.title}
         drill={result.examId === null}
+        domains={result.domains}
         score={score ?? 0}
         timed={result.timed}
         durationSec={Math.round(((result.submittedAt?.getTime() ?? 0) - result.startedAt.getTime()) / 1000)}

@@ -6,6 +6,7 @@ import { db } from "@/db";
 import { examQuestions, exams } from "@/db/schema";
 import { abandonAttemptAction, startAttemptAction } from "@/app/actions";
 import { listAttempts, openAttemptSummary } from "@/lib/attempts";
+import { TIME_LIMIT_MIN } from "@/lib/utils";
 import { SESSION_COOKIE, userFromSession } from "@/lib/auth";
 import { Card } from "@/components/ui/card";
 import { RefreshOnReturn } from "@/components/refresh-on-return";
@@ -62,7 +63,7 @@ export default async function ExamPage({ params }: { params: Promise<{ id: strin
       ) : (
         <div className="mt-6 grid gap-3 sm:grid-cols-2">
           <Card className="gap-3 p-4">
-            <h2 className="font-semibold">Thi thử 230 phút</h2>
+            <h2 className="font-semibold">Thi thử · {TIME_LIMIT_MIN} phút</h2>
             <p className="text-sm text-muted-foreground">Giống thi thật: đóng tab đồng hồ vẫn chạy, hết giờ tự nộp bài.</p>
             <form action={startAttemptAction.bind(null, exam.id)}>
               <SubmitButton name="timed" value="1">Bắt đầu thi thử</SubmitButton>

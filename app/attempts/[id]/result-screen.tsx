@@ -5,13 +5,11 @@ import { Check, Flag, X } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import type { Choice } from "@/db/schema";
-import { cn } from "@/lib/utils";
+import { cn, TIME_LIMIT_MIN } from "@/lib/utils";
 import { formatDuration, inTab, resultCell, type ResultTab } from "./logic";
 import { QuestionLayout, Stats, usePosition } from "./question-layout";
 
 type Question = { id: number; text: string; choices: (Choice & { percent: number })[]; correct: string; suggested: string; selected: string[]; isCorrect: boolean; marked: boolean };
-
-const TIME_LIMIT_MIN = 230; // keep in step with TIME_LIMIT_MS in lib/attempts.ts (not importable into a client file)
 
 const tabs: { value: ResultTab; label: string }[] = [
   { value: undefined, label: "Tất cả" },
@@ -20,7 +18,7 @@ const tabs: { value: ResultTab; label: string }[] = [
 ];
 
 /** Read-only Result: all Questions arrive once, the tab and position switch on the client (`?f=`, `?q=` follow via replaceState). */
-export function ResultScreen(props: { title: string; drill: boolean; score: number; timed: boolean; durationSec: number; questions: Question[]; initialPos: number; initialTab: ResultTab }) {
+export function ResultScreen(props: { title: string; drill: boolean; domains: { domain: string; correct: number; total: number }[]; score: number; timed: boolean; durationSec: number; questions: Question[]; initialPos: number; initialTab: ResultTab }) {
   const { questions: qs } = props;
   const total = qs.length;
   const [pos, go] = usePosition(props.initialPos);
@@ -80,6 +78,7 @@ export function ResultScreen(props: { title: string; drill: boolean; score: numb
           ]}
         />
       }
+      domains={props.domains.map((d) => `${d.domain} ${Math.round((d.correct / d.total) * 100)}%`).join(" · ")}
       tabs={tabBar}
       pos={pos}
       total={total}

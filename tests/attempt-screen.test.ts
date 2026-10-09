@@ -71,5 +71,5 @@ test("duration: under a minute, minutes, hours and minutes, exact hours", () => 
   assert.equal(f(60), "1 giờ");
   assert.equal(f(83), "1 giờ 23 phút");
   assert.equal(f(120), "2 giờ");
-  assert.equal(f(230), "3 giờ 50 phút");
+  assert.equal(f(240), "4 giờ");
 });
