@@ -71,6 +71,7 @@ export async function abandonAttemptAction(attemptId: number) {
   }
   revalidatePath("/");
   revalidatePath("/exams/[id]", "page");
+  revalidatePath("/drills");
 }
 
 export async function saveAnswerAction(attemptId: number, questionId: number, letters: string[]) {

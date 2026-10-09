@@ -1,36 +1,57 @@
-import { count, eq } from "drizzle-orm";
-import { db } from "@/db";
-import { questions } from "@/db/schema";
-import taxonomy from "@/data/tasks.json";
-import { startDrillAction } from "@/app/actions";
+import { cookies } from "next/headers";
+import Link from "next/link";
+import { redirect } from "next/navigation";
+import { abandonAttemptAction, startDrillAction } from "@/app/actions";
+import { SESSION_COOKIE, userFromSession } from "@/lib/auth";
+import { openDrills, topicStats } from "@/lib/drills";
 import { Card } from "@/components/ui/card";
+import { buttonVariants } from "@/components/ui/button";
+import { ConfirmDialog } from "@/components/confirm-dialog";
 import { SubmitButton } from "@/components/submit-button";
 
 export const dynamic = "force-dynamic";
 
-// ponytail: bare list to start a Drill; ticket 03 adds per-User stats and sorting
+type Stat = { source: string; name: string; total: number; done: number; correct: number };
+
 export default async function Drills() {
-  const rows = await db.select({ task: questions.task, n: count() }).from(questions).where(eq(questions.usable, true)).groupBy(questions.task);
-  const usable = new Map(rows.map((r) => [r.task, r.n]));
-  const domains = [...new Set(taxonomy.tasks.map((t) => t.domain))].map((domain) => {
-    const tasks = taxonomy.tasks.filter((t) => t.domain === domain).map((t) => ({ source: t.code, name: t.name, n: usable.get(t.code) ?? 0 }));
-    return { domain, n: tasks.reduce((sum, t) => sum + t.n, 0), tasks };
-  });
-  const row = (source: string, name: string, n: number, strong = false) => (
-    <li key={source} className="flex flex-wrap items-center gap-x-3 gap-y-2 p-3">
-      <span className={strong ? "font-medium" : undefined}>{name}</span>
-      <span className="text-sm text-muted-foreground">{n ? `${n} câu` : "chưa có câu"}</span>
-      {n > 0 && (
-        <span className="ml-auto flex gap-2">
-          {[10, 20].map((size) => (
-            <form key={size} action={startDrillAction.bind(null, source, size)}>
-              <SubmitButton size="sm" variant="outline">Ôn {size}</SubmitButton>
-            </form>
-          ))}
+  const user = await userFromSession((await cookies()).get(SESSION_COOKIE)?.value);
+  if (!user) redirect("/login");
+  const [domains, open] = await Promise.all([topicStats(user.id), openDrills(user.id)]);
+  const row = (s: Stat, strong = false) => {
+    const o = open.get(s.source);
+    return (
+      <li key={s.source} className={`flex flex-wrap items-center gap-x-3 gap-y-2 p-3 ${s.total ? "" : "opacity-50"}`}>
+        <span className={`min-w-0 break-words ${strong ? "font-medium" : ""}`}>{s.name}</span>
+        <span className="text-sm text-muted-foreground">
+          {s.total ? `${s.done}/${s.total} câu · ${s.done ? `${Math.round((s.correct / s.done) * 100)}% đúng` : "—"}` : "chưa có câu"}
         </span>
-      )}
-    </li>
-  );
+        {o ? (
+          <span className="ml-auto flex flex-wrap items-center gap-2">
+            <span className="text-sm text-muted-foreground">Đang ôn {o.answered}/{o.total}</span>
+            <Link href={`/attempts/${o.id}`} className={buttonVariants({ size: "sm" })}>Làm tiếp</Link>
+            <ConfirmDialog
+              trigger="Bỏ"
+              triggerProps={{ size: "sm" }}
+              title="Bỏ bài ôn đang làm dở?"
+              description="Các đáp án đã chọn sẽ bị xoá; bạn có thể bắt đầu Ôn lại."
+              confirm="Bỏ"
+              action={abandonAttemptAction.bind(null, o.id)}
+            />
+          </span>
+        ) : (
+          s.total > 0 && (
+            <span className="ml-auto flex gap-2">
+              {[10, 20].map((size) => (
+                <form key={size} action={startDrillAction.bind(null, s.source, size)}>
+                  <SubmitButton size="sm" variant="outline">Ôn {size}</SubmitButton>
+                </form>
+              ))}
+            </span>
+          )
+        )}
+      </li>
+    );
+  };
   return (
     <main className="mx-auto max-w-2xl p-4">
       <h1 className="text-2xl font-semibold">Theo chủ đề</h1>
@@ -39,8 +60,8 @@ export default async function Drills() {
           <h2 className="font-semibold">{d.domain}</h2>
           <Card className="mt-2 gap-0 py-0">
             <ul className="divide-y">
-              {row(d.domain, "Cả Domain", d.n, true)}
-              {d.tasks.map((t) => row(t.source, t.name, t.n))}
+              {row({ source: d.domain, name: "Cả Domain", total: d.total, done: d.done, correct: d.correct }, true)}
+              {d.tasks.map((t) => row(t))}
             </ul>
           </Card>
         </section>

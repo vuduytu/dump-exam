@@ -6,7 +6,7 @@ import { db } from "@/db";
 import { questions, users } from "@/db/schema";
 import { generateExams, seedQuestions, seedTags } from "@/db/seed";
 import { AttemptInProgress, AttemptNotFound, getAttempt, getResult, listAttempts, saveAnswer, setMark, startAttempt, submitAttempt } from "@/lib/attempts";
-import { DrillEmpty, InvalidDrill, startDrill } from "@/lib/drills";
+import { DrillEmpty, InvalidDrill, openDrills, startDrill, topicStats } from "@/lib/drills";
 import { getScoreboard } from "@/lib/scoreboard";
 import type { Tag } from "@/lib/question-tags";
 import { closeDb, resetDb } from "./db";
@@ -134,4 +134,41 @@ test("a Drill is untimed, scores like an Exam, shows its title in Result and His
   const board = await getScoreboard(admin);
   assert.ok(board.cells.every((cell) => cell.examId !== null));
   assert.ok(board.cells.some((cell) => cell.userId === alice && cell.examId === 1));
+});
+
+test("topicStats counts only this User's submitted Attempts, uses the latest answer, and sorts weakest first", async () => {
+  const [{ insertId: carol }] = await db.insert(users).values({ email: "carol@x.test", passwordHash: "-" });
+  const task = (stats: Awaited<ReturnType<typeof topicStats>>, code: string) => stats.flatMap((d) => d.tasks).find((t) => t.source === code)!;
+  const pool = await usableOf("people-1");
+  const correct = new Map(pool.map((q) => [q.id, q.correct]));
+  const empty = await topicStats(carol); // Bob and Alice have answered plenty already
+  assert.deepEqual([task(empty, "people-1").total, task(empty, "people-1").done], [pool.length, 0]);
+
+  const first = await startDrill(carol, "people-1", 20);
+  const [a, b, c] = (await getAttempt(carol, first)).questions.map((q) => q.id);
+  await saveAnswer(carol, first, a, correct.get(a)!.split(""));
+  await saveAnswer(carol, first, b, [wrongLetter(correct.get(b)!)]);
+  assert.deepEqual(await topicStats(carol), empty); // not submitted yet: does not count
+  assert.equal([...(await openDrills(carol))].length, 1);
+  assert.deepEqual((await openDrills(carol)).get("people-1"), { id: first, total: 10, answered: 2 });
+  await submitAttempt(carol, first);
+  assert.equal((await openDrills(carol)).size, 0);
+  let t = task(await topicStats(carol), "people-1");
+  assert.deepEqual([t.done, t.correct], [2, 1]);
+
+  // a later Drill answers b right and a wrong, and c right: the latest answer decides, c is new
+  const second = await startDrill(carol, "people-1", 20);
+  await saveAnswer(carol, second, b, correct.get(b)!.split(""));
+  await saveAnswer(carol, second, a, [wrongLetter(correct.get(a)!)]);
+  await saveAnswer(carol, second, c, correct.get(c)!.split(""));
+  await submitAttempt(carol, second);
+  const stats = await topicStats(carol);
+  t = task(stats, "people-1");
+  assert.deepEqual([t.done, t.correct], [3, 2]);
+  const people = stats.find((d) => d.domain === "People")!;
+  assert.deepEqual([people.done, people.correct], [3, 2]);
+  assert.equal(people.total, people.tasks.reduce((n, x) => n + x.total, 0));
+  assert.equal(people.tasks[0].source, "people-1"); // the only Task with an answer: 2/3 sorts before untouched ones
+  const last = people.tasks.at(-1)!;
+  assert.ok(last.done === 0);
 });

@@ -1,4 +1,4 @@
-import { test } from "@playwright/test";
+import { expect, test } from "@playwright/test";
 import { login } from "./helpers";
 
 // Manual: `SHOTS=01 npm run e2e -- screenshots` writes .scratch/ui-refresh/screenshots/<SHOTS>-*.png (ticket number as prefix).
@@ -6,7 +6,7 @@ const prefix = process.env.SHOTS;
 const sizes = { mobile: { width: 390, height: 844 }, desktop: { width: 1280, height: 800 } };
 
 test.describe("screenshots", () => {
-  test.skip(!prefix || prefix === "03" || prefix === "04", "set SHOTS=<ticket number>");
+  test.skip(!prefix || prefix === "03" || prefix === "04" || prefix === "dp03", "set SHOTS=<ticket number>");
   test.describe.configure({ mode: "serial" });
   for (const [name, viewport] of Object.entries(sizes)) {
     test(name, async ({ browser }) => {
@@ -117,6 +117,46 @@ test.describe("screenshots 04", () => {
       await page.getByRole("tab", { name: /^Sai \d+$/ }).click();
       await page.waitForTimeout(200);
       await shot("-sai");
+      await page.context().close();
+    });
+  }
+});
+
+// SHOTS=dp03: "Theo chủ đề" (domain-practice ticket 03) -> .scratch/domain-practice/screenshots/03-*.png, with one open Drill and some answers.
+test.describe("screenshots dp03", () => {
+  test.skip(prefix !== "dp03", "set SHOTS=dp03");
+  test.describe.configure({ mode: "serial" });
+  const runs = [
+    { name: "desktop", viewport: sizes.desktop, scheme: "light" },
+    { name: "desktop-dark", viewport: sizes.desktop, scheme: "dark" },
+    { name: "mobile", viewport: sizes.mobile, scheme: "light" },
+  ] as const;
+  for (const run of runs) {
+    test(run.name, async ({ browser }) => {
+      const page = await (await browser.newContext({ viewport: run.viewport, colorScheme: run.scheme })).newPage();
+      await login(page);
+      await page.goto("/drills");
+      const row = (name: string) => page.getByRole("listitem").filter({ hasText: name });
+      if (run.name === "desktop") {
+        await row("Manage conflicts").getByRole("button", { name: "Ôn 10" }).click(); // submitted, gives a %
+        await page.waitForURL(/\/attempts\/\d+/);
+        await page.waitForLoadState("networkidle");
+        await page.keyboard.press("a");
+        await page.getByRole("status").filter({ hasText: "Đã lưu" }).waitFor();
+        await page.getByRole("button", { name: "Nộp bài" }).filter({ visible: true }).click();
+        await page.getByRole("dialog").getByRole("button", { name: "Nộp bài" }).click();
+        await page.getByText(/^Điểm: /).filter({ visible: true }).waitFor();
+        await page.goto("/drills");
+        await row("Engage stakeholders").getByRole("button", { name: "Ôn 10" }).click(); // left open
+        await page.waitForURL(/\/attempts\/\d+/);
+        await page.waitForLoadState("networkidle");
+        await page.keyboard.press("a");
+        await page.getByRole("status").filter({ hasText: "Đã lưu" }).waitFor();
+        await page.goto("/drills");
+      }
+      await page.getByRole("link", { name: "Làm tiếp" }).first().waitFor();
+      await page.screenshot({ path: `.scratch/domain-practice/screenshots/03-${run.name}.png`, fullPage: true });
+      expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
       await page.context().close();
     });
   }
