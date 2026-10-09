@@ -1,5 +1,5 @@
 import { expect, test, type Page } from "@playwright/test";
-import { login } from "./helpers";
+import { login, navTo } from "./helpers";
 
 const visible = (page: Page, text: string | RegExp) => page.getByText(text, typeof text === "string" ? { exact: true } : {}).filter({ visible: true });
 const button = (page: Page, name: string | RegExp) => page.getByRole("button", { name }).filter({ visible: true });
@@ -16,7 +16,7 @@ async function startPractice(page: Page) {
 test("desktop: keyboard switches, answers and marks; the answer survives a reload; submit shows the Score", async ({ page }) => {
   await page.setViewportSize({ width: 1280, height: 800 });
   await startPractice(page);
-  await expect(page.getByRole("link", { name: "Lịch sử" })).toBeVisible(); // shared header
+  await expect(page.getByRole("button", { name: "Menu" })).toBeVisible(); // shared side menu
   await expect(visible(page, "Đề 1 · Câu 1/180")).toBeVisible();
 
   await page.keyboard.press("ArrowRight");
@@ -33,7 +33,7 @@ test("desktop: keyboard switches, answers and marks; the answer survives a reloa
   await expect(page.getByRole("status")).toHaveText("Đã lưu");
   await expect(page.getByRole("button", { name: "Câu 1, chưa trả lời" })).toBeVisible();
 
-  await page.getByRole("link", { name: "Lịch sử" }).click();
+  await navTo(page, "Lịch sử");
   await page.waitForURL(/\/history/);
   await page.goBack(); // the Router Cache holds the page as first loaded, with nothing answered: it must refresh
   await expect(page.getByRole("button", { name: "Câu 2, đánh dấu" })).toBeVisible();

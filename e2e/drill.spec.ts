@@ -1,10 +1,10 @@
 import { expect, test } from "@playwright/test";
-import { login } from "./helpers";
+import { login, navTo } from "./helpers";
 
 test("Drill: start Ôn 10 on a Task, answer, submit, see the Score and the Drill in History", async ({ page }) => {
   await page.setViewportSize({ width: 1280, height: 800 });
   await login(page);
-  await page.getByRole("link", { name: "Theo chủ đề" }).click();
+  await navTo(page, "Theo chủ đề");
   await page.waitForURL(/\/drills/);
   await page.getByRole("listitem").filter({ hasText: "Manage conflicts" }).getByRole("button", { name: "Ôn 10" }).click();
   await page.waitForURL(/\/attempts\/\d+/);
@@ -32,7 +32,7 @@ test("Drill: start Ôn 10 on a Task, answer, submit, see the Score and the Drill
   await expect(page.getByRole("listitem").filter({ hasText: "Manage conflicts" })).toContainText(/1\/\d+ câu · (0|100)% đúng/);
   await expect(page.getByRole("button", { name: "Ôn 10" }).first()).toBeVisible();
 
-  await page.getByRole("link", { name: "Lịch sử" }).click();
+  await navTo(page, "Lịch sử");
   const drills = page.locator("section").filter({ has: page.getByRole("heading", { name: "Ôn theo chủ đề" }) });
   await expect(drills.getByRole("link", { name: /Ôn: People · Manage conflicts.*\/10.*Xem kết quả/ })).toBeVisible();
 });

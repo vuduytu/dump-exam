@@ -113,7 +113,7 @@ export function QuestionLayout(props: {
 
   return (
     <>
-      <div className="sticky top-0 z-10 flex items-center gap-3 border-b bg-background px-4 py-2 lg:hidden">
+      <div className="sticky top-0 z-10 -mt-12 flex items-center gap-3 border-b bg-background py-2 pr-4 pl-14 lg:hidden">
         <span className="min-w-0 truncate font-medium tabular-nums">{heading}</span>
         {props.timer}
         <Sheet open={gridOpen} onOpenChange={setGridOpen}>
@@ -166,7 +166,7 @@ export function QuestionLayout(props: {
           </p>
         </div>
         <aside className="hidden lg:block">
-          <div className="sticky top-4 flex max-h-[calc(100dvh-5.5rem)] flex-col gap-4 rounded-xl border bg-card p-4">
+          <div className="sticky top-4 flex max-h-[calc(100dvh-2rem)] flex-col gap-4 rounded-xl border bg-card p-4">
             {props.timer}
             {props.summary && <div className="border-b pb-4">{props.summary}</div>}
             {props.side}

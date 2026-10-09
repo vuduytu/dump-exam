@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="vi" className={beVietnam.variable}>
-      <body>
+      <body className="pt-12 lg:pt-0">
         <Header />
         {children}
       </body>

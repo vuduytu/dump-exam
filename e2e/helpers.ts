@@ -7,3 +7,9 @@ export async function login(page: Page) {
   await page.getByRole("button", { name: "Đăng nhập" }).click();
   await page.waitForURL("/");
 }
+
+/** Opens the side menu and follows one of its links. */
+export async function navTo(page: Page, name: string) {
+  await page.getByRole("button", { name: "Menu" }).click();
+  await page.getByRole("dialog").getByRole("link", { name }).click();
+}
