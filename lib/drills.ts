@@ -43,7 +43,8 @@ const pct = (c: Count) => (c.done ? c.correct / c.done : null);
  * Per Domain and Task: usable Questions, how many the User has answered, how many of those are right on the latest answer
  * (submitted Attempts of this User only). Tasks sort by % right ascending, then untouched, then empty ones.
  */
-export async function topicStats(userId: number) {
+export async function topicStats(userId: number, now = new Date()) {
+  await finalizeExpired(userId, now); // an expired Timed Attempt counts as submitted
   const [pool, latest] = await Promise.all([
     db.select({ id: questions.id, task: questions.task, correct: questions.correctAnswer }).from(questions).where(eq(questions.usable, true)),
     latestAnswers(userId),

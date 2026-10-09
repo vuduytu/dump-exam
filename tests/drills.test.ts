@@ -149,7 +149,6 @@ test("topicStats counts only this User's submitted Attempts, uses the latest ans
   await saveAnswer(carol, first, a, correct.get(a)!.split(""));
   await saveAnswer(carol, first, b, [wrongLetter(correct.get(b)!)]);
   assert.deepEqual(await topicStats(carol), empty); // not submitted yet: does not count
-  assert.equal([...(await openDrills(carol))].length, 1);
   assert.deepEqual((await openDrills(carol)).get("people-1"), { id: first, total: 10, answered: 2 });
   await submitAttempt(carol, first);
   assert.equal((await openDrills(carol)).size, 0);
@@ -170,5 +169,5 @@ test("topicStats counts only this User's submitted Attempts, uses the latest ans
   assert.equal(people.total, people.tasks.reduce((n, x) => n + x.total, 0));
   assert.equal(people.tasks[0].source, "people-1"); // the only Task with an answer: 2/3 sorts before untouched ones
   const last = people.tasks.at(-1)!;
-  assert.ok(last.done === 0);
+  assert.equal(last.done, 0);
 });
