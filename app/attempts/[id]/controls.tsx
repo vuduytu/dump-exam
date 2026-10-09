@@ -4,20 +4,19 @@ import { useEffect, useState } from "react";
 import { Flag } from "lucide-react";
 import { ConfirmDialog } from "@/components/confirm-dialog";
 import { Button } from "@/components/ui/button";
-import { submitAttemptAction, toggleMarkAction } from "@/app/actions";
+import { submitAttemptAction } from "@/app/actions";
 
-export function MarkButton({ attemptId, questionId, initial }: { attemptId: number; questionId: number; initial: boolean }) {
-  const [marked, setMarked] = useState(initial);
+export function MarkButton({ marked, onToggle }: { marked: boolean; onToggle: () => void }) {
   return (
     <Button
-      type="button"
       variant="outline"
+      size="lg"
       aria-pressed={marked}
-      onClick={() => toggleMarkAction(attemptId, questionId).then(setMarked)}
-      className={marked ? "border-marked bg-marked-soft text-marked" : ""}
+      onClick={onToggle}
+      className={marked ? "border-marked bg-marked-soft text-marked hover:bg-marked-soft hover:text-marked" : ""}
     >
       <Flag className={marked ? "fill-current" : ""} />
-      {marked ? "Bỏ đánh dấu" : "Đánh dấu xem lại"}
+      {marked ? "Đã đánh dấu" : "Đánh dấu"}
     </Button>
   );
 }
@@ -49,15 +48,13 @@ export function Countdown({ attemptId, msLeft }: { attemptId: number; msLeft: nu
 
 export function SubmitForm({ attemptId, unanswered, marked }: { attemptId: number; unanswered: number; marked: number }) {
   return (
-    <div className="ml-auto">
-      <ConfirmDialog
-        trigger="Nộp bài"
-        triggerProps={{ variant: "default" }}
-        title="Nộp bài?"
-        description={`Còn ${unanswered} câu chưa trả lời, ${marked} câu đánh dấu.`}
-        confirm="Nộp bài"
-        action={submitAttemptAction.bind(null, attemptId)}
-      />
-    </div>
+    <ConfirmDialog
+      trigger="Nộp bài"
+      triggerProps={{ variant: "default", size: "lg" }}
+      title="Nộp bài?"
+      description={`Còn ${unanswered} câu chưa trả lời, ${marked} câu đánh dấu.`}
+      confirm="Nộp bài"
+      action={submitAttemptAction.bind(null, attemptId)}
+    />
   );
 }

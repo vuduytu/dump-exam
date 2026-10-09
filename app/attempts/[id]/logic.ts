@@ -1,0 +1,27 @@
+// Pure rules of the Attempt screen, kept out of React so node:test can check them.
+
+export type Command = { type: "prev" | "next" | "mark" } | { type: "choice"; letter: string };
+
+/** Keyboard shortcut → command. `mod`: Ctrl/Meta/Alt/Shift held; `typing`: focus in a text field; `dialog`: a Dialog/Sheet is open. */
+export function keyCommand(e: { key: string; mod: boolean; typing: boolean; dialog: boolean }): Command | null {
+  if (e.mod || e.typing || e.dialog) return null;
+  if (e.key === "ArrowLeft") return { type: "prev" };
+  if (e.key === "ArrowRight") return { type: "next" };
+  const k = e.key.toUpperCase();
+  if (k === "M") return { type: "mark" };
+  if (/^[A-E]$/.test(k)) return { type: "choice", letter: k };
+  return null;
+}
+
+/** Next selection after picking `letter`: a single-answer Question replaces it, a multi-answer one toggles, capped at `need`. */
+export function toggleChoice(selected: string[], letter: string, need: number): string[] {
+  if (need <= 1) return [letter];
+  if (selected.includes(letter)) return selected.filter((l) => l !== letter);
+  return selected.length < need ? [...selected, letter] : selected;
+}
+
+export type AttemptCell = "unanswered" | "answered" | "marked";
+
+/** Grid state of one Question in an open Attempt: a mark shows over an answer. */
+export const attemptCell = (q: { selected: string[]; marked: boolean }): AttemptCell =>
+  q.marked ? "marked" : q.selected.length ? "answered" : "unanswered";

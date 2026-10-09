@@ -4,13 +4,22 @@
 
 **Blocked by:** 01 — Nền móng
 
-**Status:** ready-for-agent
+**Status:** resolved
 
 **Model:** Opus 5.5 (~3 giờ). Review bằng Opus 5.5.
 
-- [ ] Desktop (≥1024px): Question cột trái ~2/3; cột phải sticky gồm đồng hồ (Timed Attempt), thanh tiến độ "đã làm X/180", lưới 1–180, nút Nộp.
-- [ ] Mobile: thanh trên sticky ("Câu N/180", đồng hồ, nút mở lưới dạng drawer); thanh dưới sticky (← Trước, Đánh dấu có icon cờ, Sau →).
-- [ ] Chuyển câu phía client, không tải lại server; URL `?q=N` vẫn đúng, tải lại trang mở đúng câu. Lưới phản ánh ngay trạng thái chưa làm / đã làm / đánh dấu.
-- [ ] Mỗi lựa chọn và đánh dấu vẫn lưu lên server ngay, có trạng thái đang lưu / đã lưu / lỗi. Attempt hết giờ hoặc đã nộp thì chuyển sang Result như hiện tại.
-- [ ] Phím tắt ← →, `A`–`E` (câu nhiều đáp án giới hạn N), `M`; không bắt phím khi đang gõ. Gợi ý phím tắt chỉ hiện trên desktop.
-- [ ] Dialog nộp bài hiện "Còn X câu chưa trả lời, Y câu đánh dấu". Cập nhật test e2e (đổi câu bằng phím, đánh dấu, nộp). Ảnh chụp mobile (kể cả drawer mở) và desktop vào `.scratch/ui-refresh/screenshots/03-*`.
+- [x] Desktop (≥1024px): Question cột trái ~2/3; cột phải sticky gồm đồng hồ (Timed Attempt), thanh tiến độ "đã làm X/180", lưới 1–180, nút Nộp.
+- [x] Mobile: thanh trên sticky ("Câu N/180", đồng hồ, nút mở lưới dạng drawer); thanh dưới sticky (← Trước, Đánh dấu có icon cờ, Sau →).
+- [x] Chuyển câu phía client, không tải lại server; URL `?q=N` vẫn đúng, tải lại trang mở đúng câu. Lưới phản ánh ngay trạng thái chưa làm / đã làm / đánh dấu.
+- [x] Mỗi lựa chọn và đánh dấu vẫn lưu lên server ngay, có trạng thái đang lưu / đã lưu / lỗi. Attempt hết giờ hoặc đã nộp thì chuyển sang Result như hiện tại.
+- [x] Phím tắt ← →, `A`–`E` (câu nhiều đáp án giới hạn N), `M`; không bắt phím khi đang gõ. Gợi ý phím tắt chỉ hiện trên desktop.
+- [x] Dialog nộp bài hiện "Còn X câu chưa trả lời, Y câu đánh dấu". Cập nhật test e2e (đổi câu bằng phím, đánh dấu, nộp). Ảnh chụp mobile (kể cả drawer mở) và desktop vào `.scratch/ui-refresh/screenshots/03-*`.
+
+## Comments
+
+- Dùng lại cho 04: `app/attempts/[id]/question-layout.tsx` — `QuestionLayout` (bố cục desktop 2/3 + cột phải sticky, thanh trên/dưới mobile, drawer lưới, phím ←/→) và `usePosition` (`?q=N` qua `history.replaceState`). Truyền `cells` (`{pos, className, label}`; lọc tab thì truyền danh sách đã lọc, Trước/Sau tự đi theo), `timer`/`side`/`footer`/`actions` tuỳ chọn; Result bỏ `onCommand` và `actions` là chỉ đọc, gợi ý phím tự rút còn "← →".
+- Luật thuần trong `app/attempts/[id]/logic.ts` (`keyCommand`, `toggleChoice`, `attemptCell`), test ở `tests/attempt-screen.test.ts`. Result viết hàm ô riêng (đúng/sai + viền đánh dấu).
+- `attempt-screen.tsx` giữ state 180 câu; lưu lạc quan, chỉ request mới nhất của mỗi câu/field được rollback về giá trị server đã xác nhận. Action redirect (hết giờ/đã nộp) thì router tự chuyển sang Result.
+- Bỏ `revalidatePath` trong `saveAnswerAction`/`toggleMarkAction`: màn tự giữ state, revalidate sẽ gửi lại cả 180 câu mỗi lần bấm. Không đổi check nào ở server.
+- Lệch nhỏ: `Countdown` mount hai lần (thanh mobile + cột desktop), hết giờ có thể gọi nộp hai lần — vô hại vì `AttemptSubmitted` được bỏ qua. Nút Nộp trên mobile nằm trong drawer lưới.
+- E2E chờ `networkidle` trước khi bấm phím (phím bấm trước hydrate bị mất). Ảnh: `SHOTS=03 npm run e2e -- screenshots` → `03-desktop`, `03-desktop-dark`, `03-desktop-timed`, `03-mobile`, `03-mobile-drawer`.

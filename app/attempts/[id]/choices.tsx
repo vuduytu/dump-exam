@@ -1,48 +1,35 @@
 "use client";
 
-import { useState } from "react";
-import { saveAnswerAction } from "@/app/actions";
 import type { Choice } from "@/db/schema";
 
-/** Radio for a single-answer Question, checkboxes capped at `need` otherwise. Every change is saved at once. */
-export function Choices(props: { attemptId: number; questionId: number; choices: Choice[]; need: number; initial: string[] }) {
-  const { attemptId, questionId, choices, need } = props;
-  const [selected, setSelected] = useState(props.initial);
-  const [error, setError] = useState(false);
+/** Radio for a single-answer Question, checkboxes capped at `need` otherwise. The parent owns the selection and saves it. */
+export function Choices(props: { questionId: number; choices: Choice[]; need: number; selected: string[]; onPick: (letter: string) => void }) {
+  const { questionId, choices, need, selected, onPick } = props;
   const multi = need > 1;
-
-  function change(letter: string, checked: boolean) {
-    const next = !multi ? [letter] : checked ? [...selected, letter] : selected.filter((l) => l !== letter);
-    const prev = selected;
-    setSelected(next);
-    setError(false);
-    saveAnswerAction(attemptId, questionId, next).catch(() => {
-      setSelected(prev);
-      setError(true);
-    });
-  }
-
   return (
-    <fieldset className="mt-4 flex flex-col gap-2">
+    <fieldset className="mt-6 flex flex-col gap-2">
       {multi && <legend className="mb-2 text-sm font-medium">Chọn {need} đáp án</legend>}
       {choices.map((c) => {
         const checked = selected.includes(c.letter);
         return (
-          <label key={c.letter} className="flex gap-2 rounded-lg border bg-card p-2 has-checked:border-primary has-checked:bg-primary/5">
+          <label
+            key={c.letter}
+            className="flex cursor-pointer gap-3 rounded-lg border bg-card p-3 has-checked:border-primary has-checked:bg-primary/5 has-disabled:cursor-default has-disabled:opacity-60"
+          >
             <input
               type={multi ? "checkbox" : "radio"}
               name={`q${questionId}`}
+              className="mt-1.5 size-4 shrink-0 accent-primary"
               checked={checked}
               disabled={multi && !checked && selected.length >= need}
-              onChange={(e) => change(c.letter, e.target.checked)}
+              onChange={() => onPick(c.letter)}
             />
             <span className="question-text">
-              {c.letter}. <span dangerouslySetInnerHTML={{ __html: c.text }} /> {/* sanitized at import */}
+              <span className="font-semibold">{c.letter}.</span> <span dangerouslySetInnerHTML={{ __html: c.text }} /> {/* sanitized at import */}
             </span>
           </label>
         );
       })}
-      {error && <p role="alert" className="text-destructive">Không lưu được, hãy chọn lại.</p>}
     </fieldset>
   );
 }

@@ -68,7 +68,6 @@ export async function saveAnswerAction(attemptId: number, questionId: number, le
     if (err instanceof AttemptExpired || err instanceof AttemptSubmitted) redirect(`/attempts/${Number(attemptId)}`); // the page shows the Score
     throw err;
   }
-  revalidatePath(`/attempts/${Number(attemptId)}`); // refreshes the question grid
 }
 
 export async function toggleMarkAction(attemptId: number, questionId: number) {
@@ -79,8 +78,7 @@ export async function toggleMarkAction(attemptId: number, questionId: number) {
     if (err instanceof AttemptExpired || err instanceof AttemptSubmitted) redirect(`/attempts/${Number(attemptId)}`);
     throw err;
   }
-  revalidatePath(`/attempts/${Number(attemptId)}`);
-  return marked;
+  return marked; // no revalidatePath: the Attempt screen keeps its own state, a re-render would resend all 180 Questions
 }
 
 export async function submitAttemptAction(attemptId: number) {
