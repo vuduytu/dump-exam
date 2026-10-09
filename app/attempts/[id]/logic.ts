@@ -2,11 +2,15 @@
 
 export type Command = { type: "prev" | "next" | "mark" } | { type: "choice"; letter: string };
 
-/** Keyboard shortcut → command. `mod`: Ctrl/Meta/Alt/Shift held; `typing`: focus in a text field; `dialog`: a Dialog/Sheet is open. */
-export function keyCommand(e: { key: string; mod: boolean; typing: boolean; dialog: boolean }): Command | null {
-  if (e.mod || e.typing || e.dialog) return null;
+/**
+ * Keyboard shortcut → command. `mod`: Ctrl/Meta/Alt/Shift held; `typing`: focus in a text field; `dialog`: a Dialog/Sheet
+ * is open; `composing`: IME composition; `repeat`: key held down (only arrows auto-repeat, a held letter/M acts once).
+ */
+export function keyCommand(e: { key: string; mod: boolean; typing: boolean; dialog: boolean; repeat: boolean; composing: boolean }): Command | null {
+  if (e.mod || e.typing || e.dialog || e.composing) return null;
   if (e.key === "ArrowLeft") return { type: "prev" };
   if (e.key === "ArrowRight") return { type: "next" };
+  if (e.repeat) return null;
   const k = e.key.toUpperCase();
   if (k === "M") return { type: "mark" };
   if (/^[A-E]$/.test(k)) return { type: "choice", letter: k };

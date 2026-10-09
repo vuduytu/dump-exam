@@ -1,8 +1,8 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Clock } from "lucide-react";
-import { saveAnswerAction, toggleMarkAction } from "@/app/actions";
+import { saveAnswerAction, setMarkAction } from "@/app/actions";
 import { Progress } from "@/components/ui/progress";
 import type { Choice } from "@/db/schema";
 import { Choices } from "./choices";
@@ -19,51 +19,68 @@ const cellStyle: Record<AttemptCell, [string, string]> = {
   marked: ["border-marked bg-marked-soft text-marked", "đánh dấu"],
 };
 
-const statusText = { idle: "", saving: "Đang lưu…", saved: "Đã lưu", error: "Không lưu được, hãy thử lại." };
-
 /**
  * The open Attempt: all Questions arrive once, switching is client-side. Each change is shown at once and saved at once;
  * Next runs Server Actions one at a time in call order, so the last click is the one the server keeps. A failed save
- * rolls back to the last value the server confirmed. Expired/submitted Attempts: the action redirects to the Result.
+ * rolls back to the last value the server confirmed and stays reported until a later save of that Question and field
+ * succeeds. Expired/submitted Attempts: the action redirects to the Result. Fresh `questions` from the server (a refresh
+ * after Back) replace the local ones, except fields with a save still in flight.
  */
 export function AttemptScreen(props: { attemptId: number; examName: string; questions: Question[]; initialPos: number; msLeft: number | null }) {
   const { attemptId } = props;
   const [pos, go] = usePosition(props.initialPos);
   const [qs, setQs] = useState(props.questions);
-  const [status, setStatus] = useState<keyof typeof statusText>("idle");
-  const confirmed = useRef(new Map<number, Saved>(props.questions.map((q) => [q.id, { selected: q.selected, marked: q.marked }])));
+  const [pending, setPending] = useState<number | null>(null); // null: nothing saved yet
+  const [failed, setFailed] = useState<ReadonlySet<string>>(new Set()); // keys whose latest save failed
+  const confirmed = useRef(new Map<number, Saved>());
   const latest = useRef(new Map<string, number>()); // newest request per Question and field: only it may roll back
-  const pending = useRef(0);
-  const failed = useRef(false);
+  const inFlight = useRef(new Map<string, number>());
   const q = qs[pos - 1];
 
-  const patch = (id: number, change: Partial<Saved>) => setQs((all) => all.map((x) => (x.id === id ? { ...x, ...change } : x)));
+  useEffect(() => {
+    const busy = (field: keyof Saved, id: number) => (inFlight.current.get(`${field}:${id}`) ?? 0) > 0;
+    for (const x of props.questions) confirmed.current.set(x.id, { selected: x.selected, marked: x.marked });
+    setQs((local) =>
+      props.questions.map((x) => {
+        const mine = local.find((l) => l.id === x.id);
+        if (!mine) return x;
+        return { ...x, selected: busy("selected", x.id) ? mine.selected : x.selected, marked: busy("marked", x.id) ? mine.marked : x.marked };
+      }),
+    );
+  }, [props.questions]);
 
-  function save<K extends keyof Saved>(id: number, field: K, value: Saved[K], run: () => Promise<Saved[K] | void>) {
+  const patch = (id: number, change: Partial<Saved>) => setQs((all) => all.map((x) => (x.id === id ? { ...x, ...change } : x)));
+  const setKey = (key: string, bad: boolean) =>
+    setFailed((s) => {
+      if (s.has(key) === bad) return s;
+      const next = new Set(s);
+      if (bad) next.add(key);
+      else next.delete(key);
+      return next;
+    });
+
+  function save<K extends keyof Saved>(id: number, field: K, value: Saved[K], run: () => Promise<void>) {
     patch(id, { [field]: value });
     const key = `${field}:${id}`;
     const seq = (latest.current.get(key) ?? 0) + 1;
     latest.current.set(key, seq);
-    pending.current++;
-    failed.current = false;
-    setStatus("saving");
+    inFlight.current.set(key, (inFlight.current.get(key) ?? 0) + 1);
+    setPending((n) => (n ?? 0) + 1);
     run()
       .then(
-        (server) => {
-          if (server === undefined && field === "marked") return; // redirected away (expired/submitted)
-          const v = (server ?? value) as Saved[K];
-          confirmed.current.get(id)![field] = v;
-          if (latest.current.get(key) !== seq) return;
-          patch(id, { [field]: v });
-          failed.current = false; // a newer save of the same field superseded the failed one
+        () => {
+          confirmed.current.get(id)![field] = value;
+          if (latest.current.get(key) === seq) setKey(key, false);
         },
         () => {
-          failed.current = true;
-          if (latest.current.get(key) === seq) patch(id, { [field]: confirmed.current.get(id)![field] });
+          if (latest.current.get(key) !== seq) return; // a newer save of this field decides
+          patch(id, { [field]: confirmed.current.get(id)![field] });
+          setKey(key, true);
         },
       )
       .finally(() => {
-        if (--pending.current === 0) setStatus(failed.current ? "error" : "saved");
+        inFlight.current.set(key, inFlight.current.get(key)! - 1);
+        setPending((n) => n! - 1);
       });
   }
 
@@ -72,7 +89,10 @@ export function AttemptScreen(props: { attemptId: number; examName: string; ques
     if (next.join() === q.selected.join()) return;
     save(q.id, "selected", next, () => saveAnswerAction(attemptId, q.id, next));
   }
-  const toggleMark = () => save(q.id, "marked", !q.marked, () => toggleMarkAction(attemptId, q.id));
+  function toggleMark() {
+    const marked = !q.marked;
+    save(q.id, "marked", marked, () => setMarkAction(attemptId, q.id, marked));
+  }
 
   function onCommand(cmd: Command) {
     if (cmd.type === "mark") toggleMark();
@@ -80,6 +100,12 @@ export function AttemptScreen(props: { attemptId: number; examName: string; ques
     else return false;
     return true;
   }
+
+  const failedIds = new Set([...failed].map((k) => Number(k.split(":")[1])));
+  const failedPos = qs.flatMap((x, i) => (failedIds.has(x.id) ? [i + 1] : []));
+  const status = failedPos.length
+    ? `Không lưu được Câu ${failedPos.join(", ")}, hãy thử lại.`
+    : pending === null ? "" : pending > 0 ? "Đang lưu…" : "Đã lưu";
 
   const answered = qs.filter((x) => x.selected.length).length;
   const marked = qs.filter((x) => x.marked).length;
@@ -129,8 +155,8 @@ export function AttemptScreen(props: { attemptId: number; examName: string; ques
         <div className="question-text" dangerouslySetInnerHTML={{ __html: q.text }} /> {/* sanitized at import */}
         <Choices key={q.id} questionId={q.id} choices={q.choices} need={q.need} selected={q.selected} onPick={pick} />
       </article>
-      <p role="status" className={`mt-3 min-h-5 text-sm ${status === "error" ? "text-destructive" : "text-muted-foreground"}`}>
-        {statusText[status]}
+      <p role="status" className={`mt-3 min-h-5 text-sm ${failedPos.length ? "text-destructive" : "text-muted-foreground"}`}>
+        {status}
       </p>
     </QuestionLayout>
   );

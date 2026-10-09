@@ -190,24 +190,19 @@ export async function saveAnswer(userId: number, attemptId: number, questionId: 
   });
 }
 
-/** Flips the review mark of one Question of an open Attempt and returns the new state. Never touches the answer. */
-export async function toggleMark(userId: number, attemptId: number, questionId: number, now = new Date()) {
-  return db.transaction(async (tx) => {
+/**
+ * Sets the review mark of one Question of an open Attempt to `marked`. Never touches the answer. An explicit value, not a
+ * flip, so a retried or out-of-order request cannot leave the mark opposite to what the User last chose.
+ */
+export async function setMark(userId: number, attemptId: number, questionId: number, marked: boolean, now = new Date()) {
+  await db.transaction(async (tx) => {
     const attempt = await lockOpenAttempt(tx, userId, attemptId, now);
     const [inExam] = await tx
       .select({ id: examQuestions.questionId })
       .from(examQuestions)
       .where(and(eq(examQuestions.examId, attempt.examId), eq(examQuestions.questionId, questionId)));
     if (!inExam) throw new InvalidAnswer();
-    await tx
-      .insert(attemptAnswers)
-      .values({ attemptId, questionId, selected: "", marked: true })
-      .onDuplicateKeyUpdate({ set: { marked: sql`NOT ${attemptAnswers.marked}` } });
-    const [row] = await tx
-      .select({ marked: attemptAnswers.marked })
-      .from(attemptAnswers)
-      .where(and(eq(attemptAnswers.attemptId, attemptId), eq(attemptAnswers.questionId, questionId)));
-    return row.marked;
+    await tx.insert(attemptAnswers).values({ attemptId, questionId, selected: "", marked }).onDuplicateKeyUpdate({ set: { marked } });
   });
 }
 

@@ -8,6 +8,7 @@ import { abandonAttemptAction, startAttemptAction } from "@/app/actions";
 import { listAttempts, openAttemptSummary } from "@/lib/attempts";
 import { SESSION_COOKIE, userFromSession } from "@/lib/auth";
 import { Card } from "@/components/ui/card";
+import { RefreshOnReturn } from "@/components/refresh-on-return";
 import { buttonVariants } from "@/components/ui/button";
 import { ConfirmDialog } from "@/components/confirm-dialog";
 import { SubmitButton } from "@/components/submit-button";
@@ -33,6 +34,7 @@ export default async function ExamPage({ params }: { params: Promise<{ id: strin
   const minLeft = open?.deadline ? Math.max(0, Math.ceil((open.deadline.getTime() - Date.now()) / 60_000)) : null;
   return (
     <main className="mx-auto max-w-2xl p-4">
+      <RefreshOnReturn renderId={crypto.randomUUID()} />
       <Link href="/" className="text-sm text-muted-foreground hover:underline">← Đề thi</Link>
       <h1 className="mt-2 break-words text-2xl font-semibold">{exam.name}</h1>
       <p className="text-sm text-muted-foreground">

@@ -13,6 +13,7 @@ export type GridCell = { pos: number; className: string; label: string };
 /** Current 1-based position, switched on the client; `?q=N` follows via replaceState so a reload opens the same Question. */
 export function usePosition(initial: number) {
   const [pos, setPos] = useState(initial);
+  useEffect(() => setPos(initial), [initial]); // a refresh after Back brings the position of the URL being shown
   const go = useCallback((p: number) => {
     setPos(p);
     const url = new URL(location.href);
@@ -56,12 +57,15 @@ export function QuestionLayout(props: {
         mod: e.ctrlKey || e.metaKey || e.altKey || e.shiftKey,
         typing: isTyping(e.target),
         dialog: !!document.querySelector('[role="dialog"]'),
+        repeat: e.repeat,
+        composing: e.isComposing,
       });
       if (!cmd) return;
-      const target = cmd.type === "prev" ? prev : cmd.type === "next" ? next : undefined;
-      if (target) onGo(target);
-      else if (!onCommand?.(cmd)) return;
-      e.preventDefault(); // e.g. stops a focused radio from also moving its own selection
+      if (cmd.type === "prev" || cmd.type === "next") {
+        const target = cmd.type === "prev" ? prev : next;
+        if (target) onGo(target);
+      } else if (!onCommand?.(cmd)) return;
+      e.preventDefault(); // always for arrows, even on the first/last Question: a focused radio must not move its own selection
     }
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
@@ -134,7 +138,7 @@ export function QuestionLayout(props: {
             {nextButton}
           </nav>
           <p className="mt-3 hidden text-xs text-muted-foreground lg:block">
-            Phím tắt: ← → đổi câu{onCommand && " · A–E chọn đáp án · M đánh dấu"}
+            Phím tắt: ← → đổi câu{onCommand && " · A–E: chọn · M: đánh dấu"}
           </p>
         </div>
         <aside className="hidden lg:block">

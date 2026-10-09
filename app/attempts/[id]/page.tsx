@@ -5,6 +5,7 @@ import { AttemptNotFound, AttemptNotSubmitted, getAttempt, getResult } from "@/l
 import { SESSION_COOKIE, userFromSession } from "@/lib/auth";
 import { buttonVariants } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { RefreshOnReturn } from "@/components/refresh-on-return";
 import { AttemptScreen } from "./attempt-screen";
 
 export default async function AttemptPage({ params, searchParams }: { params: Promise<{ id: string }>; searchParams: Promise<{ q?: string; f?: string }> }) {
@@ -68,14 +69,17 @@ export default async function AttemptPage({ params, searchParams }: { params: Pr
 
   const attempt = await getAttempt(user.id, id);
   if (attempt.submittedAt) redirect(`/attempts/${id}`); // expired between getResult and getAttempt
-  const pos = Math.min(Math.max(Number(qParam) || 1, 1), attempt.questions.length); // 1-based
+  const pos = Math.min(Math.max(Math.trunc(Number(qParam)) || 1, 1), attempt.questions.length); // 1-based; junk/out of range → clamped
   return (
-    <AttemptScreen
-      attemptId={attempt.id}
-      examName={attempt.examName}
-      questions={attempt.questions} // getAttempt never includes the Correct Answer
-      initialPos={pos}
-      msLeft={attempt.deadline && attempt.deadline.getTime() - Date.now()}
-    />
+    <>
+      <RefreshOnReturn renderId={crypto.randomUUID()} />
+      <AttemptScreen
+        attemptId={attempt.id}
+        examName={attempt.examName}
+        questions={attempt.questions} // getAttempt never includes the Correct Answer
+        initialPos={pos}
+        msLeft={attempt.deadline && attempt.deadline.getTime() - Date.now()}
+      />
+    </>
   );
 }

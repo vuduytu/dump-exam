@@ -31,6 +31,13 @@ test("desktop: keyboard switches, answers and marks; the answer survives a reloa
   await expect(page.getByRole("status")).toHaveText("Đã lưu");
   await expect(page.getByRole("button", { name: "Câu 1, chưa trả lời" })).toBeVisible();
 
+  await page.getByRole("link", { name: "Lịch sử" }).click();
+  await page.waitForURL(/\/history/);
+  await page.goBack(); // the Router Cache holds the page as first loaded, with nothing answered: it must refresh
+  await expect(page.getByRole("button", { name: "Câu 2, đánh dấu" })).toBeVisible();
+  await expect(visible(page, "Câu 2/180")).toBeVisible();
+  await expect(page.locator("fieldset input").first()).toBeChecked();
+
   await page.reload(); // saved on the server, and ?q=2 opens the same Question
   await expect(visible(page, "Câu 2/180")).toBeVisible();
   await expect(page.locator("fieldset input").first()).toBeChecked();

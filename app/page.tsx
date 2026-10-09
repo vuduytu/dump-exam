@@ -7,6 +7,7 @@ import { findOpenAttempt, listAttempts } from "@/lib/attempts";
 import { SESSION_COOKIE, userFromSession } from "@/lib/auth";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
+import { RefreshOnReturn } from "@/components/refresh-on-return";
 
 export const dynamic = "force-dynamic"; // read Exams per request, not at build
 
@@ -25,6 +26,7 @@ export default async function Home() {
   for (const e of list) if (user && (await findOpenAttempt(user.id, e.id))) open.add(e.id);
   return (
     <main className="mx-auto max-w-4xl p-4">
+      <RefreshOnReturn renderId={crypto.randomUUID()} />
       <h1 className="text-2xl font-semibold">Đề thi</h1>
       <ul className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {list.map((e) => (

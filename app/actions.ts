@@ -6,7 +6,7 @@
 import { revalidatePath } from "next/cache";
 import { cookies } from "next/headers";
 import { notFound, redirect } from "next/navigation";
-import { abandonAttempt, AttemptExpired, AttemptInProgress, AttemptNotFound, AttemptSubmitted, saveAnswer, startAttempt, submitAttempt, toggleMark } from "@/lib/attempts";
+import { abandonAttempt, AttemptExpired, AttemptInProgress, AttemptNotFound, AttemptSubmitted, saveAnswer, startAttempt, setMark, submitAttempt } from "@/lib/attempts";
 import { changePassword, createSessionToken, InvalidCredentials, login, WeakPassword, WrongOldPassword, SESSION_COOKIE, SESSION_DAYS, UserLocked, userFromSession } from "@/lib/auth";
 import { CannotLockSelf, createUser, EmailTaken, InvalidEmail, NotAdmin, resetPassword, setLocked, UserNotFound } from "@/lib/users";
 
@@ -70,15 +70,14 @@ export async function saveAnswerAction(attemptId: number, questionId: number, le
   }
 }
 
-export async function toggleMarkAction(attemptId: number, questionId: number) {
-  let marked: boolean;
+export async function setMarkAction(attemptId: number, questionId: number, marked: boolean) {
   try {
-    marked = await toggleMark(await currentUserId(), Number(attemptId), Number(questionId));
+    await setMark(await currentUserId(), Number(attemptId), Number(questionId), marked === true);
   } catch (err) {
     if (err instanceof AttemptExpired || err instanceof AttemptSubmitted) redirect(`/attempts/${Number(attemptId)}`);
     throw err;
   }
-  return marked; // no revalidatePath: the Attempt screen keeps its own state, a re-render would resend all 180 Questions
+  // no revalidatePath: the Attempt screen keeps its own state, a re-render would resend all 180 Questions
 }
 
 export async function submitAttemptAction(attemptId: number) {

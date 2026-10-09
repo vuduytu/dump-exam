@@ -8,7 +8,7 @@ export function Choices(props: { questionId: number; choices: Choice[]; need: nu
   const multi = need > 1;
   return (
     <fieldset className="mt-6 flex flex-col gap-2">
-      {multi && <legend className="mb-2 text-sm font-medium">Chọn {need} đáp án</legend>}
+      {multi ? <legend className="mb-2 text-sm font-medium">Chọn {need} đáp án</legend> : <legend className="sr-only">Chọn 1 lựa chọn</legend>}
       {choices.map((c) => {
         const checked = selected.includes(c.letter);
         return (

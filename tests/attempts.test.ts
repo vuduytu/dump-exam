@@ -5,7 +5,7 @@ import { asc, eq } from "drizzle-orm";
 import { db } from "@/db";
 import { attempts, examQuestions, questions, users } from "@/db/schema";
 import { generateExams, seedQuestions } from "@/db/seed";
-import { abandonAttempt, AttemptExpired, AttemptInProgress, AttemptNotFound, AttemptSubmitted, findOpenAttempt, getAttempt, openAttemptSummary, listAttempts, InvalidAnswer, saveAnswer, startAttempt, submitAttempt, toggleMark } from "@/lib/attempts";
+import { abandonAttempt, AttemptExpired, AttemptInProgress, AttemptNotFound, AttemptSubmitted, findOpenAttempt, getAttempt, openAttemptSummary, listAttempts, InvalidAnswer, saveAnswer, startAttempt, submitAttempt, setMark } from "@/lib/attempts";
 import { closeDb, resetDb } from "./db";
 
 const EXAM = 1;
@@ -130,35 +130,39 @@ test("startedAt round-trips as the exact instant passed in, whatever the DB time
 
 const markedOf = async (attemptId: number) => (await getAttempt(alice, attemptId)).questions.filter((q) => q.marked).map((q) => q.id);
 
-test("toggleMark marks then unmarks a Question, kept across reloads and independent of the answer", async () => {
+test("setMark sets the mark to the given value (repeats are no-ops), kept across reloads and independent of the answer", async () => {
   const id = await fresh(alice, EXAM);
   const q = single();
-  assert.equal(await toggleMark(alice, id, q.id), true);
+  await setMark(alice, id, q.id, true);
+  await setMark(alice, id, q.id, true); // a retried/duplicated request does not flip it back
   assert.deepEqual(await markedOf(id), [q.id]);
   assert.deepEqual(await selectedOf(id, q.id), []); // marked but unanswered
   await saveAnswer(alice, id, q.id, ["A"]);
   assert.deepEqual(await markedOf(id), [q.id]); // answering keeps the mark
   await saveAnswer(alice, id, q.id, []);
   assert.deepEqual(await markedOf(id), [q.id]); // clearing keeps the mark
-  assert.equal(await toggleMark(alice, id, q.id), false);
+  await setMark(alice, id, q.id, false);
+  await setMark(alice, id, q.id, false);
   assert.deepEqual(await markedOf(id), []);
   assert.deepEqual(await selectedOf(id, q.id), []);
+  await setMark(alice, id, multi().id, false); // unmarking a never-touched Question is fine
+  assert.deepEqual(await markedOf(id), []);
 });
 
-test("toggleMark is rejected after submit, for another User, and for a Question outside the Exam", async () => {
+test("setMark is rejected after submit, for another User, and for a Question outside the Exam", async () => {
   const id = await fresh(alice, EXAM);
-  await assert.rejects(toggleMark(bob, id, single().id), AttemptNotFound);
-  await assert.rejects(toggleMark(alice, id, 999999), InvalidAnswer);
+  await assert.rejects(setMark(bob, id, single().id, true), AttemptNotFound);
+  await assert.rejects(setMark(alice, id, 999999, true), InvalidAnswer);
   await submitAttempt(alice, id);
-  await assert.rejects(toggleMark(alice, id, single().id), AttemptSubmitted);
+  await assert.rejects(setMark(alice, id, single().id, true), AttemptSubmitted);
 });
 
 test("marking does not change the Score", async () => {
   const id = await fresh(alice, EXAM);
   const [a, b] = correctAnswers;
   await saveAnswer(alice, id, a.id, a.correct.split(""));
-  await toggleMark(alice, id, a.id);
-  await toggleMark(alice, id, b.id); // marked, never answered
+  await setMark(alice, id, a.id, true);
+  await setMark(alice, id, b.id, true); // marked, never answered
   assert.equal(await submitAttempt(alice, id), 1);
 });
 
@@ -173,7 +177,7 @@ test("one in-progress Attempt per (User, Exam): a second start is refused, even 
 test("abandonAttempt removes the Attempt and its answers, it is not in history, and the Exam can be started again", async () => {
   const id = await fresh(bob, EXAM);
   await saveAnswer(bob, id, single().id, ["A"]);
-  await toggleMark(bob, id, single().id);
+  await setMark(bob, id, single().id, true);
   assert.equal(await findOpenAttempt(bob, EXAM), id);
   await assert.rejects(startAttempt(bob, EXAM), AttemptInProgress);
   await abandonAttempt(bob, id);
@@ -203,15 +207,15 @@ test("findOpenAttempt picks the newest when old data has several in-progress Att
 const MIN = 60_000;
 const DEADLINE_MS = 230 * MIN;
 
-test("Timed Attempt: saves before the deadline are kept, saveAnswer and toggleMark from the deadline on are rejected", async () => {
+test("Timed Attempt: saves before the deadline are kept, saveAnswer and setMark from the deadline on are rejected", async () => {
   const t0 = new Date(Math.floor(Date.now() / 1000) * 1000); // whole seconds: the column has no fraction
   const id = await fresh(alice, EXAM, t0, true);
   const [a, b] = correctAnswers;
   await saveAnswer(alice, id, a.id, a.correct.split(""), new Date(t0.getTime() + DEADLINE_MS - 1));
-  await toggleMark(alice, id, a.id, new Date(t0.getTime() + DEADLINE_MS - 1));
+  await setMark(alice, id, a.id, true, new Date(t0.getTime() + DEADLINE_MS - 1));
   const late = new Date(t0.getTime() + DEADLINE_MS);
   await assert.rejects(saveAnswer(alice, id, b.id, b.correct.split(""), late), AttemptExpired);
-  await assert.rejects(toggleMark(alice, id, b.id, late), AttemptExpired);
+  await assert.rejects(setMark(alice, id, b.id, true, late), AttemptExpired);
   const attempt = await getAttempt(alice, id, new Date(t0.getTime() + DEADLINE_MS - 1));
   assert.equal(attempt.deadline?.toISOString(), late.toISOString());
   assert.equal(attempt.submittedAt, null);
@@ -247,7 +251,7 @@ test("an untimed Attempt never expires", async () => {
   const years = new Date(t0.getTime() + 3 * 365 * 24 * 60 * MIN);
   const a = single();
   await saveAnswer(alice, id, a.id, [a.correct], years);
-  await toggleMark(alice, id, a.id, years);
+  await setMark(alice, id, a.id, true, years);
   const attempt = await getAttempt(alice, id, years);
   assert.equal(attempt.submittedAt, null);
   assert.equal(attempt.deadline, null);
@@ -267,7 +271,7 @@ test("a Timed Attempt left past its deadline is in history, no longer open, and 
 test("openAttemptSummary counts answered Questions (marks alone do not count) and gives the deadline of a Timed Attempt", async () => {
   const id = await fresh(alice, 7, undefined, true);
   await saveAnswer(alice, id, single().id, ["A"]);
-  await toggleMark(alice, id, multi().id);
+  await setMark(alice, id, multi().id, true);
   const s = (await openAttemptSummary(alice, 7))!;
   assert.deepEqual({ id: s.id, answered: s.answered, total: s.total, timed: s.timed }, { id, answered: 1, total: 180, timed: true });
   assert.ok(s.deadline);
