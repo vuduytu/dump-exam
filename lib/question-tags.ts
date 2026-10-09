@@ -40,9 +40,12 @@ export function domainScores(items: { task: string | null; correct: boolean }[])
   return [...byDomain].filter(([, s]) => s.total).map(([domain, s]) => ({ domain, ...s }));
 }
 
+/** The Task of a code, with its Domain; undefined for none or unknown. */
+export const taskOf = (code: string | null) => taxonomy.tasks.find((t) => t.code === code);
+
 /** "People · Manage conflicts" for a Task code; null for none or unknown. */
 export function taskLabel(code: string | null) {
-  const task = taxonomy.tasks.find((t) => t.code === code);
+  const task = taskOf(code);
   return task ? `${task.domain} · ${task.name}` : null;
 }
 

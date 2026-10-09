@@ -5,12 +5,19 @@ import { Check, Flag, X } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import type { Choice } from "@/db/schema";
-import { taskLabel } from "@/lib/question-tags";
+import { taskLabel, taskOf } from "@/lib/question-tags";
 import { cn, TIME_LIMIT_MIN } from "@/lib/utils";
 import { formatDuration, inTab, resultCell, type ResultTab } from "./logic";
 import { QuestionLayout, Stats, usePosition } from "./question-layout";
 
 type Question = { id: number; task: string | null; text: string; choices: (Choice & { percent: number })[]; correct: string; suggested: string; selected: string[]; isCorrect: boolean; marked: boolean };
+
+/** Tag colors per Domain (full class names so Tailwind sees them). */
+const domainTone: Record<string, string> = {
+  People: "border-people/40 bg-people-soft text-people",
+  Process: "border-process/40 bg-process-soft text-process",
+  "Business Environment": "border-business/40 bg-business-soft text-business",
+};
 
 const tabs: { value: ResultTab; label: string }[] = [
   { value: undefined, label: "Tất cả" },
@@ -109,7 +116,7 @@ export function ResultScreen(props: { title: string; drill: boolean; domains: { 
                 <Flag className="size-4" /> Đã đánh dấu
               </span>
             )}
-            {taskLabel(q.task) && <Badge variant="outline" className="ml-auto h-auto max-w-full whitespace-normal font-normal text-muted-foreground">{taskLabel(q.task)}</Badge>}
+            {taskLabel(q.task) && <Badge variant="outline" className={cn("ml-auto h-auto max-w-full whitespace-normal font-normal", domainTone[taskOf(q.task)!.domain])}>{taskLabel(q.task)}</Badge>}
           </p>
           <div className="question-text mt-3" dangerouslySetInnerHTML={{ __html: q.text }} /> {/* sanitized at import */}
           <ul className="mt-6 flex flex-col gap-2">
