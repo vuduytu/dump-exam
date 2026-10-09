@@ -29,8 +29,15 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Deploy (Vercel + TiDB Cloud Serverless)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+TLS is enabled automatically when the `DATABASE_URL` host ends with `tidbcloud.com` (`db/connection.ts`); local MAMP stays plain.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Vercel project, Environment Variables: `DATABASE_URL` (`mysql://user:pass@gateway01.<region>.prod.aws.tidbcloud.com:4000/<db>`), `SESSION_SECRET` (`openssl rand -hex 32`), `ADMIN_PASSWORD`.
+2. Create schema and seed from your machine (Vercel does not run these):
+   ```bash
+   DATABASE_URL='mysql://...tidbcloud.com:4000/<db>' ADMIN_PASSWORD='...' npm run db:migrate
+   DATABASE_URL='mysql://...tidbcloud.com:4000/<db>' ADMIN_PASSWORD='...' npm run db:seed
+   ```
+   `db:seed` loads `.env.local` with `--env-file`; variables passed in the shell take precedence over it.
+3. Deploy: push to `main` (Vercel Git integration runs `npm run build`), or `npx vercel --prod`.
