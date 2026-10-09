@@ -5,7 +5,7 @@ import { asc, eq } from "drizzle-orm";
 import { db } from "@/db";
 import { attempts, examQuestions, questions, users } from "@/db/schema";
 import { generateExams, seedQuestions } from "@/db/seed";
-import { abandonAttempt, AttemptExpired, AttemptInProgress, AttemptNotFound, AttemptSubmitted, findOpenAttempt, getAttempt, listAttempts, InvalidAnswer, saveAnswer, startAttempt, submitAttempt, toggleMark } from "@/lib/attempts";
+import { abandonAttempt, AttemptExpired, AttemptInProgress, AttemptNotFound, AttemptSubmitted, findOpenAttempt, getAttempt, openAttemptSummary, listAttempts, InvalidAnswer, saveAnswer, startAttempt, submitAttempt, toggleMark } from "@/lib/attempts";
 import { closeDb, resetDb } from "./db";
 
 const EXAM = 1;
@@ -262,4 +262,16 @@ test("a Timed Attempt left past its deadline is in history, no longer open, and 
   assert.equal(listed?.timed, true);
   assert.equal(listed?.durationSec, 230 * 60);
   assert.ok(await startAttempt(bob, 4)); // the expired one was closed before the in-progress check
+});
+
+test("openAttemptSummary counts answered Questions (marks alone do not count) and gives the deadline of a Timed Attempt", async () => {
+  const id = await fresh(alice, 7, undefined, true);
+  await saveAnswer(alice, id, single().id, ["A"]);
+  await toggleMark(alice, id, multi().id);
+  const s = (await openAttemptSummary(alice, 7))!;
+  assert.deepEqual({ id: s.id, answered: s.answered, total: s.total, timed: s.timed }, { id, answered: 1, total: 180, timed: true });
+  assert.ok(s.deadline);
+  assert.equal(await openAttemptSummary(bob, 7), null);
+  await abandonAttempt(alice, id);
+  assert.equal(await openAttemptSummary(alice, 7), null);
 });

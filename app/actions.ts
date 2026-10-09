@@ -57,6 +57,7 @@ export async function abandonAttemptAction(attemptId: number) {
     if (!(err instanceof AttemptNotFound || err instanceof AttemptExpired)) throw err; // already gone (double click) / now in history
   }
   revalidatePath("/");
+  revalidatePath("/exams/[id]", "page");
 }
 
 export async function saveAnswerAction(attemptId: number, questionId: number, letters: string[]) {

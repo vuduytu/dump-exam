@@ -101,6 +101,18 @@ export async function findOpenAttempt(userId: number, examId: number, now = new 
   return openAttemptId(db, userId, examId);
 }
 
+/** The open Attempt of the Exam with how many Questions have an answer (a mark alone is not an answer), or null. */
+export async function openAttemptSummary(userId: number, examId: number, now = new Date()) {
+  const id = await findOpenAttempt(userId, examId, now);
+  if (!id) return null;
+  const [[a], [{ answered }], [{ total }]] = await Promise.all([
+    db.select({ timed: attempts.timed, startedAt: attempts.startedAt }).from(attempts).where(eq(attempts.id, id)),
+    db.select({ answered: count() }).from(attemptAnswers).where(and(eq(attemptAnswers.attemptId, id), sql`${attemptAnswers.selected} <> ''`)),
+    db.select({ total: count() }).from(examQuestions).where(eq(examQuestions.examId, examId)),
+  ]);
+  return { id, timed: a.timed, deadline: deadlineOf(a), answered, total };
+}
+
 async function openAttemptId(conn: Pick<typeof db, "select">, userId: number, examId: number) {
   const [row] = await conn
     .select({ id: attempts.id })
