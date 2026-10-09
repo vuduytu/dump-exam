@@ -101,7 +101,7 @@ export function ResultScreen(props: { title: string; drill: boolean; domains: { 
         </p>
       ) : (
         <article>
-          <p className={cn("flex items-center gap-1.5 text-sm font-semibold", q.isCorrect ? "text-correct" : "text-wrong")}>
+          <p className={cn("flex flex-wrap items-center gap-1.5 text-sm font-semibold", q.isCorrect ? "text-correct" : "text-wrong")}>
             {q.isCorrect ? <Check className="size-4" /> : <X className="size-4" />}
             {q.isCorrect ? "Đúng" : q.selected.length ? "Sai" : "Sai (bỏ trống)"}
             {q.marked && (
@@ -109,8 +109,8 @@ export function ResultScreen(props: { title: string; drill: boolean; domains: { 
                 <Flag className="size-4" /> Đã đánh dấu
               </span>
             )}
+            {taskLabel(q.task) && <Badge variant="outline" className="ml-auto h-auto max-w-full whitespace-normal font-normal text-muted-foreground">{taskLabel(q.task)}</Badge>}
           </p>
-          {taskLabel(q.task) && <p className="mt-1 text-xs text-muted-foreground">{taskLabel(q.task)}</p>}
           <div className="question-text mt-3" dangerouslySetInnerHTML={{ __html: q.text }} /> {/* sanitized at import */}
           <ul className="mt-6 flex flex-col gap-2">
             {q.choices.map((c) => {
