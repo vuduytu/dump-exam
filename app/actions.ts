@@ -1,5 +1,8 @@
 "use server";
 
+// Next routes Server Actions by header, not path, so a POST to /login (skipped by middleware) can reach any action.
+// Every action except loginAction must check userFromSession itself.
+
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import { createSessionToken, InvalidCredentials, login, SESSION_COOKIE, SESSION_DAYS, UserLocked } from "@/lib/auth";

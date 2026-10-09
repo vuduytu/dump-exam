@@ -29,6 +29,7 @@ export async function hashPassword(password: string) {
 
 async function verifyPassword(password: string, stored: string) {
   const [salt, key] = stored.split(":").map((h) => Buffer.from(h, "hex"));
+  if (!key || key.length !== 64) return false; // corrupt hash: treat as wrong password, not a 500
   return timingSafeEqual(await scryptAsync(password, salt, 64), key);
 }
 
