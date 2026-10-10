@@ -1,4 +1,5 @@
 import { eq } from "drizzle-orm";
+import { cache } from "react";
 import { db } from "@/db";
 import { CERTIFICATIONS, userCertifications, users, type Certification } from "@/db/schema";
 import { hashPassword, MIN_PASSWORD, WeakPassword } from "@/lib/auth";
@@ -45,14 +46,17 @@ export class NoAccess extends Error {
   }
 }
 
-/** The User's Certification Access in CERTIFICATIONS order: all of them for an Admin, none for an unknown User. */
-export async function certificationsOf(userId: number, conn: Pick<typeof db, "select"> = db): Promise<Certification[]> {
+/**
+ * The User's Certification Access in CERTIFICATIONS order: all of them for an Admin, none for an unknown User.
+ * Read once per server render and `conn`: the Header, the page and its access checks all ask.
+ */
+export const certificationsOf = cache(async (userId: number, conn: Pick<typeof db, "select"> = db): Promise<Certification[]> => {
   const [user] = await conn.select({ isAdmin: users.isAdmin }).from(users).where(eq(users.id, userId));
   if (!user) return [];
   if (user.isAdmin) return [...CERTIFICATIONS];
   const rows = await conn.select({ c: userCertifications.certification }).from(userCertifications).where(eq(userCertifications.userId, userId));
   return CERTIFICATIONS.filter((c) => rows.some((r) => r.c === c));
-}
+});
 
 /** Throws NoAccess unless the User has Certification Access to `certification` (any string: it may come from a request). */
 export async function assertAccess(userId: number, certification: string) {

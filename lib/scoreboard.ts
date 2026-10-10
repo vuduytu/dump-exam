@@ -1,7 +1,7 @@
 import { and, asc, count, desc, eq, exists, isNotNull, ne, or } from "drizzle-orm";
 import { db } from "@/db";
 import { attemptAnswers, attempts, examQuestions, exams, userCertifications, users, type Certification } from "@/db/schema";
-import { AttemptNotFound, finalizeExpired } from "@/lib/attempts";
+import { AttemptNotFound, finalizeExpiredIn } from "@/lib/attempts";
 import { requireAdmin } from "@/lib/users";
 
 type Cell = { userId: number; examId: number; latestAttemptId: number | null; latestScore: number | null; submitted: number; openAnswered: number | null };
@@ -21,8 +21,7 @@ export async function getScoreboard(actingId: number, certification: Certificati
     .from(users)
     .where(or(eq(users.isAdmin, true), exists(granted)))
     .orderBy(asc(users.email));
-  // ponytail: one finalizeExpired per User, fine for a small group; a single bulk query if Users grow to hundreds
-  for (const u of userRows) await finalizeExpired(u.id, now);
+  await finalizeExpiredIn(certification, now);
   const examRows = await db
     .select({ id: exams.id, name: exams.name, total: count(examQuestions.questionId) })
     .from(exams)

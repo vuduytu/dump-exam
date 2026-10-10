@@ -5,7 +5,7 @@ import { asc, eq } from "drizzle-orm";
 import { db } from "@/db";
 import { attempts, examQuestions, questions, users } from "@/db/schema";
 import { generateExams, seedQuestions } from "@/db/seed";
-import { abandonAttempt, deadlineOf, AttemptExpired, AttemptInProgress, AttemptNotFound, AttemptSubmitted, findOpenAttempt, getAttempt, openAttemptSummary, listAttempts, InvalidAnswer, saveAnswer, startAttempt, submitAttempt, setMark } from "@/lib/attempts";
+import { abandonAttempt, deadlineOf, AttemptExpired, AttemptInProgress, AttemptNotFound, AttemptSubmitted, findOpenAttempt, getAttempt, openAttemptSummary, openExamIds, listAttempts, InvalidAnswer, saveAnswer, startAttempt, submitAttempt, setMark } from "@/lib/attempts";
 import { TIME_LIMIT_MIN } from "@/lib/utils";
 import { closeDb, grantPmp, resetDb } from "./db";
 
@@ -286,4 +286,16 @@ test("openAttemptSummary counts answered Questions (marks alone do not count) an
   assert.equal(await openAttemptSummary(bob, 7), null);
   await abandonAttempt(alice, id);
   assert.equal(await openAttemptSummary(alice, 7), null);
+});
+
+test("openExamIds lists the Exams with an open Attempt: not submitted, abandoned, expired or another User's", async () => {
+  const open = await fresh(bob, 6);
+  const expired = await fresh(bob, 7, new Date("2026-01-01T00:00:00Z"), true);
+  const ids = await openExamIds(bob);
+  assert.equal(ids.has(6), true);
+  assert.equal(ids.has(7), false);
+  assert.equal((await openExamIds(alice)).has(7), false); // alice abandoned hers above
+  await abandonAttempt(bob, open);
+  assert.equal((await openExamIds(bob)).has(6), false);
+  assert.ok((await listAttempts(bob, "PMP")).some((a) => a.id === expired));
 });

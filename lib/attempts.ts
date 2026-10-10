@@ -1,4 +1,5 @@
-import { and, asc, count, desc, eq, inArray, isNotNull, isNull, sql } from "drizzle-orm";
+import { and, asc, count, desc, eq, inArray, isNotNull, isNull, sql, type SQL } from "drizzle-orm";
+import { cache } from "react";
 import { db } from "@/db";
 import { attemptAnswers, attempts, drillQuestions, examQuestions, exams, questions, users, type Certification } from "@/db/schema";
 import { domainScores, drillTitle } from "@/lib/question-tags";
@@ -77,23 +78,37 @@ async function lockOpenAttempt(tx: Tx, userId: number, attemptId: number, now?: 
   return attempt;
 }
 
+/** Submits the Timed Attempts matching `where` that are past their deadline, at the deadline. */
+async function closeExpired(where: SQL | undefined, now: Date) {
+  const open = await db
+    .select({ id: attempts.id, userId: attempts.userId, timed: attempts.timed, startedAt: attempts.startedAt })
+    .from(attempts)
+    .where(and(where, eq(attempts.timed, true), isNull(attempts.submittedAt)));
+  for (const a of open) {
+    if (now < deadlineOf(a)!) continue;
+    await submitAttempt(a.userId, a.id, now).catch((err) => {
+      if (!(err instanceof AttemptSubmitted || err instanceof AttemptNotFound)) throw err; // closed or abandoned meanwhile
+    });
+  }
+}
+
+// One run per User per server render: a page makes several reads that each finalize first. Outside a render, every call runs.
+const finalizedThisRender = cache(() => new Map<number, Promise<void>>());
+
 /**
  * Submits the User's Timed Attempts that are past their deadline, at the deadline. There is no background job:
  * every read that shows Attempt state calls this first. Saves after the deadline are refused, so the Score holds
  * only answers saved before it. Safe to race: submitAttempt locks the row, the loser gets AttemptSubmitted.
  */
-export async function finalizeExpired(userId: number, now = new Date()) {
-  const open = await db
-    .select({ id: attempts.id, timed: attempts.timed, startedAt: attempts.startedAt })
-    .from(attempts)
-    .where(and(eq(attempts.userId, userId), eq(attempts.timed, true), isNull(attempts.submittedAt)));
-  for (const a of open) {
-    if (now < deadlineOf(a)!) continue;
-    await submitAttempt(userId, a.id, now).catch((err) => {
-      if (!(err instanceof AttemptSubmitted || err instanceof AttemptNotFound)) throw err; // closed or abandoned meanwhile
-    });
-  }
+export function finalizeExpired(userId: number, now = new Date()) {
+  const runs = finalizedThisRender();
+  let run = runs.get(userId);
+  if (!run) runs.set(userId, (run = closeExpired(eq(attempts.userId, userId), now)));
+  return run;
 }
+
+/** finalizeExpired for every User at once, limited to one Certification's Attempts (Scoreboard). */
+export const finalizeExpiredIn = (certification: Certification, now = new Date()) => closeExpired(eq(attempts.certification, certification), now);
 
 // startedAt comes from JS, not the column's CURRENT_TIMESTAMP default: on MAMP that default is in the
 // session time zone (+07) while Drizzle reads it as UTC, which would shift durations and deadlines.
@@ -119,6 +134,16 @@ export async function startAttempt(userId: number, examId: number, timed = false
 export async function findOpenAttempt(userId: number, examId: number, now = new Date()) {
   await finalizeExpired(userId, now);
   return openAttemptId(db, userId, examId);
+}
+
+/** The Exams the User has an unsubmitted Attempt of, in one query (the Exam list badges). */
+export async function openExamIds(userId: number, now = new Date()) {
+  await finalizeExpired(userId, now);
+  const rows = await db
+    .selectDistinct({ examId: attempts.examId })
+    .from(attempts)
+    .where(and(eq(attempts.userId, userId), isNull(attempts.submittedAt), isNotNull(attempts.examId)));
+  return new Set(rows.map((r) => r.examId!));
 }
 
 /** The open Attempt of the Exam with how many Questions have an answer (a mark alone is not an answer), or null. */
@@ -156,8 +181,11 @@ export async function abandonAttempt(userId: number, attemptId: number, now = ne
   });
 }
 
-/** The User's Attempt with every Question of its Exam or Drill in order, Correct Answer included: callers decide what to expose. */
-async function loadAttempt(userId: number, attemptId: number) {
+/**
+ * The User's Attempt with every Question of its Exam or Drill in order, Correct Answer included: callers decide what to expose.
+ * Loaded once per server render: the Attempt page tries getResult, then getAttempt.
+ */
+const loadAttempt = cache(async (userId: number, attemptId: number) => {
   const [attempt] = await db
     .select({ id: attempts.id, certification: attempts.certification, examId: attempts.examId, examName: exams.name, drillSource: attempts.drillSource, timed: attempts.timed, startedAt: attempts.startedAt, submittedAt: attempts.submittedAt, score: attempts.score })
     .from(attempts)
@@ -185,7 +213,7 @@ async function loadAttempt(userId: number, attemptId: number) {
     .leftJoin(attemptAnswers, and(eq(attemptAnswers.attemptId, attemptId), eq(attemptAnswers.questionId, questions.id)))
     .orderBy(asc(items.position));
   return { attempt: { ...attempt, title: titleOf(attempt) }, rows: rows.map((r) => ({ ...r, duplicates: r.duplicates ?? [] })) };
-}
+});
 
 /**
  * The User's Attempt with its Questions in Exam (or Drill) order. Never includes the Correct Answer, only how many letters it has.

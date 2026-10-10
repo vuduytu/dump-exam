@@ -1,6 +1,7 @@
 import { createHmac, randomBytes, scrypt, timingSafeEqual } from "node:crypto";
 import { promisify } from "node:util";
 import { eq } from "drizzle-orm";
+import { cache } from "react";
 import { db } from "@/db";
 import { users, type User } from "@/db/schema";
 
@@ -78,8 +79,11 @@ export function createSessionToken(userId: number, now = new Date()) {
   return `${payload}.${sign(payload)}`;
 }
 
-/** The User behind a session cookie, re-read from the DB; null if missing, forged, expired or locked. */
-export async function userFromSession(token: string | undefined, now = new Date()): Promise<User | null> {
+/**
+ * The User behind a session cookie, re-read from the DB; null if missing, forged, expired or locked.
+ * Read once per server render: the layout's Header and the page both ask.
+ */
+export const userFromSession = cache(async (token: string | undefined, now = new Date()): Promise<User | null> => {
   const [id, expires, mac] = token?.split(".") ?? [];
   if (!mac) return null;
   const expected = Buffer.from(sign(`${id}.${expires}`));
@@ -88,4 +92,4 @@ export async function userFromSession(token: string | undefined, now = new Date(
   if (now.getTime() > Number(expires)) return null;
   const [user] = await db.select().from(users).where(eq(users.id, Number(id)));
   return user && !user.locked ? user : null;
-}
+});
