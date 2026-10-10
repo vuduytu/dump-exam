@@ -1,7 +1,8 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useTransition } from "react";
+import { TopBar } from "@/components/top-bar";
 
 const shown = new Set<string>(); // server renders already mounted in this tab
 
@@ -12,13 +13,15 @@ const shown = new Set<string>(); // server renders already mounted in this tab
  */
 export function RefreshOnReturn({ renderId }: { renderId: string }) {
   const router = useRouter();
+  const [pending, startTransition] = useTransition(); // loading.tsx does not cover a refresh: show the bar here
   const [restored] = useState(() => shown.has(renderId)); // read at render: StrictMode's double effect cannot fake a return
   useEffect(() => void shown.add(renderId), [renderId]);
   useEffect(() => {
-    if (restored) router.refresh();
-    const onShow = (e: PageTransitionEvent) => e.persisted && router.refresh();
+    const refresh = () => startTransition(() => router.refresh());
+    if (restored) refresh();
+    const onShow = (e: PageTransitionEvent) => e.persisted && refresh();
     addEventListener("pageshow", onShow);
     return () => removeEventListener("pageshow", onShow);
   }, [restored, router]);
-  return null;
+  return pending ? <TopBar /> : null;
 }
