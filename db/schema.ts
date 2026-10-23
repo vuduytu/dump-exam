@@ -11,10 +11,15 @@ export const CERTIFICATIONS = ["PMP", "PgMP"] as const;
 export type Certification = (typeof CERTIFICATIONS)[number];
 // Every Question, Exam and Attempt (so every Drill) belongs to one Certification; data from before PgMP is PMP.
 const certification = () => varchar("certification", { length: 8 }).$type<Certification>().notNull().default("PMP");
+// Question banks: one Certification can have several, each with its own Exams. Data from before Atoha is ExamTopics.
+export const BANKS = ["examtopics", "atoha"] as const;
+export type Bank = (typeof BANKS)[number];
+const bank = () => varchar("bank", { length: 16 }).$type<Bank>().notNull().default("examtopics");
 
 export const questions = mysqlTable("questions", {
   id: int("id").primaryKey(), // PMP: original ExamTopics number (`Question #N`); PgMP: seconds of the day in the file name * 1000 + number (scripts/parse_pgmp.py)
   certification: certification(),
+  bank: bank(),
   text: text("text").notNull(),
   choices: json("choices").$type<Choice[]>().notNull(),
   suggestedAnswer: varchar("suggested_answer", { length: 8 }).notNull(),
@@ -56,6 +61,7 @@ export const exams = mysqlTable("exams", {
   id: int("id").autoincrement().primaryKey(),
   name: varchar("name", { length: 64 }).notNull(),
   certification: certification(),
+  bank: bank(),
 });
 
 export const examQuestions = mysqlTable(

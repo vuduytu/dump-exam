@@ -1,8 +1,8 @@
 // Usage: npm run db:seed   (reads data/questions.json from scripts/parse_html.py, data/question-tags.json,
 // data/pgmp-questions.json from scripts/parse_pgmp.py and data/pgmp-question-tags.json; needs ADMIN_PASSWORD)
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { db } from "@/db";
-import { generateExams, seedAdmin, seedPgmp, seedQuestions, seedTags } from "@/db/seed";
+import { generateExams, seedAdmin, seedAtoha, seedPgmp, seedQuestions, seedTags } from "@/db/seed";
 
 async function main() {
   if (!process.env.ADMIN_PASSWORD) throw new Error("ADMIN_PASSWORD is not set"); // fail before touching the DB
@@ -12,6 +12,11 @@ async function main() {
   await seedTags(JSON.parse(readFileSync("data/question-tags.json", "utf8")), "PMP");
   console.log("Task and Approach set from data/question-tags.json");
   console.log((await generateExams()) ? "PMP Exams created" : "PMP Exams already exist");
+  if (existsSync("data/atoha-import.json")) { // optional: the Atoha bank is personal data, never committed
+    const atoha = JSON.parse(readFileSync("data/atoha-import.json", "utf8"));
+    const total = atoha.exams.reduce((n: number, e: { questions: unknown[] }) => n + e.questions.length, 0);
+    console.log(`${total} Atoha Questions upserted, ${await seedAtoha(atoha)} Atoha Exams created`);
+  }
   const pgmp = JSON.parse(readFileSync("data/pgmp-questions.json", "utf8"));
   console.log(`${pgmp.length} PgMP Questions upserted, ${await seedPgmp(pgmp)} PgMP Exams created`);
   await seedTags(JSON.parse(readFileSync("data/pgmp-question-tags.json", "utf8")), "PgMP");
