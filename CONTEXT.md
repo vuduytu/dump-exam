@@ -13,6 +13,9 @@ Quyền của một User được dùng một Certification, do Admin cấp. Adm
 
 ## Ngân hàng câu hỏi
 
+**Bank** (Ngân hàng đề):
+Một nguồn đề trong cùng một Certification: `examtopics` (bộ PMP gốc, có Vote) hoặc `atoha` (123 đề crawl từ Atoha, có Explanation). Question và Exam đều mang `bank`; trang chủ lọc đề theo Bank.
+
 **Question** (Câu hỏi):
 Một câu trắc nghiệm import từ bộ dump của một Certification. PMP lấy từ ExamTopics và giữ số thứ tự gốc (`Question #N`). PgMP lấy từ các file dump và giữ nguyên mọi câu, kể cả câu trùng nội dung, với số thứ tự trong file của nó. Có một hoặc nhiều Choice.
 _Avoid_: item, bài

@@ -1,30 +1,39 @@
-import { count, eq } from "drizzle-orm";
+import { and, count, eq } from "drizzle-orm";
 import { cookies } from "next/headers";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { db } from "@/db";
-import { examQuestions, exams } from "@/db/schema";
+import { BANKS, examQuestions, exams, type Bank } from "@/db/schema";
 import { listAttempts, openExamIds } from "@/lib/attempts";
 import { SESSION_COOKIE, userFromSession } from "@/lib/auth";
 import { CERTIFICATION_COOKIE, currentCertification } from "@/lib/users";
 import { Badge } from "@/components/ui/badge";
+import { buttonVariants } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { RefreshOnReturn } from "@/components/refresh-on-return";
+import { cn } from "@/lib/utils";
 
 export const dynamic = "force-dynamic"; // read Exams per request, not at build
 
-export default async function Home() {
+const BANK_LABELS: Record<Bank, string> = { examtopics: "ExamTopics", atoha: "Atoha" };
+
+export default async function Home({ searchParams }: { searchParams: Promise<{ bank?: string }> }) {
   // middleware already rejected anonymous requests; this read is for display
   const jar = await cookies();
   const user = await userFromSession(jar.get(SESSION_COOKIE)?.value);
   if (!user) redirect("/login");
   const { current } = await currentCertification(user.id, jar.get(CERTIFICATION_COOKIE)?.value);
+  // Banks that actually have Exams for this Certification; ExamTopics stays first (BANKS order).
+  const present = await db.selectDistinct({ bank: exams.bank }).from(exams).where(eq(exams.certification, current));
+  const available = BANKS.filter((bank) => present.some((row) => row.bank === bank));
+  const requested = (await searchParams).bank;
+  const active = available.find((bank) => bank === requested) ?? available[0] ?? "examtopics";
   const [list, done, open] = await Promise.all([
     db
       .select({ id: exams.id, name: exams.name, total: count(examQuestions.questionId) })
       .from(exams)
       .leftJoin(examQuestions, eq(examQuestions.examId, exams.id))
-      .where(eq(exams.certification, current))
+      .where(and(eq(exams.certification, current), eq(exams.bank, active)))
       .groupBy(exams.id)
       .orderBy(exams.id),
     listAttempts(user.id, current),
@@ -36,6 +45,20 @@ export default async function Home() {
     <main className="mx-auto max-w-4xl p-4">
       <RefreshOnReturn renderId={crypto.randomUUID()} />
       <h1 className="text-2xl font-semibold">Đề thi</h1>
+      {available.length > 1 && (
+        <div role="group" aria-label="Ngân hàng đề" className="mt-4 flex gap-1 rounded-lg bg-muted p-1">
+          {available.map((bank) => (
+            <Link
+              key={bank}
+              href={bank === "examtopics" ? "/" : `/?bank=${bank}`}
+              aria-current={bank === active ? "page" : undefined}
+              className={cn(buttonVariants({ size: "sm", variant: bank === active ? "default" : "ghost" }), "flex-1")}
+            >
+              {BANK_LABELS[bank]}
+            </Link>
+          ))}
+        </div>
+      )}
       <ul className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {list.map((e) => (
           <li key={e.id}>

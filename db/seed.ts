@@ -1,6 +1,6 @@
 import { and, eq, inArray, sql } from "drizzle-orm";
 import { db } from "@/db";
-import { examQuestions, exams, questions, users, type Certification } from "@/db/schema";
+import { examQuestions, exams, questions, users, type Bank, type Certification } from "@/db/schema";
 import { hashPassword } from "@/lib/auth";
 import { validateTags, type Tag } from "@/lib/question-tags";
 
@@ -9,6 +9,11 @@ export type ParsedQuestion = Omit<typeof questions.$inferInsert, "id"> & { numbe
 
 /** One entry of data/pgmp-questions.json, as written by scripts/parse_pgmp.py: already a `questions` row. */
 export type PgmpQuestion = typeof questions.$inferInsert;
+
+/** One entry of data/atoha-import.json, as written by scripts/parse_atoha.ts: a `questions` row plus its position in its Exam. */
+export type AtohaQuestion = typeof questions.$inferInsert & { position: number };
+export type AtohaExam = { name: string; source: string; section: string; questions: AtohaQuestion[] };
+export type AtohaBankFile = { bank: "atoha"; source: string; exams: AtohaExam[] };
 
 /** Upserts Questions by id, so re-running never duplicates. */
 async function upsertQuestions(rows: (typeof questions.$inferInsert)[]) {
@@ -67,13 +72,74 @@ export async function seedPgmp(parsed: PgmpQuestion[]) {
   return fresh.length;
 }
 
+/** Upserts Atoha Questions by id, Task included: a re-parse may correct the answer, the Task or the Explanation. */
+async function upsertAtohaQuestions(rows: (typeof questions.$inferInsert)[]) {
+  for (let i = 0; i < rows.length; i += 200) {
+    await db.insert(questions).values(rows.slice(i, i + 200)).onDuplicateKeyUpdate({
+      set: {
+        text: sql`values(${questions.text})`,
+        choices: sql`values(${questions.choices})`,
+        suggestedAnswer: sql`values(${questions.suggestedAnswer})`,
+        mostVotedAnswer: sql`values(${questions.mostVotedAnswer})`,
+        correctAnswer: sql`values(${questions.correctAnswer})`,
+        votes: sql`values(${questions.votes})`,
+        usable: sql`values(${questions.usable})`,
+        task: sql`values(${questions.task})`,
+        explanation: sql`values(${questions.explanation})`,
+        duplicates: sql`values(${questions.duplicates})`,
+      },
+    });
+  }
+}
+
 /**
- * Sets each Question's Task (and Approach, PMP only) of the Certification from data/question-tags.json (PMP) or
- * data/pgmp-question-tags.json (PgMP). Refuses invalid or incomplete tags.
+ * Upserts the Atoha Question bank, then creates one Exam per crawled file, named after it (scripts/parse_atoha.ts).
+ * Usable Questions only, each at its number in the file, so an Unusable Question leaves a gap. An existing Exam is
+ * never rewritten (it may have Attempts): if its Questions differ from the bank, this throws. Returns the Exams created.
+ */
+export async function seedAtoha(file: AtohaBankFile) {
+  if (file.bank !== "atoha") throw new Error("not an Atoha Question bank");
+  const rows = file.exams.flatMap((exam) =>
+    exam.questions.map((question) => {
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars -- `position` belongs to the Exam, not to the Question
+      const { position, ...rest } = question;
+      return { ...rest, certification: "PMP" as const, bank: "atoha" as const };
+    }),
+  );
+  const bank = file.exams.map((exam) => ({
+    name: exam.name,
+    items: exam.questions.filter((q) => q.usable).map((q) => ({ position: q.position, questionId: q.id })),
+  }));
+  const existing = await db
+    .select({ name: exams.name, item: { position: examQuestions.position, questionId: examQuestions.questionId } })
+    .from(exams)
+    .innerJoin(examQuestions, eq(examQuestions.examId, exams.id))
+    .where(and(eq(exams.certification, "PMP"), eq(exams.bank, "atoha")))
+    .orderBy(exams.id, examQuestions.position);
+  const seeded = Map.groupBy(existing, (r) => r.name);
+  const changed = bank.filter((e) => seeded.has(e.name) && JSON.stringify(seeded.get(e.name)!.map((r) => r.item)) !== JSON.stringify(e.items));
+  if (changed.length) throw new Error(`Atoha Exams differ from the bank, not rewritten: ${changed.map((e) => e.name).join(", ")}`);
+  await upsertAtohaQuestions(rows);
+  const fresh = bank.filter((e) => !seeded.has(e.name));
+  await db.transaction(async (tx) => {
+    for (const { name, items } of fresh) {
+      const [{ insertId }] = await tx.insert(exams).values({ name, certification: "PMP", bank: "atoha" });
+      await tx.insert(examQuestions).values(items.map((item) => ({ examId: insertId, ...item })));
+    }
+  });
+  return fresh.length;
+}
+
+/**
+ * Sets each Question's Task (and Approach, PMP only) of the Certification and Bank from data/question-tags.json (PMP)
+ * or data/pgmp-question-tags.json (PgMP). Refuses invalid or incomplete tags.
  * Overwrites, so re-running after the owner corrects labels applies the corrections and never duplicates.
  */
-export async function seedTags(tags: Tag[], certification: Certification) {
-  const ids = (await db.select({ id: questions.id }).from(questions).where(eq(questions.certification, certification))).map((q) => q.id);
+export async function seedTags(tags: Tag[], certification: Certification, bank: Bank = "examtopics") {
+  const ids = (await db
+    .select({ id: questions.id })
+    .from(questions)
+    .where(and(eq(questions.certification, certification), eq(questions.bank, bank)))).map((q) => q.id);
   const errors = validateTags(ids, tags, certification);
   if (errors.length) throw new Error(`invalid tags:\n${errors.slice(0, 20).join("\n")}`);
   const groups = Map.groupBy(tags, (t) => `${t.task}|${t.approach ?? ""}`); // one UPDATE per pair, not per Question
@@ -114,7 +180,7 @@ function mulberry32(seed: number) {
 export async function generateExams() {
   const [existing] = await db.select({ id: exams.id }).from(exams).where(eq(exams.certification, "PMP")).limit(1);
   if (existing) return false;
-  const ids = (await db.select({ id: questions.id }).from(questions).where(and(eq(questions.certification, "PMP"), eq(questions.usable, true))).orderBy(questions.id)).map((q) => q.id);
+  const ids = (await db.select({ id: questions.id }).from(questions).where(and(eq(questions.certification, "PMP"), eq(questions.bank, "examtopics"), eq(questions.usable, true))).orderBy(questions.id)).map((q) => q.id);
   const random = mulberry32(SHUFFLE_SEED);
   for (let i = ids.length - 1; i > 0; i--) {
     const j = Math.floor(random() * (i + 1));

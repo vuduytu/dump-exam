@@ -48,3 +48,7 @@ next-env.d.ts
 
 # classifier lot inputs (regenerate with npm run tags:split)
 /data/tags/input/
+
+# Atoha bank (personal data, not redistributable)
+/data/atoha/
+/data/atoha-import.json
